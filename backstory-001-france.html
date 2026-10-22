@@ -1,0 +1,603 @@
+<title>France's Autumn of Anger</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap">
+<style>
+/* Layout: one 42rem reading column with a right-hand margin for sidenotes on wide screens; a hi-vis "gilet" stripe as the masthead's single bold mark. */
+:root{
+  --paper:#F1F2EE; --panel:#E5E8EC; --ink:#141B2B; --muted:#596275; --rule:#CDD2DA;
+  --blue:#24448C; --vis:#EFD832; --vis-ink:#141B2B; --reflect:#B9BEC6; --alert:#A8322D;
+  --display:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --body:"Source Serif 4","Iowan Old Style",Georgia,serif;
+  --label:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0F1420; --panel:#172031; --ink:#E6E9EF; --muted:#9BA4B5; --rule:#2B3448;
+  --blue:#93AEF0; --vis:#E8D236; --vis-ink:#141B2B; --reflect:#5C6475; --alert:#E58A84; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0F1420; --panel:#172031; --ink:#E6E9EF; --muted:#9BA4B5; --rule:#2B3448;
+  --blue:#93AEF0; --vis:#E8D236; --vis-ink:#141B2B; --reflect:#5C6475; --alert:#E58A84; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.075rem;line-height:1.68;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 4rem}
+a{color:var(--blue);text-underline-offset:3px;text-decoration-thickness:1px}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:2px}
+.page{max-width:62rem;margin:0 auto}
+.col{max-width:42rem}
+h1,h2,h3{text-wrap:balance}
+p{margin:0 0 1.05em}
+mark{background:linear-gradient(transparent 55%,var(--vis) 55%);color:inherit;padding:0 .08em}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) mark{background:linear-gradient(transparent 62%,color-mix(in srgb,var(--vis) 45%,transparent) 62%)}}
+:root[data-theme="dark"] mark{background:linear-gradient(transparent 62%,color-mix(in srgb,var(--vis) 45%,transparent) 62%)}
+.label{font-family:var(--label);text-transform:uppercase;letter-spacing:.09em;font-size:.74rem;font-weight:600;color:var(--muted)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* masthead */
+.stripe{height:20px;background:var(--vis);margin:0 calc(-1*max(16px,env(safe-area-inset-left,0px)));position:relative}
+.stripe::after{content:"";position:absolute;left:0;right:0;top:7px;height:6px;background:var(--reflect)}
+.mast{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.5rem 1.5rem;padding-block:1.1rem .9rem;border-bottom:1px solid var(--rule)}
+.wordmark{font-family:var(--display);font-weight:700;font-size:1.5rem;letter-spacing:.02em}
+.wordmark span{font-style:italic;font-weight:500;color:var(--muted);font-size:1rem;margin-left:.6rem;letter-spacing:0}
+.issue{display:flex;gap:1.2rem;flex-wrap:wrap}
+
+.hero{padding-block:3rem 2rem}
+.hero h1{font-family:var(--display);font-weight:500;font-size:clamp(2.6rem,7vw,5.2rem);line-height:1.02;margin:.5rem 0 1.2rem;letter-spacing:-.01em}
+.hero h1 em{font-style:italic}
+.dek{font-size:1.3rem;line-height:1.5;color:var(--muted);max-width:40rem;margin:0}
+.byline{margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+
+.overview{border-top:4px solid var(--ink);padding-top:1.4rem;margin:1rem 0 2.5rem}
+.overview .label{display:block;margin-bottom:.8rem}
+.why-list{list-style:none;padding:0;margin:1.2rem 0;display:grid;gap:1.1rem}
+.why-list li{border-left:3px solid var(--rule);padding-left:1rem}
+.why-list h4{font-family:var(--display);font-weight:500;font-size:1.3rem;margin:0 0 .35rem;line-height:1.2}
+.why-list p{margin:0 0 .6em}
+.why-list p:last-child{margin:0}
+.answer{background:var(--panel);padding:1.2rem 1.4rem;margin:1.6rem 0}
+.answer h4{font-family:var(--label);text-transform:uppercase;letter-spacing:.07em;font-size:.85rem;margin:0 0 .6rem}
+.answer p:last-child{margin:0}
+/* brief box */
+.brief{background:var(--panel);padding:1.6rem 1.7rem;margin:1rem 0 2.5rem;border-top:4px solid var(--ink)}
+.brief h2{font-family:var(--label);text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;margin:0 0 .9rem}
+.brief ol{margin:0;padding-left:1.2rem;display:grid;gap:.55rem}
+.brief li::marker{font-family:var(--mono);color:var(--muted)}
+
+/* toc */
+.toc{margin:0 0 3rem;border-block:1px solid var(--rule);padding-block:1rem}
+.toc ol{list-style:none;margin:.6rem 0 0;padding:0;columns:2 15rem;column-gap:2rem}
+.toc li{break-inside:avoid;padding:.18rem 0;font-size:.98rem}
+.toc a{text-decoration:none;color:var(--ink)}
+.toc a:hover{color:var(--blue);text-decoration:underline}
+.toc .n{font-family:var(--mono);color:var(--muted);font-size:.8rem;margin-right:.55rem}
+
+/* sections */
+section{padding-top:1rem;margin-bottom:2.8rem;scroll-margin-top:1rem}
+.kicker{font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+h2.sec{font-family:var(--display);font-weight:500;font-size:clamp(1.8rem,3.6vw,2.5rem);line-height:1.12;margin:.3rem 0 1.1rem}
+h3{font-family:var(--label);font-weight:600;font-size:1.05rem;text-transform:uppercase;letter-spacing:.06em;margin:1.8rem 0 .6rem}
+.lede::first-letter{font-family:var(--display);float:left;font-size:3.6rem;line-height:.85;padding:.35rem .5rem 0 0}
+
+/* sidenotes */
+.note{font-size:.9rem;line-height:1.5;color:var(--muted);border-left:2px solid var(--vis);padding:.2rem 0 .2rem .9rem;margin:0 0 1.2rem}
+.note b{color:var(--ink);font-family:var(--label);text-transform:uppercase;letter-spacing:.06em;font-size:.78rem;display:block;margin-bottom:.15rem}
+@media (min-width:1040px){.note{float:right;clear:right;width:16rem;margin-right:-19rem;margin-top:.3rem}}
+
+/* numbers */
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:1.4rem 0 1rem}
+.num{background:var(--paper);padding:1rem 1rem 1.1rem;display:flex;flex-direction:column;gap:.35rem}
+.num .v{font-family:var(--display);font-size:2rem;line-height:1;font-weight:700;font-variant-numeric:lining-nums tabular-nums}
+.num .k{font-size:.86rem;line-height:1.35;color:var(--muted)}
+.src{font-size:.82rem;color:var(--muted)}
+
+/* timeline */
+.tl{list-style:none;margin:1rem 0;padding:0;border-left:2px solid var(--rule)}
+.tl li{position:relative;padding:0 0 1.1rem 1.4rem}
+.tl li::before{content:"";position:absolute;left:-7px;top:.55rem;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--muted)}
+.tl li.hot::before{background:var(--vis);border-color:var(--ink)}
+.tl .d{font-family:var(--mono);font-size:.82rem;color:var(--muted);display:block}
+.tl p{margin:0}
+
+/* streams diagram */
+.streams{margin:1.6rem 0 1.4rem}
+.flows{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem}
+.flow{border:1px solid var(--rule);padding:1rem;background:var(--paper)}
+.flow .label{display:block;margin-bottom:.3rem}
+.flow h4{font-family:var(--display);font-weight:500;font-size:1.25rem;margin:0 0 .4rem;line-height:1.2}
+.flow p{font-size:.92rem;line-height:1.5;margin:0}
+.merge{display:grid;grid-template-columns:repeat(3,1fr);height:34px}
+.merge span{border-right:2px solid var(--muted);width:50%}
+.mergebar{border-top:2px solid var(--muted);margin:0 16.66%;height:22px;position:relative}
+.mergebar::after{content:"";position:absolute;left:50%;top:0;height:22px;border-left:2px solid var(--muted)}
+.target{background:var(--ink);color:var(--paper);padding:1rem 1.2rem;text-align:center;max-width:30rem;margin:0 auto}
+.target b{font-family:var(--display);font-size:1.4rem;font-weight:500;display:block}
+.target span{font-size:.9rem;opacity:.85}
+@media (max-width:640px){.flows{grid-template-columns:1fr}.merge,.mergebar{display:none}.target{margin-top:.8rem}}
+
+/* chain */
+.chain{list-style:none;padding:0;margin:1.2rem 0;display:grid;gap:.5rem;counter-reset:c}
+.chain li{display:grid;grid-template-columns:2rem minmax(0,1fr);gap:.6rem;align-items:baseline;counter-increment:c}
+.chain li::before{content:counter(c);font-family:var(--mono);font-size:.8rem;color:var(--vis-ink);background:var(--vis);width:1.6rem;height:1.6rem;display:grid;place-items:center;border-radius:50%}
+
+/* blocs */
+.blocs{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:.8rem;margin:1.2rem 0}
+.bloc{border-top:3px solid var(--ink);padding-top:.6rem}
+.bloc h4{margin:0 0 .3rem;font-family:var(--label);font-size:1rem;letter-spacing:.02em}
+.bloc p{margin:0;font-size:.92rem;line-height:1.5}
+.bloc.l{border-color:var(--alert)} .bloc.c{border-color:var(--vis)} .bloc.r{border-color:var(--blue)}
+
+blockquote{margin:1.6rem 0;padding:0 0 0 1.2rem;border-left:3px solid var(--ink);font-family:var(--display);font-size:1.45rem;line-height:1.3;font-style:italic}
+blockquote cite{display:block;font-family:var(--label);font-style:normal;font-size:.8rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-top:.5rem}
+
+/* debate */
+.debate{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem;margin:1.2rem 0}
+.side{background:var(--panel);padding:1.1rem 1.2rem}
+.side h4{font-family:var(--display);font-weight:500;font-size:1.2rem;margin:.2rem 0 .5rem}
+.side p{font-size:.95rem;line-height:1.55;margin:0}
+@media (max-width:640px){.debate{grid-template-columns:1fr}}
+
+/* watch list */
+.watch{border:1px solid var(--rule);margin:1.2rem 0}
+.watch div{display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:1rem;padding:.8rem 1rem;border-bottom:1px solid var(--rule)}
+.watch div:last-child{border-bottom:0}
+.watch .d{font-family:var(--mono);font-size:.85rem;font-weight:500}
+.watch p{margin:0;font-size:.96rem;line-height:1.5}
+@media (max-width:480px){.watch div{grid-template-columns:1fr;gap:.2rem}}
+
+/* glossary */
+.gloss{display:grid;grid-template-columns:minmax(9rem,13rem) minmax(0,1fr);gap:.2rem 1.4rem;margin:1rem 0}
+.gloss dt{font-family:var(--label);font-weight:600;padding-top:.75rem;border-top:1px solid var(--rule)}
+.gloss dd{margin:0;padding-top:.75rem;border-top:1px solid var(--rule);font-size:.96rem;line-height:1.55}
+@media (max-width:560px){.gloss{grid-template-columns:1fr}.gloss dd{border-top:0;padding-top:.1rem;padding-bottom:.4rem}}
+
+/* reading lists */
+.reads{list-style:none;padding:0;margin:1rem 0;display:grid;gap:.9rem}
+.reads li{display:grid;gap:.15rem}
+.reads a{font-weight:600}
+.reads .why{font-size:.93rem;color:var(--muted);line-height:1.5}
+.reads .tag{font-family:var(--mono);font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.concepts{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:.8rem;margin:1rem 0}
+.concept{border:1px solid var(--rule);padding:.9rem 1rem}
+.concept h4{margin:0 0 .3rem;font-family:var(--label);font-size:1rem}
+.concept p{margin:0;font-size:.92rem;line-height:1.5;color:var(--muted)}
+.sources{font-size:.88rem;line-height:1.5;padding-left:1.4rem;columns:1}
+.sources li{margin-bottom:.45rem;overflow-wrap:anywhere}
+.sources li::marker{font-family:var(--mono);color:var(--muted);font-size:.78rem}
+
+.foot{border-top:1px solid var(--rule);padding-top:1.2rem;margin-top:3rem;font-size:.88rem;color:var(--muted)}
+hr.mini{border:0;border-top:1px solid var(--rule);margin:2rem 0}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+
+<div class="stripe" aria-hidden="true"></div>
+<div class="page">
+<header class="mast">
+  <div class="wordmark">Backstory<span>the news, with the context left in</span></div>
+  <div class="issue label"><span>Issue 001</span><span>World</span><span class="mono">Wed 21 Oct 2026</span></div>
+</header>
+
+<div class="hero col">
+  <div class="label">France · Politics · Economy</div>
+  <h1>France’s autumn of <em>anger</em></h1>
+  <p class="dek">A walkout over broken classrooms collided with a fuel shock from a Middle East war and a government trying to cut €54 billion. The result was the worst unrest France has seen in years, six months before an election nobody can predict.</p>
+  <div class="byline label"><span>≈ 30 min read</span><span>Researched from 40+ reports, 21 Oct 2026</span></div>
+</div>
+
+<div class="col">
+<section class="overview" id="overview">
+  <div class="label">What is happening</div>
+  <p class="lede">For the past month France has been going through its largest wave of protest in years. It began around 21 September, when teenagers at a high school in Créteil, a suburb south-east of Paris, blockaded their own school. They were angry about teachers who had never been replaced, classes of 35, broken toilets and classrooms that hit 40°C in the summer heatwave. Videos of the blockade spread on social media and other schools copied it. By 1 October more than 1,000 of France’s roughly 3,700 public high schools (<em>lycées</em>) were disrupted, university students had joined, and police made 1,949 arrests in a single day, most of them minors. Some blockades turned violent: bins and school gates were set on fire, fireworks were fired at police, and several headteachers were hurt. Police answered with tear gas and stun grenades, and a number of teenagers were seriously injured.</p>
+  <p>The school protests landed on a country that was already angry. Since a war involving Iran broke out in February and choked the world’s main oil shipping route, diesel in France has risen by about half, to a record €2.41 a litre, and inflation is back above 3%. At the same moment the government, which has been spending far more than it collects for decades and is now paying its highest interest rates since 2002, proposed €54 billion of savings for next year, including a pay freeze for teachers, nurses and other public employees. Farmers, fishermen and lorry drivers had been protesting over fuel since mid-September, and public-sector unions went on strike over the budget at the end of the month.</p>
+  <p>On Saturday 17 October those groups came together. Students, all of France’s major trade unions and the “yellow vests”, a protest movement that first appeared in 2018 over fuel taxes, held a joint national day of action against the cost of living. About <strong>550,000 people</strong> marched in around 110 towns, according to the government (organisers said 800,000), including 110,000 in Paris. Most of the marches were peaceful. But as evening came, groups of rioters broke away. In Paris cars were burned and shops looted; in Marseille protesters forced their way into the city hall; in Lyon the tourist office was set on fire; in Limoges the 19th-century town hall burned almost to the ground. Around 2,400 people were arrested and about 1,000 police officers were injured. Most of the dramatic footage circulating online comes from that night and the one after it, which is why it can look like a riot rather than the mostly peaceful mass march it began as.</p>
+  <p>The government’s response so far has been mostly about order. President Emmanuel Macron, who cannot run again and leaves office in May 2027, condemned the violence on television but announced no new policies. Several cities are under curfew, soldiers will support police at the next protest on Saturday 24 October, and the prime minister is meeting unions this week. Underneath it all are three questions this issue tries to answer: why France’s schools got so bad, why the government says it can’t afford to fix them, and why its politics seem unable to produce an answer.</p>
+</section>
+
+<nav class="toc" aria-label="Contents">
+  <div class="label">Inside this issue</div>
+  <ol>
+    <li><span class="n">01</span><a href="#numbers">The crisis in numbers</a></li>
+    <li><span class="n">02</span><a href="#timeline">How five weeks unfolded</a></li>
+    <li><span class="n">03</span><a href="#streams">Three angers, one street</a></li>
+    <li><span class="n">04</span><a href="#schools">Why the schools broke first</a></li>
+    <li><span class="n">05</span><a href="#fuel">A war 5,000 km away, at the pump</a></li>
+    <li><span class="n">06</span><a href="#debt">The money problem</a></li>
+    <li><span class="n">07</span><a href="#politics">Why France can’t govern itself right now</a></li>
+    <li><span class="n">08</span><a href="#policing">The policing question</a></li>
+    <li><span class="n">09</span><a href="#blame">Who is behind it? The blame war</a></li>
+    <li><span class="n">10</span><a href="#europe">Not only France</a></li>
+    <li><span class="n">11</span><a href="#debate">Where reasonable people disagree</a></li>
+    <li><span class="n">12</span><a href="#next">What to watch next</a></li>
+    <li><span class="n">13</span><a href="#history">Further context: protest in France</a></li>
+    <li><span class="n">14</span><a href="#terms">Key terms</a></li>
+    <li><span class="n">15</span><a href="#deeper">Go deeper</a></li>
+    <li><span class="n">16</span><a href="#sources">Sources</a></li>
+  </ol>
+</nav>
+
+<!-- 01 -->
+<section id="numbers">
+  <div class="kicker">01</div>
+  <h2 class="sec">The crisis in numbers</h2>
+  <p>Before the story, the scale. Keep these in your head; every section below explains one of them.</p>
+  <div class="nums">
+    <div class="num"><span class="v">550k</span><span class="k">marched on 17 Oct (Interior Ministry). Organisers said 800,000.</span></div>
+    <div class="num"><span class="v">2,500+</span><span class="k">arrested around the 17 Oct protests; about 149 jailed so far</span></div>
+    <div class="num"><span class="v">6,800+</span><span class="k">taken into custody during the school protests, most of them minors</span></div>
+    <div class="num"><span class="v">€2.41</span><span class="k">record price of a litre of diesel, 20 Sep. It was €1.59 in January.</span></div>
+    <div class="num"><span class="v">3.1%</span><span class="k">inflation in Sept, highest since early 2024. Energy prices up 21.3% on the year.</span></div>
+    <div class="num"><span class="v">5.4%</span><span class="k">expected 2026 budget deficit, as a share of GDP. EU rules say 3%.</span></div>
+    <div class="num"><span class="v">~120%</span><span class="k">public debt to GDP, still rising</span></div>
+    <div class="num"><span class="v">15%</span><span class="k">Macron’s approval rating, his lowest ever</span></div>
+  </div>
+  <p class="src">Figures from the French Interior and Justice ministries, INSEE, the government’s budget plan and polling, as reported by Al Jazeera, Euronews, Reuters and others. See <a href="#sources">Sources</a>.</p>
+</section>
+
+<!-- 02 -->
+<section id="timeline">
+  <div class="kicker">02</div>
+  <h2 class="sec">How five weeks unfolded</h2>
+  <p>The protests didn’t come from nowhere, and they didn’t start as one movement. Here is the sequence, with the turning points marked.</p>
+  <ol class="tl">
+    <li><span class="d">Feb–Apr 2026</span><p>The US and Israel go to war with Iran (from 28 Feb). Traffic through the Strait of Hormuz nearly stops. Oil spikes; French diesel sets records by April. A ceasefire comes on 8 April, but shipping never fully recovers.</p></li>
+    <li><span class="d">7 Jul</span><p>An appeals court clears far-right leader Marine Le Pen to run for president in 2027, with a year on an electronic ankle tag. She declares her candidacy anyway.</p></li>
+    <li><span class="d">15 Sep</span><p>Fuel protests begin: fishermen block oil depots, farmers demonstrate. Diesel is heading back to a record.</p></li>
+    <li><span class="d">17 Sep</span><p>Prime Minister Sébastien Lecornu announces a €54bn “effort” for the 2027 budget. On the same day, teachers at a lycée in Créteil, a Paris suburb, strike over unfilled posts.</p></li>
+    <li class="hot"><span class="d">~21 Sep</span><p>Pupils at that Créteil school stage their own protest. Videos spread on social media and copycat blockades appear across the poorer north-eastern suburbs (Seine-Saint-Denis, Val-de-Marne).</p></li>
+    <li><span class="d">29 Sep</span><p>About 400 of France’s roughly 3,700 lycées are disrupted. Public-sector unions strike against the budget the same week.</p></li>
+    <li class="hot"><span class="d">1 Oct</span><p>The peak of the school phase: 1,027 lycées affected, 1,949 arrests in a day, university students join. Several schools are set on fire; some headteachers are attacked. The government calls it “urban violence” and blames the radical left.</p></li>
+    <li><span class="d">5 Oct</span><p>A 15-year-old in Lens loses a hand to a police grenade. Rights groups begin to speak out.</p></li>
+    <li><span class="d">6 Oct</span><p>Unions and teachers join a third national day (450,000 by union count, 250,000 by the government’s). Lecornu orders ministers to come back with answers on teacher replacement, timetables and repairs by the end of October.</p></li>
+    <li><span class="d">13–16 Oct</span><p>A fifth national day, then the autumn school holidays begin and blockades fade. Student groups decide to join a wider cost-of-living protest instead.</p></li>
+    <li class="hot"><span class="d">Sat 17 Oct</span><p>Students, all the major unions and the yellow vests march together in about 110 marches. Most are peaceful. In the evening Paris sees cars torched and shops looted; Marseille’s city hall lobby is breached; Lyon’s tourist office burns; Limoges’ 19th-century town hall is largely destroyed. A police officer is killed in Nantes, struck by a car during a separate operation, and a protester dies of a cardiac arrest in Paris.</p></li>
+    <li><span class="d">18 Oct</span><p>Macron addresses the nation. He promises punishment for rioters and a review of intelligence failures, but no new policy.</p></li>
+    <li><span class="d">19–20 Oct</span><p>Macron refuses his interior minister’s resignation and leaves for a Gulf tour. Curfews in several cities, including Lille. The government says Sentinelle soldiers will back police on Saturday.</p></li>
+    <li><span class="d">Today, 21 Oct</span><p>Lecornu meets five union leaders. Student groups were not invited, which the unions criticised.</p></li>
+  </ol>
+</section>
+
+<!-- 03 -->
+<section id="streams">
+  <div class="kicker">03</div>
+  <h2 class="sec">Three angers, one street</h2>
+  <p>The single most useful thing to understand about this crisis is that it is <mark>three separate grievances that happened to peak at the same moment</mark>. Each one on its own was the kind of thing France has absorbed before. Together, they gave very different groups a shared enemy and a shared date.</p>
+  <div class="streams" role="figure" aria-label="Diagram: three grievances merge into the 17 October protest">
+    <div class="flows">
+      <div class="flow"><span class="label">Stream 1 · Youth</span><h4>Schools that don’t work</h4><p>Teenagers angry about missing teachers, 35-pupil classes, broken toilets and the stress of the university admissions portal.</p></div>
+      <div class="flow"><span class="label">Stream 2 · Households</span><h4>Fuel and living costs</h4><p>Drivers, farmers, fishermen and the yellow vests, squeezed by record diesel and inflation from the Iran war.</p></div>
+      <div class="flow"><span class="label">Stream 3 · Workers</span><h4>A budget of cuts</h4><p>Teachers, nurses and civil servants facing another pay freeze and cuts to services in the 2027 budget.</p></div>
+    </div>
+    <div class="merge" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="mergebar" aria-hidden="true"></div>
+    <div class="target"><b>Saturday 17 October</b><span>Students + unions + yellow vests: one march, one target (the government)</span></div>
+  </div>
+  <p>The historian Emile Chabal told Al Jazeera that fusing the students’ cause with these wider social demands was <q>the worst possible outcome for the French government</q>. The reason is political arithmetic. A school strike can be settled with money for schools. A fuel protest can be eased with subsidies. A public-sector strike can be negotiated. But when all three march together, the common demand becomes “this government is failing us”, and there is no single concession that answers that.</p>
+  <p>Notice also what connects the three streams underneath: <mark>money the state doesn’t have</mark>. Better schools cost money. Fuel subsidies cost money. Unfreezing pay costs money. That is why the economics in sections 05 and 06 matter as much as the street scenes.</p>
+</section>
+
+<!-- 04 -->
+<section id="schools">
+  <div class="kicker">04</div>
+  <h2 class="sec">Why the schools broke first</h2>
+  <aside class="note"><b>Lycée</b>France’s public upper-secondary school, for ages roughly 15 to 18. It ends in the <em>baccalauréat</em> (“the bac”), the national exam that is the gateway to university.</aside>
+  <p>It is unusual for a national crisis to be started by teenagers, so it is worth asking why this one was. The grievances are concrete. Pupils described going months without a teacher in an exam subject, classes of 32 to 36, temporary classrooms that hit 40°C during the summer heatwaves and froze in winter, toilets without running water, and shortages of nurses, social workers and supervisors. The secondary pupils’ union, the USL, boiled it down to four demands: enough teachers and staff, decent buildings, lighter timetables and classes, and less stress from Parcoursup.</p>
+  <aside class="note"><b>Parcoursup</b>The online platform every French pupil uses to apply to higher education. Critics say its ranking algorithms are opaque and the process is stressful. It has been a protest target since it launched in 2018.</aside>
+  <p>Geography matters too. The movement started in Créteil and spread first through Seine-Saint-Denis, the poorest département in mainland France, just north-east of Paris. These are the <em>banlieues</em>: dense, diverse, working-class suburbs where schools have long been the most stretched and where relations with the police are the most strained.</p>
+  <p>French high-schoolers have also forced governments to back down before. In 1990 a lycée movement over the same issues (staffing, safety, buildings) won an emergency education budget. In 2005 pupils got a baccalauréat reform dropped. French teenagers grow up knowing that protest sometimes works.</p>
+
+  <h3>So why are the schools in this state?</h3>
+  <p>There is no single villain. The conditions pupils describe are the result of several separate problems, built up over decades, under governments of both left and right. Here they are one by one.</p>
+  <ol class="why-list">
+    <li>
+      <h4>1. Not enough people want to be teachers</h4>
+      <p>France struggles to recruit teachers, and it has for more than a decade. Teachers are hired through national competitive exams (the CAPES for secondary schools). For years these exams have ended with seats left empty because not enough qualified candidates passed: more than 4,000 unfilled posts in 2022, about 2,600 in 2025. Maths is the worst, with roughly one post in five unfilled.</p>
+      <p>The main reason given is that the job has become less attractive. Pay is the biggest factor. The OECD found that French teachers’ real pay fell by 7–8% between 2000 and 2010, while it rose in most comparable countries, and French starting salaries sit below the OECD average. A big reason is the <em>point d’indice</em>, the number used to calculate every civil servant’s base pay. Since 1984 governments have been free to stop raising it with inflation, and they often have: it rose only four times in the past fifteen years. Since 2010 teachers have also needed a master’s degree (five years of university) to sit the exam, which made the job slower and costlier to enter for a salary that didn’t rise to match. A 2023 pay rise, mostly for new teachers, helped, and from 2026 the exam moves back to three years of university to widen the pool. But unions say neither has undone twenty years of erosion.</p>
+      <p>The shortage is worst exactly where the protests began. The Créteil and Versailles education regions, which cover the Paris suburbs, had the most unfilled posts in the country in 2025 (382 and 475). Young teachers are posted where the gaps are, which tends to be the hardest schools in the most expensive region of France, and many leave as soon as they can.</p>
+    </li>
+    <li>
+      <h4>2. The replacement system doesn’t work</h4>
+      <p>When a teacher is off sick or on leave, there often isn’t anyone to cover. That is how pupils end up going months without a French or maths teacher in an exam year. It isn’t purely a lack of people. When Education Minister Édouard Geffray announced 3,000 substitute teachers for struggling schools in October, the prime minister’s office later confirmed they were existing substitutes who had simply not been assigned to classes. Critics took that as proof that poor management, not only a lack of money, is part of the problem.</p>
+    </li>
+    <li>
+      <h4>3. Posts are being cut because of falling birth rates</h4>
+      <p>French births have been falling steadily since about 2010. The government’s logic is that fewer children need fewer teachers, so the 2026 budget planned to cut around 4,000 teaching posts, with the ministry calling the cuts “linked to demographics”. The problem is timing. The smaller generations are reaching primary schools first. The large generations born around 2010 are teenagers now, so lycées still have big intakes while the system is being trimmed for the smaller ones coming later. Families experience that as cuts to schools that are already full.</p>
+    </li>
+    <li>
+      <h4>4. The buildings belong to the regions, and many are old</h4>
+      <p>Since the decentralisation laws of the 1980s, the national government pays for teachers but France’s 13 mainland regions own and maintain lycée buildings. So whether a school has working toilets, heating or shade depends on regional budgets, which are themselves squeezed: the 2027 plan cuts about €1 billion from them.</p>
+      <p>Many lycées were built quickly and cheaply in the 1960s and 1970s, when France expanded secondary education and set a goal (in 1985) of bringing 80% of each generation to baccalauréat level. Those buildings were not designed for today’s heat: little insulation, big windows, no shading or air conditioning. Where pupil numbers grew faster than budgets, schools added prefabricated temporary classrooms, which pupils describe as freezing in winter and unbearable in summer. As heatwaves have become hotter and more frequent, those weaknesses have become impossible to ignore. Regions argue that they have invested heavily and that most lycées are in decent shape; pupils at the worst ones disagree.</p>
+    </li>
+    <li>
+      <h4>5. Pensions take a large share of the education budget</h4>
+      <p>This one surprises most people. According to a government report from this month, <mark>32% of the education ministry’s budget, about €28.5 billion, pays the pensions of retired teachers and staff</mark>, not current schooling. Across all ministries the average is 13%. France spends about 14% of GDP on pensions, one of the highest levels in the world, and as the population ages that bill keeps growing. Every euro committed to pensions is a euro that can’t hire a teacher or fix a roof.</p>
+    </li>
+  </ol>
+
+  <div class="answer">
+    <h4>So is it one politician’s fault?</h4>
+    <p>No. Pay erosion runs back to the early 2000s, the buildings to the 1960s, the decentralisation to the 1980s and the pension commitments to decisions made over half a century. Macron’s governments added to the pressure, and critics blame his tax cuts (more on that in <a href="#debt">section 06</a>) for leaving less money for public services. But the honest answer is that French schools are where many slow-moving problems meet: an expensive pension system, an ageing population, a teaching job that pays less than it used to, old buildings in a warming climate, and a state that has run out of money to paper over the gaps.</p>
+  </div>
+
+  <h3>Why it turned violent</h3>
+  <p>Within days, many blockades involved burning bins, firework “mortars” fired at police and, at some schools, arson and assaults on staff. Headteachers were injured; a Marseille fire engine was seized and burned; masked groups who were not pupils showed up at several schools. The education minister said the movement had been taken hostage by ultra-violent groups. Students countered that the violence was a fringe and that police tactics were inflaming things (more on that in <a href="#policing">section 08</a>). Both can be true at once, and in most large French protests both are.</p>
+</section>
+
+<!-- 05 -->
+<section id="fuel">
+  <div class="kicker">05</div>
+  <h2 class="sec">A war 5,000 km away, at the pump</h2>
+  <p>To understand the fuel anger you need to go back to 28 February, when the US and Israel went to war with Iran. Iran sits on the north shore of the <mark>Strait of Hormuz</mark>, the narrow channel through which about a fifth of the world’s oil trade normally passes. Traffic through it almost stopped. Brent crude went from about $72 a barrel before the war to nearly $120 at its peak, and March saw one of the largest monthly oil price jumps on record. The International Energy Agency called it the largest supply disruption in the history of the oil market. A ceasefire came on 8 April, but shipping through the strait stayed far below normal, and the region has flared up repeatedly since.</p>
+  <aside class="note"><b>Why diesel, not petrol?</b>France refines most of its own petrol from crude. But it imports most of its diesel already refined. When the world runs short of refining capacity, refined diesel gets far more expensive than crude, and import-dependent countries pay the most.</aside>
+  <p>France got hit harder on diesel than on petrol, for a structural reason worth remembering: <mark>France imports most of its diesel already refined</mark>, so it pays the global refining premium, not just the crude price. Diesel went from €1.59 a litre at the start of the year to a record €2.41 on 20 September. That is a 50% rise. Diesel matters disproportionately in France because rural and suburban households drive diesel cars, and farmers, fishermen and hauliers run on it. As the head of France’s oil industry body put it, <q>We don’t have a shortage problem, we have a price problem.</q></p>
+  <p>Fuel feeds straight into inflation. French consumer prices rose 3.1% in the year to September, the highest rate since early 2024, with energy up 21.3%. But note one detail an economist would focus on: <mark>core inflation</mark> (which strips out energy and food) was only 1.5%. This is a classic <em>supply shock</em>. Prices are rising because something was taken away from the economy, not because people are spending too much. That creates a nasty dilemma: households feel poorer, but the usual cure for inflation (higher interest rates) would make the economy weaker without bringing back a single barrel of oil. Markets nonetheless expect the European Central Bank to start raising rates again.</p>
+  <h3>What the government did</h3>
+  <p>Instead of cutting fuel taxes for everyone (expensive, and it helps rich drivers too), the government chose <em>targeted</em> subsidies for the most affected sectors, raised to the maximum EU rules allow until the end of the year. On 7 October it released 10 million barrels from France’s strategic diesel reserves, alongside a G7 agreement to release 100 million barrels over four months. Economically defensible, but politically weak: a targeted subsidy is invisible to the average commuter, who still sees €2.40 on the sign.</p>
+  <p>If this sounds familiar, it should. <mark>The yellow vest movement of 2018 began over a fuel tax</mark>. Fuel is the price every French household sees every week, and it has become a shorthand for whether the system is working for people like them.</p>
+</section>
+
+<!-- 06 -->
+<section id="debt">
+  <div class="kicker">06</div>
+  <h2 class="sec">The money problem</h2>
+  <p>This is the part most news coverage skips, and it is the reason the crisis is so hard to defuse. In 2018 Macron calmed the yellow vests partly by writing a cheque: he scrapped the fuel tax rise and announced around €10bn of measures. <mark>That option barely exists now.</mark></p>
+  <aside class="note"><b>Deficit vs debt</b>The deficit is how much more a government spends than it collects in one year. Debt is the total pile of past deficits. France runs a deficit every year, so the pile keeps growing.</aside>
+  <p>France spends more than almost any rich country, with public spending well over half of GDP, and it has not balanced a budget since 1973. Its deficit was 5.1% of GDP in 2025 and is expected to reach 5.4% this year, one of the largest in the EU, against an EU ceiling of 3% and an EU average around 3.1%. Public debt is close to 120% of GDP and still rising.</p>
+  <p>For years that didn’t matter much, because interest rates were near zero. It matters now. The oil shock pushed up inflation and rate expectations everywhere, and investors started demanding more to lend to France specifically. In early October the French 10-year bond yield touched about 5%, <mark>its highest since 2002</mark>, and the gap over German bonds widened to about 1.5 percentage points, the widest since the eurozone debt crisis of 2011. For a time this year France was paying more to borrow than Italy, which would have been unthinkable a few years ago.</p>
+  <aside class="note"><b>The spread</b>The extra interest investors demand to hold French rather than German government bonds. Germany is the eurozone’s benchmark “safe” borrower, so the spread is a thermometer for how risky markets think France is.</aside>
+  <p>Higher rates feed back into the budget. The government says debt interest alone will cost about €10bn more in 2027, roughly the size of the entire justice ministry budget. France plans to borrow a record €340bn next year. You can see the trap as a chain:</p>
+  <ol class="chain">
+    <li>War raises oil prices, which raises inflation and interest rates.</li>
+    <li>Higher rates make France’s large debt more expensive to carry.</li>
+    <li>To reassure lenders, the government proposes spending cuts and pay freezes.</li>
+    <li>Cuts land on the same people already squeezed by fuel and prices: teachers, nurses, pensioners, students.</li>
+    <li>They protest. Unrest and political instability make lenders more nervous, and yields rise further. French yields did rise and the euro weakened on the Monday after the riots.</li>
+  </ol>
+  <h3>What is in the 2027 budget</h3>
+  <p>Lecornu says that without action the 2027 deficit would approach 6.5% of GDP. His plan is an “effort” of about €54bn to bring it to 5%. Reported measures include freezing the <em>point d’indice</em> that sets civil servants’ base pay for another year (saving about €2bn), asking retirees to contribute around €5.5bn, and trimming health reimbursements. Even if every euro is delivered, analysts note, it would only slow the rise in debt, not stop it. The independent fiscal watchdog has called the plan’s growth assumptions optimistic.</p>
+  <h3>Why freeze pay? Were there no other options?</h3>
+  <p>There are only a handful of ways to close a budget gap, and in France right now almost every one of them is politically blocked. Going through them shows why public pay ends up as the target.</p>
+  <div class="watch">
+    <div><span class="d">Raise taxes</span><p>France already has one of the highest tax burdens in the world. Lecornu promised “tax stability”, partly because the centre-right parties he relies on reject tax rises. The left wants to tax the very rich instead: in 2025 it pushed a 2% minimum tax on fortunes above €100m (the “Zucman tax”), which the government rejected.</p></div>
+    <div><span class="d">Cut pensions</span><p>Pensions are the biggest single item, but the 2023 reform raising the retirement age to 64 caused months of protest, and Lecornu had to suspend it in 2025 to avoid being voted out. Retirees also vote in large numbers.</p></div>
+    <div><span class="d">Cut defence</span><p>Since Russia’s invasion of Ukraine, France has been increasing military spending, and the Middle East war has added pressure. No major party wants to cut it.</p></div>
+    <div><span class="d">Skip interest payments</span><p>Not possible. Debt interest is fixed by markets and rising by about €10bn next year.</p></div>
+    <div><span class="d">What’s left</span><p>Public pay, operating budgets of ministries and local governments, health reimbursements and benefits. A pay freeze is attractive to a finance ministry because it saves billions without passing a new law or announcing job cuts, which is why governments of every stripe have used it. The cost is borne quietly, through teachers and nurses getting poorer each year that prices rise.</p></div>
+  </div>
+  <p>How did the hole get so deep in the first place? Economists point to several causes rather than one. France has not balanced a budget since 1973, under governments of every party. Spending on pensions and health rises automatically as the population ages. The state spent heavily to protect households during Covid (“whatever it costs”) and the 2022 energy crisis, when it capped electricity and gas prices. And since 2017 Macron has cut taxes: he replaced the wealth tax with a narrower tax on property, lowered the corporate tax rate from 33% to 25%, and abolished the local housing tax on main homes. His supporters say this made France more competitive and helped bring unemployment down to its lowest level in about fifteen years. His critics argue that tens of billions of euros a year in lost revenue were never matched by spending cuts, which is a big reason the deficit never closed. Both points can be true at once.</p>
+  <p>This is the core economic tension, and it has no clean answer. Cut too little and markets may punish France with higher rates, which also hurts ordinary people. Cut too much, during an energy shock, and you deepen the anger and possibly the slowdown. Economists call the second risk a high <em>fiscal multiplier</em>: austerity hurts growth most when the economy is already weak.</p>
+</section>
+
+<!-- 07 -->
+<section id="politics">
+  <div class="kicker">07</div>
+  <h2 class="sec">Why France can’t govern itself right now</h2>
+  <p>Even a perfect policy would struggle to pass, because France’s political system is jammed. Here is how it got that way.</p>
+  <aside class="note"><b>Fifth Republic</b>France’s current constitution, written in 1958 for Charles de Gaulle. It gives the president enormous power and assumes he will also control parliament. When he doesn’t, it works badly.</aside>
+  <h3>How the system is supposed to work</h3>
+  <p>France has a directly elected <strong>president</strong> (Macron, since 2017) who sets the big direction, and a <strong>prime minister</strong> who runs the government day to day but needs the National Assembly not to vote him out. The constitution was designed for strong presidents with loyal majorities. Two tools matter here. <strong>Article 49.3</strong> lets a government pass a budget without a vote, and the price is that parliament can then try a <strong>motion of censure</strong> to topple it.</p>
+  <h3>How it broke</h3>
+  <p>In June 2024, after his party was crushed in the European elections, Macron gambled and called a snap parliamentary election. It backfired. The Assembly split into <mark>three blocs, none close to a majority</mark>:</p>
+  <div class="blocs">
+    <div class="bloc l"><h4>The left</h4><p>Led in noise if not always in numbers by Jean-Luc Mélenchon’s La France Insoumise (LFI, “France Unbowed”), alongside Socialists, Greens and Communists. Wants higher spending and taxes on the rich.</p></div>
+    <div class="bloc c"><h4>Macron’s centre</h4><p>Renaissance and allies, plus parts of the traditional right (Les Républicains). Pro-business, pro-EU, now trying to cut the deficit.</p></div>
+    <div class="bloc r"><h4>The far right</h4><p>Marine Le Pen’s Rassemblement National (RN), led day to day by Jordan Bardella. Anti-immigration, nationalist, promises protection for pensions and purchasing power.</p></div>
+  </div>
+  <p>Since then, prime ministers have fallen like dominoes. Michel Barnier was toppled by a censure vote in December 2024, the first since 1962. François Bayrou lost a confidence vote in September 2025. Sébastien Lecornu was appointed, resigned after 14 hours in October 2025, and was reappointed four days later. To survive, he promised not to use 49.3 on the budget and agreed to pause Macron’s unpopular 2023 pension reform. He got a 2026 budget through, barely. Now he has to do it again for 2027, with every opposition party campaigning.</p>
+  <h3>The election that hangs over everything</h3>
+  <p>Macron cannot run again; the presidential election is in <mark>April and May 2027</mark>. That changes everyone’s incentives. Opposition parties have little reason to help pass painful cuts six months before a vote, and every party is reading the protests as a campaign event.</p>
+  <ul>
+    <li><strong>Marine Le Pen</strong> leads polls at around 32%. An appeals court in July upheld her conviction for misusing EU funds but shortened her ban so she can run, though with a year on an ankle tag, which she is challenging. Her line on the riots is order and authority: she says the protesters’ social demands are legitimate but have been hijacked by the far left.</li>
+    <li><strong>Jean-Luc Mélenchon</strong> (LFI) is second, and he is the clear favourite of the young: one poll this month gave him 49% of 18 to 24-year-olds. His programme includes abolishing Parcoursup and big education spending, and he has embraced the students loudly.</li>
+    <li><strong>The centre and traditional right</strong> (Gabriel Attal for Renaissance, Bruno Retailleau for Les Républicains, Édouard Philippe for Horizons) are squeezed between the two. The riots make their task harder: they own the government being blamed.</li>
+  </ul>
+  <p>Experts disagree on who gains. One British historian of France thinks only Le Pen benefits. Chabal points out that fear of disorder has historically helped the right and centre too, as it did after 1968, when de Gaulle won a landslide weeks after the student uprising. What nobody disputes is that <mark>Macron is a lame duck</mark>, with 15% approval, and that his speech on Sunday, condemning the violence while promising consultations, did not change the mood.</p>
+  <blockquote>“How can French people do this to France?”<cite>Emmanuel Macron, televised address, 18 October</cite></blockquote>
+</section>
+
+<!-- 09 -->
+<section id="policing">
+  <div class="kicker">08</div>
+  <h2 class="sec">The policing question</h2>
+  <p>French crowd policing is unusually forceful by Western European standards, and this autumn it became a story of its own. More than 6,800 people were taken into custody during the school protests, the large majority of them minors. A sociologist who specialises in youth movements called the scale of repression unprecedented for a high-school movement.</p>
+  <aside class="note"><b>CRS and IGPN</b>The CRS are France’s riot police. The IGPN is the internal inspectorate that investigates complaints against national police officers.</aside>
+  <p>Several injuries drew international attention: a 14-year-old whose jaw was broken by a tear-gas canister fired at close range, a 16-year-old in Tours who lost the use of an eye, a 15-year-old in Lens who lost a hand to a grenade (police say he had picked it up to throw it back), and a 17-year-old who lost a hand in Saint-Étienne on 17 October. Amnesty International, Human Rights Watch and the UN human rights office all raised concerns. The police inspectorate opened dozens of investigations, and the use of stun grenades at student protests was suspended.</p>
+  <p>The other side of the ledger is real too. The Interior Ministry reports about 1,000 officers injured on 17 October alone, seven seriously; a police officer in Belfort was beaten unconscious during a blockade; and headteachers, firefighters and bus drivers were attacked. Interior Minister Laurent Nuñez defended the response as proportionate in almost all cases, then offered his resignation after the 17 October riots, saying he was responsible. Macron refused it and admitted failures of intelligence and anticipation.</p>
+  <p>Why does this matter for the bigger picture? Because <mark>each injury becomes a new grievance</mark>. Researchers point out that past clashes leave lasting distrust between young people, especially in the banlieues, and the police. A movement that started over classrooms has acquired a second cause: how the state treats the young people who protest.</p>
+</section>
+
+<!-- 10 -->
+<section id="blame">
+  <div class="kicker">09</div>
+  <h2 class="sec">Who is behind it? The blame war</h2>
+  <p>A fight over the story of the protests is now as important as the protests themselves.</p>
+  <p><strong>The government’s account:</strong> the prime minister’s office said intelligence services saw the school movement as an operation organised by LFI and its far-left allies. Ministers pointed to LFI politicians at blockades, a Saint-Denis LFI mayor who said violence could at times be legitimate (now referred to prosecutors), and a former LFI aide filmed promising barricades and fire. Lecornu has described the unrest as a “warm-up” for the election.</p>
+  <p><strong>LFI’s account:</strong> the movement is spontaneous, the government is “sinking into conspiracy thinking”, and the real story is police brutality with racist undertones against suburban youth.</p>
+  <p><strong>Public opinion splits the difference.</strong> A poll for Le Figaro found 62% of French people think the students’ movement is justified, while 78% think LFI is exploiting it for political gain. In other words, most people accept the grievance and distrust the politicians closest to it.</p>
+  <p>Outsiders have piled in. Donald Trump linked the unrest to immigration. France summoned Iran’s ambassador over what it called a disinformation campaign by Iranian official accounts. Treat all these claims with care: each side has an interest in its version, and much of the evidence is not public.</p>
+</section>
+
+<!-- 11 -->
+<section id="europe">
+  <div class="kicker">10</div>
+  <h2 class="sec">Not only France</h2>
+  <p>One clue that this is about more than French politics: the school protests spread. Pupils in Belgium (Liège, Charleroi, Brussels) copied the blockades within days. Italian students launched “No Meloni Day” over school conditions and rioted in Milan, Turin and Bologna, while hauliers and farmers there protested diesel costs amid fuel shortages in the south. Greek students camped outside parliament over student housing costs. Students rioted in Tirana.</p>
+  <p>The common thread is the <mark>energy shock landing on top of years of strained public services</mark>, and a generation that feels the deal it was promised is not available. France is the most dramatic case because it combines all of it: high fuel exposure, the weakest public finances of the big eurozone economies, a hung parliament and an imminent election.</p>
+  <p><strong>Why it matters beyond France:</strong> France is the eurozone’s second-largest economy. If French borrowing costs keep climbing, it becomes a eurozone problem, and the ECB may have to choose between fighting inflation and protecting weaker borrowers. It is also a live case study in a question every ageing, high-spending country will face: what happens when an external price shock collides with a state that has run out of fiscal room.</p>
+</section>
+
+<!-- 12 -->
+<section id="debate">
+  <div class="kicker">11</div>
+  <h2 class="sec">Where reasonable people disagree</h2>
+  <p>News coverage tends to pick a frame. Here are the main arguments in their strongest form, so you can make up your own mind.</p>
+  <div class="debate">
+    <div class="side"><span class="label">On the protests</span><h4>Order comes first</h4><p>Burning town halls and schools, attacking headteachers and looting shops is not protest. A state that can’t protect its citizens loses legitimacy. Real grievances are best addressed once calm returns, and rewarding riots invites more. Firm policing and swift prosecution are what most citizens, including most protesters, actually want.</p></div>
+    <div class="side"><span class="label">On the protests</span><h4>The grievance comes first</h4><p>The violence is a fringe; half a million people marched peacefully. Treating teenagers as a security threat, with thousands of arrests and maimings, escalates conflict. Until the government offers something concrete on schools and living costs, protests will continue whatever the police do.</p></div>
+    <div class="side"><span class="label">On the budget</span><h4>Cut now, or pay later</h4><p>France has run deficits for 50 years. Borrowing costs are the highest in two decades. If France waits, markets will force much harsher cuts later, as Greece, Italy and Portugal learned. A credible plan now protects the welfare state long-term.</p></div>
+    <div class="side"><span class="label">On the budget</span><h4>Wrong time to squeeze</h4><p>Cutting public pay and services during an energy shock hits the people least able to absorb it and may slow growth, making the debt ratio worse. Money could come from taxing high earners or windfall energy profits instead, and investing in schools is itself long-term growth policy.</p></div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section id="next">
+  <div class="kicker">12</div>
+  <h2 class="sec">What to watch next</h2>
+  <p>Dates that will tell you which way this is going:</p>
+  <div class="watch">
+    <div><span class="d">Thu 22 Oct</span><p>Lecornu meets the political parties; Macron meets the intelligence services ahead of the weekend.</p></div>
+    <div><span class="d">Sat 24 Oct</span><p>Yellow vests and high-school groups march again, with a “massive” police deployment and Sentinelle soldiers. The main unions have not backed this one. Turnout and violence levels will show whether the movement is growing or fading.</p></div>
+    <div><span class="d">End of Oct</span><p>The deadline Lecornu gave ministers for answers on teacher replacement, school-day length, building repairs and Parcoursup. Watch whether there is real money attached.</p></div>
+    <div><span class="d">Thu 5 Nov</span><p>A nationwide strike called by the unions. Their first big move since the riots.</p></div>
+    <div><span class="d">Nov–Dec</span><p>The 2027 budget goes through parliament. Watch for censure motions: if Lecornu falls, France could end the year without a budget, which bond markets would hate.</p></div>
+    <div><span class="d">Ongoing</span><p>Diesel prices and the Strait of Hormuz; French 10-year yields and the spread over Germany; ECB rate decisions; Le Pen’s ankle-tag appeal.</p></div>
+    <div><span class="d">Apr–May 2027</span><p>The presidential election. Whoever wins inherits the same arithmetic: high debt, angry young voters and no money to spare.</p></div>
+  </div>
+  <p><strong>Three ways this could go.</strong> <em>Fade:</em> holidays end, curfews and policing hold, the government finds money for schools, and the energy price eases. <em>Grind:</em> weekly protests continue at a lower level and merge into the election campaign, which is what most analysts expect. <em>Spiral:</em> another death or a serious incident restarts mass mobilisation, the budget stalls and markets push yields higher, forcing a choice between the street and the bond market.</p>
+</section>
+
+<!-- 08 -->
+<section id="history">
+  <div class="kicker">13</div>
+  <h2 class="sec">Further context: a country that argues in the street</h2>
+  <p>This section is background rather than explanation: it won’t tell you why this autumn happened, but it helps explain why French protests take the form they do. In France, <mark>the street is widely treated as a legitimate part of democracy</mark>, not a breakdown of it. The founding myth of the modern state is a revolution (1789), and governments have retreated in the face of mass protest often enough that people believe it works.</p>
+  <aside class="note"><b>Union paradox</b>Only around one in ten French workers belongs to a union, far fewer than in Scandinavia. But French unions are very good at calling mass strike days, which is where their power comes from.</aside>
+  <ul class="reads" style="gap:.7rem">
+    <li><span class="tag">1789</span><span>The Revolution. Ever since, “the people in the streets” has been a source of political legitimacy that rivals elections.</span></li>
+    <li><span class="tag">May 1968</span><span>Students occupy universities, then ten million workers strike. De Gaulle briefly flees, then wins a landslide election. The template for students-plus-workers, and for the backlash.</span></li>
+    <li><span class="tag">1995</span><span>Weeks of transport strikes force the government to back down on pension changes for public workers.</span></li>
+    <li><span class="tag">2005</span><span>Riots across the banlieues after two teenagers die fleeing police. A state of emergency is declared.</span></li>
+    <li><span class="tag">2006</span><span>Students and unions force the withdrawal of the CPE youth employment contract.</span></li>
+    <li><span class="tag">2018–19</span><span>The yellow vests (<em>gilets jaunes</em>), named for the hi-vis vests every French driver must carry, start over a fuel tax and grow into a weekly revolt against inequality and the “Paris elite”. Macron scraps the tax and spends about €10bn.</span></li>
+    <li><span class="tag">2023</span><span>Months of protest against raising the pension age from 62 to 64. The government passes it anyway, using 49.3. Riots follow the police shooting of a 17-year-old, Nahel, that summer.</span></li>
+    <li><span class="tag">2025</span><span>“Bloquons tout” (“Let’s block everything”) protests against the previous budget’s cuts.</span></li>
+  </ul>
+  <p>Seen this way, 2026 is less a rupture than <mark>the next chapter of the same argument</mark> running through Macron’s whole presidency: he began his first term facing the yellow vests over fuel and inequality, and is ending his second facing them again. What is new is the youth of the protesters, the absence of fiscal room, and the fact that the president is leaving.</p>
+</section>
+
+<hr class="mini">
+
+<!-- 14 -->
+<section id="terms">
+  <div class="kicker">14</div>
+  <h2 class="sec">Key terms</h2>
+  <dl class="gloss">
+    <dt>Lycée</dt><dd>Public upper-secondary school (ages ~15–18). Pupils are <em>lycéens</em>.</dd>
+    <dt>Banlieue</dt><dd>The suburbs around big cities. In political talk, usually the poorer, diverse suburbs of Paris such as Seine-Saint-Denis.</dd>
+    <dt>Parcoursup</dt><dd>National online platform for applying to higher education.</dd>
+    <dt>Gilets jaunes</dt><dd>“Yellow vests”: a leaderless protest movement born in 2018 over fuel taxes and inequality.</dd>
+    <dt>CGT, CFDT, FO…</dt><dd>France’s main trade union confederations. The CGT is the most militant; the CFDT the largest and more moderate. Together they form the <em>intersyndicale</em>.</dd>
+    <dt>LFI</dt><dd>La France Insoumise (“France Unbowed”), the radical-left party of Jean-Luc Mélenchon.</dd>
+    <dt>RN</dt><dd>Rassemblement National (“National Rally”), the far-right party of Marine Le Pen and Jordan Bardella.</dd>
+    <dt>Matignon / Élysée</dt><dd>Shorthand for the prime minister’s office and the presidency, after their buildings.</dd>
+    <dt>Article 49.3</dt><dd>Constitutional tool to pass a law without a vote, at the risk of a censure motion.</dd>
+    <dt>Motion of censure</dt><dd>A no-confidence vote. If a majority supports it, the government must resign.</dd>
+    <dt>Prefect</dt><dd>The central state’s representative in each département. Prefects can ban protests and impose curfews.</dd>
+    <dt>Sentinelle</dt><dd>The army operation created after the 2015 terror attacks to patrol French streets.</dd>
+    <dt>OAT</dt><dd>French government bonds. The “OAT–Bund spread” is the gap between French and German yields.</dd>
+    <dt>Core inflation</dt><dd>Inflation excluding volatile energy and food, used to judge whether price rises are spreading through the economy.</dd>
+    <dt>Point d’indice</dt><dd>The index used to calculate civil servants’ base pay. Freezing it is a pay cut in real terms.</dd>
+  </dl>
+</section>
+
+<!-- 15 -->
+<section id="deeper">
+  <div class="kicker">15</div>
+  <h2 class="sec">Go deeper</h2>
+  <h3>Start with these (Wikipedia)</h3>
+  <ul class="reads">
+    <li><a href="https://en.wikipedia.org/wiki/2026_French_student_protests" target="_blank" rel="noopener">2026 French student protests</a><span class="why">A day-by-day record of the school movement with figures and sources. Long, but the best single reference.</span></li>
+    <li><a href="https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis" target="_blank" rel="noopener">2026 Iran war fuel crisis</a><span class="why">The global energy shock behind the fuel anger.</span></li>
+    <li><a href="https://en.wikipedia.org/wiki/2026_French_fuel_protests" target="_blank" rel="noopener">2026 French fuel protests</a><span class="why">The separate fuel movement that started on 15 September.</span></li>
+    <li><a href="https://en.wikipedia.org/wiki/Yellow_vests_protests" target="_blank" rel="noopener">Yellow vests protests</a><span class="why">Essential background: the 2018 movement that shaped Macron’s presidency.</span></li>
+    <li><a href="https://en.wikipedia.org/wiki/Lecornu_governments" target="_blank" rel="noopener">Lecornu governments</a><span class="why">How the current government survived its collapse-and-reappointment in 2025.</span></li>
+    <li><a href="https://en.wikipedia.org/wiki/2024_French_legislative_election" target="_blank" rel="noopener">2024 French legislative election</a><span class="why">The snap election that produced today’s deadlocked parliament.</span></li>
+    <li><a href="https://en.wikipedia.org/wiki/French_Fifth_Republic" target="_blank" rel="noopener">French Fifth Republic</a><span class="why">How the French system of government is designed, and why it struggles without a majority.</span></li>
+    <li><a href="https://en.wikipedia.org/wiki/Mai_68" target="_blank" rel="noopener">May 68</a><span class="why">The original students-and-workers uprising, and its backlash.</span></li>
+    <li><a href="https://en.wikipedia.org/wiki/Bloquons_tout" target="_blank" rel="noopener">Bloquons tout</a><span class="why">The 2025 anti-austerity protests: a preview of this autumn.</span></li>
+    <li><a href="https://en.wikipedia.org/wiki/Parcoursup" target="_blank" rel="noopener">Parcoursup</a><span class="why">What the students mean when they complain about it.</span></li>
+  </ul>
+  <h3>Then read these articles</h3>
+  <ul class="reads">
+    <li><a href="https://www.aljazeera.com/news/2026/10/18/why-have-frances-school-protests-become-a-wider-political-crisis" target="_blank" rel="noopener">Why have France’s school protests become a wider political crisis?</a><span class="why">Al Jazeera, 18 Oct. A clear explainer with historians and sociologists.</span></li>
+    <li><a href="https://www.aljazeera.com/news/2026/10/20/french-protests-is-it-game-over-for-macrons-centrists-before-elections" target="_blank" rel="noopener">French protests: Is it game over for Macron’s centrists?</a><span class="why">Al Jazeera, 20 Oct. On the youth vote and the 2027 race.</span></li>
+    <li><a href="https://theconversation.com/why-the-student-protests-in-france-and-the-governments-response-are-unprecedented-and-unpredictable-293863" target="_blank" rel="noopener">Why the student protests in France are unprecedented and unpredictable</a><span class="why">The Conversation, by Robi Morder, a historian of youth movements.</span></li>
+    <li><a href="https://www.economist.com/europe/2026/10/02/schoolyard-protests-are-setting-france-ablaze" target="_blank" rel="noopener">Schoolyard protests are setting France ablaze</a><span class="why">The Economist, 2 Oct. Paywalled, but a sharp take.</span></li>
+    <li><a href="https://www.hrw.org/news/2026/10/14/french-high-school-student-protests-met-with-excessive-force" target="_blank" rel="noopener">French high school student protests met with excessive force</a><span class="why">Human Rights Watch, 14 Oct. The case against the policing.</span></li>
+    <li><a href="https://www.euronews.com/2026/10/01/french-government-to-lay-out-budget-amid-record-breaking-public-debt" target="_blank" rel="noopener">French government to lay out budget amid record-breaking public debt</a><span class="why">Euronews, 1 Oct. The fiscal numbers explained.</span></li>
+    <li><a href="https://www.euronews.com/2026/09/23/surging-prices-voters-anger-how-frances-fuel-crisis-could-shape-the-presidential-campaign" target="_blank" rel="noopener">How France’s fuel crisis could shape the presidential campaign</a><span class="why">Euronews, 23 Sep. Why fuel is so political in France.</span></li>
+  </ul>
+  <h3>Concepts worth learning properly</h3>
+  <div class="concepts">
+    <div class="concept"><h4>Supply shock vs demand shock</h4><p>Why the same 3% inflation can call for completely different policy. Look up the 1970s oil shocks and “stagflation”.</p></div>
+    <div class="concept"><h4>Sovereign spreads and risk premia</h4><p>How markets price the risk of lending to a government, and why the 2011 eurozone crisis is the reference point.</p></div>
+    <div class="concept"><h4>Fiscal multipliers and austerity</h4><p>The debate over whether cutting deficits in a weak economy backfires. Start with the IMF’s 2013 work on multipliers.</p></div>
+    <div class="concept"><h4>Debt dynamics (r vs g)</h4><p>Whether debt-to-GDP rises depends on the interest rate versus growth, plus the primary deficit. France’s problem in one formula.</p></div>
+    <div class="concept"><h4>Refining margins (crack spreads)</h4><p>Why diesel can rise far more than crude oil, and why import-dependent countries get hit hardest.</p></div>
+    <div class="concept"><h4>Semi-presidential systems</h4><p>How power is split between president and prime minister in France, and what “cohabitation” means.</p></div>
+    <div class="concept"><h4>Insider–outsider labour markets</h4><p>Why young people in France face more temporary jobs and unemployment while older workers are well protected.</p></div>
+    <div class="concept"><h4>The populist squeeze on the centre</h4><p>Why centrist parties across Europe are losing ground to the far right and far left at the same time.</p></div>
+  </div>
+</section>
+
+<!-- 16 -->
+<section id="sources">
+  <div class="kicker">16</div>
+  <h2 class="sec">Sources</h2>
+  <ol class="sources">
+    <li><a href="https://en.wikipedia.org/wiki/2026_French_student_protests" target="_blank" rel="noopener">2026 French student protests</a>, Wikipedia (accessed 21 Oct 2026), and the Le Monde, Reuters, Guardian, BBC, franceinfo and AFP reports it cites</li>
+    <li><a href="https://www.aljazeera.com/news/2026/10/18/why-have-frances-school-protests-become-a-wider-political-crisis" target="_blank" rel="noopener">Why have France’s school protests become a wider political crisis?</a>, Al Jazeera, 18 Oct 2026</li>
+    <li><a href="https://www.aljazeera.com/news/2026/10/20/french-protests-is-it-game-over-for-macrons-centrists-before-elections" target="_blank" rel="noopener">French protests: Is it game over for Macron’s centrists before elections?</a>, Al Jazeera, 20 Oct 2026</li>
+    <li><a href="https://www.aljazeera.com/news/2026/10/20/france-to-impose-new-curfews-where-required-after-calm-night" target="_blank" rel="noopener">France PM promises more curfews as authorities seek to regain control</a>, Al Jazeera/AFP, 20 Oct 2026</li>
+    <li><a href="https://www.aljazeera.com/news/2026/10/17/france-wave-of-nationwide-protests" target="_blank" rel="noopener">Tear gas and unrest as hundreds of thousands protest for reforms in France</a>, Al Jazeera, 17 Oct 2026</li>
+    <li><a href="https://www.aljazeera.com/news/2026/10/18/paris-left-reeling-as-student-led-protests-turn-chaotic" target="_blank" rel="noopener">Paris left reeling as student-led protests turn chaotic</a>, Al Jazeera, 18 Oct 2026</li>
+    <li><a href="https://www.dailymaverick.co.za/article/2026-10-18-macron-condemns-shocking-scenes-of-violence-across-france/" target="_blank" rel="noopener">Macron condemns “shocking” scenes of violence across France</a>, Reuters via Daily Maverick, 18 Oct 2026</li>
+    <li><a href="https://www.staradvertiser.com/2026/10/18/breaking-news/macron-urges-calm-as-france-counts-the-cost-of-worst-unrest-in-years/" target="_blank" rel="noopener">Macron urges calm as France counts the cost of worst unrest in years</a>, Reuters via Honolulu Star-Advertiser, 18 Oct 2026</li>
+    <li><a href="https://en.prothomalo.com/amp/story/international/6zrzjywcup" target="_blank" rel="noopener">“How can French people do this to France?” asks Macron</a>, AFP via Prothom Alo, 18 Oct 2026</li>
+    <li><a href="https://www.modernghana.com/news/1537173/macron-promises-tough-punishments-for-rioters-duri.amp" target="_blank" rel="noopener">Macron promises tough punishments for rioters</a>, RFI via Modern Ghana, 18 Oct 2026</li>
+    <li><a href="https://www.euronews.com/2026/10/19/emmanuel-macron-rejects-resignation-of-interior-minister-laurent-nunez" target="_blank" rel="noopener">Emmanuel Macron rejects resignation of interior minister Laurent Nuñez</a>, Euronews, 19 Oct 2026</li>
+    <li><a href="https://www.atlantanewsfirst.com/2026/10/19/macron-rejects-interior-ministers-resignation-rioting-looting-expose-policing-failures/" target="_blank" rel="noopener">Macron rejects France interior minister’s resignation</a>, AP, 19 Oct 2026</li>
+    <li><a href="https://www.cnbc.com/2026/10/20/france-protests-curfews-macron-gulf-trip.html" target="_blank" rel="noopener">France to deploy military as it braces for fresh unrest this weekend</a>, CNBC, 20 Oct 2026</li>
+    <li><a href="https://www.cnbc.com/2026/10/20/france-protests-europe-cost-living-violence.html" target="_blank" rel="noopener">What’s making Europe so angry?</a>, CNBC, 20 Oct 2026</li>
+    <li><a href="https://www.foxnews.com/live-news/france-riots-protests-limoges-arrest-10-20-26" target="_blank" rel="noopener">France riots live coverage</a>, Fox News, 20 Oct 2026</li>
+    <li><a href="https://www.washingtontimes.com/news/2026/oct/20/france-braces-new-round-protests-officials-blame-far-left-agitators/" target="_blank" rel="noopener">France braces for new round of protests</a>, Washington Times, 20 Oct 2026</li>
+    <li><a href="https://www.france24.com/en/europe/20261021-live-french-pm-lecornu-to-meet-with-unions-ahead-of-new-protests" target="_blank" rel="noopener">Live: French PM Lecornu to meet with unions ahead of new protests</a>, France 24, 21 Oct 2026</li>
+    <li><a href="https://www.france24.com/en/live-news/20261021-french-pm-to-meet-unions-as-government-prepares-for-more-protests" target="_blank" rel="noopener">French PM to meet unions as government prepares for more protests</a>, AFP via France 24, 21 Oct 2026</li>
+    <li><a href="https://www.newsbytesapp.com/news/world/sebastien-lecornu-meets-unions-after-riots-triggered-curfews-and-jailings/tldr" target="_blank" rel="noopener">Lecornu meets unions after riots triggered curfews and jailings</a>, NewsBytes, 21 Oct 2026</li>
+    <li><a href="https://fr.usembassy.gov/demonstration-alert-u-s-embassy-paris-france-october-17-2026/" target="_blank" rel="noopener">Demonstration Alert, 17 October 2026</a>, US Embassy Paris</li>
+    <li><a href="https://en.wikipedia.org/wiki/2026_French_fuel_protests" target="_blank" rel="noopener">2026 French fuel protests</a>, Wikipedia</li>
+    <li><a href="https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis" target="_blank" rel="noopener">2026 Iran war fuel crisis</a>, Wikipedia</li>
+    <li><a href="https://www.cnbc.com/2026/04/21/oil-price-iran-war-middle-east.html" target="_blank" rel="noopener">A timeline of how the Iran war shook oil prices</a>, CNBC, 21 Apr 2026</li>
+    <li><a href="https://www.connexionfrance.com/news/diesel-prices-rising-compare-prices-by-retailer-in-france/813112" target="_blank" rel="noopener">Diesel prices rising: compare prices by retailer in France</a>, Connexion, Sep 2026</li>
+    <li><a href="https://www.connexionfrance.com/practical/when-will-fuel-prices-in-france-drop-after-oil-price-fall/806166" target="_blank" rel="noopener">When will fuel prices in France drop?</a>, Connexion, Aug 2026</li>
+    <li><a href="https://www.connexionfrance.com/practical/diesel-prices-in-france-rise-40-in-one-year/790207" target="_blank" rel="noopener">Diesel prices in France rise 40% in one year</a>, Connexion, May 2026</li>
+    <li><a href="https://www.euronews.com/2026/09/21/french-diesel-prices-top-240-a-litre-as-european-fuel-costs-hit-records" target="_blank" rel="noopener">French diesel prices top €2.40 a litre</a>, Euronews, 21 Sep 2026</li>
+    <li><a href="https://www.euronews.com/2026/09/23/surging-prices-voters-anger-how-frances-fuel-crisis-could-shape-the-presidential-campaign" target="_blank" rel="noopener">How France’s fuel crisis could shape the presidential campaign</a>, Euronews, 23 Sep 2026</li>
+    <li><a href="https://tradingeconomics.com/france/inflation-cpi/news/592227" target="_blank" rel="noopener">France September inflation revised up to 3.1%</a>, Trading Economics (INSEE data), 15 Oct 2026</li>
+    <li><a href="https://www.optionfinance.fr/info-financiere-en-continu/d/2026-10-15-france-linflation-revisee-en-hausse-pour-septembre.html" target="_blank" rel="noopener">France : l’inflation révisée en hausse pour septembre</a>, Option Finance, 15 Oct 2026</li>
+    <li><a href="https://www.euronews.com/2026/10/01/french-government-to-lay-out-budget-amid-record-breaking-public-debt" target="_blank" rel="noopener">French government to lay out budget amid record-breaking public debt</a>, Euronews, 1 Oct 2026</li>
+    <li><a href="https://www.publicsenat.fr/actualites/politique/budget-2027-sebastien-lecornu-propose-un-effort-de-54-milliards-deuros" target="_blank" rel="noopener">Budget 2027 : Sébastien Lecornu propose un effort de 54 milliards</a>, Public Sénat, Sep 2026</li>
+    <li><a href="https://www.journaldeleconomie.fr/?p=49361" target="_blank" rel="noopener">Lecornu annonce des économies de 54 milliards</a>, Journal de l’Économie, Sep 2026</li>
+    <li><a href="https://ground.news/article/7f381882-e942-471f-999e-a25646494954" target="_blank" rel="noopener">France unveils cost-cutting 2027 budget</a>, Ground News summary of Sud Ouest and others, Sep 2026</li>
+    <li><a href="https://tradingeconomics.com/france/government-bond-yield/news/583545" target="_blank" rel="noopener">French bond yields and the spread over Germany</a>, Trading Economics, Oct 2026</li>
+    <li><a href="https://www.fisherinvestments.com/en-gb/insights/market-commentary/about-those-spiking-french-yields" target="_blank" rel="noopener">About those spiking French yields</a>, Fisher Investments, 2026</li>
+    <li><a href="https://www.africanews.com/2026/07/07/french-far-right-leader-marine-le-pen-cleared-to-run-for-president-but-with-ankle-tag/" target="_blank" rel="noopener">Le Pen cleared to run for president but with ankle tag</a>, AFP via Africanews, 7 Jul 2026</li>
+    <li><a href="https://www.washingtonexaminer.com/?p=4639511" target="_blank" rel="noopener">Marine Le Pen says she will run for president in 2027</a>, Washington Examiner, Jul 2026</li>
+    <li><a href="https://www.weka.fr/actualite/education/article/education-moins-de-candidats-aux-concours-d-enseignants-pour-le-second-degre-en-2025-195720/" target="_blank" rel="noopener">Les concours enseignants ne font toujours pas le plein</a>, AFP via Weka, Jul 2025 (unfilled teaching posts)</li>
+    <li><a href="https://acteurspublics.fr/articles/les-salaires-des-profs-en-baisse-depuis-2000/" target="_blank" rel="noopener">Les salaires des profs en baisse depuis 2000</a>, Acteurs Publics, citing OECD <em>Education at a Glance</em> 2012</li>
+    <li><a href="https://lcp.fr/actualites/greve-du-29-septembre-pourquoi-les-fonctionnaires-reclament-une-hausse-des-salaires" target="_blank" rel="noopener">Grève du 29 septembre : pourquoi les fonctionnaires réclament une hausse des salaires</a>, LCP, Sep 2026 (point d’indice)</li>
+    <li><a href="https://www.journaldeleconomie.fr/projet-budget-2026-suppression-4000-postes/" target="_blank" rel="noopener">Le projet de budget 2026 prévoit 4 000 suppressions de postes d’enseignants</a>, Journal de l’Économie, Oct 2025</li>
+    <li><a href="https://www.banquedesterritoires.fr/mouvement-lyceen-sebastien-lecornu-lance-cinq-chantiers-pour-repondre-aux-difficultes" target="_blank" rel="noopener">Mouvement lycéen : Sébastien Lecornu lance cinq chantiers</a>, Banque des Territoires, Oct 2026 (regions’ role, building works)</li>
+    <li><a href="https://ibtimes.com.au/france-student-protests-school-conditions-teacher-shortages-1877002" target="_blank" rel="noopener">France student protests explained: rats, leaking roofs and missing teachers</a>, IBTimes, 20 Oct 2026</li>
+    <li><a href="https://www.outlookindia.com/international/france-pension-costs-political-crisis-public-services" target="_blank" rel="noopener">France’s pension costs and public services</a>, Outlook / Reuters, Oct 2026 (pensions’ share of ministry budgets)</li>
+    <li><a href="https://en.wikipedia.org/wiki/Lecornu_governments" target="_blank" rel="noopener">Lecornu governments</a>, Wikipedia</li>
+    <li><a href="https://en.wikipedia.org/wiki/Bloquons_tout" target="_blank" rel="noopener">Bloquons tout</a>, Wikipedia</li>
+  </ol>
+  <p class="src">Historical and structural background (1789, 1968, 1995, 2005, 2006, 2018, 2023, the 2024 dissolution, the fall of the Barnier and Bayrou governments, the 1980s decentralisation of school buildings, the 2010 master’s requirement for teachers, Macron’s tax changes and the Zucman tax debate) is general knowledge rather than drawn from a single source; the Wikipedia links above are a good way to check any of it.</p>
+</section>
+
+<footer class="foot">
+  <p><strong>About this issue.</strong> Backstory is an AI-researched briefing, compiled by Claude from the sources listed above on 21 October 2026. Figures on fast-moving events (arrests, turnout, polls) often differ between government, organisers and media; where they conflict, the page says so or uses the official number. Check anything important against the original source.</p>
+</footer>
+</div>
+</div>
