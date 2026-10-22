@@ -105,11 +105,30 @@ Vercel build log for lines starting `images:` (not found / skipped licence) and 
 4. Future sessions that need photos locally: allow `commons.wikimedia.org` and `upload.wikimedia.org` in the
    cloud environment's network settings.
 
+## Automation plan (agreed 22 Oct 2026, not built yet)
+
+Owner's decisions:
+- **Approve first.** Each run opens a pull request with the new issue; Vercel posts a preview link; the owner
+  merges to publish. May switch to fully automatic later once quality is trusted.
+- **Topics: queue + fallback.** `topics/queue.md` lists upcoming topics (owner edits it on GitHub). If empty,
+  Claude picks the biggest story for that day's track. Tracks alternate World / Singapore.
+- **Timing: ready by 6am Singapore time** daily (scheduled task starting ~5am SGT to allow for research).
+
+Build order:
+1. `topics/queue.md` (format + a few starter topics) and a "published" log so topics aren't repeated.
+2. `scripts/check-issue.mjs` (`npm run check`): frontmatter valid, number = last + 1, track alternates,
+   Overview first, body ≤ ~5,000 words, has Key terms / Go deeper / Sources, every Commons file exists and is
+   free-licensed, site builds.
+3. Update the `backstory-issue` skill (currently outputs standalone HTML) to write MDX using
+   `docs/issue-template.mdx` and the editorial rules in BRIEF.md, then run the checker and open a PR.
+4. Allow `en.wikipedia.org`, `commons.wikimedia.org`, `upload.wikimedia.org` in the cloud environment's network
+   settings (owner action) so research and photo checks work.
+5. Run it by hand for a few days, review quality, then create the daily scheduled task
+   (fresh session each run, branch `issue/NNN-slug`, PR to `main`).
+
 ## Designed for, not built yet
 
-- **Daily automation**: a scheduled job writes the next issue as a new `.mdx` file from `docs/issue-template.mdx`,
-  commits it, and Vercel redeploys automatically. Nothing in the layout needs to change.
-- **Topic queue**: planned as a simple file (e.g. `topics/queue.md`) listing upcoming topics, alternating World/Singapore.
+- **Daily automation and topic queue**: see "Automation plan" above.
 - **Newsletter**: RSS already exists (`/rss.xml`); most newsletter tools can send from RSS. A sign-up box would go
   in `Base.astro` footer.
 - **Personalised topics**: would need accounts or local preferences; not started.
