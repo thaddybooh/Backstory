@@ -1,0 +1,20 @@
+---
+// Several separate causes that meet in one event. Use <Flow> inside.
+interface Props {
+  target: string;
+  outcome: string;
+}
+const { target, outcome } = Astro.props;
+---
+<figure class="converge wide">
+  <div class="converge-flows"><slot /></div>
+  <svg class="converge-lines" viewBox="0 0 300 40" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M50 0 C50 25 150 15 150 40" />
+    <path d="M150 0 L150 40" />
+    <path d="M250 0 C250 25 150 15 150 40" />
+  </svg>
+  <figcaption class="converge-target">
+    <strong>{target}</strong>
+    <span>{outcome}</span>
+  </figcaption>
+</figure>

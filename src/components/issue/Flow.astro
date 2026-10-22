@@ -1,0 +1,12 @@
+---
+interface Props {
+  label: string;
+  title: string;
+}
+const { label, title } = Astro.props;
+---
+<div class="flow">
+  <span class="flow-label">{label}</span>
+  <h4>{title}</h4>
+  <p><slot /></p>
+</div>

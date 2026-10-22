@@ -1,0 +1,29 @@
+---
+// A freely licensed photo from Wikimedia Commons, with its credit underneath.
+// `file` is the Commons file name, e.g. "Hemicycle assemblee nationale.JPG".
+import { getCommonsImage } from '../../lib/images';
+import Credit from '../Credit.astro';
+interface Props {
+  file: string;
+  alt: string;
+  caption?: string;
+  wide?: boolean;
+}
+const { file, alt, caption, wide = false } = Astro.props;
+const image = getCommonsImage(file);
+---
+{
+  image ? (
+    <figure class:list={['photo', { wide }]}>
+      <img src={image.src} width={image.width} height={image.height} alt={alt} loading="lazy" decoding="async" />
+      <figcaption>
+        {caption}
+        <Credit image={image} />
+      </figcaption>
+    </figure>
+  ) : (
+    import.meta.env.DEV && (
+      <div class="photo-missing">Photo not downloaded yet: {file}. Run “npm run images”.</div>
+    )
+  )
+}

@@ -1,0 +1,14 @@
+---
+interface Props {
+  date: string;
+  turning?: boolean;
+}
+const { date, turning = false } = Astro.props;
+---
+<li class:list={['event', { turning }]}>
+  <span class="event-date">{date}</span>
+  <div class="event-body">
+    {turning && <span class="event-flag">Turning point</span>}
+    <slot />
+  </div>
+</li>

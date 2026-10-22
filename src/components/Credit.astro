@@ -1,0 +1,24 @@
+---
+import type { CommonsImage } from '../lib/images';
+interface Props {
+  image?: CommonsImage;
+  /** A hand-written credit for a local image. */
+  text?: string;
+}
+const { image, text } = Astro.props;
+---
+{
+  image ? (
+    <span class="credit">
+      Photo by {image.author}, via <a href={image.page} target="_blank" rel="noopener">Wikimedia Commons</a> (
+      {image.licenceUrl ? (
+        <a href={image.licenceUrl} target="_blank" rel="noopener license">{image.licence}</a>
+      ) : (
+        image.licence
+      )}
+      )
+    </span>
+  ) : (
+    text && <span class="credit">{text}</span>
+  )
+}

@@ -1,0 +1,62 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/site';
+---
+
+<Base title="About" description="What Backstory is, how each issue is researched and written, and who runs it.">
+  <div class="wrap">
+    <header class="page-head">
+      <h1>About Backstory</h1>
+      <p>{SITE.tagline[0].toUpperCase() + SITE.tagline.slice(1)}.</p>
+    </header>
+
+    <div class="text-page">
+      <p>
+        Most news tells you what happened today. Backstory tells you why. Each day it takes one story in the news and gives
+        you the background to actually understand it: what is happening, how it got here, the economics and politics
+        underneath, where reasonable people disagree, and what to watch next.
+      </p>
+      <p>
+        Topics alternate between <strong>World</strong> stories, such as France’s autumn of protest, and
+        <strong>Singapore</strong> stories, such as the haze, housing or healthcare. Every issue is written for any reader,
+        wherever they live, and takes no more than 30 minutes to read.
+      </p>
+
+      <h2>How issues are made</h2>
+      <p>
+        Backstory is researched and drafted with AI. For each issue, an AI research assistant (currently Claude, made by
+        Anthropic) reads widely across news reports, official documents, data and reference sources, then writes the
+        explainer to a fixed structure.
+      </p>
+      <ul>
+        <li>
+          <strong>Every source is listed.</strong> Each issue ends with a numbered list of the reports and documents it draws
+          on, with links, so you can check anything yourself.
+        </li>
+        <li>
+          <strong>Contested claims are attributed.</strong> When governments, organisers and media give different numbers,
+          or when a claim comes from one side of an argument, the issue says who is saying it.
+        </li>
+        <li>
+          <strong>Being named is not proof.</strong> When a person or company is mentioned because an official body or
+          report named them, that is reported as such, not as a finding of wrongdoing.
+        </li>
+        <li>
+          <strong>AI makes mistakes.</strong> Fast-moving stories change by the hour and AI research can get details wrong.
+          Please check anything important against the original sources.
+        </li>
+      </ul>
+
+      <h2>Photos</h2>
+      <p>
+        Backstory only uses freely licensed photos, mostly from Wikimedia Commons. The photographer, source and licence are
+        credited under every image. Backstory never uses photos from news agencies or news sites.
+      </p>
+
+      <h2>Who runs it</h2>
+      <p>
+        Backstory is run by {SITE.owner}, an economics graduate based in Singapore.
+      </p>
+    </div>
+  </div>
+</Base>

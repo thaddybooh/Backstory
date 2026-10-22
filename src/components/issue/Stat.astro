@@ -1,0 +1,10 @@
+---
+interface Props {
+  value: string;
+}
+const { value } = Astro.props;
+---
+<div class="stat" role="listitem">
+  <span class="stat-value">{value}</span>
+  <span class="stat-label"><slot /></span>
+</div>

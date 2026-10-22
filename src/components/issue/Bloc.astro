@@ -1,0 +1,11 @@
+---
+interface Props {
+  position: 'left' | 'centre' | 'right';
+  title: string;
+}
+const { position, title } = Astro.props;
+---
+<div class="bloc" data-position={position}>
+  <h4>{title}</h4>
+  <p><slot /></p>
+</div>

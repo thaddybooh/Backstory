@@ -1,0 +1,72 @@
+---
+import Base from '../layouts/Base.astro';
+import HeroImage from '../components/HeroImage.astro';
+import IssueRow from '../components/IssueRow.astro';
+import { getIssues, issueUrl, issueNumber, formatLongDate, TRACK_LABEL } from '../lib/issues';
+import { getCommonsImage } from '../lib/images';
+
+const issues = await getIssues();
+const [latest, ...earlier] = issues;
+const recent = earlier.slice(0, 6);
+const d = latest?.data;
+const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommonsImage(d.hero.commons))));
+---
+
+<Base ogImage={latest ? `/og/${latest.id}.png` : undefined}>
+  {
+    latest && d && (
+      <section class="cover" data-track={d.track} aria-labelledby="latest-title">
+        <div class:list={['wrap cover-grid', { 'has-image': hasHero }]}>
+          <div>
+            <div class="cover-meta">
+              <span class="track">{TRACK_LABEL[d.track]}</span>
+              <time datetime={d.date.toISOString().slice(0, 10)}>{formatLongDate(d.date)}</time>
+            </div>
+            <div class="cover-num" aria-hidden="true">
+              {issueNumber(d.number)}
+            </div>
+            <h1 class="cover-title" id="latest-title">
+              <a href={issueUrl(latest)}>
+                <span class="visually-hidden">Today’s issue: </span>
+                {d.title}
+              </a>
+            </h1>
+            <p class="cover-dek">{d.dek}</p>
+            <div class="cover-foot">
+              <a class="button" href={issueUrl(latest)}>
+                Read today’s issue
+              </a>
+              <span>{d.readTime}-minute read</span>
+            </div>
+          </div>
+          <HeroImage hero={d.hero} />
+        </div>
+      </section>
+    )
+  }
+
+  {
+    recent.length > 0 && (
+      <section class="wrap" aria-labelledby="earlier">
+        <div class="section-head">
+          <h2 id="earlier">Earlier issues</h2>
+          <a href="/archive/">See all issues</a>
+        </div>
+        <ul class="issue-list">
+          {recent.map((issue) => (
+            <IssueRow issue={issue} />
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  {
+    !latest && (
+      <section class="wrap page-head">
+        <h1>No issues yet</h1>
+        <p>Add an issue file to src/content/issues/ and it will appear here.</p>
+      </section>
+    )
+  }
+</Base>

@@ -1,0 +1,12 @@
+---
+// A term definition: in the margin on wide screens, inline on phones.
+// Place it just before the paragraph it belongs to.
+interface Props {
+  term: string;
+}
+const { term } = Astro.props;
+---
+<aside class="sidenote">
+  <strong class="sidenote-term">{term}</strong>
+  <span class="sidenote-text"><slot /></span>
+</aside>

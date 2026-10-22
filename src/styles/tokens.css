@@ -1,0 +1,100 @@
+/*
+  Design tokens for the "Daybreak" direction.
+  Change the look of the whole site here: colours, fonts and sizes.
+  Every other stylesheet uses these variables rather than raw values.
+*/
+
+:root {
+  /* Colour: light */
+  --paper: #f5f7fa;          /* page background, a cool morning white */
+  --paper-raised: #ffffff;   /* boxes that sit on the page */
+  --paper-sunk: #e9edf4;     /* tinted panels */
+  --ink: #14213d;            /* text and headlines, deep navy */
+  --ink-soft: #46536d;       /* secondary text */
+  --ink-faint: #6b7690;      /* captions, credits */
+  --rule: #d6dce7;           /* hairlines and borders */
+
+  /* Track accents: World is ultramarine, Singapore is Singapore red */
+  --world: #2b44d6;
+  --world-tint: #e3e7fb;
+  --singapore: #d21f3c;
+  --singapore-tint: #fbe3e7;
+
+  /* Air-quality colours for the PSI scale (data colours, not decoration) */
+  --aq-good: #3f9b5a;
+  --aq-moderate: #d9b23a;
+  --aq-unhealthy: #e2802e;
+  --aq-very: #c7372f;
+  --aq-hazardous: #7b2d6b;
+
+  /* Type */
+  --font-display: 'Bricolage Grotesque Variable', 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-body: 'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif;
+
+  --step--1: 0.875rem;
+  --step-0: 1.0625rem;       /* body on phones (17px) */
+  --step-1: 1.25rem;
+  --step-2: 1.5rem;
+  --step-3: 1.875rem;
+  --step-4: clamp(2.1rem, 5vw, 2.75rem);
+  --step-5: clamp(2.6rem, 7.5vw, 5rem);
+
+  /* Layout */
+  --measure: 36rem;          /* reading column, about 65-70 characters */
+  --margin-col: 15rem;       /* sidenote column on wide screens */
+  --toc-col: 13rem;
+  --gap: 2.5rem;
+  --gutter: 1rem;            /* side padding on phones */
+  --radius: 6px;
+
+  color-scheme: light;
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --step-0: 1.125rem;      /* 18px body on tablets and up */
+    --gutter: 2rem;
+  }
+}
+
+/* Colour: dark, a night-sky navy rather than black */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --paper: #0f1830;
+    --paper-raised: #16213d;
+    --paper-sunk: #1b2747;
+    --ink: #e8edf6;
+    --ink-soft: #b6c0d4;
+    --ink-faint: #8b97b0;
+    --rule: #2a3758;
+    --world: #8d9dff;
+    --world-tint: #1f2a5c;
+    --singapore: #ff6f84;
+    --singapore-tint: #4a1d2c;
+    color-scheme: dark;
+  }
+}
+:root[data-theme='dark'] {
+  --paper: #0f1830;
+  --paper-raised: #16213d;
+  --paper-sunk: #1b2747;
+  --ink: #e8edf6;
+  --ink-soft: #b6c0d4;
+  --ink-faint: #8b97b0;
+  --rule: #2a3758;
+  --world: #8d9dff;
+  --world-tint: #1f2a5c;
+  --singapore: #ff6f84;
+  --singapore-tint: #4a1d2c;
+  color-scheme: dark;
+}
+
+/* Any element with data-track picks up that track's accent */
+[data-track='world'] {
+  --accent: var(--world);
+  --accent-tint: var(--world-tint);
+}
+[data-track='singapore'] {
+  --accent: var(--singapore);
+  --accent-tint: var(--singapore-tint);
+}
