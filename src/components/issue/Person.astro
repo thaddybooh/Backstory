@@ -1,0 +1,25 @@
+---
+import { getCommonsImage } from '../../lib/images';
+import Credit from '../Credit.astro';
+interface Props {
+  file: string;
+  name: string;
+  role: string;
+}
+const { file, name, role } = Astro.props;
+const image = getCommonsImage(file);
+---
+{
+  image ? (
+    <figure class="person">
+      <img src={image.src} width={image.width} height={image.height} alt={`Portrait of ${name}`} loading="lazy" decoding="async" />
+      <figcaption>
+        <strong>{name}</strong>
+        <span class="person-role">{role}</span>
+        <Credit image={image} />
+      </figcaption>
+    </figure>
+  ) : (
+    import.meta.env.DEV && <div class="photo-missing">Portrait not downloaded yet: {file}</div>
+  )
+}

@@ -1,0 +1,207 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import HeroImage from '../../components/HeroImage.astro';
+import { issueComponents } from '../../components/issue';
+import {
+  getIssues,
+  issueUrl,
+  issueNumber,
+  formatLongDate,
+  TRACK_LABEL,
+  type Issue,
+} from '../../lib/issues';
+import { getCommonsImage } from '../../lib/images';
+import '../../styles/issue.css';
+
+export async function getStaticPaths() {
+  const issues = await getIssues();
+  return issues.map((issue, i) => ({
+    params: { slug: issue.id },
+    props: { issue, newer: issues[i - 1], older: issues[i + 1] },
+  }));
+}
+
+interface Props {
+  issue: Issue;
+  newer?: Issue;
+  older?: Issue;
+}
+
+const { issue, newer, older } = Astro.props;
+const { data } = issue;
+const { Content, headings } = await render(issue);
+
+const toc = [
+  { slug: 'what-is-happening', text: 'What is happening', n: '' },
+  ...headings
+    .filter((h) => h.depth === 2)
+    .map((h, i) => ({ slug: h.slug, text: h.text, n: String(i + 1).padStart(2, '0') })),
+];
+const hasHero = Boolean(data.hero && (data.hero.image || (data.hero.commons && getCommonsImage(data.hero.commons))));
+---
+
+<Base
+  title={data.title}
+  description={data.dek}
+  ogImage={`/og/${issue.id}.png`}
+  type="article"
+  publishedTime={data.date}
+  track={data.track}
+>
+  <article>
+    <header class="cover issue-head">
+      <div class:list={['wrap cover-grid', { 'has-image': hasHero }]}>
+        <div>
+          <div class="cover-meta">
+            <span class="track">{TRACK_LABEL[data.track]}</span>
+            <time datetime={data.date.toISOString().slice(0, 10)}>{formatLongDate(data.date)}</time>
+          </div>
+          <div class="cover-num" aria-hidden="true">{issueNumber(data.number)}</div>
+          <h1 class="cover-title">
+            <span class="visually-hidden">Issue {data.number}: </span>{data.title}
+          </h1>
+          <p class="cover-dek">{data.dek}</p>
+          <div class="cover-foot">
+            <span>{data.readTime}-minute read</span>
+            {data.research && <span>{data.research}</span>}
+          </div>
+          {
+            data.tags.length > 0 && (
+              <ul class="tags" aria-label="Topics">
+                {data.tags.map((t) => (
+                  <li>{t}</li>
+                ))}
+              </ul>
+            )
+          }
+        </div>
+        <HeroImage hero={data.hero} />
+      </div>
+    </header>
+
+    <div class="issue-layout">
+      <details class="toc-bar">
+        <summary><span class="toc-label">Contents</span><span class="toc-current">What is happening</span></summary>
+        <nav class="toc" aria-label="Contents">
+          <ol>
+            {
+              toc.map((t) => (
+                <li>
+                  <a href={`#${t.slug}`} data-target={t.slug}>
+                    <span class="toc-n">{t.n}</span>
+                    <span>{t.text}</span>
+                  </a>
+                </li>
+              ))
+            }
+          </ol>
+        </nav>
+      </details>
+
+      <div class="issue-body">
+        <aside class="toc-side">
+          <nav class="toc" aria-label="Contents">
+            <p class="toc-title">In this issue</p>
+            <ol>
+              {
+                toc.map((t) => (
+                  <li>
+                    <a href={`#${t.slug}`} data-target={t.slug}>
+                      <span class="toc-n">{t.n}</span>
+                      <span>{t.text}</span>
+                    </a>
+                  </li>
+                ))
+              }
+            </ol>
+          </nav>
+        </aside>
+
+        <div class="prose">
+          <Content components={issueComponents} />
+
+          <section class="made" aria-labelledby="about-this-issue">
+            <h2 id="about-this-issue">About this issue</h2>
+            <p>{data.about}</p>
+            <p>
+              Backstory issues are researched with AI from the sources listed above. <a href="/about/"
+                >How Backstory is made</a
+              >.
+            </p>
+          </section>
+
+          <nav class="next-issue" aria-label="More issues">
+            <ul class="issue-list">
+              {
+                [newer, older].filter(Boolean).map((other) => {
+                  const o = other as Issue;
+                  return (
+                    <li class="issue-row" data-track={o.data.track}>
+                      <span class="issue-row-num" aria-hidden="true">
+                        {issueNumber(o.data.number)}
+                      </span>
+                      <div>
+                        <div class="issue-row-meta">
+                          <span>{o === newer ? 'Next issue' : 'Previous issue'}</span>
+                          <span class="track">{TRACK_LABEL[o.data.track]}</span>
+                        </div>
+                        <h3>
+                          <a href={issueUrl(o)}>{o.data.title}</a>
+                        </h3>
+                        <p>{o.data.summary}</p>
+                      </div>
+                    </li>
+                  );
+                })
+              }
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </article>
+</Base>
+
+<script>
+  // Highlight the section you are reading in the contents, and keep the
+  // phone contents bar showing its name.
+  const links = [...document.querySelectorAll<HTMLAnchorElement>('.toc a[data-target]')];
+  const current = document.querySelector('.toc-bar .toc-current');
+  const bar = document.querySelector<HTMLDetailsElement>('.toc-bar');
+  const targets = [...new Set(links.map((a) => a.dataset.target!))]
+    .map((id) => document.getElementById(id))
+    .filter((el): el is HTMLElement => el !== null);
+
+  function update() {
+    const line = window.innerHeight * 0.25;
+    let active = targets[0];
+    for (const t of targets) {
+      if (t.getBoundingClientRect().top <= line) active = t;
+    }
+    if (!active) return;
+    for (const a of links) {
+      if (a.dataset.target === active.id) a.setAttribute('aria-current', 'true');
+      else a.removeAttribute('aria-current');
+    }
+    const label = links.find((a) => a.dataset.target === active.id)?.textContent?.trim().replace(/^\d+\s*/, '');
+    if (current && label) current.textContent = label;
+  }
+
+  let queued = false;
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(() => {
+        update();
+        queued = false;
+      });
+    },
+    { passive: true },
+  );
+  update();
+
+  bar?.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => (bar.open = false)));
+</script>

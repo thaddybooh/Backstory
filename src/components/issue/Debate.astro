@@ -1,0 +1,11 @@
+---
+// "Where reasonable people disagree": one topic, two opposing <Side>s.
+interface Props {
+  topic: string;
+}
+const { topic } = Astro.props;
+---
+<div class="debate wide">
+  <h3 class="debate-topic">{topic}</h3>
+  <div class="debate-sides"><slot /></div>
+</div>

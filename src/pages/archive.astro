@@ -1,0 +1,53 @@
+---
+import Base from '../layouts/Base.astro';
+import IssueRow from '../components/IssueRow.astro';
+import { getIssues } from '../lib/issues';
+
+const issues = await getIssues();
+const count = (t: string) => issues.filter((i) => i.data.track === t).length;
+---
+
+<Base title="Archive" description="Every Backstory issue, newest first. Filter by World or Singapore.">
+  <div class="wrap">
+    <header class="page-head">
+      <h1>Archive</h1>
+      <p>Every issue, newest first. Topics alternate between World and Singapore.</p>
+    </header>
+
+    <div class="filters" role="group" aria-label="Show issues from">
+      <button type="button" data-filter="all" aria-pressed="true">All ({issues.length})</button>
+      <button type="button" data-filter="world" aria-pressed="false">World ({count('world')})</button>
+      <button type="button" data-filter="singapore" aria-pressed="false">Singapore ({count('singapore')})</button>
+    </div>
+    <p class="visually-hidden" aria-live="polite" id="filter-status"></p>
+
+    <ul class="issue-list" id="archive-list">
+      {issues.map((issue) => <IssueRow issue={issue} />)}
+    </ul>
+  </div>
+</Base>
+
+<script>
+  const buttons = [...document.querySelectorAll<HTMLButtonElement>('.filters button')];
+  const rows = [...document.querySelectorAll<HTMLElement>('#archive-list .issue-row')];
+  const status = document.getElementById('filter-status');
+
+  function apply(filter: string) {
+    let shown = 0;
+    for (const row of rows) {
+      const show = filter === 'all' || row.dataset.track === filter;
+      row.hidden = !show;
+      if (show) shown++;
+    }
+    for (const b of buttons) b.setAttribute('aria-pressed', String(b.dataset.filter === filter));
+    if (status) status.textContent = `Showing ${shown} issue${shown === 1 ? '' : 's'}.`;
+    const url = new URL(location.href);
+    if (filter === 'all') url.searchParams.delete('track');
+    else url.searchParams.set('track', filter);
+    history.replaceState(null, '', url);
+  }
+
+  for (const b of buttons) b.addEventListener('click', () => apply(b.dataset.filter!));
+  const initial = new URL(location.href).searchParams.get('track');
+  if (initial === 'world' || initial === 'singapore') apply(initial);
+</script>

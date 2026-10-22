@@ -1,0 +1,23 @@
+---
+import type { Issue } from '../lib/issues';
+import { getCommonsImage } from '../lib/images';
+import Credit from './Credit.astro';
+interface Props {
+  hero: Issue['data']['hero'];
+  showCaption?: boolean;
+}
+const { hero, showCaption = true } = Astro.props;
+const commons = hero?.commons ? getCommonsImage(hero.commons) : undefined;
+const src = commons?.src ?? hero?.image;
+---
+{
+  hero && src && (
+    <figure class="cover-figure photo">
+      <img src={src} width={commons?.width} height={commons?.height} alt={hero.alt} fetchpriority="high" />
+      <figcaption>
+        {showCaption && hero.caption}
+        <Credit image={commons} text={hero.credit} />
+      </figcaption>
+    </figure>
+  )
+}

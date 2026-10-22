@@ -1,0 +1,55 @@
+---
+// A horizontal scale split into coloured bands, with one value marked on it.
+// Used for the PSI air-quality scale in issue 002.
+interface Band {
+  label: string;
+  to: number;
+  /** One of the data colours in tokens.css, e.g. "aq-good", or any CSS colour. */
+  color: string;
+}
+interface Props {
+  max: number;
+  value: number;
+  valueLabel: string;
+  bands: Band[];
+  ticks: number[];
+  label: string;
+}
+const { max, value, valueLabel, bands, ticks, label } = Astro.props;
+const pct = (n: number) => `${(n / max) * 100}%`;
+let from = 0;
+const spans = bands.map((b) => {
+  const s = { ...b, from, width: b.to - from };
+  from = b.to;
+  return s;
+});
+const colour = (c: string) => (c.startsWith('aq-') ? `var(--${c})` : c);
+---
+<figure class="scalebar wide" aria-label={label}>
+  <div class="scalebar-track">
+    <div class="scalebar-value" style={`left:${pct(value)}`}><span>{valueLabel}</span></div>
+    <div class="scalebar-bands">
+      {
+        spans.map((b) => (
+          <span class="scalebar-band" data-color={b.color} style={`flex:${b.width};background:${colour(b.color)}`}>
+            {b.label}
+          </span>
+        ))
+      }
+    </div>
+    <div class="scalebar-ticks" aria-hidden="true">
+      {ticks.map((t) => <span style={`left:${pct(t)}`}>{t}</span>)}
+    </div>
+  </div>
+  <ul class="scalebar-legend">
+    {
+      spans.map((b, i) => (
+        <li>
+          <span class="scalebar-swatch" style={`background:${colour(b.color)}`} />
+          {b.label} <span class="scalebar-range">{i === 0 ? b.from : b.from + 1}–{b.to}</span>
+        </li>
+      ))
+    }
+  </ul>
+  <figcaption><slot /></figcaption>
+</figure>

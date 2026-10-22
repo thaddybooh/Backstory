@@ -1,0 +1,22 @@
+---
+import { type Issue, issueUrl, issueNumber, TRACK_LABEL, formatShortDate } from '../lib/issues';
+interface Props {
+  issue: Issue;
+  headingLevel?: 'h2' | 'h3';
+}
+const { issue } = Astro.props;
+const { data } = issue;
+---
+<li class="issue-row" data-track={data.track}>
+  <span class="issue-row-num" aria-hidden="true">{issueNumber(data.number)}</span>
+  <div>
+    <div class="issue-row-meta">
+      <span class="track">{TRACK_LABEL[data.track]}</span>
+      <span>Issue {data.number}</span>
+      <time datetime={data.date.toISOString().slice(0, 10)}>{formatShortDate(data.date)}</time>
+      <span>{data.readTime} min read</span>
+    </div>
+    <h3><a href={issueUrl(issue)}>{data.title}</a></h3>
+    <p>{data.summary}</p>
+  </div>
+</li>
