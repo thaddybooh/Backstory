@@ -214,6 +214,109 @@ mark {
   border-radius: 2px;
 }
 
+/* ---------- Homepage title screen ---------- */
+.intro {
+  display: flex;
+  align-items: center;
+  min-height: min(calc(100svh - 4rem), 52rem);
+  padding: 3rem 0;
+  overflow: hidden;
+}
+.intro-inner {
+  width: 100%;
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+@media (max-width: 59.99rem) {
+  .intro-depth {
+    display: none;
+  }
+}
+@media (min-width: 60rem) {
+  .intro-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 24rem);
+    gap: 4rem;
+  }
+}
+.intro-title {
+  font-size: clamp(4.5rem, 19vw, 13rem);
+  font-weight: 800;
+  font-stretch: 78%;
+  line-height: 0.85;
+  letter-spacing: -0.045em;
+  margin: 0;
+}
+.intro-q {
+  display: inline-block;
+  color: var(--world);
+  transform: rotate(10deg);
+  transform-origin: 50% 80%;
+  margin-left: 0.04em;
+}
+.intro-slogan {
+  font-family: var(--font-display);
+  font-weight: 650;
+  font-stretch: 90%;
+  font-size: var(--step-3);
+  line-height: 1.15;
+  margin: 1.25rem 0 0;
+}
+.intro-dek {
+  font-size: var(--step-1);
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 36rem;
+  margin: 1rem 0 0;
+}
+.intro-facts {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.intro-facts li {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--rule);
+  background: var(--paper-raised);
+}
+.intro-facts li:nth-child(2) {
+  background: linear-gradient(90deg, var(--world-tint) 50%, var(--singapore-tint) 50%);
+  border-color: transparent;
+}
+.intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  margin-top: 2rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+.intro-primary {
+  --accent: var(--world);
+}
+.section-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+  border-top: 2px solid var(--ink);
+  padding-top: 0.9rem;
+  margin: 0 0 1.5rem;
+}
+#today {
+  scroll-margin-top: 1rem;
+}
+
 /* ---------- Cover (homepage lead + issue header) ---------- */
 .cover {
   padding: 2rem 0 2.5rem;
