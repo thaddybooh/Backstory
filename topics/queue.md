@@ -21,3 +21,4 @@ then "Commit changes").
 
 - 001 | world | France’s autumn of anger | 2026-10-21
 - 002 | singapore | The year the haze came back | 2026-10-22
+- 003 | world | When the test agents got out | 2026-10-23
