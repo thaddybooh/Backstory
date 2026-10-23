@@ -69,13 +69,46 @@ Optional, on your own computer (only if you want to):
    `https://yourdomain.com`, and click **Save**. Then redeploy (Deployments, the latest one, **⋯**, **Redeploy**)
    so link previews on LinkedIn use the new address.
 
-## 6. Adding a new issue
+## 6. Choosing topics
 
-Ask Claude to write it. For reference, each issue is a single file in `src/content/issues/`, and
-`docs/issue-template.mdx` shows every building block (numbers grid, timeline, debate, sources and so on).
-You never need to touch the design to add an issue.
+Open `topics/queue.md` on GitHub, click the pencil icon, and edit the list under **Up next**:
 
-## 7. Changing the look
+```
+- world: The topic -- any angle or question you want answered
+- singapore: Another topic
+```
+
+Order matters: the next World issue takes the first `world:` line, the next Singapore issue the first
+`singapore:` line. If there's nothing for that day's track, Claude picks the biggest story itself. Click
+**Commit changes** to save.
+
+## 7. Approving a new issue
+
+1. Ask Claude "write today's issue" (later this happens automatically each morning).
+2. Claude opens a **pull request** on GitHub, titled like "Issue 003 (World): ...". Its description lists the
+   word count, number of sources and anything you should double-check.
+3. A Vercel bot comments on the pull request with a **Visit Preview** link. Read the issue there.
+4. Happy with it? Click **Merge pull request**, then **Confirm merge**. It's live within a couple of minutes.
+   Not happy? Comment on the pull request or tell Claude what to change, then check the preview again.
+
+## 8. Changing the look
 
 All colours and fonts are in one file: `src/styles/tokens.css`. If you want to try one of the other design
 directions ("Briefing room" or "Cover story"), ask Claude. Most of the change happens in that file.
+
+## 9. Update your old "backstory-issue" skill (one time)
+
+Your claude.ai account has an older skill called **backstory-issue** that makes each issue as a standalone HTML
+page. The website now has its own instructions inside the repo, so the old skill should point there instead.
+In claude.ai, open **Settings**, then **Capabilities** (or **Skills**), find **backstory-issue**, and either
+turn it off or replace its text with:
+
+```
+---
+name: backstory-issue
+description: Use when Miles asks for a Backstory issue.
+---
+Backstory issues are now written in the thaddybooh/Backstory GitHub repository. Work in that repository
+and follow its write-issue skill (.claude/skills/write-issue/SKILL.md). Do not publish issues as HTML
+artifacts.
+```

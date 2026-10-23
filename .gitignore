@@ -4,3 +4,7 @@ dist/
 .vercel/
 .env
 .DS_Store
+
+# Photos downloaded at build time (Vercel fetches them itself)
+public/images/commons/*
+!public/images/commons/.gitkeep
