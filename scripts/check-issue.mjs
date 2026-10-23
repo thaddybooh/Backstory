@@ -1,4 +1,4 @@
-// Checks a new issue against Backstory's rules before it is published.
+// Checks a new issue against But Why?'s rules before it is published.
 //
 //   npm run check:issue                     checks issues changed since origin/main (or the newest one)
 //   npm run check:issue -- path/to/file.mdx checks specific files
