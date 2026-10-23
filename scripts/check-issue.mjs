@@ -22,9 +22,9 @@ const args = process.argv.slice(2);
 const OFFLINE = args.includes('--offline');
 const CHECK_LINKS = args.includes('--links');
 
-const MAX_WORDS = 6000; // hard limit for body text before Sources (about 30 minutes)
-const TARGET_WORDS = 5000; // the brief's target
 const WORDS_PER_MINUTE = 200;
+const MAX_MINUTES = 40; // a full read-through should take 30 to 40 minutes at most
+const MAX_WORDS = MAX_MINUTES * WORDS_PER_MINUTE; // body text before Sources
 
 async function knownComponents() {
   const text = await readFile(path.join(ROOT, 'src/components/issue/index.ts'), 'utf8');
@@ -107,7 +107,7 @@ async function checkFile(file, all, components) {
   const dateString = fm.date instanceof Date ? fm.date.toISOString().slice(0, 10) : String(fm.date ?? '');
   if (!/^\d{4}-\d{2}-\d{2}$/.test(dateString)) E(`date should be written as YYYY-MM-DD, not "${fm.date}".`);
 
-  if (fm.readTime > 30) E(`readTime is ${fm.readTime} minutes; the limit is 30.`);
+  if (fm.readTime > MAX_MINUTES) E(`readTime is ${fm.readTime} minutes; the limit is ${MAX_MINUTES}.`);
   if (fm.about && !/AI-researched/i.test(fm.about)) E('The "about" note must say the issue is AI-researched.');
   if (fm.about && !/source/i.test(fm.about)) W('The "about" note should point readers to the sources.');
   const count = (s) => String(s ?? '').split(/\s+/).filter(Boolean).length;
@@ -144,6 +144,8 @@ async function checkFile(file, all, components) {
   ]) {
     if (!headings.some((h) => re.test(h))) E(`Missing the "${label}" section.`);
   }
+  if (!headings.some((h) => /polic|govern|playbook/i.test(h)))
+    W('No section heading mentions policy or government; every issue needs a section on what the story means for policymakers.');
 
   const stats = (body.match(/<Stat\b/g) ?? []).length;
   if (!body.includes('<Numbers>')) E('Missing the "in numbers" grid (<Numbers> with <Stat>s).');
@@ -187,9 +189,9 @@ async function checkFile(file, all, components) {
   const beforeSources = body.split(/^## Sources$/m)[0];
   const words = proseWords(beforeSources).length;
   const minutes = Math.round(words / WORDS_PER_MINUTE);
-  if (words > MAX_WORDS) E(`Body is ${words.toLocaleString('en')} words (excluding sources); the hard limit is ${MAX_WORDS.toLocaleString('en')}. Trim it.`);
-  else if (words > TARGET_WORDS) W(`Body is ${words.toLocaleString('en')} words; the target is 4,000 to 5,000.`);
-  else if (words < 3000) W(`Body is only ${words.toLocaleString('en')} words; the target is 4,000 to 5,000.`);
+  if (words > MAX_WORDS)
+    E(`Body is ${words.toLocaleString('en')} words (about ${minutes} min, excluding sources); a full read must take ${MAX_MINUTES} minutes at most. Trim it.`);
+  else if (words < 3000) W(`Body is only ${words.toLocaleString('en')} words; issues usually need more room to explain the story.`);
   if (fm.readTime && Math.abs(fm.readTime - minutes) > 5)
     W(`readTime says ${fm.readTime} minutes, but the length suggests about ${minutes}.`);
 

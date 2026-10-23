@@ -4,7 +4,8 @@
 //   npm run images
 //
 // It reads every `commons: "..."` (hero images) and `file="..."` (photos and
-// portraits) in src/content/issues/*.mdx, asks the Commons API about each file,
+// portraits) in src/content/issues/*.mdx, plus every getCommonsImage('...') in
+// src/pages/ (e.g. the About page portrait), asks the Commons API about each file,
 // saves a web-sized copy to public/images/commons/ and records the credit in
 // src/data/commons-images.json. Files already downloaded are skipped.
 //
@@ -17,6 +18,7 @@ import { pathToFileURL } from 'node:url';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const CONTENT = path.join(ROOT, 'src/content/issues');
+const PAGES = path.join(ROOT, 'src/pages');
 const OUT_DIR = path.join(ROOT, 'public/images/commons');
 const DATA = path.join(ROOT, 'src/data/commons-images.json');
 const API = 'https://commons.wikimedia.org/w/api.php';
@@ -61,6 +63,7 @@ export function filesInText(text) {
   const files = new Set();
   for (const m of text.matchAll(/^\s*commons:\s*["'](.+?)["']\s*$/gm)) files.add(key(m[1]));
   for (const m of text.matchAll(/\bfile=\{?"([^"]+)"\}?/g)) files.add(key(m[1]));
+  for (const m of text.matchAll(/getCommonsImage\(\s*(['"])(.+?)\1\s*\)/g)) files.add(key(m[2]));
   return [...files];
 }
 
@@ -69,6 +72,10 @@ async function collectFiles() {
   for (const name of await readdir(CONTENT)) {
     if (!name.endsWith('.mdx')) continue;
     for (const f of filesInText(await readFile(path.join(CONTENT, name), 'utf8'))) files.add(f);
+  }
+  for (const name of await readdir(PAGES, { recursive: true })) {
+    if (!name.endsWith('.astro')) continue;
+    for (const f of filesInText(await readFile(path.join(PAGES, name), 'utf8'))) files.add(f);
   }
   return [...files];
 }

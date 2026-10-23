@@ -18,6 +18,7 @@ Read `BRIEF.md` for the original brief and `GUIDE.md` for the owner's step-by-st
 
 | Topic | Decision | Why |
 | --- | --- | --- |
+| Length and policy section | No word target: a full read must take 40 minutes at most (`check-issue` caps the body at 8,000 words, 200 a minute). Every issue needs a section on what the story means for policymakers; the checker warns if no heading mentions policy or government. | Owner's choice (23 Oct 2026). |
 | Name | **But Why?**, slogan *there is always more to the story* (renamed from Backstory on 23 Oct 2026). Lives in `src/lib/site.ts`. The repo, Vercel project and file names still say backstory. | Owner's choice. |
 | Design direction | **Daybreak**, chosen by the owner from three options. The other two were "Briefing room" (data-forward, Schibsted Grotesk + Literata, grey-green and saffron/teal) and "Cover story" (photographic magazine, Archivo + Newsreader, indigo/coral). | Owner may revisit later; all colours and fonts live in `src/styles/tokens.css`. |
 | Fonts | Bricolage Grotesque (headlines, variable width axis used for condensed display) + Source Serif 4 (body). Self-hosted via Fontsource npm packages. | Distinctive headline face, very readable body; no Google Fonts request. |
