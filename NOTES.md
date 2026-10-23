@@ -3,16 +3,15 @@
 Decisions and current state, so a future session can pick up where we left off.
 Read `BRIEF.md` for the original brief and `GUIDE.md` for the owner's step-by-step instructions.
 
-## Status (22 Oct 2026)
+## Status (23 Oct 2026)
 
-- Site built and pushed to branch `claude/backstory-website-build-7x0ic8`. Not merged to `main` yet, not deployed yet.
+- Site merged to `main` (PR #1) and live on Vercel. Owner checked the photos on the live site: they look good.
+- Automation steps 1 to 3 (topic queue, checker, write-issue skill) are built; see "Automation plan".
 - Both issues converted. Every word, link and source was checked against the original HTML by script:
   issue 001 has 16 sections, 64 external links and 47 sources; issue 002 has 18 sections, 45 links and 35 sources.
   Only intentional differences remain (see "Conversion" below).
-- **Photos are wired up but not downloaded yet.** The build environment for this session could not reach
-  Wikimedia (commons.wikimedia.org and upload.wikimedia.org were blocked by its network policy). Photos download
-  automatically when the site builds on Vercel. Nobody has looked at the real photos yet: check them after the
-  first deploy.
+- Photos download from Wikimedia Commons during each Vercel build. The cloud environment used for these
+  sessions could not reach Wikimedia, so photos can't be previewed or checked from inside a session yet.
 
 ## Decisions
 
@@ -44,6 +43,10 @@ src/pages/                    homepage, archive, about, issue pages, OG images, 
 src/data/commons-images.json  written by the image script: file -> local path + credit
 scripts/fetch-images.mjs      downloads Commons photos and credits (runs before every build)
 docs/issue-template.mdx       copy this to start a new issue (it is tested to build)
+topics/queue.md               upcoming topics + published log (owner edits on GitHub)
+scripts/next-issue.mjs        `npm run next`: next number, track, date (SGT) and queued topic
+scripts/check-issue.mjs       `npm run check:issue`: checks a new issue against the brief's rules
+.claude/skills/write-issue/   the step-by-step instructions Claude follows to write an issue and open a PR
 ```
 
 ## Components available in issue files
@@ -97,9 +100,8 @@ Vercel build log for lines starting `images:` (not found / skipped licence) and 
 
 ## Open items / next steps
 
-1. Owner: merge the branch and deploy on Vercel (see GUIDE.md).
-2. After first deploy: review every photo, caption and crop; fix any `not found` file names; add Grace Fu if a
-   free portrait exists. Optionally commit the downloaded images so builds don't depend on Commons.
+1. Done: merged and deployed; photos reviewed by the owner.
+2. Add a Grace Fu portrait if a free one turns up.
 3. Owner to confirm the About page wording (who runs it, contact/LinkedIn link, any review step before publishing).
    I removed claims I couldn't verify ("reviewed before publishing", "no advertising").
 4. Future sessions that need photos locally: allow `commons.wikimedia.org` and `upload.wikimedia.org` in the
@@ -115,16 +117,30 @@ Owner's decisions:
 - **Timing: ready by 6am Singapore time** daily (scheduled task starting ~5am SGT to allow for research).
 
 Build order:
-1. `topics/queue.md` (format + a few starter topics) and a "published" log so topics aren't repeated.
-2. `scripts/check-issue.mjs` (`npm run check`): frontmatter valid, number = last + 1, track alternates,
-   Overview first, body ≤ ~5,000 words, has Key terms / Go deeper / Sources, every Commons file exists and is
-   free-licensed, site builds.
-3. Update the `backstory-issue` skill (currently outputs standalone HTML) to write MDX using
-   `docs/issue-template.mdx` and the editorial rules in BRIEF.md, then run the checker and open a PR.
-4. Allow `en.wikipedia.org`, `commons.wikimedia.org`, `upload.wikimedia.org` in the cloud environment's network
-   settings (owner action) so research and photo checks work.
-5. Run it by hand for a few days, review quality, then create the daily scheduled task
-   (fresh session each run, branch `issue/NNN-slug`, PR to `main`).
+1. **Done.** `topics/queue.md`: "Up next" lines like `- world: Topic -- note`, and a "Published" log
+   (`- NNN | track | Title | date`). `npm run next` reads it plus the issue files and prints the next number,
+   track (alternates from the last issue), today's SGT date and the first queued topic for that track (or null,
+   meaning "pick the day's biggest story"). Starter queue has two Singapore topics from the brief's examples
+   (BTO housing, healthcare); no World topics, because current world news should be chosen on the day.
+2. **Done.** `npm run check:issue` (scripts/check-issue.mjs). By default checks issues changed vs `origin/main`
+   (else the newest). Errors: frontmatter fields, file name/number, number = previous + 1, date order, readTime
+   <= 30, "AI-researched" in `about`, leftover template text, Overview first, Sources last with links, required
+   sections (disagree / what to watch / key terms / go deeper), Debate has 2 sides, unknown components, lines
+   starting with `>`, broken `#anchors`, body > 6,000 words before Sources, Commons files missing or non-free.
+   Warnings: same track twice, 6–8 stats, missing Timeline/WhyList/Answer, < 15 sources, length outside
+   4,000–5,000, readTime mismatch, Singapore-specific asides, Commons unreachable. `--offline`, `--links`.
+   Issue 001 fails the length rule (7,011 words); it's grandfathered because the default mode only checks new
+   or changed issues.
+3. **Done.** Repo skill `.claude/skills/write-issue/SKILL.md`: the old account-level `backstory-issue`
+   skill's research and writing rules, plus the repo workflow (npm run next, template, photos, queue update,
+   checker, build, PR, never merge). The account-level `backstory-issue` skill (synced from claude.ai, can't be
+   edited from a session) still says "publish as an HTML artifact"; the owner should update or remove it so it
+   doesn't compete (replacement text in GUIDE.md section 9).
+4. **Owner action next.** Allow `en.wikipedia.org`, `commons.wikimedia.org`, `upload.wikimedia.org` in the cloud
+   environment's network settings so research and photo checks work.
+5. Run it by hand for a few days ("write today's issue"), review quality, then create the daily scheduled task:
+   fresh session each run, about 5am SGT so the PR is ready by 6am, prompt = "Use the write-issue skill to write
+   today's Backstory issue and open a pull request."
 
 ## Designed for, not built yet
 

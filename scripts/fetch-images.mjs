@@ -13,6 +13,7 @@
 
 import { readFile, writeFile, readdir, mkdir, access } from 'node:fs/promises';
 import path from 'node:path';
+import { pathToFileURL } from 'node:url';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const CONTENT = path.join(ROOT, 'src/content/issues');
@@ -55,15 +56,28 @@ async function exists(p) {
   }
 }
 
+/** Commons file names referenced in one issue's text. */
+export function filesInText(text) {
+  const files = new Set();
+  for (const m of text.matchAll(/^\s*commons:\s*["'](.+?)["']\s*$/gm)) files.add(key(m[1]));
+  for (const m of text.matchAll(/\bfile=\{?"([^"]+)"\}?/g)) files.add(key(m[1]));
+  return [...files];
+}
+
 async function collectFiles() {
   const files = new Set();
   for (const name of await readdir(CONTENT)) {
     if (!name.endsWith('.mdx')) continue;
-    const text = await readFile(path.join(CONTENT, name), 'utf8');
-    for (const m of text.matchAll(/^\s*commons:\s*["'](.+?)["']\s*$/gm)) files.add(key(m[1]));
-    for (const m of text.matchAll(/\bfile="([^"]+)"/g)) files.add(key(m[1]));
+    for (const f of filesInText(await readFile(path.join(CONTENT, name), 'utf8'))) files.add(f);
   }
   return [...files];
+}
+
+/** Why a licence is unacceptable, or null if it is fine to use. */
+export function licenceProblem(licence) {
+  if (!licence) return 'licence unknown';
+  if (!FREE.test(licence) || NOT_FREE.test(licence)) return `licence "${licence}" is not on the free list`;
+  return null;
 }
 
 async function fetchJson(url) {
@@ -72,7 +86,7 @@ async function fetchJson(url) {
   return res.json();
 }
 
-async function lookup(files) {
+export async function lookup(files) {
   const info = new Map();
   for (let i = 0; i < files.length; i += 40) {
     const batch = files.slice(i, i + 40);
@@ -128,8 +142,9 @@ async function main() {
     }
     const meta = ii.extmetadata ?? {};
     const licence = stripHtml(meta.LicenseShortName?.value ?? '');
-    if (!FREE.test(licence) || NOT_FREE.test(licence)) {
-      console.warn(`images: skipped "${f}": licence "${licence || 'unknown'}" is not on the free list.`);
+    const problem = licenceProblem(licence);
+    if (problem) {
+      console.warn(`images: skipped "${f}": ${problem}.`);
       continue;
     }
     const url = ii.thumburl ?? ii.url;
@@ -162,7 +177,12 @@ async function main() {
   console.log(`images: ${ok} downloaded, ${todo.length - ok} skipped.`);
 }
 
-main().catch((err) => {
-  // Never fail the build over photos.
-  console.warn(`images: unexpected error, continuing without new photos: ${err.stack ?? err}`);
-});
+export { key as commonsKey, stripHtml };
+
+// Run only when called directly (npm run images / npm run build), not when imported.
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((err) => {
+    // Never fail the build over photos.
+    console.warn(`images: unexpected error, continuing without new photos: ${err.stack ?? err}`);
+  });
+}
