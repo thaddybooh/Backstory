@@ -20,6 +20,10 @@
   --singapore: #d21f3c;
   --singapore-tint: #fbe3e7;
 
+  /* Newsprint for the About page clipping; the same in light and dark mode */
+  --newsprint: #f4f0e6;
+  --newsprint-ink: #1f1d1a;
+
   /* Air-quality colours for the PSI scale (data colours, not decoration) */
   --aq-good: #3f9b5a;
   --aq-moderate: #d9b23a;
