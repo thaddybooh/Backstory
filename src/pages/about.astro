@@ -9,7 +9,6 @@ const questions = [
   'What happens next?',
 ];
 const layers = ['History', 'Economic incentives', 'Political decisions', 'Competing interests'];
-const rabbitHole = ['Historical events', 'Economic crises', 'Obscure geopolitical conflicts', 'and somehow it’s dinner'];
 ---
 
 <Base title="About" description="Why But Why? exists, how to read it, how each issue is made, and who runs it.">
@@ -52,23 +51,6 @@ const rabbitHole = ['Historical events', 'Economic crises', 'Obscure geopolitica
         </ol>
         <figcaption>Where But Why? goes</figcaption>
       </figure>
-    </section>
-
-    <section class="about-block">
-      <h2>Two tracks, one story a day</h2>
-      <div class="tracks">
-        <a class="track-tile" data-track="world" href="/archive/?track=world">
-          <span class="track">World</span>
-          <span class="track-tile-text">The big stories from around the world, like France’s autumn of protest.</span>
-          <span class="track-tile-link">See World issues →</span>
-        </a>
-        <a class="track-tile" data-track="singapore" href="/archive/?track=singapore">
-          <span class="track">Singapore</span>
-          <span class="track-tile-text">The issues closer to home, like the haze, housing or healthcare.</span>
-          <span class="track-tile-link">See Singapore issues →</span>
-        </a>
-      </div>
-      <p class="about-note">Topics alternate between the two, and every issue is written for any reader, wherever they live.</p>
     </section>
 
     <section class="about-block">
@@ -148,43 +130,26 @@ const rabbitHole = ['Historical events', 'Economic crises', 'Obscure geopolitica
         <aside class="creator-card">
           <span class="monogram" aria-hidden="true">{SITE.owner[0]}</span>
           <p class="creator-name">{SITE.owner}</p>
+          <p class="creator-role">Creator of But Why?</p>
           <p class="creator-role">Economics, National University of Singapore</p>
-          <dl class="meters">
-            <div>
-              <dt>Tiredness</dt>
-              <dd><span class="meter" style="--v: 82%"></span><span class="visually-hidden">chronic</span></dd>
-            </div>
-            <div>
-              <dt>Curiosity</dt>
-              <dd><span class="meter meter-full" style="--v: 100%"></span><span class="visually-hidden">endless</span></dd>
-            </div>
-          </dl>
         </aside>
 
         <div class="about-prose">
           <p class="about-lead">
-            Hi, I’m {SITE.owner}! I studied Economics at the National University of Singapore, and I’m chronically tired
-            but endlessly curious.
+            I’m {SITE.owner}, an Economics graduate of the National University of Singapore, and I have always found the
+            news interesting.
           </p>
           <p>
-            I’ve always loved learning about the world. Back when I had more free time, I would lose whole afternoons to
-            Wikipedia rabbit holes. One question led to another, and before I knew it the day was gone.
-          </p>
-          <ol class="rabbit-hole" aria-label="A typical rabbit hole">
-            {rabbitHole.map((r) => <li>{r}</li>)}
-          </ol>
-          <p>
-            Then adulthood happened, and I no longer have hours to research whatever catches my eye. But I still want to
-            learn. I want to be better read and understand the issues that matter, while still having time for my other
-            interests and, well, actually living my life.
+            Most news coverage, by necessity, stays close to the surface. It reports what happened, but rarely has the space
+            to explain why. Finding that out usually means hours of research, which is time I often don’t have.
           </p>
           <p>
-            So I built But Why?, a way to make learning more manageable, for me and for anyone who shares the same
-            curiosity. A place to explore complex issues, ask better questions and slowly become better informed, without
-            doing hours of research first.
+            I created But Why? to give my reading some direction. Each issue sets out the background to a story and the
+            questions underneath it, so that I know roughly where to look if I ever have the time or interest to go deeper.
+            That is also why every issue ends with its sources and suggestions for further reading.
           </p>
           <blockquote class="creator-quote">
-            I’m no expert on most of the topics covered here. I’m learning alongside you, and that’s exactly the point.
+            I am not an expert on most of the topics covered here. I am learning alongside you.
           </blockquote>
         </div>
       </div>

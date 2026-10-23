@@ -635,39 +635,6 @@ mark {
   margin-top: 1.5rem;
 }
 
-/* Track tiles */
-.tracks {
-  display: grid;
-  gap: 1rem;
-}
-.track-tile {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  padding: 1.4rem 1.5rem;
-  background: var(--accent-tint);
-  border-radius: calc(var(--radius) * 2);
-  border-left: 6px solid var(--accent);
-  text-decoration: none;
-  transition: transform 0.15s ease;
-}
-.track-tile:hover {
-  transform: translateY(-2px);
-}
-.track-tile .track {
-  font-size: var(--step-2);
-  font-weight: 750;
-}
-.track-tile-text {
-  font-size: var(--step-0);
-}
-.track-tile-link {
-  font-family: var(--font-display);
-  font-weight: 600;
-  color: var(--accent);
-  margin-top: auto;
-}
-
 /* The four questions */
 .questions {
   list-style: none;
@@ -781,63 +748,8 @@ mark {
 }
 .creator-role {
   color: var(--ink-soft);
-  margin: 0.2rem 0 1.25rem;
+  margin: 0.2rem 0 0;
   font-size: 0.95rem;
-}
-.meters {
-  margin: 0;
-  display: grid;
-  gap: 0.75rem;
-}
-.meters dt {
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 0.3rem;
-}
-.meters dd {
-  margin: 0;
-}
-.meter {
-  display: block;
-  height: 0.6rem;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--singapore) var(--v), var(--paper-sunk) var(--v));
-}
-.meter-full {
-  background: var(--world);
-}
-.rabbit-hole {
-  list-style: none;
-  padding: 0;
-  margin: 1.25rem 0 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.4rem;
-  font-family: var(--font-display);
-  font-size: 0.9rem;
-}
-.rabbit-hole li {
-  position: relative;
-  white-space: nowrap;
-  padding: 0.35rem 0.8rem;
-  border-radius: 999px;
-  border: 1.5px solid var(--rule);
-  background: var(--paper-raised);
-}
-.rabbit-hole li:not(:last-child)::after {
-  content: '→';
-  position: absolute;
-  right: -1.15rem;
-  color: var(--ink-faint);
-}
-.rabbit-hole li:not(:last-child) {
-  margin-right: 1.3rem;
-}
-.rabbit-hole li:last-child {
-  font-style: italic;
-  border-style: dashed;
-  color: var(--ink-soft);
 }
 .creator-quote {
   margin: 2rem 0 0;
@@ -891,7 +803,6 @@ mark {
   }
 }
 @media (min-width: 48rem) {
-  .tracks,
   .rules {
     grid-template-columns: 1fr 1fr;
   }
@@ -918,11 +829,6 @@ mark {
   .creator-card {
     position: sticky;
     top: 5.5rem;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .track-tile {
-    transition: none;
   }
 }
 
