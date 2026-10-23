@@ -604,6 +604,8 @@ mark {
   line-height: 0.8;
   color: var(--world);
   user-select: none;
+  /* It overlaps the masthead; let clicks through to the theme toggle */
+  pointer-events: none;
 }
 .about-hero h1 {
   margin-top: 0.75rem;
