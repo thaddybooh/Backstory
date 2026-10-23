@@ -1,6 +1,6 @@
 ---
 name: write-issue
-description: Write the next But Why? issue in this repo (a researched, max-30-minute explainer on one news story, World or Singapore) and open a pull request for Miles to approve. Use when Miles asks for a new But Why? issue or "today's issue", and for the daily scheduled run.
+description: Write the next But Why? issue in this repo (a researched explainer of at most 40 minutes on one news story, World or Singapore) and open a pull request for Miles to approve. Use when Miles asks for a new But Why? issue or "today's issue", and for the daily scheduled run.
 ---
 
 # Write the next But Why? issue
@@ -58,9 +58,10 @@ Copy `docs/issue-template.mdx` to `src/content/issues/NNN-short-title.mdx` (lowe
 and tell readers to check important facts against the sources. Add any caveat specific to the story (fast-
 changing figures; "being named is not proof of wrongdoing" when companies or people are named).
 
-**Length**: hard cap of a 30-minute read. Target 4,000 to 5,000 words of body text, excluding the Sources list.
-Cut repetition and secondary examples before cutting explanation. Set `readTime` to match (about 200 words a
-minute; the checker warns if it is off).
+**Length**: there is no word target. A reader who reads the whole issue should finish in about 30 to 40 minutes
+at most (the checker counts about 200 words a minute, so roughly 8,000 words of body text excluding Sources is
+the ceiling). Use the length the story needs; cut repetition and secondary examples before cutting explanation.
+Set `readTime` to match (the checker warns if it is off).
 
 **Structure** (adapt to the story; this is the default):
 
@@ -77,14 +78,21 @@ minute; the checker warns if it is off).
 5. A **"why" section** that answers the critical question underneath (why schools got this bad; why the
    government can't stop the fires): `<WhyList>` with numbered layers of causes, then `<Answer>` with the plain
    conclusion ("So is it X, Y or Z?").
-6. `## Where reasonable people disagree`: one or two `<Debate>`s, each with exactly two `<Side>`s giving the
+6. **A policy section (required in every issue)**: what the story means for governments and policymakers.
+   Name the policy problem, the real challenges and trade-offs (who bears the costs, what the tools are and why
+   each is hard to use, what can and can't be done by one government alone), and what is actually on the table.
+   For a Singapore issue this is usually a section on the Singapore government's options and playbook (see
+   issue 002, "Singapore’s playbook at home" and "Dealing with a giant neighbour"); for a World issue, a section
+   such as `## What this means for policymakers` (see issue 003). Analyse; don't advocate, and attribute any
+   claim about what a government will do.
+7. `## Where reasonable people disagree`: one or two `<Debate>`s, each with exactly two `<Side>`s giving the
    strongest form of each argument.
-7. `## What to watch next`: `<Rows>` with dated events and indicators to watch.
-8. `## Further context: ...`: history or background that helps but isn't essential. Short, near the end.
-9. `## Key terms` (`<KeyTerms>`, about 8 to 10), `## Go deeper` (`### Start with these (Wikipedia)` with about 5
-   `<Read>`s, `### Then read these articles` with about 5, `### Concepts worth learning properly` with about 4
-   `<Concept>`s from economics or political science).
-10. `## Sources` (always last): `<Sources>` wrapping a numbered Markdown list of every source as
+8. `## What to watch next`: `<Rows>` with dated events and indicators to watch.
+9. `## Further context: ...`: history or background that helps but isn't essential. Short, near the end.
+10. `## Key terms` (`<KeyTerms>`, about 8 to 10), `## Go deeper` (`### Start with these (Wikipedia)` with about 5
+    `<Read>`s, `### Then read these articles` with about 5, `### Concepts worth learning properly` with about 4
+    `<Concept>`s from economics or political science).
+11. `## Sources` (always last): `<Sources>` wrapping a numbered Markdown list of every source as
     `[Title](url), Outlet, date`. Finish with a `<SmallPrint>` noting anything drawn from general knowledge.
 
 Section headings are numbered automatically in order, so refer to other sections by number ("see section 06")

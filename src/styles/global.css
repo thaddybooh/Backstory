@@ -844,6 +844,25 @@ mark {
   font-size: 3.4rem;
   line-height: 1;
 }
+.creator-photo {
+  margin: 0;
+}
+.creator-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: var(--paper-sunk);
+}
+.creator-photo figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+.creator-photo .credit {
+  font-style: normal;
+}
 .creator-name {
   font-size: var(--step-3);
   font-weight: 750;

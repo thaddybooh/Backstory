@@ -1,6 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
 import { SITE } from '../lib/site';
+import { getCommonsImage } from '../lib/images';
+import Credit from '../components/Credit.astro';
+
+const portrait = getCommonsImage('Polar Bear yawning.jpg');
 
 const questions = [
   'Why is this happening?',
@@ -36,7 +40,7 @@ const layers = ['History', 'Economic incentives', 'Political decisions', 'Compet
         </p>
         <p>
           The aim is not to tell you what to think. It is to give you enough context to think it through yourself, in under
-          thirty minutes a day.
+          forty minutes a day.
         </p>
       </div>
 
@@ -74,7 +78,7 @@ const layers = ['History', 'Economic incentives', 'Political decisions', 'Compet
         <div class="habit">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
           <h3>Read at your own pace</h3>
-          <p>Each issue takes about 15 to 30 minutes, short enough to fit into a commute or a lunch break.</p>
+          <p>Each issue takes up to about 40 minutes to read in full, and much less if you skip to the parts you need.</p>
         </div>
         <div class="habit">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"></path><path d="M4 6h1M4 12h1M4 18h1"></path></svg>
@@ -128,7 +132,19 @@ const layers = ['History', 'Economic incentives', 'Political decisions', 'Compet
       <h2>Meet the creator</h2>
       <div class="creator-grid">
         <aside class="creator-card">
-          <span class="monogram" aria-hidden="true">{SITE.owner[0]}</span>
+          {
+            portrait ? (
+              <figure class="creator-photo">
+                <img src={portrait.src} width={portrait.width} height={portrait.height} alt="A polar bear yawning" loading="lazy" decoding="async" />
+                <figcaption>
+                  Not actually {SITE.owner}, but a fair likeness most mornings.
+                  <Credit image={portrait} />
+                </figcaption>
+              </figure>
+            ) : (
+              <span class="monogram" aria-hidden="true">{SITE.owner[0]}</span>
+            )
+          }
           <p class="creator-name">{SITE.owner}</p>
           <p class="creator-role">Creator of But Why?</p>
           <p class="creator-role">Economics, National University of Singapore</p>
@@ -136,17 +152,20 @@ const layers = ['History', 'Economic incentives', 'Political decisions', 'Compet
 
         <div class="about-prose">
           <p class="about-lead">
-            I’m {SITE.owner}, an Economics graduate of the National University of Singapore, and I have always found the
-            news interesting.
+            I’m {SITE.owner}, an Economics graduate of the National University of Singapore. I am passionate about
+            government, public policy and economics, and I am looking to build a career in those fields.
           </p>
           <p>
-            Most news coverage, by necessity, stays close to the surface. It reports what happened, but rarely has the space
-            to explain why. Finding that out usually means hours of research, which is time I often don’t have.
+            That is why I created But Why? Good policy starts with understanding why a problem exists: the history, the
+            incentives and the trade-offs behind it. Most news coverage, by necessity, stays close to the surface. It
+            reports what happened, but rarely has the space to explain why, and finding out usually means hours of
+            research.
           </p>
           <p>
-            I created But Why? to give my reading some direction. Each issue sets out the background to a story and the
-            questions underneath it, so that I know roughly where to look if I ever have the time or interest to go deeper.
-            That is also why every issue ends with its sources and suggestions for further reading.
+            Each issue sets out the background to a story and the questions underneath it, including what it means for
+            governments and the challenges facing policymakers. It gives my reading direction, so I know roughly where to
+            look if I have the time or interest to go deeper. That is also why every issue ends with its sources and
+            suggestions for further reading.
           </p>
           <blockquote class="creator-quote">
             I am not an expert on most of the topics covered here. I am learning alongside you.
