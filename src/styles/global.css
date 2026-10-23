@@ -472,6 +472,17 @@ mark {
 .text-page ul {
   padding-left: 1.2rem;
 }
+.text-page .lead {
+  font-size: var(--step-1);
+}
+.text-page .signoff {
+  font: 700 var(--step-2) / 1.2 var(--font-display);
+  font-stretch: 88%;
+  letter-spacing: -0.01em;
+  border-top: 1px solid var(--rule);
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+}
 
 /* ---------- Footer ---------- */
 .site-foot {

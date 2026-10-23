@@ -3,28 +3,61 @@ import Base from '../layouts/Base.astro';
 import { SITE } from '../lib/site';
 ---
 
-<Base title="About" description="What Backstory is, how each issue is researched and written, and who runs it.">
+<Base title="About" description="Why But Why? exists, how to read it, how each issue is made, and who runs it.">
   <div class="wrap">
     <header class="page-head">
-      <h1>About Backstory</h1>
+      <h1>About But Why?</h1>
       <p>{SITE.tagline[0].toUpperCase() + SITE.tagline.slice(1)}.</p>
     </header>
 
     <div class="text-page">
-      <p>
-        Most news tells you what happened today. Backstory tells you why. Each day it takes one story in the news and gives
-        you the background to actually understand it: what is happening, how it got here, the economics and politics
-        underneath, where reasonable people disagree, and what to watch next.
+      <p class="lead">
+        Every day brings headlines about elections, economic trouble, wars and social change. The news keeps us informed
+        about what is happening. Understanding why it is happening usually means looking past the headline.
       </p>
       <p>
-        Topics alternate between <strong>World</strong> stories, such as France’s autumn of protest, and
-        <strong>Singapore</strong> stories, such as the haze, housing or healthcare. Every issue is written for any reader,
-        wherever they live, and takes no more than 30 minutes to read.
+        Behind every big story sits a tangle of history, economic incentives, political decisions and competing interests.
+        You need that background to form a view of your own, and finding it usually takes hours of reading. But Why?
+        exists to make it quicker.
+      </p>
+      <p>
+        Each day, But Why? takes one story in the news and explains the context behind it: how we got here, who wants
+        what, why the problem is so hard to solve, and what might happen next.
+        Topics alternate between <strong>World</strong> stories and <strong>Singapore</strong> stories,
+        and every issue is written for any reader, wherever they live.
+      </p>
+      <p>
+        The aim is not to tell you what to think. It is to give you enough context to think it through yourself, in under
+        thirty minutes a day.
+      </p>
+
+      <h2>How to read it</h2>
+      <p>
+        Think of But Why? as a daily habit for understanding the world. Each issue is built around the questions that
+        matter most: Why is this happening? How did we get here? What makes it so hard to fix? What happens next?
+      </p>
+      <ul>
+        <li>
+          <strong>Read at your own pace.</strong> Each issue takes about 15 to 30 minutes, short enough to fit into a
+          commute or a lunch break.
+        </li>
+        <li>
+          <strong>Skip to what interests you.</strong> Short on time? Every issue has a numbered contents list, so you can
+          jump straight to the question you care about.
+        </li>
+        <li>
+          <strong>Come back tomorrow.</strong> A new topic each day, one story at a time, slowly builds a fuller picture
+          of the world.
+        </li>
+      </ul>
+      <p>
+        Above all, come with an open mind. But Why? won’t have the final answer to every question. It tries to show why
+        things are complicated, set out the different points of view, and avoid easy explanations.
       </p>
 
       <h2>How issues are made</h2>
       <p>
-        Backstory is researched and drafted with AI. For each issue, an AI research assistant (currently Claude, made by
+        But Why? is researched and drafted with AI. For each issue, an AI research assistant (currently Claude, made by
         Anthropic) reads widely across news reports, official documents, data and reference sources, then writes the
         explainer to a fixed structure.
       </p>
@@ -49,14 +82,35 @@ import { SITE } from '../lib/site';
 
       <h2>Photos</h2>
       <p>
-        Backstory only uses freely licensed photos, mostly from Wikimedia Commons. The photographer, source and licence are
-        credited under every image. Backstory never uses photos from news agencies or news sites.
+        But Why? only uses freely licensed photos, mostly from Wikimedia Commons. The photographer, source and licence are
+        credited under every image. It never uses photos from news agencies or news sites.
       </p>
 
-      <h2>Who runs it</h2>
+      <h2>Meet the creator</h2>
       <p>
-        Backstory is run by {SITE.owner}, an economics graduate based in Singapore.
+        Hi, I’m {SITE.owner}! I studied Economics at the National University of Singapore, and I’m chronically tired but
+        endlessly curious.
       </p>
+      <p>
+        I’ve always loved learning about the world. Back when I had more free time, I would lose whole afternoons to
+        Wikipedia rabbit holes: historical events, economic crises, obscure geopolitical conflicts. One question led to
+        another, and before I knew it the day was gone.
+      </p>
+      <p>
+        Then adulthood happened, and I no longer have hours to research whatever catches my eye. But I still want to
+        learn. I want to be better read and understand the issues that matter, while still having time for my other
+        interests and, well, actually living my life.
+      </p>
+      <p>
+        So I built But Why?, a way to make learning more manageable, for me and for anyone who shares the same
+        curiosity. A place to explore complex issues, ask better questions and slowly become better informed, without
+        doing hours of research first.
+      </p>
+      <p>
+        I’m no expert on most of the topics covered here. I’m learning alongside you, and that’s exactly the point.
+      </p>
+
+      <p class="signoff">One story a day. A deeper understanding of the world.</p>
     </div>
   </div>
 </Base>
