@@ -1,116 +1,201 @@
 ---
 import Base from '../layouts/Base.astro';
 import { SITE } from '../lib/site';
+
+const questions = [
+  'Why is this happening?',
+  'How did we get here?',
+  'What makes it so hard to fix?',
+  'What happens next?',
+];
+const layers = ['History', 'Economic incentives', 'Political decisions', 'Competing interests'];
+const rabbitHole = ['Historical events', 'Economic crises', 'Obscure geopolitical conflicts', 'and somehow it’s dinner'];
 ---
 
 <Base title="About" description="Why But Why? exists, how to read it, how each issue is made, and who runs it.">
-  <div class="wrap">
-    <header class="page-head">
-      <h1>About But Why?</h1>
-      <p>{SITE.tagline[0].toUpperCase() + SITE.tagline.slice(1)}.</p>
+  <div class="wrap about">
+    <header class="about-hero">
+      <p class="about-kicker">About {SITE.name}</p>
+      <span class="about-q" aria-hidden="true">?</span>
+      <h1>There is always more to the story.</h1>
+      <p class="about-dek">
+        One story from the news each day, explained from the ground up: the history, money, politics and people behind
+        the headline.
+      </p>
     </header>
 
-    <div class="text-page">
-      <p class="lead">
-        Every day brings headlines about elections, economic trouble, wars and social change. The news keeps us informed
-        about what is happening. Understanding why it is happening usually means looking past the headline.
-      </p>
-      <p>
-        Behind every big story sits a tangle of history, economic incentives, political decisions and competing interests.
-        You need that background to form a view of your own, and finding it usually takes hours of reading. But Why?
-        exists to make it quicker.
-      </p>
-      <p>
-        Each day, But Why? takes one story in the news and explains the context behind it: how we got here, who wants
-        what, why the problem is so hard to solve, and what might happen next.
-        Topics alternate between <strong>World</strong> stories and <strong>Singapore</strong> stories,
-        and every issue is written for any reader, wherever they live.
-      </p>
-      <p>
-        The aim is not to tell you what to think. It is to give you enough context to think it through yourself, in under
-        thirty minutes a day.
-      </p>
+    <section class="about-intro">
+      <div class="about-prose">
+        <p class="about-lead">
+          Every day brings headlines about elections, economic trouble, wars and social change. The news keeps us informed
+          about what is happening. Understanding <em>why</em> it is happening usually means looking past the headline.
+        </p>
+        <p>
+          Behind every big story sits a tangle of history, economic incentives, political decisions and competing
+          interests. You need that background to form a view of your own, and finding it usually takes hours of reading.
+          But Why? exists to make it quicker.
+        </p>
+        <p>
+          The aim is not to tell you what to think. It is to give you enough context to think it through yourself, in under
+          thirty minutes a day.
+        </p>
+      </div>
 
+      <figure class="depth">
+        <div class="depth-top">
+          <span class="depth-label">The headline</span>
+          <strong>What is happening</strong>
+        </div>
+        <p class="depth-line"><span>Where most news stops</span></p>
+        <ol class="depth-layers">
+          {layers.map((l) => <li>{l}</li>)}
+        </ol>
+        <figcaption>Where But Why? goes</figcaption>
+      </figure>
+    </section>
+
+    <section class="about-block">
+      <h2>Two tracks, one story a day</h2>
+      <div class="tracks">
+        <a class="track-tile" data-track="world" href="/archive/?track=world">
+          <span class="track">World</span>
+          <span class="track-tile-text">The big stories from around the world, like France’s autumn of protest.</span>
+          <span class="track-tile-link">See World issues →</span>
+        </a>
+        <a class="track-tile" data-track="singapore" href="/archive/?track=singapore">
+          <span class="track">Singapore</span>
+          <span class="track-tile-text">The issues closer to home, like the haze, housing or healthcare.</span>
+          <span class="track-tile-link">See Singapore issues →</span>
+        </a>
+      </div>
+      <p class="about-note">Topics alternate between the two, and every issue is written for any reader, wherever they live.</p>
+    </section>
+
+    <section class="about-block">
+      <h2>Every issue asks</h2>
+      <ol class="questions">
+        {
+          questions.map((q, i) => (
+            <li>
+              <span class="q-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+              <span class="q-text">{q}</span>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section class="about-block">
       <h2>How to read it</h2>
-      <p>
-        Think of But Why? as a daily habit for understanding the world. Each issue is built around the questions that
-        matter most: Why is this happening? How did we get here? What makes it so hard to fix? What happens next?
-      </p>
-      <ul>
-        <li>
-          <strong>Read at your own pace.</strong> Each issue takes about 15 to 30 minutes, short enough to fit into a
-          commute or a lunch break.
-        </li>
-        <li>
-          <strong>Skip to what interests you.</strong> Short on time? Every issue has a numbered contents list, so you can
-          jump straight to the question you care about.
-        </li>
-        <li>
-          <strong>Come back tomorrow.</strong> A new topic each day, one story at a time, slowly builds a fuller picture
-          of the world.
-        </li>
-      </ul>
-      <p>
+      <p class="about-note">Think of But Why? as a daily habit for understanding the world.</p>
+      <div class="habits">
+        <div class="habit">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+          <h3>Read at your own pace</h3>
+          <p>Each issue takes about 15 to 30 minutes, short enough to fit into a commute or a lunch break.</p>
+        </div>
+        <div class="habit">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"></path><path d="M4 6h1M4 12h1M4 18h1"></path></svg>
+          <h3>Skip to what interests you</h3>
+          <p>Short on time? Every issue has a numbered contents list, so you can jump straight to the question you care about.</p>
+        </div>
+        <div class="habit">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg>
+          <h3>Come back tomorrow</h3>
+          <p>A new topic each day, one story at a time, slowly builds a fuller picture of the world.</p>
+        </div>
+      </div>
+      <p class="about-note">
         Above all, come with an open mind. But Why? won’t have the final answer to every question. It tries to show why
         things are complicated, set out the different points of view, and avoid easy explanations.
       </p>
+    </section>
 
+    <section class="about-block">
       <h2>How issues are made</h2>
-      <p>
+      <p class="about-note">
         But Why? is researched and drafted with AI. For each issue, an AI research assistant (currently Claude, made by
         Anthropic) reads widely across news reports, official documents, data and reference sources, then writes the
         explainer to a fixed structure.
       </p>
-      <ul>
-        <li>
-          <strong>Every source is listed.</strong> Each issue ends with a numbered list of the reports and documents it draws
-          on, with links, so you can check anything yourself.
-        </li>
-        <li>
-          <strong>Contested claims are attributed.</strong> When governments, organisers and media give different numbers,
-          or when a claim comes from one side of an argument, the issue says who is saying it.
-        </li>
-        <li>
-          <strong>Being named is not proof.</strong> When a person or company is mentioned because an official body or
-          report named them, that is reported as such, not as a finding of wrongdoing.
-        </li>
-        <li>
-          <strong>AI makes mistakes.</strong> Fast-moving stories change by the hour and AI research can get details wrong.
-          Please check anything important against the original sources.
-        </li>
-      </ul>
-
-      <h2>Photos</h2>
-      <p>
-        But Why? only uses freely licensed photos, mostly from Wikimedia Commons. The photographer, source and licence are
-        credited under every image. It never uses photos from news agencies or news sites.
+      <div class="rules">
+        <div class="rule">
+          <h3>Every source is listed</h3>
+          <p>Each issue ends with a numbered list of the reports and documents it draws on, with links, so you can check anything yourself.</p>
+        </div>
+        <div class="rule">
+          <h3>Contested claims are attributed</h3>
+          <p>When governments, organisers and media give different numbers, or when a claim comes from one side of an argument, the issue says who is saying it.</p>
+        </div>
+        <div class="rule">
+          <h3>Being named is not proof</h3>
+          <p>When a person or company is mentioned because an official body or report named them, that is reported as such, not as a finding of wrongdoing.</p>
+        </div>
+        <div class="rule rule-warn">
+          <h3>AI makes mistakes</h3>
+          <p>Fast-moving stories change by the hour and AI research can get details wrong. Please check anything important against the original sources.</p>
+        </div>
+      </div>
+      <p class="about-small">
+        <strong>Photos:</strong> only freely licensed photos, mostly from Wikimedia Commons, with the photographer, source
+        and licence credited under every image. Never photos from news agencies or news sites.
       </p>
+    </section>
 
+    <section class="about-block creator">
       <h2>Meet the creator</h2>
-      <p>
-        Hi, I’m {SITE.owner}! I studied Economics at the National University of Singapore, and I’m chronically tired but
-        endlessly curious.
-      </p>
-      <p>
-        I’ve always loved learning about the world. Back when I had more free time, I would lose whole afternoons to
-        Wikipedia rabbit holes: historical events, economic crises, obscure geopolitical conflicts. One question led to
-        another, and before I knew it the day was gone.
-      </p>
-      <p>
-        Then adulthood happened, and I no longer have hours to research whatever catches my eye. But I still want to
-        learn. I want to be better read and understand the issues that matter, while still having time for my other
-        interests and, well, actually living my life.
-      </p>
-      <p>
-        So I built But Why?, a way to make learning more manageable, for me and for anyone who shares the same
-        curiosity. A place to explore complex issues, ask better questions and slowly become better informed, without
-        doing hours of research first.
-      </p>
-      <p>
-        I’m no expert on most of the topics covered here. I’m learning alongside you, and that’s exactly the point.
-      </p>
+      <div class="creator-grid">
+        <aside class="creator-card">
+          <span class="monogram" aria-hidden="true">{SITE.owner[0]}</span>
+          <p class="creator-name">{SITE.owner}</p>
+          <p class="creator-role">Economics, National University of Singapore</p>
+          <dl class="meters">
+            <div>
+              <dt>Tiredness</dt>
+              <dd><span class="meter" style="--v: 82%"></span><span class="visually-hidden">chronic</span></dd>
+            </div>
+            <div>
+              <dt>Curiosity</dt>
+              <dd><span class="meter meter-full" style="--v: 100%"></span><span class="visually-hidden">endless</span></dd>
+            </div>
+          </dl>
+        </aside>
 
-      <p class="signoff">One story a day. A deeper understanding of the world.</p>
-    </div>
+        <div class="about-prose">
+          <p class="about-lead">
+            Hi, I’m {SITE.owner}! I studied Economics at the National University of Singapore, and I’m chronically tired
+            but endlessly curious.
+          </p>
+          <p>
+            I’ve always loved learning about the world. Back when I had more free time, I would lose whole afternoons to
+            Wikipedia rabbit holes. One question led to another, and before I knew it the day was gone.
+          </p>
+          <ol class="rabbit-hole" aria-label="A typical rabbit hole">
+            {rabbitHole.map((r) => <li>{r}</li>)}
+          </ol>
+          <p>
+            Then adulthood happened, and I no longer have hours to research whatever catches my eye. But I still want to
+            learn. I want to be better read and understand the issues that matter, while still having time for my other
+            interests and, well, actually living my life.
+          </p>
+          <p>
+            So I built But Why?, a way to make learning more manageable, for me and for anyone who shares the same
+            curiosity. A place to explore complex issues, ask better questions and slowly become better informed, without
+            doing hours of research first.
+          </p>
+          <blockquote class="creator-quote">
+            I’m no expert on most of the topics covered here. I’m learning alongside you, and that’s exactly the point.
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="signoff-band">
+      <p>One story a day.<br />A deeper understanding of the world.</p>
+      <div class="signoff-actions">
+        <a class="button signoff-primary" href="/">Read today’s issue</a>
+        <a class="signoff-secondary" href="/archive/">Browse the archive</a>
+      </div>
+    </section>
   </div>
 </Base>
