@@ -14,7 +14,6 @@ then "Commit changes").
 
 ## Up next
 
-- singapore: Super-aged Singapore -- Peg: Population in Brief 2026 (Sept): 21.4% of citizens are 65+, crossing the UN "super-aged" threshold; 3.2 working-age citizens per senior, down from 5.4 a decade ago; resident TFR 0.87 in 2025. Scope: what Singapore is doing about ageing and its knock-on problems: healthcare financing (spending under 5% of GDP vs 9–12% in many developed economies), long-term care and caregivers, the shrinking workforce (retirement age rising to 65 and re-employment age to 70 by 2030), immigration as a buffer, fiscal sustainability. Ask whether a low-cost, self-reliance model can survive ageing, and who ends up paying.
 - world: Meta's ~$18B settlement -- Peg: late Aug 2026, Meta settled the 29-state social media addiction suit mid-trial, after the first social media addiction jury verdict in March; terms include a default 2-hour daily limit for under-18s. Scope: how product-liability law got around Section 230 and First Amendment defences; parallels with tobacco and opioid litigation; why Meta settled rather than fought; what changes for teens, rivals and other countries; the bigger point that litigation is doing the job of regulation.
 - singapore: Maju Forest and the endgame for BTOs -- Peg: July 2026 HDB plan to clear ~15 of 23 ha of Maju Forest and at least 10 ha near Gillman Barracks; petitions passed 49,000 signatures, then a rally at Hong Lim Park; the government promised to keep more greenery, which it said means fewer homes. Scope: land as the binding constraint; greenfield vs brownfield sites and golf courses; demand drivers behind BTO oversubscription; what the BTO model promises and the long-run endgame for public housing affordability on a fixed land supply.
 - world: The memory chip crunch -- Peg: DRAM and NAND prices surging through 2026; DRAM up 80–90% from late-2025 levels earlier in the year; normalisation not expected before 2027–28. Scope: AI chips and HBM crowding out commodity memory and storage; the makers (Samsung, SK Hynix, Micron); hyperscaler capacity reservations; knock-on effects on device prices. Frame it as AI demand reallocating scarce manufacturing capacity, and show who wins and who gets squeezed.
@@ -31,3 +30,4 @@ then "Commit changes").
 - 001 | world | France’s autumn of anger | 2026-10-21
 - 002 | singapore | The year the haze came back | 2026-10-22
 - 003 | world | When the test agents got out | 2026-10-23
+- 004 | singapore | Who pays for a super-aged Singapore? | 2026-10-24
