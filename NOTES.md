@@ -5,6 +5,7 @@ Read `BRIEF.md` for the original brief and `GUIDE.md` for the owner's step-by-st
 
 ## Status (23 Oct 2026)
 
+- Site renamed to But Why? and About page rewritten in the owner's words (owner: Thaddeus).
 - Site merged to `main` (PR #1) and live on Vercel. Owner checked the photos on the live site: they look good.
 - Automation steps 1 to 3 (topic queue, checker, write-issue skill) are built; see "Automation plan".
 - Both issues converted. Every word, link and source was checked against the original HTML by script:
@@ -17,6 +18,8 @@ Read `BRIEF.md` for the original brief and `GUIDE.md` for the owner's step-by-st
 
 | Topic | Decision | Why |
 | --- | --- | --- |
+| Length and policy section | No word target: a full read must take 40 minutes at most (`check-issue` caps the body at 8,000 words, 200 a minute). Every issue needs a section on what the story means for policymakers; the checker warns if no heading mentions policy or government. | Owner's choice (23 Oct 2026). |
+| Name | **But Why?**, slogan *there is always more to the story* (renamed from Backstory on 23 Oct 2026). Lives in `src/lib/site.ts`. The repo, Vercel project and file names still say backstory. | Owner's choice. |
 | Design direction | **Daybreak**, chosen by the owner from three options. The other two were "Briefing room" (data-forward, Schibsted Grotesk + Literata, grey-green and saffron/teal) and "Cover story" (photographic magazine, Archivo + Newsreader, indigo/coral). | Owner may revisit later; all colours and fonts live in `src/styles/tokens.css`. |
 | Fonts | Bricolage Grotesque (headlines, variable width axis used for condensed display) + Source Serif 4 (body). Self-hosted via Fontsource npm packages. | Distinctive headline face, very readable body; no Google Fonts request. |
 | Colours | Paper `#f5f7fa`, ink navy `#14213d`. World = ultramarine `#2b44d6`, Singapore = Singapore red `#d21f3c`. Dark mode is night-sky navy `#0f1830`. | Clear track difference; avoids cream/terracotta and black/neon clichés. |

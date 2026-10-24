@@ -86,6 +86,11 @@ mark {
   left: 0.5rem;
 }
 
+/* Elements with their own display (grid, flex) would otherwise ignore the hidden attribute */
+[hidden] {
+  display: none !important;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -207,6 +212,109 @@ mark {
   height: 0.7em;
   background: var(--accent);
   border-radius: 2px;
+}
+
+/* ---------- Homepage title screen ---------- */
+.intro {
+  display: flex;
+  align-items: center;
+  min-height: min(calc(100svh - 4rem), 52rem);
+  padding: 3rem 0;
+  overflow: hidden;
+}
+.intro-inner {
+  width: 100%;
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+@media (max-width: 59.99rem) {
+  .intro-depth {
+    display: none;
+  }
+}
+@media (min-width: 60rem) {
+  .intro-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 24rem);
+    gap: 4rem;
+  }
+}
+.intro-title {
+  font-size: clamp(4.5rem, 19vw, 13rem);
+  font-weight: 800;
+  font-stretch: 78%;
+  line-height: 0.85;
+  letter-spacing: -0.045em;
+  margin: 0;
+}
+.intro-q {
+  display: inline-block;
+  color: var(--world);
+  transform: rotate(10deg);
+  transform-origin: 50% 80%;
+  margin-left: 0.04em;
+}
+.intro-slogan {
+  font-family: var(--font-display);
+  font-weight: 650;
+  font-stretch: 90%;
+  font-size: var(--step-3);
+  line-height: 1.15;
+  margin: 1.25rem 0 0;
+}
+.intro-dek {
+  font-size: var(--step-1);
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 36rem;
+  margin: 1rem 0 0;
+}
+.intro-facts {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.intro-facts li {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--rule);
+  background: var(--paper-raised);
+}
+.intro-facts li:nth-child(2) {
+  background: linear-gradient(90deg, var(--world-tint) 50%, var(--singapore-tint) 50%);
+  border-color: transparent;
+}
+.intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  margin-top: 2rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+.intro-primary {
+  --accent: var(--world);
+}
+.section-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+  border-top: 2px solid var(--ink);
+  padding-top: 0.9rem;
+  margin: 0 0 1.5rem;
+}
+#today {
+  scroll-margin-top: 1rem;
 }
 
 /* ---------- Cover (homepage lead + issue header) ---------- */
@@ -471,6 +579,466 @@ mark {
 }
 .text-page ul {
   padding-left: 1.2rem;
+}
+
+/* ---------- About page ---------- */
+.about-hero {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+  padding: 3rem 0 2rem;
+}
+.about-kicker {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink-soft);
+  margin: 0;
+}
+.about-hero h1 {
+  margin-top: 0.75rem;
+  font-size: var(--step-5);
+  font-weight: 750;
+  font-stretch: 88%;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  max-width: 14ch;
+}
+.about-dek {
+  font-size: var(--step-1);
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 38rem;
+  margin: 1.1rem 0 0;
+}
+
+/* A torn-out front page with its headline circled: the news says what, we ask why */
+.clipping {
+  position: relative;
+  margin: 0 auto;
+  width: min(100%, 24rem);
+  padding: 1.5rem 1rem 0 0;
+  user-select: none;
+}
+.clip-shadow {
+  filter: drop-shadow(0 10px 18px rgb(20 33 61 / 0.18));
+  transform: rotate(-3deg);
+}
+.clip-paper {
+  background: var(--newsprint);
+  color: var(--newsprint-ink);
+  padding: 1.1rem 1.3rem 2.4rem;
+  /* Torn bottom edge */
+  clip-path: polygon(
+    0 0, 100% 0, 100% 94%, 95% 97%, 90% 93.5%, 84% 98%, 78% 94%, 72% 97.5%, 65% 93%, 59% 97%, 52% 94.5%,
+    46% 98.5%, 39% 94%, 33% 97%, 26% 93.5%, 20% 98%, 13% 94%, 7% 97.5%, 0 94%
+  );
+}
+.clip-mast {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+  text-align: center;
+  line-height: 1.1;
+}
+.clip-meta {
+  text-align: center;
+  margin: 0.35rem 0 0.9rem;
+  padding: 0.2rem 0;
+  border-block: 1px solid currentColor;
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.clip-head {
+  position: relative;
+  margin: 0 0 1rem;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 1.75rem;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+}
+.clip-circle {
+  position: absolute;
+  inset: -24% -7% -22% -10%;
+  width: 117%;
+  height: 146%;
+  overflow: visible;
+  fill: none;
+  stroke: var(--singapore);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+.clip-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(8, auto);
+  column-gap: 1rem;
+  row-gap: 0.45rem;
+}
+.clip-cols span {
+  height: 0.38rem;
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--newsprint-ink) 22%, transparent);
+}
+.clip-cols span:nth-child(8n) {
+  width: 60%;
+}
+.clip-note {
+  position: absolute;
+  top: -0.4rem;
+  right: -0.25rem;
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-stretch: 80%;
+  font-size: 2.1rem;
+  line-height: 1;
+  color: var(--singapore);
+  transform: rotate(8deg);
+}
+.clip-arrow {
+  position: absolute;
+  top: 2.4rem;
+  right: 0.6rem;
+  width: 4.5rem;
+  height: 4rem;
+  fill: none;
+  stroke: var(--singapore);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.about-intro {
+  display: grid;
+  gap: 2.5rem;
+  padding: 2rem 0 1rem;
+  align-items: center;
+}
+.about-prose {
+  max-width: var(--measure);
+}
+.about-lead {
+  font-size: var(--step-1);
+  line-height: 1.5;
+}
+.about-lead em {
+  font-style: normal;
+  font-weight: 650;
+  background: linear-gradient(transparent 62%, var(--world-tint) 62%);
+}
+
+/* Headline vs. what sits underneath it */
+.depth {
+  margin: 0;
+  font-family: var(--font-display);
+  max-width: 26rem;
+  width: 100%;
+  justify-self: center;
+}
+.depth-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.75rem 1rem;
+  margin: 0 auto;
+  width: 62%;
+  background: var(--paper-raised);
+  border: 1.5px solid var(--rule);
+  border-radius: var(--radius);
+}
+.depth-label,
+.depth figcaption {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+}
+.depth-line {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.9rem 0;
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+  font-style: italic;
+}
+.depth-line::before,
+.depth-line::after {
+  content: '';
+  flex: 1;
+  border-top: 2px dashed var(--rule);
+}
+.depth-layers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+.depth-layers li {
+  margin: 0 auto;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius);
+  text-align: center;
+  font-weight: 600;
+  color: var(--paper);
+  background: color-mix(in srgb, var(--world) var(--mix), var(--ink));
+}
+.depth-layers li:nth-child(1) { width: 70%; --mix: 100%; }
+.depth-layers li:nth-child(2) { width: 80%; --mix: 85%; }
+.depth-layers li:nth-child(3) { width: 90%; --mix: 70%; }
+.depth-layers li:nth-child(4) { width: 100%; --mix: 55%; }
+.depth figcaption {
+  text-align: center;
+  margin-top: 0.75rem;
+  color: var(--world);
+}
+
+.about-block {
+  padding: 3rem 0 0;
+}
+.about-block h2 {
+  font-size: var(--step-4);
+  font-stretch: 88%;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+.about-block h3 {
+  font-size: var(--step-1);
+  margin: 0 0 0.4rem;
+}
+.about-note {
+  max-width: 40rem;
+  color: var(--ink-soft);
+}
+.about-small {
+  max-width: 40rem;
+  font-size: var(--step--1);
+  color: var(--ink-soft);
+  margin-top: 1.5rem;
+}
+
+/* The four questions */
+.questions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  border-top: 1px solid var(--rule);
+}
+.questions li {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.q-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-stretch: 75%;
+  font-size: clamp(3.2rem, 11vw, 5rem);
+  line-height: 0.8;
+  letter-spacing: -0.04em;
+  color: var(--world);
+  min-width: 1.6ch;
+}
+.questions li:nth-child(even) .q-num {
+  color: var(--singapore);
+}
+.q-text {
+  font-family: var(--font-display);
+  font-weight: 650;
+  font-stretch: 90%;
+  font-size: var(--step-3);
+  line-height: 1.1;
+}
+
+/* How to read it */
+.habits,
+.rules {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.habit,
+.rule {
+  padding: 1.4rem 1.5rem;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: calc(var(--radius) * 2);
+}
+.habit p,
+.rule p {
+  margin: 0;
+  font-size: var(--step--1);
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.habit svg {
+  width: 2.6rem;
+  height: 2.6rem;
+  padding: 0.5rem;
+  margin-bottom: 0.9rem;
+  border-radius: 50%;
+  background: var(--world-tint);
+  fill: none;
+  stroke: var(--world);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.rule {
+  background: var(--paper-sunk);
+  border-color: transparent;
+  border-top: 4px solid var(--world);
+}
+.rule-warn {
+  background: var(--singapore-tint);
+  border-top-color: var(--singapore);
+}
+
+/* Meet the creator */
+.creator-grid {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+.creator-card {
+  padding: 1.75rem;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: calc(var(--radius) * 2);
+  font-family: var(--font-display);
+}
+.monogram {
+  display: grid;
+  place-items: center;
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  background: var(--world);
+  color: var(--paper);
+  font-weight: 800;
+  font-stretch: 75%;
+  font-size: 3.4rem;
+  line-height: 1;
+}
+.creator-photo {
+  margin: 0;
+}
+.creator-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: var(--paper-sunk);
+}
+.creator-photo figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+.creator-photo .credit {
+  font-style: normal;
+}
+.creator-name {
+  font-size: var(--step-3);
+  font-weight: 750;
+  margin: 1rem 0 0;
+}
+.creator-role {
+  color: var(--ink-soft);
+  margin: 0.2rem 0 0;
+  font-size: 0.95rem;
+}
+.creator-quote {
+  margin: 2rem 0 0;
+  padding: 0 0 0 1.25rem;
+  border-left: 5px solid var(--singapore);
+  font-family: var(--font-display);
+  font-weight: 650;
+  font-stretch: 90%;
+  font-size: var(--step-2);
+  line-height: 1.25;
+}
+
+/* Sign-off band */
+.signoff-band {
+  margin: 4rem 0 0;
+  padding: 2.5rem 1.75rem;
+  border-radius: calc(var(--radius) * 3);
+  background: var(--ink);
+  color: var(--paper);
+}
+.signoff-band p {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 750;
+  font-stretch: 85%;
+  font-size: var(--step-4);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.signoff-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  margin-top: 1.75rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+.signoff-primary {
+  --accent: var(--world);
+}
+.signoff-secondary {
+  color: var(--paper);
+}
+
+@media (min-width: 48rem) {
+  .rules {
+    grid-template-columns: 1fr 1fr;
+  }
+  .habits {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .questions {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.5rem;
+  }
+  .signoff-band {
+    padding: 3.5rem;
+  }
+}
+@media (min-width: 60rem) {
+  .about-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 24rem);
+    gap: 4rem;
+  }
+  .about-intro {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 24rem);
+    gap: 4rem;
+  }
+  .creator-grid {
+    grid-template-columns: 17rem minmax(0, 1fr);
+    gap: 3.5rem;
+  }
+  .creator-card {
+    position: sticky;
+    top: 5.5rem;
+  }
 }
 
 /* ---------- Footer ---------- */

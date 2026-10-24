@@ -1,62 +1,211 @@
 ---
 import Base from '../layouts/Base.astro';
 import { SITE } from '../lib/site';
+import { getCommonsImage } from '../lib/images';
+import Credit from '../components/Credit.astro';
+
+const portrait = getCommonsImage('Polar Bear yawning.jpg');
+
+const questions = [
+  'Why is this happening?',
+  'How did we get here?',
+  'What makes it so hard to fix?',
+  'What happens next?',
+];
+const layers = ['History', 'Economic incentives', 'Political decisions', 'Competing interests'];
 ---
 
-<Base title="About" description="What Backstory is, how each issue is researched and written, and who runs it.">
-  <div class="wrap">
-    <header class="page-head">
-      <h1>About Backstory</h1>
-      <p>{SITE.tagline[0].toUpperCase() + SITE.tagline.slice(1)}.</p>
+<Base title="About" description="Why But Why? exists, how to read it, how each issue is made, and who runs it.">
+  <div class="wrap about">
+    <header class="about-hero">
+      <div>
+        <p class="about-kicker">About {SITE.name}</p>
+        <h1>There is always more to the story.</h1>
+        <p class="about-dek">
+          One story from the news each day, explained from the ground up: the history, money, politics and people behind
+          the headline.
+        </p>
+      </div>
+
+      <figure class="clipping" aria-hidden="true">
+        <div class="clip-shadow">
+          <div class="clip-paper">
+            <p class="clip-mast">The Daily Headline</p>
+            <p class="clip-meta">Morning edition</p>
+            <p class="clip-head">
+              Crisis deepens as talks collapse
+              <svg class="clip-circle" viewBox="0 0 200 100" preserveAspectRatio="none">
+                <path d="M118 7 C 168 8, 200 30, 193 56 C 185 82, 132 95, 90 93 C 40 91, 4 76, 7 50 C 10 24, 52 7, 104 6 C 132 6, 152 10, 164 15"></path>
+              </svg>
+            </p>
+            <div class="clip-cols">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+        <p class="clip-note">But why?</p>
+        <svg class="clip-arrow" viewBox="0 0 100 80">
+          <path d="M80 6 C 82 34, 64 58, 26 72"></path>
+          <path d="M26 72 L 38 58 M26 72 L 44 76"></path>
+        </svg>
+      </figure>
     </header>
 
-    <div class="text-page">
-      <p>
-        Most news tells you what happened today. Backstory tells you why. Each day it takes one story in the news and gives
-        you the background to actually understand it: what is happening, how it got here, the economics and politics
-        underneath, where reasonable people disagree, and what to watch next.
-      </p>
-      <p>
-        Topics alternate between <strong>World</strong> stories, such as France’s autumn of protest, and
-        <strong>Singapore</strong> stories, such as the haze, housing or healthcare. Every issue is written for any reader,
-        wherever they live, and takes no more than 30 minutes to read.
-      </p>
+    <section class="about-intro">
+      <div class="about-prose">
+        <p class="about-lead">
+          Every day brings headlines about elections, economic trouble, wars and social change. The news keeps us informed
+          about what is happening. Understanding <em>why</em> it is happening usually means looking past the headline.
+        </p>
+        <p>
+          Behind every big story sits a tangle of history, economic incentives, political decisions and competing
+          interests. You need that background to form a view of your own, and finding it usually takes hours of reading.
+          But Why? exists to make it quicker.
+        </p>
+        <p>
+          The aim is not to tell you what to think. It is to give you enough context to think it through yourself, in
+          whatever time you have.
+        </p>
+      </div>
 
+      <figure class="depth">
+        <div class="depth-top">
+          <span class="depth-label">The headline</span>
+          <strong>What is happening</strong>
+        </div>
+        <p class="depth-line"><span>Where most news stops</span></p>
+        <ol class="depth-layers">
+          {layers.map((l) => <li>{l}</li>)}
+        </ol>
+        <figcaption>Where But Why? goes</figcaption>
+      </figure>
+    </section>
+
+    <section class="about-block">
+      <h2>Every issue asks</h2>
+      <ol class="questions">
+        {
+          questions.map((q, i) => (
+            <li>
+              <span class="q-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+              <span class="q-text">{q}</span>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section class="about-block">
+      <h2>How to read it</h2>
+      <p class="about-note">
+        You don’t have to read every issue from top to bottom. Each one is built so you can take what you need.
+      </p>
+      <div class="habits">
+        <div class="habit">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"></path><path d="M4 6h1M4 12h1M4 18h1"></path></svg>
+          <h3>Jump to your question</h3>
+          <p>Every issue has a numbered contents list. Click a heading to go straight to the question you care about most.</p>
+        </div>
+        <div class="habit">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+          <h3>Read as much as you like</h3>
+          <p>Start with “What is happening” for the essentials in a few minutes, then go further only where you’re curious.</p>
+        </div>
+        <div class="habit">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg>
+          <h3>Come back tomorrow</h3>
+          <p>A new topic each day, one story at a time, slowly builds a fuller picture of the world.</p>
+        </div>
+      </div>
+      <p class="about-note">
+        Above all, come with an open mind. But Why? won’t have the final answer to every question. It tries to show why
+        things are complicated, set out the different points of view, and avoid easy explanations.
+      </p>
+    </section>
+
+    <section class="about-block">
       <h2>How issues are made</h2>
-      <p>
-        Backstory is researched and drafted with AI. For each issue, an AI research assistant (currently Claude, made by
+      <p class="about-note">
+        But Why? is researched and drafted with AI. For each issue, an AI research assistant (currently Claude, made by
         Anthropic) reads widely across news reports, official documents, data and reference sources, then writes the
         explainer to a fixed structure.
       </p>
-      <ul>
-        <li>
-          <strong>Every source is listed.</strong> Each issue ends with a numbered list of the reports and documents it draws
-          on, with links, so you can check anything yourself.
-        </li>
-        <li>
-          <strong>Contested claims are attributed.</strong> When governments, organisers and media give different numbers,
-          or when a claim comes from one side of an argument, the issue says who is saying it.
-        </li>
-        <li>
-          <strong>Being named is not proof.</strong> When a person or company is mentioned because an official body or
-          report named them, that is reported as such, not as a finding of wrongdoing.
-        </li>
-        <li>
-          <strong>AI makes mistakes.</strong> Fast-moving stories change by the hour and AI research can get details wrong.
-          Please check anything important against the original sources.
-        </li>
-      </ul>
-
-      <h2>Photos</h2>
-      <p>
-        Backstory only uses freely licensed photos, mostly from Wikimedia Commons. The photographer, source and licence are
-        credited under every image. Backstory never uses photos from news agencies or news sites.
+      <div class="rules">
+        <div class="rule">
+          <h3>Every source is listed</h3>
+          <p>Each issue ends with a numbered list of the reports and documents it draws on, with links, so you can check anything yourself.</p>
+        </div>
+        <div class="rule">
+          <h3>Contested claims are attributed</h3>
+          <p>When governments, organisers and media give different numbers, or when a claim comes from one side of an argument, the issue says who is saying it.</p>
+        </div>
+        <div class="rule">
+          <h3>Being named is not proof</h3>
+          <p>When a person or company is mentioned because an official body or report named them, that is reported as such, not as a finding of wrongdoing.</p>
+        </div>
+        <div class="rule rule-warn">
+          <h3>AI makes mistakes</h3>
+          <p>Fast-moving stories change by the hour and AI research can get details wrong. Please check anything important against the original sources.</p>
+        </div>
+      </div>
+      <p class="about-small">
+        <strong>Photos:</strong> only freely licensed photos, mostly from Wikimedia Commons, with the photographer, source
+        and licence credited under every image. Never photos from news agencies or news sites.
       </p>
+    </section>
 
-      <h2>Who runs it</h2>
-      <p>
-        Backstory is run by {SITE.owner}, an economics graduate based in Singapore.
-      </p>
-    </div>
+    <section class="about-block creator">
+      <h2>Meet the creator</h2>
+      <div class="creator-grid">
+        <aside class="creator-card">
+          {
+            portrait ? (
+              <figure class="creator-photo">
+                <img src={portrait.src} width={portrait.width} height={portrait.height} alt="A polar bear yawning" loading="lazy" decoding="async" />
+                <figcaption>
+                  <Credit image={portrait} />
+                </figcaption>
+              </figure>
+            ) : (
+              <span class="monogram" aria-hidden="true">{SITE.owner[0]}</span>
+            )
+          }
+          <p class="creator-name">{SITE.owner}</p>
+          <p class="creator-role">Creator of But Why?</p>
+          <p class="creator-role">Economics, National University of Singapore</p>
+        </aside>
+
+        <div class="about-prose">
+          <p class="about-lead">
+            I’m {SITE.owner}, an Economics graduate of the National University of Singapore. I am passionate about
+            government, public policy and economics, and I am looking to build a career in those fields.
+          </p>
+          <p>
+            That is why I created But Why? Good policy starts with understanding why a problem exists: the history, the
+            incentives and the trade-offs behind it. Most news coverage, by necessity, stays close to the surface. It
+            reports what happened, but rarely has the space to explain why, and finding out usually means hours of
+            research.
+          </p>
+          <p>
+            Each issue sets out the background to a story and the questions underneath it, including what it means for
+            governments and the challenges facing policymakers. It gives my reading direction, so I know roughly where to
+            look if I have the time or interest to go deeper. That is also why every issue ends with its sources and
+            suggestions for further reading.
+          </p>
+          <blockquote class="creator-quote">
+            I am not an expert on most of the topics covered here. I am learning alongside you.
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="signoff-band">
+      <p>One story a day.<br />A deeper understanding of the world.</p>
+      <div class="signoff-actions">
+        <a class="button signoff-primary" href="/">Read today’s issue</a>
+        <a class="signoff-secondary" href="/archive/">Browse the archive</a>
+      </div>
+    </section>
   </div>
 </Base>

@@ -1,6 +1,6 @@
-# Backstory
+# But Why?
 
-*The news, with the context left in.* A daily long-form explainer: one story in the news each day, alternating
+*There is always more to the story.* A daily long-form explainer: one story in the news each day, alternating
 between World and Singapore, with the background you need to understand it.
 
 - **GUIDE.md**: plain-language steps for publishing, previewing and adding issues.

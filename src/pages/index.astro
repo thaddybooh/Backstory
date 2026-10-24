@@ -4,18 +4,55 @@ import HeroImage from '../components/HeroImage.astro';
 import IssueRow from '../components/IssueRow.astro';
 import { getIssues, issueUrl, issueNumber, formatLongDate, TRACK_LABEL } from '../lib/issues';
 import { getCommonsImage } from '../lib/images';
+import { SITE } from '../lib/site';
 
 const issues = await getIssues();
 const [latest, ...earlier] = issues;
-const recent = earlier.slice(0, 6);
 const d = latest?.data;
+const layers = ['History', 'Economic incentives', 'Political decisions', 'Competing interests'];
 const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommonsImage(d.hero.commons))));
 ---
 
 <Base ogImage={latest ? `/og/${latest.id}.png` : undefined}>
+  <section class="intro" aria-labelledby="intro-title">
+    <div class="wrap intro-inner">
+      <div>
+        <h1 class="intro-title" id="intro-title">But Why<span class="intro-q">?</span></h1>
+        <p class="intro-slogan">{SITE.tagline[0].toUpperCase() + SITE.tagline.slice(1)}.</p>
+        <p class="intro-dek">
+          The news tells you what happened. But Why? explains why. Every day, one story from the headlines, unpacked:
+          how we got here, who wants what, and what happens next.
+        </p>
+        <ul class="intro-facts">
+          <li>One story a day</li>
+          <li>World and Singapore</li>
+          <li>Always the policy angle</li>
+        </ul>
+        <div class="intro-actions">
+          {latest && <a class="button intro-primary" href="#today">Today’s issue ↓</a>}
+          <a class="intro-secondary" href="/about/">What is this?</a>
+        </div>
+      </div>
+      <figure class="depth intro-depth">
+        <div class="depth-top">
+          <span class="depth-label">The headline</span>
+          <strong>What is happening</strong>
+        </div>
+        <p class="depth-line"><span>Where most news stops</span></p>
+        <ol class="depth-layers">
+          {layers.map((l) => <li>{l}</li>)}
+        </ol>
+        <figcaption>Where But Why? goes</figcaption>
+      </figure>
+    </div>
+  </section>
+
   {
     latest && d && (
-      <section class="cover" data-track={d.track} aria-labelledby="latest-title">
+      <section class="cover" id="today" data-track={d.track} aria-labelledby="latest-title">
+        <div class="wrap">
+          <p class="section-label">Today’s issue</p>
+        </div>
         <div class:list={['wrap cover-grid', { 'has-image': hasHero }]}>
           <div>
             <div class="cover-meta">
@@ -25,12 +62,12 @@ const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommon
             <div class="cover-num" aria-hidden="true">
               {issueNumber(d.number)}
             </div>
-            <h1 class="cover-title" id="latest-title">
+            <h2 class="cover-title" id="latest-title">
               <a href={issueUrl(latest)}>
                 <span class="visually-hidden">Today’s issue: </span>
                 {d.title}
               </a>
-            </h1>
+            </h2>
             <p class="cover-dek">{d.dek}</p>
             <div class="cover-foot">
               <a class="button" href={issueUrl(latest)}>
@@ -46,14 +83,14 @@ const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommon
   }
 
   {
-    recent.length > 0 && (
+    earlier.length > 0 && (
       <section class="wrap" aria-labelledby="earlier">
         <div class="section-head">
-          <h2 id="earlier">Earlier issues</h2>
+          <h2 id="earlier">Previous issues</h2>
           <a href="/archive/">See all issues</a>
         </div>
         <ul class="issue-list">
-          {recent.map((issue) => (
+          {earlier.map((issue) => (
             <IssueRow issue={issue} />
           ))}
         </ul>
@@ -64,7 +101,7 @@ const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommon
   {
     !latest && (
       <section class="wrap page-head">
-        <h1>No issues yet</h1>
+        <h2>No issues yet</h2>
         <p>Add an issue file to src/content/issues/ and it will appear here.</p>
       </section>
     )
