@@ -14,7 +14,6 @@ then "Commit changes").
 
 ## Up next
 
-- world: Meta's ~$18B settlement -- Peg: late Aug 2026, Meta settled the 29-state social media addiction suit mid-trial, after the first social media addiction jury verdict in March; terms include a default 2-hour daily limit for under-18s. Scope: how product-liability law got around Section 230 and First Amendment defences; parallels with tobacco and opioid litigation; why Meta settled rather than fought; what changes for teens, rivals and other countries; the bigger point that litigation is doing the job of regulation.
 - singapore: Maju Forest and the endgame for BTOs -- Peg: July 2026 HDB plan to clear ~15 of 23 ha of Maju Forest and at least 10 ha near Gillman Barracks; petitions passed 49,000 signatures, then a rally at Hong Lim Park; the government promised to keep more greenery, which it said means fewer homes. Scope: land as the binding constraint; greenfield vs brownfield sites and golf courses; demand drivers behind BTO oversubscription; what the BTO model promises and the long-run endgame for public housing affordability on a fixed land supply.
 - world: The memory chip crunch -- Peg: DRAM and NAND prices surging through 2026; DRAM up 80–90% from late-2025 levels earlier in the year; normalisation not expected before 2027–28. Scope: AI chips and HBM crowding out commodity memory and storage; the makers (Samsung, SK Hynix, Micron); hyperscaler capacity reservations; knock-on effects on device prices. Frame it as AI demand reallocating scarce manufacturing capacity, and show who wins and who gets squeezed.
 - singapore: Singapore's AI push, and the backlash -- Peg: Budget 2026 "all in on AI" push and PM Wong's promise of "no jobless growth"; in Oct 2026 Wong and Tharman warned about AI threatening the "bottom rung" of the career ladder. Scope: why the public is uneasy (unemployment 1.9% in Q2 2026, yet retrenchments at their highest since 2020); tech layoffs; AI users vs AI builders; who gets left behind. Ask whether the government's bet is right and what it would take not to hollow out entry-level jobs.
@@ -31,3 +30,4 @@ then "Commit changes").
 - 002 | singapore | The year the haze came back | 2026-10-22
 - 003 | world | When the test agents got out | 2026-10-23
 - 004 | singapore | Who pays for a super-aged Singapore? | 2026-10-24
+- 005 | world | Meta’s $18 billion bargain | 2026-10-25
