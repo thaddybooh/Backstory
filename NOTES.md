@@ -3,6 +3,12 @@
 Decisions and current state, so a future session can pick up where we left off.
 Read `BRIEF.md` for the original brief and `GUIDE.md` for the owner's step-by-step instructions.
 
+## Status (26 Oct 2026)
+
+- **Question graph added** (branch `claude/clever-carson-2a0amt`): an interactive graph of the questions a reader
+  would ask about each issue, at the top of every issue page and under today's issue on the homepage. All five
+  issues have graphs. See "Question graph" below.
+
 ## Status (23 Oct 2026)
 
 - Site renamed to But Why? and About page rewritten in the owner's words (owner: Thaddeus).
@@ -31,6 +37,7 @@ Read `BRIEF.md` for the original brief and `GUIDE.md` for the owner's step-by-st
 | Section numbers | Every `##` heading is numbered automatically (01, 02...) and listed in the contents. "What is happening" is unnumbered. | The issue text refers to "section 06" etc., so numbers must match heading order. |
 | Images | Only Wikimedia Commons, referenced by exact file name. `scripts/fetch-images.mjs` pulls the image plus author/licence from the Commons API, so credits are never typed by hand. Non-free licences (NC/ND) are refused. A photo that hasn't been fetched simply doesn't render (dev mode shows a dashed placeholder). | Brief requires free licences and visible credits; avoids invented credits. |
 | Social cards | Generated per issue at build time (`/og/<issue>.png`, satori + resvg), number + headline + track/date. | LinkedIn previews. |
+| Question graph | d3-force + d3-zoom + d3-drag drawn as SVG (not canvas libraries such as force-graph or Cytoscape). One `NNN-slug.graph.json` per issue, next to it. | SVG nodes are real focusable elements (keyboard, screen readers) styled by the site's CSS variables, so dark mode and track colours just work; about 24KB gzipped, loaded only when the graph scrolls into view. |
 | Extras | RSS at `/rss.xml`, sitemap, robots.txt, 404 page, light/dark toggle remembered per browser. | Cheap and useful. |
 
 ## Where things are
@@ -46,6 +53,11 @@ src/pages/                    homepage, archive, about, issue pages, OG images, 
 src/data/commons-images.json  written by the image script: file -> local path + credit
 scripts/fetch-images.mjs      downloads Commons photos and credits (runs before every build)
 docs/issue-template.mdx       copy this to start a new issue (it is tested to build)
+docs/graph-template.json      copy this to start an issue's question graph
+src/content/issues/*.graph.json  one question graph per issue (questions, answers, sources, section ids)
+src/components/graph/         QuestionGraph.astro (list + panel markup) and graph.ts (the interactive graph)
+src/lib/graph.mjs             graph rules + anchor ids, shared by the build and check:issue
+src/styles/qmap.css           question graph styles
 topics/queue.md               upcoming topics + published log (owner edits on GitHub)
 scripts/next-issue.mjs        `npm run next`: next number, track, date (SGT) and queued topic
 scripts/check-issue.mjs       `npm run check:issue`: checks a new issue against the brief's rules
@@ -74,6 +86,9 @@ No imports needed; they are passed in globally by the issue page.
 - `<SmallPrint>`: small note (e.g. where figures come from).
 - `<ScaleBar>`: coloured scale with a marked value (the PSI chart in 002).
 - `<Photo file alt caption wide>` and `<People>` + `<Person file name role>`: Commons photos with credits.
+
+`<Why>`, `<Answer>` and `<Debate>` get stable ids from their titles (`why-…`, `answer-…`, `debate-…`, see
+`anchorId` in `src/lib/graph.mjs`), so links can jump to a specific block. Changing a title changes its id.
 
 MDX gotchas found while building: a line that starts with `>` is read as a quote, so close multi-line component
 tags at the end of a line (`]}>`), not on a new line. Escape `{ } < >` in plain text.
@@ -138,12 +153,31 @@ Build order:
    skill's research and writing rules, plus the repo workflow (npm run next, template, photos, queue update,
    checker, build, PR, never merge). The account-level `backstory-issue` skill (synced from claude.ai, can't be
    edited from a session) still says "publish as an HTML artifact"; the owner should update or remove it so it
-   doesn't compete (replacement text in GUIDE.md section 9).
+   doesn't compete (replacement text in GUIDE.md section 10).
 4. **Owner action next.** Allow `en.wikipedia.org`, `commons.wikimedia.org`, `upload.wikimedia.org` in the cloud
    environment's network settings so research and photo checks work.
 5. Run it by hand for a few days ("write today's issue"), review quality, then create the daily scheduled task:
    fresh session each run, about 5am SGT so the PR is ready by 6am, prompt = "Use the write-issue skill to write
    today's Backstory issue and open a pull request."
+
+## Question graph
+
+- **What it is:** the story's headline (with its hero photo) in the centre, 6–10 questions around it, up to 3
+  follow-ups per question. Clicking a question opens a panel (bottom sheet on phones) with a short answer, 2–4
+  sources and a "Read this in today's issue" link to the section that covers it; the section briefly highlights
+  when you land. Graph/List toggle (remembered per browser); without JavaScript the list shows.
+- **Where:** first thing on every issue page; under the "Today's issue" cover on the homepage.
+- **Interaction:** force layout that settles then drifts slowly (static for readers who turn off motion); drag nodes; mouse
+  drag to pan, Ctrl/⌘ + scroll or the +/− buttons to zoom; on touch, one finger scrolls the page and two fingers
+  pan/pinch so readers never get trapped; Tab/Enter/Esc for keyboard. Follow-up labels are hidden on phones until
+  their question is highlighted.
+- **Grounding rules** (enforced by `src/lib/graph.mjs` in both `npm run check:issue` and the build): every source
+  URL must appear in the issue; every `section` must be a real heading or titled block; 6–10 questions, 0–3
+  follow-ups, 2–4 sources, 60–220-word answers, labels of 34 characters or fewer. A new issue without a graph
+  fails the checker; an issue without a graph still builds (the graph simply doesn't show).
+- **Backfill (26 Oct 2026):** graphs for 001–005 were written from each issue's own text. Sources were matched to
+  answers using the issue's attributions and the source titles; the source pages were not re-opened to confirm
+  each claim.
 
 ## Designed for, not built yet
 

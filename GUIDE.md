@@ -91,12 +91,19 @@ Order matters: the next World issue takes the first `world:` line, the next Sing
 4. Happy with it? Click **Merge pull request**, then **Confirm merge**. It's live within a couple of minutes.
    Not happy? Comment on the pull request or tell Claude what to change, then check the preview again.
 
-## 8. Changing the look
+## 8. The question graph
+
+Every issue now opens with a "Start with a question" graph, and today's graph also appears on the homepage. Claude
+writes it as part of each new issue (a file ending in `.graph.json` next to the issue, in the same pull request),
+so there is nothing extra for you to do. When you review a pull request, open the preview, click a few questions
+and check that the answers read well and the "Read this in today's issue" links land in the right place.
+
+## 9. Changing the look
 
 All colours and fonts are in one file: `src/styles/tokens.css`. If you want to try one of the other design
 directions ("Briefing room" or "Cover story"), ask Claude. Most of the change happens in that file.
 
-## 9. Update your old "backstory-issue" skill (one time)
+## 10. Update your old "backstory-issue" skill (one time)
 
 Your claude.ai account has an older skill called **backstory-issue** that makes each issue as a standalone HTML
 page. The website now has its own instructions inside the repo, so the old skill should point there instead.

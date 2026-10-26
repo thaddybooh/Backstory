@@ -1,0 +1,266 @@
+{
+  "issue": "001-frances-autumn-of-anger",
+  "questions": [
+    {
+      "id": "why-at-once",
+      "label": "Why did it all erupt at once?",
+      "question": "Why did France erupt now, all at once?",
+      "answer": [
+        "Because three separate grievances peaked at the same moment. Teenagers were angry about schools that don’t work. Drivers, farmers and fishermen were squeezed by record diesel prices from the Iran war. Teachers, nurses and civil servants faced another pay freeze in a budget of cuts.",
+        "Each on its own is the kind of thing France has absorbed before: a school strike can be settled with money for schools, a fuel protest eased with subsidies. When all three marched together on 17 October, the common demand became “this government is failing us”, and no single concession answers that. Underneath all three is the same thing: money the state doesn’t have."
+      ],
+      "section": "three-angers-one-street",
+      "sources": [
+        { "title": "Why have France’s school protests become a wider political crisis?", "publication": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/18/why-have-frances-school-protests-become-a-wider-political-crisis" },
+        { "title": "2026 French student protests", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2026_French_student_protests" },
+        { "title": "Tear gas and unrest as hundreds of thousands protest for reforms in France", "publication": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/17/france-wave-of-nationwide-protests" }
+      ],
+      "followUps": []
+    },
+    {
+      "id": "schools",
+      "label": "Why are schools so bad?",
+      "question": "Why are French schools in this state?",
+      "answer": [
+        "There is no single villain; several slow problems meet. Not enough people want to be teachers, so thousands of posts go unfilled each year. The replacement system fails, leaving pupils months without a teacher. Posts are being cut for falling birth rates just as large teenage cohorts pass through lycées.",
+        "The buildings belong to the regions, many date from the 1960s and 1970s and were never designed for today’s heatwaves. And about 32% of the education ministry’s budget pays retired staff’s pensions rather than current schooling."
+      ],
+      "section": "so-why-are-the-schools-in-this-state",
+      "sources": [
+        { "title": "France student protests explained: rats, leaking roofs and missing teachers", "publication": "IBTimes", "url": "https://ibtimes.com.au/france-student-protests-school-conditions-teacher-shortages-1877002" },
+        { "title": "Mouvement lycéen : Sébastien Lecornu lance cinq chantiers", "publication": "Banque des Territoires", "url": "https://www.banquedesterritoires.fr/mouvement-lyceen-sebastien-lecornu-lance-cinq-chantiers-pour-repondre-aux-difficultes" },
+        { "title": "Le projet de budget 2026 prévoit 4 000 suppressions de postes d’enseignants", "publication": "Journal de l’Économie", "url": "https://www.journaldeleconomie.fr/projet-budget-2026-suppression-4000-postes/" }
+      ],
+      "followUps": [
+        {
+          "id": "teacher-shortage",
+          "label": "Why the teacher shortage?",
+          "question": "Why does France struggle to recruit teachers?",
+          "answer": [
+            "Mostly because the job has become less attractive. The OECD found French teachers’ real pay fell 7–8% between 2000 and 2010 while it rose in most comparable countries. The index that sets every civil servant’s base pay has been raised only four times in fifteen years, and since 2010 teachers have needed a five-year master’s degree for a salary that didn’t rise to match.",
+            "The recruitment exams have ended with seats empty for years: about 2,600 unfilled posts in 2025, worst in maths. The gaps are biggest in the Paris suburbs, exactly where the protests began."
+          ],
+          "section": "why-not-enough-people-want-to-be-teachers",
+          "sources": [
+            { "title": "Les concours enseignants ne font toujours pas le plein", "publication": "AFP via Weka", "url": "https://www.weka.fr/actualite/education/article/education-moins-de-candidats-aux-concours-d-enseignants-pour-le-second-degre-en-2025-195720/" },
+            { "title": "Les salaires des profs en baisse depuis 2000", "publication": "Acteurs Publics", "url": "https://acteurspublics.fr/articles/les-salaires-des-profs-en-baisse-depuis-2000/" },
+            { "title": "Grève du 29 septembre : pourquoi les fonctionnaires réclament une hausse des salaires", "publication": "LCP", "url": "https://lcp.fr/actualites/greve-du-29-septembre-pourquoi-les-fonctionnaires-reclament-une-hausse-des-salaires" }
+          ]
+        },
+        {
+          "id": "pensions",
+          "label": "Do pensions crowd out schools?",
+          "question": "Why do pensions take so much of the education budget?",
+          "answer": [
+            "According to a government report this month, 32% of the education ministry’s budget, about €28.5 billion, pays the pensions of retired teachers and staff, against an average of 13% across ministries. France spends about 14% of GDP on pensions, one of the highest levels in the world, and the bill grows as the population ages.",
+            "Every euro committed to pensions is a euro that can’t hire a teacher or fix a roof. And pensions are politically hard to touch: the 2023 reform raising the retirement age caused months of protest and has since been suspended."
+          ],
+          "section": "why-pensions-take-a-large-share-of-the-education-budget",
+          "sources": [
+            { "title": "France’s pension costs and public services", "publication": "Outlook / Reuters", "url": "https://www.outlookindia.com/international/france-pension-costs-political-crisis-public-services" },
+            { "title": "French government to lay out budget amid record-breaking public debt", "publication": "Euronews", "url": "https://www.euronews.com/2026/10/01/french-government-to-lay-out-budget-amid-record-breaking-public-debt" }
+          ]
+        },
+        {
+          "id": "whose-fault",
+          "label": "Is it Macron’s fault?",
+          "question": "Is the state of the schools one politician’s fault?",
+          "answer": [
+            "No. Pay erosion runs back to the early 2000s, the buildings to the 1960s, the transfer of buildings to regions to the 1980s, and the pension commitments to decisions made over half a century, under governments of left and right.",
+            "Macron’s governments added pressure, and critics blame his tax cuts for leaving less money for public services. But French schools are where many slow-moving problems meet: an expensive pension system, an ageing population, a job that pays less than it used to, old buildings in a warming climate, and a state that has run out of money to paper over the gaps."
+          ],
+          "section": "answer-so-is-it-one-politicians-fault",
+          "sources": [
+            { "title": "France student protests explained: rats, leaking roofs and missing teachers", "publication": "IBTimes", "url": "https://ibtimes.com.au/france-student-protests-school-conditions-teacher-shortages-1877002" },
+            { "title": "France’s pension costs and public services", "publication": "Outlook / Reuters", "url": "https://www.outlookindia.com/international/france-pension-costs-political-crisis-public-services" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fuel",
+      "label": "Why is diesel so expensive?",
+      "question": "Why did diesel prices in France jump by half?",
+      "answer": [
+        "Because of a war 5,000 km away. When the US and Israel went to war with Iran in February, traffic through the Strait of Hormuz, the channel for about a fifth of the world’s oil trade, nearly stopped. Brent crude went from about $72 to nearly $120 a barrel.",
+        "France was hit harder on diesel than petrol for a structural reason: it imports most of its diesel already refined, so it pays the global refining premium, not just the crude price. Diesel rose from €1.59 to a record €2.41 a litre, and rural households, farmers, fishermen and hauliers all run on it."
+      ],
+      "section": "a-war-5000-km-away-at-the-pump",
+      "sources": [
+        { "title": "2026 Iran war fuel crisis", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis" },
+        { "title": "French diesel prices top €2.40 a litre", "publication": "Euronews", "url": "https://www.euronews.com/2026/09/21/french-diesel-prices-top-240-a-litre-as-european-fuel-costs-hit-records" },
+        { "title": "A timeline of how the Iran war shook oil prices", "publication": "CNBC", "url": "https://www.cnbc.com/2026/04/21/oil-price-iran-war-middle-east.html" }
+      ],
+      "followUps": [
+        {
+          "id": "supply-shock",
+          "label": "Why not raise interest rates?",
+          "question": "Why can’t higher interest rates fix this inflation?",
+          "answer": [
+            "Because it is a supply shock. Inflation hit 3.1% in September with energy up 21.3%, but core inflation, which strips out energy and food, was only 1.5%. Prices are rising because something was taken away from the economy, not because people are spending too much.",
+            "That creates a nasty dilemma: households feel poorer, but raising interest rates would weaken the economy without bringing back a single barrel of oil. The government chose targeted fuel subsidies instead, which are economically defensible but invisible to a commuter who still sees €2.40 on the sign."
+          ],
+          "section": "a-war-5000-km-away-at-the-pump",
+          "sources": [
+            { "title": "France September inflation revised up to 3.1%", "publication": "Trading Economics", "url": "https://tradingeconomics.com/france/inflation-cpi/news/592227" },
+            { "title": "How France’s fuel crisis could shape the presidential campaign", "publication": "Euronews", "url": "https://www.euronews.com/2026/09/23/surging-prices-voters-anger-how-frances-fuel-crisis-could-shape-the-presidential-campaign" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money",
+      "label": "Why can’t France pay?",
+      "question": "Why can’t the government just spend its way out?",
+      "answer": [
+        "Because the money isn’t there. France hasn’t balanced a budget since 1973. Its deficit is expected to reach 5.4% of GDP this year against an EU ceiling of 3%, and debt is close to 120% of GDP. In 2018 Macron calmed the yellow vests with a €10 billion cheque; that option barely exists now.",
+        "Near-zero interest rates once hid the problem. Now the 10-year bond yield has touched about 5%, its highest since 2002, and debt interest will cost about €10 billion more next year. It is a trap: cuts provoke protest, unrest makes lenders nervous, and yields rise further."
+      ],
+      "section": "the-money-problem",
+      "sources": [
+        { "title": "French government to lay out budget amid record-breaking public debt", "publication": "Euronews", "url": "https://www.euronews.com/2026/10/01/french-government-to-lay-out-budget-amid-record-breaking-public-debt" },
+        { "title": "French bond yields and the spread over Germany", "publication": "Trading Economics", "url": "https://tradingeconomics.com/france/government-bond-yield/news/583545" },
+        { "title": "About those spiking French yields", "publication": "Fisher Investments", "url": "https://www.fisherinvestments.com/en-gb/insights/market-commentary/about-those-spiking-french-yields" }
+      ],
+      "followUps": [
+        {
+          "id": "pay-freeze",
+          "label": "Why freeze public pay?",
+          "question": "Why does the budget freeze teachers’ and nurses’ pay?",
+          "answer": [
+            "Because almost every other option is politically blocked. Taxes are already among the highest in the world, and the centre-right parties the prime minister relies on reject rises. Pension cuts caused months of protest in 2023. No major party wants to cut defence. Interest payments are set by markets.",
+            "What’s left is public pay, ministry budgets, health reimbursements and benefits. A pay freeze saves billions without a new law or announced job cuts, which is why governments of every stripe use it. The cost is borne quietly, by teachers and nurses getting poorer each year that prices rise."
+          ],
+          "section": "why-freeze-pay-were-there-no-other-options",
+          "sources": [
+            { "title": "Budget 2027 : Sébastien Lecornu propose un effort de 54 milliards", "publication": "Public Sénat", "url": "https://www.publicsenat.fr/actualites/politique/budget-2027-sebastien-lecornu-propose-un-effort-de-54-milliards-deuros" },
+            { "title": "Grève du 29 septembre : pourquoi les fonctionnaires réclament une hausse des salaires", "publication": "LCP", "url": "https://lcp.fr/actualites/greve-du-29-septembre-pourquoi-les-fonctionnaires-reclament-une-hausse-des-salaires" },
+            { "title": "France unveils cost-cutting 2027 budget", "publication": "Ground News", "url": "https://ground.news/article/7f381882-e942-471f-999e-a25646494954" }
+          ]
+        },
+        {
+          "id": "cut-or-wait",
+          "label": "Cut now or later?",
+          "question": "Should France cut now, or is this the wrong time?",
+          "answer": [
+            "One side says cut now or pay later: France has run deficits for 50 years, borrowing costs are the highest in two decades, and if it waits, markets will force far harsher cuts, as Greece, Italy and Portugal learned. A credible plan now protects the welfare state.",
+            "The other says it is the wrong time to squeeze: cutting pay and services during an energy shock hits those least able to absorb it and may slow growth, making the debt ratio worse. Money could come from taxing high earners or windfall energy profits, and investing in schools is itself growth policy."
+          ],
+          "section": "debate-on-the-budget",
+          "sources": [
+            { "title": "French government to lay out budget amid record-breaking public debt", "publication": "Euronews", "url": "https://www.euronews.com/2026/10/01/french-government-to-lay-out-budget-amid-record-breaking-public-debt" },
+            { "title": "About those spiking French yields", "publication": "Fisher Investments", "url": "https://www.fisherinvestments.com/en-gb/insights/market-commentary/about-those-spiking-french-yields" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "politics",
+      "label": "Why is politics stuck?",
+      "question": "Why can’t French politics produce an answer?",
+      "answer": [
+        "Because the system is jammed. France’s constitution assumes a strong president with a loyal majority. Macron’s 2024 snap election backfired and split the National Assembly into three blocs, none close to a majority: the left, Macron’s centre and Marine Le Pen’s far right.",
+        "Prime ministers have since fallen like dominoes. The current one, Sébastien Lecornu, survived only by promising not to force the budget through without a vote and by pausing the pension reform. With a presidential election in spring 2027 that Macron can’t contest, opposition parties have little reason to help pass painful cuts."
+      ],
+      "section": "why-france-cant-govern-itself-right-now",
+      "sources": [
+        { "title": "Lecornu governments", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Lecornu_governments" },
+        { "title": "French protests: Is it game over for Macron’s centrists before elections?", "publication": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/20/french-protests-is-it-game-over-for-macrons-centrists-before-elections" }
+      ],
+      "followUps": [
+        {
+          "id": "who-gains",
+          "label": "Who gains at the election?",
+          "question": "Who gains politically from the unrest?",
+          "answer": [
+            "Experts disagree. Marine Le Pen leads polls at around 32%, cleared to run despite a conviction for misusing EU funds, and frames the riots as social demands hijacked by the far left. Jean-Luc Mélenchon is second and the clear favourite of the young, with one poll giving him 49% of 18 to 24-year-olds.",
+            "One historian thinks only Le Pen benefits; another notes fear of disorder has also helped the centre and right before, as after 1968. The centre is squeezed between them, because it owns the government being blamed. Macron, at 15% approval, is a lame duck."
+          ],
+          "section": "the-election-that-hangs-over-everything",
+          "sources": [
+            { "title": "French protests: Is it game over for Macron’s centrists before elections?", "publication": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/20/french-protests-is-it-game-over-for-macrons-centrists-before-elections" },
+            { "title": "Le Pen cleared to run for president but with ankle tag", "publication": "AFP via Africanews", "url": "https://www.africanews.com/2026/07/07/french-far-right-leader-marine-le-pen-cleared-to-run-for-president-but-with-ankle-tag/" },
+            { "title": "Why have France’s school protests become a wider political crisis?", "publication": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/18/why-have-frances-school-protests-become-a-wider-political-crisis" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "violence",
+      "label": "Why did it turn violent?",
+      "question": "Why did mostly peaceful protests turn violent?",
+      "answer": [
+        "On 17 October about 550,000 people marched, mostly peacefully, by the government’s count. As evening came, groups of rioters broke away: cars burned and shops were looted in Paris, Lyon’s tourist office was set alight and Limoges’ town hall largely destroyed. That night’s footage is why it can look like a riot rather than the mass march it began as.",
+        "Earlier, masked groups who were not pupils appeared at several school blockades. The minister said violent groups had hijacked the movement; students said violence was a fringe inflamed by police tactics. In most large French protests both are true."
+      ],
+      "section": "why-it-turned-violent",
+      "sources": [
+        { "title": "Paris left reeling as student-led protests turn chaotic", "publication": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/18/paris-left-reeling-as-student-led-protests-turn-chaotic" },
+        { "title": "Macron urges calm as France counts the cost of worst unrest in years", "publication": "Reuters via Honolulu Star-Advertiser", "url": "https://www.staradvertiser.com/2026/10/18/breaking-news/macron-urges-calm-as-france-counts-the-cost-of-worst-unrest-in-years/" },
+        { "title": "Tear gas and unrest as hundreds of thousands protest for reforms in France", "publication": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/17/france-wave-of-nationwide-protests" }
+      ],
+      "followUps": [
+        {
+          "id": "policing",
+          "label": "Was policing too harsh?",
+          "question": "Were the police too heavy-handed?",
+          "answer": [
+            "More than 6,800 people, mostly minors, were taken into custody during the school protests, a scale one sociologist called unprecedented for a high-school movement. Teenagers lost an eye and hands to police munitions; Amnesty, Human Rights Watch and the UN raised concerns, and stun grenades at student protests were suspended.",
+            "The other side is real too: about 1,000 officers were injured on 17 October alone. The interior minister defended the response, then offered his resignation, which Macron refused. Each injury becomes a new grievance, giving the movement a second cause: how the state treats young protesters."
+          ],
+          "section": "the-policing-question",
+          "sources": [
+            { "title": "French high school student protests met with excessive force", "publication": "Human Rights Watch", "url": "https://www.hrw.org/news/2026/10/14/french-high-school-student-protests-met-with-excessive-force" },
+            { "title": "Emmanuel Macron rejects resignation of interior minister Laurent Nuñez", "publication": "Euronews", "url": "https://www.euronews.com/2026/10/19/emmanuel-macron-rejects-resignation-of-interior-minister-laurent-nunez" },
+            { "title": "Macron rejects France interior minister’s resignation", "publication": "AP", "url": "https://www.atlantanewsfirst.com/2026/10/19/macron-rejects-interior-ministers-resignation-rioting-looting-expose-policing-failures/" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "who-is-behind",
+      "label": "Who is behind it?",
+      "question": "Who is behind the protests?",
+      "answer": [
+        "That is now a fight of its own. The government says intelligence services saw the school movement as organised by Mélenchon’s La France Insoumise and its far-left allies, and the prime minister called the unrest a “warm-up” for the election. LFI says the movement is spontaneous and the real story is police brutality against suburban youth.",
+        "Public opinion splits the difference: one poll found 62% think the students’ movement is justified and 78% think LFI is exploiting it. Each side has an interest in its version, and much of the evidence is not public."
+      ],
+      "section": "who-is-behind-it-the-blame-war",
+      "sources": [
+        { "title": "France braces for new round of protests", "publication": "Washington Times", "url": "https://www.washingtontimes.com/news/2026/oct/20/france-braces-new-round-protests-officials-blame-far-left-agitators/" },
+        { "title": "2026 French student protests", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2026_French_student_protests" }
+      ],
+      "followUps": []
+    },
+    {
+      "id": "not-only-france",
+      "label": "Is it only France?",
+      "question": "Is this only happening in France?",
+      "answer": [
+        "No. Pupils in Belgium copied the blockades within days. Italian students rioted in Milan, Turin and Bologna over school conditions while hauliers and farmers protested diesel costs. Greek students camped outside parliament over housing costs.",
+        "The common thread is an energy shock landing on years of strained public services, and a generation that feels the deal it was promised is not available. France is the most dramatic case because it combines all of it, and as the eurozone’s second-largest economy, rising French borrowing costs could become Europe’s problem."
+      ],
+      "section": "not-only-france",
+      "sources": [
+        { "title": "What’s making Europe so angry?", "publication": "CNBC", "url": "https://www.cnbc.com/2026/10/20/france-protests-europe-cost-living-violence.html" },
+        { "title": "2026 French student protests", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2026_French_student_protests" }
+      ],
+      "followUps": []
+    },
+    {
+      "id": "been-here-before",
+      "label": "Has France been here before?",
+      "question": "Has France been here before?",
+      "answer": [
+        "Many times. In France the street is widely treated as a legitimate part of democracy, and governments have retreated often enough that people believe protest works: in 1968, 1995, 2006, and in 2018, when the yellow vests forced Macron to scrap a fuel tax and spend about €10 billion. Lycée pupils themselves won an emergency education budget in 1990.",
+        "So 2026 is less a rupture than the next chapter of an argument running through Macron’s presidency. What is new is the youth of the protesters, the lack of money to buy peace, and a president on his way out."
+      ],
+      "section": "further-context-a-country-that-argues-in-the-street",
+      "sources": [
+        { "title": "Yellow vests protests", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Yellow_vests_protests" },
+        { "title": "Bloquons tout", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Bloquons_tout" }
+      ],
+      "followUps": []
+    }
+  ]
+}
