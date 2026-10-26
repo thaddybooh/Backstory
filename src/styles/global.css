@@ -218,8 +218,7 @@ mark {
 .intro {
   display: flex;
   align-items: center;
-  min-height: min(calc(100svh - 4rem), 52rem);
-  padding: 3rem 0;
+  padding: 4rem 0;
   overflow: hidden;
 }
 .intro-inner {
@@ -1064,10 +1063,73 @@ mark {
   max-width: 40rem;
 }
 
-/* Question graph placement: under today's cover on the homepage, first thing on an issue page */
-.cover-graph {
-  margin-top: 2.75rem;
-}
+/* Question graph placement: the homepage's lead band, and first thing on an issue page */
 .issue-graph {
   padding-top: 1.75rem;
+}
+
+/* ---------- Today band: the homepage opens on today's question graph ---------- */
+.today {
+  /* The headline's halo matches the band, not the page */
+  --halo: var(--paper-raised);
+  background-color: var(--paper-raised);
+  background-image:
+    radial-gradient(ellipse 60% 70% at 68% 50%, color-mix(in srgb, var(--accent) 9%, transparent), transparent 70%),
+    radial-gradient(color-mix(in srgb, var(--ink) 10%, transparent) 1px, transparent 1.3px);
+  background-size: auto, 22px 22px;
+  border-bottom: 1px solid var(--rule);
+  padding: 2rem 0 1.5rem;
+}
+.today .cover-title {
+  -webkit-text-stroke-color: var(--halo);
+}
+.today-meta {
+  align-items: center;
+}
+.today-label {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--paper-raised);
+  background: var(--accent);
+  padding: 0.3rem 0.65rem;
+  border-radius: 3px;
+}
+.today-time {
+  font-weight: 500;
+  opacity: 0.85;
+}
+.today-num {
+  font-size: clamp(5.5rem, 22vw, 9rem);
+}
+.today-title {
+  font-size: clamp(2.1rem, 6vw, 3.2rem);
+}
+.today-summary {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin: 1rem 0 0;
+}
+.today-prompt {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 1.25rem 0 0;
+  padding-left: 0.85rem;
+  border-left: 3px solid var(--accent);
+}
+.today-prompt strong {
+  font-family: var(--font-display);
+  color: var(--accent);
+}
+.today-credit {
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+  margin: 1rem 0 0;
+}
+.today-credit .credit {
+  display: inline;
 }

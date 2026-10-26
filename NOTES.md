@@ -6,8 +6,8 @@ Read `BRIEF.md` for the original brief and `GUIDE.md` for the owner's step-by-st
 ## Status (26 Oct 2026)
 
 - **Question graph added** (branch `claude/clever-carson-2a0amt`): an interactive graph of the questions a reader
-  would ask about each issue, at the top of every issue page and under today's issue on the homepage. All five
-  issues (001–006) have graphs. See "Question graph" below.
+  would ask about each issue, at the top of every issue page and as the opening band of the homepage. All six
+  (001–006) have graphs. See "Question graph" below.
 
 ## Status (23 Oct 2026)
 
@@ -166,7 +166,7 @@ Build order:
   follow-ups per question. Clicking a question opens a panel (bottom sheet on phones) with a short answer, 2–4
   sources and a "Read this in today's issue" link to the section that covers it; the section briefly highlights
   when you land. Graph/List toggle (remembered per browser); without JavaScript the list shows.
-- **Where:** first thing on every issue page; under the "Today's issue" cover on the homepage.
+- **Where:** first thing on every issue page, and the homepage's opening "Today" band (headline, issue number and summary beside the graph on wide screens; headline, graph, then summary on phones). The old homepage cover only shows if the latest issue has no graph.
 - **Interaction:** force layout that settles then drifts slowly (static for readers who turn off motion); drag nodes; mouse
   drag to pan, Ctrl/⌘ + scroll or the +/− buttons to zoom; on touch, one finger scrolls the page and two fingers
   pan/pinch so readers never get trapped; Tab/Enter/Esc for keyboard. Follow-up labels are hidden on phones until

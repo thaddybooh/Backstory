@@ -519,3 +519,69 @@ html[data-qmap-view='list'] .qmap-stage {
 .qmap-follow .qa {
   padding-left: 1.6rem;
 }
+
+/* ---------- Hero: the homepage's lead band ---------- */
+/* Wide screens: the text in a column beside the graph. Phones: headline, then the
+   graph, then the summary and buttons. The graph floats on the band's own dotted
+   background instead of sitting in a card. */
+.qmap-hero {
+  max-width: 84rem;
+}
+.qmap-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  margin-top: 1.25rem;
+}
+.qmap-hero .qmap-stage {
+  height: min(68svh, 32rem);
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+/* Without a card border, fade the graph out at its edges rather than cutting nodes off */
+.qmap-hero .qmap-svg {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 2.5rem, #000 calc(100% - 2.5rem), transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 2.5rem, #000 calc(100% - 2.5rem), transparent);
+}
+@media (max-width: 63.99rem) {
+  .qmap-hero .qmap-main {
+    margin: 1.25rem 0;
+  }
+}
+@media (max-width: 47.99rem) {
+  .qmap-hero .qmap-stage {
+    margin: 0 calc(var(--gutter) * -1);
+    border-block: 1px solid var(--rule);
+  }
+}
+@media (min-width: 64rem) {
+  .qmap-hero {
+    display: grid;
+    grid-template-columns: minmax(19rem, 24rem) minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      'top main'
+      'after main';
+    column-gap: 2.5rem;
+  }
+  .qmap-hero-top {
+    grid-area: top;
+    align-self: end;
+  }
+  .qmap-hero-after {
+    grid-area: after;
+    align-self: start;
+  }
+  .qmap-hero .qmap-main {
+    grid-area: main;
+    align-self: center;
+  }
+  .qmap-hero .qmap-stage {
+    height: clamp(32rem, calc(100svh - 8rem), 48rem);
+  }
+  .qmap-hero .qmap-list {
+    margin: 1rem 0;
+  }
+}

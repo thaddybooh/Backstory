@@ -93,7 +93,7 @@ Order matters: the next World issue takes the first `world:` line, the next Sing
 
 ## 8. The question graph
 
-Every issue now opens with a "Start with a question" graph, and today's graph also appears on the homepage. Claude
+Every issue now opens with a "Start with a question" graph, and the homepage opens with today’s graph. Claude
 writes it as part of each new issue (a file ending in `.graph.json` next to the issue, in the same pull request),
 so there is nothing extra for you to do. When you review a pull request, open the preview, click a few questions
 and check that the answers read well and the "Read this in today's issue" links land in the right place.
