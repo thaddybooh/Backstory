@@ -931,3 +931,22 @@
 .next-issue {
   margin-top: 3rem;
 }
+
+/* Briefly highlight the part of the issue a link (e.g. from the question graph) jumped to */
+@keyframes target-flash {
+  from {
+    background-color: var(--accent-tint);
+    box-shadow: 0 0 0 0.6rem var(--accent-tint);
+  }
+}
+.prose :target {
+  animation: target-flash 2.6s ease-out;
+  border-radius: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .prose :target {
+    animation: none;
+    outline: 2px solid var(--accent);
+    outline-offset: 0.4rem;
+  }
+}

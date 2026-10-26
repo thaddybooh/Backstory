@@ -1063,3 +1063,11 @@ mark {
   margin: 0;
   max-width: 40rem;
 }
+
+/* Question graph placement: under today's cover on the homepage, first thing on an issue page */
+.cover-graph {
+  margin-top: 2.75rem;
+}
+.issue-graph {
+  padding-top: 1.75rem;
+}

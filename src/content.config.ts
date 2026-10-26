@@ -36,4 +36,35 @@ const issues = defineCollection({
   }),
 });
 
-export const collections = { issues };
+// One question graph per issue, saved next to it as NNN-slug.graph.json. The entry id
+// is the issue's id, so graphs and issues pair up by name. The rules a graph must
+// follow beyond this shape (real sources, real sections) live in src/lib/graph.mjs.
+const source = z.object({
+  title: z.string(),
+  publication: z.string(),
+  url: z.string().url(),
+});
+const followUp = z.object({
+  id: z.string(),
+  // Short text drawn on the node; the full question is shown in the panel.
+  label: z.string(),
+  question: z.string(),
+  // Paragraphs of plain text.
+  answer: z.array(z.string()).min(1),
+  sources: z.array(source),
+  // The id of the heading or titled block in the issue that covers this question.
+  section: z.string(),
+});
+const graphs = defineCollection({
+  loader: glob({
+    pattern: '**/*.graph.json',
+    base: './src/content/issues',
+    generateId: ({ entry }) => entry.replace(/\.graph\.json$/, ''),
+  }),
+  schema: z.object({
+    issue: z.string(),
+    questions: z.array(followUp.extend({ followUps: z.array(followUp).default([]) })),
+  }),
+});
+
+export const collections = { issues, graphs };

@@ -2,6 +2,8 @@
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import HeroImage from '../../components/HeroImage.astro';
+import QuestionGraph from '../../components/graph/QuestionGraph.astro';
+import { getGraph } from '../../lib/graph-data';
 import { issueComponents } from '../../components/issue';
 import {
   getIssues,
@@ -31,6 +33,7 @@ interface Props {
 const { issue, newer, older } = Astro.props;
 const { data } = issue;
 const { Content, headings } = await render(issue);
+const graph = await getGraph(issue);
 
 const toc = [
   { slug: 'what-is-happening', text: 'What is happening', n: '' },
@@ -50,6 +53,13 @@ const hasHero = Boolean(data.hero && (data.hero.image || (data.hero.commons && g
   track={data.track}
 >
   <article>
+    {
+      graph && (
+        <div class="issue-graph">
+          <QuestionGraph issue={issue} graph={graph} context="issue" latest={!newer} />
+        </div>
+      )
+    }
     <header class="cover issue-head">
       <div class:list={['wrap cover-grid', { 'has-image': hasHero }]}>
         <div>

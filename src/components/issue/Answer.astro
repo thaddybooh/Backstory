@@ -1,11 +1,12 @@
 ---
 // A highlighted plain-language conclusion.
+import { anchorId } from '../../lib/graph.mjs';
 interface Props {
   title: string;
 }
 const { title } = Astro.props;
 ---
-<div class="answer">
+<div class="answer" id={anchorId.answer(title)}>
   <h4>{title}</h4>
   <slot />
 </div>

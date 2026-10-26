@@ -50,10 +50,12 @@ const current = (href: string) => (path === href || (href !== '/' && path.starts
     <meta name="twitter:card" content="summary_large_image" />
 
     <script is:inline>
-      // Apply a saved light/dark choice before the page paints.
+      // Apply a saved light/dark choice, and the question graph's graph/list view, before the page paints.
+      document.documentElement.classList.add('js');
       try {
         const t = localStorage.getItem('theme');
         if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+        if (localStorage.getItem('qmap-view') === 'list') document.documentElement.dataset.qmapView = 'list';
       } catch (e) {}
     </script>
   </head>

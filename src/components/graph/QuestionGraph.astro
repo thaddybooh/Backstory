@@ -1,0 +1,167 @@
+---
+// The question graph for one issue: the story in the middle, the questions a curious
+// reader would ask around it, and follow-ups off some of them. The page first renders
+// the questions as a plain list (the list view, and what readers without JavaScript
+// see); graph.ts then draws the interactive graph from that list.
+import type { Issue } from '../../lib/issues';
+import { issueUrl, issueNumber, TRACK_LABEL } from '../../lib/issues';
+import type { IssueGraph } from '../../lib/graph-data';
+import { getCommonsImage } from '../../lib/images';
+import '../../styles/qmap.css';
+
+interface Props {
+  issue: Issue;
+  graph: IssueGraph;
+  /** Where the graph sits: the homepage links into the issue, the issue page links within itself. */
+  context: 'home' | 'issue';
+  /** Whether this is the newest issue ("today's issue") or an older one. */
+  latest?: boolean;
+}
+
+const { issue, graph, context, latest = false } = Astro.props;
+const { data } = issue;
+const base = context === 'home' ? issueUrl(issue) : '';
+const readLabel = latest ? 'Read this in today’s issue' : 'Read this in the issue';
+const image = data.hero?.commons ? getCommonsImage(data.hero.commons)?.src : data.hero?.image;
+const centreHref = context === 'home' ? issueUrl(issue) : '#what-is-happening';
+const titleId = `qmap-title-${issue.id}`;
+const total = graph.questions.length;
+---
+
+<section class="qmap" data-track={data.track} aria-labelledby={titleId}>
+  <div class="qmap-head">
+    <div>
+      <p class="qmap-kicker">
+        {context === 'issue' ? `Issue ${issueNumber(data.number)} · ${TRACK_LABEL[data.track]} · ` : ''}Explore the
+        story
+      </p>
+      <p class="qmap-title" id={titleId}>Start with a question</p>
+      <p class="qmap-intro">
+        The {total} questions a curious reader would ask, each with a short answer, its sources, and a link to the part
+        of the issue that covers it.
+      </p>
+    </div>
+    <div class="qmap-toggle" role="group" aria-label="Show questions as">
+      <button type="button" data-view="graph" aria-pressed="true">Graph</button>
+      <button type="button" data-view="list" aria-pressed="false">List</button>
+    </div>
+  </div>
+
+  <div
+    class="qmap-stage"
+    data-title={data.title}
+    data-image={image}
+    data-href={centreHref}
+    data-centre-label={context === 'home' ? `Open the issue: ${data.title}` : `Start reading: ${data.title}`}
+  >
+    <p class="qmap-loading" aria-hidden="true">Loading the graph…</p>
+    <div class="qmap-controls" role="group" aria-label="Graph view">
+      <button type="button" data-zoom="in" aria-label="Zoom in">+</button>
+      <button type="button" data-zoom="out" aria-label="Zoom out">−</button>
+      <button type="button" data-zoom="fit" aria-label="Fit the graph to the screen">
+        <svg viewBox="0 0 16 16" aria-hidden="true"
+          ><path d="M1 5V1h4M11 1h4v4M15 11v4h-4M5 15H1v-4" fill="none" stroke="currentColor" stroke-width="1.6"
+          ></path></svg
+        >
+      </button>
+    </div>
+    <p class="qmap-hint">
+      <span class="qmap-hint-mouse">Click a question · drag to move · Ctrl/⌘ + scroll to zoom</span>
+      <span class="qmap-hint-touch">Tap a question · pinch to zoom</span>
+    </p>
+    <aside class="qmap-panel" role="dialog" aria-modal="false" aria-labelledby={`${titleId}-panel`} hidden>
+      <div class="qmap-grab" aria-hidden="true"></div>
+      <div class="qmap-panel-top">
+        <p class="qmap-panel-kicker"></p>
+        <button type="button" class="qmap-close" aria-label="Close the answer">
+          <svg viewBox="0 0 16 16" aria-hidden="true"
+            ><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.8"></path></svg
+          >
+        </button>
+      </div>
+      <h3 class="qmap-panel-title" id={`${titleId}-panel`} tabindex="-1"></h3>
+      <div class="qmap-panel-body"></div>
+      <div class="qmap-panel-next"></div>
+    </aside>
+  </div>
+
+  <ol class="qmap-list">
+    {
+      graph.questions.map((q) => (
+        <li>
+          <details data-node={q.id} data-label={q.label}>
+            <summary>{q.question}</summary>
+            <div class="qa">
+              {q.answer.map((p) => (
+                <p>{p}</p>
+              ))}
+              <p class="qa-label">Sources</p>
+              <ul class="qa-sources">
+                {q.sources.map((s) => (
+                  <li>
+                    <a href={s.url} rel="noopener">
+                      {s.title}
+                    </a>
+                    <span>{s.publication}</span>
+                  </li>
+                ))}
+              </ul>
+              <a class="qa-read" href={`${base}#${q.section}`}>
+                {readLabel} <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </details>
+          {q.followUps.length > 0 && (
+            <ol class="qmap-follow">
+              {q.followUps.map((f) => (
+                <li>
+                  <details data-node={f.id} data-label={f.label} data-parent={q.id}>
+                    <summary>{f.question}</summary>
+                    <div class="qa">
+                      {f.answer.map((p) => (
+                        <p>{p}</p>
+                      ))}
+                      <p class="qa-label">Sources</p>
+                      <ul class="qa-sources">
+                        {f.sources.map((s) => (
+                          <li>
+                            <a href={s.url} rel="noopener">
+                              {s.title}
+                            </a>
+                            <span>{s.publication}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <a class="qa-read" href={`${base}#${f.section}`}>
+                        {readLabel} <span aria-hidden="true">→</span>
+                      </a>
+                    </div>
+                  </details>
+                </li>
+              ))}
+            </ol>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</section>
+
+<script>
+  // Load the graph code only when a graph is about to be seen, so it never holds up the page.
+  const sections = document.querySelectorAll<HTMLElement>('.qmap');
+  const start = (el: HTMLElement) => import('./graph').then((m) => m.mountGraph(el));
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (!e.isIntersecting) continue;
+          io.unobserve(e.target);
+          start(e.target as HTMLElement);
+        }
+      },
+      { rootMargin: '200px' },
+    );
+    sections.forEach((s) => io.observe(s));
+  } else sections.forEach(start);
+</script>
