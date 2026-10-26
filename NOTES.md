@@ -7,7 +7,7 @@ Read `BRIEF.md` for the original brief and `GUIDE.md` for the owner's step-by-st
 
 - **Question graph added** (branch `claude/clever-carson-2a0amt`): an interactive graph of the questions a reader
   would ask about each issue, at the top of every issue page and under today's issue on the homepage. All five
-  issues have graphs. See "Question graph" below.
+  issues (001–006) have graphs. See "Question graph" below.
 
 ## Status (23 Oct 2026)
 
@@ -175,7 +175,7 @@ Build order:
   URL must appear in the issue; every `section` must be a real heading or titled block; 6–10 questions, 0–3
   follow-ups, 2–4 sources, 60–220-word answers, labels of 34 characters or fewer. A new issue without a graph
   fails the checker; an issue without a graph still builds (the graph simply doesn't show).
-- **Backfill (26 Oct 2026):** graphs for 001–005 were written from each issue's own text. Sources were matched to
+- **Backfill (26 Oct 2026):** graphs for 001–006 were written from each issue's own text. Sources were matched to
   answers using the issue's attributions and the source titles; the source pages were not re-opened to confirm
   each claim.
 
