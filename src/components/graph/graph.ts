@@ -266,8 +266,17 @@ export function mountGraph(section: HTMLElement) {
   // Pause the simulation when the graph is off screen or the tab is hidden.
   let visible = true;
   const wake = () => {
-    if (visible && !document.hidden && !reducedMotion()) sim.restart();
-    else sim.stop();
+    if (visible && !document.hidden && !reducedMotion()) return void sim.restart();
+    sim.stop();
+    // Off screen before the layout settled: finish it now so the graph is ready, and
+    // framed, when the reader scrolls to it.
+    if (!fitted) {
+      while (sim.alpha() > 0.12) sim.tick();
+      render();
+      fitted = true;
+      fit(false);
+      if (!reducedMotion()) sim.force('drift', drift).alphaTarget(0.012);
+    }
   };
   new IntersectionObserver(([e]) => {
     visible = e.isIntersecting;
@@ -546,5 +555,14 @@ export function mountGraph(section: HTMLElement) {
   }
   new ResizeObserver(resize).observe(stage);
   resize();
+  // Until the layout settles and fit() frames it, centre the view on the story and size
+  // it for the graph's expected spread, so it blooms out from the middle rather than
+  // from the top-left corner.
+  if (!fitted) {
+    const { w, h } = viewBox();
+    const reach = spread().q + spread().f + 70;
+    const k = Math.max(0.35, Math.min(1.1, w / (reach * 2), h / (reach * 2 + 40)));
+    svgSel.call(zoomer.transform, zoomIdentity.translate(w / 2, h / 2).scale(k));
+  }
   stage.classList.add('is-ready');
 }
