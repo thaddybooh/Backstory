@@ -1,0 +1,251 @@
+{
+  "issue": "002-the-year-the-haze-came-back",
+  "questions": [
+    {
+      "id": "why-peat-burns",
+      "label": "Why does the ground burn?",
+      "question": "Why does the ground itself burn?",
+      "answer": [
+        "Because much of it isn’t soil but peat: a thick, spongy layer of partly rotted plants built up over thousands of years in waterlogged swamps. Wet peat doesn’t burn. The trouble starts when companies and farmers dig canals to drain it so they can plant oil palm or acacia for paper. Drained peat dries into a giant underground pile of fuel.",
+        "Once lit, it smoulders slowly underground, producing far more smoke per hectare than a forest fire and burning for weeks. It is self-reinforcing: about 40% of this year’s smoke sources were on land that had burned before, and burned peat is rarely restored."
+      ],
+      "section": "why-the-ground-itself-burns",
+      "sources": [
+        { "title": "2026 Southeast Asian haze", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2026_Southeast_Asian_haze" },
+        { "title": "Indonesia’s wildfire season surges as haze spreads into Malaysia", "publication": "Mongabay", "url": "https://news.mongabay.com/2026/08/indonesias-wildfire-season-surges-as-haze-spreads-into-malaysia/" },
+        { "title": "2026 Indonesia wildfires", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2026_Indonesia_wildfires" }
+      ],
+      "followUps": []
+    },
+    {
+      "id": "who-lights",
+      "label": "Who lights the fires?",
+      "question": "Who lights the fires, and why?",
+      "answer": [
+        "Fire is the cheapest way to clear land in the tropics: machines cost money, burning costs almost nothing. That is why fires return every dry season even though burning is illegal for companies.",
+        "Who actually lights them is contested. The Indonesian group Walhi found 74% of Kalimantan hotspots this year inside corporate concessions, and a Greenpeace and Pantau Gambut report traced thousands of smoke sources to concessions, naming groups linked to Malaysia and Singapore. Companies say fires often start on smallholder or disputed land and spread in, and a fire inside a concession doesn’t prove who lit it. Either way, it is not a natural disaster."
+      ],
+      "section": "who-lights-the-fires-and-why",
+      "sources": [
+        { "title": "Malaysian and Singaporean in top 20 entities linked to fires in Indonesia", "publication": "Greenpeace Malaysia and Pantau Gambut", "url": "https://www.greenpeace.org/malaysia/press/84676/malaysian-and-singaporean-in-top-20-entities-linked-to-fires-in-indonesia/" },
+        { "title": "Unchecked businesses blamed for raging wildfires in Indonesia", "publication": "The Jakarta Post via ANN", "url": "https://asianews.network/unchecked-businesses-blamed-for-raging-wildfires-in-indonesia/" }
+      ],
+      "followUps": [
+        {
+          "id": "blame",
+          "label": "Companies or the system?",
+          "question": "Should we blame the corporations or the system?",
+          "answer": [
+            "One side says blame the corporations: hotspot maps show most fires inside or next to concessions, and big firms have the money and satellites to stop burning on their land and in their supply chains. If they can’t control fires, they shouldn’t hold the land.",
+            "The other says blame the system: small farmers, land disputes, illegal clearing and weak local government all play a part, and focusing only on big firms ignores the rural poverty that makes fire the cheapest tool, and the foreign demand for palm oil and paper that drives the industry."
+          ],
+          "section": "debate-on-responsibility",
+          "sources": [
+            { "title": "Malaysian and Singaporean in top 20 entities linked to fires in Indonesia", "publication": "Greenpeace Malaysia and Pantau Gambut", "url": "https://www.greenpeace.org/malaysia/press/84676/malaysian-and-singaporean-in-top-20-entities-linked-to-fires-in-indonesia/" },
+            { "title": "Unchecked businesses blamed for raging wildfires in Indonesia", "publication": "The Jakarta Post via ANN", "url": "https://asianews.network/unchecked-businesses-blamed-for-raging-wildfires-in-indonesia/" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why-not-stopped",
+      "label": "Why can’t Indonesia stop it?",
+      "question": "Why can’t Indonesia’s government stop the fires?",
+      "answer": [
+        "Several problems are stacked on top of each other. The state wants more plantations, not fewer: palm oil supports millions of rural livelihoods, and a new rule requiring diesel to be half palm-based raises demand further. Land permits are tied up with local politics, and concession maps are secret and overlap, so everyone can deny responsibility.",
+        "Punishment rarely lands, even after court wins. And this year the government cut its own capacity: the disaster agency’s budget fell by about 90%, and the peatland restoration agency was dissolved in 2025. The crisis was then played down."
+      ],
+      "section": "why-cant-indonesia-stop-it",
+      "sources": [
+        { "title": "How Indonesian companies dodge fines for forest and peatland fires", "publication": "Mongabay", "url": "https://news.mongabay.com/2025/08/how-indonesian-companies-dodge-fines-for-forest-peatland-fires/" },
+        { "title": "Prabowo cuts BNPB 2026 budget to only Rp491 billion", "publication": "Katadata Databoks", "url": "https://databoks.katadata.co.id/en/economics-macro/statistics/68a72334613a1/prabowo-cuts-bnpb-2026-budget-to-only-rp491-billion" },
+        { "title": "Indonesia rolls out B50 biodiesel mandate, lifting palm oil demand", "publication": "The Jakarta Post", "url": "https://www.thejakartapost.com/business/2026/07/10/indonesia-rolls-out-b50-biodiesel-mandate-lifting-palm-oil-demand" }
+      ],
+      "followUps": [
+        {
+          "id": "fines",
+          "label": "Why aren’t firms punished?",
+          "question": "Why don’t court victories turn into penalties?",
+          "answer": [
+            "On paper Indonesian law is strict, and courts have ordered companies to pay more than Rp 21 trillion, about US$1.3 billion, over fires. Almost none has been collected. Companies declare bankruptcy, hide assets or keep replanting land they were ordered to restore.",
+            "Permits are suspended rather than revoked, arrests mostly catch small farmers rather than owners, and a 2020 jobs law weakened strict liability for environmental damage. The result is that the expected cost of burning stays low."
+          ],
+          "section": "why-punishment-rarely-lands",
+          "sources": [
+            { "title": "How Indonesian companies dodge fines for forest and peatland fires", "publication": "Mongabay", "url": "https://news.mongabay.com/2025/08/how-indonesian-companies-dodge-fines-for-forest-peatland-fires/" },
+            { "title": "Unchecked businesses blamed for raging wildfires in Indonesia", "publication": "The Jakarta Post via ANN", "url": "https://asianews.network/unchecked-businesses-blamed-for-raging-wildfires-in-indonesia/" }
+          ]
+        },
+        {
+          "id": "budget-cuts",
+          "label": "Did budget cuts make it worse?",
+          "question": "Did the government’s own budget cuts make it worse?",
+          "answer": [
+            "Yes. To fund flagship programmes such as free school meals, Prabowo’s government squeezed spending elsewhere. The national disaster agency’s budget fell from Rp 4.9 trillion in 2024 to a draft Rp 491 billion for 2026, a cut of about 90%. The peatland restoration agency created after the 2015 disaster was dissolved in 2025.",
+            "This month investigators also charged five people with embezzling disaster relief funds, including the brother of the agency’s head, who was then removed."
+          ],
+          "section": "why-the-government-cut-its-own-firefighting-capacity",
+          "sources": [
+            { "title": "Prabowo cuts BNPB 2026 budget to only Rp491 billion", "publication": "Katadata Databoks", "url": "https://databoks.katadata.co.id/en/economics-macro/statistics/68a72334613a1/prabowo-cuts-bnpb-2026-budget-to-only-rp491-billion" },
+            { "title": "‘Perpetuating stupidity’: Indonesia comes under fire for response to burning and haze", "publication": "Mongabay", "url": "https://news.mongabay.com/2026/10/perpetuating-stupidity-indonesia-comes-under-fire-for-response-to-burning-and-haze/" }
+          ]
+        },
+        {
+          "id": "more-plantations",
+          "label": "Why push more palm oil?",
+          "question": "Why does the state want more plantations, not fewer?",
+          "answer": [
+            "Palm oil is a major export and supports millions of smallholders and workers in poor rural provinces, so any government that squeezes it risks rural livelihoods. Prabowo is pushing demand up: in July 2026 he rolled out B50, requiring diesel to be half palm-based biodiesel, to cut costly diesel imports.",
+            "He also seized about a million hectares of illegal plantations in 2025, but handed most to a new state palm oil company rather than restoring forest. When the state wants farming to expand onto land that burns, fire prevention competes with its own priorities."
+          ],
+          "section": "why-the-state-wants-more-plantations-not-fewer",
+          "sources": [
+            { "title": "Indonesia rolls out B50 biodiesel mandate, lifting palm oil demand", "publication": "The Jakarta Post", "url": "https://www.thejakartapost.com/business/2026/07/10/indonesia-rolls-out-b50-biodiesel-mandate-lifting-palm-oil-demand" },
+            { "title": "Indonesia legalizes palm oil plantation seizures", "publication": "Asia Sentinel", "url": "https://www.asiasentinel.com/p/indonesia-legalize-palm-oil-plantation-seizures" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "root-cause",
+      "label": "Corruption or economics?",
+      "question": "Is the haze caused by corruption, incompetence or economics?",
+      "answer": [
+        "All three, in layers. Economics creates the incentive: burning is the cheapest way to clear land, and the state itself wants palm oil to grow. Politics and corruption protect those who profit: local permits have been used to fund election campaigns, and governors in one of the worst-hit provinces have been jailed over forestry permits.",
+        "Weak enforcement means even court wins don’t become penalties. And this year government choices made it worse, by cutting firefighting capacity and refusing to declare a national disaster, which Prabowo himself demanded as an opposition leader in 2015."
+      ],
+      "section": "answer-so-is-it-corruption-incompetence-or-economics",
+      "sources": [
+        { "title": "The President’s New Clothes", "publication": "The Gecko Project", "url": "https://thegeckoproject.org/articles/presidents-new-clothes/" },
+        { "title": "Indonesia politician gets 14 years in jail for illegal permits, forest corruption", "publication": "Mongabay", "url": "https://news.mongabay.com/2014/03/indonesia-politician-gets-14-years-in-jail-for-illegal-permits-forest-corruption/" },
+        { "title": "Prabowo criticised for refusing to declare forest fires a national disaster, despite 2015 call", "publication": "The Online Citizen", "url": "https://news.theonlinecitizen.com/2026/10/13/indonesia-s-prabowo-criticised-for-refusing-to-declare-forest-fires-a-national-disaster-despite-2015-call" }
+      ],
+      "followUps": [
+        {
+          "id": "prabowo",
+          "label": "What about Prabowo?",
+          "question": "What about Prabowo himself?",
+          "answer": [
+            "Prabowo comes from Indonesia’s business and political elite. A Tempo and Auriga Nusantara analysis counted about 362,000 hectares of business-use land linked to him. There is no evidence these holdings are among this year’s fires; critics’ point is broader, that the people making land policy often have a personal stake in land.",
+            "Since the haze began he has tightened the burning ban, ended the smallholder exemption, accepted foreign help and promised a new peatland agency. Whether that outlasts the rain, as past promises have not, is the real test."
+          ],
+          "section": "what-about-prabowo-himself",
+          "sources": [
+            { "title": "4 facts behind Prabowo Subianto’s HGU land ownership", "publication": "Tempo", "url": "https://en.tempo.co/amp/1177982/4-facts-behind-prabowo-subiantos-hgu-land-ownership" },
+            { "title": "The President’s New Clothes", "publication": "The Gecko Project", "url": "https://thegeckoproject.org/articles/presidents-new-clothes/" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why-this-year",
+      "label": "Why is this year so bad?",
+      "question": "Why is the haze so bad this year?",
+      "answer": [
+        "The weather lined up against Southeast Asia. Malaysia’s weather service puts the odds of a “super” El Niño by year-end at over 90%, possibly rivalling 1997–98, the worst haze year on record. El Niño pulls rain away from Indonesia, and a positive Indian Ocean Dipole cuts rainfall further. This October, south-easterly winds carried smoke from Kalimantan straight to Singapore.",
+        "But the weather explains the timing, not the fires. As Singapore’s Senior Minister K Shanmugam put it, the haze is “not simply an act of nature”."
+      ],
+      "section": "why-this-year-is-so-bad",
+      "sources": [
+        { "title": "MetMalaysia: over 90pc chance of super El Niño by year-end", "publication": "Malay Mail", "url": "https://www.malaymail.com/news/malaysia/2026/08/19/metmalaysia-over-90pc-chance-of-super-el-nino-by-year-end-could-rival-19971998-extreme/231848" },
+        { "title": "Fiery reminder from El Niño", "publication": "Heinrich Böll Foundation", "url": "https://th.boell.org/en/2026/09/25/fiery-reminder-el-nino-indonesia" },
+        { "title": "Transcript of media doorstop by Mr K Shanmugam on the haze situation", "publication": "Ministry of Home Affairs", "url": "https://www.mha.gov.sg/media-room/newsroom/transcript-of-media-doorstop-by-mr-k-shanmugam-senior-minister-coordinating-minister-for-national-security-and-minister-for-home-affairs-on-the-haze-situation/" }
+      ],
+      "followUps": []
+    },
+    {
+      "id": "happened-before",
+      "label": "Hasn’t this happened before?",
+      "question": "Hasn’t this happened before?",
+      "answer": [
+        "Many times, in the same pattern: drought, fires, smoke, angry neighbours, promises from Jakarta, a monsoon that brings relief, and a return a few years later. Singapore’s PSI hit a record 401 in 2013. In 2015 the World Bank put Indonesia’s losses at about US$16 billion.",
+        "The echoes in 2026 are striking. An Indonesian official’s remark that Indonesia “sends oxygen” to its neighbours repeats a 2015 line about clean air, and Singapore’s legal push revives one that stalled in 2016, when a court warrant against an Indonesian company director drew protests from Jakarta."
+      ],
+      "section": "a-crisis-that-keeps-coming-back",
+      "sources": [
+        { "title": "Indonesia does a U-turn on haze collaboration with Singapore", "publication": "Eco-Business", "url": "https://eco-business.com/news/indonesia-does-a-u-turn-on-haze-collaboration-with-singapore" },
+        { "title": "“We send oxygen when there’s no smoke”: Indonesian official brushes off haze criticism", "publication": "Malay Mail", "url": "https://www.malaymail.com/amp/news/malaysia/2026/10/12/we-send-oxygen-when-theres-no-smoke-indonesian-official-brushes-off-haze-criticism-in-malaysia-singapore/238761" },
+        { "title": "Indonesia names Sinar Mas, APRIL among eight firms behind Singapore haze", "publication": "Eco-Business", "url": "https://eco-business.com/news/indonesia-names-sinar-mas-april-among-eight-firms-behind-singapore-haze" }
+      ],
+      "followUps": []
+    },
+    {
+      "id": "coping",
+      "label": "How is Singapore coping?",
+      "question": "How does Singapore protect people at home?",
+      "answer": [
+        "By preparing in advance and scaling up as the PSI rises. A Haze Task Force of 28 agencies has pre-agreed actions for each band: daily forecasts and advice, N95 masks from 37 vending machines above PSI 200, air-conditioned shelters above 201, treatment for haze-related illness capped at S$10 (S$5 for seniors), and lessons indoors with air purifiers, with school closures considered above 300.",
+        "It keeps daily life running. It can’t make the air clean, because the source is in another country."
+      ],
+      "section": "singapores-playbook-at-home",
+      "sources": [
+        { "title": "Haze Situation Update (20 October 2026)", "publication": "National Environment Agency", "url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-20-october-2026" },
+        { "title": "Singapore rolls out haze subsidies as Malaysia extends school closures", "publication": "AFP via Kuwait Times", "url": "https://kuwaittimes.com/article/51446/world/singapore-rolls-out-haze-subsidies-as-malaysia-extends-school-closures/" },
+        { "title": "Education ministry ready to close schools if PSI rises above 300", "publication": "Malay Mail", "url": "https://www.malaymail.com/news/singapore/2026/10/10/singapore-haze-education-ministry-ready-to-close-schools-if-psi-rises-above-300/238599" }
+      ],
+      "followUps": []
+    },
+    {
+      "id": "giant-neighbour",
+      "label": "Why not confront Indonesia?",
+      "question": "Why doesn’t Singapore confront Indonesia directly?",
+      "answer": [
+        "Because it can’t order Indonesia to do anything, and a public row would make Jakarta less likely to cooperate. Indonesia has about 280 million people to Singapore’s 6 million, is one of its most important relationships, and is sensitive about being lectured by a small, rich neighbour.",
+        "So Singapore separates the companies from the country. It praises Prabowo’s crackdown, offers help and waits to be asked, and refuses to make the haze a bilateral dispute, while being blunt about the companies: the haze was “entirely preventable”, Shanmugam said. Many of those firms are headquartered, listed or financed in Singapore, which gives it leverage."
+      ],
+      "section": "dealing-with-a-giant-neighbour",
+      "sources": [
+        { "title": "Transcript of media doorstop by Mr K Shanmugam on the haze situation", "publication": "Ministry of Home Affairs", "url": "https://www.mha.gov.sg/media-room/newsroom/transcript-of-media-doorstop-by-mr-k-shanmugam-senior-minister-coordinating-minister-for-national-security-and-minister-for-home-affairs-on-the-haze-situation/" },
+        { "title": "Shanmugam rebukes Indonesian official’s “oxygen” remark", "publication": "AsiaOne", "url": "https://www.asiaone.com/singapore/shanmugam-rebukes-indonesian-official-oxygen-remark-haze" },
+        { "title": "Singapore ready to help Indonesia fight forest fires, says environment minister", "publication": "Malay Mail", "url": "https://www.malaymail.com/news/singapore/2026/10/10/singapore-ready-to-help-indonesia-fight-forest-fires-amid-worsening-haze-says-environment-minister/238564" }
+      ],
+      "followUps": [
+        {
+          "id": "too-soft",
+          "label": "Is Singapore too soft?",
+          "question": "Is Singapore’s quiet approach too soft?",
+          "answer": [
+            "Supporters say quiet pressure works best: Singapore can’t force a country 45 times its size to act, and public anger would push Jakarta into a defensive, nationalist position, as in 2016. Praising Prabowo while squeezing companies through finance lets Indonesia act and save face.",
+            "Critics say it is too soft and too late: twelve years of the haze law have produced no prosecutions, notices are easy to ignore, and Singapore should name companies, raise penalties sharply and stop treating plantation groups based in its own city as partners."
+          ],
+          "section": "debate-on-singapores-approach",
+          "sources": [
+            { "title": "Twelve years on, Singapore’s haze law has yet to show it can deliver accountability", "publication": "The Online Citizen", "url": "https://theonlinecitizen.com/2026/10/16/twelve-years-on-singapore-s-haze-law-has-yet-to-show-it-can-deliver-accountability" },
+            { "title": "Online petitions urge Singapore to strengthen haze laws", "publication": "The Online Citizen", "url": "https://theonlinecitizen.com/2026/10/19/online-petitions-urge-singapore-to-strengthen-haze-laws-and-hold-haze-causing-firms-accountable" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haze-law",
+      "label": "Can Singapore punish firms?",
+      "question": "Can Singapore punish the companies behind the fires?",
+      "answer": [
+        "In law, yes. The 2014 Transboundary Haze Pollution Act lets Singapore punish companies, including foreign ones, for conduct abroad that causes haze at home, with fines up to S$100,000 a day, capped at S$2 million. Courts can presume ownership from official maps and causation from satellite data.",
+        "In practice, no company has ever been prosecuted. After 2015, six firms got notices and only two responded. The evidence sits on Indonesian land Singapore can’t inspect, Indonesia won’t publish concession maps, and a warrant only bites if a director visits Singapore. This year ten companies have been served notices."
+      ],
+      "section": "can-a-small-country-sue-a-fire",
+      "sources": [
+        { "title": "Twelve years on, Singapore’s haze law has yet to show it can deliver accountability", "publication": "The Online Citizen", "url": "https://theonlinecitizen.com/2026/10/16/twelve-years-on-singapore-s-haze-law-has-yet-to-show-it-can-deliver-accountability" },
+        { "title": "Singapore to issue notices to seven Indonesian companies", "publication": "Bernama", "url": "https://bernama.com/en/world/news.php?id=2621483" },
+        { "title": "Singapore puts seven Indonesian firms on notice over toxic haze", "publication": "The Jakarta Post", "url": "https://thejakartapost.com/world/2026/10/18/singapore-puts-seven-indonesian-firms-on-notice-over-toxic-haze" }
+      ],
+      "followUps": [
+        {
+          "id": "money-pressure",
+          "label": "What’s new this year?",
+          "question": "What is Singapore doing differently in 2026?",
+          "answer": [
+            "Adding economic pressure to legal pressure. The Singapore Exchange has queried seven listed agribusinesses, including Wilmar, Golden Agri-Resources and First Resources, about links to the fires. Banks lending to these firms have asked questions, with the central bank supervising how they manage the risk. And the government will check whether linked firms get Singapore grants, looking past subsidiaries to parent groups and owners.",
+            "A S$2 million fine is small for a big plantation group; losing access to Singapore’s banks and investors is not. The test is whether the pressure lasts after the smoke clears."
+          ],
+          "section": "what-is-different-in-2026",
+          "sources": [
+            { "title": "Singapore expands crackdown on Indonesian companies linked to haze", "publication": "Associated Press", "url": "https://www.news4jax.com/business/2026/10/19/singapore-expands-crackdown-on-indonesian-companies-linked-to-haze/" },
+            { "title": "Transcript of media doorstop by Mr K Shanmugam on the haze situation", "publication": "Ministry of Home Affairs", "url": "https://www.mha.gov.sg/media-room/newsroom/transcript-of-media-doorstop-by-mr-k-shanmugam-senior-minister-coordinating-minister-for-national-security-and-minister-for-home-affairs-on-the-haze-situation/" }
+          ]
+        }
+      ]
+    }
+  ]
+}

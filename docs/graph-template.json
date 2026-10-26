@@ -1,0 +1,32 @@
+{
+  "issue": "NNN-short-title",
+  "questions": [
+    {
+      "id": "why-now",
+      "label": "Why now?",
+      "question": "Why is this happening now?",
+      "answer": [
+        "First paragraph: the direct answer, in the issue's own critical, root-causes style, using only facts the issue states.",
+        "Second paragraph (optional): the deeper cause, the trade-off or what it means. Keep the whole answer between 60 and 220 words."
+      ],
+      "section": "how-it-unfolded",
+      "sources": [
+        { "title": "Exact title from the issue's Sources list", "publication": "Outlet", "url": "https://copied-exactly-from-the-issue.example/1" },
+        { "title": "Another source the issue cites", "publication": "Outlet", "url": "https://copied-exactly-from-the-issue.example/2" }
+      ],
+      "followUps": [
+        {
+          "id": "follow-up-id",
+          "label": "Short node label?",
+          "question": "A follow-up a reader would ask next?",
+          "answer": ["Same rules as a question: grounded in the issue, 60 to 220 words."],
+          "section": "why-a-why-title-slug",
+          "sources": [
+            { "title": "Exact title from the issue's Sources list", "publication": "Outlet", "url": "https://copied-exactly-from-the-issue.example/3" },
+            { "title": "Another source the issue cites", "publication": "Outlet", "url": "https://copied-exactly-from-the-issue.example/4" }
+          ]
+        }
+      ]
+    }
+  ]
+}

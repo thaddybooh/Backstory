@@ -9,7 +9,8 @@ But Why? is Miles's daily explainer: one story in the news, because there is alw
 finish with a real understanding of a current issue, not just the headlines. It is written for any member of
 the public, anywhere, not specifically for Singaporeans.
 
-The output is **one new MDX file** in `src/content/issues/` plus an updated `topics/queue.md`, delivered as a
+The output is **one new MDX file** in `src/content/issues/`, its **question graph** (a `.graph.json` file next to
+it) and an updated `topics/queue.md`, delivered as a
 **pull request to `main`**. Miles reviews the Vercel preview and merges it to publish. **Never merge the pull
 request yourself and never push to `main`.**
 
@@ -126,12 +127,43 @@ Only freely licensed photos from **Wikimedia Commons**. Never use images from ne
 - Don't write credits: the build fetches author and licence from Commons. The checker rejects files that don't
   exist or aren't free.
 
-## 5. Update the topic queue
+## 5. Build the question graph
+
+Every issue has a question graph: the story in the middle, the questions a curious reader would ask about it
+around it, and follow-ups off some of them. It is shown at the top of the issue page and on the homepage. Write it
+**after** the issue is final, because it points into the issue's sections.
+
+Copy `docs/graph-template.json` to `src/content/issues/NNN-short-title.graph.json` (same name as the issue, with
+`.graph.json` instead of `.mdx`) and set `issue` to the file name without the extension.
+
+- **6 to 10 questions**, the ones a curious reader would most likely ask: why now, who gains and who loses, what
+  happened last time, what it means for ordinary people, what the root causes are, what governments can do, and
+  the questions specific to this story. Order them roughly as a reader would ask them.
+- **0 to 3 follow-ups** per question, only where they add something (a deeper "why", the other side of a debate).
+  Follow-ups have no follow-ups of their own.
+- `label`: the short text on the node, at most 34 characters (e.g. "Who gains, who loses?"). `question`: the full
+  question, ending with `?`. `id`: lowercase words joined by hyphens, unique in the file.
+- `answer`: one or two paragraphs, 60 to 220 words in all, in the issue's critical, root-causes style: answer
+  directly, then say why. **Use only what the issue itself says.** No new facts, figures or quotes. If the issue
+  can't answer a question well, drop the question rather than guess.
+- `sources`: 2 to 4 per answer, each with `title`, `publication` and `url`. **Copy URLs exactly from the
+  issue's Sources list or reading lists.** Never add a link the issue doesn't cite. Pick the sources the issue
+  attributes those facts to ("according to Reuters", "CBC calculated"), or whose titles cover them.
+- `section`: the id of the part of the issue that covers the question, so "Read this in today's issue" lands in
+  the right place. Use a heading's id (`## Why did Meta settle?` becomes `why-did-meta-settle`), or the more
+  precise id of a titled block: `why-` + the slugged `<Why title>`, `answer-` + the slugged `<Answer title>`, or
+  `debate-` + the slugged `<Debate topic>` (e.g. `<Why title="The cost was affordable">` becomes
+  `why-the-cost-was-affordable`).
+
+`npm run check:issue` checks all of this: a missing graph, a link the issue doesn't cite, or a section that
+doesn't exist is an ERROR, and the build refuses such a graph too.
+
+## 6. Update the topic queue
 
 In `topics/queue.md`, remove the topic's line from "Up next" (if it came from the queue) and add a line under
 "Published": `- NNN | track | Title | YYYY-MM-DD`.
 
-## 6. Check, build, fix
+## 7. Check, build, fix
 
 ```sh
 npm run check:issue    # rules from the brief; fix every ERROR, read every warning
@@ -145,19 +177,20 @@ so in the pull request. Then undo files the build changes:
 git checkout -- src/data/commons-images.json
 ```
 
-## 7. Commit and open the pull request
+## 8. Commit and open the pull request
 
-- Commit only the new issue and `topics/queue.md`. Message: `Issue NNN: <title>`.
+- Commit only the new issue, its `.graph.json` and `topics/queue.md`. Message: `Issue NNN: <title>`.
 - Push the branch and open a pull request to `main` with the GitHub tools available in the session.
   Title: `Issue NNN (World|Singapore): <title>`. Description:
   - one paragraph on what the issue covers and its angle;
-  - word count, read time, number of sources and photos (from `npm run check:issue`);
+  - word count, read time, number of sources and photos (from `npm run check:issue`), and the number of
+    questions and follow-ups in the graph;
   - any remaining checker warnings, and anything Miles should verify (conflicting figures, single-source
     claims, photos that couldn't be checked);
   - "Merge this pull request to publish. Vercel posts a preview link below."
 - If you couldn't produce an issue that passes the checks, open it as a **draft** pull request and explain
   exactly what is blocking.
 
-## 8. Reply
+## 9. Reply
 
 Tell Miles in a few lines: the topic, the pull request link, and any caveats. Don't repeat the content.

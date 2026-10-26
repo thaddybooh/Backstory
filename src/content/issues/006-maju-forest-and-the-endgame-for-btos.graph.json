@@ -1,0 +1,269 @@
+{
+  "issue": "006-maju-forest-and-the-endgame-for-btos",
+  "questions": [
+    {
+      "id": "whats-cleared",
+      "label": "What’s being cleared?",
+      "question": "What exactly would be cleared?",
+      "answer": [
+        "About 15 of the 23 hectares at Sunset Way in Clementi, where Maju Forest stands, with about 8 hectares kept as a wildlife refuge; and at least 10 hectares of forest at Gillman Barracks in the south. Both sites have been zoned for housing since 1980.",
+        "Maju Forest is not ancient rainforest but secondary forest about 50 years old, grown on abandoned plantation land. Young does not mean empty: the government’s own study recorded 286 plant species, 49 of conservation significance, and animals such as the straw-headed bulbul. Its most important finding was about connection: the old railway corridor lets wildlife move between Maju and the larger Clementi Forest."
+      ],
+      "section": "what-is-actually-being-cleared",
+      "sources": [
+        { "title": "EIA at Sunset Way: Executive Summary for EIA Report", "publication": "Aurecon for NParks on behalf of HDB", "url": "https://www.hdb.gov.sg/-/media/about-us/our-role/plan-and-design-towns/planning-with-the-environment-in-mind/Sunset-Way-EIA_Executive-Summary.pdf" },
+        { "title": "HDB to build new flats at Gillman Barracks and Sunset Way while retaining ecological, heritage features", "publication": "AsiaOne", "url": "https://www.asiaone.com/singapore/gilman-barracks-sunset-way-hdb-flats" },
+        { "title": "Maju Forest", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Maju_Forest" }
+      ],
+      "followUps": []
+    },
+    {
+      "id": "backlash",
+      "label": "Why such a backlash?",
+      "question": "Why did this plan provoke such a strong reaction?",
+      "answer": [
+        "More than 49,000 people signed petitions, about 18 questions were filed in Parliament and about 2,000 people rallied at Hong Lim Park, unusual for Singapore. Petitioners argue the government should build first on land already developed, such as golf courses and old industrial sites.",
+        "It is also the second round of the same argument. In 2021 a plan for Dover Forest, about 2 kilometres away, drew more than 50,000 signatures, and HDB kept half of it. That was the first sign the public no longer saw secondary forests as empty land. Maju Forest is the same argument, louder."
+      ],
+      "section": "how-the-fight-over-maju-forest-unfolded",
+      "sources": [
+        { "title": "Singapore’s plan to clear forest for housing faces a backlash", "publication": "Reuters (via Yahoo News)", "url": "https://www.yahoo.com/news/world/articles/singapores-plan-clear-forest-housing-073224311.html" },
+        { "title": "Report on the Maju rally at Hong Lim Park", "publication": "Mothership", "url": "https://mothership.sg/2026/08/hong-lim-park-maju-forest-rally/" },
+        { "title": "3,000 BTO flats to be launched across 3 projects in the eastern half of Dover Forest", "publication": "Mothership", "url": "https://mothership.sg/2022/10/ulu-pandan-bto-dover-3000/" }
+      ],
+      "followUps": [
+        {
+          "id": "did-it-change",
+          "label": "Did protest change anything?",
+          "question": "Did the protests change the government’s plans?",
+          "answer": [
+            "Partly. Within five weeks the government promised to keep more greenery at both sites, and said plainly that “this means we can build fewer homes”. But it did not move on the basic question: asked whether not building was an option, the minister said “we will proceed, but how we build is important.”",
+            "Critics say this shows the consultation was about how much to clear, not whether. Singapore has never rejected a forest development because of an environmental study, though public feedback has led to parts of sites being kept. The final plans had not been published by late October."
+          ],
+          "section": "what-changed-after-the-backlash",
+          "sources": [
+            { "title": "More forested areas of Gillman Barracks, Sunset Way to be retained under adjusted housing plans: Alvin Tan", "publication": "AsiaOne", "url": "https://www.asiaone.com/singapore/gillman-barracks-sunset-way-maju-forest-plans-adjusted" },
+            { "title": "Maju Forest, Gillman Barracks plans: More conservation will mean fewer homes built, says Alvin Tan", "publication": "AsiaOne", "url": "https://www.asiaone.com/singapore/maju-forest-sunset-way-gillman-barracks-housing-plans-conservation-parliament" },
+            { "title": "Singapore spending billions to adapt to climate change, but deforestation continues", "publication": "Mongabay", "url": "https://news.mongabay.com/2026/08/singapore-spending-billions-to-adapt-to-climate-change-but-deforestation-continues/" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why-not-brownfield",
+      "label": "Why not brownfield land?",
+      "question": "Why build on forest instead of land already developed?",
+      "answer": [
+        "The government says it already builds on brownfield land: the old Keppel Club golf course, the former Bukit Timah racecourse, the old city ports once the port moves to Tuas, and Paya Lebar Air Base when it moves. The problem, HDB says, is timing and location.",
+        "Many of those sites won’t be free until the 2030s, and large sites take years to clear and plan. Suitable land in and around Clementi “had become increasingly limited”, and Sunset Way is meant for young families who want to live near their parents in the west. Forest already zoned for housing is simply ready sooner."
+      ],
+      "section": "why-build-on-forest-at-all",
+      "sources": [
+        { "title": "Govt will proceed to redevelop Maju Forest & Gillman Barracks, but plans not finalised: Alvin Tan", "publication": "Mothership", "url": "https://mothership.sg/2026/08/gillman-barracks-maju-forest-alvin-tan/" },
+        { "title": "Housing plan at site within Maju Forest not final: HDB chief town planner", "publication": "Mothership", "url": "https://mothership.sg/2026/07/hdb-sunset-way-maju-forest-plans-not-final/" },
+        { "title": "Singapore’s plan to clear forest for housing faces a backlash", "publication": "Reuters (via Yahoo News)", "url": "https://www.yahoo.com/news/world/articles/singapores-plan-clear-forest-housing-073224311.html" }
+      ],
+      "followUps": [
+        {
+          "id": "golf",
+          "label": "Why not the golf courses?",
+          "question": "Why not build on golf courses instead?",
+          "answer": [
+            "Some are being taken back. When their leases end in 2030, the Warren and Orchid courses are marked for housing, and the government says more than 400 hectares of golf land will be returned by then. But two other courses whose leases end in 2030 will stay as public golf courses.",
+            "There are real constraints: some courses sit beside reservoirs in water catchments, others under flight paths with height limits. But how much land is kept for golf is also a policy choice. Critics argue a few hundred hectares of fairways used by relatively few, often wealthy, people are worth more as homes than young forest."
+          ],
+          "section": "what-about-the-golf-courses",
+          "sources": [
+            { "title": "Updates on the use of golf course sites with leases expiring in the next 10 years", "publication": "Ministry of Law", "url": "https://www.mlaw.gov.sg/updates-on-the-use-of-golf-course-sites-with-leases-expiring-in-the-next-10-years/" },
+            { "title": "Govt will proceed to redevelop Maju Forest & Gillman Barracks, but plans not finalised: Alvin Tan", "publication": "Mothership", "url": "https://mothership.sg/2026/08/gillman-barracks-maju-forest-alvin-tan/" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "who-needs-flats",
+      "label": "Who needs the flats?",
+      "question": "With so few babies, why does Singapore need more homes?",
+      "answer": [
+        "Because households are multiplying faster than people. Today’s flat buyers were born 25 to 35 years ago, when birth rates were higher, so falling births won’t cut demand for decades.",
+        "Meanwhile the average household has shrunk from 3.39 people in 2015 to 3.06, and one-person households rose from 11.9% to 16.7% of the total. More young couples want to live apart from their parents, more single people want their own flats, and older people live longer in their own homes. Fewer people per home means more homes for the same population."
+      ],
+      "section": "who-wants-the-new-flats",
+      "sources": [
+        { "title": "Resident households: latest data", "publication": "Department of Statistics", "url": "https://www.singstat.gov.sg/find-data/explore-data-themes/households/resident-households/latest-news-data" },
+        { "title": "Govt will proceed to redevelop Maju Forest & Gillman Barracks, but plans not finalised: Alvin Tan", "publication": "Mothership", "url": "https://mothership.sg/2026/08/gillman-barracks-maju-forest-alvin-tan/" }
+      ],
+      "followUps": [
+        {
+          "id": "real-shortage",
+          "label": "Is there really a shortage?",
+          "question": "Is there really a shortage of flats?",
+          "answer": [
+            "Not of flats in general. HDB is building fast, about 55,000 BTO flats from 2025 to 2027, and overall demand has cooled: in some far-north projects there was less than one first-time family applicant for every two flats.",
+            "The shortage is of flats where people most want to live: near the city, their parents, good schools and transport. In June, first-time families applied 3.7 times over for four-room flats in Bishan, and recent projects in Clementi and Bukit Merah were each oversubscribed about four times. That is exactly where the remaining forests are."
+          ],
+          "section": "demand-is-high-but-in-particular-places",
+          "sources": [
+            { "title": "More than 22,000 BTO applications received for June exercise; Lakeview and Berlayar most popular", "publication": "AsiaOne", "url": "https://www.asiaone.com/singapore/hdb-bto-june-exercise-application-rate" },
+            { "title": "HDB supplying 19,600 BTO flats in 2026 spread over three sales exercises", "publication": "EdgeProp", "url": "https://www.edgeprop.sg/property-news/hdb-supplying-19600-bto-flats-2026-spread-over-three-sales-exercises" },
+            { "title": "Tampines BTO projects most popular in February 2026 sales exercise", "publication": "EdgeProp", "url": "https://www.edgeprop.sg/property-news/tampines-bto-projects-most-popular-february-2026-sales-exercise" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bto-pricing",
+      "label": "How are BTO prices set?",
+      "question": "How does the BTO model keep flats affordable?",
+      "answer": [
+        "Prices start from market value, what a nearby resale flat sells for, then HDB takes off a large subsidy, bigger in popular central areas. First-time buyers can get grants of up to S$80,000, and most pay through their compulsory CPF savings.",
+        "Because flats sell below cost, HDB runs a deficit: about S$6.3 billion in the year to March 2025, covered by the government. Meanwhile HDB pays full market value for the land, which flows into Singapore’s protected past reserves rather than the annual budget. The government says first-time buyers’ flats typically cost four to five times their annual household income."
+      ],
+      "section": "how-the-bto-model-works-and-what-it-promises",
+      "sources": [
+        { "title": "HDB Annual Report 2024/2025", "publication": "Housing and Development Board", "url": "https://www.hdb.gov.sg/-/media/hdb-pulse/reports/annual-reports-and-financial-statements/HDB_AR2025.pdf" },
+        { "title": "Oral answer on the financial position of the Central Weave BTO project at Ang Mo Kio", "publication": "Ministry of National Development", "url": "https://www.mnd.gov.sg/newsroom/speeches/view/oral-answer-by-ministry-of-national-development-on-the-financial-position-of-the-central-weave-bto-project-at-ang-mo-kio" },
+        { "title": "Written answer on ten-year trend of median household income for families in 4-room flats", "publication": "Ministry of National Development", "url": "https://www.mnd.gov.sg/newsroom/speeches/view/written-answer-by-ministry-of-national-development-on-ten-year-trend-of-median-household-income-per-capita-for-families-staying-in-a-4-room-hdb-bto-or-resale-flats-and-plans-to-ensure-affordability-of-hdb-flats" }
+      ],
+      "followUps": [
+        {
+          "id": "land-price",
+          "label": "Why not price land lower?",
+          "question": "Why not count the land at a lower price and make flats cheaper?",
+          "answer": [
+            "Critics, including the Progress Singapore Party, argue BTO flats could be much cheaper if land were valued lower, since the money only moves from one government pocket to another.",
+            "The government says state land belongs to the reserves built up by past generations, so selling it cheaply would quietly spend those reserves. Land sold below value can’t be sold again. And pricing flats on cost would make them cheapest in the best locations, handing the luckiest buyers the biggest windfall."
+          ],
+          "section": "how-the-bto-model-works-and-what-it-promises",
+          "sources": [
+            { "title": "BTO pricing debate between Sim Ann & Leong Mun Wai to move beyond Facebook & into Parliament", "publication": "Mothership", "url": "https://mothership.sg/2022/12/sim-ann-leong-mun-wai-bto-round-2/" },
+            { "title": "Written answer on average selling price, land cost and subsidy per BTO flat, 2012 to 2022", "publication": "Ministry of National Development", "url": "https://www.mnd.gov.sg/newsroom/speeches/view/written-answer-by-ministry-of-national-development-on-average-selling-price-land-cost-and-subsidy-per-square-foot-per-hdb-bto-flat-from-2012-to-2022" }
+          ]
+        },
+        {
+          "id": "plus-prime",
+          "label": "Why Plus and Prime flats?",
+          "question": "What are Plus and Prime flats, and why do they exist?",
+          "answer": [
+            "A heavily subsidised flat can be sold at the market price after five years, which in central areas has produced well-publicised windfalls, including resale flats above a million dollars. Since October 2024, flats in more desirable locations are classed Plus or Prime.",
+            "They get bigger subsidies but must be lived in for ten years, can’t be rented out whole, and on sale the owner pays back part of the price. The idea: if central land is used for subsidised flats, buyers shouldn’t be able to cash in on it. Flats at Maju Forest and Gillman would probably fall into these classes."
+          ],
+          "section": "what-the-model-promises",
+          "sources": [
+            { "title": "New flat classification framework: Standard, Plus, Prime", "publication": "Ministry of National Development", "url": "https://mnd.gov.sg/our-work/housing-a-nation/bto-classification" },
+            { "title": "New classification for HDB BTO flats", "publication": "DBS", "url": "https://www.dbs.com.sg/personal/articles/nav/my-home/new-classification-for-hdb-bto-flats" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endgame",
+      "label": "What if the land runs out?",
+      "question": "What happens to the BTO model when the land runs out?",
+      "answer": [
+        "The model needs three things: land the state can build on, buyers who can afford it, and a government willing to pay the gap. All are under pressure. Clearing forest is getting politically costly; reclamation is slow, expensive and harms coasts; brownfield land comes only when leases expire.",
+        "As land gets scarcer, the gap between market value and the subsidised price grows, and so do HDB’s deficits, competing with spending on an ageing population. The alternative is letting prices rise faster. And today’s owners want resale prices to rise while tomorrow’s buyers want them not to."
+      ],
+      "section": "the-endgame-what-happens-when-the-land-runs-out",
+      "sources": [
+        { "title": "NDR 2026: S’pore to merge several outer islands to form new Western Island", "publication": "Yahoo News Singapore", "url": "https://sg.news.yahoo.com/ndr-2026-pore-merge-several-130612053.html" },
+        { "title": "A Singapore that is liveable, inclusive and endearing for generations: URA unveils Draft Master Plan 2025", "publication": "Urban Redevelopment Authority", "url": "https://www.ura.gov.sg/news/media/pr25-32/" },
+        { "title": "HDB Annual Report 2024/2025", "publication": "Housing and Development Board", "url": "https://www.hdb.gov.sg/-/media/hdb-pulse/reports/annual-reports-and-financial-statements/HDB_AR2025.pdf" }
+      ],
+      "followUps": [
+        {
+          "id": "lease-decay",
+          "label": "What when leases end?",
+          "question": "What happens when a flat’s 99-year lease runs out?",
+          "answer": [
+            "The flat and land go back to the state, and the owner receives nothing. That barely mattered while leases were young, but the oldest blocks are now reaching 60, and their prices are beginning to reflect the falling time left.",
+            "The government’s main answer is a scheme announced in 2018 letting residents of blocks around 70 years old vote for an early buyback and redevelopment. Its terms will be less generous than older schemes and still haven’t been published. It also matters for land: recycling the oldest estates is one of the few big sources of new housing land left."
+          ],
+          "section": "the-resale-market-and-the-99-year-lease",
+          "sources": [
+            { "title": "Written answer on update on the details of the VERS policy", "publication": "Ministry of National Development", "url": "https://www.mnd.gov.sg/newsroom/speeches/view/written-answer-by-ministry-of-national-development-on-update-on-the-details-of-the-voluntary-early-redevelopment-scheme-(vers)-policy" },
+            { "title": "HDB resale prices dip 0.2% q-o-q in 3Q2026, while transaction volumes surge", "publication": "Yahoo News Singapore", "url": "https://sg.news.yahoo.com/hdb-resale-prices-dip-0-030710983.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "root-cause",
+      "label": "Why keep choosing forests?",
+      "question": "Why does the government keep choosing forests?",
+      "answer": [
+        "Structural pressures, some of them choices. Almost all land is already assigned, so forest zoned for housing decades ago counts as land waiting to be used. Demand is concentrated in older towns where little else is left, and brownfield land comes too slowly to meet promises of shorter waits.",
+        "The planning system decides from the top: environmental studies are commissioned by the agencies that want to build and aren’t legally binding. A forest’s cooling, flood control and wildlife are rarely priced into decisions. And how much land is kept for golf or bungalows is a political choice that critics say shows whose interests the system protects."
+      ],
+      "section": "why-the-government-keeps-choosing-forests",
+      "sources": [
+        { "title": "A Singapore that is liveable, inclusive and endearing for generations: URA unveils Draft Master Plan 2025", "publication": "Urban Redevelopment Authority", "url": "https://www.ura.gov.sg/news/media/pr25-32/" },
+        { "title": "Singapore spending billions to adapt to climate change, but deforestation continues", "publication": "Mongabay", "url": "https://news.mongabay.com/2026/08/singapore-spending-billions-to-adapt-to-climate-change-but-deforestation-continues/" },
+        { "title": "For future land use, Singapore could deforest area larger than its nature reserves and parks combined: study", "publication": "Eco-Business", "url": "https://eco-business.com/news/for-future-land-use-singapore-could-deforest-area-larger-than-its-nature-reserves-and-parks-combined-study" }
+      ],
+      "followUps": [
+        {
+          "id": "greed-or-arithmetic",
+          "label": "Greed or arithmetic?",
+          "question": "Is it greed, bad planning or simple arithmetic?",
+          "answer": [
+            "Mostly arithmetic, shaped by choices. Singapore really is short of land, and its forests sit where housing demand is strongest. Nobody profits privately from clearing Maju Forest: the flats will be sold below cost.",
+            "But the arithmetic isn’t neutral. It treats forests zoned decades ago as spare land, counts homes more easily than cooling or wildlife, and leaves some golf courses and low-density estates largely untouched. On a fixed island something always gives: forest, sea, low-density uses, density in older estates, or the price and speed of new flats."
+          ],
+          "section": "answer-so-is-it-greed-bad-planning-or-simple-arithmetic",
+          "sources": [
+            { "title": "HDB Annual Report 2024/2025", "publication": "Housing and Development Board", "url": "https://www.hdb.gov.sg/-/media/hdb-pulse/reports/annual-reports-and-financial-statements/HDB_AR2025.pdf" },
+            { "title": "For future land use, Singapore could deforest area larger than its nature reserves and parks combined: study", "publication": "Eco-Business", "url": "https://eco-business.com/news/for-future-land-use-singapore-could-deforest-area-larger-than-its-nature-reserves-and-parks-combined-study" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "green-enough",
+      "label": "Isn’t Singapore green enough?",
+      "question": "Isn’t Singapore already one of the greenest cities?",
+      "answer": [
+        "The government says nearly half the island is covered in greenery, and it is planting a million extra trees and planning about 1,000 hectares of new parks. Ecologists say this mixes up different kinds of green: roadside trees and lawns are not forest.",
+        "Mature forests cool the area around them and soak up rain in ways new parks take decades to match, and an urban climate scientist warned that clearing Maju would raise local heat and flood risk. One study estimated that up to 7,331 hectares of secondary forest, more than half what remains, could be lost to planned development."
+      ],
+      "section": "not-all-green-is-equal",
+      "sources": [
+        { "title": "Singapore’s plan to clear forest for housing faces a backlash", "publication": "Reuters (via Yahoo News)", "url": "https://www.yahoo.com/news/world/articles/singapores-plan-clear-forest-housing-073224311.html" },
+        { "title": "Singapore spending billions to adapt to climate change, but deforestation continues", "publication": "Mongabay", "url": "https://news.mongabay.com/2026/08/singapore-spending-billions-to-adapt-to-climate-change-but-deforestation-continues/" },
+        { "title": "For future land use, Singapore could deforest area larger than its nature reserves and parks combined: study", "publication": "Eco-Business", "url": "https://eco-business.com/news/for-future-land-use-singapore-could-deforest-area-larger-than-its-nature-reserves-and-parks-combined-study" }
+      ],
+      "followUps": []
+    },
+    {
+      "id": "clear-or-keep",
+      "label": "Clear it or keep it?",
+      "question": "Should Maju Forest be cleared at all?",
+      "answer": [
+        "One side says build the homes: land is scarce, young families are waiting for flats in established towns, the forest is 50 years old on land zoned for housing since 1980, and the plan keeps the most valuable parts and the wildlife corridor. Every hectare not built here must be found further from where people want to live.",
+        "The other says forests are not spare land. Once cleared they take generations to recover, and they cool, drain and connect a city in ways parks can’t. Golf courses, low-density estates and redevelopable sites could supply the same homes with less loss, and future residents will pay through hotter streets."
+      ],
+      "section": "debate-on-whether-to-clear-maju-forest",
+      "sources": [
+        { "title": "Singapore’s plan to clear forest for housing faces a backlash", "publication": "Reuters (via Yahoo News)", "url": "https://www.yahoo.com/news/world/articles/singapores-plan-clear-forest-housing-073224311.html" },
+        { "title": "Maju Forest, Gillman Barracks plans: More conservation will mean fewer homes built, says Alvin Tan", "publication": "AsiaOne", "url": "https://www.asiaone.com/singapore/maju-forest-sunset-way-gillman-barracks-housing-plans-conservation-parliament" }
+      ],
+      "followUps": []
+    },
+    {
+      "id": "options",
+      "label": "What can the government do?",
+      "question": "What are the government’s options, and why is each hard?",
+      "answer": [
+        "It has promised three things that pull against each other: plenty of affordable homes where people want to live, a green “City in Nature”, and land for a growing economy. Every option has a cost. Reclaiming golf and low-density land early means breaking contracts and taking on wealthy interests. Building denser is slow and residents dislike crowding. New land from the sea takes decades. Protecting forests by law reduces flexibility. Steering who gets flats leaves some waiting longer, and paying more means bigger deficits.",
+        "Campaigners also want the government to publish its housing need projections, which would make trade-offs easier to judge, and to contest."
+      ],
+      "section": "what-this-means-for-singapores-government",
+      "sources": [
+        { "title": "Govt will proceed to redevelop Maju Forest & Gillman Barracks, but plans not finalised: Alvin Tan", "publication": "Mothership", "url": "https://mothership.sg/2026/08/gillman-barracks-maju-forest-alvin-tan/" },
+        { "title": "Report on the Maju rally at Hong Lim Park", "publication": "Mothership", "url": "https://mothership.sg/2026/08/hong-lim-park-maju-forest-rally/" },
+        { "title": "National Day Rally 2026 in summary: Supporting families, preserving culture & growing bigger", "publication": "Mothership", "url": "https://mothership.sg/2026/08/ndr-2026-summary/" }
+      ],
+      "followUps": []
+    }
+  ]
+}

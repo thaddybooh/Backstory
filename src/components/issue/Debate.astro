@@ -1,11 +1,12 @@
 ---
 // "Where reasonable people disagree": one topic, two opposing <Side>s.
+import { anchorId } from '../../lib/graph.mjs';
 interface Props {
   topic: string;
 }
 const { topic } = Astro.props;
 ---
-<div class="debate wide">
+<div class="debate wide" id={anchorId.debate(topic)}>
   <h3 class="debate-topic">{topic}</h3>
   <div class="debate-sides"><slot /></div>
 </div>

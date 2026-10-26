@@ -1,0 +1,267 @@
+{
+  "issue": "004-who-pays-for-a-super-aged-singapore",
+  "questions": [
+    {
+      "id": "why-so-fast",
+      "label": "Why so fast?",
+      "question": "Why has Singapore aged so quickly?",
+      "answer": [
+        "Because the population is ageing from both ends at once. People live longer, and far fewer children are born: the resident fertility rate fell to 0.87 in 2025, among the lowest in the world. The share of citizens aged 65 and over went from 13.7% to 21.4% in a decade.",
+        "Speed is what makes Singapore unusual. France took more than a century to go from 7% to 14% older people; Singapore took 19 years, then about nine more to reach 21%. That matters because institutions take decades to adapt: savings need a working lifetime to build, and care homes and nurses take years to train and build."
+      ],
+      "section": "what-super-aged-actually-means",
+      "sources": [
+        { "title": "Population in Brief 2026", "publication": "National Population and Talent Division", "url": "https://isomer-user-content.by.gov.sg/520/799cc617-8bdf-420b-a47e-86ececabe12e/PIB%202026%20Report.pdf" },
+        { "title": "Singapore becomes ‘super-aged’ society; population grows to 6.21 million even as births, marriages decline", "publication": "AsiaOne", "url": "https://www.asiaone.com/singapore/singapore-super-aged-society-population-621-million-births-marriages-decline" },
+        { "title": "Demographics of Singapore", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Demographics_of_Singapore" }
+      ],
+      "followUps": [
+        {
+          "id": "baby-bonuses",
+          "label": "Why haven’t incentives worked?",
+          "question": "Why haven’t baby bonuses reversed the fall in births?",
+          "answer": [
+            "Fertility has been below replacement since the late 1970s, after a government campaign told families to “Stop at Two”. Decades of baby bonuses, housing priority and tax breaks since have not reversed it, because they don’t touch the underlying costs.",
+            "Those costs are shared across East Asia: expensive housing and education, long working hours, intense competition in schooling, the high price in money and careers of children for women, and later and fewer marriages. Fewer children today means fewer workers, and fewer adult children to care for parents, tomorrow."
+          ],
+          "section": "why-fertility-has-collapsed-and-incentives-havent-reversed-it",
+          "sources": [
+            { "title": "Population in Brief 2026", "publication": "National Population and Talent Division", "url": "https://isomer-user-content.by.gov.sg/520/799cc617-8bdf-420b-a47e-86ececabe12e/PIB%202026%20Report.pdf" },
+            { "title": "Demographics of Singapore", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Demographics_of_Singapore" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "support-ratio",
+      "label": "What does 2.8 to 1 mean?",
+      "question": "What does it mean that there are 2.8 workers per older citizen?",
+      "answer": [
+        "It is the old-age support ratio: 2.8 citizens aged 20 to 64 for every citizen aged 65 and over, down from 4.7 in 2016 and projected to fall to 2.2 by 2035. Counting permanent residents too gives 3.2, which is why reports quote different numbers.",
+        "It doesn’t mean each worker literally supports a pensioner; in Singapore older people mostly pay for themselves from savings. But it captures three real pressures: fewer taxpayers for each person using public health care, fewer adult children for each frail parent, and fewer workers in the economy, which slows growth unless productivity or immigration make up the gap."
+      ],
+      "section": "why-the-support-ratio-matters",
+      "sources": [
+        { "title": "Population in Brief 2026", "publication": "National Population and Talent Division", "url": "https://isomer-user-content.by.gov.sg/520/799cc617-8bdf-420b-a47e-86ececabe12e/PIB%202026%20Report.pdf" },
+        { "title": "Population in Brief 2026: key trends", "publication": "National Population and Talent Division", "url": "https://www.population.gov.sg/media-centre/population-in-brief-2026/" }
+      ],
+      "followUps": []
+    },
+    {
+      "id": "the-model",
+      "label": "How does the model work?",
+      "question": "How does Singapore pay for old age and health care?",
+      "answer": [
+        "Mostly from people’s own compulsory savings, not a state pension. Workers put up to 20% of their wages into personal CPF accounts, with employers adding up to 17%. From 65, retirement savings pay a monthly income for life through an annuity, CPF LIFE.",
+        "Health care follows the same logic, called “S+3Ms”: government subsidies, MediSave (a medical savings account), MediShield Life (compulsory insurance for large bills) and MediFund (a last-resort safety net). Patients always pay something, which keeps overuse down. The result: health spending below 5% of GDP, about half the rich-country norm. The model also quietly leans on families and cheap migrant labour."
+      ],
+      "section": "the-singapore-model-pay-your-own-way",
+      "sources": [
+        { "title": "Speech by Mr Ong Ye Kung at the Ministry of Health Committee of Supply Debate 2026", "publication": "Ministry of Health", "url": "https://www.moh.gov.sg/newsroom/speech-by-mr-ong-ye-kung--minister-for-health-and-coordinating-minister-for-social-policies--at-the-ministry-of-health-committee-of-supply-debate-2026--on-5-march-2026/" },
+        { "title": "MediShield Life benefits", "publication": "Ministry of Health", "url": "https://www.moh.gov.sg/managing-expenses/schemes-and-subsidies/medishield-life/medishield-life-benefits/" }
+      ],
+      "followUps": []
+    },
+    {
+      "id": "root-problem",
+      "label": "What’s the root problem?",
+      "question": "Why does ageing strain Singapore’s model in particular?",
+      "answer": [
+        "Several causes stack up. The first generations of a fast-ageing society didn’t get a full working life at decent wages to save. Individual accounts make people save but are weak at sharing risk: some people need ten years of care, and their own account can’t cover it. Care was kept cheap by relying on unpaid family members, mostly women, and low-paid domestic workers, costs that never appear in the health budget.",
+        "And the state’s own rules limit how fast it can spend: budgets must balance over each term, and past reserves are protected. More spending means higher taxes, cuts elsewhere or spending more of the reserves’ returns."
+      ],
+      "section": "why-ageing-strains-singapores-model-so-much",
+      "sources": [
+        { "title": "Budget 2026 statement (as delivered)", "publication": "Ministry of Finance", "url": "https://www.sgpc.gov.sg/api/file/getfile/2a%20Delivered%20Speech.pdf?path=%2Fsgpcmedia%2Fmedia_releases%2Fmof%2Fpress_release%2FP-20260212-5%2Fattachment%2F2a+Delivered+Speech.pdf" },
+        { "title": "Societal aging and its impact on Singapore", "publication": "NBER Working Paper", "url": "https://www.nber.org/system/files/working_papers/w31958/w31958.pdf" },
+        { "title": "Speech by Mr Ong Ye Kung at the Ministry of Health Committee of Supply Debate 2026", "publication": "Ministry of Health", "url": "https://www.moh.gov.sg/newsroom/speech-by-mr-ong-ye-kung--minister-for-health-and-coordinating-minister-for-social-policies--at-the-ministry-of-health-committee-of-supply-debate-2026--on-5-march-2026/" }
+      ],
+      "followUps": [
+        {
+          "id": "risk-pooling",
+          "label": "Why can’t savings cover it?",
+          "question": "Why can’t personal savings cover the costliest risks?",
+          "answer": [
+            "Because the costliest risks of old age are uneven. Some people live to 100, some need years of care, some get cancer at 60. Saving for the worst case is impossible for most people, while insurance spreads the cost across everyone, so the unlucky few are covered by the many.",
+            "Singapore has been adding pooling step by step: MediShield Life in 2015, CareShield Life in 2020, and CPF LIFE’s annuity. Each is a quiet admission that pure self-reliance doesn’t cover the most expensive risks."
+          ],
+          "section": "why-self-reliance-pools-less-risk",
+          "sources": [
+            { "title": "MediShield Life benefits", "publication": "Ministry of Health", "url": "https://www.moh.gov.sg/managing-expenses/schemes-and-subsidies/medishield-life/medishield-life-benefits/" },
+            { "title": "Government accepts CareShield Life Council’s recommendations to enhance CareShield Life, provides additional $570 million to subsidise premiums", "publication": "Ministry of Health", "url": "https://www.moh.gov.sg/newsroom/government-accepts-careshield-life-council-s-recommendations-to-enhance-careshield-life--provides-additional--570-million-to-subsidise-premiums/" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "who-pays",
+      "label": "Who pays?",
+      "question": "Who ends up paying for an older Singapore?",
+      "answer": [
+        "Four groups, for now. Older people themselves, through savings, premiums, co-payments and working longer. Families, through unpaid care and money. Migrant domestic workers, through low wages for care work. And increasingly taxpayers, through the GST rise and the returns on national reserves.",
+        "As the Health Minister put it, health care “is never really free”: people “will just pay in some other ways”. The real policy question for the next decade is how much of the cost shifts from the first three groups to taxpayers, and how fast."
+      ],
+      "section": "answer-so-can-a-low-cost-self-reliant-model-survive-ageing",
+      "sources": [
+        { "title": "Speech by Mr Ong Ye Kung at the Ministry of Health Committee of Supply Debate 2026", "publication": "Ministry of Health", "url": "https://www.moh.gov.sg/newsroom/speech-by-mr-ong-ye-kung--minister-for-health-and-coordinating-minister-for-social-policies--at-the-ministry-of-health-committee-of-supply-debate-2026--on-5-march-2026/" },
+        { "title": "Budget 2026 statement (as delivered)", "publication": "Ministry of Finance", "url": "https://www.sgpc.gov.sg/api/file/getfile/2a%20Delivered%20Speech.pdf?path=%2Fsgpcmedia%2Fmedia_releases%2Fmof%2Fpress_release%2FP-20260212-5%2Fattachment%2F2a+Delivered+Speech.pdf" },
+        { "title": "Singapore’s care paradox: first-world economy, third-world care labor", "publication": "Global-is-Asian, Lee Kuan Yew School of Public Policy", "url": "https://lkyspp.nus.edu.sg/gia/article/singapore-s-care-paradox--first-world-economy--third-world-care-labor" }
+      ],
+      "followUps": [
+        {
+          "id": "patient-costs",
+          "label": "What do patients pay?",
+          "question": "What does ageing cost patients directly?",
+          "answer": [
+            "More than in most rich countries, by design. MediShield Life premiums rise steeply with age, from S$200 a year for the young to S$2,826 for people over 90, before subsidies. Most people pay them from MediSave, so the cost shows up as a draining account until it runs low.",
+            "Only about 48% of CPF members turning 65 in 2022 had saved the Basic Healthcare Sum the government considers enough. Subsidies are means-tested, so poorer families get more help, but someone with a long illness, or the family supporting them, carries more of the bill directly."
+          ],
+          "section": "who-feels-the-cost",
+          "sources": [
+            { "title": "MediShield Life premium and subsidy tables", "publication": "Ministry of Health", "url": "https://www.moh.gov.sg/managing-expenses/schemes-and-subsidies/medishield-life/medishield-life-premium-and-subsidy-tables/" },
+            { "title": "Written answer to PQ on attainment rates on BRS, FRS, ERS and BHS", "publication": "Ministry of Manpower", "url": "https://www.mom.gov.sg/newsroom/parliament-questions-and-replies/2024/0110-written-answer-to-pq-on-attainment-rates-on-brs-frs-ers-bhs" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "health-costs",
+      "label": "Why are health costs rising?",
+      "question": "Why is government health spending rising so fast?",
+      "answer": [
+        "Older people use far more care: more chronic illness, more hospital stays, longer stays. So spending rises even if prices don’t. The government’s health budget is set to grow from about S$22.5 billion in 2026 to about S$30 billion in 2030, and the ministry is adding 2,800 hospital beds, a 25% increase.",
+        "Extra years of life are not all healthy years either. Life expectancy was 85.4 in 2023, but healthy life expectancy only 74.1, and that gap, the most expensive years, has widened from 10.6 to 11.2 years in a decade."
+      ],
+      "section": "where-ageing-bites-hospitals-and-health-costs",
+      "sources": [
+        { "title": "Speech by Mr Ong Ye Kung at the Ministry of Health Committee of Supply Debate 2026", "publication": "Ministry of Health", "url": "https://www.moh.gov.sg/newsroom/speech-by-mr-ong-ye-kung--minister-for-health-and-coordinating-minister-for-social-policies--at-the-ministry-of-health-committee-of-supply-debate-2026--on-5-march-2026/" },
+        { "title": "Gap between average and healthy life expectancy of Singapore residents and trends over past 10 years", "publication": "Ministry of Health", "url": "https://www.moh.gov.sg/newsroom/gap-between-average-and-healthy-life-expectancy-of-singapore-residents-and-trends-over-past-10-years/" },
+        { "title": "Projected annual healthcare spending for next decade", "publication": "Ministry of Health", "url": "https://www.moh.gov.sg/newsroom/projected-annual-healthcare-spending-for-next-decade/" }
+      ],
+      "followUps": []
+    },
+    {
+      "id": "who-cares",
+      "label": "Who does the caring?",
+      "question": "Who actually looks after Singapore’s frail elderly?",
+      "answer": [
+        "Mostly families and migrant domestic workers. Family carers are mostly daughters, wives and daughters-in-law, many of whom cut their hours or leave work. Duke-NUS researchers project average family eldercare rising from 29 to 41 hours a week.",
+        "About half of families with a disabled older member hire a domestic worker. There are about 300,000 in Singapore, growing about 3% a year, and households with a citizen aged 67 or older pay a reduced levy of S$60 a month instead of S$300, in effect a public subsidy for private, live-in eldercare."
+      ],
+      "section": "the-families-and-workers-who-actually-do-the-work",
+      "sources": [
+        { "title": "Societal aging and its impact on Singapore", "publication": "NBER Working Paper", "url": "https://www.nber.org/system/files/working_papers/w31958/w31958.pdf" },
+        { "title": "Response to adjournment motion on migrant domestic workers", "publication": "Ministry of Manpower", "url": "https://www.mom.gov.sg/newsroom/speeches/2026/0113-response-to-adj-motion-on-mdws" },
+        { "title": "Levy concession for migrant domestic workers", "publication": "Ministry of Manpower", "url": "https://www.mom.gov.sg/levy-concession" }
+      ],
+      "followUps": [
+        {
+          "id": "care-paradox",
+          "label": "Can that last?",
+          "question": "Can reliance on families and domestic workers last?",
+          "answer": [
+            "It is getting harder. Families are smaller, more women work, and more older people live alone. Domestic workers are not covered by the Employment Act, generally can’t change employers without consent, and often lack training in dementia or disability care, the “care paradox” one essay published by the Lee Kuan Yew School described.",
+            "As wages rise in sending countries and other rich places compete for the same workers, they are likely to cost more and be harder to recruit. The government itself says live-in workers “may not be the best care option for every household”."
+          ],
+          "section": "why-care-was-handed-to-families-and-cheap-labour",
+          "sources": [
+            { "title": "Singapore’s care paradox: first-world economy, third-world care labor", "publication": "Global-is-Asian, Lee Kuan Yew School of Public Policy", "url": "https://lkyspp.nus.edu.sg/gia/article/singapore-s-care-paradox--first-world-economy--third-world-care-labor" },
+            { "title": "Response to adjournment motion on migrant domestic workers", "publication": "Ministry of Manpower", "url": "https://www.mom.gov.sg/newsroom/speeches/2026/0113-response-to-adj-motion-on-mdws" }
+          ]
+        },
+        {
+          "id": "careshield",
+          "label": "Does insurance cover care?",
+          "question": "Does CareShield Life pay for long-term care?",
+          "answer": [
+            "Partly. CareShield Life, compulsory since 2020 for people born from 1980, pays a monthly cash amount for life to anyone who becomes severely disabled. Payouts are now growing 4% a year until 2030, so a new claim in 2030 will pay S$806 a month instead of S$731, with S$570 million set aside to soften the higher premiums.",
+            "That helps with costs but does not pay for full-time professional care, so families still carry much of it."
+          ],
+          "section": "paying-for-care-careshield-life",
+          "sources": [
+            { "title": "Government accepts CareShield Life Council’s recommendations to enhance CareShield Life, provides additional $570 million to subsidise premiums", "publication": "Ministry of Health", "url": "https://www.moh.gov.sg/newsroom/government-accepts-careshield-life-council-s-recommendations-to-enhance-careshield-life--provides-additional--570-million-to-subsidise-premiums/" },
+            { "title": "Budget 2026 statement (as delivered)", "publication": "Ministry of Finance", "url": "https://www.sgpc.gov.sg/api/file/getfile/2a%20Delivered%20Speech.pdf?path=%2Fsgpcmedia%2Fmedia_releases%2Fmof%2Fpress_release%2FP-20260212-5%2Fattachment%2F2a+Delivered+Speech.pdf" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "retirement",
+      "label": "Is CPF enough to retire on?",
+      "question": "Is CPF enough to retire on?",
+      "answer": [
+        "For most, it is getting better: almost 70% of members turning 55 in 2022 had saved the Basic Retirement Sum, up from 66% in 2020. But a large minority, mostly lower-income workers and people, often women, who spent years caring for children or parents, have small savings and small payouts.",
+        "Someone on the Basic Retirement Sum gets roughly S$950 a month. A 2019 study pricing a basic standard of living put the need for a single person over 65 at about S$1,379. The government adds targeted help such as Silver Support and top-ups, and points out that many older people own their flats outright."
+      ],
+      "section": "is-retirement-income-enough",
+      "sources": [
+        { "title": "Written answer to PQ on attainment rates on BRS, FRS, ERS and BHS", "publication": "Ministry of Manpower", "url": "https://www.mom.gov.sg/newsroom/parliament-questions-and-replies/2024/0110-written-answer-to-pq-on-attainment-rates-on-brs-frs-ers-bhs" },
+        { "title": "Elderly in Singapore need S$1,379 a month for basic needs: study", "publication": "Nanyang Technological University", "url": "https://www.ntu.edu.sg/sss/news-events/news/detail/-news-elderly-in-singapore-need-s$1-379-a-month-for-basic-needs-study" },
+        { "title": "Oral answer to PQ on Silver Support Scheme PCHI", "publication": "Ministry of Manpower", "url": "https://www.mom.gov.sg/newsroom/parliament-questions-and-replies/2026/0113-oral-answer-to-pq-on-silver-support-scheme-pchi" }
+      ],
+      "followUps": [
+        {
+          "id": "work-longer",
+          "label": "Will people work longer?",
+          "question": "Will Singaporeans have to work longer?",
+          "answer": [
+            "They already do. About 31% of residents aged 65 and over were employed in 2022, high by rich-country standards. The retirement age rose to 64 and the re-employment age to 69 in July 2026, heading for 65 and 70 by 2030.",
+            "Working longer raises incomes, savings and tax revenue, but it depends on employers wanting older workers and on workers being healthy enough. Many older workers are in cleaning, security, retail and transport; for some, working into their seventies is a choice, for others a necessity."
+          ],
+          "section": "where-ageing-bites-work-and-retirement-income",
+          "sources": [
+            { "title": "Retirement", "publication": "Ministry of Manpower", "url": "https://www.mom.gov.sg/employment-practices/retirement" },
+            { "title": "Written answer to PQ on working Singaporeans above 65", "publication": "Ministry of Manpower", "url": "https://www.mom.gov.sg/newsroom/parliament-questions-and-replies/2023/0207-written-answer-to-pq-on-working-singaporeans-above-65" },
+            { "title": "Labour force in Singapore advance release 2025", "publication": "Ministry of Manpower", "url": "https://www.mom.gov.sg/newsroom/press-releases/2025/1128-labour-force-in-singapore-advance-release-2025" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "immigration",
+      "label": "Can immigration fix it?",
+      "question": "Can immigration solve the problem?",
+      "answer": [
+        "It can slow it, not solve it. Singapore granted about 25,000 citizenships and 35,000 permanent residencies in 2025, and the government says immigration helps keep the share of working-age citizens broadly stable to 2035. Foreign workers also do most of the care work.",
+        "But immigrants grow old too, and keeping the support ratio stable as fertility falls would need ever-larger intakes. Immigration is also politically sensitive: the 2013 Population White Paper, which floated up to 6.9 million people by 2030, drew about 4,000 protesters to Hong Lim Park."
+      ],
+      "section": "immigration-the-buffer-and-its-limits",
+      "sources": [
+        { "title": "Population in Brief 2026", "publication": "National Population and Talent Division", "url": "https://isomer-user-content.by.gov.sg/520/799cc617-8bdf-420b-a47e-86ececabe12e/PIB%202026%20Report.pdf" },
+        { "title": "Population White Paper", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Population_White_Paper" },
+        { "title": "S’pore population climbs 1.6% to 6.21 million, citizens at 3.68 million", "publication": "Mothership", "url": "https://mothership.sg/2026/09/singapore-population-2026/" }
+      ],
+      "followUps": []
+    },
+    {
+      "id": "options",
+      "label": "What can the government do?",
+      "question": "What are the government’s options, and why is each hard?",
+      "answer": [
+        "It can’t keep low taxes, balanced budgets, protected reserves and self-reliance all at once forever. Every tool has a cost. Another GST rise hits poorer households. Spending more of the reserves’ returns leaves less for an even older future. Higher premiums and co-payments fall on those least able to pay. Working longer depends on health and employers. Prevention may improve lives without cutting total costs. Immigration brings backlash, and new care capacity needs land, money and scarce workers.",
+        "So far the government moves in small, pre-announced steps, which avoids shocks but can mean problems are addressed late."
+      ],
+      "section": "what-this-means-for-singapores-government",
+      "sources": [
+        { "title": "Budget 2026 statement (as delivered)", "publication": "Ministry of Finance", "url": "https://www.sgpc.gov.sg/api/file/getfile/2a%20Delivered%20Speech.pdf?path=%2Fsgpcmedia%2Fmedia_releases%2Fmof%2Fpress_release%2FP-20260212-5%2Fattachment%2F2a+Delivered+Speech.pdf" },
+        { "title": "Speech by Mr Ong Ye Kung at the Ministry of Health Committee of Supply Debate 2026", "publication": "Ministry of Health", "url": "https://www.moh.gov.sg/newsroom/speech-by-mr-ong-ye-kung--minister-for-health-and-coordinating-minister-for-social-policies--at-the-ministry-of-health-committee-of-supply-debate-2026--on-5-march-2026/" }
+      ],
+      "followUps": [
+        {
+          "id": "state-pay-more",
+          "label": "Should the state pay more?",
+          "question": "Should the state pay more of the cost?",
+          "answer": [
+            "One side says keep self-reliance at the core: the model has delivered long lives at half the cost of other rich countries, without the unfunded promises that burden Europe’s young, and every extra dollar must come from a shrinking workforce.",
+            "The other says the costliest risks, long illness, dementia and years of care, are exactly the ones individuals can’t save for, and they fall hardest on low earners and women who left work to care. Singapore is rich enough to pool more of them, and its low official spending partly reflects costs pushed onto families and migrant workers."
+          ],
+          "section": "debate-on-how-much-the-state-should-pay",
+          "sources": [
+            { "title": "Speech by Mr Ong Ye Kung at the Ministry of Health Committee of Supply Debate 2026", "publication": "Ministry of Health", "url": "https://www.moh.gov.sg/newsroom/speech-by-mr-ong-ye-kung--minister-for-health-and-coordinating-minister-for-social-policies--at-the-ministry-of-health-committee-of-supply-debate-2026--on-5-march-2026/" },
+            { "title": "Singapore’s care paradox: first-world economy, third-world care labor", "publication": "Global-is-Asian, Lee Kuan Yew School of Public Policy", "url": "https://lkyspp.nus.edu.sg/gia/article/singapore-s-care-paradox--first-world-economy--third-world-care-labor" }
+          ]
+        }
+      ]
+    }
+  ]
+}

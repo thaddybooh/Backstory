@@ -1,0 +1,313 @@
+{
+  "issue": "005-metas-18-billion-bargain",
+  "questions": [
+    {
+      "id": "why-now",
+      "label": "Why now?",
+      "question": "Why did this come to a head in 2026?",
+      "answer": [
+        "The pressure built for five years before it broke. In 2021 the “Facebook Files” leak put Meta’s own research on teenagers in public. In 2023 more than 40 states sued. Then the legal shields started failing one by one: judges let design and failure-to-warn claims go ahead, and in March 2026 two juries found against Meta within two days.",
+        "The final push came in August, when a federal appeals court said Section 230 can only be raised as a defence after a trial, not used to end a case early. That turned every lawsuit into a real trial risk. Eight days into the states’ trial, Meta settled."
+      ],
+      "section": "how-it-unfolded",
+      "sources": [
+        { "title": "The Facebook Files", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/The_Facebook_Files" },
+        { "title": "Jury finds Meta and Google negligent in social media addiction trial", "publication": "NPR", "url": "https://www.npr.org/2026/03/26/nx-s1-5761345/jury-finds-meta-and-google-negligent-in-social-media-addiction-trial" },
+        { "title": "Verdicts against Meta and Google may bring a new era of big tech accountability", "publication": "NPR", "url": "https://www.npr.org/2026/04/03/nx-s1-5764306/big-tech-lawsuits-verdicts-accountability-social-media-harms" }
+      ],
+      "followUps": []
+    },
+    {
+      "id": "why-settle",
+      "label": "Why did Meta settle?",
+      "question": "Why did Meta settle instead of fighting on?",
+      "answer": [
+        "Not because it admitted guilt; it admitted nothing. It settled because a trial had become a bet with a huge downside and little upside. State consumer laws charge penalties per violation, and the states’ maximum came to about $1.4 trillion. New Mexico showed what that can mean when a judge there ordered Meta to pay $25 billion in a separate privacy case.",
+        "Meanwhile its legal shields could no longer end the case early, and each day of trial put more internal documents in the news. Against that, a little over $1 billion a year for ten years is affordable for a company making about $60 billion a year in profit. Settling swapped an unknowable risk for a known cost."
+      ],
+      "section": "why-did-meta-settle",
+      "sources": [
+        { "title": "Here’s what Meta’s $18 billion multistate settlement could mean for kids — and for its bottom line", "publication": "CNN", "url": "https://www.cnn.com/2026/08/27/tech/meta-settlement-impact-on-teens-business" },
+        { "title": "Judge orders Meta to pay $25B US for misleading consumers about data privacy", "publication": "CBC News", "url": "https://www.cbc.ca/news/world/meta-25-billion-new-mexico-9.7390345" },
+        { "title": "Meta agrees to make changes, pay up to $18B US over social media harms to children", "publication": "CBC News / Reuters", "url": "https://www.cbc.ca/news/business/meta-social-media-harms-settlement-9.7320919" }
+      ],
+      "followUps": [
+        {
+          "id": "guilty",
+          "label": "So was Meta guilty?",
+          "question": "Does settling mean Meta was guilty?",
+          "answer": [
+            "The settlement deliberately leaves that open. Meta admitted no wrongdoing, and settling is often rational even for a company that thinks it would win on appeal years later. The states had their own reasons too: North Carolina’s attorney general said fighting on would mean being “many years away” from any change.",
+            "What the deal does show is that the legal ground has moved. Once juries accepted the design-defect argument and courts stopped throwing these cases out early, the old calculation, that Big Tech could not be held liable for how it built its apps, no longer held."
+          ],
+          "section": "answer-so-did-meta-settle-because-it-was-guilty",
+          "sources": [
+            { "title": "Meta settles landmark state child harm claims for $18 billion and promises changes to its platforms", "publication": "CNN", "url": "https://www.cnn.com/2026/08/26/tech/meta-states-settle-trial-children" },
+            { "title": "Meta settles social media addiction claims for up to $18 billion", "publication": "NBC News", "url": "https://www.nbcnews.com/tech/social-media/meta-settles-social-media-addiction-suit-16-billion-rcna594492" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "legal-shield",
+      "label": "How did the suits get through?",
+      "question": "How could Meta be sued at all, given Section 230?",
+      "answer": [
+        "Section 230, a 1996 law, stops platforms being treated as the publisher of what users post. For decades it killed lawsuits like this early. The lawyers got around it by blaming the design, not the content: infinite scroll, autoplay, notifications timed to pull users back, like counts, beauty filters and weak age checks.",
+        "Under product-liability law, a maker can be liable for a dangerously designed product or for failing to warn about risks it knew about. A 2am notification harms a user whatever the post says, so holding Meta responsible doesn’t make it the publisher of anyone’s words. The states added deception: Meta’s own public safety claims are its own speech, which Section 230 does not cover."
+      ],
+      "section": "how-the-lawsuits-got-around-big-techs-legal-shields",
+      "sources": [
+        { "title": "Section 230", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Section_230" },
+        { "title": "Federal judge allows claims against Meta, Google, TikTok and Snap", "publication": "Communications Daily", "url": "https://communicationsdaily.com/article/2024/10/16/federal-judge-allows-claims-against-meta-google-tiktok-and-snap-2410150062" },
+        { "title": "Verdicts against Meta and Google may bring a new era of big tech accountability", "publication": "NPR", "url": "https://www.npr.org/2026/04/03/nx-s1-5764306/big-tech-lawsuits-verdicts-accountability-social-media-harms" }
+      ],
+      "followUps": [
+        {
+          "id": "design-vs-content",
+          "label": "Is design separate from content?",
+          "question": "Is the line between design and content a real one?",
+          "answer": [
+            "It is the most disputed idea in the whole case. Courts drew it to fit around free-speech protections: features unconnected to content, like time limits and notification timing, are open to challenge, while the algorithm that chooses what to show is still mostly protected.",
+            "Defenders of Section 230 such as the law professor Eric Goldman say the line is illusory, because infinite scroll only harms you if there is something worth scrolling. The Supreme Court has not ruled on it, and Meta’s appeals may take it there. If the line collapses, either the lawsuits fail or far more of the internet becomes open to them."
+          ],
+          "section": "the-free-speech-defence",
+          "sources": [
+            { "title": "Section 230", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Section_230" },
+            { "title": "Verdicts against Meta and Google may bring a new era of big tech accountability", "publication": "NPR", "url": "https://www.npr.org/2026/04/03/nx-s1-5764306/big-tech-lawsuits-verdicts-accountability-social-media-harms" }
+          ]
+        },
+        {
+          "id": "first-verdict",
+          "label": "What did the first jury find?",
+          "question": "What did the first jury decide, and why did it matter?",
+          "answer": [
+            "In March 2026 a Los Angeles jury heard the case of K.G.M., a young woman who started on YouTube at 6 and Instagram at 9 and later developed anxiety, depression and body dysmorphia. Meta blamed her family life. The jury found Meta and YouTube negligent in designing their apps and in failing to warn of the risks, and awarded $6 million.",
+            "The money is trivial for companies this size. The signal was not: it was a bellwether case, picked to test how juries react, and it told every other plaintiff’s lawyer and every investor that juries will believe design-defect claims."
+          ],
+          "section": "the-case-of-kgm",
+          "sources": [
+            { "title": "Jury finds Meta and Google negligent in social media addiction trial", "publication": "NPR", "url": "https://www.npr.org/2026/03/26/nx-s1-5761345/jury-finds-meta-and-google-negligent-in-social-media-addiction-trial" },
+            { "title": "Jury finds Meta, YouTube liable for social media addiction: what we know", "publication": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/3/26/jury-finds-meta-youtube-liable-for-social-media-addiction-what-we-know" },
+            { "title": "K.G.M. v. Meta et al.", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/K.G.M._v._Meta_et_al." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "root-cause",
+      "label": "What’s the root cause?",
+      "question": "What is the root cause of the harms the states alleged?",
+      "answer": [
+        "The business model. Social media earns most of its money from advertising, and advertising revenue grows with the time and attention users give. That one incentive shaped two decades of design: the endless feed, the like button, infinite scroll with no natural stopping point, and algorithms that learn what keeps each person watching.",
+        "The states’ case was that Meta knew young users were especially valuable and especially vulnerable, and chose growth. They cited a 2016 email naming “teen time spent” as the overall goal for Instagram, and a study titled “The Young Ones Are The Best Ones”. Meta says the documents were cherry-picked and that it worked to help teens who struggled."
+      ],
+      "section": "further-context-how-apps-learned-to-hold-attention",
+      "sources": [
+        { "title": "‘Profits won.’ The child safety trial against Meta kicks off in federal court", "publication": "NPR", "url": "https://www.npr.org/2026/08/18/nx-s1-5935458/meta-child-safety-social-media-addiction-trial-opening" },
+        { "title": "Attorney General Bonta files lawsuit against Meta over harms to youth mental health", "publication": "California Department of Justice", "url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-files-lawsuit-against-meta-over-harms-youth-mental-health" },
+        { "title": "The Facebook Files", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/The_Facebook_Files" }
+      ],
+      "followUps": [
+        {
+          "id": "internal-evidence",
+          "label": "What did Meta know?",
+          "question": "What did Meta’s own documents show?",
+          "answer": [
+            "The states built their case on Meta’s internal research. A whistleblower, the former safety engineer Arturo Béjar, testified that Meta published statistics on rule-breaking content that “create a false impression of safety” instead of its own surveys, which found younger users reported more harmful experiences.",
+            "Instagram’s head, Adam Mosseri, agreed that Meta never disclosed that only 1.8% of teens at one point used its “Take a Break” feature. A 2022 presentation found 7.4% of weekly teen Instagram users showed late-night use “likely displacing sleep”. Meta says such findings were taken out of context."
+          ],
+          "section": "inside-the-oakland-trial",
+          "sources": [
+            { "title": "Instagram head Adam Mosseri testifies in defense of Meta in child safety trial", "publication": "NPR", "url": "https://www.npr.org/2026/08/25/nx-s1-5944266/adam-mosseri-instagram-meta-child-safety-trial" },
+            { "title": "State of New Mexico v. Meta Platforms: findings of fact, conclusions of law and judgment", "publication": "First Judicial District Court of New Mexico", "url": "https://nmcourts.gov/wp-content/uploads/2026/08/D-101-CV-2023-02838-Final-FOFCOL-and-Judgment-of-the-Court.pdf" },
+            { "title": "‘Profits won.’ The child safety trial against Meta kicks off in federal court", "publication": "NPR", "url": "https://www.npr.org/2026/08/18/nx-s1-5935458/meta-child-safety-social-media-addiction-trial-opening" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teen-changes",
+      "label": "What changes for teens?",
+      "question": "What actually changes for teenagers?",
+      "answer": [
+        "For US users aged 13 to 17, Instagram and Facebook will by default be capped at two hours a day across both apps, locked from midnight to 6am, and silent overnight and during school hours. Only a parent can lift the limits. Like counts will be hidden from teens, cosmetic-surgery-style filters blocked, and teens can choose a feed not ranked by Meta’s algorithm.",
+        "An independent auditor checks compliance every year for five years. Most changes are due by around late February 2027. If Snapchat, TikTok and YouTube accept comparable terms, Meta’s limit tightens to one hour on each app."
+      ],
+      "section": "the-product-changes",
+      "sources": [
+        { "title": "Attorney General Bonta secures transformative $17 billion settlement with Meta", "publication": "California Department of Justice", "url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-secures-transformative-17-billion-settlement-meta" },
+        { "title": "Meta settlement means new restrictions on nighttime and school-time scrolling for kids", "publication": "NPR", "url": "https://www.npr.org/2026/08/26/nx-s1-5944972/meta-settlement-means-new-restrictions-on-nighttime-and-school-time-scrolling-for-kids" },
+        { "title": "What Meta’s new teen restrictions mean for young people", "publication": "Fox News", "url": "https://www.foxnews.com/tech/what-metas-new-teen-restrictions-mean-young-people" }
+      ],
+      "followUps": [
+        {
+          "id": "gaps",
+          "label": "What does it leave out?",
+          "question": "What does the deal leave out?",
+          "answer": [
+            "A lot, and the gaps follow the money. The recommendation algorithm and infinite scroll stay on by default; teens can opt out, but a youth campaigner noted the default is “better for Meta’s business”. Targeted advertising is untouched, as are disappearing messages, livestreaming and AI chatbots. Direct messages are exempt from the time limit.",
+            "It also applies only in the US, and settles only the states’ claims: more than 10,000 individual lawsuits and almost 800 by school districts continue, and Florida and New Mexico refused to join."
+          ],
+          "section": "what-it-does-not-do",
+          "sources": [
+            { "title": "‘This is not the end’: experts welcome Meta’s new teen protections, with caveats", "publication": "San Francisco Chronicle", "url": "https://www.sfchronicle.com/health/article/meta-teen-kid-social-media-22405371.php" },
+            { "title": "How teen accounts on Instagram and Facebook are changing after Meta’s $18B US settlement", "publication": "CBC News", "url": "https://www.cbc.ca/news/world/meta-settlement-explainer-9.7322782" },
+            { "title": "Meta’s $18bn settlement: how social platforms will change for child users", "publication": "Al Jazeera", "url": "https://www.aljazeera.com/features/2026/8/27/metas-18bn-settlement-how-social-platforms-will-change-for-child-users" }
+          ]
+        },
+        {
+          "id": "workarounds",
+          "label": "Can teens get around it?",
+          "question": "Can teenagers simply get around the limits?",
+          "answer": [
+            "Often, yes. Direct messages are exempt, a parent can lift the limits, and teens can move to TikTok, YouTube or Snapchat, which the deal does not bind and which about one in five US teens already use “almost constantly”, according to Pew.",
+            "Everything also depends on Meta knowing who is under 18, and teens have long lied about their age. The deal requires “robust” age checks, but Australia shows how hard that is: an official study found more than eight in ten young teens and preteens still on the platforms months after its under-16 ban."
+          ],
+          "section": "for-teenagers-and-parents",
+          "sources": [
+            { "title": "Teens, Social Media and AI Chatbots 2025", "publication": "Pew Research Center", "url": "https://www.pewresearch.org/internet/2025/12/09/teens-social-media-and-ai-chatbots-2025/" },
+            { "title": "Meta’s $18bn settlement: how social platforms will change for child users", "publication": "Al Jazeera", "url": "https://www.aljazeera.com/features/2026/8/27/metas-18bn-settlement-how-social-platforms-will-change-for-child-users" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "winners-losers",
+      "label": "Who gains, who loses?",
+      "question": "Who gains and who loses from the deal?",
+      "answer": [
+        "Meta gains certainty: a large but bounded bill, an end to damaging testimony, and no admission of guilt for other plaintiffs to quote. Investors agreed; its shares rose after it booked the charge. The states gain money and enforceable rules within months rather than years of appeals.",
+        "Rivals lose most. The deal is built to pull TikTok and YouTube in: Meta pays about $5 billion more only if they adopt the same limits and pay similar sums, so Meta and the states now share an interest in pressuring them. Teens get protections with clear gaps, and the many who use the apps without harm bear limits too."
+      ],
+      "section": "why-it-could-turn-a-loss-into-an-industry-rule",
+      "sources": [
+        { "title": "Legal experts say Meta’s settlement puts YouTube, TikTok and Snap on notice", "publication": "Engadget", "url": "https://www.engadget.com/2245685/legal-experts-say-meta-settlement-puts-youtube-tiktok-snap-on-notice/" },
+        { "title": "Meta Q3 earnings 2026: legal costs take huge toll, Wall Street shrugs", "publication": "Variety", "url": "https://variety.com/2026/biz/news/meta-q3-earnings-2026-1236918874/" },
+        { "title": "Here’s what Meta’s $18 billion multistate settlement could mean for kids — and for its bottom line", "publication": "CNN", "url": "https://www.cnn.com/2026/08/27/tech/meta-settlement-impact-on-teens-business" }
+      ],
+      "followUps": [
+        {
+          "id": "rivals",
+          "label": "Will TikTok and YouTube follow?",
+          "question": "Will TikTok, YouTube and Snap be forced to follow?",
+          "answer": [
+            "Nothing obliges them to, and none has agreed. But they face the same kinds of lawsuits in the same courts. YouTube shared the Los Angeles verdict, California and 14 other states are suing TikTok, and Pennsylvania sued Snap the day before Meta settled.",
+            "As one law professor put it, they have “just lost Meta as an ally” in fighting these cases. California’s attorney general called the deal an “enforceable blueprint”. If rivals sign up, rules written in a settlement start to work like an industry standard."
+          ],
+          "section": "for-rival-platforms",
+          "sources": [
+            { "title": "Legal experts say Meta’s settlement puts YouTube, TikTok and Snap on notice", "publication": "Engadget", "url": "https://www.engadget.com/2245685/legal-experts-say-meta-settlement-puts-youtube-tiktok-snap-on-notice/" },
+            { "title": "Why Meta’s settlement could be an ‘inflection point’ for reining in Big Tech", "publication": "NPR", "url": "https://www.npr.org/2026/08/27/nx-s1-5945278/meta-settlement-child-safety-big-tech" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tobacco",
+      "label": "What happened with tobacco?",
+      "question": "What happened last time an industry settled like this?",
+      "answer": [
+        "In 1998 the big US cigarette makers settled with 46 states, agreeing to pay at least $206 billion over 25 years and accept marketing limits. Like the Meta case, it was driven by internal documents and combined money with product rules.",
+        "It is also a warning. States spent little of the money on cutting smoking, by one estimate less than 3%, and many borrowed against future payments, giving themselves a financial stake in cigarette sales continuing. Smoking fell mostly because of taxes, bans and changing norms. The lesson for Meta’s deal: the rules may matter more than the money, and the money may not reach the people harmed."
+      ],
+      "section": "the-tobacco-and-opioid-playbook",
+      "sources": [
+        { "title": "Tobacco Master Settlement Agreement", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Tobacco_Master_Settlement_Agreement" },
+        { "title": "Why Meta’s landmark settlement could be social media’s ‘Big Tobacco moment’", "publication": "KQED", "url": "https://www.kqed.org/news/12096647/why-metas-landmark-settlement-could-be-social-medias-big-tobacco-moment" }
+      ],
+      "followUps": [
+        {
+          "id": "comparison-limits",
+          "label": "Where does it break down?",
+          "question": "Where does the tobacco comparison break down?",
+          "answer": [
+            "In three places. The science: the link between smoking and cancer is among the strongest in medicine, while the evidence on social media and teen mental health is real but contested. Speech: cigarettes have no free-speech rights, but apps carry people’s words and friendships, which is why the algorithm was left largely alone. Benefits: teens use these apps to talk to friends and find communities, so restricting them has costs that restricting cigarettes did not."
+          ],
+          "section": "where-the-comparison-breaks-down",
+          "sources": [
+            { "title": "Why Meta’s landmark settlement could be social media’s ‘Big Tobacco moment’", "publication": "KQED", "url": "https://www.kqed.org/news/12096647/why-metas-landmark-settlement-could-be-social-medias-big-tobacco-moment" },
+            { "title": "Inside the debate over Jonathan Haidt’s The Anxious Generation", "publication": "Sherwood News", "url": "https://sherwood.news/tech/inside-the-debate-over-jonathan-haidts-the-anxious-generation/" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "is-it-harmful",
+      "label": "Is the harm real?",
+      "question": "Is social media really harming teenagers?",
+      "answer": [
+        "Serious researchers disagree. One side, led by the psychologist Jonathan Haidt, points to teenage anxiety and depression rising sharply in the early 2010s as smartphones spread, plus the companies’ own research, and argues waiting for perfect proof means failing a generation. The US Surgeon General said heavy users face double the risk of anxiety and depression symptoms.",
+        "The other side, including the psychologist Candice Odgers, says most studies find small or inconsistent links, that causation may run the other way (struggling teens use social media more), and that blaming apps can distract from proven treatments. The settlement sidesteps the question entirely."
+      ],
+      "section": "debate-on-whether-social-media-is-really-harming-teenagers",
+      "sources": [
+        { "title": "Inside the debate over Jonathan Haidt’s The Anxious Generation", "publication": "Sherwood News", "url": "https://sherwood.news/tech/inside-the-debate-over-jonathan-haidts-the-anxious-generation/" },
+        { "title": "Teens, Social Media and AI Chatbots 2025", "publication": "Pew Research Center", "url": "https://www.pewresearch.org/internet/2025/12/09/teens-social-media-and-ai-chatbots-2025/" }
+      ],
+      "followUps": []
+    },
+    {
+      "id": "courts-not-congress",
+      "label": "Why courts, not Congress?",
+      "question": "Why are courts, not lawmakers, writing the rules?",
+      "answer": [
+        "Because Congress is stuck. The House and Senate have passed different versions of a children’s online safety law, split over whether platforms should owe a legal “duty of care”, while free-speech groups, privacy advocates and heavy industry lobbying pull in different directions.",
+        "Attorneys general don’t need a new law. They can sue under existing consumer protection law, force out internal documents and use the threat of trial to win rules companies would have lobbied against. It is fast and uncovers evidence. But the rules are negotiated in private, bind one company, and reflect what was risky to argue in one courtroom rather than what would work best."
+      ],
+      "section": "litigation-doing-the-job-of-regulation",
+      "sources": [
+        { "title": "Why Meta’s settlement could be an ‘inflection point’ for reining in Big Tech", "publication": "NPR", "url": "https://www.npr.org/2026/08/27/nx-s1-5945278/meta-settlement-child-safety-big-tech" },
+        { "title": "Kids Online Safety Act social media safety bill advances in Senate", "publication": "CNBC", "url": "https://www.cnbc.com/2026/08/05/kosa-privacy-social-media-senate.html" }
+      ],
+      "followUps": [
+        {
+          "id": "lawsuits-right-way",
+          "label": "Should lawsuits set the rules?",
+          "question": "Are lawsuits the right way to make these rules?",
+          "answer": [
+            "Supporters say litigation is working where politics failed: it forced out documents the public would never have seen, produced verdicts from ordinary jurors and delivered enforceable, audited changes within months, agreed by attorneys general of both parties. Tobacco and opioids show lawsuits can change industries when legislatures are gridlocked.",
+            "Critics say rules affecting tens of millions of people should be debated and voted on, not agreed behind closed doors. Litigation binds one company, rests on an unstable design-versus-content line, and settlement money has a poor record of reaching the people harmed."
+          ],
+          "section": "debate-on-whether-lawsuits-are-the-right-way-to-set-the-rules",
+          "sources": [
+            { "title": "Why Meta’s settlement could be an ‘inflection point’ for reining in Big Tech", "publication": "NPR", "url": "https://www.npr.org/2026/08/27/nx-s1-5945278/meta-settlement-child-safety-big-tech" },
+            { "title": "Why Meta’s landmark settlement could be social media’s ‘Big Tobacco moment’", "publication": "KQED", "url": "https://www.kqed.org/news/12096647/why-metas-landmark-settlement-could-be-social-medias-big-tobacco-moment" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "other-countries",
+      "label": "What should governments do?",
+      "question": "What does this mean for governments elsewhere?",
+      "answer": [
+        "It weakens one argument and exposes a harder choice. Meta has now agreed that time limits, night locks and stricter defaults are workable, so regulators can no longer be told they are impossible. But every tool has a cost: lawsuits are slow and piecemeal, design codes depend on vague standards, age bans are hard to enforce and cut teens off from benefits too, and age checks mean collecting data on everyone.",
+        "No single country can regulate a global platform alone. The EU, with fines of up to 6% of global revenue, has more leverage than most; Australia’s ban shows the limits of going it alone."
+      ],
+      "section": "what-this-means-for-policymakers",
+      "sources": [
+        { "title": "Commission preliminarily finds the addictive design of Instagram and Facebook in breach of the Digital Services Act", "publication": "European Commission", "url": "https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-addictive-design-instagram-and-facebook-breach-digital-services-act" },
+        { "title": "Meta’s $18bn settlement: how social platforms will change for child users", "publication": "Al Jazeera", "url": "https://www.aljazeera.com/features/2026/8/27/metas-18bn-settlement-how-social-platforms-will-change-for-child-users" },
+        { "title": "Online Safety Amendment (Social Media Minimum Age) Act 2024", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Online_Safety_Amendment" }
+      ],
+      "followUps": [
+        {
+          "id": "australia-ban",
+          "label": "Does a ban work?",
+          "question": "Is Australia’s under-16 ban working?",
+          "answer": [
+            "Not well so far. The ban took effect in December 2025 with fines of up to A$49.5 million, but an eSafety study in August found more than eight in ten young teens and preteens still used the platforms. The core problem is age checks: reliable ones need identity documents or biometric estimates, and privacy-friendly ones are easy to fool.",
+            "Even so, the UK has announced its own under-16 ban, and Canada, Denmark, Indonesia and New Zealand say they will follow."
+          ],
+          "section": "for-other-countries",
+          "sources": [
+            { "title": "Meta’s $18bn settlement: how social platforms will change for child users", "publication": "Al Jazeera", "url": "https://www.aljazeera.com/features/2026/8/27/metas-18bn-settlement-how-social-platforms-will-change-for-child-users" },
+            { "title": "Meta faces Australian lawsuit over alleged social media harm to children", "publication": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/22/meta-faces-australian-lawsuit-over-alleged-social-media-harm-to-children" },
+            { "title": "Online Safety Amendment (Social Media Minimum Age) Act 2024", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Online_Safety_Amendment" }
+          ]
+        }
+      ]
+    }
+  ]
+}

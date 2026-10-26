@@ -5,14 +5,16 @@
 //   npm run check:issue -- --offline        skips the Wikimedia Commons photo check
 //   npm run check:issue -- --links          also tries to open every link (slow; warnings only)
 //
+// It also checks the issue's question graph (NNN-slug.graph.json next to the issue).
+//
 // Errors must be fixed before publishing. Warnings are worth a look but don't block.
 // Exits with code 1 if there are any errors. It does not build the site: run `npm run build` too.
 
-import { readFile, readdir } from 'node:fs/promises';
+import { readFile, readdir, access } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
 import path from 'node:path';
 import { parse } from 'yaml';
-import GithubSlugger from 'github-slugger';
+import { graphProblems, issueAnchors } from '../src/lib/graph.mjs';
 import { filesInText, licenceProblem, lookup, stripHtml } from './fetch-images.mjs';
 import { readIssues } from './next-issue.mjs';
 
@@ -42,7 +44,8 @@ function changedIssueFiles() {
     })
       .toString()
       .trim();
-    return [...new Set([...out.split('\n'), ...untracked.split('\n')])]
+    // A changed graph means its issue is checked too.
+    return [...new Set([...out.split('\n'), ...untracked.split('\n')].map((f) => f.replace(/\.graph\.json$/, '.mdx')))]
       .filter((f) => f.endsWith('.mdx'))
       .map((f) => path.join(ROOT, f));
   } catch {
@@ -179,8 +182,7 @@ async function checkFile(file, all, components) {
   });
 
   // ---------- Internal links ----------
-  const slugger = new GithubSlugger();
-  const ids = new Set(['what-is-happening', 'about-this-issue', ...headings.map((h) => slugger.slug(h.replace(/[*_`]/g, '')))]);
+  const ids = issueAnchors(body);
   for (const m of body.matchAll(/\]\(#([^)]+)\)/g)) {
     if (!ids.has(m[1])) E(`Link to "#${m[1]}" doesn't match any section heading.`);
   }
@@ -221,6 +223,22 @@ async function checkFile(file, all, components) {
     }
   }
 
+  // ---------- Question graph ----------
+  const graphFile = file.replace(/\.mdx$/, '.graph.json');
+  const hasGraph = await access(graphFile).then(() => true, () => false);
+  let graphSummary = 'no question graph';
+  if (!hasGraph) E(`No question graph. Write ${path.basename(graphFile)} (see docs/graph-template.json).`);
+  else {
+    try {
+      const graph = JSON.parse(await readFile(graphFile, 'utf8'));
+      const qs = graph.questions ?? [];
+      graphSummary = `graph: ${qs.length} questions, ${qs.reduce((n, q) => n + (q.followUps?.length ?? 0), 0)} follow-ups`;
+      for (const problem of graphProblems(graph, body, name.replace(/\.mdx$/, ''))) E(`Graph: ${problem}`);
+    } catch (err) {
+      E(`Graph file is not valid JSON: ${err.message}`);
+    }
+  }
+
   // ---------- Links (optional) ----------
   if (CHECK_LINKS) {
     const urls = [...new Set([...body.matchAll(/\]\((https?:\/\/[^)\s]+)\)|href="(https?:\/\/[^"]+)"/g)].map((m) => m[1] ?? m[2]))];
@@ -236,11 +254,11 @@ async function checkFile(file, all, components) {
     );
   }
 
-  return { errors, warnings, words, minutes, photos: photos.length, sources: sourceLinks.length };
+  return { errors, warnings, words, minutes, photos: photos.length, sources: sourceLinks.length, graphSummary };
 }
 
 async function main() {
-  const fileArgs = args.filter((a) => !a.startsWith('--')).map((a) => path.resolve(a));
+  const fileArgs = args.filter((a) => !a.startsWith('--')).map((a) => path.resolve(a.replace(/\.graph\.json$/, '.mdx')));
   const all = await readIssues();
   let files = fileArgs.length ? fileArgs : changedIssueFiles();
   if (files.length === 0 && all.length) files = [path.join(CONTENT, all.at(-1).file)];
@@ -255,7 +273,9 @@ async function main() {
     const r = await checkFile(file, all, components);
     console.log(`\n${path.relative(ROOT, file)}`);
     if (r.words !== undefined)
-      console.log(`  ${r.words.toLocaleString('en')} words before Sources (about ${r.minutes} min), ${r.sources} sources, ${r.photos} photos`);
+      console.log(
+        `  ${r.words.toLocaleString('en')} words before Sources (about ${r.minutes} min), ${r.sources} sources, ${r.photos} photos, ${r.graphSummary}`,
+      );
     for (const e of r.errors) console.log(`  ERROR    ${e}`);
     for (const w of r.warnings) console.log(`  warning  ${w}`);
     if (!r.errors.length && !r.warnings.length) console.log('  All checks passed.');

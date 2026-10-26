@@ -2,6 +2,8 @@
 import Base from '../layouts/Base.astro';
 import HeroImage from '../components/HeroImage.astro';
 import IssueRow from '../components/IssueRow.astro';
+import QuestionGraph from '../components/graph/QuestionGraph.astro';
+import { getGraph } from '../lib/graph-data';
 import { getIssues, issueUrl, issueNumber, formatLongDate, TRACK_LABEL } from '../lib/issues';
 import { getCommonsImage } from '../lib/images';
 import { SITE } from '../lib/site';
@@ -10,6 +12,7 @@ const issues = await getIssues();
 const [latest, ...earlier] = issues;
 const d = latest?.data;
 const layers = ['History', 'Economic incentives', 'Political decisions', 'Competing interests'];
+const graph = latest ? await getGraph(latest) : undefined;
 const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommonsImage(d.hero.commons))));
 ---
 
@@ -78,6 +81,11 @@ const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommon
           </div>
           <HeroImage hero={d.hero} />
         </div>
+        {graph && (
+          <div class="cover-graph">
+            <QuestionGraph issue={latest} graph={graph} context="home" latest />
+          </div>
+        )}
       </section>
     )
   }

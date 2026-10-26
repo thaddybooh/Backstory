@@ -1,0 +1,521 @@
+/* The question graph ("qmap") on the homepage and at the top of each issue. */
+
+.qmap {
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* ---------- Heading and view toggle ---------- */
+.qmap-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  margin-bottom: 1rem;
+}
+.qmap-kicker {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin: 0 0 0.35rem;
+}
+.qmap-title {
+  font-family: var(--font-display);
+  font-weight: 750;
+  font-stretch: 88%;
+  font-size: var(--step-3);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.qmap-intro {
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 38rem;
+  margin: 0.5rem 0 0;
+}
+.qmap-toggle {
+  display: inline-flex;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 3px;
+  background: var(--paper-raised);
+}
+.qmap-toggle button {
+  font: 600 0.9rem/1 var(--font-display);
+  color: var(--ink-soft);
+  background: none;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.qmap-toggle button[aria-pressed='true'] {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Without JavaScript only the list shows; with it, the reader's chosen view. */
+html:not(.js) .qmap-toggle,
+html:not(.js) .qmap-stage,
+html.js:not([data-qmap-view='list']) .qmap-list,
+html[data-qmap-view='list'] .qmap-stage {
+  display: none;
+}
+
+/* ---------- The graph ---------- */
+.qmap-stage {
+  position: relative;
+  height: clamp(26rem, 66vh, 40rem);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--paper-raised);
+  background-image:
+    radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--accent) 8%, transparent), transparent 62%),
+    radial-gradient(color-mix(in srgb, var(--ink) 10%, transparent) 1px, transparent 1.3px);
+  background-size: auto, 22px 22px;
+  touch-action: pan-y;
+}
+@media (max-width: 47.99rem) {
+  .qmap-stage {
+    height: min(70svh, 33rem);
+    margin: 0 calc(var(--gutter) * -0.5);
+  }
+}
+.qmap-loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  font-family: var(--font-display);
+  color: var(--ink-faint);
+}
+.qmap-svg {
+  display: block;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.qmap-svg:active {
+  cursor: grabbing;
+}
+
+.qmap-link {
+  stroke: color-mix(in srgb, var(--ink) 24%, transparent);
+  stroke-width: 1.3;
+  transition: stroke 0.2s, stroke-width 0.2s, opacity 0.2s;
+}
+.qmap-link-follow {
+  stroke-dasharray: 3 3;
+}
+.qmap-link.is-lit {
+  stroke: var(--accent);
+  stroke-width: 2.2;
+}
+
+.qmap-node {
+  cursor: pointer;
+  outline: none;
+  touch-action: none;
+  transition: opacity 0.2s;
+}
+.qmap-hit {
+  fill: transparent;
+}
+.qmap-halo {
+  fill: var(--accent);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.qmap-dot {
+  transition: r 0.2s;
+}
+.qmap-question .qmap-dot {
+  fill: var(--accent);
+  stroke: var(--paper-raised);
+  stroke-width: 2.5;
+}
+.qmap-follow .qmap-dot {
+  fill: var(--paper-raised);
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+.qmap-centre .qmap-dot {
+  fill: var(--accent);
+}
+.qmap-centre .qmap-halo {
+  opacity: 0.14;
+}
+.qmap-centre .qmap-ring {
+  fill: none;
+  stroke: var(--paper-raised);
+  stroke-width: 3;
+}
+
+.qmap-node.is-lit .qmap-halo,
+.qmap-node:hover .qmap-halo {
+  opacity: 0.18;
+}
+.qmap-node.is-selected .qmap-halo {
+  opacity: 0.3;
+}
+.qmap-node:focus-visible .qmap-halo {
+  opacity: 0.3;
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+.has-focus .qmap-node:not(.is-lit) {
+  opacity: 0.22;
+}
+.has-focus .qmap-link:not(.is-lit) {
+  opacity: 0.25;
+}
+
+.qmap-label {
+  font-family: var(--font-display);
+  font-size: 13.5px;
+  font-weight: 650;
+  fill: var(--ink);
+  paint-order: stroke;
+  stroke: var(--paper-raised);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+  transition: opacity 0.2s;
+}
+.qmap-follow .qmap-label {
+  font-size: 12px;
+  font-weight: 500;
+  fill: var(--ink-soft);
+}
+.qmap-centre .qmap-label {
+  font-size: 15.5px;
+  font-weight: 750;
+  font-stretch: 88%;
+}
+.qmap-node.is-selected .qmap-label {
+  fill: var(--accent);
+}
+/* On phones, follow-up labels appear when their question is highlighted or when zoomed in */
+@media (max-width: 34.99rem) {
+  .qmap-label {
+    font-size: 12.5px;
+  }
+  .qmap-centre .qmap-label {
+    font-size: 14px;
+  }
+  .qmap-follow .qmap-label {
+    opacity: 0;
+  }
+  .qmap-follow.is-lit .qmap-label,
+  .is-zoomed-in .qmap-follow .qmap-label {
+    opacity: 1;
+  }
+}
+
+/* Zoom buttons and hint */
+.qmap-controls {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.qmap-controls button {
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  font: 600 1.1rem/1 var(--font-display);
+  color: var(--ink-soft);
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.qmap-controls button:hover {
+  color: var(--ink);
+  border-color: var(--ink-faint);
+}
+.qmap-controls svg {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+.qmap-hint {
+  position: absolute;
+  left: 0.85rem;
+  bottom: 0.6rem;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  pointer-events: none;
+}
+.qmap-hint-touch {
+  display: none;
+}
+@media (pointer: coarse) {
+  .qmap-hint-mouse {
+    display: none;
+  }
+  .qmap-hint-touch {
+    display: inline;
+  }
+}
+.has-panel .qmap-hint {
+  opacity: 0;
+}
+
+/* ---------- Answer panel: a side panel on wide screens, a bottom sheet on phones ---------- */
+.qmap-panel {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  width: min(25rem, 46%);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-top: 4px solid var(--accent);
+  border-radius: 10px;
+  box-shadow: 0 18px 40px -18px rgb(20 33 61 / 0.45);
+  padding: 1rem 1.4rem 1.5rem;
+  opacity: 0;
+  transform: translateX(14px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.qmap-panel.is-open {
+  opacity: 1;
+  transform: none;
+}
+.qmap-grab {
+  display: none;
+}
+@media (max-width: 47.99rem) {
+  .qmap-panel {
+    position: fixed;
+    z-index: 50;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    max-height: 78svh;
+    border: 0;
+    border-top: 4px solid var(--accent);
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -12px 40px -10px rgb(20 33 61 / 0.4);
+    padding: 0.5rem var(--gutter) calc(1.5rem + env(safe-area-inset-bottom));
+    opacity: 1;
+    transform: translateY(100%);
+    transition: transform 0.28s ease;
+  }
+  .qmap-panel.is-open {
+    transform: translateY(0);
+  }
+  .qmap-grab {
+    display: block;
+    width: 2.75rem;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--rule);
+    margin: 0.25rem auto 0.6rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .qmap-panel {
+    transition: none;
+  }
+}
+
+.qmap-panel-top {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.qmap-panel-kicker {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--accent);
+  margin: 0.35rem 0 0;
+}
+.qmap-close {
+  flex: none;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: var(--paper-sunk);
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+.qmap-close svg {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+.qmap-close:hover {
+  color: var(--ink);
+}
+.qmap-panel-title {
+  font-size: var(--step-2);
+  font-stretch: 92%;
+  line-height: 1.12;
+  margin: 0.4rem 0 0.9rem;
+  outline: none;
+}
+
+/* ---------- Answer content (panel and list view share it) ---------- */
+.qa p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 0.85em;
+}
+.qa-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.75rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--ink-faint);
+  margin: 1.25rem 0 0.5rem !important;
+}
+.qa-sources,
+.qmap-panel-next ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.qa-sources li {
+  margin: 0 0 0.65rem;
+  padding-left: 0.8rem;
+  border-left: 2px solid var(--accent-tint);
+}
+.qa-sources a {
+  display: block;
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+.qa-sources span {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+  margin-top: 0.1rem;
+}
+.qa-read {
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
+  margin-top: 1.1rem;
+  font: 600 0.95rem/1.2 var(--font-display);
+  color: var(--paper-raised); /* white on the accent in light mode, navy on the lighter accent in dark mode */
+  background: var(--accent);
+  padding: 0.65rem 1.05rem;
+  border-radius: 999px;
+  text-decoration: none;
+}
+.qa-read:hover {
+  filter: brightness(1.08);
+}
+.qmap-panel-next ul li + li {
+  margin-top: 0.4rem;
+}
+.qmap-panel-next button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font: 600 0.95rem/1.3 var(--font-display);
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem;
+  cursor: pointer;
+}
+.qmap-panel-next button::before {
+  content: '↳ ';
+  color: var(--accent);
+}
+.qmap-panel-next button:hover {
+  border-color: var(--accent);
+}
+
+/* ---------- List view ---------- */
+.qmap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 46rem;
+  counter-reset: q;
+  border-bottom: 1px solid var(--rule);
+}
+.qmap-list > li {
+  counter-increment: q;
+  border-top: 1px solid var(--rule);
+}
+.qmap-list summary {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  font: 650 1.15rem/1.3 var(--font-display);
+  padding: 0.95rem 0;
+  cursor: pointer;
+  list-style: none;
+}
+.qmap-list summary::-webkit-details-marker {
+  display: none;
+}
+.qmap-list > li > details > summary::before {
+  content: counter(q, decimal-leading-zero);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+  min-width: 1.6rem;
+}
+.qmap-list summary::after {
+  content: '+';
+  margin-left: auto;
+  font-weight: 500;
+  color: var(--ink-faint);
+}
+.qmap-list details[open] > summary::after {
+  content: '−';
+}
+.qmap-list .qa {
+  padding: 0 0 1.25rem 2.35rem;
+  max-width: 40rem;
+}
+.qmap-follow {
+  list-style: none;
+  margin: 0 0 0.5rem;
+  padding: 0 0 0 2.35rem;
+}
+.qmap-follow summary {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.55rem 0;
+}
+.qmap-follow summary::before {
+  content: '↳';
+  color: var(--accent);
+}
+.qmap-follow .qa {
+  padding-left: 1.6rem;
+}
