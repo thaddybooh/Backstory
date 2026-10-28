@@ -14,7 +14,6 @@ then "Commit changes").
 
 ## Up next
 
-- singapore: Singapore's AI push, and the backlash -- Peg: Budget 2026 "all in on AI" push and PM Wong's promise of "no jobless growth"; in Oct 2026 Wong and Tharman warned about AI threatening the "bottom rung" of the career ladder. Scope: why the public is uneasy (unemployment 1.9% in Q2 2026, yet retrenchments at their highest since 2020); tech layoffs; AI users vs AI builders; who gets left behind. Ask whether the government's bet is right and what it would take not to hollow out entry-level jobs.
 - world: The Iran war energy shock -- Peg: war began 28 Feb 2026; the Strait of Hormuz disruption is the IEA's "largest supply disruption in history"; Brent back above $100 in September; Trump said prices won't fall until after the 3 Nov midterms. Scope: how oil shocks pass into inflation, interest rates and recessions; who's most exposed; comparison with 1973, 1990 and 2022; renewables and EV acceleration; the outlook for growth into 2027.
 - singapore: FirstDate and the fertility crisis -- Peg: GovTech's FirstDate pilot (~30 Sep 2026) for public officers aged 21–35, matching one date at a time with the Gale–Shapley algorithm; resident TFR 0.87 in 2025; the August baby package worth ~S$70k per child. Scope: why decades of incentives haven't worked (housing, work culture, cost of raising children, marriage decline); the market-design angle; comparisons with Japan, Korea and the Nordics; what the evidence says actually moves fertility, and whether governments should try at all.
 - world: Indonesia's market crisis -- Peg: mid-Oct 2026, the Jakarta Composite plunged ~11% after MSCI proposed reclassifying Indonesia from Emerging to Standalone market over opaque ownership and suspected coordinated trading, following a January rout and record rupiah lows. Scope: why index providers have so much power (passive fund flows); conglomerate ownership concentration; governance and capital flight; what "investability" means and how weak governance gets priced.
@@ -31,3 +30,4 @@ then "Commit changes").
 - 005 | world | Meta’s $18 billion bargain | 2026-10-25
 - 006 | singapore | Maju Forest and the endgame for BTOs | 2026-10-26
 - 007 | world | The memory squeeze | 2026-10-27
+- 008 | singapore | Singapore’s AI bet and the bottom rung | 2026-10-28
