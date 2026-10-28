@@ -3,6 +3,12 @@
 Decisions and current state, so a future session can pick up where we left off.
 Read `BRIEF.md` for the original brief and `GUIDE.md` for the owner's step-by-step instructions.
 
+## Status (28 Oct 2026)
+
+- **Topic maps added** (branch `claude/loving-heisenberg-y8hp8s`): a standalone, deeper version of the question
+  graph for a whole subject, at `/maps/<slug>/` (index at `/maps/`, "Maps" in the nav). First map: Singapore's
+  education system (10 branches, 57 questions, 60 sources, no article). See "Topic maps" below.
+
 ## Status (26 Oct 2026)
 
 - **Question graph added** (branch `claude/clever-carson-2a0amt`): an interactive graph of the questions a reader
@@ -63,6 +69,30 @@ scripts/next-issue.mjs        `npm run next`: next number, track, date (SGT) and
 scripts/check-issue.mjs       `npm run check:issue`: checks a new issue against the brief's rules
 .claude/skills/write-issue/   the step-by-step instructions Claude follows to write an issue and open a PR
 ```
+
+## Topic maps
+
+Owner's idea (28 Oct 2026): the question graph, but with many more branches and sub-branches, for a whole topic
+rather than one issue, so the site works as a gamified research tool. No article is written for a map; each node
+carries its own summarised answer and sources.
+
+- **Data:** one `src/content/maps/<slug>.json` per map. Branches have `kind` `background` (how it works, policy
+  basics; drawn slate) or `news` (a change in the news, with a `when`; drawn in the track colour). Every node has
+  `id`, `label` (≤34 chars, drawn on the node), `question`, `answer` (paragraphs, 60–220 words), `sources` (1–4)
+  and `children` (any depth). Questions also have a `type` (`basics`, `why`, `what`, `who`, `means`, `debate`),
+  optional `related` ids (dashed cross-links between branches, shown both ways) and an optional `issue` id linking
+  to a But Why? issue. Rules are in `src/lib/topicmap.mjs`; a map that breaks them stops the build.
+- **Code:** `src/components/topicmap/` (TopicMap.astro, MapItem.astro for the nested list, topicmap.ts for the
+  graph), `src/styles/topicmap.css` (builds on qmap.css), `src/pages/maps/`.
+- **How it behaves:** branches start folded with a "+N" badge; opening a node unfolds its questions and the map
+  re-lays itself out as a radial tree (each branch gets a slice of the circle in proportion to what is open).
+  "Open every branch", "Surprise me" (a random unexplored question), and colour-coded chips that highlight one
+  question type across the whole map. List view shows the same tree.
+- **Gamified bits:** questions explored (saved in the reader's browser, `localStorage` key `tmap:<slug>`), a
+  progress bar, a progress ring around each branch, a badge and a toast when a branch is fully explored.
+- **Sources:** unlike issue graphs, a map's sources are not checked against an article (there isn't one). The
+  education map's answers were written from web research on 28 Oct 2026; a few sources (moe.gov.sg,
+  schoolbag.edu.sg) could not be opened from the cloud session and were cited from search results.
 
 ## Components available in issue files
 

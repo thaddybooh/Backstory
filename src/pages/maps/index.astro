@@ -1,0 +1,36 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getMaps, countNodes } from '../../lib/topicmap-data';
+import { TRACK_LABEL } from '../../lib/issues';
+import '../../styles/topicmap.css';
+
+const maps = await getMaps();
+---
+
+<Base title="Topic maps" description="Big subjects mapped out as questions: how things work, what is changing, and why.">
+  <div class="wrap">
+    <header class="page-head">
+      <h1>Topic maps</h1>
+      <p>
+        One big subject in the middle, the background you need around it, and the changes in the news, each opened up
+        into the questions a curious reader would ask. Every answer comes with its sources.
+      </p>
+    </header>
+    <ul class="map-cards">
+      {
+        maps.map((m) => (
+          <li class="map-card" data-track={m.data.track}>
+            <a href={`/maps/${m.id}/`}>
+              <span class="tmap-kicker">{TRACK_LABEL[m.data.track]}</span>
+              <h2>{m.data.title}</h2>
+              <p>{m.data.dek}</p>
+              <p class="map-card-meta">
+                {m.data.branches.length} branches · {countNodes(m.data.branches)} questions
+              </p>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Base>

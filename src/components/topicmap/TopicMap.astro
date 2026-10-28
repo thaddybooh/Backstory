@@ -1,0 +1,104 @@
+---
+// A topic map: one subject in the middle, branches around it (grey for background, the
+// track colour for changes in the news), and questions that open up into more
+// questions. The page renders the whole map as a nested list first (the list view, and
+// what readers without JavaScript see); topicmap.ts then draws the interactive graph
+// from that list and keeps track of what the reader has explored.
+import type { TopicMap } from '../../lib/topicmap-data';
+import { QUESTION_TYPE, countNodes } from '../../lib/topicmap-data';
+import MapItem from './MapItem.astro';
+import '../../styles/qmap.css';
+import '../../styles/topicmap.css';
+
+interface Props {
+  map: TopicMap;
+}
+const { map } = Astro.props;
+const { data } = map;
+const total = countNodes(data.branches);
+const types = Object.entries(QUESTION_TYPE);
+---
+
+<section class="qmap tmap" data-track={data.track} data-map={map.id} aria-label={`Topic map: ${data.title}`}>
+  <div class="tmap-bar">
+    <div class="tmap-progress" aria-live="polite">
+      <div class="tmap-progress-text">
+        <strong><span data-explored>0</span> of {total}</strong> questions explored
+        <span class="tmap-badges" data-badges></span>
+      </div>
+      <div class="tmap-meter" role="progressbar" aria-label="Questions explored" aria-valuemin="0" aria-valuemax={total} aria-valuenow="0">
+        <span></span>
+      </div>
+    </div>
+    <div class="tmap-actions">
+      <button type="button" class="tmap-btn tmap-btn-strong" data-action="surprise">Surprise me</button>
+      <button type="button" class="tmap-btn" data-action="expand">Open every branch</button>
+      <div class="qmap-toggle" role="group" aria-label="Show questions as">
+        <button type="button" data-view="graph" aria-pressed="true">Graph</button>
+        <button type="button" data-view="list" aria-pressed="false">List</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="tmap-key" role="group" aria-label="Highlight one kind of question">
+    <span class="tmap-key-label">Highlight:</span>
+    {
+      types.map(([type, label]) => (
+        <button type="button" class="tmap-chip" data-filter={type} aria-pressed="false">
+          <span class="tmap-tag" data-type={type}>
+            {label}
+          </span>
+        </button>
+      ))
+    }
+    <span class="tmap-key-legend">
+      <span class="tmap-swatch tmap-swatch-bg"></span> Background
+      <span class="tmap-swatch tmap-swatch-news"></span> In the news
+      <span class="tmap-swatch tmap-swatch-link"></span> Connected idea
+    </span>
+  </div>
+
+  <div class="qmap-main">
+    <div class="qmap-stage tmap-stage" data-title={data.title}>
+      <p class="qmap-loading" aria-hidden="true">Loading the map…</p>
+      <div class="qmap-controls" role="group" aria-label="Map view">
+        <button type="button" data-zoom="in" aria-label="Zoom in">+</button>
+        <button type="button" data-zoom="out" aria-label="Zoom out">−</button>
+        <button type="button" data-zoom="fit" aria-label="Fit the map to the screen">
+          <svg viewBox="0 0 16 16" aria-hidden="true"
+            ><path d="M1 5V1h4M11 1h4v4M15 11v4h-4M5 15H1v-4" fill="none" stroke="currentColor" stroke-width="1.6"
+            ></path></svg
+          >
+        </button>
+      </div>
+      <p class="qmap-hint">
+        <span class="qmap-hint-mouse">Click a branch to open it · drag to move · Ctrl/⌘ + scroll to zoom</span>
+        <span class="qmap-hint-touch">Tap a branch to open it · pinch to zoom</span>
+      </p>
+      <p class="tmap-toast" role="status" hidden></p>
+      <aside class="qmap-panel" role="dialog" aria-modal="false" aria-labelledby={`tmap-panel-${map.id}`} hidden>
+        <div class="qmap-grab" aria-hidden="true"></div>
+        <div class="qmap-panel-top">
+          <p class="qmap-panel-kicker"></p>
+          <button type="button" class="qmap-close" aria-label="Close the answer">
+            <svg viewBox="0 0 16 16" aria-hidden="true"
+              ><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.8"></path></svg
+            >
+          </button>
+        </div>
+        <h3 class="qmap-panel-title" id={`tmap-panel-${map.id}`} tabindex="-1"></h3>
+        <div class="qmap-panel-body"></div>
+        <div class="qmap-panel-next"></div>
+      </aside>
+    </div>
+
+    <ol class="qmap-list tmap-list">
+      {data.branches.map((b) => <MapItem node={b} branch={b} depth={1} />)}
+    </ol>
+  </div>
+</section>
+
+<script>
+  const section = document.querySelector<HTMLElement>('.tmap');
+  if (section) import('./topicmap').then((m) => m.mountTopicMap(section));
+</script>

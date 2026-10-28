@@ -67,4 +67,46 @@ const graphs = defineCollection({
   }),
 });
 
-export const collections = { issues, graphs };
+// Topic maps: a standalone, deeper question graph for a whole subject (not one issue),
+// saved as src/content/maps/<slug>.json and published at /maps/<slug>/. Branches hold
+// questions, and questions can hold more questions, as deep as the topic needs. The
+// rules beyond this shape (unique ids, real cross-links, answer length) live in
+// src/lib/topicmap.mjs.
+type MapNode = z.infer<typeof followUp> & {
+  type: 'basics' | 'why' | 'what' | 'who' | 'means' | 'debate';
+  related: string[];
+  issue?: string;
+  children: MapNode[];
+};
+const mapNode: z.ZodType<MapNode> = z.lazy(() =>
+  followUp.omit({ section: true }).extend({
+    // What kind of question it is; drives the colour key and the "find" filter.
+    type: z.enum(['basics', 'why', 'what', 'who', 'means', 'debate']),
+    // Ids of nodes in other branches this one connects to (drawn as dashed lines).
+    related: z.array(z.string()).default([]),
+    // Optional id of a But Why? issue that covers this in depth.
+    issue: z.string().optional(),
+    children: z.array(mapNode).default([]),
+  }),
+) as z.ZodType<MapNode>;
+const maps = defineCollection({
+  loader: glob({ pattern: '**/*.json', base: './src/content/maps' }),
+  schema: z.object({
+    title: z.string(),
+    track: z.enum(['world', 'singapore']),
+    updated: z.coerce.date(),
+    dek: z.string(),
+    intro: z.string(),
+    branches: z.array(
+      followUp.omit({ section: true }).extend({
+        // "background" explains how things work; "news" is a change in the news.
+        kind: z.enum(['background', 'news']),
+        // When the news happened, shown on the node, e.g. "Sep 2026".
+        when: z.string().optional(),
+        children: z.array(mapNode).default([]),
+      }),
+    ),
+  }),
+});
+
+export const collections = { issues, graphs, maps };

@@ -1,0 +1,46 @@
+---
+import Base from '../../layouts/Base.astro';
+import TopicMap from '../../components/topicmap/TopicMap.astro';
+import { getMaps, countNodes } from '../../lib/topicmap-data';
+import { formatLongDate, TRACK_LABEL } from '../../lib/issues';
+
+export async function getStaticPaths() {
+  const maps = await getMaps();
+  return maps.map((map) => ({ params: { slug: map.id }, props: { map } }));
+}
+
+const { map } = Astro.props;
+const { data } = map;
+const sources = new Set<string>();
+const collect = (nodes: { sources: { url: string }[]; children?: any[] }[]) =>
+  nodes.forEach((n) => {
+    n.sources.forEach((s) => sources.add(s.url));
+    collect(n.children ?? []);
+  });
+collect(data.branches);
+---
+
+<Base title={`${data.title}: topic map`} description={data.dek} track={data.track}>
+  <div class="tmap-page" data-track={data.track}>
+    <header class="tmap-head">
+      <p class="tmap-kicker">Topic map · {TRACK_LABEL[data.track]}</p>
+      <h1>{data.title}</h1>
+      <p class="tmap-dek">{data.dek}</p>
+      <p class="tmap-intro">{data.intro}</p>
+      <p class="tmap-meta">
+        {data.branches.length} branches · {countNodes(data.branches)} questions · {sources.size} sources · Updated{' '}
+        <time datetime={data.updated.toISOString().slice(0, 10)}>{formatLongDate(data.updated)}</time>
+      </p>
+    </header>
+
+    <TopicMap map={map} />
+
+    <div class="tmap-note">
+      <p>
+        Every answer is a short summary written from the sources listed under it, so you can check it and dig into the
+        nuances. Policies change: where a decision is still under review, the answer says so. Your progress is saved in
+        this browser only.
+      </p>
+    </div>
+  </div>
+</Base>

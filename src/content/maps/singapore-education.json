@@ -1,0 +1,1456 @@
+{
+  "title": "Singapore’s education system",
+  "track": "singapore",
+  "updated": "2026-10-28",
+  "dek": "How Singapore’s schools work, the ideas behind them, and every big change in the news, one question at a time.",
+  "intro": "Start with the grey branches if you are new: they explain how the system works and the policy ideas behind it. The red branches are the changes in the news, each with the same questions: why is it happening, what is changing, who does it affect and what does it mean. Dashed lines connect ideas across branches.",
+  "branches": [
+    {
+      "id": "how-it-works",
+      "label": "How the system works",
+      "kind": "background",
+      "question": "How is Singapore’s school system set up?",
+      "answer": [
+        "Think of it as a ladder with a few big sorting points. Children go to preschool (mostly private or government-supported operators), then six years of compulsory primary school ending in the Primary School Leaving Examination (PSLE). The PSLE score decides which secondary school a child goes to.",
+        "Secondary school lasts four or five years. After it, students split three ways: junior colleges for A-levels (the usual route to university), polytechnics for three-year diplomas, or the Institute of Technical Education (ITE) for hands-on vocational certificates. Six autonomous universities sit at the top, and the pathways now connect, so ITE graduates can move to polytechnics and polytechnic graduates to university."
+      ],
+      "sources": [
+        {
+          "title": "Education in Singapore",
+          "publication": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Education_in_Singapore"
+        },
+        {
+          "title": "Vocational education and training in Singapore",
+          "publication": "OECD",
+          "url": "https://www.oecd.org/en/publications/vocational-education-and-training-systems-in-nine-countries_1a86eb6c-en/full-report/vocational-education-and-training-in-singapore_eb96b3e9.html"
+        }
+      ],
+      "children": [
+        {
+          "id": "what-is-psle",
+          "label": "What is the PSLE?",
+          "type": "basics",
+          "question": "What is the PSLE, and why does it matter so much?",
+          "answer": [
+            "The Primary School Leaving Examination is a national exam every child sits at the end of Primary 6, usually at age 12. It covers English, Mathematics, Science and a Mother Tongue language.",
+            "Since 2021 each subject is graded in one of eight Achievement Levels (AL1 is best), and the four are added into a score from 4 to 32. That score is the main way children are posted to secondary schools: popular schools fill up first with the best scores, and ties are broken by citizenship, the order of choices and then a ballot. Because it decides the next school at age 12, families treat it as the first high-stakes moment in a child’s life."
+          ],
+          "related": [
+            "psle-what-on-table",
+            "sbb-means"
+          ],
+          "sources": [
+            {
+              "title": "Changes to PSLE scoring and Secondary 1 posting from 2021",
+              "publication": "Xishan Primary School (MOE briefing)",
+              "url": "https://xishanpri.moe.edu.sg/files/Changes%20to%20PSLE%20Scoring%20&%20S1%20Posting%20from%202021.pdf"
+            },
+            {
+              "title": "Education in Singapore",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Education_in_Singapore"
+            }
+          ],
+          "children": [
+            {
+              "id": "why-al-scoring",
+              "label": "Why scrap the T-score?",
+              "type": "why",
+              "question": "Why did the PSLE switch from T-scores to Achievement Levels in 2021?",
+              "answer": [
+                "The old T-score, used since the 1970s, ranked each child against everyone else in the cohort, producing around 200 possible totals. A child could gain or lose a secondary school place over a single point, so families fought for every mark.",
+                "The Ministry of Education (MOE) announced in 2019 that from 2021 scores would show a child’s level against a fixed standard instead, in broad bands, leaving only 29 possible scores. The aim was to stop finely sorting 12-year-olds and to reward what a child has learned rather than how they did against peers. Critics noted that the competition did not disappear: it moved to the band edges and to tie-breakers."
+              ],
+              "sources": [
+                {
+                  "title": "2021 changes to the PSLE scoring system",
+                  "publication": "MindChamps",
+                  "url": "https://www.mindchamps.org/blog/2021-changes-psle-scoring-system/"
+                },
+                {
+                  "title": "Changes to PSLE scoring and Secondary 1 posting from 2021",
+                  "publication": "Xishan Primary School (MOE briefing)",
+                  "url": "https://xishanpri.moe.edu.sg/files/Changes%20to%20PSLE%20Scoring%20&%20S1%20Posting%20from%202021.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "after-secondary",
+          "label": "What comes after secondary?",
+          "type": "basics",
+          "question": "What are the routes after secondary school?",
+          "answer": [
+            "There are three main doors. Junior colleges (two years, or three at Millennia Institute) prepare students for A-levels and university. Polytechnics offer three-year diplomas tied to industries, and draw students from secondary schools, junior colleges and ITE. ITE trains students in technical and vocational skills, and its graduates can go on to polytechnic diplomas or the Work-Study Diploma while employed.",
+            "Some top schools run the Integrated Programme, which lets students skip the O-levels and go straight to A-levels or the International Baccalaureate after six years. The government has steadily widened university places, setting a target for 60% of each cohort to get a publicly funded degree by 2025, up from about 50%."
+          ],
+          "related": [
+            "ite-work-study"
+          ],
+          "sources": [
+            {
+              "title": "Polytechnics draw students from secondary schools, JCs and ITE through multiple pathways",
+              "publication": "Temasek Polytechnic",
+              "url": "https://www.tp.edu.sg/about-tp/media-centre/tp-in-the-news/Polytechnics-draw-students-from-secondary-schools-JCs-and-ITE-through-multiple-pathways.html"
+            },
+            {
+              "title": "Vocational education and training in Singapore",
+              "publication": "OECD",
+              "url": "https://www.oecd.org/en/publications/vocational-education-and-training-systems-in-nine-countries_1a86eb6c-en/full-report/vocational-education-and-training-in-singapore_eb96b3e9.html"
+            },
+            {
+              "title": "Education in Singapore",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Education_in_Singapore"
+            }
+          ]
+        },
+        {
+          "id": "who-pays",
+          "label": "Who runs it, who pays?",
+          "type": "basics",
+          "question": "Who runs Singapore’s schools, and who pays for them?",
+          "answer": [
+            "The Ministry of Education runs almost all schools directly, sets the curriculum, trains and posts teachers (through the National Institute of Education), and decides admissions rules. That central control is why a single announcement can change every school at once.",
+            "The state pays for most of it. MOE’s spending was estimated at about S$15.3 billion for 2025, one of the largest items in the national budget. Primary school has no tuition fees for citizens, only small miscellaneous fees, while non-citizens pay much more. Every citizen child also has an Edusave account the government tops up, and low-income families get extra help through the Financial Assistance Scheme."
+          ],
+          "related": [
+            "money-cradle"
+          ],
+          "sources": [
+            {
+              "title": "Ministry of Education: Budget 2025 expenditure estimates",
+              "publication": "Ministry of Finance",
+              "url": "https://mof.gov.sg/docs/librariesprovider3/budget2025/download/pdf/27-moe-2025.pdf"
+            },
+            {
+              "title": "Education financing in Singapore",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Education_financing_in_Singapore"
+            },
+            {
+              "title": "Education in Singapore",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Education_in_Singapore"
+            }
+          ]
+        },
+        {
+          "id": "compulsory",
+          "label": "Is school compulsory?",
+          "type": "basics",
+          "question": "Is school compulsory in Singapore?",
+          "answer": [
+            "Only primary school, and only since quite recently. The Compulsory Education Act was passed in 2000 and took effect for primary education in 2003. Parents who fail to enrol their child commit an offence, though families can apply for exemptions such as homeschooling or full-time religious schools.",
+            "Children with moderate to severe special educational needs were exempt until 2019, when the law was extended to cover them, so they now must attend school too, including government-funded special education (SPED) schools. Secondary school is not compulsory by law, but in practice nearly every child goes."
+          ],
+          "related": [
+            "sen-basics"
+          ],
+          "sources": [
+            {
+              "title": "Education in Singapore",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Education_in_Singapore"
+            },
+            {
+              "title": "MOE FY2025 Committee of Supply debate response by Second Minister for Education Dr Maliki Osman",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/news/speeches/20250306-moe-fy2025-committee-of-supply-debate-response-by-second-minister-for-education-dr-maliki-osman"
+            }
+          ]
+        },
+        {
+          "id": "bilingual",
+          "label": "Why two languages?",
+          "type": "basics",
+          "question": "Why must every student learn English and a Mother Tongue?",
+          "answer": [
+            "This is the bilingual policy, one of Singapore’s oldest. English is the language of teaching and the working language, chosen in the 1960s because it was the language of trade and technology and was neutral between the Chinese, Malay and Indian communities. Each student also studies a Mother Tongue (usually Mandarin, Malay or Tamil), which is examined and needed for local university admission.",
+            "Lee Kuan Yew argued the Mother Tongue kept people rooted in their culture. The trade-off is lasting: the policy made English dominant at home too, and observers say Malay, Tamil and Chinese use has weakened, which is why MOE keeps adjusting how Mother Tongue is taught and examined."
+          ],
+          "related": [
+            "goh-report"
+          ],
+          "sources": [
+            {
+              "title": "From Chinese-language education to bilingual education system (1960s to 1980s)",
+              "publication": "Singapore Chinese Cultural Centre",
+              "url": "https://culturepaedia.singaporeccc.org.sg/language-education/from-chinese-language-education-to-bilingual-education-system-1960s-to-1980s/"
+            },
+            {
+              "title": "Keeping the mother tongues alive: Singapore’s bilingual challenge",
+              "publication": "SUTD (The Sunday Times)",
+              "url": "https://www.sutd.edu.sg/news-listing/keeping-the-mother-tongues-alive-singapores-bilingual-challenge/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "policy-101",
+      "label": "Policy 101: the big ideas",
+      "kind": "background",
+      "question": "What ideas sit behind Singapore’s education policy?",
+      "answer": [
+        "Three ideas explain most decisions. Meritocracy: rewards should go to ability and effort, not family background, so the state sorts students by results. Pragmatism: education exists largely to give a small country with no natural resources a skilled workforce. And central planning: MOE designs one national system and changes it from the top.",
+        "Since about 2019 a fourth idea has pushed back: that the sorting has gone too far, breeding stress, tuition spending and early labels. Most of today’s news, from ending streaming to reviewing the PSLE, is the government trying to keep meritocracy while softening how early and how finely it sorts children."
+      ],
+      "sources": [
+        {
+          "title": "Good meritocracy, bad meritocracy",
+          "publication": "IPS Commons (Donald Low)",
+          "url": "https://ipscommons.sg/good-meritocracy-bad-meritocracy/"
+        },
+        {
+          "title": "MOE considering changes to PSLE to slow down education ‘arms race’",
+          "publication": "AsiaOne",
+          "url": "https://www.asiaone.com/singapore/moe-considering-changes-psle-slow-down-education-arms-race"
+        }
+      ],
+      "children": [
+        {
+          "id": "meritocracy",
+          "label": "What is meritocracy?",
+          "type": "basics",
+          "question": "What does meritocracy mean in Singapore’s schools?",
+          "answer": [
+            "Meritocracy is the promise to equalise opportunities, not outcomes: anyone can rise if they do well, and places in top schools, scholarships and jobs go to those with the best results. In a young, multi-racial country it was meant to stop privilege, race or connections deciding who gets ahead, and exams were seen as the fairest, most objective test.",
+            "The policy scholar Donald Low argues the question is not whether to have meritocracy but which kind. A system that rewards effort motivates everyone; one that mainly sorts people by ‘type’ at a young age can lock in advantages, because wealthier families can buy tuition, live near popular schools and use alumni links."
+          ],
+          "related": [
+            "p1-why",
+            "tuition"
+          ],
+          "sources": [
+            {
+              "title": "Good meritocracy, bad meritocracy",
+              "publication": "IPS Commons (Donald Low)",
+              "url": "https://ipscommons.sg/good-meritocracy-bad-meritocracy/"
+            },
+            {
+              "title": "Meritocracy and inequality in Singapore’s schools (Liang and Warrier)",
+              "publication": "Singapore Policy Journal (Harvard Kennedy School)",
+              "url": "https://studentreview.hks.harvard.edu/wp-content/uploads/2016/04/spj-liang-and-warrier-2.pdf"
+            }
+          ],
+          "children": [
+            {
+              "id": "meritocracy-debate",
+              "label": "Is it still fair?",
+              "type": "debate",
+              "question": "Does meritocracy still give everyone a fair chance?",
+              "answer": [
+                "Critics say no longer fully. Children start from different places: in 2023 the richest fifth of households spent about S$163 a month on tuition, the poorest fifth about S$36. Popular primary schools sit in expensive areas and give priority to alumni families. Heavy sorting from age 12 can fix a child’s direction early and amplify unequal starts.",
+                "Defenders reply that the alternative, letting connections decide, would be worse, and that the government already spends heavily to level the field (free primary education, Edusave, preschool subsidies, financial aid). The reforms in this map are mostly attempts to keep the principle while removing the parts that favour the well-off."
+              ],
+              "related": [
+                "p1-what",
+                "tuition"
+              ],
+              "sources": [
+                {
+                  "title": "Meritocracy and inequality in Singapore’s schools (Liang and Warrier)",
+                  "publication": "Singapore Policy Journal (Harvard Kennedy School)",
+                  "url": "https://studentreview.hks.harvard.edu/wp-content/uploads/2016/04/spj-liang-and-warrier-2.pdf"
+                },
+                {
+                  "title": "Singapore families spent S$1.8 billion on private tuition in 2023",
+                  "publication": "Malay Mail",
+                  "url": "https://www.malaymail.com/news/singapore/2025/01/20/singapore-families-spent-s18-billion-on-private-tuition-in-2023-with-the-richest-spending-over-s162-per-month/163937"
+                },
+                {
+                  "title": "Good meritocracy, bad meritocracy",
+                  "publication": "IPS Commons (Donald Low)",
+                  "url": "https://ipscommons.sg/good-meritocracy-bad-meritocracy/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "good-school",
+          "label": "“Every school a good school”",
+          "type": "basics",
+          "question": "What does “every school is a good school” mean?",
+          "answer": [
+            "It is the government’s stated goal that a child should get a good education whichever school they attend, so parents need not chase a few famous names. MOE backs it by spreading resources, good teachers and programmes across all schools rather than concentrating them.",
+            "The slogan is contested because parents can see the differences: a handful of long-established schools are heavily oversubscribed, feed many scholars and ministers, and have strong alumni networks. Several recent changes, such as replacing the Gifted Education Programme with programmes in every school and reserving more Primary 1 places for families without connections, are designed to make the slogan more true."
+          ],
+          "related": [
+            "gep-why",
+            "p1-what"
+          ],
+          "sources": [
+            {
+              "title": "Gifted Education Programme (Singapore)",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Gifted_Education_Programme_(Singapore)"
+            },
+            {
+              "title": "Meritocracy and inequality in Singapore’s schools (Liang and Warrier)",
+              "publication": "Singapore Policy Journal (Harvard Kennedy School)",
+              "url": "https://studentreview.hks.harvard.edu/wp-content/uploads/2016/04/spj-liang-and-warrier-2.pdf"
+            }
+          ]
+        },
+        {
+          "id": "how-policy-made",
+          "label": "How does policy get made?",
+          "type": "basics",
+          "question": "How does education policy actually get made in Singapore?",
+          "answer": [
+            "Big changes usually follow a yearly rhythm. In February the Budget sets spending; in March each ministry defends its budget in Parliament at the Committee of Supply (COS) debate, where the Education Minister announces new policies. In August the Prime Minister’s National Day Rally is where the biggest shifts are unveiled, such as ending the Gifted Education Programme in 2024.",
+            "Between those moments, MPs ask parliamentary questions, MOE answers in written replies and press releases, and ideas are tested in consultations. In 2026 MOE launched ‘Education Conversations’, a multi-year consultation on exam stakes and admissions. If you want to follow a policy, these are the documents to read."
+          ],
+          "related": [
+            "psle-who-decides"
+          ],
+          "sources": [
+            {
+              "title": "Committee of Supply 2026",
+              "publication": "Ministry of Education",
+              "url": "https://cos.moe.gov.sg/2026/"
+            },
+            {
+              "title": "National Day Rally 2026",
+              "publication": "Prime Minister’s Office",
+              "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
+            },
+            {
+              "title": "Education Conversations",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/news/press-releases/20260528-education-conversations"
+            }
+          ],
+          "children": [
+            {
+              "id": "key-players",
+              "label": "Who are the key players?",
+              "type": "who",
+              "question": "Who are the key people and groups shaping education policy?",
+              "answer": [
+                "The Minister for Education, Desmond Lee, took office on 23 May 2025 after the general election, succeeding Chan Chun Sing. He is supported by junior ministers such as Senior Minister of State David Neo and Minister of State Jasmin Lau. Prime Minister Lawrence Wong sets the overall direction, often through the National Day Rally.",
+                "Around them are school leaders and teachers who carry out changes, researchers at the National Institute of Education, MPs (including opposition MPs who question policies in Parliament), parents, who are a powerful and vocal lobby on admissions, and students themselves, who are now invited to MOE’s consultations."
+              ],
+              "sources": [
+                {
+                  "title": "Desmond Lee (Singaporean politician)",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/Desmond_Lee_(Singaporean_politician)"
+                },
+                {
+                  "title": "Committee of Supply 2026",
+                  "publication": "Ministry of Education",
+                  "url": "https://cos.moe.gov.sg/2026/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "history",
+          "label": "How did we get here?",
+          "type": "basics",
+          "question": "How has Singapore’s education system changed since independence?",
+          "answer": [
+            "Roughly three eras. Survival (1960s–70s): build schools fast, unify a system split by language, and train workers. Efficiency (1979–1990s): after the Goh Report, students were streamed by ability so each could learn at a suitable pace, which cut drop-outs sharply. Ability-driven (1997 onwards): ‘Thinking Schools, Learning Nation’ (1997) and ‘Teach Less, Learn More’ (2005) tried to move from rote learning to thinking skills.",
+            "Since 2019 the theme has been easing the pressure: mid-year exams removed (by 2023), PSLE scoring changed (2021), streaming abolished (from 2024), the GEP replaced, and now a review of the PSLE itself."
+          ],
+          "related": [
+            "sbb"
+          ],
+          "sources": [
+            {
+              "title": "Education in Singapore",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Education_in_Singapore"
+            },
+            {
+              "title": "The Report on Ministry of Education by Goh Keng Swee",
+              "publication": "Roots.gov.sg (National Heritage Board)",
+              "url": "https://www.roots.gov.sg/Collection-landing/listing/1322734"
+            }
+          ],
+          "children": [
+            {
+              "id": "goh-report",
+              "label": "What was the Goh Report?",
+              "type": "basics",
+              "question": "What was the 1979 Goh Report, and why does it still matter?",
+              "answer": [
+                "In 1978 Deputy Prime Minister Goh Keng Swee led a team to diagnose problems in schools. Its report, submitted on 9 February 1979, found high ‘wastage’ (many pupils dropping out or failing), low literacy and ineffective bilingualism: more than 60% of pupils sitting the PSLE and O-levels failed one or both languages.",
+                "Its fix, the New Education System, made English the main language of teaching and sorted children into streams by ability so slower learners got more time. Streaming worked on its own terms but created labels, such as ‘Normal (Technical)’, that followed students for life. Abolishing streaming in 2024 undid the Goh Report’s most famous idea, 45 years later."
+              ],
+              "related": [
+                "sbb-why"
+              ],
+              "sources": [
+                {
+                  "title": "The Report on Ministry of Education by Goh Keng Swee",
+                  "publication": "Roots.gov.sg (National Heritage Board)",
+                  "url": "https://www.roots.gov.sg/Collection-landing/listing/1322734"
+                },
+                {
+                  "title": "From Chinese-language education to bilingual education system (1960s to 1980s)",
+                  "publication": "Singapore Chinese Cultural Centre",
+                  "url": "https://culturepaedia.singaporeccc.org.sg/language-education/from-chinese-language-education-to-bilingual-education-system-1960s-to-1980s/"
+                }
+              ]
+            },
+            {
+              "id": "mid-year-exams",
+              "label": "Why drop mid-year exams?",
+              "type": "why",
+              "question": "Why did schools scrap mid-year exams?",
+              "answer": [
+                "MOE removed mid-year exams step by step, finishing for all primary and secondary levels in 2023, and then in junior colleges from the 2024 intake. It said this freed about three weeks of curriculum time per level for more varied teaching, and gave room to build life skills such as coping with failure.",
+                "It was part of a ‘Learn for Life’ push to reduce how often children are tested. Critics asked whether the pressure simply moved to year-end exams and to tuition, and MPs pressed MOE on the effect of the change in Parliament in 2023."
+              ],
+              "sources": [
+                {
+                  "title": "Effect of removing mid-year examinations (parliamentary reply)",
+                  "publication": "Ministry of Education",
+                  "url": "https://www.moe.gov.sg/news/parliamentary-replies/20231003-effect-of-removing-mid-year-examinations"
+                },
+                {
+                  "title": "Removal of mid-year exams will help nurture joy for learning",
+                  "publication": "Ministry of Education",
+                  "url": "https://moe.gov.sg/news/forum-letter-replies/20220317-removal-of-mid-year-exams-will-help-nurture-joy-for-learning"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pressure",
+      "label": "The pressure cooker",
+      "kind": "background",
+      "question": "Why do so many Singapore students and parents feel under pressure?",
+      "answer": [
+        "Because the stakes feel high and early. Exam results decide school placement from age 12, school placement shapes later routes, and good routes are linked in people’s minds to good jobs and pay. When everyone tries harder to keep their relative position, effort escalates without anyone getting ahead: what the Education Minister calls an ‘arms race’.",
+        "The results are world-leading test scores, a S$1.8 billion tuition industry and real worries about young people’s mental health. These three facts sit in tension, and almost every reform in the news is trying to keep the first while reducing the other two."
+      ],
+      "sources": [
+        {
+          "title": "MOE considering changes to PSLE to slow down education ‘arms race’",
+          "publication": "AsiaOne",
+          "url": "https://www.asiaone.com/singapore/moe-considering-changes-psle-slow-down-education-arms-race"
+        },
+        {
+          "title": "Good meritocracy, bad meritocracy",
+          "publication": "IPS Commons (Donald Low)",
+          "url": "https://ipscommons.sg/good-meritocracy-bad-meritocracy/"
+        }
+      ],
+      "children": [
+        {
+          "id": "tuition",
+          "label": "How big is tuition?",
+          "type": "what",
+          "question": "How much do Singapore families spend on tuition?",
+          "answer": [
+            "About S$1.8 billion in 2023, according to the Household Expenditure Survey, up from S$1.1 billion in 2013 and S$1.4 billion in 2018. On average, households spent about S$105 a month, up from about S$88 in 2018.",
+            "The gap by income is wide: the richest fifth of households spent about S$163 a month, the poorest fifth about S$36. Tuition is largely unregulated. Many parents now treat it as necessary rather than optional, partly because they believe other children are getting it, which is the arms-race logic in action."
+          ],
+          "related": [
+            "meritocracy-debate",
+            "psle-why"
+          ],
+          "sources": [
+            {
+              "title": "Singapore families spent S$1.8 billion on private tuition in 2023",
+              "publication": "Malay Mail",
+              "url": "https://www.malaymail.com/news/singapore/2025/01/20/singapore-families-spent-s18-billion-on-private-tuition-in-2023-with-the-richest-spending-over-s162-per-month/163937"
+            },
+            {
+              "title": "Parents seem persuaded that tuition is necessary and not optional",
+              "publication": "Department of Statistics (The Straits Times)",
+              "url": "https://www.singstat.gov.sg/news/parents-seem-persuaded-that-tuition-is-necessary-and-not-optional"
+            },
+            {
+              "title": "Tuition has ballooned to an S$1.4b industry in Singapore. Should we be concerned?",
+              "publication": "NUS Social Service Research Network",
+              "url": "https://fass.nus.edu.sg/srn/2019/09/17/tuition-has-ballooned-to-an-s1-4b-industry-in-singapore-should-we-be-concerned/"
+            }
+          ]
+        },
+        {
+          "id": "pisa",
+          "label": "Is it really the best?",
+          "type": "what",
+          "question": "How does Singapore compare with other countries?",
+          "answer": [
+            "On the most-watched international test, it comes top. In PISA 2022, the OECD’s test of 15-year-olds in 81 countries and economies, Singapore ranked first in mathematics (575 points), reading (543) and science (561), significantly ahead of everyone else.",
+            "That is why other countries study Singapore’s maths teaching and teacher training. But PISA measures what tests can measure. It says little about creativity, stress, or whether students enjoy learning, which are exactly the things Singapore’s own ministers now say they want to improve."
+          ],
+          "sources": [
+            {
+              "title": "PISA 2022 results (Volume I): executive summary",
+              "publication": "OECD",
+              "url": "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/executive-summary_077a9867.html"
+            },
+            {
+              "title": "Singapore leads way as Asia tops world education class",
+              "publication": "Malay Mail",
+              "url": "https://www.malaymail.com/news/singapore/2023/12/05/singapore-leads-way-as-asia-tops-world-education-class/106008"
+            }
+          ],
+          "children": [
+            {
+              "id": "why-reform-top",
+              "label": "If it’s top, why reform?",
+              "type": "means",
+              "question": "If Singapore already tops the world, why keep changing the system?",
+              "answer": [
+                "Because the government thinks the costs of the current model are rising while its benefits are levelling off. In his first National Day Rally in 2024 PM Lawrence Wong called for a ‘reset’ away from a narrow definition of success, and in 2026 Education Minister Desmond Lee said earlier reforms had not stopped the arms race.",
+                "There is also an economic argument: an AI-shaped economy may reward adaptability and self-directed learning more than exam technique. The counter-argument, which Mr Lee acknowledged, is ‘don’t dumb our system down’: rigour is what produced the results, and loosening it carries real risk."
+              ],
+              "related": [
+                "psle-debate",
+                "ai-classroom"
+              ],
+              "sources": [
+                {
+                  "title": "‘Major reset’ in maiden National Day Rally: PM Wong outlines vision for a society beyond the rat race",
+                  "publication": "Malay Mail",
+                  "url": "https://www.malaymail.com/news/singapore/2024/08/19/major-reset-in-maiden-national-day-rally-singapore-pm-wong-outlines-vision-for-a-society-beyond-the-rat-race/147449"
+                },
+                {
+                  "title": "MOE considering changes to PSLE to slow down education ‘arms race’",
+                  "publication": "AsiaOne",
+                  "url": "https://www.asiaone.com/singapore/moe-considering-changes-psle-slow-down-education-arms-race"
+                },
+                {
+                  "title": "PISA 2022 results (Volume I): executive summary",
+                  "publication": "OECD",
+                  "url": "https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en/full-report/executive-summary_077a9867.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mental-health",
+          "label": "Are young people OK?",
+          "type": "who",
+          "question": "What do we know about young people’s mental health?",
+          "answer": [
+            "The first national youth mental health study by the Institute of Mental Health (IMH), with NUS, surveyed people aged 15 to 35 and found about 1 in 3 reported severe or extremely severe symptoms of depression, anxiety or stress. It was designed partly to look at academic stress, but the factors most linked to poor mental health included cyberbullying, body-image worries and more than three hours a day on social media.",
+            "At the 2026 National Day Rally, PM Wong said 1 in 6 young people aged 10 to 24 show signs of problematic social media use. That is why phone rules and social media age checks now sit alongside exam reform."
+          ],
+          "related": [
+            "phones"
+          ],
+          "sources": [
+            {
+              "title": "The National Youth Mental Health Study",
+              "publication": "Institute of Mental Health",
+              "url": "https://www.nhghealth.com.sg/imh/research/research-programmes/the-national-youth-mental-health-study"
+            },
+            {
+              "title": "National Day Rally 2026",
+              "publication": "Prime Minister’s Office",
+              "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sbb",
+      "label": "Streaming ends",
+      "kind": "news",
+      "when": "2024 to 2027",
+      "question": "What replaced streaming in secondary schools?",
+      "answer": [
+        "Until 2023, Secondary 1 students were placed into one of three streams, Express, Normal (Academic) or Normal (Technical), which set every subject they took and the exam they sat. From the 2024 Secondary 1 cohort, streams are gone. This is called Full Subject-Based Banding (Full SBB).",
+        "Students now take each subject at a level that suits them, G1, G2 or G3 (G3 is the most demanding), and can move up or down subject by subject. From 2027 everyone sits one national exam, the Singapore-Cambridge Secondary Education Certificate (SEC), which replaces the O-level and N-level certificates. 2026 is the last year of O-levels."
+      ],
+      "sources": [
+        {
+          "title": "Full Subject-Based Banding",
+          "publication": "Anglo-Chinese School (Barker Road)",
+          "url": "https://www.acsbr.moe.edu.sg/education/academic/full-subject-based-banding/"
+        },
+        {
+          "title": "Singapore students to enter secondary school via posting groups mapped from current streams",
+          "publication": "AACRAO EDGE",
+          "url": "https://www.aacrao.org/edge/emergent-news/singapore-students-to-enter-secondary-school-via-posting-groups-mapped-from-current-streams-form-classes-will-be-mixed/"
+        },
+        {
+          "title": "List of secondary schools in Singapore",
+          "publication": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/List_of_secondary_schools_in_Singapore"
+        }
+      ],
+      "children": [
+        {
+          "id": "sbb-why",
+          "label": "Why end streaming?",
+          "type": "why",
+          "question": "Why did Singapore abolish streaming?",
+          "answer": [
+            "Streaming was introduced in 1980 to cut drop-out rates, and it did. But over time the stream names became labels. Students in the Normal streams often felt written off, the label stuck to their identity, and the system could not easily handle a student who was strong in maths but weak in English.",
+            "MOE announced the change in 2019 and tested it first: 28 secondary schools piloted parts of Full SBB from 2020, mixing streams in form classes and letting Normal-stream students take humanities at a more demanding level. From 2024 every school does it, so students are grouped by subject rather than as whole people."
+          ],
+          "related": [
+            "goh-report"
+          ],
+          "sources": [
+            {
+              "title": "One secondary education, many subject bands: 28 secondary schools to pilot Full Subject-Based Banding",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/news/press-releases/20190903-one-secondary-education-many-subject-bands-28-secondary-schools-to-pilot-full-subject-based-banding"
+            },
+            {
+              "title": "Singapore students to enter secondary school via posting groups mapped from current streams",
+              "publication": "AACRAO EDGE",
+              "url": "https://www.aacrao.org/edge/emergent-news/singapore-students-to-enter-secondary-school-via-posting-groups-mapped-from-current-streams-form-classes-will-be-mixed/"
+            },
+            {
+              "title": "Full Subject-Based Banding",
+              "publication": "Anglo-Chinese School (Barker Road)",
+              "url": "https://www.acsbr.moe.edu.sg/education/academic/full-subject-based-banding/"
+            }
+          ]
+        },
+        {
+          "id": "sbb-what",
+          "label": "What actually changed?",
+          "type": "what",
+          "question": "What is different for a Secondary 1 student today?",
+          "answer": [
+            "Three things. First, students enter through Posting Groups 1, 2 or 3, which are based on PSLE scores (for example, a score of 4 to 20 maps to Posting Group 3). MOE stresses these groups only guide school entry and starting subject levels, and are not meant to define the student.",
+            "Second, form classes are mixed: students from different posting groups share a class for subjects like PE, art and character education. Third, subject levels can change as a student grows stronger or weaker in a subject. A fifth year of secondary school remains available for those who need it."
+          ],
+          "sources": [
+            {
+              "title": "2024 Sec 1 Registration: Full Subject-Based Banding briefing",
+              "publication": "Northland Secondary School",
+              "url": "https://northlandsec.moe.edu.sg/files/2024_Sec_1_Registration_Full_Subject_Based_Banding_Briefing.pdf"
+            },
+            {
+              "title": "Full Subject-Based Banding",
+              "publication": "Anglo-Chinese School (Barker Road)",
+              "url": "https://www.acsbr.moe.edu.sg/education/academic/full-subject-based-banding/"
+            }
+          ]
+        },
+        {
+          "id": "sbb-who",
+          "label": "Who does it affect?",
+          "type": "who",
+          "question": "Who is affected by Full SBB and the new SEC exam?",
+          "answer": [
+            "Every student who entered Secondary 1 from 2024. The first group to sit the new SEC exam will do so in 2027, so they are in Secondary 3 now. Older students are finishing under the old streams, with the last O-levels and N-levels this year.",
+            "Teachers are affected too: they now teach mixed form classes and plan for students taking different levels in the same school. Employers, polytechnics and junior colleges must learn to read a new certificate that shows a mix of G1, G2 and G3 subjects rather than a single stream."
+          ],
+          "sources": [
+            {
+              "title": "List of secondary schools in Singapore",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/List_of_secondary_schools_in_Singapore"
+            },
+            {
+              "title": "2024 Sec 1 Registration: Full Subject-Based Banding briefing",
+              "publication": "Northland Secondary School",
+              "url": "https://northlandsec.moe.edu.sg/files/2024_Sec_1_Registration_Full_Subject_Based_Banding_Briefing.pdf"
+            }
+          ]
+        },
+        {
+          "id": "sbb-means",
+          "label": "Are the labels really gone?",
+          "type": "means",
+          "question": "Does ending streaming actually end sorting?",
+          "answer": [
+            "Only partly. Posting Groups are still mapped from PSLE scores and line up closely with the old streams, so the sort at age 12 still happens; it just has softer names and can be undone subject by subject.",
+            "That is why the debate has moved upstream to the PSLE itself. In January 2026 Education Minister Desmond Lee said ending streaming and changing PSLE scoring had not stopped the education arms race, and MOE began looking at how PSLE results are used for secondary school posting. Whether Full SBB reduces stigma will only be clear once the first SEC cohort graduates and moves on."
+          ],
+          "related": [
+            "what-is-psle",
+            "psle-what-on-table"
+          ],
+          "sources": [
+            {
+              "title": "2024 Sec 1 Registration: Full Subject-Based Banding briefing",
+              "publication": "Northland Secondary School",
+              "url": "https://northlandsec.moe.edu.sg/files/2024_Sec_1_Registration_Full_Subject_Based_Banding_Briefing.pdf"
+            },
+            {
+              "title": "MOE considering changes to PSLE to slow down education ‘arms race’",
+              "publication": "AsiaOne",
+              "url": "https://www.asiaone.com/singapore/moe-considering-changes-psle-slow-down-education-arms-race"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "psle-review",
+      "label": "Rethinking the PSLE",
+      "kind": "news",
+      "when": "2026, ongoing",
+      "question": "Is the PSLE about to change?",
+      "answer": [
+        "Possibly, but nothing has been decided. In January 2026 Education Minister Desmond Lee said MOE is studying changes to how PSLE results are used for secondary school admission and to how hard exams are, as well as reviewing Direct School Admission (DSA) and co-curricular activities. He did not rule out a major overhaul.",
+        "At the Committee of Supply debate in March, MOE said it would consult widely on lowering exam stakes. In May it launched ‘Education Conversations’, with the first public session led by Mr Lee on 27 June 2026. The talks run through 2026 into 2027, so any changes are likely years away."
+      ],
+      "sources": [
+        {
+          "title": "MOE considering changes to PSLE to slow down education ‘arms race’",
+          "publication": "AsiaOne",
+          "url": "https://www.asiaone.com/singapore/moe-considering-changes-psle-slow-down-education-arms-race"
+        },
+        {
+          "title": "Education Conversations",
+          "publication": "Ministry of Education",
+          "url": "https://www.moe.gov.sg/news/press-releases/20260528-education-conversations"
+        },
+        {
+          "title": "MOE Committee of Supply debate 2026: response by Minister for Education Desmond Lee",
+          "publication": "Ministry of Education",
+          "url": "https://www.moe.gov.sg/news/speeches/20260303-moe-committee-of-supply-debate-2026-response-by-minister-for-education-desmond-lee"
+        }
+      ],
+      "children": [
+        {
+          "id": "psle-why",
+          "label": "Why now?",
+          "type": "why",
+          "question": "Why is the government reviewing the PSLE now?",
+          "answer": [
+            "Because earlier reforms did not cool the competition. Despite new PSLE scoring in 2021 and the end of streaming in 2024, families still invest heavily to win places at popular secondary schools. Mr Lee singled out ‘hothousing’: intensively coaching children in a sport, art or skill to gain an admissions edge, often through DSA.",
+            "He argued this deepens social divides, since richer families can spend more, and crowds out deeper, more holistic learning. Falling cohort sizes may also ease the overall squeeze on school places, which makes changes easier to try."
+          ],
+          "related": [
+            "tuition",
+            "why-reform-top"
+          ],
+          "sources": [
+            {
+              "title": "MOE considering changes to PSLE to slow down education ‘arms race’",
+              "publication": "AsiaOne",
+              "url": "https://www.asiaone.com/singapore/moe-considering-changes-psle-slow-down-education-arms-race"
+            },
+            {
+              "title": "MOE Committee of Supply debate 2026: response by Minister for Education Desmond Lee",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/news/speeches/20260303-moe-committee-of-supply-debate-2026-response-by-minister-for-education-desmond-lee"
+            }
+          ]
+        },
+        {
+          "id": "psle-what-on-table",
+          "label": "What’s on the table?",
+          "type": "what",
+          "question": "What changes is MOE considering?",
+          "answer": [
+            "Mr Lee listed several: changing how PSLE results are used to post students to secondary schools, adjusting how difficult exams are, reviewing DSA and then co-curricular activities, and studying the Primary 1 registration framework so children from different backgrounds can access primary schools.",
+            "MOE is also studying overseas models, including Denmark, Finland, Estonia and East Asian systems. Ideas raised publicly by parent groups go further, such as making the PSLE optional and using it only for selective schools, but these are proposals from outside government, not MOE plans."
+          ],
+          "related": [
+            "sbb-means",
+            "p1-what"
+          ],
+          "sources": [
+            {
+              "title": "MOE considering changes to PSLE to slow down education ‘arms race’",
+              "publication": "AsiaOne",
+              "url": "https://www.asiaone.com/singapore/moe-considering-changes-psle-slow-down-education-arms-race"
+            },
+            {
+              "title": "Four things we hope PM Lawrence Wong announces at the National Day Rally",
+              "publication": "HoneyKids Asia",
+              "url": "https://honeykidsasia.com/four-things-we-hope-pm-lawrence-wong-announces-at-the-national-day-rally-everychildsg/"
+            }
+          ]
+        },
+        {
+          "id": "dsa",
+          "label": "What is DSA?",
+          "type": "basics",
+          "question": "What is Direct School Admission, and why is it under review?",
+          "answer": [
+            "DSA lets secondary schools pick some Primary 6 students before PSLE results come out, based on talents such as sports, the arts or STEM, through trials, auditions and interviews. In the 2026 cycle about 4 in 10 applications were for sports and games, 2 in 10 for STEM and 2 in 10 for performing arts.",
+            "It was meant to recognise talents that exams miss. The worry is that it has become another race: families pay for coaching to build a ‘DSA portfolio’, which favours those who can afford it. MOE says complaints about selection are few, about nine a year, but the minister wants to curb hothousing."
+          ],
+          "sources": [
+            {
+              "title": "Proportion of secondary school students admitted through Direct School Admission (parliamentary reply)",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/news/parliamentary-replies/20260910-proportion-of-secondary-school-students-admitted-through-direct-school-admission-across-various-domains-and-complaints-received-regarding-selection-process"
+            },
+            {
+              "title": "MOE considering changes to PSLE to slow down education ‘arms race’",
+              "publication": "AsiaOne",
+              "url": "https://www.asiaone.com/singapore/moe-considering-changes-psle-slow-down-education-arms-race"
+            }
+          ]
+        },
+        {
+          "id": "psle-who-decides",
+          "label": "Who gets a say?",
+          "type": "who",
+          "question": "Who gets a say in the review?",
+          "answer": [
+            "MOE has opened a multi-year consultation called Education Conversations. It includes public sessions (the first, on 27 June 2026, brought together parents, educators, students, academics and industry leaders), focus groups, surveys and an online submissions page.",
+            "Topics include moderating exam stakes, reviewing DSA, and character and citizenship education and CCAs. This is a classic Singapore policy pattern: consult broadly, then announce the decision at a Committee of Supply debate or National Day Rally. MOE says it will share an update when ready, and the talks continue into 2027."
+          ],
+          "related": [
+            "how-policy-made"
+          ],
+          "sources": [
+            {
+              "title": "Education Conversations",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/news/press-releases/20260528-education-conversations"
+            },
+            {
+              "title": "Committee of Supply 2026",
+              "publication": "Ministry of Education",
+              "url": "https://cos.moe.gov.sg/2026/"
+            }
+          ]
+        },
+        {
+          "id": "psle-debate",
+          "label": "Where do people disagree?",
+          "type": "debate",
+          "question": "What are the arguments for and against lowering exam stakes?",
+          "answer": [
+            "For: a single exam at 12 decides too much, pushes families into tuition and coaching, entrenches advantage, and harms wellbeing. Lowering the stakes, for example by placing children more by where they live or by ballot, could let schools focus on deeper learning.",
+            "Against: some parents and educators say pressure and rigour are part of why Singapore excels, and Mr Lee quoted them: ‘don’t dumb our system down’. Others warn that if the PSLE matters less, competition will shift somewhere harder to see and fairer to the rich, such as house prices near good schools or portfolios for DSA. Any design has to answer: if not exam results, what decides who gets scarce places?"
+          ],
+          "related": [
+            "meritocracy-debate"
+          ],
+          "sources": [
+            {
+              "title": "MOE considering changes to PSLE to slow down education ‘arms race’",
+              "publication": "AsiaOne",
+              "url": "https://www.asiaone.com/singapore/moe-considering-changes-psle-slow-down-education-arms-race"
+            },
+            {
+              "title": "Good meritocracy, bad meritocracy",
+              "publication": "IPS Commons (Donald Low)",
+              "url": "https://ipscommons.sg/good-meritocracy-bad-meritocracy/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p1",
+      "label": "Primary 1 admissions shake-up",
+      "kind": "news",
+      "when": "Apr & Sep 2026",
+      "question": "What is changing in how children get into primary school?",
+      "answer": [
+        "Two announcements in 2026. In April, MOE said it will gradually cut Primary 1 intake at most schools, starting with the 2026 registration exercise for children entering in January 2027, because the number of children is falling.",
+        "In September, Mr Lee announced that from the 2027 registration exercise, more places will be reserved for children with no prior connection to a school, and that 12 schools in mostly private-housing areas will split those places between families living near and far. Both aim to keep primary schools open to families from all backgrounds."
+      ],
+      "sources": [
+        {
+          "title": "More Primary 1 spots reserved for children with no prior connection to school",
+          "publication": "Mothership",
+          "url": "https://mothership.sg/2026/09/moe-p1-registration-framework-enhance-inclusivity/"
+        },
+        {
+          "title": "2026 Primary One Registration Exercise",
+          "publication": "Ministry of Education",
+          "url": "https://www.moe.gov.sg/news/press-releases/20260429-2026-primary-one-registration-exercise"
+        }
+      ],
+      "children": [
+        {
+          "id": "p1-basics",
+          "label": "How does P1 registration work?",
+          "type": "basics",
+          "question": "How does Primary 1 registration work?",
+          "answer": [
+            "Places are given out in phases, in order of priority. Phase 1 is for children with a sibling already in the school. Phase 2A is for children of alumni or staff, or who attended the school’s MOE kindergarten. Phase 2B is for children of parent volunteers, or of members of a church or clan linked to the school, or of active grassroots leaders. Phase 2C is open to everyone.",
+            "If a phase is oversubscribed, citizens get priority over permanent residents, then children living within 1km, then 1 to 2km, and finally a ballot. That is why parents talk about ‘moving within 1km’ of popular schools, and why homes near them cost more."
+          ],
+          "sources": [
+            {
+              "title": "More Primary 1 spots reserved for children with no prior connection to school",
+              "publication": "Mothership",
+              "url": "https://mothership.sg/2026/09/moe-p1-registration-framework-enhance-inclusivity/"
+            },
+            {
+              "title": "Changes to the P1 registration framework",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/primary/p1-registration/changes-to-p1-registration-framework"
+            }
+          ]
+        },
+        {
+          "id": "p1-what",
+          "label": "What changes in 2027?",
+          "type": "what",
+          "question": "What exactly changes from the 2027 registration exercise?",
+          "answer": [
+            "Phase 2C, the phase open to everyone, will have 60 reserved places instead of 40 at all schools except small ones (under 180 Primary 1 students). The extra 20 come out of Phases 2A and 2B, the alumni and connections phases.",
+            "At 12 schools where public housing is under 40% of homes within 2km, including Nanyang Primary, Raffles Girls’ Primary, Tao Nan and Anglo-Chinese School (Junior), Phase 2C places will be split equally between families within 2km and beyond 2km, with no distance priority inside each track. That stops living close by, which in these areas usually means owning expensive private property, from being the deciding advantage."
+          ],
+          "related": [
+            "meritocracy-debate",
+            "good-school"
+          ],
+          "sources": [
+            {
+              "title": "More Primary 1 spots reserved for children with no prior connection to school",
+              "publication": "Mothership",
+              "url": "https://mothership.sg/2026/09/moe-p1-registration-framework-enhance-inclusivity/"
+            },
+            {
+              "title": "Changes to the P1 registration framework",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/primary/p1-registration/changes-to-p1-registration-framework"
+            }
+          ]
+        },
+        {
+          "id": "p1-why",
+          "label": "Why change it?",
+          "type": "why",
+          "question": "Why is MOE changing Primary 1 admissions?",
+          "answer": [
+            "Because the priority rules quietly favour families who already have advantages. Alumni links and parent-volunteer schemes reward families with ties to established schools, and distance priority rewards those who can afford homes near them. Researchers have long pointed out that popular schools in expensive neighbourhoods tend to admit children from wealthier, better-connected families.",
+            "MOE said feedback from parents, school leaders and alumni broadly agreed schools should stay open to all. Mr Lee also acknowledged the trade-offs: parents value schools near home and keeping siblings together. ‘Ultimately, we want our schools to remain open and inclusive,’ he said."
+          ],
+          "related": [
+            "meritocracy"
+          ],
+          "sources": [
+            {
+              "title": "More Primary 1 spots reserved for children with no prior connection to school",
+              "publication": "Mothership",
+              "url": "https://mothership.sg/2026/09/moe-p1-registration-framework-enhance-inclusivity/"
+            },
+            {
+              "title": "Meritocracy and inequality in Singapore’s schools (Liang and Warrier)",
+              "publication": "Singapore Policy Journal (Harvard Kennedy School)",
+              "url": "https://studentreview.hks.harvard.edu/wp-content/uploads/2016/04/spj-liang-and-warrier-2.pdf"
+            }
+          ]
+        },
+        {
+          "id": "p1-who",
+          "label": "Who wins, who loses?",
+          "type": "who",
+          "question": "Who is affected by the new P1 rules?",
+          "answer": [
+            "Families with no link to a popular school gain, because 20 more places at most schools are open to them. Families who rely on alumni or volunteer links lose some places, since Phases 2A and 2B shrink. At the 12 named schools, families living beyond 2km gain a real chance, while families living nearby lose their automatic edge.",
+            "Children registering in 2027 (for Primary 1 in 2028) are the first affected. The 2026 exercise ran under the old rules. MOE says it will review the list of 12 schools as neighbourhoods change; Anglo-Chinese School (Primary) will leave the scheme after it moves to Tengah in 2030."
+          ],
+          "sources": [
+            {
+              "title": "More Primary 1 spots reserved for children with no prior connection to school",
+              "publication": "Mothership",
+              "url": "https://mothership.sg/2026/09/moe-p1-registration-framework-enhance-inclusivity/"
+            },
+            {
+              "title": "Changes to the P1 registration framework",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/primary/p1-registration/changes-to-p1-registration-framework"
+            }
+          ]
+        },
+        {
+          "id": "p1-intake",
+          "label": "Why fewer P1 places?",
+          "type": "why",
+          "question": "Why is MOE cutting the number of Primary 1 places?",
+          "answer": [
+            "Because Singapore has fewer children. MOE expects cohorts to fall significantly from 2027, so in April 2026 it said it will gradually reduce Primary 1 intake at most schools over the next few years, starting with children entering in January 2027.",
+            "The alternative would be to keep classes the same size and close or merge schools that run short of pupils. Smaller intakes keep more schools open and spread across the island, so children can still study near home. But in fast-growing new estates such as Sengkang, parents worry about competition for places, and MOE says it plans places using housing plans as well as birth numbers."
+          ],
+          "related": [
+            "preschool"
+          ],
+          "sources": [
+            {
+              "title": "2026 Primary One Registration Exercise",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/news/press-releases/20260429-2026-primary-one-registration-exercise"
+            },
+            {
+              "title": "Impact of reduced Primary 1 intake on home-school distance balloting at oversubscribed schools (parliamentary reply)",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/news/parliamentary-replies/20260707-impact-of-reduced-primary-1-intake-on-home-school-distance-balloting-at-oversubscribed-schools"
+            }
+          ],
+          "children": [
+            {
+              "id": "mergers",
+              "label": "Why do schools merge?",
+              "type": "basics",
+              "question": "Why have Singapore schools been merging?",
+              "answer": [
+                "Falling birth rates and ageing housing estates mean some schools no longer have enough pupils to offer a full range of subjects and activities. In 2021 MOE announced four pairs of primary schools and five pairs of secondary schools would merge between 2022 and 2025, picking pairs by enrolment trends, distance and space. Junior colleges have also merged.",
+                "Mergers are painful for alumni and neighbourhoods, which is why MOE’s 2026 approach is to shrink intakes rather than close schools where it can. It is one of the clearest ways demographic change, which you can read about in But Why?’s issue on a super-aged Singapore, reaches everyday life."
+              ],
+              "sources": [
+                {
+                  "title": "Move to ensure students enjoy a vibrant educational experience (school mergers)",
+                  "publication": "Ministry of Education",
+                  "url": "https://moe.gov.sg/news/press-releases/20210407-school-mergers"
+                },
+                {
+                  "title": "2026 Primary One Registration Exercise",
+                  "publication": "Ministry of Education",
+                  "url": "https://www.moe.gov.sg/news/press-releases/20260429-2026-primary-one-registration-exercise"
+                }
+              ],
+              "issue": "004-who-pays-for-a-super-aged-singapore"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gep",
+      "label": "Gifted education reset",
+      "kind": "news",
+      "when": "2024 to 2027",
+      "question": "What is happening to the Gifted Education Programme?",
+      "answer": [
+        "It is being replaced. The GEP, started in 1984, picked about the top 1% of pupils through tests in Primary 3 and taught them in special classes at nine primary schools from Primary 4. At his first National Day Rally in August 2024, PM Lawrence Wong said it would be discontinued in its current form.",
+        "Instead, every primary school will identify and stretch its own high-ability students. MOE confirmed at the March 2026 Committee of Supply debate that from 2027 it will widen school-based provisions, such as harder work within lessons and after-school programmes, across all primary schools, reaching about 10% of each cohort instead of about 7%."
+      ],
+      "sources": [
+        {
+          "title": "Gifted Education Programme (Singapore)",
+          "publication": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Gifted_Education_Programme_(Singapore)"
+        },
+        {
+          "title": "We learn for life, together: building a We-First society through education",
+          "publication": "Ministry of Education",
+          "url": "https://www.moe.gov.sg/news/press-releases/20260303-we-learn-for-life-together-building-a-we-first-society-through-education"
+        }
+      ],
+      "children": [
+        {
+          "id": "gep-why",
+          "label": "Why end the GEP?",
+          "type": "why",
+          "question": "Why is the GEP being replaced?",
+          "answer": [
+            "Three reasons. Fairness: selecting 1% of nine-year-olds into a few schools was criticised for rewarding families who could prepare their children for the tests. ‘Every school a good school’: pupils had to transfer to one of nine schools, concentrating talent instead of spreading it. And breadth: children can be strong in some subjects but not all, and late bloomers were shut out.",
+            "Researchers at the National Institute of Education argued the GEP, conceived for a tiny minority, had been overtaken by wider trends, as all schools now teach in more differentiated ways."
+          ],
+          "related": [
+            "good-school"
+          ],
+          "sources": [
+            {
+              "title": "Conceived for a minority of students, Gifted Education Programme has been overtaken by wider trends",
+              "publication": "National Institute of Education",
+              "url": "https://www.ntu.edu.sg/nie/news-events/news/detail/snap-insight-conceived-for-a-minority-of-students-gifted-education-programme-has-been-overtaken-by-wider-trends"
+            },
+            {
+              "title": "Gifted Education Programme (Singapore)",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Gifted_Education_Programme_(Singapore)"
+            }
+          ]
+        },
+        {
+          "id": "gep-who",
+          "label": "Who does it affect?",
+          "type": "who",
+          "question": "Who is affected by the end of the GEP?",
+          "answer": [
+            "Children who entered Primary 1 from 2024 onwards will not have the old GEP. Rather than moving schools, high-ability pupils stay in their own school and get stretched there, with the option of after-school enrichment modules at nearby schools.",
+            "MOE expects about 10% of each cohort to benefit from these school-based provisions from 2027, compared with about 7% under existing arrangements, so more children get some stretching, but fewer get a fully separate gifted class. Teachers in every primary school now carry the job of spotting and stretching strong pupils."
+          ],
+          "sources": [
+            {
+              "title": "We learn for life, together: building a We-First society through education",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/news/press-releases/20260303-we-learn-for-life-together-building-a-we-first-society-through-education"
+            },
+            {
+              "title": "Gifted Education Programme (Singapore)",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Gifted_Education_Programme_(Singapore)"
+            }
+          ]
+        },
+        {
+          "id": "gep-debate",
+          "label": "Closing gaps or capping talent?",
+          "type": "debate",
+          "question": "Will ending the GEP help or hurt?",
+          "answer": [
+            "Supporters say it widens opportunity: more pupils get challenged, nobody is labelled ‘gifted’ or ‘not gifted’ at nine, and a big reason for early tuition goes away. It also fits the government’s push to define success more broadly.",
+            "Sceptics worry the most able children will be under-stretched in mixed classrooms with teachers who already have heavy workloads, and that families who can pay will simply buy enrichment privately, recreating the gap outside school. As experts noted when the change was announced, it only works if the culture around education changes alongside it."
+          ],
+          "related": [
+            "meritocracy-debate"
+          ],
+          "sources": [
+            {
+              "title": "The Big Read in short: What does it mean to be a gifted child?",
+              "publication": "National Institute of Education",
+              "url": "https://www.ntu.edu.sg/nie/news-events/news/detail/the-big-read-in-short-what-does-it-mean-to-be-a-gifted-child"
+            },
+            {
+              "title": "Singapore’s education culture has to change alongside gifted programme revamp: experts",
+              "publication": "South China Morning Post",
+              "url": "https://mcdn.i-scmp.com/week-asia/politics/article/3275733/singapores-education-culture-has-change-alongside-gifted-programme-revamp-experts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tech",
+      "label": "Phones out, AI in",
+      "kind": "news",
+      "when": "2025 to 2026",
+      "question": "How are schools handling phones, social media and AI?",
+      "answer": [
+        "From January 2026, secondary school students may not use smartphones or smartwatches at any point in the school day, including recess and CCAs; devices go in lockers or bags. School-issued laptops also lock earlier at night.",
+        "At the same time, MOE is bringing AI into lessons in stages, from Primary 4 under teacher supervision, and requires every teacher to complete an AI training module by the end of 2026. The message is: less passive screen time, more purposeful technology."
+      ],
+      "sources": [
+        {
+          "title": "No smartphones during school hours in secondary schools from 2026: MOE",
+          "publication": "Mothership",
+          "url": "https://mothership.sg/2025/11/no-smartphones-secondary-school/"
+        },
+        {
+          "title": "Schools guide students to use AI purposefully for learning",
+          "publication": "Ministry of Education",
+          "url": "https://www.moe.gov.sg/news/forum-letter-replies/20260918-schools-guide-students-to-use-ai-purposefully-for-learning"
+        }
+      ],
+      "children": [
+        {
+          "id": "phones",
+          "label": "Why ban phones all day?",
+          "type": "why",
+          "question": "Why did MOE extend the phone ban to the whole school day?",
+          "answer": [
+            "MOE announced on 30 November 2025 that the ban, which used to cover only lesson time, would cover all school hours from January 2026. It cited research linking heavy screen use to less sleep, less physical activity and less face-to-face time with friends. The policy sits under Grow Well SG, the national plan for children’s health.",
+            "School-issued learning devices also now go to sleep from 10.30pm to 6.30am instead of 11pm. Minister of State Jasmin Lau said the aim was to help students find a healthy balance, adding: ‘As a parent, I am concerned about the environment our children grow up in.’"
+          ],
+          "related": [
+            "mental-health"
+          ],
+          "sources": [
+            {
+              "title": "No smartphones during school hours in secondary schools from 2026: MOE",
+              "publication": "Mothership",
+              "url": "https://mothership.sg/2025/11/no-smartphones-secondary-school/"
+            },
+            {
+              "title": "Singapore to toughen ban on smartphones, smartwatches in secondary schools from 2026",
+              "publication": "Gulf News",
+              "url": "https://gulfnews.com/world/asia/singapore-to-toughen-ban-on-smartphones-smartwatches-in-secondary-schools-from-2026-1.500365492"
+            }
+          ],
+          "children": [
+            {
+              "id": "phones-work",
+              "label": "Will it work?",
+              "type": "means",
+              "question": "Can schools actually enforce a phone ban?",
+              "answer": [
+                "Most parents supported the move, but many doubted it could be enforced consistently; some said teenagers would simply find ways around it. MOE left enforcement to schools, which keep their own discipline policies within MOE guidelines and may allow phone use by exception where needed.",
+                "The deeper question is whether school rules can do much when most screen time happens at home. That is why the government is also pressing social media platforms: at the 2026 National Day Rally, PM Wong said platforms must introduce reliable age checks, and that minimum ages above 13 could follow if safeguards stay weak."
+              ],
+              "sources": [
+                {
+                  "title": "As secondary schools tighten smartphone use, parents say students can still outsmart the rules",
+                  "publication": "National Institute of Education",
+                  "url": "https://www.ntu.edu.sg/nie/news-events/news/detail/as-secondary-schools-tighten-smartphone-use--parents-say-students-can-still-outsmart-the-rules"
+                },
+                {
+                  "title": "National Day Rally 2026",
+                  "publication": "Prime Minister’s Office",
+                  "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ai-classroom",
+          "label": "How is AI used in class?",
+          "type": "what",
+          "question": "How is AI being brought into Singapore classrooms?",
+          "answer": [
+            "In stages, by age. In Primary 1 to 3, learning stays mostly hands-on and print-based. From Primary 4, students can use AI tools built into the Student Learning Space, MOE’s online learning platform, under a teacher’s supervision. These tools include safeguards against over-reliance, and teachers may deliberately hold AI back where it does not help learning.",
+            "For teachers, MOE’s AI literacy roadmap makes a first module on AI basics, ethics and safety compulsory by the end of 2026, with two more encouraged by the end of 2027. MOE says it is studying how these tools affect learning."
+          ],
+          "related": [
+            "why-reform-top"
+          ],
+          "sources": [
+            {
+              "title": "Schools guide students to use AI purposefully for learning",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/news/forum-letter-replies/20260918-schools-guide-students-to-use-ai-purposefully-for-learning"
+            },
+            {
+              "title": "What you need to know about preparing our students for an AI-enabled world",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/news/edtalks/what-you-need-to-know-about-preparing-our-students-for-an-ai-enabled-world"
+            }
+          ],
+          "children": [
+            {
+              "id": "ai-tension",
+              "label": "Less screens, more AI?",
+              "type": "means",
+              "question": "Isn’t it contradictory to ban phones but bring in AI?",
+              "answer": [
+                "MOE’s answer is that the problem is not screens but purpose. Phones in recess mostly mean social media and games; AI in a lesson, chosen and supervised by a teacher, is meant to help students think. Younger children are kept away from AI altogether to protect basic skills.",
+                "The harder question is whether students learn less if AI does the thinking for them. MOE says it is investigating how these tools affect learning and giving schools guidelines so AI enhances education rather than undermines it. For policy, this is a live experiment worth watching."
+              ],
+              "sources": [
+                {
+                  "title": "Schools guide students to use AI purposefully for learning",
+                  "publication": "Ministry of Education",
+                  "url": "https://www.moe.gov.sg/news/forum-letter-replies/20260211-schools-guide-students-to-use-artificial-intelligence-purposefully-for-learning"
+                },
+                {
+                  "title": "No smartphones during school hours in secondary schools from 2026: MOE",
+                  "publication": "Mothership",
+                  "url": "https://mothership.sg/2025/11/no-smartphones-secondary-school/"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-cradle",
+      "label": "Cradle to career: money",
+      "kind": "news",
+      "when": "Aug 2026",
+      "question": "What new money is going into education, from preschool to mid-career?",
+      "answer": [
+        "At the 2026 National Day Rally, PM Wong said full-day childcare fees at government-supported preschools will fall to S$150 a month and infant care to S$300 by 2030, for every Singaporean child regardless of income. He also announced Edusave top-ups every year of primary and secondary school, and S$10,000 into each child’s Post-Secondary Education Account at age 17.",
+        "In all, he said every Singaporean child will receive almost S$70,000 in direct support as they grow up. Earlier in 2026, MOE also raised incentives for employers who train ITE graduates on the job."
+      ],
+      "sources": [
+        {
+          "title": "National Day Rally 2026",
+          "publication": "Prime Minister’s Office",
+          "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
+        },
+        {
+          "title": "National Day Rally 2026 in summary",
+          "publication": "Mothership",
+          "url": "https://mothership.sg/2026/08/ndr-2026-summary/"
+        }
+      ],
+      "children": [
+        {
+          "id": "preschool",
+          "label": "Why cheaper preschool?",
+          "type": "why",
+          "question": "Why is the government making preschool so much cheaper?",
+          "answer": [
+            "Two reasons. Births are falling, and childcare costs (nearly S$600 a month for full-day childcare above certain incomes) are one reason couples give for having fewer children. And the early years matter for equality: children who start school behind often stay behind, so cheap, good preschool is one of the strongest levers for fairness.",
+            "Government-supported centres, run by Anchor Operators, Partner Operators and MOE’s own kindergartens, already have places for about 80% of preschoolers. The plan is to expand that network first, then cut fees step by step from 2028."
+          ],
+          "related": [
+            "p1-intake",
+            "meritocracy-debate"
+          ],
+          "sources": [
+            {
+              "title": "National Day Rally 2026",
+              "publication": "Prime Minister’s Office",
+              "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
+            },
+            {
+              "title": "ECDA Partner Operator Scheme",
+              "publication": "Early Childhood Development Agency",
+              "url": "https://ecda.gov.sg/parents/choosing-a-preschool/pop"
+            }
+          ],
+          "children": [
+            {
+              "id": "preschool-debate",
+              "label": "Who should run preschools?",
+              "type": "debate",
+              "question": "Is the government running too much of the preschool sector?",
+              "answer": [
+                "More than half of preschools are now Anchor or Partner Operators, and MOE has run its own kindergartens since 2014, many inside primary schools. Supporters say this keeps fees low and quality consistent.",
+                "The Workers’ Party argued in Parliament for a different model: ‘fund the child, not the school’, giving subsidies that follow the child to any qualifying preschool. They say MOE kindergartens, being cheap and attached to primary schools, draw families away from independent operators and narrow choice. It is a classic policy trade-off between control and diversity."
+              ],
+              "sources": [
+                {
+                  "title": "Adjournment motion: Fund the child, not the school",
+                  "publication": "Workers’ Party",
+                  "url": "https://www.wp.sg/parliament/adjournment-motion-fund-the-child-not-the-school-a-proposal-for-fairer-and-more-diverse-preschool-education"
+                },
+                {
+                  "title": "ECDA Partner Operator Scheme",
+                  "publication": "Early Childhood Development Agency",
+                  "url": "https://ecda.gov.sg/parents/choosing-a-preschool/pop"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "psea",
+          "label": "What is the S$10,000 for?",
+          "type": "what",
+          "question": "What is the Post-Secondary Education Account top-up?",
+          "answer": [
+            "The Post-Secondary Education Account (PSEA) is a government-held account each citizen child has, which can pay fees at ITE, polytechnics, universities and approved courses. From the new SG Child Support Package, starting 1 April 2027, every citizen child will get S$10,000 into it at age 17, just before most choose a post-secondary path.",
+            "Edusave, a separate account for school-age children, will be topped up every year in primary and secondary school, to pay for enrichment and school fees. Together they are meant to make sure money does not decide which route a teenager takes."
+          ],
+          "sources": [
+            {
+              "title": "National Day Rally 2026 in summary",
+              "publication": "Mothership",
+              "url": "https://mothership.sg/2026/08/ndr-2026-summary/"
+            },
+            {
+              "title": "National Day Rally 2026",
+              "publication": "Prime Minister’s Office",
+              "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
+            }
+          ]
+        },
+        {
+          "id": "ite-work-study",
+          "label": "Why pay employers to train?",
+          "type": "why",
+          "question": "Why is the government paying employers more to train ITE graduates?",
+          "answer": [
+            "The ITE Work-Study Diploma lets ITE graduates work full-time for a company while earning a diploma, mixing on-the-job training with classes. From April 2026, employers get up to S$20,000 per trainee instead of S$15,000, paid at milestones through the course rather than by claims.",
+            "The idea is to make the applied route as valuable as the academic one: graduates earn while learning and get a diploma employers actually want. It ties into worries that AI will remove entry-level jobs, the first rung of the career ladder, which But Why? covered in its issue on Singapore’s AI bet."
+          ],
+          "related": [
+            "after-secondary"
+          ],
+          "issue": "008-singapores-ai-bet-and-the-bottom-rung",
+          "sources": [
+            {
+              "title": "Growing together through lifelong learning",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/news/press-releases/20260303-growing-together-through-lifelong-learning"
+            },
+            {
+              "title": "Work-Study Diploma",
+              "publication": "Institute of Technical Education",
+              "url": "https://www.ite.edu.sg/employers/upgrade-your-workforce/work-study-diploma/"
+            }
+          ]
+        },
+        {
+          "id": "level-up",
+          "label": "Does learning stop at school?",
+          "type": "basics",
+          "question": "What help is there for adults who want to study again?",
+          "answer": [
+            "Singapore treats education as lifelong through SkillsFuture. Since Budget 2024, every Singaporean gets a S$4,000 SkillsFuture Credit (Mid-Career) top-up in the year they turn 40, with no expiry, for approved courses such as diplomas and degrees.",
+            "From 2025, Singaporeans aged 40 and above can get subsidies for a second full-time diploma at polytechnics, ITE and arts institutions, and a training allowance of half their recent income (up to S$3,000 a month) for selected full-time courses. The logic: careers are longer and jobs change faster, so the education system can no longer end at 25."
+          ],
+          "sources": [
+            {
+              "title": "Budget 2024: SkillsFuture Level-Up Programme (Annex D-1)",
+              "publication": "Ministry of Finance",
+              "url": "https://www.mof.gov.sg/docs/librariesprovider3/budget2024/download/pdf/annexd1.pdf"
+            },
+            {
+              "title": "Singapore unveils SkillsFuture overhaul and Workfare enhancements",
+              "publication": "HRM Asia",
+              "url": "https://hrmasia.com/singapore-upskills-mid-career-professionals-with-enhanced-skillsfuture-programme/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sen",
+      "label": "Special educational needs",
+      "kind": "news",
+      "when": "2025 to 2026",
+      "question": "How does Singapore educate children with special educational needs?",
+      "answer": [
+        "Most go to ordinary schools. About 30,000 students with special educational needs (SEN), around 4 in 5, attend mainstream schools, supported by all teachers plus specially trained teachers and SEN officers (nearly 750 in 2024, up from 450 in 2016). About 8,500 with moderate to severe needs attend government-funded SPED schools.",
+        "Since 2019 compulsory education covers these children too. The pressure point now is capacity: demand for SPED places, especially for autism with intellectual disability, is growing faster than places."
+      ],
+      "sources": [
+        {
+          "title": "MOE FY2025 Committee of Supply debate response by Second Minister for Education Dr Maliki Osman",
+          "publication": "Ministry of Education",
+          "url": "https://www.moe.gov.sg/news/speeches/20250306-moe-fy2025-committee-of-supply-debate-response-by-second-minister-for-education-dr-maliki-osman"
+        },
+        {
+          "title": "SPED schools",
+          "publication": "Ministry of Education",
+          "url": "https://www.moe.gov.sg/special-educational-needs/sped-schools"
+        }
+      ],
+      "children": [
+        {
+          "id": "sen-basics",
+          "label": "Mainstream or SPED school?",
+          "type": "basics",
+          "question": "Who goes to a SPED school, and who goes to a mainstream school?",
+          "answer": [
+            "Children with mild needs, such as dyslexia or ADHD, generally attend mainstream schools with support. Children with moderate to severe needs, who need more specialised teaching, can attend SPED schools, which are run by charities (social service agencies) with government funding.",
+            "Placement follows a professional assessment. MOE has been strengthening support in mainstream schools, for example by extending its TRANSIT programme, which helps pupils with learning needs, to all primary schools by 2026, and by cutting fees at nine higher-fee SPED schools by up to 60% for Singaporeans."
+          ],
+          "related": [
+            "compulsory"
+          ],
+          "sources": [
+            {
+              "title": "MOE FY2025 Committee of Supply debate response by Second Minister for Education Dr Maliki Osman",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/news/speeches/20250306-moe-fy2025-committee-of-supply-debate-response-by-second-minister-for-education-dr-maliki-osman"
+            },
+            {
+              "title": "SPED schools",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/special-educational-needs/sped-schools"
+            }
+          ]
+        },
+        {
+          "id": "sen-wait",
+          "label": "Why the waiting lists?",
+          "type": "why",
+          "question": "Why do some children wait for a SPED school place?",
+          "answer": [
+            "Because demand has grown faster than places. In a February 2026 parliamentary reply, MOE said the average time from application to a SPED place offer is about six months, and longer for children with autism and intellectual disability, the profile where demand has grown most.",
+            "MOE has been building more SPED schools (26 existing schools, with more planned into the 2030s). Opposition MPs have criticised the waits, and the issue shows a common policy challenge: needs identified earlier and better (good news) can outpace the capacity built to meet them."
+          ],
+          "sources": [
+            {
+              "title": "Average timeline of SPED school placement process (parliamentary reply)",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/news/parliamentary-replies/20260203-average-timeline-of-sped-school-placement-process-for-2880-unenrolled-children"
+            },
+            {
+              "title": "Education in Singapore",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Education_in_Singapore"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
