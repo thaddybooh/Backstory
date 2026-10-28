@@ -115,8 +115,13 @@ it themselves first.
   built for the AI map (NAIS 2.0, National AI Council, AI Missions, NAIRD, SEA-LION, Enterprise Compute Initiative,
   Budget 2026 tax breaks, AI talent, Pair/AIBots, AI agent registry, AgentSea, the agentic AI framework, AI Verify,
   AI Safety Institute, deepfake and online harm laws). Some sources (Synapxe, EDB, SEA-LION blog, Malay Mail) could
-  not be opened from the session and were used via search summaries. The education and ageing maps don't have this
-  category yet.
+  not be opened from the session and were used via search summaries. Added the same day to the ageing map (Age Well
+  SG, Healthier SG, CPF LIFE, Silver Support, matched top-ups, retirement ages, MediShield Life, CareShield Life, care
+  subsidies, nursing homes, the domestic worker levy concession, the Large Families Scheme, the 2026 child support
+  package, immigration targets) and the education map (Learn for Life, Education Conversations, PSLE scoring, Full
+  SBB, DSA, P1 rules, gifted provisions, financial help, preschool, special needs, learning devices, phone rules, AI
+  in schools, ITE Work-Study, SkillsFuture Level-Up). Initiative boxes link to the fuller explainers elsewhere on
+  each map through `related`.
 - **Next step (not built):** have the write-issue skill add or update a story on the matching map with each new
   issue, so maps grow daily. Until then, link new issues by hand with the `issue` field.
 - **Sources:** unlike issue graphs, a map's sources are not checked against an article (there isn't one). The

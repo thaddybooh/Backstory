@@ -2,8 +2,8 @@
   "title": "Singapore’s education system",
   "track": "singapore",
   "updated": "2026-10-28",
-  "dek": "How Singapore’s schools work, the ideas behind them, and every big change in the news, one question at a time.",
-  "intro": "Start with The basics if you are new to the topic, then Big ideas and debates for the policy thinking behind it. In the news holds each recent change, and every story opens into the same four questions: why is it happening, what is changing, who does it affect, and what does it mean. Open any box for a short answer and the sources to dig deeper.",
+  "dek": "How Singapore’s schools work, the ideas behind them, every government initiative, and every big change in the news, one question at a time.",
+  "intro": "Start with The basics if you are new to the topic, then Big ideas and debates for the policy thinking behind it. What the government is doing is a bird’s-eye view of every major initiative, from the PSLE to the phone rules. In the news holds each recent change, and every story opens into the same four questions: why is it happening, what is changing, who does it affect, and what does it mean.",
   "cover": {
     "commons": "Pioneer Primary School, Tengah (2025).jpg",
     "alt": "The new campus of Pioneer Primary School in Tengah, Singapore, photographed in 2025 before it opened"
@@ -652,6 +652,674 @@
                   "url": "https://moe.gov.sg/news/forum-letter-replies/20220317-removal-of-mid-year-exams-will-help-nurture-joy-for-learning"
                 }
               ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "policy",
+      "label": "What the government is doing",
+      "kind": "policy",
+      "question": "What is the government doing in education right now?",
+      "answer": [
+        "A great deal, almost all of it run by the Ministry of Education (MOE). The big themes are lowering exam pressure and early sorting, widening access to good schools for children without connections, supporting children with special needs, bringing in technology carefully, and making learning lifelong.",
+        "This part is a bird’s-eye view of the main initiatives, grouped by what they are for. Each box says what the initiative is, who it affects, where it stands, and where to read more. Many link to fuller explanations elsewhere on this map."
+      ],
+      "sources": [
+        {
+          "title": "Committee of Supply 2026",
+          "publication": "Ministry of Education",
+          "url": "https://cos.moe.gov.sg/2026/"
+        },
+        {
+          "title": "Education Conversations",
+          "publication": "Ministry of Education",
+          "url": "https://www.moe.gov.sg/news/press-releases/20260528-education-conversations"
+        }
+      ],
+      "children": [
+        {
+          "id": "pe-direction",
+          "label": "Setting the direction",
+          "question": "How does MOE decide where education is heading?",
+          "answer": [
+            "Through a mix of long-running themes and consultations. Since 2018 MOE has framed its changes under a ‘Learn for Life’ movement, which aims to make learning less about grades and more lifelong. In 2026 it began Education Conversations, a multi-year public consultation on exam stakes, admissions and character education.",
+            "Decisions are usually announced at the Committee of Supply debate each March or at the National Day Rally in August."
+          ],
+          "sources": [
+            {
+              "title": "Removal of mid-year exams will help nurture joy for learning",
+              "publication": "Ministry of Education",
+              "url": "https://moe.gov.sg/news/forum-letter-replies/20220317-removal-of-mid-year-exams-will-help-nurture-joy-for-learning"
+            },
+            {
+              "title": "Education Conversations",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/news/press-releases/20260528-education-conversations"
+            }
+          ],
+          "related": [
+            "how-policy-made"
+          ],
+          "children": [
+            {
+              "id": "learn-for-life",
+              "label": "Learn for Life",
+              "type": "initiative",
+              "question": "What is the Learn for Life movement?",
+              "answer": [
+                "MOE’s umbrella for reforms meant to shift the focus from grades towards a joy of learning and learning throughout life. The clearest change made under it was removing mid-year exams for all primary and secondary pupils by 2023, and then in junior colleges, so pupils are tested less often.",
+                "MOE said removing mid-year exams alone freed about three weeks of curriculum time per level for more varied teaching and for building life skills."
+              ],
+              "sources": [
+                {
+                  "title": "Removal of mid-year exams will help nurture joy for learning",
+                  "publication": "Ministry of Education",
+                  "url": "https://moe.gov.sg/news/forum-letter-replies/20220317-removal-of-mid-year-exams-will-help-nurture-joy-for-learning"
+                },
+                {
+                  "title": "Effect of removing mid-year examinations (parliamentary reply)",
+                  "publication": "Ministry of Education",
+                  "url": "https://www.moe.gov.sg/news/parliamentary-replies/20231003-effect-of-removing-mid-year-examinations"
+                }
+              ],
+              "related": [
+                "mid-year-exams"
+              ],
+              "children": []
+            },
+            {
+              "id": "ed-conversations",
+              "label": "Education Conversations",
+              "type": "initiative",
+              "question": "What are Education Conversations?",
+              "answer": [
+                "A multi-year public consultation launched by MOE in May 2026, with the first public session led by Education Minister Desmond Lee on 27 June 2026. It covers moderating exam stakes, including how PSLE results are used, reviewing Direct School Admission, and character and citizenship education and co-curricular activities.",
+                "It runs through 2026 into 2027, through public sessions, focus groups, surveys and an online submissions page. MOE says it will study the suggestions and give an update when ready; no decisions have been announced."
+              ],
+              "sources": [
+                {
+                  "title": "Education Conversations",
+                  "publication": "Ministry of Education",
+                  "url": "https://www.moe.gov.sg/news/press-releases/20260528-education-conversations"
+                },
+                {
+                  "title": "MOE considering changes to PSLE to slow down education ‘arms race’",
+                  "publication": "AsiaOne",
+                  "url": "https://www.asiaone.com/singapore/moe-considering-changes-psle-slow-down-education-arms-race"
+                }
+              ],
+              "related": [
+                "psle-who-decides"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "pe-exams",
+          "label": "Exams and streaming",
+          "question": "What has changed in how students are tested and sorted?",
+          "answer": [
+            "A steady move away from fine-grained sorting at a young age. The PSLE switched to broad Achievement Levels in 2021. Streaming in secondary school ended from 2024 under Full Subject-Based Banding, with a single new exam, the SEC, from 2027. Mid-year exams were removed. Direct School Admission continues, but is under review.",
+            "The next step under discussion is how much the PSLE itself should decide."
+          ],
+          "sources": [
+            {
+              "title": "Changes to PSLE scoring and Secondary 1 posting from 2021",
+              "publication": "Xishan Primary School (MOE briefing)",
+              "url": "https://xishanpri.moe.edu.sg/files/Changes%20to%20PSLE%20Scoring%20&%20S1%20Posting%20from%202021.pdf"
+            },
+            {
+              "title": "Full Subject-Based Banding",
+              "publication": "Anglo-Chinese School (Barker Road)",
+              "url": "https://www.acsbr.moe.edu.sg/education/academic/full-subject-based-banding/"
+            }
+          ],
+          "related": [
+            "sbb",
+            "psle-review"
+          ],
+          "children": [
+            {
+              "id": "psle-al-policy",
+              "label": "PSLE Achievement Levels",
+              "type": "initiative",
+              "question": "What is the PSLE Achievement Level system?",
+              "answer": [
+                "Since 2021, each PSLE subject is graded in one of eight Achievement Levels against a fixed standard, rather than ranked against other pupils as under the old T-score. The four levels are added into a score from 4 to 32, giving 29 possible scores instead of about 200.",
+                "The aim was to reduce fine differences between 12-year-olds and reward what a child has learned. Ties for popular schools are broken by citizenship, the order of choices and then a ballot."
+              ],
+              "sources": [
+                {
+                  "title": "Changes to PSLE scoring and Secondary 1 posting from 2021",
+                  "publication": "Xishan Primary School (MOE briefing)",
+                  "url": "https://xishanpri.moe.edu.sg/files/Changes%20to%20PSLE%20Scoring%20&%20S1%20Posting%20from%202021.pdf"
+                },
+                {
+                  "title": "Education in Singapore",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/Education_in_Singapore"
+                }
+              ],
+              "related": [
+                "why-al-scoring"
+              ],
+              "children": []
+            },
+            {
+              "id": "full-sbb-policy",
+              "label": "Full Subject-Based Banding",
+              "type": "initiative",
+              "question": "What is Full Subject-Based Banding?",
+              "answer": [
+                "The system that replaced streaming from the 2024 Secondary 1 cohort. Students enter through Posting Groups 1, 2 or 3 based on PSLE scores, sit in mixed form classes, and take each subject at a level that suits them (G1, G2 or G3), with the option to move up or down.",
+                "Announced in 2019 and piloted in 28 schools from 2020, it leads to a common national exam, the Singapore-Cambridge Secondary Education Certificate, from 2027, replacing O-levels and N-levels."
+              ],
+              "sources": [
+                {
+                  "title": "One secondary education, many subject bands: 28 secondary schools to pilot Full Subject-Based Banding",
+                  "publication": "Ministry of Education",
+                  "url": "https://www.moe.gov.sg/news/press-releases/20190903-one-secondary-education-many-subject-bands-28-secondary-schools-to-pilot-full-subject-based-banding"
+                },
+                {
+                  "title": "Full Subject-Based Banding",
+                  "publication": "Anglo-Chinese School (Barker Road)",
+                  "url": "https://www.acsbr.moe.edu.sg/education/academic/full-subject-based-banding/"
+                },
+                {
+                  "title": "2024 Sec 1 Registration: Full Subject-Based Banding briefing",
+                  "publication": "Northland Secondary School",
+                  "url": "https://northlandsec.moe.edu.sg/files/2024_Sec_1_Registration_Full_Subject_Based_Banding_Briefing.pdf"
+                }
+              ],
+              "related": [
+                "sbb-what"
+              ],
+              "children": []
+            },
+            {
+              "id": "dsa-policy",
+              "label": "Direct School Admission",
+              "type": "initiative",
+              "question": "What is Direct School Admission, and what is happening to it?",
+              "answer": [
+                "A scheme that lets secondary schools admit some Primary 6 pupils before PSLE results are out, based on talents in sports, the arts, STEM and other areas, through trials, auditions and interviews. In the 2026 cycle about 4 in 10 applications were for sports and games.",
+                "It is under review because of concerns about ‘hothousing’: families paying for coaching to build a portfolio, which favours those who can afford it. The review is part of Education Conversations."
+              ],
+              "sources": [
+                {
+                  "title": "Proportion of secondary school students admitted through Direct School Admission (parliamentary reply)",
+                  "publication": "Ministry of Education",
+                  "url": "https://www.moe.gov.sg/news/parliamentary-replies/20260910-proportion-of-secondary-school-students-admitted-through-direct-school-admission-across-various-domains-and-complaints-received-regarding-selection-process"
+                },
+                {
+                  "title": "MOE considering changes to PSLE to slow down education ‘arms race’",
+                  "publication": "AsiaOne",
+                  "url": "https://www.asiaone.com/singapore/moe-considering-changes-psle-slow-down-education-arms-race"
+                }
+              ],
+              "related": [
+                "dsa"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "pe-access",
+          "label": "Fair access",
+          "question": "What is the government doing to make school access fairer?",
+          "answer": [
+            "Several things: reserving more Primary 1 places for children without connections to a school, replacing the Gifted Education Programme with stretching in every school, and spending on financial help so money does not decide a child’s path, through the Financial Assistance Scheme, Edusave and the Post-Secondary Education Account.",
+            "These aim at the parts of meritocracy that tend to favour better-off families."
+          ],
+          "sources": [
+            {
+              "title": "More Primary 1 spots reserved for children with no prior connection to school",
+              "publication": "Mothership",
+              "url": "https://mothership.sg/2026/09/moe-p1-registration-framework-enhance-inclusivity/"
+            },
+            {
+              "title": "Education in Singapore",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Education_in_Singapore"
+            }
+          ],
+          "related": [
+            "meritocracy-debate"
+          ],
+          "children": [
+            {
+              "id": "p1-policy",
+              "label": "Primary 1 registration rules",
+              "type": "initiative",
+              "question": "What are the new Primary 1 registration rules?",
+              "answer": [
+                "From the 2027 registration exercise, Phase 2C, the phase open to all children, will have 60 reserved places instead of 40 at most schools; the extra places come from the alumni and connections phases. At 12 schools in areas with little public housing, Phase 2C places will be split between families living within and beyond 2km, with no distance priority inside each track.",
+                "MOE is also gradually reducing Primary 1 intake at most schools from 2027 as cohorts shrink, to avoid closing or merging schools."
+              ],
+              "sources": [
+                {
+                  "title": "More Primary 1 spots reserved for children with no prior connection to school",
+                  "publication": "Mothership",
+                  "url": "https://mothership.sg/2026/09/moe-p1-registration-framework-enhance-inclusivity/"
+                },
+                {
+                  "title": "Changes to the P1 registration framework",
+                  "publication": "Ministry of Education",
+                  "url": "https://www.moe.gov.sg/primary/p1-registration/changes-to-p1-registration-framework"
+                }
+              ],
+              "related": [
+                "p1-what"
+              ],
+              "children": []
+            },
+            {
+              "id": "school-stretching",
+              "label": "Stretching strong pupils",
+              "type": "initiative",
+              "question": "What replaces the Gifted Education Programme?",
+              "answer": [
+                "From 2027, school-based provisions in every primary school: harder work built into normal lessons for pupils who are ready, and after-school programmes, including enrichment modules at nearby schools. MOE expects about 10% of each cohort to benefit, up from about 7%.",
+                "It replaces the Gifted Education Programme, which since 1984 selected about the top 1% of pupils through Primary 3 tests and taught them in nine schools. Prime Minister Lawrence Wong announced the change in 2024."
+              ],
+              "sources": [
+                {
+                  "title": "We learn for life, together: building a We-First society through education",
+                  "publication": "Ministry of Education",
+                  "url": "https://www.moe.gov.sg/news/press-releases/20260303-we-learn-for-life-together-building-a-we-first-society-through-education"
+                },
+                {
+                  "title": "Gifted Education Programme (Singapore)",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/Gifted_Education_Programme_(Singapore)"
+                }
+              ],
+              "related": [
+                "gep-what"
+              ],
+              "children": []
+            },
+            {
+              "id": "financial-help",
+              "label": "Financial help for students",
+              "type": "initiative",
+              "question": "What financial help is there for students?",
+              "answer": [
+                "Primary school has no fees for citizens. The Financial Assistance Scheme helps lower-income families (for example, gross household income of S$2,500 or less) with school costs, and the Edusave Merit Bursary helps about 40,000 students a year. Every citizen child has an Edusave account the government tops up, now every year in primary and secondary school.",
+                "From April 2027, every citizen child will also get S$10,000 in their Post-Secondary Education Account at 17, to pay for ITE, polytechnic or university fees."
+              ],
+              "sources": [
+                {
+                  "title": "Education in Singapore",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/Education_in_Singapore"
+                },
+                {
+                  "title": "National Day Rally 2026",
+                  "publication": "Prime Minister’s Office",
+                  "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
+                },
+                {
+                  "title": "National Day Rally 2026 in summary",
+                  "publication": "Mothership",
+                  "url": "https://mothership.sg/2026/08/ndr-2026-summary/"
+                }
+              ],
+              "related": [
+                "psea"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "pe-early",
+          "label": "Early years",
+          "question": "What is the government doing for preschool?",
+          "answer": [
+            "Expanding government-supported preschools and cutting their fees sharply. Anchor and Partner Operators and MOE’s own kindergartens already provide places for about 80% of preschoolers. The 2026 National Day Rally promised full-day childcare at S$150 a month and infant care at S$300 by 2030, for every Singaporean child whatever their family’s income.",
+            "The aims are fairer starts before Primary 1 and helping families afford children."
+          ],
+          "sources": [
+            {
+              "title": "National Day Rally 2026",
+              "publication": "Prime Minister’s Office",
+              "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
+            },
+            {
+              "title": "ECDA Partner Operator Scheme",
+              "publication": "Early Childhood Development Agency",
+              "url": "https://ecda.gov.sg/parents/choosing-a-preschool/pop"
+            }
+          ],
+          "related": [
+            "preschool"
+          ],
+          "children": [
+            {
+              "id": "preschool-operators",
+              "label": "Anchor and Partner Operators",
+              "type": "initiative",
+              "question": "What are Anchor Operators, Partner Operators and MOE Kindergartens?",
+              "answer": [
+                "Government-supported preschools. Anchor Operators and Partner Operators are private or non-profit operators that get government funding in return for capping their fees and meeting quality standards; together they run more than half of Singapore’s preschools. MOE Kindergartens, run by the ministry since 2014, are often located inside primary schools.",
+                "The Workers’ Party has argued for subsidies that follow the child to any qualifying preschool instead, to widen choice."
+              ],
+              "sources": [
+                {
+                  "title": "ECDA Partner Operator Scheme",
+                  "publication": "Early Childhood Development Agency",
+                  "url": "https://ecda.gov.sg/parents/choosing-a-preschool/pop"
+                },
+                {
+                  "title": "Adjournment motion: Fund the child, not the school",
+                  "publication": "Workers’ Party",
+                  "url": "https://www.wp.sg/parliament/adjournment-motion-fund-the-child-not-the-school-a-proposal-for-fairer-and-more-diverse-preschool-education"
+                }
+              ],
+              "related": [
+                "preschool-debate"
+              ],
+              "children": []
+            },
+            {
+              "id": "preschool-fees",
+              "label": "Cheaper preschool by 2030",
+              "type": "initiative",
+              "question": "How much will preschool cost by 2030?",
+              "answer": [
+                "The prime minister announced at the 2026 National Day Rally that full-day childcare at government-supported centres will fall to S$150 a month and infant care to S$300 by 2030, less than half of today’s fees, for every Singaporean child regardless of household income. Lower-income families will get extra subsidies.",
+                "Fees will come down step by step from 2028, after the government first expands its network of supported operators."
+              ],
+              "sources": [
+                {
+                  "title": "National Day Rally 2026",
+                  "publication": "Prime Minister’s Office",
+                  "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
+                },
+                {
+                  "title": "National Day Rally 2026 in summary",
+                  "publication": "Mothership",
+                  "url": "https://mothership.sg/2026/08/ndr-2026-summary/"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "pe-sen",
+          "label": "Special educational needs",
+          "question": "What is the government doing for children with special needs?",
+          "answer": [
+            "Making school compulsory for them since 2019, strengthening support in mainstream schools, where about 4 in 5 students with special needs study, building more special education (SPED) schools and cutting their fees.",
+            "The main pressure point is waiting times for SPED places, especially for children with autism and intellectual disability, where demand is growing faster than new places can be built."
+          ],
+          "sources": [
+            {
+              "title": "MOE FY2025 Committee of Supply debate response by Second Minister for Education Dr Maliki Osman",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/news/speeches/20250306-moe-fy2025-committee-of-supply-debate-response-by-second-minister-for-education-dr-maliki-osman"
+            },
+            {
+              "title": "SPED schools",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/special-educational-needs/sped-schools"
+            }
+          ],
+          "related": [
+            "sen"
+          ],
+          "children": [
+            {
+              "id": "sen-support",
+              "label": "Support in mainstream schools",
+              "type": "initiative",
+              "question": "How are students with special needs supported in mainstream schools?",
+              "answer": [
+                "Through inclusive teaching by all teachers, plus specially trained teachers and SEN Officers, whose numbers grew from 450 in 2016 to nearly 750 in 2024. MOE is extending TRANSIT, a programme that helps pupils with learning needs, to all primary schools by 2026.",
+                "About 30,000 students with special needs, roughly 4 in 5, study in mainstream schools, so how well ordinary classrooms support them matters as much as the number of SPED places."
+              ],
+              "sources": [
+                {
+                  "title": "MOE FY2025 Committee of Supply debate response by Second Minister for Education Dr Maliki Osman",
+                  "publication": "Ministry of Education",
+                  "url": "https://www.moe.gov.sg/news/speeches/20250306-moe-fy2025-committee-of-supply-debate-response-by-second-minister-for-education-dr-maliki-osman"
+                },
+                {
+                  "title": "SPED schools",
+                  "publication": "Ministry of Education",
+                  "url": "https://www.moe.gov.sg/special-educational-needs/sped-schools"
+                }
+              ],
+              "related": [
+                "sen-basics"
+              ],
+              "children": []
+            },
+            {
+              "id": "sped-schools",
+              "label": "SPED schools",
+              "type": "initiative",
+              "question": "What is being done about SPED schools?",
+              "answer": [
+                "Children with moderate to severe needs can attend government-funded SPED schools run by social service agencies; there are 26, with more planned into the 2030s. MOE worked with operators to cut fees at nine higher-fee SPED schools by up to 60% for Singaporeans.",
+                "The average wait from application to an offered place is about six months, longer for children with autism and intellectual disability, where demand has grown fastest."
+              ],
+              "sources": [
+                {
+                  "title": "Average timeline of SPED school placement process (parliamentary reply)",
+                  "publication": "Ministry of Education",
+                  "url": "https://www.moe.gov.sg/news/parliamentary-replies/20260203-average-timeline-of-sped-school-placement-process-for-2880-unenrolled-children"
+                },
+                {
+                  "title": "MOE FY2025 Committee of Supply debate response by Second Minister for Education Dr Maliki Osman",
+                  "publication": "Ministry of Education",
+                  "url": "https://www.moe.gov.sg/news/speeches/20250306-moe-fy2025-committee-of-supply-debate-response-by-second-minister-for-education-dr-maliki-osman"
+                }
+              ],
+              "related": [
+                "sen-wait"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "pe-tech",
+          "label": "Technology and wellbeing",
+          "question": "What rules govern technology in schools?",
+          "answer": [
+            "Every secondary student has a school-issued learning device, AI is being introduced into lessons in stages, and phone use is now banned for the whole school day in secondary schools. The approach: purposeful technology for learning, less passive screen time.",
+            "These sit alongside a national push on children’s health, Grow Well SG, and plans to make social media platforms check users’ ages."
+          ],
+          "sources": [
+            {
+              "title": "No smartphones during school hours in secondary schools from 2026: MOE",
+              "publication": "Mothership",
+              "url": "https://mothership.sg/2025/11/no-smartphones-secondary-school/"
+            },
+            {
+              "title": "Schools guide students to use AI purposefully for learning",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/news/forum-letter-replies/20260918-schools-guide-students-to-use-ai-purposefully-for-learning"
+            },
+            {
+              "title": "Singapore to toughen ban on smartphones, smartwatches in secondary schools from 2026",
+              "publication": "Gulf News",
+              "url": "https://gulfnews.com/world/asia/singapore-to-toughen-ban-on-smartphones-smartwatches-in-secondary-schools-from-2026-1.500365492"
+            },
+            {
+              "title": "National Day Rally 2026",
+              "publication": "Prime Minister’s Office",
+              "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
+            }
+          ],
+          "related": [
+            "tech"
+          ],
+          "children": [
+            {
+              "id": "pld",
+              "label": "Personal Learning Devices",
+              "type": "initiative",
+              "question": "What is the Personal Learning Device programme?",
+              "answer": [
+                "Under it, every secondary school student owns a school-prescribed laptop or tablet for learning. MOE brought the goal forward by seven years, from 2028 to the end of 2021. Families can pay with Edusave, which received extra top-ups, and students on the Financial Assistance Scheme pay nothing out of pocket.",
+                "From January 2026, these devices go into sleep mode from 10.30pm to 6.30am, half an hour earlier than before."
+              ],
+              "sources": [
+                {
+                  "title": "Personal Learning Device: frequently asked questions (2022)",
+                  "publication": "Bukit Panjang Government High School (MOE)",
+                  "url": "https://www.bpghs.moe.edu.sg/files/2022%20Set%20of%20FAQs.pdf"
+                },
+                {
+                  "title": "All Sec school students to get digital learning devices by 2021, 7 years earlier than planned",
+                  "publication": "Must Share News",
+                  "url": "https://mustsharenews.com/learning-devices-secondary-school/"
+                },
+                {
+                  "title": "Singapore to toughen ban on smartphones, smartwatches in secondary schools from 2026",
+                  "publication": "Gulf News",
+                  "url": "https://gulfnews.com/world/asia/singapore-to-toughen-ban-on-smartphones-smartwatches-in-secondary-schools-from-2026-1.500365492"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "phone-rules",
+              "label": "Phone rules in schools",
+              "type": "initiative",
+              "question": "What are the phone rules in secondary schools?",
+              "answer": [
+                "Since January 2026, secondary school students may not use smartphones or smartwatches at any time during the school day, including recess, co-curricular activities and remedial lessons. Devices stay in lockers or bags, and schools can allow exceptions where needed.",
+                "MOE cited research linking heavy screen use to less sleep, physical activity and face-to-face interaction. Schools enforce the rules under their own discipline policies."
+              ],
+              "sources": [
+                {
+                  "title": "No smartphones during school hours in secondary schools from 2026: MOE",
+                  "publication": "Mothership",
+                  "url": "https://mothership.sg/2025/11/no-smartphones-secondary-school/"
+                },
+                {
+                  "title": "Singapore to toughen ban on smartphones, smartwatches in secondary schools from 2026",
+                  "publication": "Gulf News",
+                  "url": "https://gulfnews.com/world/asia/singapore-to-toughen-ban-on-smartphones-smartwatches-in-secondary-schools-from-2026-1.500365492"
+                }
+              ],
+              "related": [
+                "phones"
+              ],
+              "children": []
+            },
+            {
+              "id": "ai-schools",
+              "label": "AI in schools",
+              "type": "initiative",
+              "question": "How is AI being introduced in schools?",
+              "answer": [
+                "In stages. Primary 1 to 3 pupils learn mostly with hands-on and printed materials. From Primary 4, pupils can use AI tools inside the Student Learning Space, MOE’s online platform, with a teacher supervising. Teachers may hold AI back where it doesn’t help learning.",
+                "Every teacher must complete a first AI module on basics, ethics and safety by the end of 2026, with two more encouraged by the end of 2027."
+              ],
+              "sources": [
+                {
+                  "title": "Schools guide students to use AI purposefully for learning",
+                  "publication": "Ministry of Education",
+                  "url": "https://www.moe.gov.sg/news/forum-letter-replies/20260918-schools-guide-students-to-use-ai-purposefully-for-learning"
+                },
+                {
+                  "title": "What you need to know about preparing our students for an AI-enabled world",
+                  "publication": "Ministry of Education",
+                  "url": "https://www.moe.gov.sg/news/edtalks/what-you-need-to-know-about-preparing-our-students-for-an-ai-enabled-world"
+                }
+              ],
+              "related": [
+                "ai-classroom"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "pe-beyond",
+          "label": "After school and lifelong",
+          "question": "What is the government doing beyond school?",
+          "answer": [
+            "Widening university places, strengthening applied routes such as ITE and polytechnic diplomas, and paying for adults to study again through SkillsFuture. The government aimed for 60% of each cohort to get a publicly funded degree by 2025, and in 2026 raised incentives for employers who train ITE graduates on the job.",
+            "The idea is that education should no longer stop in your twenties."
+          ],
+          "sources": [
+            {
+              "title": "Polytechnics draw students from secondary schools, JCs and ITE through multiple pathways",
+              "publication": "Temasek Polytechnic",
+              "url": "https://www.tp.edu.sg/about-tp/media-centre/tp-in-the-news/Polytechnics-draw-students-from-secondary-schools-JCs-and-ITE-through-multiple-pathways.html"
+            },
+            {
+              "title": "Growing together through lifelong learning",
+              "publication": "Ministry of Education",
+              "url": "https://www.moe.gov.sg/news/press-releases/20260303-growing-together-through-lifelong-learning"
+            }
+          ],
+          "related": [
+            "after-secondary"
+          ],
+          "children": [
+            {
+              "id": "work-study",
+              "label": "ITE Work-Study Diploma",
+              "type": "initiative",
+              "question": "What is the ITE Work-Study Diploma?",
+              "answer": [
+                "A programme in which ITE graduates work full-time for a company while studying for a diploma, mixing on-the-job training with classes. From April 2026, employers receive up to S$20,000 per trainee instead of S$15,000, paid at milestones through the course.",
+                "It aims to make the applied route as valuable as the academic one, so graduates earn while learning and gain a qualification employers want."
+              ],
+              "sources": [
+                {
+                  "title": "Growing together through lifelong learning",
+                  "publication": "Ministry of Education",
+                  "url": "https://www.moe.gov.sg/news/press-releases/20260303-growing-together-through-lifelong-learning"
+                },
+                {
+                  "title": "Work-Study Diploma",
+                  "publication": "Institute of Technical Education",
+                  "url": "https://www.ite.edu.sg/employers/upgrade-your-workforce/work-study-diploma/"
+                }
+              ],
+              "related": [
+                "ite-work-study"
+              ],
+              "children": []
+            },
+            {
+              "id": "level-up-policy",
+              "label": "SkillsFuture Level-Up",
+              "type": "initiative",
+              "question": "What is the SkillsFuture Level-Up Programme?",
+              "answer": [
+                "A package from Budget 2024 for mid-career Singaporeans. Everyone gets a S$4,000 SkillsFuture Credit (Mid-Career) top-up in the year they turn 40, with no expiry, for approved courses such as diplomas and degrees. From 2025, those aged 40 and above can get subsidies for a second full-time diploma, and a training allowance of half their recent income, up to S$3,000 a month, for selected full-time courses.",
+                "It is the clearest sign that the government now treats education as lifelong."
+              ],
+              "sources": [
+                {
+                  "title": "Budget 2024: SkillsFuture Level-Up Programme (Annex D-1)",
+                  "publication": "Ministry of Finance",
+                  "url": "https://www.mof.gov.sg/docs/librariesprovider3/budget2024/download/pdf/annexd1.pdf"
+                },
+                {
+                  "title": "Singapore unveils SkillsFuture overhaul and Workfare enhancements",
+                  "publication": "HRM Asia",
+                  "url": "https://hrmasia.com/singapore-upskills-mid-career-professionals-with-enhanced-skillsfuture-programme/"
+                }
+              ],
+              "related": [
+                "level-up"
+              ],
+              "children": []
             }
           ]
         }

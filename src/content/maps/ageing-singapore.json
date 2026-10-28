@@ -2,8 +2,8 @@
   "title": "Singapore’s ageing society",
   "track": "singapore",
   "updated": "2026-10-28",
-  "dek": "Singapore is now super-aged. How it pays for old age, health care and care, the debates over who should carry the cost, and every change in the news.",
-  "intro": "Start with The basics if you are new to the topic, then Big ideas and debates for the policy thinking behind it. In the news holds each recent change, and every story opens into the same four questions: why is it happening, what is changing, who does it affect, and what does it mean. Open any box for a short answer and the sources to dig deeper.",
+  "dek": "Singapore is now super-aged. How it pays for old age, health care and care, every government initiative, the debates over who should carry the cost, and every change in the news.",
+  "intro": "Start with The basics if you are new to the topic, then Big ideas and debates for the policy thinking behind it. What the government is doing is a bird’s-eye view of every major initiative, from Age Well SG to CareShield Life. In the news holds each recent change, and every story opens into the same four questions: why is it happening, what is changing, who does it affect, and what does it mean.",
   "cover": {
     "commons": "Elderly Chinese men playing draughts in Chinatown, Singapore - 2013.jpg",
     "alt": "A crowd of older men watching a game of draughts at a table in Chinatown, Singapore"
@@ -465,6 +465,615 @@
                   "title": "Demographics of Singapore",
                   "publication": "Wikipedia",
                   "url": "https://en.wikipedia.org/wiki/Demographics_of_Singapore"
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "policy",
+      "label": "What the government is doing",
+      "kind": "policy",
+      "question": "What is the government doing about ageing?",
+      "answer": [
+        "It is acting on several fronts at once, mostly in small, pre-announced steps rather than one big overhaul. There are national programmes to keep older people healthy and active, layers of help for retirement income, rules that let people work longer, insurance and subsidies for health care and long-term care, and measures to encourage births and bring in new citizens.",
+        "This part is a bird’s-eye view of those initiatives, grouped by what they are for. Each box says what the initiative is, who it helps, what has happened so far, and where to read more."
+      ],
+      "sources": [
+        {
+          "title": "Speech by Mr Ong Ye Kung at the Ministry of Health Committee of Supply Debate 2026",
+          "publication": "Ministry of Health",
+          "url": "https://www.moh.gov.sg/newsroom/speech-by-mr-ong-ye-kung--minister-for-health-and-coordinating-minister-for-social-policies--at-the-ministry-of-health-committee-of-supply-debate-2026--on-5-march-2026/"
+        },
+        {
+          "title": "Budget 2026 statement (as delivered)",
+          "publication": "Ministry of Finance",
+          "url": "https://www.sgpc.gov.sg/api/file/getfile/2a%20Delivered%20Speech.pdf?path=%2Fsgpcmedia%2Fmedia_releases%2Fmof%2Fpress_release%2FP-20260212-5%2Fattachment%2F2a+Delivered+Speech.pdf"
+        }
+      ],
+      "children": [
+        {
+          "id": "pa-plan",
+          "label": "Healthy and active ageing",
+          "question": "What are the national plans for ageing well?",
+          "answer": [
+            "Two programmes carry most of the weight. Age Well SG, launched in 2023, aims to help older people stay active and connected and live in their own homes for as long as possible. Healthier SG, also launched in 2023, shifts health care towards prevention by matching every resident with one family doctor.",
+            "Both rest on the same bet: that keeping people well and at home is cheaper and better than treating them in hospitals and nursing homes later."
+          ],
+          "sources": [
+            {
+              "title": "Good progress in the implementation of Age Well SG",
+              "publication": "Ministry of Health",
+              "url": "https://www.moh.gov.sg/newsroom/good-progress-in-the-implementation-of-age-well-sg/"
+            },
+            {
+              "title": "White Paper on Healthier SG",
+              "publication": "Ministry of Health",
+              "url": "https://www.moh.gov.sg/newsroom/white-paper-on-healthier-sg/"
+            }
+          ],
+          "children": [
+            {
+              "id": "age-well-sg",
+              "label": "Age Well SG",
+              "type": "initiative",
+              "question": "What is Age Well SG?",
+              "answer": [
+                "The government’s national programme, launched in 2023, to help older Singaporeans age in their own homes and communities. It has expanded a network of more than 200 Active Ageing Centres where older people can exercise, eat and socialise, and since 2025 has named four ‘Age Well Neighbourhoods’, in Toa Payoh, Bedok, Bukit Panjang and Tiong Bahru-Redhill, serving more than 110,000 older people.",
+                "Since 2025 the government has also set up Integrated Community Care Providers in 84 areas, so each older person has one organisation coordinating their care, and HDB builds Community Care Apartments that combine small flats with care on site."
+              ],
+              "sources": [
+                {
+                  "title": "Good progress in the implementation of Age Well SG",
+                  "publication": "Ministry of Health",
+                  "url": "https://www.moh.gov.sg/newsroom/good-progress-in-the-implementation-of-age-well-sg/"
+                },
+                {
+                  "title": "Three more Age Well Neighbourhoods to strengthen support for seniors in the community",
+                  "publication": "Ministry of Health",
+                  "url": "https://www.moh.gov.sg/newsroom/three-more-age-well-neighbourhoods-to-strengthen-support-for-seniors-in-the-community/"
+                },
+                {
+                  "title": "Speech by Mr Ong Ye Kung at the Ministry of Health Committee of Supply Debate 2026",
+                  "publication": "Ministry of Health",
+                  "url": "https://www.moh.gov.sg/newsroom/speech-by-mr-ong-ye-kung--minister-for-health-and-coordinating-minister-for-social-policies--at-the-ministry-of-health-committee-of-supply-debate-2026--on-5-march-2026/"
+                }
+              ],
+              "related": [
+                "long-term-care"
+              ],
+              "children": []
+            },
+            {
+              "id": "healthier-sg",
+              "label": "Healthier SG",
+              "type": "initiative",
+              "question": "What is Healthier SG?",
+              "answer": [
+                "A national programme launched in July 2023 to shift health care from treating illness to preventing it. Its core is ‘One Resident, One Family Doctor’: residents, starting with those aged 40 and above, enrol with a chosen family doctor at a polyclinic or private clinic, who draws up a personal health plan, with screening and vaccinations paid for.",
+                "More than 700,000 residents had enrolled by March 2024, with over 1,000 GPs taking part, and Singapore told the World Health Assembly in 2026 that the figure had passed 1.4 million. Whether prevention reduces total health spending in an ageing population is still uncertain."
+              ],
+              "sources": [
+                {
+                  "title": "White Paper on Healthier SG",
+                  "publication": "Ministry of Health",
+                  "url": "https://www.moh.gov.sg/newsroom/white-paper-on-healthier-sg/"
+                },
+                {
+                  "title": "Enhancing preventive health and aged care",
+                  "publication": "Ministry of Health",
+                  "url": "https://www.moh.gov.sg/newsroom/enhancing-preventive-health-and-aged-care/"
+                },
+                {
+                  "title": "Statement by Singapore to the 79th World Health Assembly",
+                  "publication": "World Health Organization",
+                  "url": "https://apps.who.int/gb/statements/WHA79/PDF/Singapore-12.5.pdf"
+                }
+              ],
+              "related": [
+                "hb-means"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "pa-income",
+          "label": "Retirement income",
+          "question": "How does the government help people have enough to retire on?",
+          "answer": [
+            "Through the CPF savings system first, then layers of targeted help for those whose savings fall short: Silver Support cash for the poorest older people, government matching of family top-ups to low CPF balances, and one-off top-ups in the Budget.",
+            "The design keeps most of the burden on each person’s own savings, while public money goes mainly to those who need it most, which is the self-reliance model in action."
+          ],
+          "sources": [
+            {
+              "title": "Written answer to PQ on attainment rates on BRS, FRS, ERS and BHS",
+              "publication": "Ministry of Manpower",
+              "url": "https://www.mom.gov.sg/newsroom/parliament-questions-and-replies/2024/0110-written-answer-to-pq-on-attainment-rates-on-brs-frs-ers-bhs"
+            },
+            {
+              "title": "Budget 2026 statement (as delivered)",
+              "publication": "Ministry of Finance",
+              "url": "https://www.sgpc.gov.sg/api/file/getfile/2a%20Delivered%20Speech.pdf?path=%2Fsgpcmedia%2Fmedia_releases%2Fmof%2Fpress_release%2FP-20260212-5%2Fattachment%2F2a+Delivered+Speech.pdf"
+            }
+          ],
+          "related": [
+            "cpf",
+            "self-reliance"
+          ],
+          "children": [
+            {
+              "id": "cpf-life",
+              "label": "CPF LIFE",
+              "type": "initiative",
+              "question": "What is CPF LIFE?",
+              "answer": [
+                "A national annuity, run by the Central Provident Fund Board, that turns a person’s CPF retirement savings into a monthly income for life from age 65. At 55, members set aside a retirement sum: for those turning 55 in 2026, the Basic Retirement Sum is S$110,200 and the Full Retirement Sum S$220,400.",
+                "Someone with the basic sum can expect roughly S$950 a month, and with the full sum about S$1,700–1,800. Because payouts continue however long a person lives, CPF LIFE pools the risk of living very long across everyone, one of the ways Singapore has added insurance to its savings model."
+              ],
+              "sources": [
+                {
+                  "title": "Key CPF changes in 2026",
+                  "publication": "DBS",
+                  "url": "https://www.dbs.com.sg/personal/articles/nav/retirement/cpf-changes-in-2026"
+                },
+                {
+                  "title": "Written answer to PQ on attainment rates on BRS, FRS, ERS and BHS",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.mom.gov.sg/newsroom/parliament-questions-and-replies/2024/0110-written-answer-to-pq-on-attainment-rates-on-brs-frs-ers-bhs"
+                }
+              ],
+              "related": [
+                "enough"
+              ],
+              "children": []
+            },
+            {
+              "id": "silver-support",
+              "label": "Silver Support",
+              "type": "initiative",
+              "question": "What is the Silver Support Scheme?",
+              "answer": [
+                "Quarterly cash payments for older Singaporeans with low lifetime earnings and little family support. About 290,000 people aged 65 and over receive it. In 2025 the payments rose by 20%, and the household income limit was raised from S$1,800 to S$2,300 per person, so more people qualify.",
+                "It is the closest thing Singapore has to a basic state pension, but it is targeted: it goes only to those whose CPF savings and family support are judged too low."
+              ],
+              "sources": [
+                {
+                  "title": "Oral answer to PQ on Silver Support Scheme PCHI",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.mom.gov.sg/newsroom/parliament-questions-and-replies/2026/0113-oral-answer-to-pq-on-silver-support-scheme-pchi"
+                },
+                {
+                  "title": "Written answer to PQ on attainment rates on BRS, FRS, ERS and BHS",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.mom.gov.sg/newsroom/parliament-questions-and-replies/2024/0110-written-answer-to-pq-on-attainment-rates-on-brs-frs-ers-bhs"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "mrss",
+              "label": "Matched top-ups",
+              "type": "initiative",
+              "question": "What is the Matched Retirement Savings Scheme?",
+              "answer": [
+                "A scheme in which the government matches, dollar for dollar, cash top-ups that older Singaporeans or their families make to the member’s CPF retirement account, if the account is below the Basic Retirement Sum and the member has a modest income. It began in 2021 with a cap of S$600 a year.",
+                "Budget 2024 raised the cap to S$2,000 a year, with a S$20,000 lifetime cap, and removed the upper age limit from 2025, so it applies from age 55 with no cut-off. The ministry said this would roughly double the number of eligible Singaporeans to about 800,000 a year."
+              ],
+              "sources": [
+                {
+                  "title": "Matched Retirement Savings Scheme: what you need to know",
+                  "publication": "Central Provident Fund Board",
+                  "url": "https://cpf.gov.sg/member/infohub/educational-resources/matched-retirement-savings-scheme-what-you-need-to-know"
+                },
+                {
+                  "title": "Speech by SMS Koh Poh Koon at the Committee of Supply 2024",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.mom.gov.sg/newsroom/speeches/2024/0304-speech-by-sms-koh-at-cos-2024"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "cpf-topups-2026",
+              "label": "Budget 2026 CPF top-ups",
+              "type": "initiative",
+              "question": "What did Budget 2026 give older people with low savings?",
+              "answer": [
+                "A one-off CPF top-up of up to S$1,500 for Singaporeans aged 50 and over whose retirement savings are below the Basic Retirement Sum, with more for those with less. It adds to earlier packages for particular generations: lifelong extra health subsidies for the Pioneer and Merdeka generations, and the Majulah Package of 2023, which gives extra CPF and MediSave support to those born in the 1960s.",
+                "These one-off and cohort packages help those who started working when wages and contribution rates were low, and so had less time to save."
+              ],
+              "sources": [
+                {
+                  "title": "Budget 2026 statement (as delivered)",
+                  "publication": "Ministry of Finance",
+                  "url": "https://www.sgpc.gov.sg/api/file/getfile/2a%20Delivered%20Speech.pdf?path=%2Fsgpcmedia%2Fmedia_releases%2Fmof%2Fpress_release%2FP-20260212-5%2Fattachment%2F2a+Delivered+Speech.pdf"
+                },
+                {
+                  "title": "Written answer to PQ on attainment rates on BRS, FRS, ERS and BHS",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.mom.gov.sg/newsroom/parliament-questions-and-replies/2024/0110-written-answer-to-pq-on-attainment-rates-on-brs-frs-ers-bhs"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "pa-work",
+          "label": "Working longer",
+          "question": "How is the government helping people work for longer?",
+          "answer": [
+            "By law and by subsidy. The retirement and re-employment ages rose to 64 and 69 in July 2026 and will reach 65 and 70 by 2030. A wage subsidy helps employers who keep older staff, and CPF contribution rates for older workers are being raised step by step.",
+            "Working longer raises incomes and savings and slows the shrinking of the workforce, but it works best for those healthy enough to work and in jobs that suit older people."
+          ],
+          "sources": [
+            {
+              "title": "Retirement",
+              "publication": "Ministry of Manpower",
+              "url": "https://www.mom.gov.sg/employment-practices/retirement"
+            },
+            {
+              "title": "Budget 2026 statement (as delivered)",
+              "publication": "Ministry of Finance",
+              "url": "https://www.sgpc.gov.sg/api/file/getfile/2a%20Delivered%20Speech.pdf?path=%2Fsgpcmedia%2Fmedia_releases%2Fmof%2Fpress_release%2FP-20260212-5%2Fattachment%2F2a+Delivered+Speech.pdf"
+            }
+          ],
+          "related": [
+            "retirement-age"
+          ],
+          "children": [
+            {
+              "id": "retire-ages",
+              "label": "Retirement and re-employment ages",
+              "type": "initiative",
+              "question": "What are the retirement and re-employment ages?",
+              "answer": [
+                "Employers may not make a worker retire before the minimum retirement age, now 64, and must offer eligible workers re-employment, usually on yearly contracts, up to the re-employment age, now 69. Both rose on 1 July 2026 and are due to reach 65 and 70 by 2030.",
+                "The steps are announced years ahead so employers and workers can plan, a typical Singapore approach. About 31% of residents aged 65 and over were already working in 2022, high by rich-country standards."
+              ],
+              "sources": [
+                {
+                  "title": "Retirement",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.mom.gov.sg/employment-practices/retirement"
+                },
+                {
+                  "title": "Written answer to PQ on working Singaporeans above 65",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.mom.gov.sg/newsroom/parliament-questions-and-replies/2023/0207-written-answer-to-pq-on-working-singaporeans-above-65"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "senior-employment",
+              "label": "Senior Employment Credit",
+              "type": "initiative",
+              "question": "What help do employers get for hiring older workers?",
+              "answer": [
+                "The Senior Employment Credit is a wage subsidy for employers of Singaporeans aged 60 and over earning under S$4,000 a month, extended to the end of 2027. CPF contribution rates for older workers are rising in steps, with the next increase in 2027, so they save more for retirement.",
+                "A Tripartite Workgroup on Senior Employment, of government, unions and employers, is reviewing policy for older workers and is due to make recommendations, including on age-friendly jobs and re-employment rules."
+              ],
+              "sources": [
+                {
+                  "title": "Budget 2026 statement (as delivered)",
+                  "publication": "Ministry of Finance",
+                  "url": "https://www.sgpc.gov.sg/api/file/getfile/2a%20Delivered%20Speech.pdf?path=%2Fsgpcmedia%2Fmedia_releases%2Fmof%2Fpress_release%2FP-20260212-5%2Fattachment%2F2a+Delivered+Speech.pdf"
+                },
+                {
+                  "title": "Retirement",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.mom.gov.sg/employment-practices/retirement"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "pa-health",
+          "label": "Health care",
+          "question": "What is the government doing about rising health costs?",
+          "answer": [
+            "Raising its own spending while keeping patients paying part of their bills. The government health budget is set to rise from about S$22.5 billion in 2026 to about S$30 billion by 2030, paid for partly by the GST increase to 9%. MediShield Life, compulsory insurance for large bills, keeps raising its limits, and thousands more hospital beds are being built.",
+            "At the same time, the government restricts insurance that removes co-payments, to curb overuse."
+          ],
+          "sources": [
+            {
+              "title": "Speech by Mr Ong Ye Kung at the Ministry of Health Committee of Supply Debate 2026",
+              "publication": "Ministry of Health",
+              "url": "https://www.moh.gov.sg/newsroom/speech-by-mr-ong-ye-kung--minister-for-health-and-coordinating-minister-for-social-policies--at-the-ministry-of-health-committee-of-supply-debate-2026--on-5-march-2026/"
+            },
+            {
+              "title": "Projected annual healthcare spending for next decade",
+              "publication": "Ministry of Health",
+              "url": "https://www.moh.gov.sg/newsroom/projected-annual-healthcare-spending-for-next-decade/"
+            }
+          ],
+          "related": [
+            "health-budget",
+            "health-model"
+          ],
+          "children": [
+            {
+              "id": "medishield-life",
+              "label": "MediShield Life",
+              "type": "initiative",
+              "question": "What is MediShield Life?",
+              "answer": [
+                "Compulsory, lifelong public health insurance against large hospital bills, introduced in 2015 to replace an opt-out scheme. It covers everyone, including people with existing illnesses, and from June 2026 pays up to S$200,000 a year, with deductibles and co-payments.",
+                "Premiums rise steeply with age, from S$200 a year for young people to S$2,826 for those over 90 before subsidies, and most people pay them from MediSave. Lower-income and older members get premium subsidies."
+              ],
+              "sources": [
+                {
+                  "title": "MediShield Life benefits",
+                  "publication": "Ministry of Health",
+                  "url": "https://www.moh.gov.sg/managing-expenses/schemes-and-subsidies/medishield-life/medishield-life-benefits/"
+                },
+                {
+                  "title": "MediShield Life premium and subsidy tables",
+                  "publication": "Ministry of Health",
+                  "url": "https://www.moh.gov.sg/managing-expenses/schemes-and-subsidies/medishield-life/medishield-life-premium-and-subsidy-tables/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "health-capacity",
+              "label": "More beds and staff",
+              "type": "initiative",
+              "question": "How much is the government expanding hospital capacity?",
+              "answer": [
+                "The Ministry of Health is adding 2,800 public hospital beds between 2025 and 2030, a 25% increase, and says the health workforce must grow by another 20% over the same period. The share of government health funding going to aged care rose from 11% to 13% between 2021 and 2024 and is expected to keep rising.",
+                "The GST rose from 7% to 9% in 2023–2024, which the government says was needed mainly to pay for rising health costs as the population ages."
+              ],
+              "sources": [
+                {
+                  "title": "Speech by Mr Ong Ye Kung at the Ministry of Health Committee of Supply Debate 2026",
+                  "publication": "Ministry of Health",
+                  "url": "https://www.moh.gov.sg/newsroom/speech-by-mr-ong-ye-kung--minister-for-health-and-coordinating-minister-for-social-policies--at-the-ministry-of-health-committee-of-supply-debate-2026--on-5-march-2026/"
+                },
+                {
+                  "title": "Projected annual healthcare spending for next decade",
+                  "publication": "Ministry of Health",
+                  "url": "https://www.moh.gov.sg/newsroom/projected-annual-healthcare-spending-for-next-decade/"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "pa-care",
+          "label": "Long-term care and carers",
+          "question": "How does the government support long-term care?",
+          "answer": [
+            "Through insurance, subsidies, cash for families who care at home, more nursing homes, and a cheaper levy for households that hire a domestic worker to care for an older person. Most care still happens at home, so much of the help goes to families.",
+            "Critics say the system still leans heavily on unpaid family members, mostly women, and on low-paid migrant domestic workers."
+          ],
+          "sources": [
+            {
+              "title": "Speech by Mr Ong Ye Kung at the Ministry of Health Committee of Supply Debate 2026",
+              "publication": "Ministry of Health",
+              "url": "https://www.moh.gov.sg/newsroom/speech-by-mr-ong-ye-kung--minister-for-health-and-coordinating-minister-for-social-policies--at-the-ministry-of-health-committee-of-supply-debate-2026--on-5-march-2026/"
+            },
+            {
+              "title": "Levy concession for migrant domestic workers",
+              "publication": "Ministry of Manpower",
+              "url": "https://www.mom.gov.sg/levy-concession"
+            }
+          ],
+          "related": [
+            "care-support",
+            "hidden-care"
+          ],
+          "children": [
+            {
+              "id": "careshield-policy",
+              "label": "CareShield Life",
+              "type": "initiative",
+              "question": "How does CareShield Life help with care costs?",
+              "answer": [
+                "CareShield Life, compulsory since 2020 for people born from 1980, pays a monthly cash amount for life to anyone who becomes severely disabled. In 2025 the government decided payouts should grow by 4% a year until 2030 instead of 2%, so a claim made in 2030 pays S$806 a month, and set aside more than S$570 million to soften the higher premiums.",
+                "The payouts help with costs but do not pay for full-time professional care, which is why families and domestic workers still carry much of the load."
+              ],
+              "sources": [
+                {
+                  "title": "Government accepts CareShield Life Council’s recommendations to enhance CareShield Life, provides additional $570 million to subsidise premiums",
+                  "publication": "Ministry of Health",
+                  "url": "https://www.moh.gov.sg/newsroom/government-accepts-careshield-life-council-s-recommendations-to-enhance-careshield-life--provides-additional--570-million-to-subsidise-premiums/"
+                },
+                {
+                  "title": "Speech by Mr Ong Ye Kung at the Ministry of Health Committee of Supply Debate 2026",
+                  "publication": "Ministry of Health",
+                  "url": "https://www.moh.gov.sg/newsroom/speech-by-mr-ong-ye-kung--minister-for-health-and-coordinating-minister-for-social-policies--at-the-ministry-of-health-committee-of-supply-debate-2026--on-5-march-2026/"
+                }
+              ],
+              "related": [
+                "careshield"
+              ],
+              "children": []
+            },
+            {
+              "id": "care-subsidies",
+              "label": "Care subsidies and grants",
+              "type": "initiative",
+              "question": "What subsidies help families pay for care?",
+              "answer": [
+                "From July 2026, the maximum subsidy for long-term care services rose from 75% to 80% and was extended to more households. From April 2026, the Home Caregiving Grant, a monthly payment to families caring for a severely disabled relative, rose from S$400 to up to S$600. Budget 2026 added S$400 million to the fund that pays for long-term care subsidies.",
+                "The Health Minister’s example: a lower-income family paying about S$600 a month for a disabled grandfather’s home care in 2024 would pay about S$200 under the new rates."
+              ],
+              "sources": [
+                {
+                  "title": "Speech by Mr Ong Ye Kung at the Ministry of Health Committee of Supply Debate 2026",
+                  "publication": "Ministry of Health",
+                  "url": "https://www.moh.gov.sg/newsroom/speech-by-mr-ong-ye-kung--minister-for-health-and-coordinating-minister-for-social-policies--at-the-ministry-of-health-committee-of-supply-debate-2026--on-5-march-2026/"
+                },
+                {
+                  "title": "Budget 2026 statement (as delivered)",
+                  "publication": "Ministry of Finance",
+                  "url": "https://www.sgpc.gov.sg/api/file/getfile/2a%20Delivered%20Speech.pdf?path=%2Fsgpcmedia%2Fmedia_releases%2Fmof%2Fpress_release%2FP-20260212-5%2Fattachment%2F2a+Delivered+Speech.pdf"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "nursing-homes",
+              "label": "More nursing homes",
+              "type": "initiative",
+              "question": "How many nursing homes is the government building?",
+              "answer": [
+                "Nursing home places have grown from 9,400 beds in 2011 to 12,800 in 2017 and beyond, and the government plans to open another 10,000 beds by 2030. National spending on running long-term care services almost doubled in five years, to about S$3 billion a year.",
+                "The government has said for years it cannot build its way out of the problem: land and care staff are scarce, which is why it puts as much weight on helping people stay at home."
+              ],
+              "sources": [
+                {
+                  "title": "Speech by Mr Ong Ye Kung at the Ministry of Health Committee of Supply Debate 2025",
+                  "publication": "Ministry of Health",
+                  "url": "https://www.moh.gov.sg/newsroom/speech-by-mr-ong-ye-kung--minister-for-health--at-the-ministry-of-health-committee-of-supply-debate-2025--on-friday-7-march-2025/"
+                },
+                {
+                  "title": "Nursing home capacity and demand",
+                  "publication": "Ministry of Health",
+                  "url": "https://www.moh.gov.sg/newsroom/nursing-home-capacity-and-demand/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "mdw-levy",
+              "label": "Domestic worker levy concession",
+              "type": "initiative",
+              "question": "How does the government subsidise live-in care?",
+              "answer": [
+                "Households with a Singaporean aged 67 or older pay a reduced monthly levy of S$60 for a migrant domestic worker, instead of the standard S$300. With about 300,000 domestic workers in Singapore, many caring for older people, this is effectively a public subsidy for private, live-in eldercare.",
+                "Domestic workers are not covered by the Employment Act, and many have little training in dementia or disability care. The government itself has said live-in workers ‘may not be the best care option for every household’."
+              ],
+              "sources": [
+                {
+                  "title": "Levy concession for migrant domestic workers",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.mom.gov.sg/levy-concession"
+                },
+                {
+                  "title": "Response to adjournment motion on migrant domestic workers",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.mom.gov.sg/newsroom/speeches/2026/0113-response-to-adj-motion-on-mdws"
+                },
+                {
+                  "title": "Singapore’s care paradox: first-world economy, third-world care labor",
+                  "publication": "Global-is-Asian, Lee Kuan Yew School of Public Policy",
+                  "url": "https://lkyspp.nus.edu.sg/gia/article/singapore-s-care-paradox--first-world-economy--third-world-care-labor"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "pa-population",
+          "label": "Births and new citizens",
+          "question": "What is the government doing about the shrinking population?",
+          "answer": [
+            "Two things: trying to raise births, and taking in new citizens. Support for families has grown, from extra help for families with three or more children in 2025 to a 2026 package worth almost S$70,000 per child, including much cheaper preschool. Immigration continues at steady levels, with 25,000 to 30,000 new citizens a year planned.",
+            "Decades of baby bonuses have not reversed falling fertility, so immigration remains the one lever that directly changes the population’s shape."
+          ],
+          "sources": [
+            {
+              "title": "National Day Rally 2026",
+              "publication": "Prime Minister’s Office",
+              "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
+            },
+            {
+              "title": "Singapore plans 25,000–30,000 new citizens yearly to bolster population",
+              "publication": "Malay Mail",
+              "url": "https://www.malaymail.com/news/singapore/2026/02/27/singapore-plans-2500030000-new-citizens-yearly-to-bolster-population/210644"
+            }
+          ],
+          "related": [
+            "fertility",
+            "immigration"
+          ],
+          "children": [
+            {
+              "id": "large-families",
+              "label": "Large Families Scheme",
+              "type": "initiative",
+              "question": "What is the Large Families Scheme?",
+              "answer": [
+                "Extra support, announced in Budget 2025, for the third and later Singapore citizen children born from 18 February 2025. The Child Development Account First Step Grant doubles to S$10,000, the mother gets a S$5,000 MediSave grant, and the family gets S$1,000 a year in LifeSG credits from the child’s first to sixth birthday: up to S$16,000 per child.",
+                "It targets the decision to have a third child, where analysts argue cost weighs most. Existing large families with a young child also get the credits."
+              ],
+              "sources": [
+                {
+                  "title": "Budget 2025 Annex F-1: support for families",
+                  "publication": "Ministry of Finance",
+                  "url": "https://www.mof.gov.sg/docs/librariesprovider3/budget2025/download/pdf/annexf1.pdf"
+                },
+                {
+                  "title": "Large Families Scheme",
+                  "publication": "LifeSG",
+                  "url": "https://www.life.gov.sg/family-parenting/family-planning/large-families-scheme"
+                },
+                {
+                  "title": "Snap insight: why Budget 2025 is making it more affordable to have larger families",
+                  "publication": "Institute of Policy Studies",
+                  "url": "https://lkyspp.nus.edu.sg/ips/publications/details/snap-insight-why-budget-2025-is-making-it-more-affordable-to-have-larger-families"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "child-support-2026",
+              "label": "SG Child Support Package",
+              "type": "initiative",
+              "question": "What did the 2026 National Day Rally offer families?",
+              "answer": [
+                "A package the prime minister said would give every Singaporean child almost S$70,000 in direct support as they grow up. It includes full-day childcare fees at government-supported preschools falling to S$150 a month and infant care to S$300 by 2030, for every child regardless of household income, yearly Edusave top-ups, and S$10,000 into each child’s Post-Secondary Education Account at 17, from April 2027.",
+                "It marks a shift from targeted help towards support for every child, aimed at helping families afford children as births fall."
+              ],
+              "sources": [
+                {
+                  "title": "National Day Rally 2026",
+                  "publication": "Prime Minister’s Office",
+                  "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
+                },
+                {
+                  "title": "National Day Rally 2026 in summary",
+                  "publication": "Mothership",
+                  "url": "https://mothership.sg/2026/08/ndr-2026-summary/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "immigration-targets",
+              "label": "Immigration targets",
+              "type": "initiative",
+              "question": "How many new citizens and permanent residents does Singapore plan to take in?",
+              "answer": [
+                "In February 2026 Deputy Prime Minister Gan Kim Yong said Singapore expects to take in 25,000 to 30,000 new citizens a year over the next five years, and about 40,000 new permanent residents a year. In 2025 it granted 25,094 citizenships and 35,352 permanent residencies.",
+                "The government says immigration helps moderate the impact of ageing and low birth rates. It is politically sensitive: the 2013 Population White Paper set off the largest protest at Speakers’ Corner since it opened."
+              ],
+              "sources": [
+                {
+                  "title": "Singapore plans 25,000–30,000 new citizens yearly to bolster population",
+                  "publication": "Malay Mail",
+                  "url": "https://www.malaymail.com/news/singapore/2026/02/27/singapore-plans-2500030000-new-citizens-yearly-to-bolster-population/210644"
+                },
+                {
+                  "title": "Population in Brief 2026",
+                  "publication": "National Population and Talent Division",
+                  "url": "https://isomer-user-content.by.gov.sg/520/799cc617-8bdf-420b-a47e-86ececabe12e/PIB%202026%20Report.pdf"
+                },
+                {
+                  "title": "Population White Paper",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/Population_White_Paper"
                 }
               ],
               "children": []
