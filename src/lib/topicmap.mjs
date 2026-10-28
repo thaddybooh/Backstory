@@ -5,7 +5,7 @@
 import { LIMITS as GRAPH_LIMITS } from './graph.mjs';
 
 export const LIMITS = {
-  categories: [2, 5],
+  categories: [2, 6],
   sources: [1, 4],
   answerWords: GRAPH_LIMITS.answerWords,
   labelChars: GRAPH_LIMITS.labelChars,

@@ -13,12 +13,18 @@
 [data-category='ideas'] {
   --c: #2c7a7b;
 }
+[data-category='policy'] {
+  --c: #8a5a00;
+}
 [data-category='news'] {
   --c: var(--accent);
 }
 /* Each kind of question has its own colour too: the stripe on its box and its tag. */
 [data-type='basics'] {
   --t: #4b5b78;
+}
+[data-type='initiative'] {
+  --t: #8a5a00;
 }
 [data-type='why'] {
   --t: #b45309;
@@ -38,7 +44,9 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) [data-category='basics'] { --c: #9fb0cf; }
   :root:not([data-theme='light']) [data-category='ideas'] { --c: #5fc4c4; }
+  :root:not([data-theme='light']) [data-category='policy'] { --c: #e3b341; }
   :root:not([data-theme='light']) [data-type='basics'] { --t: #9fb0cf; }
+  :root:not([data-theme='light']) [data-type='initiative'] { --t: #e3b341; }
   :root:not([data-theme='light']) [data-type='why'] { --t: #f2a65a; }
   :root:not([data-theme='light']) [data-type='what'] { --t: #a5a8ff; }
   :root:not([data-theme='light']) [data-type='who'] { --t: #4fd1b5; }
@@ -47,7 +55,9 @@
 }
 :root[data-theme='dark'] [data-category='basics'] { --c: #9fb0cf; }
 :root[data-theme='dark'] [data-category='ideas'] { --c: #5fc4c4; }
+:root[data-theme='dark'] [data-category='policy'] { --c: #e3b341; }
 :root[data-theme='dark'] [data-type='basics'] { --t: #9fb0cf; }
+:root[data-theme='dark'] [data-type='initiative'] { --t: #e3b341; }
 :root[data-theme='dark'] [data-type='why'] { --t: #f2a65a; }
 :root[data-theme='dark'] [data-type='what'] { --t: #a5a8ff; }
 :root[data-theme='dark'] [data-type='who'] { --t: #4fd1b5; }
@@ -121,6 +131,7 @@ html[data-qmap-view='list'] .tmap-key {
   white-space: nowrap;
 }
 .tmap-tag[data-type='basics'] { --t: #4b5b78; }
+.tmap-tag[data-type='initiative'] { --t: #8a5a00; }
 .tmap-tag[data-type='why'] { --t: #b45309; }
 .tmap-tag[data-type='what'] { --t: #4f46e5; }
 .tmap-tag[data-type='who'] { --t: #0f766e; }
@@ -128,6 +139,7 @@ html[data-qmap-view='list'] .tmap-key {
 .tmap-tag[data-type='debate'] { --t: #be185d; }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) .tmap-tag[data-type='basics'] { --t: #9fb0cf; }
+  :root:not([data-theme='light']) .tmap-tag[data-type='initiative'] { --t: #e3b341; }
   :root:not([data-theme='light']) .tmap-tag[data-type='why'] { --t: #f2a65a; }
   :root:not([data-theme='light']) .tmap-tag[data-type='what'] { --t: #a5a8ff; }
   :root:not([data-theme='light']) .tmap-tag[data-type='who'] { --t: #4fd1b5; }
@@ -135,6 +147,7 @@ html[data-qmap-view='list'] .tmap-key {
   :root:not([data-theme='light']) .tmap-tag[data-type='debate'] { --t: #f79ac4; }
 }
 :root[data-theme='dark'] .tmap-tag[data-type='basics'] { --t: #9fb0cf; }
+:root[data-theme='dark'] .tmap-tag[data-type='initiative'] { --t: #e3b341; }
 :root[data-theme='dark'] .tmap-tag[data-type='why'] { --t: #f2a65a; }
 :root[data-theme='dark'] .tmap-tag[data-type='what'] { --t: #a5a8ff; }
 :root[data-theme='dark'] .tmap-tag[data-type='who'] { --t: #4fd1b5; }

@@ -74,7 +74,7 @@ const graphs = defineCollection({
 // The rules beyond this shape (unique ids, real cross-links, the four questions every
 // news story answers) live in src/lib/topicmap.mjs.
 type MapNode = z.infer<typeof followUp> & {
-  type?: 'basics' | 'why' | 'what' | 'who' | 'means' | 'debate';
+  type?: 'basics' | 'initiative' | 'why' | 'what' | 'who' | 'means' | 'debate';
   when?: string;
   related: string[];
   issue?: string;
@@ -84,7 +84,8 @@ const mapNode: z.ZodType<MapNode> = z.lazy(() =>
   followUp.omit({ section: true }).extend({
     // What kind of question it is; drives its colour and the "highlight" buttons.
     // Topics and news stories (the level under a category) leave it out.
-    type: z.enum(['basics', 'why', 'what', 'who', 'means', 'debate']).optional(),
+    // 'initiative' marks a government programme, law or body (in the policy category).
+    type: z.enum(['basics', 'initiative', 'why', 'what', 'who', 'means', 'debate']).optional(),
     // For a news story: when it happened, shown on the box, e.g. "Sep 2026".
     when: z.string().optional(),
     // Ids of nodes elsewhere in the map this one connects to (listed in its answer panel).
@@ -107,8 +108,9 @@ const maps = defineCollection({
     cover: z.object({ commons: z.string(), alt: z.string() }).optional(),
     categories: z.array(
       followUp.omit({ section: true }).extend({
-        // basics: how it works; ideas: the policy thinking and debates; news: recent changes.
-        kind: z.enum(['basics', 'ideas', 'news']),
+        // basics: how it works; ideas: the policy thinking and debates; policy: what the
+        // government is doing (its standing initiatives); news: recent changes.
+        kind: z.enum(['basics', 'ideas', 'policy', 'news']),
         children: z.array(mapNode).default([]),
       }),
     ),

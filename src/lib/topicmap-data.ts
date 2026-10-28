@@ -9,6 +9,7 @@ export type QuestionType = NonNullable<MapNode['type']>;
 
 export const QUESTION_TYPE: Record<QuestionType, string> = {
   basics: 'Policy basics',
+  initiative: 'Government initiatives',
   why: 'Why is this happening?',
   what: 'What’s changing?',
   who: 'Who does it affect?',
@@ -19,6 +20,7 @@ export const QUESTION_TYPE: Record<QuestionType, string> = {
 export const CATEGORY_KIND: Record<MapCategory['kind'], string> = {
   basics: 'The basics',
   ideas: 'Big ideas and debates',
+  policy: 'What the government is doing',
   news: 'In the news',
 };
 
