@@ -430,3 +430,76 @@ html[data-qmap-view='list'] .tmap-key {
   color: var(--ink-faint);
   margin-top: 0.8rem;
 }
+
+/* ---------- "Where this fits" on an issue page ---------- */
+.map-place {
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper-raised);
+}
+.map-place-inner {
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 0.85rem var(--gutter);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 1.25rem;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+}
+.map-place-kicker {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--accent);
+}
+.map-place-trail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.2rem 0.45rem;
+  font-weight: 650;
+}
+.map-place-trail span {
+  color: var(--ink-faint);
+}
+.map-place-trail a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--rule);
+}
+.map-place-trail a:hover {
+  border-color: var(--accent);
+}
+.map-place-trail a[aria-current] {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.map-place-primers {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.5rem;
+  color: var(--ink-soft);
+}
+.map-place-primers a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  background: var(--paper);
+}
+.map-place-primers a:hover {
+  border-color: var(--accent);
+}
+@media (min-width: 64rem) {
+  .map-place-primers {
+    margin-left: auto;
+  }
+}

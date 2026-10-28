@@ -7,8 +7,8 @@ Read `BRIEF.md` for the original brief and `GUIDE.md` for the owner's step-by-st
 
 - **Topic maps added** (branch `claude/loving-heisenberg-y8hp8s`): a standalone, deeper version of the question
   graph for a whole subject, at `/maps/<slug>/` (index at `/maps/`, "Maps" in the nav). First map: Singapore's
-  education system (3 categories, 63 questions, 60 sources, no article), drawn as a left-to-right tree. See
-  "Topic maps" below.
+  education system (3 categories, 63 questions, 60 sources, no article), drawn as a left-to-right tree. Then
+  maps for AI and jobs (issue 008) and ageing (issue 004), linked both ways with their issues. See "Topic maps".
 
 ## Status (26 Oct 2026)
 
@@ -96,6 +96,16 @@ it themselves first.
   show its type; the "Highlight" chips light up one type across the whole map.
 - **Code:** `src/components/topicmap/` (TopicMap.astro, MapItem.astro for the nested list, topicmap.ts for the
   tree), `src/styles/topicmap.css` (builds on qmap.css), `src/pages/maps/`.
+- **Maps and daily issues are linked (28 Oct 2026):** maps are the long-term backbone (one per "beat"), daily
+  issues plug into them as news stories. A box's `issue` field links it to an issue. Each issue page then shows a
+  "Where this fits" strip at the top (map › category › story, plus up to three "New to this? Start with" background
+  boxes, taken from the story's `related` background ids, then the map's basics topics), and the homepage links
+  today's issue to its map. Logic: `getPlacement` in `src/lib/topicmap-data.ts` (prefers a news story over a
+  passing mention). Links like `/maps/<slug>/#<box-id>` open the map at that box, and the address updates as the
+  reader opens boxes. Maps so far: Singapore's education system (no issue yet), AI and jobs in Singapore (issue
+  008) and Singapore's ageing society (issue 004); the last two were built only from those issues' sources.
+- **Next step (not built):** have the write-issue skill add or update a story on the matching map with each new
+  issue, so maps grow daily. Until then, link new issues by hand with the `issue` field.
 - **Sources:** unlike issue graphs, a map's sources are not checked against an article (there isn't one). The
   education map's answers were written from web research on 28 Oct 2026; some pages (moe.gov.sg,
   schoolbag.edu.sg) could not be opened from the cloud session and were cited from search results.

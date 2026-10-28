@@ -32,6 +32,7 @@ const related = 'related' in node ? node.related : [];
     data-depth={depth}
     data-type={type}
     data-when={when}
+    data-issue={'issue' in node ? node.issue : undefined}
     data-related={related.length ? related.join(' ') : undefined}
   >
     <summary>

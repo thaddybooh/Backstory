@@ -8,12 +8,14 @@ import { getGraph } from '../lib/graph-data';
 import { getIssues, issueUrl, issueNumber, formatLongDate, TRACK_LABEL } from '../lib/issues';
 import { getCommonsImage } from '../lib/images';
 import { SITE } from '../lib/site';
+import { getPlacement } from '../lib/topicmap-data';
 
 const issues = await getIssues();
 const [latest, ...earlier] = issues;
 const d = latest?.data;
 const layers = ['History', 'Economic incentives', 'Political decisions', 'Competing interests'];
 const graph = latest ? await getGraph(latest) : undefined;
+const placement = latest ? await getPlacement(latest.id) : undefined;
 const heroImage = d?.hero?.commons ? getCommonsImage(d.hero.commons) : undefined;
 const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommonsImage(d.hero.commons))));
 ---
@@ -41,6 +43,12 @@ const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommon
           </div>
           <div slot="after" class="today-text">
             <p class="today-summary">{d.summary}</p>
+            {placement && (
+              <p class="today-map">
+                Part of the topic map <a href={placement.story.href}>{placement.map.data.title}</a>, with the background
+                you need to follow it.
+              </p>
+            )}
             <p class="today-prompt">
               <strong>Start with a question.</strong> Open any node for a short answer, its sources and where to read
               more.

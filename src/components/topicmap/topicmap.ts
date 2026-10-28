@@ -17,6 +17,7 @@ interface Node {
   category: string;
   type?: string;
   when?: string;
+  issue?: string;
   parent?: Node;
   children: Node[];
   related: Node[];
@@ -98,7 +99,7 @@ export async function mountTopicMap(section: HTMLElement) {
     const parent = d.parent ? byId.get(d.parent)! : root;
     const n: Node = {
       ...blank, children: [], related: [], id: d.node!, depth: Number(d.depth), label: d.label!,
-      category: d.category!, type: d.type, when: d.when, parent, details, el: svgEl('g'),
+      category: d.category!, type: d.type, when: d.when, issue: d.issue, parent, details, el: svgEl('g'),
     };
     parent.children.push(n);
     nodes.push(n);
@@ -172,7 +173,8 @@ export async function mountTopicMap(section: HTMLElement) {
     const textW = width - PAD_X * 2 - (n.depth >= 2 ? 6 : 0);
     const main = lines(n.label, size, weight, textW);
     // A small line above the label: the kind of question, or a news story's date.
-    const kicker = n.type ? TYPE_TAG[n.type] : n.when ? n.when : n.depth === 1 ? `${n.children.length} topics` : '';
+    const when = n.when && n.issue ? `${n.when} · Full issue` : n.when;
+    const kicker = n.type ? TYPE_TAG[n.type] : when ? when : n.depth === 1 ? `${n.children.length} topics` : '';
     const kickerSize = narrow() ? 10.5 : 11;
     const lineH = size * 1.2;
     const top = PAD_Y + (kicker ? kickerSize * 1.45 : 0);
@@ -436,14 +438,15 @@ export async function mountTopicMap(section: HTMLElement) {
   window.addEventListener('scroll', pinPanel, { passive: true });
 
   /**
-   * After a change, frame the box that was opened with its parent and what it opened
+   * After a change, frame the box that was opened with its path and what it opened
    * into; with nothing in focus, frame everything that is showing.
    */
   function frame(focus?: Node, animate = true) {
     if (openAll) return fitWhole(animate);
     if (!focus) return fitTo(visible, animate);
-    const family = [focus, ...(expanded.has(focus) ? focus.children : [])];
-    if (focus.parent) family.push(focus.parent);
+    // The box, what it opened into, and the path back to the subject, so the reader
+    // always sees where they are.
+    const family = [focus, ...(expanded.has(focus) ? focus.children : []), ...ancestors(focus)];
     fitTo(family, animate);
   }
 
@@ -557,6 +560,8 @@ export async function mountTopicMap(section: HTMLElement) {
     if (wasHidden) requestAnimationFrame(() => panel.classList.add('is-open'));
     pinPanel();
     sync(n === root ? undefined : n);
+    // The address points at the open box, so it can be shared or linked from an issue.
+    history.replaceState(null, '', n === root ? location.pathname : `#${n.id}`);
     if (fromKeyboard || narrow()) panelTitle.focus({ preventScroll: true });
   }
 
@@ -566,6 +571,7 @@ export async function mountTopicMap(section: HTMLElement) {
     section.classList.remove('has-panel');
     selected = null;
     trail();
+    if (location.hash) history.replaceState(null, '', location.pathname);
     const done = () => {
       if (!panel.classList.contains('is-open')) panel.hidden = true;
     };
@@ -666,4 +672,14 @@ export async function mountTopicMap(section: HTMLElement) {
   new ResizeObserver(() => resize()).observe(stage);
   resize(true);
   stage.classList.add('is-ready');
+
+  // A link such as /maps/ai-and-jobs/#rung-warning opens that box straight away.
+  const linked = byId.get(decodeURIComponent(location.hash.slice(1)));
+  if (linked && document.documentElement.dataset.qmapView !== 'list') {
+    stage.scrollIntoView({ block: 'center' });
+    open(linked);
+  } else if (linked) {
+    for (let p: Node | undefined = linked; p && p !== root; p = p.parent) p.details!.open = true;
+    linked.details!.scrollIntoView({ block: 'center' });
+  }
 }
