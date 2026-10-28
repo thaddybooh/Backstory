@@ -1,0 +1,195 @@
+{
+  "issue": "007-the-memory-squeeze",
+  "questions": [
+    {
+      "id": "why-now",
+      "label": "Why now?",
+      "question": "Why did memory prices explode in 2026?",
+      "answer": [
+        "Because a new kind of buyer arrived faster than factories could be built. From 2023 the race to build AI data centres sent demand for high-bandwidth memory soaring, and in October 2025 OpenAI signed letters of intent suggesting its Stargate project alone might eventually need up to 900,000 DRAM wafers a month. The three big makers moved their newest lines and most of their investment to AI memory.",
+        "The timing made it worse. After the 2022–23 bust, when Samsung and SK hynix lost more than 21 trillion won in their chip businesses, all three had cut production and investment. So when AI demand surged, there was little spare capacity. Contract prices for ordinary DRAM rose 55–63% in each of the first two quarters of 2026."
+      ],
+      "section": "how-it-unfolded",
+      "sources": [
+        { "title": "OpenAI ropes in Samsung, SK Hynix to source memory chips for Stargate", "publication": "TechCrunch", "url": "https://www.techcrunch.com/2025/10/01/openai-ropes-in-samsung-sk-hynix-to-source-memory-chips-for-stargate" },
+        { "title": "Memory makers prioritize server applications, driving across-the-board price increases in 1Q26", "publication": "TrendForce", "url": "https://www.trendforce.com/presscenter/news/20260105-12860.html" },
+        { "title": "AI server demand to drive memory contract price increases in 2Q26 as CSPs secure supply via long-term agreements", "publication": "TrendForce", "url": "https://www.trendforce.com/presscenter/news/20260331-12995.html" }
+      ],
+      "followUps": []
+    },
+    {
+      "id": "why-ai-needs-memory",
+      "label": "Why does AI need so much?",
+      "question": "Why does AI need so much memory?",
+      "answer": [
+        "An AI model is, at bottom, billions of numbers that must sit in memory and be read again and again, very fast, both while it is trained and every time someone uses it. As AI chips have become more powerful, the limit on their speed has increasingly become memory: how much they can hold and how fast it can feed them.",
+        "That is why AI chips use high-bandwidth memory: 8, 12 or 16 DRAM chips stacked on top of each other and placed right next to the processor. The servers around them also need large amounts of ordinary DRAM and fast storage. TrendForce estimates HBM and high-capacity server memory together make up about half of all DRAM supplied in 2026."
+      ],
+      "section": "what-memory-chips-are-and-why-ai-needs-so-many",
+      "sources": [
+        { "title": "High Bandwidth Memory", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/High_Bandwidth_Memory" },
+        { "title": "Memory prices soar; DRAM and NAND flash to account for 68% of major CSP capex in 2027", "publication": "TrendForce", "url": "https://www.trendforce.com/presscenter/news/20260825-13198.html" },
+        { "title": "Samsung Electronics, SK hynix to benefit further from AI memory bottleneck", "publication": "The Korea Times", "url": "https://www.koreatimes.co.kr/business/20260623/samsung-electronics-sk-hynix-to-benefit-further-from-ai-memory-bottleneck" }
+      ],
+      "followUps": [
+        {
+          "id": "why-hbm-crowds-out",
+          "label": "Why does HBM crowd others out?",
+          "question": "Why does making HBM leave less memory for phones and PCs?",
+          "answer": [
+            "Because HBM is wafer-hungry. Each chip in a stack is larger than an ordinary DRAM chip and more of them come out faulty, so by the industry’s rule of thumb a given amount of HBM uses about three times as many silicon wafers as the same amount of ordinary memory. Every wafer turned into HBM is roughly three wafers’ worth of memory that phones and PCs don’t get.",
+            "IDC calls this “a zero-sum game” and “a potentially permanent, strategic reallocation of the world’s silicon wafer capacity”. Even if makers added capacity at their normal pace, the shift towards HBM would leave less ordinary memory."
+          ],
+          "section": "why-ai-is-a-different-kind-of-demand",
+          "sources": [
+            { "title": "Global memory shortage crisis: market analysis and the potential impact on the smartphone and PC markets in 2026", "publication": "IDC", "url": "https://www.idc.com/resource-center/blog/global-memory-shortage-crisis-market-analysis-and-the-potential-impact-on-the-smartphone-and-pc-markets-in-2026/" },
+            { "title": "Samsung expects HBM to consume nearly 30% of DRAM wafer capacity in 2027", "publication": "Guru3D", "url": "https://www.guru3d.com/story/samsung-expects-hbm-to-consume-nearly-of-dram-wafer-capacity-in-2027/" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "who-gets-squeezed",
+      "label": "Who gets squeezed?",
+      "question": "Who is paying for the memory shortage?",
+      "answer": [
+        "Mostly people buying cheap phones. Memory is 15–20% of the cost of parts in a mid-range phone, and memory costs for phones are up more than 300% in a year. IDC expects smartphone shipments to fall a record 16.7% in 2026 while the average price rises 27.6% to $581. Phones under $100 fell almost 60% in April–June; Android shipments are forecast to drop 24.3%, the iPhone only 1.3%, and sales in emerging markets by more than 20%.",
+        "PC buyers pay too: IDC expects PC shipments down 11.3% and prices up 17%. Games consoles, graphics cards and carmakers are affected. The pattern is that whoever has the least money and the least bargaining power goes to the back of the queue."
+      ],
+      "section": "who-gets-squeezed",
+      "sources": [
+        { "title": "Smartphone shipments set for record 16.7% drop in 2026, as the memory crisis hits full force", "publication": "IDC", "url": "https://www.idc.com/resource-center/blog/smartphone-shipments-set-for-record-16-7-drop-in-2026-as-the-memory-crisis-hits-full-force/" },
+        { "title": "PC market enters volatile territory as memory shortage persists through 2027", "publication": "IDC", "url": "https://www.idc.com/resource-center/blog/pc-market-enters-volatile-territory-as-memory-shortage-persists-through-2027/" },
+        { "title": "Why budget phones are disappearing just when they are needed most", "publication": "The Korea Times (Hankook Ilbo)", "url": "https://www.koreatimes.co.kr/business/tech-science/20260915/why-budget-phones-are-disappearing-just-when-they-are-needed-most" }
+      ],
+      "followUps": []
+    },
+    {
+      "id": "who-wins",
+      "label": "Who is getting rich?",
+      "question": "Who is winning from the shortage?",
+      "answer": [
+        "The three makers that control nearly 88% of DRAM. SK hynix, the HBM leader, made an operating profit of 83.3 trillion won (about $62.8 billion) in July–September, an 80% margin. Samsung expects 107.4 trillion won, a record for any Korean company, almost all of it from memory. Micron’s annual revenue rose 256% to $133.2 billion.",
+        "Smaller makers of older memory, such as Taiwan’s Nanya and Winbond, are picking up demand the big three no longer serve, and China’s CXMT has doubled its share to about 10%. South Korea gains as a country: chips made up 44.7% of its exports in early October."
+      ],
+      "section": "who-wins",
+      "sources": [
+        { "title": "SK hynix logs record Q3 operating profit of $62.8 bil.", "publication": "The Korea Times", "url": "https://www.koreatimes.co.kr/business/companies/20261028/sk-hynix-logs-record-q3-operating-profit-of-628-bil" },
+        { "title": "Samsung Electronics 1st Korean firm to top $80 bil. in quarterly operating profit", "publication": "The Korea Times", "url": "https://www.koreatimes.co.kr/business/companies/20261008/samsung-electronics-1st-korean-firm-to-top-80-bil-in-quarterly-operating-profit" },
+        { "title": "DRAM industry revenue rises 59.5% QoQ in 2Q26 as supply expansion continues to lag demand growth", "publication": "TrendForce", "url": "https://www.trendforce.com/presscenter/news/20260907-13219.html" }
+      ],
+      "followUps": []
+    },
+    {
+      "id": "why-not-build-more",
+      "label": "Why not just build more?",
+      "question": "If memory is so profitable, why don’t the makers build more factories?",
+      "answer": [
+        "They are, but fabs take years. SK hynix’s new Cheongju fab opened its cleanroom in October 2025 and only began making chips in 2026; the first cleanroom at its Yongin complex opens in early 2027. Micron’s new fab in Japan aims for production in late 2028. TrendForce expects meaningful new capacity only from the second half of 2027.",
+        "They are also cautious. Memory is notorious for booms and busts: SK hynix lost 9.1 trillion won in 2023, and Japan’s Elpida went bankrupt in 2012 after prices fell 85%. With only three big firms, each knows that building aggressively would hurt prices for everyone, including itself. That restraint is legal, but it keeps supply tight."
+      ],
+      "section": "why-supply-cant-catch-up",
+      "sources": [
+        { "title": "SK hynix prospectus (Form 424B4)", "publication": "SK hynix / US SEC", "url": "https://www.sec.gov/Archives/edgar/data/0002120882/000119312526299963/d32785d424b4.htm" },
+        { "title": "Elpida Memory", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Elpida_Memory" },
+        { "title": "2025–present global memory supply shortage", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2025%E2%80%93present_global_memory_supply_shortage" }
+      ],
+      "followUps": [
+        {
+          "id": "why-not-china",
+          "label": "Can’t China fill the gap?",
+          "question": "Why can’t Chinese chipmakers fill the gap?",
+          "answer": [
+            "CXMT is trying, and growing fast: its share of DRAM sales rose to about 10% from 4% a year earlier, and Apple, HP and Acer have reportedly tested or used its chips. But US export controls have blocked China from buying the most advanced chipmaking machines since 2019, which limits how advanced its chips can be.",
+            "Politics matters too. CXMT is on a Pentagon list of companies with alleged military links, and in August the US Commerce Secretary said the administration was “not in favor” of Apple buying Chinese memory. The competitor best placed to add supply quickly is one many Western buyers are discouraged from using."
+          ],
+          "section": "why-geopolitics-limits-the-alternative",
+          "sources": [
+            { "title": "ChangXin Memory Technologies", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/ChangXin_Memory_Technologies" },
+            { "title": "US Commerce Secretary Lutnick urges Apple to drop plans of buying memory from ‘blacklisted’ Chinese vendor", "publication": "MacTrast", "url": "https://www.mactrast.com/2026/08/us-commerce-secretary-lutnick-urges-apple-to-drop-plans-of-buying-memory-from-blacklisted-chinese-vendor/" },
+            { "title": "Chinese chipmaker CXMT soars 500% on debut as AI fuels shortages", "publication": "The Korea Times / AFP", "url": "https://www.koreatimes.co.kr/amp/world/20260727/chinese-chipmaker-cxmt-soars-500-on-debut-as-ai-fuels-shortages" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "is-it-a-cartel",
+      "label": "Is it a cartel?",
+      "question": "Are the memory makers rigging the market?",
+      "answer": [
+        "There is no proof they are, and they deny it. A US class action filed in June alleges the three coordinated a shift from ordinary DRAM to HBM to restrict supply, but it is at an early stage, and a similar suit in 2018 was dismissed. Customers have complained: Acer’s chief executive accused the makers of stretching shortage forecasts, and Elon Musk called some of them “extortionate”.",
+        "The suspicion has history: Samsung, Hynix, Micron and others fixed DRAM prices between 1998 and 2002 and paid large fines. But analyst Jim Handy argues the makers don’t set prices, the market does. The fairest reading is that the shortage is real, while a market of three firms makes it worse and longer."
+      ],
+      "section": "is-anyone-gaming-the-shortage",
+      "sources": [
+        { "title": "DRAM price fixing scandal", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/DRAM_price_fixing_scandal" },
+        { "title": "Musk’s criticism of Samsung, SK’s memory chip pricing runs counter to market logic: expert", "publication": "The Korea Times", "url": "https://www.koreatimes.co.kr/business/companies/20261018/musks-criticism-of-samsung-sks-memory-chip-pricing-runs-counter-to-market-logic-expert" },
+        { "title": "SK hynix prospectus (Form 424B4)", "publication": "SK hynix / US SEC", "url": "https://www.sec.gov/Archives/edgar/data/0002120882/000119312526299963/d32785d424b4.htm" }
+      ],
+      "followUps": [
+        {
+          "id": "cartel-or-market",
+          "label": "So what is it, really?",
+          "question": "So is it a cartel, a bubble or just the market?",
+          "answer": [
+            "Mostly the market doing what markets do when a buyer with enormous resources arrives: scarce factory capacity goes to whoever pays most, and that is now AI. The demand surge is genuine, and new supply genuinely takes years.",
+            "But the structure of the industry makes the squeeze worse. Three companies control supply, they were badly burned by the last bust, and they have every reason to expand cautiously while prices are high. That is legal. Whether it ends in a bust depends on AI spending: if it keeps growing, the makers will eventually catch up; if it slows, new factories may arrive just as demand falls."
+          ],
+          "section": "answer-so-is-it-a-cartel-a-bubble-or-just-the-market",
+          "sources": [
+            { "title": "Global memory shortage crisis: market analysis and the potential impact on the smartphone and PC markets in 2026", "publication": "IDC", "url": "https://www.idc.com/resource-center/blog/global-memory-shortage-crisis-market-analysis-and-the-potential-impact-on-the-smartphone-and-pc-markets-in-2026/" },
+            { "title": "Micron Technology annual report (Form 10-K), fiscal 2026", "publication": "Micron / US SEC", "url": "https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000023/mu-20260903.htm" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "when-will-it-end",
+      "label": "When will it end?",
+      "question": "When will memory prices come down?",
+      "answer": [
+        "The makers say not soon: Micron and Samsung expect the tightness to last until 2028, SK hynix until 2030. Analyst Jim Handy expects supply not to catch up before 2029 if AI investment keeps growing. Buyers such as Acer’s chief executive think prices start falling from late 2027.",
+        "There are early signs of a turn. TrendForce expects DRAM price rises to slow to 10–15% in October–December, after 55–63% earlier in the year. Phone and PC makers are running down stocks, Nvidia is trimming memory in some systems, and new fabs arrive in 2027–28. The big unknown is whether AI spending slows: US tech shares fell sharply on 23 October on exactly that worry."
+      ],
+      "section": "the-signs-of-a-turn",
+      "sources": [
+        { "title": "AI server demand sustains memory contract price increases in 4Q26, while consumer-side pressure persists", "publication": "TrendForce", "url": "https://www.trendforce.com/presscenter/news/20260930-13258.html" },
+        { "title": "DRAM supply to remain tight in 2027, prompting NVIDIA to lower HBM configurations for Rubin Ultra", "publication": "TrendForce", "url": "https://www.trendforce.com/presscenter/news/20260804-13166.html" },
+        { "title": "US tech stocks tumble as investors fret over AI spending", "publication": "Al Jazeera", "url": "https://www.aljazeera.com/economy/2026/10/23/us-tech-stocks-tumble-as-investors-fret-over-ai-spending" }
+      ],
+      "followUps": [
+        {
+          "id": "bust-coming",
+          "label": "Will it end in a bust?",
+          "question": "Will this boom end in a crash, like past memory booms?",
+          "answer": [
+            "Reasonable people disagree. One side says this time is structural: AI is a lasting change, HBM permanently uses more wafers, and long-term contracts with cloud companies cover much of the makers’ output into 2028.",
+            "The other side says every memory boom has ended the same way. Price rises are already slowing, buyers are trimming memory, compression techniques like Google’s TurboQuant reduce needs, and a wave of new fabs plus a fast-growing Chinese rival will arrive in 2027–28. If AI spending is cut, that new supply would meet falling demand. Micron itself says its prices have swung from a 200% rise to a 50% fall within five years."
+          ],
+          "section": "debate-on-whether-the-shortage-will-end-in-a-bust",
+          "sources": [
+            { "title": "2025–present global memory supply shortage", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2025%E2%80%93present_global_memory_supply_shortage" },
+            { "title": "Micron Technology annual report (Form 10-K), fiscal 2026", "publication": "Micron / US SEC", "url": "https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000023/mu-20260903.htm" },
+            { "title": "SK hynix logs record Q3 operating profit of $62.8 bil.", "publication": "The Korea Times", "url": "https://www.koreatimes.co.kr/business/companies/20261028/sk-hynix-logs-record-q3-operating-profit-of-628-bil" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "what-can-governments-do",
+      "label": "What can governments do?",
+      "question": "What can governments do about the memory shortage?",
+      "answer": [
+        "In the short term, very little. No government can make memory faster than the fabs being built, and quick fixes mostly move the pain around: forcing makers to prioritise carmakers just shifts the shortage to someone else, and tariffs on imported chips raise prices further because almost all memory is made abroad.",
+        "The real choices are longer-term trade-offs. Subsidies, like the US CHIPS Act money for Micron and SK hynix, spread production across more countries but risk feeding the next bust. Letting companies buy from China’s CXMT would add supply now but deepen dependence on a firm the US links to China’s military. Competition authorities could look harder at an industry where three firms decide how much memory the world gets."
+      ],
+      "section": "what-this-means-for-policymakers",
+      "sources": [
+        { "title": "SK hynix prospectus (Form 424B4)", "publication": "SK hynix / US SEC", "url": "https://www.sec.gov/Archives/edgar/data/0002120882/000119312526299963/d32785d424b4.htm" },
+        { "title": "Micron Technology annual report (Form 10-K), fiscal 2026", "publication": "Micron / US SEC", "url": "https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000023/mu-20260903.htm" },
+        { "title": "DRAM price fixing scandal", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/DRAM_price_fixing_scandal" }
+      ],
+      "followUps": []
+    }
+  ]
+}

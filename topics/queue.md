@@ -14,7 +14,6 @@ then "Commit changes").
 
 ## Up next
 
-- world: The memory chip crunch -- Peg: DRAM and NAND prices surging through 2026; DRAM up 80–90% from late-2025 levels earlier in the year; normalisation not expected before 2027–28. Scope: AI chips and HBM crowding out commodity memory and storage; the makers (Samsung, SK Hynix, Micron); hyperscaler capacity reservations; knock-on effects on device prices. Frame it as AI demand reallocating scarce manufacturing capacity, and show who wins and who gets squeezed.
 - singapore: Singapore's AI push, and the backlash -- Peg: Budget 2026 "all in on AI" push and PM Wong's promise of "no jobless growth"; in Oct 2026 Wong and Tharman warned about AI threatening the "bottom rung" of the career ladder. Scope: why the public is uneasy (unemployment 1.9% in Q2 2026, yet retrenchments at their highest since 2020); tech layoffs; AI users vs AI builders; who gets left behind. Ask whether the government's bet is right and what it would take not to hollow out entry-level jobs.
 - world: The Iran war energy shock -- Peg: war began 28 Feb 2026; the Strait of Hormuz disruption is the IEA's "largest supply disruption in history"; Brent back above $100 in September; Trump said prices won't fall until after the 3 Nov midterms. Scope: how oil shocks pass into inflation, interest rates and recessions; who's most exposed; comparison with 1973, 1990 and 2022; renewables and EV acceleration; the outlook for growth into 2027.
 - singapore: FirstDate and the fertility crisis -- Peg: GovTech's FirstDate pilot (~30 Sep 2026) for public officers aged 21–35, matching one date at a time with the Gale–Shapley algorithm; resident TFR 0.87 in 2025; the August baby package worth ~S$70k per child. Scope: why decades of incentives haven't worked (housing, work culture, cost of raising children, marriage decline); the market-design angle; comparisons with Japan, Korea and the Nordics; what the evidence says actually moves fertility, and whether governments should try at all.
@@ -31,3 +30,4 @@ then "Commit changes").
 - 004 | singapore | Who pays for a super-aged Singapore? | 2026-10-24
 - 005 | world | Meta’s $18 billion bargain | 2026-10-25
 - 006 | singapore | Maju Forest and the endgame for BTOs | 2026-10-26
+- 007 | world | The memory squeeze | 2026-10-27
