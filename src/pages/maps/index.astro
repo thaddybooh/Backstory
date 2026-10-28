@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { getMaps, countNodes } from '../../lib/topicmap-data';
+import { getMaps, countQuestions } from '../../lib/topicmap-data';
 import { TRACK_LABEL } from '../../lib/issues';
 import '../../styles/topicmap.css';
 
@@ -25,7 +25,7 @@ const maps = await getMaps();
               <h2>{m.data.title}</h2>
               <p>{m.data.dek}</p>
               <p class="map-card-meta">
-                {m.data.branches.length} branches · {countNodes(m.data.branches)} questions
+                {countQuestions(m.data.categories)} questions
               </p>
             </a>
           </li>

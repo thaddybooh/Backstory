@@ -1,18 +1,26 @@
 ---
-// One question in a topic map's list view, with its own questions nested beneath it.
-// topicmap.ts reads these elements (their data- attributes) to draw the graph.
-import type { MapBranch, MapNode } from '../../lib/topicmap-data';
-import { QUESTION_TYPE } from '../../lib/topicmap-data';
+// One box of a topic map in its list view, with everything under it nested beneath.
+// topicmap.ts reads these elements (their data- attributes) to draw the tree.
+import type { MapCategory, MapNode } from '../../lib/topicmap-data';
+import { QUESTION_TYPE, CATEGORY_KIND } from '../../lib/topicmap-data';
 
 interface Props {
-  node: MapBranch | MapNode;
-  branch: MapBranch;
+  node: MapCategory | MapNode;
+  category: MapCategory;
   parent?: string;
   depth: number;
 }
-const { node, branch, parent, depth } = Astro.props;
+const { node, category, parent, depth } = Astro.props;
 const type = 'type' in node ? node.type : undefined;
-const kicker = type ? QUESTION_TYPE[type] : branch.kind === 'news' ? `In the news${branch.when ? ` · ${branch.when}` : ''}` : 'Background';
+const when = 'when' in node ? node.when : undefined;
+const tag = type
+  ? QUESTION_TYPE[type]
+  : depth === 1
+    ? CATEGORY_KIND[category.kind]
+    : category.kind === 'news'
+      ? `In the news${when ? ` · ${when}` : ''}`
+      : 'Topic';
+const related = 'related' in node ? node.related : [];
 ---
 
 <li>
@@ -20,16 +28,15 @@ const kicker = type ? QUESTION_TYPE[type] : branch.kind === 'news' ? `In the new
     data-node={node.id}
     data-label={node.label}
     data-parent={parent}
-    data-branch={branch.id}
-    data-kind={branch.kind}
+    data-category={category.kind}
     data-depth={depth}
     data-type={type}
-    data-when={depth === 1 ? branch.when : undefined}
-    data-related={'related' in node && node.related.length ? node.related.join(' ') : undefined}
+    data-when={when}
+    data-related={related.length ? related.join(' ') : undefined}
   >
     <summary>
-      <span class="tmap-tag" data-type={type ?? branch.kind}>{kicker}</span>
-      {node.question}
+      <span class="tmap-tag" data-type={type} data-category={category.kind}>{tag}</span>
+      <span class="tmap-q">{node.question}</span>
     </summary>
     <div class="qa">
       {node.answer.map((p) => <p>{p}</p>)}
@@ -59,7 +66,7 @@ const kicker = type ? QUESTION_TYPE[type] : branch.kind === 'news' ? `In the new
     node.children.length > 0 && (
       <ol class="qmap-follow tmap-sub">
         {node.children.map((c) => (
-          <Astro.self node={c} branch={branch} parent={node.id} depth={depth + 1} />
+          <Astro.self node={c} category={category} parent={node.id} depth={depth + 1} />
         ))}
       </ol>
     )

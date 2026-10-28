@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import TopicMap from '../../components/topicmap/TopicMap.astro';
-import { getMaps, countNodes } from '../../lib/topicmap-data';
+import { getMaps, countQuestions } from '../../lib/topicmap-data';
 import { formatLongDate, TRACK_LABEL } from '../../lib/issues';
 
 export async function getStaticPaths() {
@@ -17,7 +17,7 @@ const collect = (nodes: { sources: { url: string }[]; children?: any[] }[]) =>
     n.sources.forEach((s) => sources.add(s.url));
     collect(n.children ?? []);
   });
-collect(data.branches);
+collect(data.categories);
 ---
 
 <Base title={`${data.title}: topic map`} description={data.dek} track={data.track}>
@@ -28,7 +28,7 @@ collect(data.branches);
       <p class="tmap-dek">{data.dek}</p>
       <p class="tmap-intro">{data.intro}</p>
       <p class="tmap-meta">
-        {data.branches.length} branches · {countNodes(data.branches)} questions · {sources.size} sources · Updated{' '}
+        {countQuestions(data.categories)} questions · {sources.size} sources · Updated{' '}
         <time datetime={data.updated.toISOString().slice(0, 10)}>{formatLongDate(data.updated)}</time>
       </p>
     </header>

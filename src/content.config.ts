@@ -68,21 +68,26 @@ const graphs = defineCollection({
 });
 
 // Topic maps: a standalone, deeper question graph for a whole subject (not one issue),
-// saved as src/content/maps/<slug>.json and published at /maps/<slug>/. Branches hold
-// questions, and questions can hold more questions, as deep as the topic needs. The
-// rules beyond this shape (unique ids, real cross-links, answer length) live in
-// src/lib/topicmap.mjs.
+// saved as src/content/maps/<slug>.json and published at /maps/<slug>/. Three or so
+// categories come off the centre (the basics, the big ideas, the news); under them sit
+// topics and news stories, and under those the questions, as deep as the topic needs.
+// The rules beyond this shape (unique ids, real cross-links, the four questions every
+// news story answers) live in src/lib/topicmap.mjs.
 type MapNode = z.infer<typeof followUp> & {
-  type: 'basics' | 'why' | 'what' | 'who' | 'means' | 'debate';
+  type?: 'basics' | 'why' | 'what' | 'who' | 'means' | 'debate';
+  when?: string;
   related: string[];
   issue?: string;
   children: MapNode[];
 };
 const mapNode: z.ZodType<MapNode> = z.lazy(() =>
   followUp.omit({ section: true }).extend({
-    // What kind of question it is; drives the colour key and the "find" filter.
-    type: z.enum(['basics', 'why', 'what', 'who', 'means', 'debate']),
-    // Ids of nodes in other branches this one connects to (drawn as dashed lines).
+    // What kind of question it is; drives its colour and the "highlight" buttons.
+    // Topics and news stories (the level under a category) leave it out.
+    type: z.enum(['basics', 'why', 'what', 'who', 'means', 'debate']).optional(),
+    // For a news story: when it happened, shown on the box, e.g. "Sep 2026".
+    when: z.string().optional(),
+    // Ids of nodes elsewhere in the map this one connects to (listed in its answer panel).
     related: z.array(z.string()).default([]),
     // Optional id of a But Why? issue that covers this in depth.
     issue: z.string().optional(),
@@ -97,12 +102,10 @@ const maps = defineCollection({
     updated: z.coerce.date(),
     dek: z.string(),
     intro: z.string(),
-    branches: z.array(
+    categories: z.array(
       followUp.omit({ section: true }).extend({
-        // "background" explains how things work; "news" is a change in the news.
-        kind: z.enum(['background', 'news']),
-        // When the news happened, shown on the node, e.g. "Sep 2026".
-        when: z.string().optional(),
+        // basics: how it works; ideas: the policy thinking and debates; news: recent changes.
+        kind: z.enum(['basics', 'ideas', 'news']),
         children: z.array(mapNode).default([]),
       }),
     ),
