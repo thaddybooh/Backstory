@@ -1,0 +1,36 @@
+---
+// The homepage band under today's issue: every topic map, so readers can follow the
+// bigger story that each day's issue is part of.
+import TopicCard from './TopicCard.astro';
+import { getTopicSummaries } from '../../lib/topicmap-data';
+
+interface Props {
+  /** Today's issue, so its topic comes first and is marked. */
+  issueId?: string;
+}
+const topics = await getTopicSummaries(Astro.props.issueId);
+---
+
+{
+  topics.length > 0 && (
+    <section class="topics-band" aria-labelledby="topics-band-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 id="topics-band-title">Follow the bigger story</h2>
+            <p class="topics-band-dek">
+              Each daily issue is one branch of a bigger topic. Topic maps hold the background, the big debates and every
+              development, and they grow as new issues are published.
+            </p>
+          </div>
+          <a href="/topics/">All topics</a>
+        </div>
+        <div class="topic-cards">
+          {topics.map((t) => (
+            <TopicCard topic={t} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

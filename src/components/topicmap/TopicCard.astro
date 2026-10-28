@@ -1,0 +1,87 @@
+---
+// A card for one topic map: its cover photo, how many questions it holds and its newest
+// news story. Used in the homepage's "Follow the bigger story" band and on the Topics
+// page. Until the cover photo has been fetched from Commons (or if it has none), the card
+// shows a small drawing of the map's tree instead.
+import type { TopicSummary } from '../../lib/topicmap-data';
+import { getCommonsImage } from '../../lib/images';
+import Credit from '../Credit.astro';
+import '../../styles/topicmap.css';
+
+interface Props {
+  topic: TopicSummary;
+}
+const { topic: t } = Astro.props;
+const cover = t.map.data.cover;
+const photo = cover && getCommonsImage(cover.commons);
+
+// The little tree: subject on the left, categories in the middle, a short bar for each
+// topic or story on the right. Same colours as the real map.
+const BAR = 7;
+const GAP = 4;
+const blocks = t.shape.map((c) => ({ ...c, height: Math.max(c.count, 1) * (BAR + GAP) - GAP }));
+const H = blocks.reduce((s, b) => s + b.height, 0) + (blocks.length - 1) * 10;
+let top = 0;
+const rows = blocks.map((b) => {
+  const row = { ...b, top, mid: top + b.height / 2 };
+  top += b.height + 10;
+  return row;
+});
+const cy = H / 2;
+const curve = (x1: number, y1: number, x2: number, y2: number) => {
+  const mx = (x1 + x2) / 2;
+  return `M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}`;
+};
+---
+
+<article class:list={['topic-card', { 'is-today': t.holdsIssue }]} data-track={t.map.data.track}>
+  <a class="topic-card-link" href={t.href}>
+    {
+      photo && cover ? (
+        <div class="topic-card-photo">
+          <img src={photo.src} alt={cover.alt} width={photo.width} height={photo.height} loading="lazy" decoding="async" />
+          {t.holdsIssue && <p class="topic-card-flag">Today’s story is here</p>}
+        </div>
+      ) : (
+    <svg class="topic-tree" viewBox={`0 0 190 ${H}`} aria-hidden="true">
+      {
+        rows.map((r) => (
+          <g data-category={r.kind}>
+            <path class="topic-tree-line" d={curve(40, cy, 64, r.mid)} />
+            {Array.from({ length: r.count }, (_, i) => (
+              <path class="topic-tree-line" d={curve(110, r.mid, 128, r.top + i * (BAR + GAP) + BAR / 2)} />
+            ))}
+            <rect class="topic-tree-cat" x="64" y={r.mid - 7} width="46" height="14" rx="4" />
+            {Array.from({ length: r.count }, (_, i) => (
+              <rect class="topic-tree-leaf" x="128" y={r.top + i * (BAR + GAP)} width={44 - (i % 3) * 7} height={BAR} rx="2" />
+            ))}
+          </g>
+        ))
+      }
+      <rect class="topic-tree-root" x="0" y={cy - 11} width="40" height="22" rx="5" />
+    </svg>
+      )
+    }
+    <div class="topic-card-body">
+      {t.holdsIssue && !photo && <p class="topic-card-flag">Today’s story is here</p>}
+      <h3>{t.map.data.title}</h3>
+      <p class="topic-card-dek">{t.map.data.dek}</p>
+      <p class="topic-card-meta">{t.questions} questions</p>
+    </div>
+  </a>
+  {
+    photo && (
+      <p class="topic-card-credit">
+        <Credit image={photo} />
+      </p>
+    )
+  }
+  {
+    t.latest && (
+      <a class="topic-card-latest" href={t.latest.href}>
+        <span>Latest{t.latest.when ? ` · ${t.latest.when}` : ''}</span>
+        {t.latest.label}
+      </a>
+    )
+  }
+</article>

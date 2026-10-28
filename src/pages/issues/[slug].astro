@@ -4,6 +4,8 @@ import Base from '../../layouts/Base.astro';
 import HeroImage from '../../components/HeroImage.astro';
 import QuestionGraph from '../../components/graph/QuestionGraph.astro';
 import { getGraph } from '../../lib/graph-data';
+import MapPlacement from '../../components/topicmap/MapPlacement.astro';
+import { getPlacement } from '../../lib/topicmap-data';
 import { issueComponents } from '../../components/issue';
 import {
   getIssues,
@@ -34,6 +36,7 @@ const { issue, newer, older } = Astro.props;
 const { data } = issue;
 const { Content, headings } = await render(issue);
 const graph = await getGraph(issue);
+const placement = await getPlacement(issue.id);
 
 const toc = [
   { slug: 'what-is-happening', text: 'What is happening', n: '' },
@@ -53,6 +56,7 @@ const hasHero = Boolean(data.hero && (data.hero.image || (data.hero.commons && g
   track={data.track}
 >
   <article>
+    {placement && <MapPlacement placement={placement} />}
     {
       graph && (
         <div class="issue-graph">

@@ -2,8 +2,15 @@
 import Base from '../layouts/Base.astro';
 import IssueRow from '../components/IssueRow.astro';
 import { getIssues } from '../lib/issues';
+import { getPlacement } from '../lib/topicmap-data';
 
 const issues = await getIssues();
+const topics = await Promise.all(
+  issues.map(async (i) => {
+    const p = await getPlacement(i.id);
+    return p && { title: p.map.data.title, href: p.story.href };
+  }),
+);
 const count = (t: string) => issues.filter((i) => i.data.track === t).length;
 ---
 
@@ -22,7 +29,7 @@ const count = (t: string) => issues.filter((i) => i.data.track === t).length;
     <p class="visually-hidden" aria-live="polite" id="filter-status"></p>
 
     <ul class="issue-list" id="archive-list">
-      {issues.map((issue) => <IssueRow issue={issue} />)}
+      {issues.map((issue, i) => <IssueRow issue={issue} topic={topics[i]} />)}
     </ul>
   </div>
 </Base>

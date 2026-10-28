@@ -1,0 +1,25 @@
+---
+import Base from '../../layouts/Base.astro';
+import TopicCard from '../../components/topicmap/TopicCard.astro';
+import { getTopicSummaries } from '../../lib/topicmap-data';
+import { getIssues } from '../../lib/issues';
+
+const [latest] = await getIssues();
+const topics = await getTopicSummaries(latest?.id);
+---
+
+<Base title="Topics" description="Big subjects mapped out as questions: how things work, what is changing, and why. Each grows as new issues are published.">
+  <div class="wrap">
+    <header class="page-head">
+      <h1>Topics</h1>
+      <p>
+        One big subject in the middle, the background you need around it, and the changes in the news, each opened up
+        into the questions a curious reader would ask. Every answer comes with its sources, and each topic grows as new
+        issues are published.
+      </p>
+    </header>
+    <div class="topic-cards">
+      {topics.map((t) => <TopicCard topic={t} />)}
+    </div>
+  </div>
+</Base>

@@ -511,6 +511,30 @@ mark {
   color: var(--ink-soft);
   max-width: 44rem;
 }
+.issue-row-topic {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  margin-top: 0.7rem;
+  font: 650 0.85rem/1.2 var(--font-display);
+  color: var(--ink);
+  text-decoration: none;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  background: var(--paper-raised);
+  transition: border-color 0.2s;
+}
+.issue-row-topic span {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--accent);
+}
+.issue-row-topic:hover {
+  border-color: var(--accent);
+}
 @media (min-width: 48rem) {
   .issue-row {
     grid-template-columns: 6rem minmax(0, 1fr);
@@ -1113,6 +1137,16 @@ mark {
   line-height: 1.5;
   color: var(--ink-soft);
   margin: 1rem 0 0;
+}
+.today-map {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  margin: 0.9rem 0 0;
+}
+.today-map a {
+  font-weight: 650;
 }
 .today-prompt {
   font-size: 1rem;

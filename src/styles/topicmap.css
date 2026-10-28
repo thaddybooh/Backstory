@@ -1,0 +1,679 @@
+/* Topic maps (/maps/...): a whole subject drawn as a left-to-right tree of boxes.
+   Builds on qmap.css (the answer panel, list view, zoom buttons and view toggle are shared). */
+
+.tmap {
+  max-width: 84rem;
+}
+
+/* ---------- Colours ---------- */
+/* Each category has its own colour, carried by every box and line under it. */
+[data-category='basics'] {
+  --c: #4b5b78;
+}
+[data-category='ideas'] {
+  --c: #2c7a7b;
+}
+[data-category='news'] {
+  --c: var(--accent);
+}
+/* Each kind of question has its own colour too: the stripe on its box and its tag. */
+[data-type='basics'] {
+  --t: #4b5b78;
+}
+[data-type='why'] {
+  --t: #b45309;
+}
+[data-type='what'] {
+  --t: #4f46e5;
+}
+[data-type='who'] {
+  --t: #0f766e;
+}
+[data-type='means'] {
+  --t: #7c3aed;
+}
+[data-type='debate'] {
+  --t: #be185d;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) [data-category='basics'] { --c: #9fb0cf; }
+  :root:not([data-theme='light']) [data-category='ideas'] { --c: #5fc4c4; }
+  :root:not([data-theme='light']) [data-type='basics'] { --t: #9fb0cf; }
+  :root:not([data-theme='light']) [data-type='why'] { --t: #f2a65a; }
+  :root:not([data-theme='light']) [data-type='what'] { --t: #a5a8ff; }
+  :root:not([data-theme='light']) [data-type='who'] { --t: #4fd1b5; }
+  :root:not([data-theme='light']) [data-type='means'] { --t: #c4a5ff; }
+  :root:not([data-theme='light']) [data-type='debate'] { --t: #f79ac4; }
+}
+:root[data-theme='dark'] [data-category='basics'] { --c: #9fb0cf; }
+:root[data-theme='dark'] [data-category='ideas'] { --c: #5fc4c4; }
+:root[data-theme='dark'] [data-type='basics'] { --t: #9fb0cf; }
+:root[data-theme='dark'] [data-type='why'] { --t: #f2a65a; }
+:root[data-theme='dark'] [data-type='what'] { --t: #a5a8ff; }
+:root[data-theme='dark'] [data-type='who'] { --t: #4fd1b5; }
+:root[data-theme='dark'] [data-type='means'] { --t: #c4a5ff; }
+:root[data-theme='dark'] [data-type='debate'] { --t: #f79ac4; }
+
+/* ---------- Highlight chips and buttons ---------- */
+.tmap-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem 1.5rem;
+  margin-bottom: 0.9rem;
+}
+html[data-qmap-view='list'] .tmap-key {
+  visibility: hidden;
+}
+.tmap-key {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+}
+.tmap-key-label {
+  font-weight: 650;
+  margin-right: 0.15rem;
+}
+.tmap-chip {
+  border: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  border-radius: 999px;
+}
+.tmap-chip[aria-pressed='true'] .tmap-tag {
+  color: var(--paper-raised);
+  background: var(--t);
+}
+.tmap-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+.tmap-btn {
+  font: 600 0.9rem/1 var(--font-display);
+  color: var(--ink);
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+}
+.tmap-btn:hover {
+  border-color: var(--ink-faint);
+}
+
+.tmap-tag {
+  --t: var(--c, var(--ink-faint));
+  display: inline-block;
+  font: 650 0.72rem/1.2 var(--font-display);
+  letter-spacing: 0.02em;
+  color: var(--t);
+  border: 1.5px solid var(--t);
+  border-radius: 999px;
+  padding: 0.18rem 0.55rem;
+  white-space: nowrap;
+}
+.tmap-tag[data-type='basics'] { --t: #4b5b78; }
+.tmap-tag[data-type='why'] { --t: #b45309; }
+.tmap-tag[data-type='what'] { --t: #4f46e5; }
+.tmap-tag[data-type='who'] { --t: #0f766e; }
+.tmap-tag[data-type='means'] { --t: #7c3aed; }
+.tmap-tag[data-type='debate'] { --t: #be185d; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .tmap-tag[data-type='basics'] { --t: #9fb0cf; }
+  :root:not([data-theme='light']) .tmap-tag[data-type='why'] { --t: #f2a65a; }
+  :root:not([data-theme='light']) .tmap-tag[data-type='what'] { --t: #a5a8ff; }
+  :root:not([data-theme='light']) .tmap-tag[data-type='who'] { --t: #4fd1b5; }
+  :root:not([data-theme='light']) .tmap-tag[data-type='means'] { --t: #c4a5ff; }
+  :root:not([data-theme='light']) .tmap-tag[data-type='debate'] { --t: #f79ac4; }
+}
+:root[data-theme='dark'] .tmap-tag[data-type='basics'] { --t: #9fb0cf; }
+:root[data-theme='dark'] .tmap-tag[data-type='why'] { --t: #f2a65a; }
+:root[data-theme='dark'] .tmap-tag[data-type='what'] { --t: #a5a8ff; }
+:root[data-theme='dark'] .tmap-tag[data-type='who'] { --t: #4fd1b5; }
+:root[data-theme='dark'] .tmap-tag[data-type='means'] { --t: #c4a5ff; }
+:root[data-theme='dark'] .tmap-tag[data-type='debate'] { --t: #f79ac4; }
+
+/* ---------- The map ---------- */
+.tmap-stage {
+  height: clamp(32rem, 76vh, 50rem);
+  background-image: radial-gradient(color-mix(in srgb, var(--ink) 9%, transparent) 1px, transparent 1.3px);
+  background-size: 22px 22px;
+}
+@media (max-width: 47.99rem) {
+  .tmap-stage {
+    height: min(74svh, 36rem);
+  }
+}
+/* With everything open, the stage grows to the tree's height (set in topicmap.ts) and the
+   answer panel follows the reader down the page. */
+@media (min-width: 48rem) {
+  .tmap-stage.is-tall .qmap-panel {
+    bottom: auto;
+    max-height: calc(100vh - 1.5rem);
+  }
+}
+
+.tmap-link {
+  fill: none;
+  stroke: color-mix(in srgb, var(--c) 40%, transparent);
+  stroke-width: 1.8;
+  transition: stroke 0.2s, stroke-width 0.2s;
+}
+.tmap-link.is-trail {
+  stroke: var(--c);
+  stroke-width: 2.6;
+}
+
+.tmap-node {
+  cursor: pointer;
+  outline: none;
+  transition: opacity 0.25s;
+}
+/* Hover lifts a box slightly; pressing it pushes it back down. */
+.tmap-inner {
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.tmap-node:hover .tmap-inner,
+.tmap-node:focus-visible .tmap-inner {
+  transform: translateY(-2px);
+}
+.tmap-node:active .tmap-inner {
+  transform: translateY(0) scale(0.985);
+  transition-duration: 0.08s;
+}
+.tmap-node:hover .tmap-box {
+  filter: drop-shadow(0 6px 10px rgb(20 33 61 / 0.14));
+}
+.tmap-inner,
+.tmap-fold-btn {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.tmap-fold-btn {
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.tmap-fold:hover .tmap-fold-btn {
+  transform: scale(1.15);
+}
+.tmap-node.is-open .tmap-fold-btn {
+  transform: rotate(180deg);
+}
+/* The answer panel's content slides in each time a new box opens. */
+.tmap-swap {
+  animation: tmap-swap 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.qmap-panel-body.tmap-swap {
+  animation-delay: 0.04s;
+}
+.qmap-panel-next.tmap-swap {
+  animation-delay: 0.08s;
+}
+@keyframes tmap-swap {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tmap-inner,
+  .tmap-fold-btn {
+    transition: none;
+  }
+  .tmap-swap {
+    animation: none;
+  }
+}
+.tmap-box {
+  fill: var(--paper-raised);
+  stroke: var(--rule);
+  stroke-width: 1.2;
+  filter: drop-shadow(0 1px 1.5px rgb(20 33 61 / 0.08));
+  transition: stroke 0.2s, fill 0.2s, filter 0.25s;
+}
+.tmap-stripe {
+  fill: var(--t, var(--c));
+}
+.tmap-label {
+  font-family: var(--font-display);
+  fill: var(--ink);
+}
+.tmap-kicker-text {
+  font: 700 10.5px/1 var(--font-display);
+  letter-spacing: 0.08em;
+  fill: var(--t, var(--c));
+}
+
+/* The subject (dark) and the categories (filled with their colour) */
+.tmap-d0 .tmap-box {
+  fill: var(--ink);
+  stroke: none;
+}
+.tmap-d0 .tmap-label {
+  fill: var(--paper);
+}
+.tmap-d1 .tmap-box {
+  fill: var(--c);
+  stroke: none;
+}
+.tmap-d1 .tmap-label,
+.tmap-d1 .tmap-kicker-text {
+  fill: var(--paper-raised);
+}
+.tmap-d1 .tmap-kicker-text {
+  opacity: 0.8;
+}
+/* Follow-up questions are a step quieter */
+.tmap-d4 .tmap-box {
+  fill: var(--paper);
+}
+.tmap-d4 .tmap-label {
+  fill: var(--ink-soft);
+}
+
+/* Hover, focus and the selected box (with the path back to the centre) */
+.tmap-node:hover .tmap-box,
+.tmap-node:focus-visible .tmap-box {
+  stroke: var(--c, var(--ink));
+  stroke-width: 2;
+}
+.tmap-node:focus-visible .tmap-box {
+  stroke-width: 2.6;
+}
+.tmap-node.is-selected .tmap-box {
+  stroke: var(--c, var(--ink));
+  stroke-width: 2.6;
+}
+.tmap-d1.is-selected .tmap-box,
+.tmap-d1:hover .tmap-box,
+.tmap-d0.is-selected .tmap-box,
+.tmap-d0:hover .tmap-box {
+  stroke: var(--ink);
+  stroke-width: 2.5;
+}
+.tmap-node.is-trail .tmap-box {
+  stroke: var(--c, var(--ink));
+}
+
+/* The fold button on a box's right edge */
+.tmap-fold circle {
+  fill: var(--paper-raised);
+  stroke: var(--c, var(--ink));
+  stroke-width: 1.6;
+  transition: fill 0.2s;
+}
+.tmap-fold text {
+  font: 750 10.5px/1 var(--font-display);
+  fill: var(--c, var(--ink));
+  pointer-events: none;
+}
+.tmap-node.is-open .tmap-fold circle {
+  fill: var(--c, var(--ink));
+}
+.tmap-node.is-open .tmap-fold text {
+  fill: var(--paper-raised);
+  font-size: 15px;
+}
+.tmap-d0 .tmap-fold circle {
+  stroke: var(--ink);
+}
+
+/* Highlighting one kind of question */
+.has-filter .tmap-node:not(.is-match):not(.tmap-d0):not(.tmap-d1) {
+  opacity: 0.28;
+}
+.has-filter .tmap-node.is-match .tmap-box {
+  stroke: var(--t);
+  stroke-width: 2.4;
+  fill: color-mix(in srgb, var(--t) 10%, var(--paper-raised));
+}
+
+/* ---------- Panel extras ---------- */
+.tmap-next-meta {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--ink-faint);
+  margin-top: 0.2rem;
+}
+.qmap-panel-next .is-related button::before {
+  content: '⇢ ';
+}
+.qmap-panel-next .is-back button::before {
+  content: '↰ ';
+}
+
+/* ---------- List view ---------- */
+.tmap-list {
+  max-width: 50rem;
+}
+.tmap-list summary {
+  flex-wrap: wrap;
+  row-gap: 0.3rem;
+}
+.tmap-list .tmap-tag {
+  flex: none;
+}
+.tmap-q {
+  flex: 1 1 18rem;
+}
+.tmap-list > li > details > summary::before {
+  display: none;
+}
+.tmap-sub .tmap-sub {
+  padding-left: 1.6rem;
+}
+
+/* ---------- Page ---------- */
+.tmap-page {
+  padding-top: clamp(1.5rem, 4vw, 3rem);
+  padding-bottom: 4rem;
+}
+.tmap-head {
+  max-width: 84rem;
+  margin: 0 auto 1.4rem;
+  padding: 0 var(--gutter);
+}
+.tmap-kicker {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin: 0 0 0.4rem;
+}
+.tmap-head h1 {
+  font-family: var(--font-display);
+  font-weight: 750;
+  font-stretch: 88%;
+  font-size: var(--step-5);
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+.tmap-dek {
+  font-size: var(--step-1);
+  line-height: 1.4;
+  color: var(--ink-soft);
+  max-width: 44rem;
+  margin: 0.8rem 0 0;
+}
+.tmap-intro {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 44rem;
+  margin: 0.6rem 0 0;
+}
+.tmap-meta {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+  margin: 0.8rem 0 0;
+}
+.tmap-note {
+  max-width: 84rem;
+  margin: 1.5rem auto 0;
+  padding: 0 var(--gutter);
+  font-size: 0.9rem;
+  color: var(--ink-faint);
+}
+.tmap-note p {
+  max-width: 44rem;
+}
+
+/* ---------- Topic cards (homepage band and the Topics page) ---------- */
+.topics-band {
+  padding: 1rem 0 2.5rem;
+}
+.topics-band-dek {
+  margin: 0.35rem 0 0;
+  max-width: 40rem;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.topics-band .section-head {
+  flex-wrap: wrap;
+  align-items: end;
+  margin-bottom: 1.25rem;
+}
+.topic-cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+}
+.topic-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  background: var(--paper-raised);
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s;
+}
+.topic-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px -18px rgb(20 33 61 / 0.45);
+}
+.topic-card.is-today {
+  border-color: var(--accent);
+  box-shadow: inset 0 4px 0 var(--accent);
+}
+.topic-card-link {
+  display: block;
+  flex: 1;
+  color: inherit;
+  text-decoration: none;
+  padding: 1.2rem 1.3rem 1rem;
+}
+.topic-tree {
+  display: block;
+  width: 100%;
+  max-width: 13rem;
+  height: auto;
+  max-height: 7.5rem;
+  margin-bottom: 1rem;
+}
+.topic-tree-root {
+  fill: var(--ink);
+}
+.topic-tree-cat {
+  fill: var(--c);
+}
+.topic-tree-leaf {
+  fill: color-mix(in srgb, var(--c) 30%, var(--paper-raised));
+  transition: fill 0.3s;
+}
+.topic-tree-line {
+  fill: none;
+  stroke: color-mix(in srgb, var(--c) 45%, transparent);
+  stroke-width: 1.2;
+}
+.topic-card:hover .topic-tree-leaf {
+  fill: color-mix(in srgb, var(--c) 55%, var(--paper-raised));
+}
+/* With a cover photo, the photo runs edge to edge across the top of the card. */
+.topic-card-link:has(.topic-card-photo) {
+  padding-top: 0;
+}
+.topic-card-photo {
+  position: relative;
+  margin: 0 -1.3rem 1.1rem;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--paper-sunk);
+}
+.topic-card-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.topic-card:hover .topic-card-photo img {
+  transform: scale(1.04);
+}
+.topic-card-photo::after {
+  /* A thin line in the track colour where the photo meets the card. */
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 4px;
+  background: var(--accent);
+}
+.topic-card-photo .topic-card-flag {
+  position: absolute;
+  left: 0.9rem;
+  top: 0.9rem;
+  margin: 0;
+  box-shadow: 0 4px 12px -4px rgb(0 0 0 / 0.4);
+}
+.topic-card-credit {
+  margin: -0.4rem 0 0;
+  padding: 0 1.3rem 0.9rem;
+  font-size: 0.7rem;
+  line-height: 1.35;
+  color: var(--ink-faint);
+}
+.topic-card-flag {
+  display: inline-block;
+  margin: 0 0 0.5rem;
+  font: 700 0.7rem/1 var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--paper-raised);
+  background: var(--accent);
+  padding: 0.3rem 0.55rem;
+  border-radius: 4px;
+}
+.topic-card h3 {
+  font-size: var(--step-2);
+  font-stretch: 92%;
+  line-height: 1.1;
+  margin: 0 0 0.5rem;
+}
+.topic-card-dek {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+.topic-card-meta {
+  margin: 0.75rem 0 0;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+}
+.topic-card-latest {
+  display: block;
+  padding: 0.8rem 1.3rem 0.95rem;
+  border-top: 1px solid var(--rule);
+  font: 650 0.95rem/1.3 var(--font-display);
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--paper);
+}
+.topic-card-latest span {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--accent);
+  margin-bottom: 0.2rem;
+}
+.topic-card-latest:hover {
+  color: var(--accent);
+}
+@media (prefers-reduced-motion: reduce) {
+  .topic-card,
+  .topic-card-photo img {
+    transition: none;
+  }
+  .topic-card:hover {
+    transform: none;
+  }
+}
+
+/* ---------- "Where this fits" on an issue page ---------- */
+.map-place {
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper-raised);
+}
+.map-place-inner {
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 0.85rem var(--gutter);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 1.25rem;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+}
+.map-place-kicker {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--accent);
+}
+.map-place-trail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.2rem 0.45rem;
+  font-weight: 650;
+}
+.map-place-trail span {
+  color: var(--ink-faint);
+}
+.map-place-trail a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--rule);
+}
+.map-place-trail a:hover {
+  border-color: var(--accent);
+}
+.map-place-trail a[aria-current] {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.map-place-primers {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.5rem;
+  color: var(--ink-soft);
+}
+.map-place-primers a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  background: var(--paper);
+}
+.map-place-primers a:hover {
+  border-color: var(--accent);
+}
+@media (min-width: 64rem) {
+  .map-place-primers {
+    margin-left: auto;
+  }
+}

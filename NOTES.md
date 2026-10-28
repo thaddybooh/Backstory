@@ -3,6 +3,13 @@
 Decisions and current state, so a future session can pick up where we left off.
 Read `BRIEF.md` for the original brief and `GUIDE.md` for the owner's step-by-step instructions.
 
+## Status (28 Oct 2026)
+
+- **Topic maps added** (branch `claude/loving-heisenberg-y8hp8s`): a standalone, deeper version of the question
+  graph for a whole subject, at `/topics/<slug>/` (index at `/topics/`, "Topics" in the nav). First map: Singapore's
+  education system (3 categories, 63 questions, 60 sources, no article), drawn as a left-to-right tree. Then
+  maps for AI and jobs (issue 008) and ageing (issue 004), linked both ways with their issues. See "Topic maps".
+
 ## Status (26 Oct 2026)
 
 - **Question graph added** (branch `claude/clever-carson-2a0amt`): an interactive graph of the questions a reader
@@ -63,6 +70,49 @@ scripts/next-issue.mjs        `npm run next`: next number, track, date (SGT) and
 scripts/check-issue.mjs       `npm run check:issue`: checks a new issue against the brief's rules
 .claude/skills/write-issue/   the step-by-step instructions Claude follows to write an issue and open a PR
 ```
+
+## Topic maps
+
+Owner's idea (28 Oct 2026): the question graph, but with many more branches and sub-branches, for a whole topic
+rather than one issue, as a research tool. No article is written for a map; each box carries its own summarised
+answer and sources. Gamification (progress, badges) was tried and removed at the owner's request: they will design
+it themselves first.
+
+- **Structure:** subject → categories → topics or news stories → questions → follow-ups. The education map has
+  three categories: `basics` (how it works), `ideas` (big ideas and debates, the policy lens) and `news` (recent
+  changes, newest first). Every news story must open with the same four questions, in order: `why`, `what`, `who`,
+  `means` (enforced by the build); extra questions go after them.
+- **Data:** one `src/content/maps/<slug>.json` per map with `categories`. Every node has `id`, `label` (≤34 chars,
+  the text on the box), `question`, `answer` (paragraphs, 60–220 words), `sources` (1–4) and `children`. Questions
+  (below topics) need a `type` (`basics`, `why`, `what`, `who`, `means`, `debate`); news stories have a `when`.
+  Optional `related` ids (listed both ways under "Connected ideas" in the answer panel) and `issue` (link to a But
+  Why? issue). Rules in `src/lib/topicmap.mjs`; a map that breaks them stops the build.
+- **Layout (owner chose it over the circle, 28 Oct 2026):** a left-to-right tree of boxes with curved connectors.
+  Columns by depth; each box is centred on the boxes it opens into; text is wrapped with real font measurements.
+  Only one path is open at a time (opening a box folds its siblings). Clicking a box opens its answer and unfolds
+  it; the round button on its right edge only folds/unfolds. Arrow keys fold and unfold too. "Open everything"
+  grows the map to the tree's full height so the page scrolls through it like an outline (the answer panel follows
+  the reader down). Colour by category (slate, teal, track colour); the stripe and small caps tag on a question
+  show its type; the "Highlight" chips light up one type across the whole map.
+- **Code:** `src/components/topicmap/` (TopicMap.astro, MapItem.astro for the nested list, topicmap.ts for the
+  tree), `src/styles/topicmap.css` (builds on qmap.css), `src/pages/topics/`.
+- **Maps and daily issues are linked (28 Oct 2026):** maps are the long-term backbone (one per "beat"), daily
+  issues plug into them as news stories. A box's `issue` field links it to an issue. Each issue page then shows a
+  "Where this fits" strip at the top (map › category › story, plus up to three "New to this? Start with" background
+  boxes, taken from the story's `related` background ids, then the map's basics topics), and the homepage links
+  today's issue to its map. Logic: `getPlacement` in `src/lib/topicmap-data.ts` (prefers a news story over a
+  passing mention). Links like `/topics/<slug>/#<box-id>` open the map at that box, and the address updates as the
+  reader opens boxes. Maps so far: Singapore's education system (no issue yet), AI and jobs in Singapore (issue
+  008) and Singapore's ageing society (issue 004); the last two were built only from those issues' sources.
+- **Homepage (28 Oct 2026):** under today's issue, a "Follow the bigger story" band of topic cards
+  (TopicCard.astro: a small drawing of the map's tree, question count, latest news story). The map holding today's
+  issue comes first and is marked "Today's story is here". Issues in "Previous issues" and the archive carry a
+  "Topic" chip linking to their map. The nav says **Topics** (owner's choice over "Maps"); pages live at `/topics/`.
+- **Next step (not built):** have the write-issue skill add or update a story on the matching map with each new
+  issue, so maps grow daily. Until then, link new issues by hand with the `issue` field.
+- **Sources:** unlike issue graphs, a map's sources are not checked against an article (there isn't one). The
+  education map's answers were written from web research on 28 Oct 2026; some pages (moe.gov.sg,
+  schoolbag.edu.sg) could not be opened from the cloud session and were cited from search results.
 
 ## Components available in issue files
 

@@ -1,0 +1,993 @@
+{
+  "title": "AI and jobs in Singapore",
+  "track": "singapore",
+  "updated": "2026-10-28",
+  "dek": "Singapore has gone all in on AI and promised no ‘jobless growth’. How the job market and safety net work, the debates underneath, and every development in the news.",
+  "intro": "Start with The basics if you are new to the topic, then Big ideas and debates for the policy thinking behind it. In the news holds each recent development, and every story opens into the same four questions: why is it happening, what is changing, who does it affect, and what does it mean. Open any box for a short answer and the sources to dig deeper.",
+  "cover": {
+    "commons": "2016 Singapur, Downtown Core, Marina Bay Financial Centre.jpg",
+    "alt": "Tall glass office towers of the Marina Bay Financial Centre in Singapore against a blue sky"
+  },
+  "categories": [
+    {
+      "id": "basics",
+      "label": "The basics",
+      "kind": "basics",
+      "question": "How do jobs, layoffs and retraining work in Singapore?",
+      "answer": [
+        "Start here if you are new to the topic. This part explains the machinery that every AI-and-jobs story runs through: how Singapore’s job market is measured, who counts as a professional worker, what happens to people who lose their jobs, how the country retrains workers, and who makes labour policy.",
+        "Singapore’s approach is unusual among rich countries. It has no unemployment insurance and relies instead on training, wage support and job matching, negotiated between the government, unions and employers. Knowing that makes the debates in the news much easier to follow."
+      ],
+      "sources": [
+        {
+          "title": "Labour Market Report, second quarter 2026",
+          "publication": "Ministry of Manpower",
+          "url": "https://www.mom.gov.sg/newsroom/press-releases/2026/0921-labour-market-report---second-quarter-2026"
+        },
+        {
+          "title": "Economy of Singapore",
+          "publication": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Economy_of_Singapore"
+        }
+      ],
+      "children": [
+        {
+          "id": "job-market",
+          "label": "How the job market works",
+          "question": "How does Singapore’s job market work, and how is it measured?",
+          "answer": [
+            "The Ministry of Manpower publishes a labour market report every quarter: unemployment, jobs created, retrenchments (layoffs), how many retrenched people find new work, and job vacancies. In June 2026 overall unemployment was 1.9%, employment had risen for 19 quarters in a row, and there were 1.48 vacancies for every unemployed person.",
+            "Singapore’s workforce has two parts: residents (citizens and permanent residents) and foreigners on work passes, from construction workers on work permits to professionals on Employment Passes. That split matters for reading the figures, and for politics: of the 11,400 new jobs in April–June 2026, only 2,200 went to residents."
+          ],
+          "sources": [
+            {
+              "title": "Labour Market Report, second quarter 2026",
+              "publication": "Ministry of Manpower",
+              "url": "https://www.mom.gov.sg/newsroom/press-releases/2026/0921-labour-market-report---second-quarter-2026"
+            },
+            {
+              "title": "Singapore labour market expands in Q2 even as retrenchments rise and job vacancies fall",
+              "publication": "The Straits Times via The Star",
+              "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/09/21/singapore-labour-market-expands-in-q2-even-as-retrenchments-rise-and-job-vacancies-fall"
+            }
+          ],
+          "children": [
+            {
+              "id": "three-rates",
+              "label": "Why three unemployment rates?",
+              "type": "basics",
+              "question": "Why does Singapore report three different unemployment rates?",
+              "answer": [
+                "Because the workforce includes many foreigners whose situation is different. In June 2026 the overall rate was 1.9%, the resident rate 2.9% and the citizen rate 3.0%. Foreign workers on work passes generally must leave Singapore if they lose their jobs, so they rarely show up as unemployed, which pulls the overall rate down.",
+                "The citizen rate is the better guide to how Singaporeans are doing. Even that is a national average: it can stay low while particular groups, such as new graduates or professionals in finance and tech, find things much harder."
+              ],
+              "sources": [
+                {
+                  "title": "Labour Market Report, second quarter 2026",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.mom.gov.sg/newsroom/press-releases/2026/0921-labour-market-report---second-quarter-2026"
+                },
+                {
+                  "title": "Singapore labour market expands in Q2 even as retrenchments rise and job vacancies fall",
+                  "publication": "The Straits Times via The Star",
+                  "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/09/21/singapore-labour-market-expands-in-q2-even-as-retrenchments-rise-and-job-vacancies-fall"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "pmet",
+              "label": "What is a PMET?",
+              "type": "basics",
+              "question": "What does ‘PMET’ mean, and why does it come up so often?",
+              "answer": [
+                "PMET stands for professionals, managers, executives and technicians: Singapore’s term for white-collar and skilled workers. It is the group most exposed to generative AI, which is good at the drafting, summarising and analysing that fills many office jobs.",
+                "It is also the group where the strain is now showing. In April–June 2026, 3.2 in every 1,000 PMET employees were retrenched, a higher rate than for other workers, and retrenched residents are increasingly educated: 66.4% had a degree in 2025, up from 51.0% in 2021. At the same time, the government notes that entry-level PMET jobs still made up 45.3% of vacancies in June."
+              ],
+              "sources": [
+                {
+                  "title": "Labour Market Report, second quarter 2026",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.mom.gov.sg/newsroom/press-releases/2026/0921-labour-market-report---second-quarter-2026"
+                },
+                {
+                  "title": "Oral answer to PQ on retrenchment",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.mom.gov.sg/newsroom/parliament-questions-and-replies/2026/1006-oral-answer-to-pq-on-retrenchment"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "safety-net",
+          "label": "If you lose your job",
+          "question": "What support is there if you lose your job in Singapore?",
+          "answer": [
+            "Less cash, more help back to work. Singapore has no unemployment insurance. Since April 2025 the SkillsFuture Jobseeker Support Scheme pays involuntarily unemployed people who earned S$5,000 a month or less up to S$6,000 over six months while they look for work. A taskforce of the ministry, the NTUC union federation and others contacts workers after a retrenchment to offer coaching and job matching.",
+            "Firms with ten or more staff must notify the ministry of retrenchments. Retrenchment payouts are guided by a tripartite advisory rather than required by law for most workers; about 88% of employers paid them in 2025. The Employment Act is under review, including whether they should become compulsory."
+          ],
+          "sources": [
+            {
+              "title": "Annex A: factsheet on SkillsFuture Jobseeker Support Scheme",
+              "publication": "Ministry of Manpower",
+              "url": "https://www.iac.gov.sg/-/media/mom/documents/press-releases/2024/annex-a---factsheet-on-skillsfuture-jobseeker-support-scheme.pdf"
+            },
+            {
+              "title": "Oral answer to PQ on retrenchment",
+              "publication": "Ministry of Manpower",
+              "url": "https://www.mom.gov.sg/newsroom/parliament-questions-and-replies/2026/1006-oral-answer-to-pq-on-retrenchment"
+            },
+            {
+              "title": "MOM reviewing worker support measures as retrenchments hit highest level since 2020",
+              "publication": "AsiaOne",
+              "url": "https://www.asiaone.com/singapore/retrenchment-worker-support-measures-jasmin-lau"
+            }
+          ],
+          "children": [
+            {
+              "id": "why-no-insurance",
+              "label": "Why no unemployment insurance?",
+              "type": "why",
+              "question": "Why doesn’t Singapore have unemployment insurance?",
+              "answer": [
+                "The government has long argued that generous benefits would discourage people from going back to work, and prefers to spend on training, wage subsidies and job matching. Its jobseeker scheme is deliberately temporary, taxpayer-funded and limited to lower earners, which it says keeps the focus on getting back to work.",
+                "Critics, led by the opposition Workers’ Party, say this was designed for an era of short, cyclical job losses. If AI causes longer, structural displacement among professionals with mortgages and families, many of them above the scheme’s income limit, the cushion may be too thin. That debate is now live in Parliament."
+              ],
+              "sources": [
+                {
+                  "title": "Annex A: factsheet on SkillsFuture Jobseeker Support Scheme",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.iac.gov.sg/-/media/mom/documents/press-releases/2024/annex-a---factsheet-on-skillsfuture-jobseeker-support-scheme.pdf"
+                },
+                {
+                  "title": "Labour Day message 2026: strengthening social solidarity in the age of AI",
+                  "publication": "Workers’ Party",
+                  "url": "https://www.wp.sg/news/labour-day-message-2026-strengthening-social-solidarity-in-the-age-of-ai"
+                },
+                {
+                  "title": "MOM reviewing worker support measures as retrenchments hit highest level since 2020",
+                  "publication": "AsiaOne",
+                  "url": "https://www.asiaone.com/singapore/retrenchment-worker-support-measures-jasmin-lau"
+                }
+              ],
+              "related": [
+                "wp-insurance"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "skillsfuture",
+          "label": "How workers retrain",
+          "question": "How does Singapore retrain workers?",
+          "answer": [
+            "Mainly through SkillsFuture, launched in 2015, which gives every adult credits to spend on courses. Career conversion programmes pay part of a worker’s salary while they retrain for a new industry; the ministry says about nine in ten participants are still employed two years after starting. Workers aged 40 and above get extra support.",
+            "Budget 2026 added AI to this: a redesigned SkillsFuture website to make AI courses easier to find, six months of free premium AI tools for people who take selected courses, and a merger of SkillsFuture Singapore and Workforce Singapore into one agency for training, career guidance and job matching."
+          ],
+          "sources": [
+            {
+              "title": "SkillsFuture",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/SkillsFuture"
+            },
+            {
+              "title": "PM Wong’s Budget 2026 in summary: AI, supporting workers, vouchers & helping businesses",
+              "publication": "Mothership",
+              "url": "https://mothership.sg/2026/02/2026-budget-summary/"
+            },
+            {
+              "title": "Oral answer to PQ on retrenchment",
+              "publication": "Ministry of Manpower",
+              "url": "https://www.mom.gov.sg/newsroom/parliament-questions-and-replies/2026/1006-oral-answer-to-pq-on-retrenchment"
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "tripartism",
+          "label": "Who makes labour policy?",
+          "question": "Who decides labour policy in Singapore?",
+          "answer": [
+            "Three partners, together: the government, the National Trades Union Congress (NTUC) and employers. This is called tripartism. Rules such as how retrenchments should be handled are usually written as tripartite guidelines rather than laws, and the partners negotiate the details of wage and training schemes.",
+            "In the AI debate, NTUC asked the government to make every worker ready for AI, strengthen support and safeguards, and better protect PMETs, and Mr Wong endorsed all three in February 2026. Tripartism has kept labour relations calm, but it also means workers rely heavily on the government and unions acting for them. The opposition Workers’ Party puts forward its own alternatives in Parliament."
+          ],
+          "sources": [
+            {
+              "title": "PM Wong assures Singaporeans that there will be no jobless growth amid AI push",
+              "publication": "The Straits Times via The Star",
+              "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/02/26/pm-wong-assures-singaporeans-that-there-will-be-no-jobless-growth-amid-ai-push"
+            },
+            {
+              "title": "Labour Day message 2026: strengthening social solidarity in the age of AI",
+              "publication": "Workers’ Party",
+              "url": "https://www.wp.sg/news/labour-day-message-2026-strengthening-social-solidarity-in-the-age-of-ai"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "ideas",
+      "label": "Big ideas and debates",
+      "kind": "ideas",
+      "question": "What ideas shape Singapore’s response to AI and jobs?",
+      "answer": [
+        "Two bets sit underneath the news. The first is economic: a small, open, high-cost economy cannot opt out of a technology its competitors are adopting, so it should adopt AI fast and be the best place to use it. The second is social: that retraining, not unemployment benefits, is the right way to protect workers through disruption.",
+        "The debates are about whether those bets still hold. Is AI different from past technologies because it targets the office work Singapore’s middle class depends on? Can the government push adoption and protect workers at the same time? And what happens to young people if the routine work they learn from disappears?"
+      ],
+      "sources": [
+        {
+          "title": "Economic Strategy Review final report published",
+          "publication": "Allen & Gledhill",
+          "url": "https://www.allenandgledhill.com/sg/publication/articles/33280/economic-strategy-review-final-report-published"
+        },
+        {
+          "title": "All in on AI: Singapore PM Wong’s promise of ‘no jobless growth’ sets stage for more labour interventions",
+          "publication": "Asia News Network",
+          "url": "https://asianews.network/all-in-on-ai-singapore-pm-wongs-promise-of-no-jobless-growth-sets-stage-for-more-labour-interventions/"
+        }
+      ],
+      "children": [
+        {
+          "id": "users-not-builders",
+          "label": "Users, not builders",
+          "question": "Why does Singapore want to be a nation of AI users rather than builders?",
+          "answer": [
+            "Because it cannot match the scale of the United States or China. The Economic Strategy Review, a two-year study of how Singapore should grow, argued in its final recommendations in May 2026 that Singapore should not compete in building the most advanced AI models or the largest data centres. Instead it should be the place where AI is developed, tested, deployed and scaled.",
+            "That plays to existing strengths: a trusted business environment, strong institutions and a skilled workforce. It also explains why the Budget’s money goes mostly to adoption, through tax breaks, grants and training, rather than to building AI itself."
+          ],
+          "sources": [
+            {
+              "title": "Economic Strategy Review final report published",
+              "publication": "Allen & Gledhill",
+              "url": "https://www.allenandgledhill.com/sg/publication/articles/33280/economic-strategy-review-final-report-published"
+            },
+            {
+              "title": "S’pore to establish National AI Council, to be chaired by PM Wong: Budget 2026",
+              "publication": "Mothership",
+              "url": "https://mothership.sg/2026/02/national-ai-council-pm-wong-budget-2026/"
+            }
+          ],
+          "children": [
+            {
+              "id": "why-all-in",
+              "label": "Why go all in?",
+              "type": "why",
+              "question": "Why did Singapore decide to go ‘all in’ on AI?",
+              "answer": [
+                "The reasons are structural. Singapore has no natural resources, a small and ageing workforce, and an economy built on being more productive and more trusted than its neighbours. Its leaders fear that if Singapore adopts AI more slowly than competitors, investment and jobs will go elsewhere.",
+                "Business is unusually keen too. In a PwC survey of executives at large firms published in April 2026, 67% of Singapore respondents said their appetite for AI investment had risen, against 41% worldwide, and 17% were already using AI in more autonomous forms, more than double the global rate. Most were banks and technology firms, the sectors that dominate office jobs."
+              ],
+              "sources": [
+                {
+                  "title": "Singapore emerges as AI hub contender, says PwC study",
+                  "publication": "The Star",
+                  "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/04/13/singapore-emerges-as-ai-hub-contender-says-pwc-study"
+                },
+                {
+                  "title": "Economic Strategy Review final report published",
+                  "publication": "Allen & Gledhill",
+                  "url": "https://www.allenandgledhill.com/sg/publication/articles/33280/economic-strategy-review-final-report-published"
+                },
+                {
+                  "title": "PM Wong’s Budget 2026 in summary: AI, supporting workers, vouchers & helping businesses",
+                  "publication": "Mothership",
+                  "url": "https://mothership.sg/2026/02/2026-budget-summary/"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "bottom-rung",
+          "label": "The bottom rung problem",
+          "question": "What is the ‘bottom rung’ problem?",
+          "answer": [
+            "It is a specific way AI could damage careers. Junior staff in banking, law, consulting or software learn by doing routine work: research, drafting, checking and summarising. That is exactly what generative AI does best. If firms need fewer juniors, fewer people get trained, and in ten years there are fewer experienced professionals.",
+            "Entry requirements also rise: firms want new hires with experience, which graduates cannot get without a first job (‘no experience, no job; no job, no experience’). Prime Minister Lawrence Wong warned in October 2026 that ‘that bottom rung of the career ladder’ could be broken, and asked firms not to ‘automate away’ the learning that comes from routine work."
+          ],
+          "sources": [
+            {
+              "title": "Reskilling and upskilling workers amid AI adoption the harder but more sustainable path: PM Wong",
+              "publication": "AsiaOne",
+              "url": "https://www.asiaone.com/singapore/tan-su-shan-dbs-ai-lawrence-wong-workers"
+            },
+            {
+              "title": "The next starting level",
+              "publication": "The Star",
+              "url": "https://www.thestar.com.my/news/focus/2026/09/06/the-next-starting--level"
+            }
+          ],
+          "related": [
+            "rung-warning"
+          ],
+          "children": [
+            {
+              "id": "ai-evidence",
+              "label": "What does the evidence say?",
+              "type": "debate",
+              "question": "Is there evidence that AI is already hurting young workers?",
+              "answer": [
+                "Early and mixed. The best-known study, by Stanford economists led by Erik Brynjolfsson using payroll data on millions of American workers, found that employment of 22- to 25-year-olds in the jobs most exposed to AI fell by about 13% relative to other workers after generative AI spread. The authors call it an early warning, not proof, and found no economy-wide job losses.",
+                "Others are sceptical. A Danish study found no effect of workplace AI on earnings or hours. Mikhail Rosli of Malaysia’s Khazanah Research Institute notes that firms began demanding more experience from new hires around 2019, before ChatGPT. Interest rates and the end of pandemic-era hiring may matter as much as AI."
+              ],
+              "sources": [
+                {
+                  "title": "Canaries in the coal mine? Six facts about the recent employment effects of artificial intelligence",
+                  "publication": "Stanford Digital Economy Lab",
+                  "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recen"
+                },
+                {
+                  "title": "The next starting level",
+                  "publication": "The Star",
+                  "url": "https://www.thestar.com.my/news/focus/2026/09/06/the-next-starting--level"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "automation",
+          "label": "Replace or help?",
+          "question": "What is the difference between AI that replaces work and AI that helps?",
+          "answer": [
+            "Economists distinguish automation, where AI takes over the tasks a worker does, from augmentation, where it helps the worker do more. The difference matters for policy. The Stanford study found the fall in young workers’ employment was concentrated in jobs where AI automates tasks, not where it assists.",
+            "It also links to an old debate. Fears that machines will destroy work go back centuries, and past technologies destroyed some jobs while creating many more. The question with AI is whether it is different, because it reaches cognitive office work, and whether it spreads too fast for workers and training systems to adjust."
+          ],
+          "sources": [
+            {
+              "title": "Canaries in the coal mine? Six facts about the recent employment effects of artificial intelligence",
+              "publication": "Stanford Digital Economy Lab",
+              "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recen"
+            },
+            {
+              "title": "Technological unemployment",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Technological_unemployment"
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "disruption-history",
+          "label": "Has this happened before?",
+          "question": "How has Singapore handled job disruption before?",
+          "answer": [
+            "Many times. Singapore moved from entrepôt trade to labour-intensive manufacturing in the 1960s and 70s, pushed wages up in 1979 to force a shift to higher-value industry, and moved into services, finance and research from the 1990s. Each shift destroyed some jobs, and each time the answer was training and moving workers, not protecting old jobs.",
+            "In the 1985 recession, employers’ CPF contributions were cut to lower costs. In the 2001 and 2008–09 downturns and the pandemic, the government subsidised wages to keep people in work. SkillsFuture followed in 2015. The AI question tests whether that playbook still works when the disrupted jobs are graduate office jobs."
+          ],
+          "sources": [
+            {
+              "title": "Economy of Singapore",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Economy_of_Singapore"
+            },
+            {
+              "title": "SkillsFuture",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/SkillsFuture"
+            }
+          ],
+          "children": []
+        },
+        {
+          "id": "jobless-growth",
+          "label": "What is ‘jobless growth’?",
+          "question": "What does the promise of ‘no jobless growth’ mean?",
+          "answer": [
+            "Jobless growth is an economy that grows without creating more jobs, or creates them for fewer people. Closing the Budget debate on 26 February 2026, Mr Wong promised: ‘We will not have jobless growth in Singapore.’ AI would grow the economy and that growth would become good jobs and better wages.",
+            "The catch is that it is a political commitment, not a law or a measurable target. Total employment can keep rising while one group, such as new graduates or mid-career professionals in office jobs, bears most of the cost. Critics argue the promise needs a yardstick, such as counting AI-related job losses, to mean something."
+          ],
+          "sources": [
+            {
+              "title": "PM Wong assures Singaporeans that there will be no jobless growth amid AI push",
+              "publication": "The Straits Times via The Star",
+              "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/02/26/pm-wong-assures-singaporeans-that-there-will-be-no-jobless-growth-amid-ai-push"
+            },
+            {
+              "title": "S’pore will exploit AI to grow economy & ensure growth translates into good jobs: PM Wong",
+              "publication": "Mothership",
+              "url": "https://mothership.sg/2026/02/singapore-pm-wong-ai/"
+            }
+          ],
+          "children": [
+            {
+              "id": "cheerleader-referee",
+              "label": "Cheerleader and referee?",
+              "type": "debate",
+              "question": "Can the government push AI and protect workers at the same time?",
+              "answer": [
+                "That is the tension. The same government that is pushing firms to adopt AI as fast as possible, with tax breaks and grants, is responsible for protecting the workers who might lose out. Some workers suspect that when the two goals clash, growth will win.",
+                "The government’s answer is that the two go together: fast adoption keeps jobs in Singapore, and retraining every worker is the ‘harder road’ but more sustainable than cutting staff for short-term gains. Mr Wong has also warned that leaving workers behind would provoke ‘an even stronger backlash to AI’, which is an argument for protecting workers in order to keep the AI push possible."
+              ],
+              "sources": [
+                {
+                  "title": "All in on AI: Singapore PM Wong’s promise of ‘no jobless growth’ sets stage for more labour interventions",
+                  "publication": "Asia News Network",
+                  "url": "https://asianews.network/all-in-on-ai-singapore-pm-wongs-promise-of-no-jobless-growth-sets-stage-for-more-labour-interventions/"
+                },
+                {
+                  "title": "Reskilling and upskilling workers amid AI adoption the harder but more sustainable path: PM Wong",
+                  "publication": "AsiaOne",
+                  "url": "https://www.asiaone.com/singapore/tan-su-shan-dbs-ai-lawrence-wong-workers"
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "news",
+      "label": "In the news",
+      "kind": "news",
+      "question": "What is happening with AI and jobs in Singapore right now?",
+      "answer": [
+        "2026 is the year Singapore went all in on AI, and the year the first signs of strain appeared in its job market. The stories here run from newest to oldest. Each opens into the same four questions: why is it happening, what is changing, who does it affect, and what does it mean.",
+        "For the full picture in one place, read But Why? issue 008, ‘Singapore’s AI bet and the bottom rung’, which these stories are drawn from."
+      ],
+      "sources": [
+        {
+          "title": "Reskilling and upskilling workers amid AI adoption the harder but more sustainable path: PM Wong",
+          "publication": "AsiaOne",
+          "url": "https://www.asiaone.com/singapore/tan-su-shan-dbs-ai-lawrence-wong-workers"
+        },
+        {
+          "title": "Labour Market Report, second quarter 2026",
+          "publication": "Ministry of Manpower",
+          "url": "https://www.mom.gov.sg/newsroom/press-releases/2026/0921-labour-market-report---second-quarter-2026"
+        }
+      ],
+      "children": [
+        {
+          "id": "rung-warning",
+          "label": "Leaders warn on the ‘bottom rung’",
+          "when": "Oct 2026",
+          "question": "Why did Singapore’s leaders warn that AI could break the first rung of careers?",
+          "answer": [
+            "On 12 October 2026, both of Singapore’s top leaders raised the same alarm on the same day. Prime Minister Lawrence Wong told a banking conference the government was concerned that ‘that bottom rung of the career ladder’ could be broken by AI. President Tharman Shanmugaratnam told the IMF and World Bank meetings in Bangkok that the first job after graduation ‘is now seeing less demand’.",
+            "It was the clearest signal yet that the government sees young graduates as the group most at risk from its AI push."
+          ],
+          "sources": [
+            {
+              "title": "Reskilling and upskilling workers amid AI adoption the harder but more sustainable path: PM Wong",
+              "publication": "AsiaOne",
+              "url": "https://www.asiaone.com/singapore/tan-su-shan-dbs-ai-lawrence-wong-workers"
+            },
+            {
+              "title": "Singapore president warns of AI’s risk to employment for fresh graduates",
+              "publication": "VnExpress International",
+              "url": "https://e.vnexpress.net/news/world/singapore-president-warns-of-ai-s-risk-to-employment-for-fresh-graduates-5131568.html"
+            }
+          ],
+          "related": [
+            "bottom-rung",
+            "pmet"
+          ],
+          "issue": "008-singapores-ai-bet-and-the-bottom-rung",
+          "children": [
+            {
+              "id": "rung-why",
+              "label": "Why now?",
+              "type": "why",
+              "question": "Why did the warning come now?",
+              "answer": [
+                "Because the numbers turned. The graduate employment survey in March showed only 74.4% of 2025 university graduates in full-time work six months after their exams, down from 79.4%, and the share who applied but got no offers doubled in two years to 8.5%. Hiring for information and communications was ‘more subdued than in prior years’.",
+                "Then in September the ministry reported retrenchments at their highest since 2020 and falling vacancies for professionals in finance and tech, the sectors where AI adoption is fastest. Together these made the ‘bottom rung’ worry concrete rather than theoretical."
+              ],
+              "sources": [
+                {
+                  "title": "Fewer fresh Singapore uni graduates in 2025 found full-time work, but pay held steady: Survey",
+                  "publication": "AsiaOne",
+                  "url": "https://www.asiaone.com/singapore/fewer-fresh-singapore-uni-graduates-2025-found-full-time-work-pay-held-steady-survey"
+                },
+                {
+                  "title": "Labour Market Report, second quarter 2026",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.mom.gov.sg/newsroom/press-releases/2026/0921-labour-market-report---second-quarter-2026"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "rung-what",
+              "label": "What did they say?",
+              "type": "what",
+              "question": "What exactly did Mr Wong and President Tharman say?",
+              "answer": [
+                "Mr Wong said: ‘We are concerned that there may be that bottom rung of the career ladder that is broken, and young people may not get sufficient training.’ He named junior tasks AI now does, such as taking notes, drafting speeches and preparing presentations, said the government was ‘looking at whether there is a need for new programmes, new schemes’, and added: ‘We are not saying zero retrenchments.’",
+                "President Tharman said: ‘The evidence is already very clear, it’s clearest in the most AI-exposed sectors.’ According to reports of his speech, he urged governments to give firms incentives to hire fresh graduates."
+              ],
+              "sources": [
+                {
+                  "title": "Reskilling and upskilling workers amid AI adoption the harder but more sustainable path: PM Wong",
+                  "publication": "AsiaOne",
+                  "url": "https://www.asiaone.com/singapore/tan-su-shan-dbs-ai-lawrence-wong-workers"
+                },
+                {
+                  "title": "Singapore president warns of AI’s risk to employment for fresh graduates",
+                  "publication": "VnExpress International",
+                  "url": "https://e.vnexpress.net/news/world/singapore-president-warns-of-ai-s-risk-to-employment-for-fresh-graduates-5131568.html"
+                },
+                {
+                  "title": "Tharman urges governments to back hiring of fresh graduates as AI erodes entry-level jobs",
+                  "publication": "The Online Citizen",
+                  "url": "https://news.theonlinecitizen.com/2026/10/13/tharman-urges-governments-to-back-hiring-of-fresh-graduates-as-ai-erodes-entry-level-jobs"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "rung-who",
+              "label": "Who is affected?",
+              "type": "who",
+              "question": "Who is most affected by the weakening bottom rung?",
+              "answer": [
+                "New graduates, especially those aiming for office careers in finance, technology, law and consulting, where junior work is most exposed to AI. In the class of 2025, 8.5% of graduates who applied for jobs got no offers at all, up from 4.1% two years earlier.",
+                "Employers are affected too, in the long run: firms that stop hiring juniors now will have fewer experienced professionals in a decade. And so are universities and parents, because the old bargain, that a degree leads to a secure professional career, looks weaker when two-thirds of retrenched residents have degrees."
+              ],
+              "sources": [
+                {
+                  "title": "Fewer fresh Singapore uni graduates in 2025 found full-time work, but pay held steady: Survey",
+                  "publication": "AsiaOne",
+                  "url": "https://www.asiaone.com/singapore/fewer-fresh-singapore-uni-graduates-2025-found-full-time-work-pay-held-steady-survey"
+                },
+                {
+                  "title": "Oral answer to PQ on graduate employment",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.mom.gov.sg/newsroom/parliament-questions-and-replies/2026/0204-oral-answer-to-pq-on-graduate-employment"
+                },
+                {
+                  "title": "Oral answer to PQ on retrenchment",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.mom.gov.sg/newsroom/parliament-questions-and-replies/2026/1006-oral-answer-to-pq-on-retrenchment"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "rung-means",
+              "label": "What could change?",
+              "type": "means",
+              "question": "What could the government do about it?",
+              "answer": [
+                "Several options are on the table. Pay firms to hire graduates, as President Tharman urged and the Workers’ Party proposes through wage subsidies for apprentices. Tie AI adoption grants to commitments to hire and train young staff, or fund structured apprenticeships. Change universities so graduates arrive with more practical experience, through internships and workplace attachments.",
+                "Each has a cost: subsidies may pay for hires firms would have made anyway, and conditions on grants could slow the AI adoption the Budget wants. Watch for the ‘new programmes, new schemes’ Mr Wong mentioned, and for Budget 2027 in February."
+              ],
+              "sources": [
+                {
+                  "title": "Reskilling and upskilling workers amid AI adoption the harder but more sustainable path: PM Wong",
+                  "publication": "AsiaOne",
+                  "url": "https://www.asiaone.com/singapore/tan-su-shan-dbs-ai-lawrence-wong-workers"
+                },
+                {
+                  "title": "Labour Day message 2026: strengthening social solidarity in the age of AI",
+                  "publication": "Workers’ Party",
+                  "url": "https://www.wp.sg/news/labour-day-message-2026-strengthening-social-solidarity-in-the-age-of-ai"
+                },
+                {
+                  "title": "Tharman urges governments to back hiring of fresh graduates as AI erodes entry-level jobs",
+                  "publication": "The Online Citizen",
+                  "url": "https://news.theonlinecitizen.com/2026/10/13/tharman-urges-governments-to-back-hiring-of-fresh-graduates-as-ai-erodes-entry-level-jobs"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "retrenchments",
+          "label": "Retrenchments at a five-year high",
+          "when": "Sep–Oct 2026",
+          "question": "Why are retrenchments rising when unemployment is so low?",
+          "answer": [
+            "On 21 September 2026 the Ministry of Manpower reported 4,620 retrenchments in April–June, the most since the pandemic year of 2020, while overall unemployment stayed at 1.9%. On 6 October the acting manpower minister told Parliament the ministry was ‘comprehensively reviewing’ support for workers.",
+            "Both things can be true: the job market as a whole is tight, while particular sectors and groups are under strain."
+          ],
+          "sources": [
+            {
+              "title": "Labour Market Report, second quarter 2026",
+              "publication": "Ministry of Manpower",
+              "url": "https://www.mom.gov.sg/newsroom/press-releases/2026/0921-labour-market-report---second-quarter-2026"
+            },
+            {
+              "title": "MOM reviewing worker support measures as retrenchments hit highest level since 2020",
+              "publication": "AsiaOne",
+              "url": "https://www.asiaone.com/singapore/retrenchment-worker-support-measures-jasmin-lau"
+            }
+          ],
+          "issue": "008-singapores-ai-bet-and-the-bottom-rung",
+          "children": [
+            {
+              "id": "retrench-why",
+              "label": "Why the rise?",
+              "type": "why",
+              "question": "Why are more people being retrenched?",
+              "answer": [
+                "Almost three in four cases were blamed on restructuring rather than falling business, and the rise came mainly from manufacturing, information and communications, and financial services. There are several possible drivers: a 12.5% US tariff on Singapore from July, high energy prices since the war with Iran began in February, the end of strong post-pandemic hiring, and firms reorganising.",
+                "Singapore’s three biggest banks shed nearly 3,000 roles in 2025, citing reasons such as merging acquired businesses and not renewing contracts. Some firms have pointed directly to AI. How much is AI is the open question."
+              ],
+              "sources": [
+                {
+                  "title": "Labour Market Report, second quarter 2026",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.mom.gov.sg/newsroom/press-releases/2026/0921-labour-market-report---second-quarter-2026"
+                },
+                {
+                  "title": "Singapore banks cut nearly 3,000 jobs as AI and restructuring redefine workforce",
+                  "publication": "People Matters",
+                  "url": "https://sea.peoplemattersglobal.com/news/workforce-planning/singapore-banks-cut-nearly-3000-jobs-as-ai-and-restructuring-redefine-workforce-49389"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "retrench-what",
+              "label": "What do the numbers show?",
+              "type": "what",
+              "question": "What do the latest job figures actually show?",
+              "answer": [
+                "4,620 retrenchments in April–June, 2.0 for every 1,000 employees, up from 1.6 in January–March. Recovery is slower: the share of retrenched residents back in work within six months fell from 60.7% to 54.9% in a single quarter, and of those re-employed on lower pay, the median cut was about 25%.",
+                "Professional vacancies fell from 73,300 in March to 68,600 in June, mainly in finance and information and communications. On the other side, employment still grew by 11,400, and about 70% of retrenched PMETs find work within a year and about 80% within two."
+              ],
+              "sources": [
+                {
+                  "title": "Labour Market Report, second quarter 2026",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.mom.gov.sg/newsroom/press-releases/2026/0921-labour-market-report---second-quarter-2026"
+                },
+                {
+                  "title": "Singapore labour market expands in Q2 even as retrenchments rise and job vacancies fall",
+                  "publication": "The Straits Times via The Star",
+                  "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/09/21/singapore-labour-market-expands-in-q2-even-as-retrenchments-rise-and-job-vacancies-fall"
+                }
+              ],
+              "related": [
+                "three-rates"
+              ],
+              "children": []
+            },
+            {
+              "id": "retrench-who",
+              "label": "Who is losing jobs?",
+              "type": "who",
+              "question": "Who is being hit hardest?",
+              "answer": [
+                "Educated professionals. In 2025, 66.4% of retrenched residents had a degree, up from 51.0% in 2021, and in April–June 3.2 in every 1,000 PMET employees were retrenched, a higher rate than for other workers.",
+                "Locals are also getting a smaller share of new jobs: of 11,400 new jobs in April–June, only 2,200 went to residents; most went to work permit holders in construction and manufacturing. Because Singapore has no unemployment insurance, a professional with a mortgage and family faces a bigger financial shock from a layoff than in many rich countries."
+              ],
+              "sources": [
+                {
+                  "title": "Oral answer to PQ on retrenchment",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.mom.gov.sg/newsroom/parliament-questions-and-replies/2026/1006-oral-answer-to-pq-on-retrenchment"
+                },
+                {
+                  "title": "Labour Market Report, second quarter 2026",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.mom.gov.sg/newsroom/press-releases/2026/0921-labour-market-report---second-quarter-2026"
+                }
+              ],
+              "related": [
+                "pmet",
+                "why-no-insurance"
+              ],
+              "children": []
+            },
+            {
+              "id": "retrench-means",
+              "label": "Is AI to blame?",
+              "type": "means",
+              "question": "Is AI behind the job losses, and why does it matter?",
+              "answer": [
+                "Nobody knows. Asked in Parliament on 6 October how many retrenchments were linked to AI, the ministry said it is unclear, because AI’s effect is hard to separate from wider business changes. Its surveys found ‘only a small minority’ of firms adopting AI cut headcount. It promised to refine its surveys but did not commit to counting AI-related retrenchments.",
+                "It matters because policy depends on it. If AI is a big driver, the case for new protections is stronger. Without data, people fill the gap with headlines and stories from friends: one survey found 58% of workers feared AI could take their job within two years."
+              ],
+              "sources": [
+                {
+                  "title": "Oral answer to PQ on retrenchment",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.mom.gov.sg/newsroom/parliament-questions-and-replies/2026/1006-oral-answer-to-pq-on-retrenchment"
+                },
+                {
+                  "title": "MOM reviewing worker support measures as retrenchments hit highest level since 2020",
+                  "publication": "AsiaOne",
+                  "url": "https://www.asiaone.com/singapore/retrenchment-worker-support-measures-jasmin-lau"
+                },
+                {
+                  "title": "58% of Singapore workers worry AI will replace them in next 2 years: Survey",
+                  "publication": "AsiaOne",
+                  "url": "https://www.asiaone.com/money/singapore-workers-worry-artificial-intelligence-replacement-survey"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "named-firms",
+              "label": "Which firms cited AI?",
+              "type": "what",
+              "question": "Have any companies linked their job cuts to AI?",
+              "answer": [
+                "A few have, according to their own statements and news reports. DBS, Singapore’s biggest bank, said in February 2025 that it expected to cut about 4,000 temporary and contract jobs over three years as AI takes over work, while adding about 1,000 AI-related roles. Shopee cut jobs in June 2026, including software engineers, in a move reported as linked to AI taking over their work.",
+                "Most firms give other reasons, such as restructuring or not renewing contracts, which is one reason the overall picture is so hard to read. Being named in a news report is not proof that AI caused a particular job cut."
+              ],
+              "sources": [
+                {
+                  "title": "Singapore banks cut nearly 3,000 jobs as AI and restructuring redefine workforce",
+                  "publication": "People Matters",
+                  "url": "https://sea.peoplemattersglobal.com/news/workforce-planning/singapore-banks-cut-nearly-3000-jobs-as-ai-and-restructuring-redefine-workforce-49389"
+                },
+                {
+                  "title": "Shopee cuts Singapore jobs as AI takes over their work",
+                  "publication": "The Independent Singapore",
+                  "url": "https://theindependent.sg/shopee-cuts-singapore-jobs-as-ai-takes-over-their-work-even-local-software-engineers-among-hundreds-of-global-developer-roles-are-also-affected/"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "wp-insurance",
+          "label": "The case for redundancy insurance",
+          "when": "Apr 2026",
+          "question": "What is the opposition’s plan for redundancy insurance?",
+          "answer": [
+            "On 30 April 2026, the Workers’ Party, Singapore’s main opposition party, used its Labour Day message to call for redundancy insurance for all workers and wage subsidies for firms that hire new graduates as apprentices.",
+            "It is the clearest alternative to the government’s approach, and the most direct challenge to the long-held view that Singapore should not pay unemployment benefits."
+          ],
+          "sources": [
+            {
+              "title": "Labour Day message 2026: strengthening social solidarity in the age of AI",
+              "publication": "Workers’ Party",
+              "url": "https://www.wp.sg/news/labour-day-message-2026-strengthening-social-solidarity-in-the-age-of-ai"
+            },
+            {
+              "title": "Working for Singapore: The Workers’ Party Manifesto 2025",
+              "publication": "Workers’ Party",
+              "url": "https://www.wp.sg/manifesto"
+            }
+          ],
+          "related": [
+            "why-no-insurance"
+          ],
+          "issue": "008-singapores-ai-bet-and-the-bottom-rung",
+          "children": [
+            {
+              "id": "wpi-why",
+              "label": "Why propose it?",
+              "type": "why",
+              "question": "Why does the opposition want redundancy insurance?",
+              "answer": [
+                "Its argument is that the safety net was built for a different era. Short-term help and retraining made sense when job losses were cyclical and most workers could quickly find similar work. AI may cause longer, structural displacement among professionals, many of whom earn above the S$5,000 income limit of the government’s jobseeker scheme.",
+                "The party also argues insurance would give workers the security to take the risks an AI economy requires, and would act as an automatic stabiliser in a downturn."
+              ],
+              "sources": [
+                {
+                  "title": "Labour Day message 2026: strengthening social solidarity in the age of AI",
+                  "publication": "Workers’ Party",
+                  "url": "https://www.wp.sg/news/labour-day-message-2026-strengthening-social-solidarity-in-the-age-of-ai"
+                },
+                {
+                  "title": "Annex A: factsheet on SkillsFuture Jobseeker Support Scheme",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.iac.gov.sg/-/media/mom/documents/press-releases/2024/annex-a---factsheet-on-skillsfuture-jobseeker-support-scheme.pdf"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "wpi-what",
+              "label": "How would it work?",
+              "type": "what",
+              "question": "How would the proposed redundancy insurance work?",
+              "answer": [
+                "Under the Workers’ Party design, employers and workers would make small contributions, 0.1% of salary in total. Retrenched workers would receive 40% of their last salary, up to a cap, for up to six months, at every income level.",
+                "Alongside it, the party proposes temporary wage subsidies for firms that take on new graduates as apprentices, aimed directly at the bottom rung. The government has preferred its own taxpayer-funded jobseeker scheme with a lower income ceiling."
+              ],
+              "sources": [
+                {
+                  "title": "Labour Day message 2026: strengthening social solidarity in the age of AI",
+                  "publication": "Workers’ Party",
+                  "url": "https://www.wp.sg/news/labour-day-message-2026-strengthening-social-solidarity-in-the-age-of-ai"
+                },
+                {
+                  "title": "Working for Singapore: The Workers’ Party Manifesto 2025",
+                  "publication": "Workers’ Party",
+                  "url": "https://www.wp.sg/manifesto"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "wpi-who",
+              "label": "Who would it help?",
+              "type": "who",
+              "question": "Who would gain and who would pay under redundancy insurance?",
+              "answer": [
+                "It would mainly help retrenched professionals and mid-career workers above the jobseeker scheme’s income limit, who today get no cash support while they look for work. Lower earners would also be covered, at 40% of their last salary.",
+                "Workers and employers would pay through contributions, so it adds a small cost to every payslip and every employer. Those most likely to claim, workers in sectors facing restructuring, would gain most; those in secure jobs would effectively pay into a pool they may never use, which is how insurance shares risk."
+              ],
+              "sources": [
+                {
+                  "title": "Labour Day message 2026: strengthening social solidarity in the age of AI",
+                  "publication": "Workers’ Party",
+                  "url": "https://www.wp.sg/news/labour-day-message-2026-strengthening-social-solidarity-in-the-age-of-ai"
+                },
+                {
+                  "title": "Annex A: factsheet on SkillsFuture Jobseeker Support Scheme",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.iac.gov.sg/-/media/mom/documents/press-releases/2024/annex-a---factsheet-on-skillsfuture-jobseeker-support-scheme.pdf"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "wpi-means",
+              "label": "Should Singapore have it?",
+              "type": "means",
+              "question": "What would redundancy insurance mean for Singapore’s model?",
+              "answer": [
+                "Supporters say it updates the safety net for AI: a cushion for structural job losses that lets workers find the right job rather than the first one. Opponents say Singapore’s low unemployment rests partly on strong incentives to return to work quickly, that benefits elsewhere have been linked to longer jobless spells, and that compulsory contributions raise costs.",
+                "The government is reviewing support for workers and the Employment Act. Whether it moves towards insurance, widens the jobseeker scheme or targets help at graduates and older professionals is one of the clearest policy choices to watch."
+              ],
+              "sources": [
+                {
+                  "title": "Labour Day message 2026: strengthening social solidarity in the age of AI",
+                  "publication": "Workers’ Party",
+                  "url": "https://www.wp.sg/news/labour-day-message-2026-strengthening-social-solidarity-in-the-age-of-ai"
+                },
+                {
+                  "title": "MOM reviewing worker support measures as retrenchments hit highest level since 2020",
+                  "publication": "AsiaOne",
+                  "url": "https://www.asiaone.com/singapore/retrenchment-worker-support-measures-jasmin-lau"
+                },
+                {
+                  "title": "Annex A: factsheet on SkillsFuture Jobseeker Support Scheme",
+                  "publication": "Ministry of Manpower",
+                  "url": "https://www.iac.gov.sg/-/media/mom/documents/press-releases/2024/annex-a---factsheet-on-skillsfuture-jobseeker-support-scheme.pdf"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "budget-ai",
+          "label": "Budget 2026: all in on AI",
+          "when": "Feb 2026",
+          "question": "What did Budget 2026 do for AI?",
+          "answer": [
+            "Budget 2026, announced on 12 February and worth S$154.7 billion in total, made AI the centre of Singapore’s economic plan: a National AI Council chaired by the prime minister, national AI missions, tax breaks and grants for AI adoption, and AI training for workers.",
+            "Two weeks later, closing the Budget debate, Mr Wong made the promise that frames everything since: ‘We will not have jobless growth in Singapore.’"
+          ],
+          "sources": [
+            {
+              "title": "PM Wong’s Budget 2026 in summary: AI, supporting workers, vouchers & helping businesses",
+              "publication": "Mothership",
+              "url": "https://mothership.sg/2026/02/2026-budget-summary/"
+            },
+            {
+              "title": "S’pore to establish National AI Council, to be chaired by PM Wong: Budget 2026",
+              "publication": "Mothership",
+              "url": "https://mothership.sg/2026/02/national-ai-council-pm-wong-budget-2026/"
+            }
+          ],
+          "related": [
+            "users-not-builders"
+          ],
+          "issue": "008-singapores-ai-bet-and-the-bottom-rung",
+          "children": [
+            {
+              "id": "budget-why",
+              "label": "Why go all in?",
+              "type": "why",
+              "question": "Why did the Budget bet so heavily on AI?",
+              "answer": [
+                "Because the government believes a small, open, high-cost economy cannot afford to adopt AI slowly. If Singapore’s banks, logistics firms and factories don’t use it, those jobs are more likely to move elsewhere than to stay unchanged. The Economic Strategy Review reached the same conclusion: four of its seven strategies in the January 2026 update were about AI adoption and readiness.",
+                "The plan is to be the best place to use AI rather than to build it, so most of the money goes to adoption by firms and training for workers."
+              ],
+              "sources": [
+                {
+                  "title": "Economic Strategy Review final report published",
+                  "publication": "Allen & Gledhill",
+                  "url": "https://www.allenandgledhill.com/sg/publication/articles/33280/economic-strategy-review-final-report-published"
+                },
+                {
+                  "title": "PM Wong’s Budget 2026 in summary: AI, supporting workers, vouchers & helping businesses",
+                  "publication": "Mothership",
+                  "url": "https://mothership.sg/2026/02/2026-budget-summary/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "budget-what",
+              "label": "What’s in the plan?",
+              "type": "what",
+              "question": "What exactly did the Budget announce?",
+              "answer": [
+                "A National AI Council chaired by the prime minister with six other ministers. National AI missions in advanced manufacturing, connectivity and logistics, finance, and healthcare. A 400% tax deduction on qualifying AI spending up to S$50,000 a year for 2027 and 2028, wider grants, and a Champions of AI programme for firms reorganising around AI.",
+                "For workers: easier-to-find AI courses, six months of free premium AI tools for those who take selected courses, and a merged training and job-matching agency. For research: S$37 billion for the national research plan to 2030, plus a separate S$1 billion for AI research announced in January."
+              ],
+              "sources": [
+                {
+                  "title": "S’pore to establish National AI Council, to be chaired by PM Wong: Budget 2026",
+                  "publication": "Mothership",
+                  "url": "https://mothership.sg/2026/02/national-ai-council-pm-wong-budget-2026/"
+                },
+                {
+                  "title": "PM Wong’s Budget 2026 in summary: AI, supporting workers, vouchers & helping businesses",
+                  "publication": "Mothership",
+                  "url": "https://mothership.sg/2026/02/2026-budget-summary/"
+                },
+                {
+                  "title": "Singapore to invest more than S$1 billion in AI research and development",
+                  "publication": "Business Today",
+                  "url": "https://www.businesstoday.com.my/2026/01/24/singapore-to-invest-more-than-s1-billion-in-ai-research-and-development/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "budget-who",
+              "label": "Who benefits?",
+              "type": "who",
+              "question": "Who gains from the AI push?",
+              "answer": [
+                "Firms most directly, through tax deductions, grants and tailored help; large banks and technology firms in Singapore were already unusually eager, according to a PwC survey. Workers who take AI courses get free tools and training, and the four ‘mission’ sectors get focused government attention.",
+                "The risk falls on workers whose routine tasks AI can do, especially juniors in office jobs. During the Budget debate, MPs raised fears that heavy AI use would cut training, make it harder for older workers to get back into work and hollow out entry-level jobs, and Mr Wong replied that ‘these concerns are real’."
+              ],
+              "sources": [
+                {
+                  "title": "Singapore emerges as AI hub contender, says PwC study",
+                  "publication": "The Star",
+                  "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/04/13/singapore-emerges-as-ai-hub-contender-says-pwc-study"
+                },
+                {
+                  "title": "PM Wong assures Singaporeans that there will be no jobless growth amid AI push",
+                  "publication": "The Straits Times via The Star",
+                  "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/02/26/pm-wong-assures-singaporeans-that-there-will-be-no-jobless-growth-amid-ai-push"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "budget-means",
+              "label": "What does it promise?",
+              "type": "means",
+              "question": "What does the ‘no jobless growth’ promise commit the government to?",
+              "answer": [
+                "Politically, a lot; legally, nothing. Mr Wong promised AI would be used to grow the economy and that growth would turn into good jobs and better wages, citing a record share of permanent employees of nearly 91% and more than 40% of vacancies being entry-level professional jobs. He also endorsed NTUC’s three requests: AI readiness for every worker, stronger safeguards and better protection for PMETs.",
+                "Eight months on, the promise is being tested by retrenchments and graduate hiring. It has become the yardstick critics use to judge every new number."
+              ],
+              "sources": [
+                {
+                  "title": "PM Wong assures Singaporeans that there will be no jobless growth amid AI push",
+                  "publication": "The Straits Times via The Star",
+                  "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/02/26/pm-wong-assures-singaporeans-that-there-will-be-no-jobless-growth-amid-ai-push"
+                },
+                {
+                  "title": "S’pore will exploit AI to grow economy & ensure growth translates into good jobs: PM Wong",
+                  "publication": "Mothership",
+                  "url": "https://mothership.sg/2026/02/singapore-pm-wong-ai/"
+                }
+              ],
+              "related": [
+                "jobless-growth"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
