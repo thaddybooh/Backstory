@@ -108,6 +108,15 @@ it themselves first.
   (TopicCard.astro: a small drawing of the map's tree, question count, latest news story). The map holding today's
   issue comes first and is marked "Today's story is here". Issues in "Previous issues" and the archive carry a
   "Topic" chip linking to their map. The nav says **Topics** (owner's choice over "Maps"); pages live at `/topics/`.
+- **"What the government is doing" category (28 Oct 2026, owner's request):** a fourth category kind, `policy`
+  (gold), for a bird's-eye view of standing government initiatives, separate from "In the news" (events). Topics
+  group initiatives by purpose (the master plan, research, helping firms, training people, AI in government, rules
+  and safety); each initiative is a box with question type `initiative` (its own colour and highlight chip). First
+  built for the AI map (NAIS 2.0, National AI Council, AI Missions, NAIRD, SEA-LION, Enterprise Compute Initiative,
+  Budget 2026 tax breaks, AI talent, Pair/AIBots, AI agent registry, AgentSea, the agentic AI framework, AI Verify,
+  AI Safety Institute, deepfake and online harm laws). Some sources (Synapxe, EDB, SEA-LION blog, Malay Mail) could
+  not be opened from the session and were used via search summaries. The education and ageing maps don't have this
+  category yet.
 - **Next step (not built):** have the write-issue skill add or update a story on the matching map with each new
   issue, so maps grow daily. Until then, link new issues by hand with the `issue` field.
 - **Sources:** unlike issue graphs, a map's sources are not checked against an article (there isn't one). The

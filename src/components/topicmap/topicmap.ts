@@ -46,6 +46,7 @@ const SVG = 'http://www.w3.org/2000/svg';
 const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const TYPE_LABEL: Record<string, string> = {
   basics: 'Policy basics',
+  initiative: 'Government initiative',
   why: 'Why is this happening?',
   what: 'What’s changing?',
   who: 'Who does it affect?',
@@ -55,13 +56,19 @@ const TYPE_LABEL: Record<string, string> = {
 // The short tag printed at the top of a question's box.
 const TYPE_TAG: Record<string, string> = {
   basics: 'Basics',
+  initiative: 'Initiative',
   why: 'Why',
   what: 'What’s changing',
   who: 'Who’s affected',
   means: 'What it means',
   debate: 'Debate',
 };
-const CATEGORY_LABEL: Record<string, string> = { basics: 'The basics', ideas: 'Big ideas and debates', news: 'In the news' };
+const CATEGORY_LABEL: Record<string, string> = {
+  basics: 'The basics',
+  ideas: 'Big ideas and debates',
+  policy: 'What the government is doing',
+  news: 'In the news',
+};
 
 function svgEl<K extends keyof SVGElementTagNameMap>(tag: K, attrs: Record<string, string | number> = {}) {
   const el = document.createElementNS(SVG, tag);

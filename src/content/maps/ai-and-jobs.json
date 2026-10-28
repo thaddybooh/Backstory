@@ -2,8 +2,8 @@
   "title": "AI and jobs in Singapore",
   "track": "singapore",
   "updated": "2026-10-28",
-  "dek": "Singapore has gone all in on AI and promised no ‘jobless growth’. How the job market and safety net work, the debates underneath, and every development in the news.",
-  "intro": "Start with The basics if you are new to the topic, then Big ideas and debates for the policy thinking behind it. In the news holds each recent development, and every story opens into the same four questions: why is it happening, what is changing, who does it affect, and what does it mean. Open any box for a short answer and the sources to dig deeper.",
+  "dek": "Singapore has gone all in on AI and promised no ‘jobless growth’. How the job market and safety net work, every government AI initiative, the debates underneath, and each development in the news.",
+  "intro": "Start with The basics if you are new to the topic, then Big ideas and debates for the policy thinking behind it. What the government is doing is a bird’s-eye view of every major AI initiative, from the national strategy to AI agents in hospitals. In the news holds each recent development, and every story opens into the same four questions: why is it happening, what is changing, who does it affect, and what does it mean.",
   "cover": {
     "commons": "2016 Singapur, Downtown Core, Marina Bay Financial Centre.jpg",
     "alt": "Tall glass office towers of the Marina Bay Financial Centre in Singapore against a blue sky"
@@ -416,6 +416,690 @@
                   "title": "Reskilling and upskilling workers amid AI adoption the harder but more sustainable path: PM Wong",
                   "publication": "AsiaOne",
                   "url": "https://www.asiaone.com/singapore/tan-su-shan-dbs-ai-lawrence-wong-workers"
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "policy",
+      "label": "What the government is doing",
+      "kind": "policy",
+      "question": "What is the Singapore government doing to push, use and govern AI?",
+      "answer": [
+        "A lot, on several fronts at once. There is a national strategy (NAIS 2.0) and, since 2026, a National AI Council chaired by the prime minister. Money goes to research, to computing power, and to helping firms adopt AI. There are programmes to train AI specialists and retrain ordinary workers. Government agencies use AI themselves, from a chatbot most civil servants use to AI agents in public hospitals. And there are rules and testing tools to keep AI trustworthy.",
+        "This part is a bird’s-eye view of those initiatives, grouped by what they are for. Each box says what the initiative is, who runs it, what has happened so far, and where to read more."
+      ],
+      "sources": [
+        {
+          "title": "National AI Strategy",
+          "publication": "Smart Nation Singapore",
+          "url": "https://smartnation.gov.sg/nais"
+        },
+        {
+          "title": "S’pore to establish National AI Council, to be chaired by PM Wong: Budget 2026",
+          "publication": "Mothership",
+          "url": "https://mothership.sg/2026/02/national-ai-council-pm-wong-budget-2026/"
+        }
+      ],
+      "children": [
+        {
+          "id": "pol-plan",
+          "label": "The master plan",
+          "question": "What is Singapore’s overall plan for AI?",
+          "answer": [
+            "It rests on a strategy, a council and a short list of priorities. The National AI Strategy 2.0 (NAIS 2.0), launched in December 2023, sets the direction for three to five years. The National AI Council, set up in Budget 2026 and chaired by the prime minister, gives it political weight and can remove obstacles across ministries. And the National AI Missions focus effort on four sectors where AI could make the biggest difference.",
+            "The thinking behind all three is the same: Singapore should not try to build the biggest AI models, but be the best place to use AI well."
+          ],
+          "sources": [
+            {
+              "title": "National AI Strategy",
+              "publication": "Smart Nation Singapore",
+              "url": "https://smartnation.gov.sg/nais"
+            },
+            {
+              "title": "S’pore to establish National AI Council, to be chaired by PM Wong: Budget 2026",
+              "publication": "Mothership",
+              "url": "https://mothership.sg/2026/02/national-ai-council-pm-wong-budget-2026/"
+            }
+          ],
+          "related": [
+            "users-not-builders"
+          ],
+          "children": [
+            {
+              "id": "nais2",
+              "label": "NAIS 2.0",
+              "type": "initiative",
+              "question": "What is the National AI Strategy 2.0?",
+              "answer": [
+                "Singapore’s national plan for AI, launched on 4 December 2023 by Lawrence Wong, then deputy prime minister, updating a first strategy from 2019. Its motto is ‘AI for the Public Good, for Singapore and the World’, with two goals: excellence (a few world-class peaks of AI expertise, aimed at problems such as population health and climate change) and empowerment (helping people, businesses and communities use AI with confidence and trust).",
+                "It is organised as three systems (what drives AI activity, the people and communities behind it, and the infrastructure and environment) supported by ten enablers, from talent and compute to data and a trusted environment, and carried out through 15 actions over three to five years. One headline target: grow the pool of AI practitioners from under 5,000 to 15,000."
+              ],
+              "sources": [
+                {
+                  "title": "National Artificial Intelligence Strategy 2 to uplift Singapore’s social and economic potential",
+                  "publication": "Ministry of Digital Development and Information",
+                  "url": "https://www.mddi.gov.sg/newsroom/04122023/"
+                },
+                {
+                  "title": "National AI Strategy",
+                  "publication": "Smart Nation Singapore",
+                  "url": "https://smartnation.gov.sg/nais"
+                },
+                {
+                  "title": "Singapore National AI Strategy 2.0",
+                  "publication": "ETO AGORA (Georgetown CSET)",
+                  "url": "https://agora.eto.tech/instrument/1099"
+                }
+              ],
+              "children": [
+                {
+                  "id": "nais2-progress",
+                  "label": "Is it on track?",
+                  "type": "means",
+                  "question": "How far has NAIS 2.0 got?",
+                  "answer": [
+                    "By the government’s own account, it is moving. In Budget 2025 it reported that more than 26 AI Centres of Excellence had been set up in 2024, and that the pool of AI practitioners had grown by nearly 25%, progress towards the target of 15,000 within five years.",
+                    "Since then the strategy has gained a council chaired by the prime minister and a S$1 billion research plan. What is harder to measure is the second goal, empowerment: whether ordinary workers and small firms are actually using AI well. That is where the debate about jobs comes in."
+                  ],
+                  "sources": [
+                    {
+                      "title": "Singapore Budget 2025: Boosting workforce development and AI-driven innovation",
+                      "publication": "HRM Asia",
+                      "url": "https://hrmasia.com/singapore-budget-2025-boosting-workforce-development-and-ai-driven-innovation/"
+                    },
+                    {
+                      "title": "Singapore Budget 2025: How businesses are getting help with costs, competition, and transformation",
+                      "publication": "Economic Development Board",
+                      "url": "https://edb.gov.sg/en/business-insights/insights/singapore-budget-2025-how-businesses-are-getting-help-with-costs-competition-and-transformation.html"
+                    }
+                  ],
+                  "related": [
+                    "jobless-growth"
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "ai-council",
+              "label": "National AI Council",
+              "type": "initiative",
+              "question": "What is the National AI Council?",
+              "answer": [
+                "A council set up in Budget 2026, chaired by Prime Minister Lawrence Wong with six other ministers. Its job is to set the direction for AI across government, commission projects and remove regulatory obstacles that slow adoption.",
+                "Putting the prime minister in charge signals that AI is now treated as a whole-of-government priority, like defence or housing, rather than a matter for one ministry. It also means the political credit, and the blame, for how the AI push turns out sits at the top."
+              ],
+              "sources": [
+                {
+                  "title": "S’pore to establish National AI Council, to be chaired by PM Wong: Budget 2026",
+                  "publication": "Mothership",
+                  "url": "https://mothership.sg/2026/02/national-ai-council-pm-wong-budget-2026/"
+                },
+                {
+                  "title": "PM Wong’s Budget 2026 in summary: AI, supporting workers, vouchers & helping businesses",
+                  "publication": "Mothership",
+                  "url": "https://mothership.sg/2026/02/2026-budget-summary/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "ai-missions",
+              "label": "National AI Missions",
+              "type": "initiative",
+              "question": "What are the National AI Missions?",
+              "answer": [
+                "Focused national efforts to use AI in four sectors, announced in Budget 2026: advanced manufacturing, connectivity and logistics, finance, and healthcare. Instead of spreading money across many small pilots, the missions concentrate support where results can be measured and then copied across an industry.",
+                "They overlap with the sectors where job worries are sharpest: finance and information and communications are where professional vacancies fell in 2026."
+              ],
+              "sources": [
+                {
+                  "title": "S’pore to establish National AI Council, to be chaired by PM Wong: Budget 2026",
+                  "publication": "Mothership",
+                  "url": "https://mothership.sg/2026/02/national-ai-council-pm-wong-budget-2026/"
+                },
+                {
+                  "title": "PM Wong’s Budget 2026 in summary: AI, supporting workers, vouchers & helping businesses",
+                  "publication": "Mothership",
+                  "url": "https://mothership.sg/2026/02/2026-budget-summary/"
+                }
+              ],
+              "related": [
+                "retrench-what"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "pol-research",
+          "label": "Research and models",
+          "question": "What is Singapore spending on AI research?",
+          "answer": [
+            "Over S$1 billion more for public AI research from 2025 to 2030, under a National AI Research and Development Plan announced in January 2026, on top of a long-running national research budget. Part of the effort also goes into building AI suited to the region, such as SEA-LION, a family of open language models for Southeast Asian languages.",
+            "The aim is ‘selective peaks’: being among the world’s best in a few areas rather than competing with the United States and China across the board."
+          ],
+          "sources": [
+            {
+              "title": "Singapore invests over S$1 billion in National AI Research and Development Plan",
+              "publication": "Ministry of Digital Development and Information",
+              "url": "https://www.mddi.gov.sg/newsroom/singapore-invests-over-s-1-billion-in-national-ai-research-and-development-plan-to-strengthen-ai-research-capabilities-and-our-position-as-global-ai-hub/"
+            },
+            {
+              "title": "SEA-LION inspires community to build AI solutions that solve real-world challenges in Southeast Asia",
+              "publication": "AI Singapore",
+              "url": "https://aisingapore.org/news/sea-lion-inspires-community-to-build-ai-solutions-that-solve-real-world-challenges-in-southeast-asia/"
+            }
+          ],
+          "children": [
+            {
+              "id": "naird",
+              "label": "S$1bn research plan",
+              "type": "initiative",
+              "question": "What is the National AI Research and Development Plan?",
+              "answer": [
+                "A plan announced by Minister Josephine Teo on 24 January 2026 to invest over S$1 billion in public AI research from 2025 to 2030, supporting NAIS 2.0. It has three parts: fundamental research, through Research Centres of Excellence in areas such as responsible AI, resource-efficient AI and general-purpose AI; applied research that helps industry adopt AI; and talent, from pre-university students to university faculty.",
+                "According to one report, the money comes from the National Research Foundation’s S$37 billion research budget unveiled in December 2025."
+              ],
+              "sources": [
+                {
+                  "title": "Singapore invests over S$1 billion in National AI Research and Development Plan",
+                  "publication": "Ministry of Digital Development and Information",
+                  "url": "https://www.mddi.gov.sg/newsroom/singapore-invests-over-s-1-billion-in-national-ai-research-and-development-plan-to-strengthen-ai-research-capabilities-and-our-position-as-global-ai-hub/"
+                },
+                {
+                  "title": "Singapore to invest more than S$1 billion in AI research and development",
+                  "publication": "Business Today",
+                  "url": "https://www.businesstoday.com.my/2026/01/24/singapore-to-invest-more-than-s1-billion-in-ai-research-and-development/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "sea-lion",
+              "label": "SEA-LION",
+              "type": "initiative",
+              "question": "What is SEA-LION?",
+              "answer": [
+                "A family of open AI language models built by AI Singapore, a national AI programme, for Southeast Asian languages and cultures. Launched in November 2023, the models now cover 11 languages, including Indonesian, Vietnamese, Thai, Malay, Tamil, Burmese and Khmer, and the team says some versions can run on a laptop.",
+                "The idea is that models trained mostly on English and Western data serve the region poorly. Businesses such as Tokopedia have used SEA-LION, for example to write product descriptions in other regional languages. Early coverage also raised questions about bias and whose values a government-backed model reflects."
+              ],
+              "sources": [
+                {
+                  "title": "SEA-LION inspires community to build AI solutions that solve real-world challenges in Southeast Asia",
+                  "publication": "AI Singapore",
+                  "url": "https://aisingapore.org/news/sea-lion-inspires-community-to-build-ai-solutions-that-solve-real-world-challenges-in-southeast-asia/"
+                },
+                {
+                  "title": "SEA-LION: Southeast Asian Languages in One Network",
+                  "publication": "arXiv",
+                  "url": "https://arxiv.org/abs/2504.05747"
+                },
+                {
+                  "title": "Singapore builds ChatGPT-alike to better represent Southeast Asian languages, cultures",
+                  "publication": "South China Morning Post",
+                  "url": "https://www.scmp.com/news/asia/southeast-asia/article/3251353/singapore-builds-chatgpt-alike-better-represent-southeast-asian-languages-cultures"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "pol-firms",
+          "label": "Helping firms adopt AI",
+          "question": "How is the government helping businesses use AI?",
+          "answer": [
+            "Mostly with money and hand-holding. Budget 2025 created the Enterprise Compute Initiative, giving firms cloud computing credits and expert help. Budget 2026 added a 400% tax deduction on AI spending, wider grants and a Champions of AI programme for firms reorganising around AI.",
+            "The logic is that small and medium firms, which employ most workers, are the slowest to adopt new technology, and that Singapore’s competitiveness depends on them catching up."
+          ],
+          "sources": [
+            {
+              "title": "Enterprise Compute Initiative: programme details",
+              "publication": "Digital Industry Singapore",
+              "url": "https://www.disg.gov.sg/enterprise-compute-initiative/"
+            },
+            {
+              "title": "PM Wong’s Budget 2026 in summary: AI, supporting workers, vouchers & helping businesses",
+              "publication": "Mothership",
+              "url": "https://mothership.sg/2026/02/2026-budget-summary/"
+            }
+          ],
+          "children": [
+            {
+              "id": "eci",
+              "label": "Enterprise Compute Initiative",
+              "type": "initiative",
+              "question": "What is the Enterprise Compute Initiative?",
+              "answer": [
+                "A programme from Budget 2025, with up to S$150 million set aside, to help Singapore-based companies with AI projects. Eligible firms partner one of the big cloud providers, such as Google, Microsoft, Amazon Web Services or Oracle, and get cloud credits, AI tools and consultancy support to build a working first version of their own AI use case.",
+                "It is designed as a short, catalytic programme: each cloud provider’s cohort runs for a year from its launch. The bet is that once firms see AI work on their own problems, they will keep investing without subsidies."
+              ],
+              "sources": [
+                {
+                  "title": "Enterprise Compute Initiative: programme details",
+                  "publication": "Digital Industry Singapore",
+                  "url": "https://www.disg.gov.sg/enterprise-compute-initiative/"
+                },
+                {
+                  "title": "Singapore Budget 2025: Boosting workforce development and AI-driven innovation",
+                  "publication": "HRM Asia",
+                  "url": "https://hrmasia.com/singapore-budget-2025-boosting-workforce-development-and-ai-driven-innovation/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "budget26-firms",
+              "label": "Budget 2026 tax breaks",
+              "type": "initiative",
+              "question": "What did Budget 2026 offer firms that adopt AI?",
+              "answer": [
+                "Companies can deduct 400% of qualifying AI spending from their taxes under the Enterprise Innovation Scheme, up to S$50,000 a year, for 2027 and 2028. Grants for digital tools now cover more AI products, and a Champions of AI programme gives tailored help to firms that want to reorganise around AI.",
+                "One option being discussed is to tie this kind of support to commitments to hire and train young workers, so that faster adoption does not hollow out entry-level jobs. The government has not done so yet."
+              ],
+              "sources": [
+                {
+                  "title": "PM Wong’s Budget 2026 in summary: AI, supporting workers, vouchers & helping businesses",
+                  "publication": "Mothership",
+                  "url": "https://mothership.sg/2026/02/2026-budget-summary/"
+                },
+                {
+                  "title": "S’pore to establish National AI Council, to be chaired by PM Wong: Budget 2026",
+                  "publication": "Mothership",
+                  "url": "https://mothership.sg/2026/02/national-ai-council-pm-wong-budget-2026/"
+                }
+              ],
+              "related": [
+                "budget-what",
+                "rung-means"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "pol-people",
+          "label": "Training people",
+          "question": "What is the government doing to build AI skills?",
+          "answer": [
+            "Two tracks. For specialists, the goal is to triple the number of AI practitioners to 15,000, through apprenticeships run by AI Singapore, company-led training under IMDA’s TechSkills Accelerator, and research talent schemes. For everyone else, SkillsFuture is being reshaped around AI: easier-to-find courses, free premium AI tools for learners and a merged training and job-matching agency.",
+            "In schools, AI is being introduced in stages, and every teacher must complete a basic AI module by the end of 2026."
+          ],
+          "sources": [
+            {
+              "title": "Singapore Budget 2025: Boosting workforce development and AI-driven innovation",
+              "publication": "HRM Asia",
+              "url": "https://hrmasia.com/singapore-budget-2025-boosting-workforce-development-and-ai-driven-innovation/"
+            },
+            {
+              "title": "PM Wong’s Budget 2026 in summary: AI, supporting workers, vouchers & helping businesses",
+              "publication": "Mothership",
+              "url": "https://mothership.sg/2026/02/2026-budget-summary/"
+            }
+          ],
+          "related": [
+            "skillsfuture"
+          ],
+          "children": [
+            {
+              "id": "ai-talent",
+              "label": "15,000 AI practitioners",
+              "type": "initiative",
+              "question": "How is Singapore growing its AI workforce?",
+              "answer": [
+                "NAIS 2.0 aims to grow the pool of AI practitioners from under 5,000 to 15,000 within five years. The government reported growth of nearly 25% in 2024. Budget 2025 said it would explore scaling up the AI Apprenticeship Programme with AI Singapore, which trains people on real AI projects, and expand company-led training under IMDA’s TechSkills Accelerator.",
+                "The research plan adds a talent pipeline from pre-university students to university faculty, and partnerships with leading researchers and institutions abroad."
+              ],
+              "sources": [
+                {
+                  "title": "Singapore Budget 2025: Boosting workforce development and AI-driven innovation",
+                  "publication": "HRM Asia",
+                  "url": "https://hrmasia.com/singapore-budget-2025-boosting-workforce-development-and-ai-driven-innovation/"
+                },
+                {
+                  "title": "Singapore Budget 2025: How businesses are getting help with costs, competition, and transformation",
+                  "publication": "Economic Development Board",
+                  "url": "https://edb.gov.sg/en/business-insights/insights/singapore-budget-2025-how-businesses-are-getting-help-with-costs-competition-and-transformation.html"
+                },
+                {
+                  "title": "Singapore invests over S$1 billion in National AI Research and Development Plan",
+                  "publication": "Ministry of Digital Development and Information",
+                  "url": "https://www.mddi.gov.sg/newsroom/singapore-invests-over-s-1-billion-in-national-ai-research-and-development-plan-to-strengthen-ai-research-capabilities-and-our-position-as-global-ai-hub/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "ai-workers",
+              "label": "AI skills for every worker",
+              "type": "initiative",
+              "question": "What is being done to help ordinary workers use AI?",
+              "answer": [
+                "Budget 2026 redesigned the SkillsFuture website so AI courses are easier to find, offered six months of free premium AI tools to people who take selected courses, and merged SkillsFuture Singapore and Workforce Singapore into one agency for training, career guidance and job matching.",
+                "In schools, pupils from Primary 4 can use AI tools in the Student Learning Space under supervision, and every teacher must complete an AI module on basics, ethics and safety by the end of 2026."
+              ],
+              "sources": [
+                {
+                  "title": "PM Wong’s Budget 2026 in summary: AI, supporting workers, vouchers & helping businesses",
+                  "publication": "Mothership",
+                  "url": "https://mothership.sg/2026/02/2026-budget-summary/"
+                },
+                {
+                  "title": "Schools guide students to use AI purposefully for learning",
+                  "publication": "Ministry of Education",
+                  "url": "https://www.moe.gov.sg/news/forum-letter-replies/20260918-schools-guide-students-to-use-ai-purposefully-for-learning"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "pol-gov",
+          "label": "AI in government",
+          "question": "How does the government use AI itself?",
+          "answer": [
+            "Widely, and increasingly through AI agents that carry out tasks rather than just answer questions. More than half of Singapore’s 150,000 public officers regularly use Pair, a government AI chatbot, and a registry of AI agents is being built to keep track of them. In public healthcare, clinicians have built more than 12,000 AI agents on a platform called AgentSea.",
+            "Using AI inside government also lets it test its own rules: how much authority to give an AI agent, and who is accountable when it gets something wrong."
+          ],
+          "sources": [
+            {
+              "title": "World’s second richest nation to create AI agent registry for 150,000 government workers",
+              "publication": "VnExpress International",
+              "url": "https://e.vnexpress.net/news/tech/tech-news/world-s-second-richest-nation-to-create-ai-agent-registry-for-150-000-government-workers-5081435.html"
+            },
+            {
+              "title": "Speech by Mr Tan Kiat How at HIMSS26 APAC Health Conference and Exhibition",
+              "publication": "Ministry of Health",
+              "url": "https://www.moh.gov.sg/newsroom/speech-by-mr-tan-kiat-how--senior-minister-of-state--ministry-of-digital-development-and-information---ministry-of-health--at-himss26-apac-health-conference-and-exhibition--24-august-2026/"
+            }
+          ],
+          "children": [
+            {
+              "id": "pair",
+              "label": "Pair and AIBots",
+              "type": "initiative",
+              "question": "What is Pair, and how many civil servants use it?",
+              "answer": [
+                "Pair is a secure AI chatbot built by GovTech, the government technology agency, for public officers to use for writing, research and other work. By 2026, more than half of the 150,000 public officers were using it regularly. An earlier UNDP account reported over 60,000 registered users and more than 10 million messages.",
+                "AIBots lets officers build their own custom chatbots on government data; GovTech’s chief technology officer reported 16,000 active users across 97 agencies in an earlier talk. GovTech is now building an AI Assistant Desk, a fuller digital assistant, being tested before a wider launch in 2026."
+              ],
+              "sources": [
+                {
+                  "title": "World’s second richest nation to create AI agent registry for 150,000 government workers",
+                  "publication": "VnExpress International",
+                  "url": "https://e.vnexpress.net/news/tech/tech-news/world-s-second-richest-nation-to-create-ai-agent-registry-for-150-000-government-workers-5081435.html"
+                },
+                {
+                  "title": "Pairing with AI for public sector impact in Singapore",
+                  "publication": "UNDP Global Centre Singapore",
+                  "url": "https://www.undp.org/policy-centre/singapore/blog/pairing-ai-public-sector-impact-singapore"
+                },
+                {
+                  "title": "Government’s role important to ensure use of AI for public good, says GovTech CTO",
+                  "publication": "GovInsider",
+                  "url": "https://govinsider.asia/intl-en/article/governments-role-important-to-ensure-use-of-ai-for-public-good-says-govtech-cto"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "agent-registry",
+              "label": "AI agent registry",
+              "type": "initiative",
+              "question": "Why is the government building a registry of AI agents?",
+              "answer": [
+                "Because AI agents, software that makes decisions and completes tasks on its own, are spreading through the civil service, and someone has to know which ones exist and what they do. Announced in June 2026, the registry will track who owns each agent and what it is allowed to do, across the work of 150,000 public officers.",
+                "It comes with safeguards: GovTech says its systems can block certain actions, such as deleting files or emailing people outside government networks. It is an early, practical example of governing agentic AI rather than just writing guidelines about it."
+              ],
+              "sources": [
+                {
+                  "title": "World’s second richest nation to create AI agent registry for 150,000 government workers",
+                  "publication": "VnExpress International",
+                  "url": "https://e.vnexpress.net/news/tech/tech-news/world-s-second-richest-nation-to-create-ai-agent-registry-for-150-000-government-workers-5081435.html"
+                },
+                {
+                  "title": "S’pore to create a registry of AI agents for 150,000 public officers amid AI push",
+                  "publication": "British Chamber of Commerce Singapore",
+                  "url": "https://britcham.org.sg/news/spore-create-registry-ai-agents-150000-public-officers-amid-ai-push"
+                }
+              ],
+              "related": [
+                "agentic-framework"
+              ],
+              "children": []
+            },
+            {
+              "id": "agentsea",
+              "label": "AgentSea",
+              "type": "initiative",
+              "question": "What is AgentSea?",
+              "answer": [
+                "AgentSea is the public healthcare system’s platform for AI agents, built by Synapxe, the national health technology agency, with Amazon Web Services. Doctors, nurses and administrators can build their own agents in plain language to automate multi-step work: summarising patient records before a consultation, preparing reports, generating staff rosters or processing HR requests. By August 2026, healthcare workers had created more than 12,000 agents.",
+                "It sits alongside Tandem, a shared generative AI platform for public healthcare, and Note Buddy, which transcribes and summarises doctor-patient conversations in Singapore’s four main languages."
+              ],
+              "sources": [
+                {
+                  "title": "Speech by Mr Tan Kiat How at HIMSS26 APAC Health Conference and Exhibition",
+                  "publication": "Ministry of Health",
+                  "url": "https://www.moh.gov.sg/newsroom/speech-by-mr-tan-kiat-how--senior-minister-of-state--ministry-of-digital-development-and-information---ministry-of-health--at-himss26-apac-health-conference-and-exhibition--24-august-2026/"
+                },
+                {
+                  "title": "Synapxe empowers public healthcare workers in Singapore to build and share AI agents",
+                  "publication": "The Edge Singapore",
+                  "url": "https://www.theedgesingapore.com/digitaledge/healthcare/synapxe-empowers-public-healthcare-workers-singapore-build-and-share-ai"
+                },
+                {
+                  "title": "AgentSea: empowering Singapore’s healthcare professionals with personalised AI agents",
+                  "publication": "Synapxe",
+                  "url": "https://www.synapxe.sg/blog/artificial-intelligence/agentsea-healthcare-ai-agents"
+                }
+              ],
+              "children": [
+                {
+                  "id": "health-ai-rules",
+                  "label": "Who checks the agents?",
+                  "type": "means",
+                  "question": "How is AI in healthcare kept safe?",
+                  "answer": [
+                    "Through the Ministry of Health’s updated AI in Healthcare Guidelines (AIHGle 2.0), which divide responsibility across developers, hospitals and healthcare professionals: test safety and performance, govern AI with multidisciplinary teams, monitor tools after deployment, report incidents and keep professional judgement with people. AgentSea adds access controls, audit logs and monitoring.",
+                    "Senior Minister of State Tan Kiat How put the principle as moving ‘from assuring outputs to assuring actions’: as AI is given more authority, the safeguards must grow. His rule for the workforce: ‘Automate execution. Invest more in human judgement.’"
+                  ],
+                  "sources": [
+                    {
+                      "title": "Speech by Mr Tan Kiat How at HIMSS26 APAC Health Conference and Exhibition",
+                      "publication": "Ministry of Health",
+                      "url": "https://www.moh.gov.sg/newsroom/speech-by-mr-tan-kiat-how--senior-minister-of-state--ministry-of-digital-development-and-information---ministry-of-health--at-himss26-apac-health-conference-and-exhibition--24-august-2026/"
+                    },
+                    {
+                      "title": "Synapxe empowers public healthcare workers in Singapore to build and share AI agents",
+                      "publication": "The Edge Singapore",
+                      "url": "https://www.theedgesingapore.com/digitaledge/healthcare/synapxe-empowers-public-healthcare-workers-singapore-build-and-share-ai"
+                    }
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pol-rules",
+          "label": "Rules and safety",
+          "question": "How does Singapore regulate AI?",
+          "answer": [
+            "Mostly with guidance and testing rather than a single AI law. Singapore has no comprehensive AI act like the European Union’s. Instead it publishes voluntary frameworks, most recently for agentic AI, builds testing tools such as AI Verify, runs an AI Safety Institute, and passes targeted laws where harms are clear, such as deepfakes of election candidates and serious online harms.",
+            "The aim is to keep the rules flexible enough not to scare off investment, while building trust that AI used in Singapore is safe."
+          ],
+          "sources": [
+            {
+              "title": "Artificial Intelligence 2026: Singapore",
+              "publication": "Chambers and Partners",
+              "url": "https://practiceguides.chambers.com/practice-guides/artificial-intelligence-2026/singapore"
+            },
+            {
+              "title": "Governing intelligence: Singapore’s evolving AI governance framework",
+              "publication": "Cambridge Forum on AI: Law and Governance",
+              "url": "https://www.cambridge.org/core/journals/cambridge-forum-on-ai-law-and-governance/article/governing-intelligence-singapores-evolving-ai-governance-framework/5E54A373E193E2D51354ADC1F509B9B4"
+            }
+          ],
+          "children": [
+            {
+              "id": "light-touch",
+              "label": "Why no AI law?",
+              "type": "basics",
+              "question": "Why doesn’t Singapore have a single AI law?",
+              "answer": [
+                "Because it has chosen a ‘light-touch’, voluntary approach: governance frameworks, testing tools and sector-specific rules, rather than one statute. Its first Model AI Governance Framework came out in 2019 and was updated in 2020; companies remain bound by existing laws on data protection, consumer protection and sector rules such as finance and health.",
+                "Supporters say this lets rules keep pace with fast-changing technology and keeps Singapore attractive to AI companies. Critics say voluntary rules are hard to enforce and that firms may cut corners without legal duties."
+              ],
+              "sources": [
+                {
+                  "title": "Artificial Intelligence 2026: Singapore",
+                  "publication": "Chambers and Partners",
+                  "url": "https://practiceguides.chambers.com/practice-guides/artificial-intelligence-2026/singapore"
+                },
+                {
+                  "title": "Governing intelligence: Singapore’s evolving AI governance framework",
+                  "publication": "Cambridge Forum on AI: Law and Governance",
+                  "url": "https://www.cambridge.org/core/journals/cambridge-forum-on-ai-law-and-governance/article/governing-intelligence-singapores-evolving-ai-governance-framework/5E54A373E193E2D51354ADC1F509B9B4"
+                }
+              ],
+              "children": [
+                {
+                  "id": "law-debate",
+                  "label": "Light touch or hard law?",
+                  "type": "debate",
+                  "question": "Should Singapore pass a binding AI law?",
+                  "answer": [
+                    "For a law: voluntary frameworks rely on firms choosing to comply, and as AI agents take actions with real consequences, from hiring to health care, people harmed need clear rights and remedies. Other places, such as the European Union, have set binding rules, and firms operating globally must meet them anyway.",
+                    "Against: a broad law written now could be out of date within a year, slow useful adoption and push investment elsewhere. Singapore’s approach, targeted laws for clear harms plus testing and guidance, may protect people as well with less cost. The question is whether that holds as AI becomes more autonomous."
+                  ],
+                  "sources": [
+                    {
+                      "title": "Artificial Intelligence 2026: Singapore",
+                      "publication": "Chambers and Partners",
+                      "url": "https://practiceguides.chambers.com/practice-guides/artificial-intelligence-2026/singapore"
+                    },
+                    {
+                      "title": "Governing intelligence: Singapore’s evolving AI governance framework",
+                      "publication": "Cambridge Forum on AI: Law and Governance",
+                      "url": "https://www.cambridge.org/core/journals/cambridge-forum-on-ai-law-and-governance/article/governing-intelligence-singapores-evolving-ai-governance-framework/5E54A373E193E2D51354ADC1F509B9B4"
+                    }
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "agentic-framework",
+              "label": "Rules for AI agents",
+              "type": "initiative",
+              "question": "What is the Model AI Governance Framework for Agentic AI?",
+              "answer": [
+                "Guidance launched by IMDA, the infocomm regulator, on 22 January 2026 at the World Economic Forum in Davos, described as the first governance framework written specifically for agentic AI: systems that act on a user’s behalf with little human direction.",
+                "It covers four things: assessing risks and limiting how much autonomy and tool access an agent gets; keeping humans meaningfully accountable, for example through approval checkpoints; technical controls across the agent’s life; and transparency and training for users. Following it is voluntary, but organisations remain legally responsible for what their agents do."
+              ],
+              "sources": [
+                {
+                  "title": "Singapore launches new Model AI Governance Framework for Agentic AI",
+                  "publication": "Allen & Gledhill",
+                  "url": "https://www.allenandgledhill.com/sg/publication/articles/32314/launches-new-model-ai-governance-framework-for-agentic-ai"
+                },
+                {
+                  "title": "Singapore: governance framework for agentic AI launched",
+                  "publication": "Baker McKenzie",
+                  "url": "https://www.bakermckenzie.com/en/insight/publications/2026/01/singapore-governance-framework-for-agentic-ai-launched"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "ai-verify",
+              "label": "AI Verify and testing",
+              "type": "initiative",
+              "question": "What are AI Verify and the AI assurance projects?",
+              "answer": [
+                "AI Verify is a toolkit, first launched by IMDA in 2022, that lets companies test their AI systems against internationally recognised principles; it is now run by the AI Verify Foundation. Its Project Moonshot toolkit tests generative AI for problems such as made-up answers, harmful content, data leaks and vulnerability to manipulation.",
+                "In 2025 the Global AI Assurance Pilot paired 16 specialist testers with 17 organisations using generative AI across 10 industries, and found human experts remained essential at every stage of testing. In May 2026 it became a standing Global AI Assurance Sandbox."
+              ],
+              "sources": [
+                {
+                  "title": "Singapore unveils insights from world’s first technical testing of real-world applications of GenAI",
+                  "publication": "Infocomm Media Development Authority",
+                  "url": "https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/press-releases/2025/sg-unveils-insights-from-worlds-first-technical-testing-of-real-world-applications-of-genai"
+                },
+                {
+                  "title": "News",
+                  "publication": "AI Verify Foundation",
+                  "url": "https://aiverifyfoundation.sg/news/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "ai-safety",
+              "label": "AI Safety Institute",
+              "type": "initiative",
+              "question": "What is Singapore doing on AI safety?",
+              "answer": [
+                "In May 2024 the Digital Trust Centre at Nanyang Technological University was designated Singapore’s AI Safety Institute, to support safe development and deployment of AI. In April 2025 Singapore hosted more than 100 researchers from academia, industry and government who agreed the Singapore Consensus on Global AI Safety Research Priorities.",
+                "The Consensus groups research into three areas: assessing risks, building AI that behaves as intended, and monitoring and controlling AI after it is deployed. It gives Singapore a convening role in global AI safety, useful for a small country that cannot shape AI by size alone."
+              ],
+              "sources": [
+                {
+                  "title": "Digital Trust Centre designated as Singapore’s AI Safety Institute",
+                  "publication": "Nanyang Technological University",
+                  "url": "https://ntu.edu.sg/dtc/news-events/news/detail/digital-trust-center-designated-as-singapore's-ai-safety-institute"
+                },
+                {
+                  "title": "The Singapore Consensus on Global AI Safety Research Priorities",
+                  "publication": "Singapore Conference on AI",
+                  "url": "https://www.scai.gov.sg/2025/scai2025-report/"
+                },
+                {
+                  "title": "The Singapore Consensus on Global AI Safety Research Priorities",
+                  "publication": "arXiv",
+                  "url": "https://arxiv.org/pdf/2506.20702"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "deepfakes",
+              "label": "Deepfakes and online harms",
+              "type": "initiative",
+              "question": "What laws target deepfakes and AI-enabled online harm?",
+              "answer": [
+                "Two in particular. In October 2024 Parliament amended election law to ban publishing, boosting or sharing realistic fake content showing a candidate saying or doing something they did not; it applied for the first time at the 2025 general election, from the issue of the writ until polls closed. Private chats and authorised news outlets are exempt.",
+                "In June 2026 a new Online Safety Commission began operating under the Online Safety (Relief and Accountability) Act, giving victims of serious online harms, such as intimate image abuse and harassment, a faster way to get content taken down and seek redress."
+              ],
+              "sources": [
+                {
+                  "title": "Bill passed to counter digitally manipulated content, deepfakes during elections",
+                  "publication": "The Straits Times via Singapore Law Watch",
+                  "url": "https://singaporelawwatch.sg/Headlines/Bill-passed-to-counter-digitally-manipulated-content-deepfakes-during-elections"
+                },
+                {
+                  "title": "Singapore: ban on deepfake content depicting election candidates comes into effect",
+                  "publication": "Baker McKenzie",
+                  "url": "https://connectontech.bakermckenzie.com/singapore-ban-on-the-publication-boosting-sharing-and-reposting-of-deepfake-content-depicting-election-candidates-comes-into-effect"
+                },
+                {
+                  "title": "When seeing is no longer believing: Singapore’s dilemma over malicious deepfakes",
+                  "publication": "Global-is-Asian, Lee Kuan Yew School of Public Policy",
+                  "url": "https://lkyspp.nus.edu.sg/gia/article/when-seeing-is-no-longer-believing--singapore-s-dilemma-over-malicious-deepfakes"
+                },
+                {
+                  "title": "Singapore’s new Online Safety Commission: from harm to redress",
+                  "publication": "IAPP",
+                  "url": "https://iapp.org/conference/iapp-af26/agenda/af26-singapore-s-new-online-safety-commission-from-harm-to-redress"
                 }
               ],
               "children": []
