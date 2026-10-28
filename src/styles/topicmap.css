@@ -177,16 +177,57 @@ html[data-qmap-view='list'] .tmap-key {
   outline: none;
   transition: opacity 0.25s;
 }
-.tmap-node.is-new {
-  animation: tmap-in 0.35s ease both;
+/* Hover lifts a box slightly; pressing it pushes it back down. */
+.tmap-inner {
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-@keyframes tmap-in {
+.tmap-node:hover .tmap-inner,
+.tmap-node:focus-visible .tmap-inner {
+  transform: translateY(-2px);
+}
+.tmap-node:active .tmap-inner {
+  transform: translateY(0) scale(0.985);
+  transition-duration: 0.08s;
+}
+.tmap-node:hover .tmap-box {
+  filter: drop-shadow(0 6px 10px rgb(20 33 61 / 0.14));
+}
+.tmap-inner,
+.tmap-fold-btn {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.tmap-fold-btn {
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.tmap-fold:hover .tmap-fold-btn {
+  transform: scale(1.15);
+}
+.tmap-node.is-open .tmap-fold-btn {
+  transform: rotate(180deg);
+}
+/* The answer panel's content slides in each time a new box opens. */
+.tmap-swap {
+  animation: tmap-swap 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.qmap-panel-body.tmap-swap {
+  animation-delay: 0.04s;
+}
+.qmap-panel-next.tmap-swap {
+  animation-delay: 0.08s;
+}
+@keyframes tmap-swap {
   from {
     opacity: 0;
+    transform: translateY(8px);
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .tmap-node.is-new {
+  .tmap-inner,
+  .tmap-fold-btn {
+    transition: none;
+  }
+  .tmap-swap {
     animation: none;
   }
 }
@@ -195,7 +236,7 @@ html[data-qmap-view='list'] .tmap-key {
   stroke: var(--rule);
   stroke-width: 1.2;
   filter: drop-shadow(0 1px 1.5px rgb(20 33 61 / 0.08));
-  transition: stroke 0.2s, fill 0.2s;
+  transition: stroke 0.2s, fill 0.2s, filter 0.25s;
 }
 .tmap-stripe {
   fill: var(--t, var(--c));

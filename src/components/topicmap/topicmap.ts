@@ -34,6 +34,12 @@ interface Node {
   ty: number;
   fx: number;
   fy: number;
+  // Motion: velocity for the spring, and how far the box has appeared (0 hidden, 1 shown).
+  vx: number;
+  vy: number;
+  a: number;
+  aTarget: number;
+  delay: number;
 }
 
 const SVG = 'http://www.w3.org/2000/svg';
@@ -90,7 +96,7 @@ export async function mountTopicMap(section: HTMLElement) {
     b.setAttribute('aria-pressed', String(b.dataset.view === (document.documentElement.dataset.qmapView ?? 'graph')));
 
   // ---------- Nodes, read from the rendered list ----------
-  const blank = { children: [], related: [], w: 0, h: 0, block: 0, x: 0, y: 0, tx: 0, ty: 0, fx: 0, fy: 0 };
+  const blank = { children: [], related: [], w: 0, h: 0, block: 0, x: 0, y: 0, tx: 0, ty: 0, fx: 0, fy: 0, vx: 0, vy: 0, a: 1, aTarget: 1, delay: 0 };
   const root: Node = { ...blank, id: '__root', depth: 0, label: stage.dataset.title ?? '', category: '', el: svgEl('g') };
   const nodes: Node[] = [root];
   const byId = new Map<string, Node>();
@@ -163,7 +169,8 @@ export async function mountTopicMap(section: HTMLElement) {
   function drawBox(n: Node) {
     const [width, size, weight] = style(n.depth);
     const g = n.el;
-    g.replaceChildren();
+    const inner = svgEl('g', { class: 'tmap-inner' });
+    g.replaceChildren(inner);
     g.setAttribute('class', `tmap-node tmap-d${Math.min(n.depth, 4)}`);
     g.setAttribute('tabindex', '0');
     g.setAttribute('role', 'button');
@@ -181,13 +188,13 @@ export async function mountTopicMap(section: HTMLElement) {
     n.w = width;
     n.h = Math.round(top + main.length * lineH + PAD_Y);
 
-    g.append(svgEl('rect', { class: 'tmap-box', width: n.w, height: n.h, rx: n.depth <= 1 ? 12 : 9 }));
+    inner.append(svgEl('rect', { class: 'tmap-box', width: n.w, height: n.h, rx: n.depth <= 1 ? 12 : 9 }));
     if (n.depth >= 2) g.append(svgEl('rect', { class: 'tmap-stripe', x: 0, y: 0, width: 5, height: n.h, rx: 2.5 }));
     const x0 = PAD_X + (n.depth >= 2 ? 4 : 0);
     if (kicker) {
       const k = svgEl('text', { class: 'tmap-kicker-text', x: x0, y: PAD_Y + kickerSize });
       k.textContent = kicker.toUpperCase();
-      g.append(k);
+      inner.append(k);
     }
     const t = svgEl('text', { class: 'tmap-label', x: x0, y: top + size * 0.95, style: `font-size:${size}px;font-weight:${weight}` });
     main.forEach((line, i) => {
@@ -195,12 +202,14 @@ export async function mountTopicMap(section: HTMLElement) {
       s.textContent = line;
       t.append(s);
     });
-    g.append(t);
+    inner.append(t);
     if (hasKids && n !== root) {
       // The fold button on the right edge: "+5" when folded, "−" when open.
       const tg = svgEl('g', { class: 'tmap-fold', transform: `translate(${n.w},${n.h / 2})` });
-      tg.append(svgEl('circle', { r: 12 }), svgEl('text', { 'text-anchor': 'middle', y: 4 }));
-      g.append(tg);
+      const btn = svgEl('g', { class: 'tmap-fold-btn' });
+      btn.append(svgEl('circle', { r: 12 }), svgEl('text', { 'text-anchor': 'middle', y: 4 }));
+      tg.append(btn);
+      inner.append(tg);
     }
     if (n === root) g.setAttribute('aria-label', `${n.label}: how to use this map`);
     else {
@@ -265,38 +274,58 @@ export async function mountTopicMap(section: HTMLElement) {
     if (label) label.textContent = expanded.has(n) ? '−' : `+${n.children.length}`;
   }
 
+  // Boxes that have been folded away but are still animating back into their parent.
+  const leaving = new Set<Node>();
+
   function sync(focus?: Node) {
     const before = new Set(visible);
+    const onScreen = new Set(nodes.filter((n) => n.el.isConnected));
     visible = nodes.filter(shown);
+    const now = new Set(visible);
     for (const n of nodes) {
-      const on = visible.includes(n);
-      if (!on) {
-        n.el.remove();
-        n.link?.remove();
+      if (!now.has(n)) {
+        if (before.has(n) || leaving.has(n)) {
+          leaving.add(n);
+          n.aTarget = 0;
+          n.delay = 0;
+        }
         continue;
       }
+      leaving.delete(n);
       showFold(n);
       if (n.parent && !n.link) n.link = svgEl('path', { class: 'tmap-link' });
       if (n.link) {
         n.link.dataset.category = n.category;
-        linkLayer.append(n.link);
+        if (!n.link.isConnected) linkLayer.append(n.link);
       }
     }
-    // Keep keyboard order the same as the list.
+    // Keep keyboard order the same as the list (folded-away boxes stay until they finish).
     for (const n of visible) nodeLayer.append(n.el);
     layout();
-    for (const n of visible) {
-      if (!before.has(n)) {
-        // New boxes grow out of their parent's fold button.
-        const p = n.parent!;
-        n.x = p.x + p.w - n.w * 0.3;
-        n.y = p.y + p.h / 2 - n.h / 2;
-        n.el.classList.add('is-new');
+    // Boxes that are folding away head back into their parent's fold button.
+    for (const n of nodes)
+      if (leaving.has(n) && n.parent) {
+        const p = n.parent;
+        n.tx = p.tx + p.w - n.w * 0.35;
+        n.ty = p.ty + p.h / 2 - n.h / 2;
       }
-      n.fx = n.x;
-      n.fy = n.y;
+    // New boxes grow out of their parent's fold button, one after another.
+    const arrivals = new Map<Node, number>();
+    for (const n of visible) {
+      if (before.has(n)) continue;
+      const p = n.parent!;
+      if (!onScreen.has(n) || n.a <= 0.01) {
+        n.x = p.x + p.w - n.w * 0.35;
+        n.y = p.y + p.h / 2 - n.h / 2;
+        n.vx = n.vy = 0;
+        n.a = 0;
+      }
+      const i = arrivals.get(p) ?? 0;
+      arrivals.set(p, i + 1);
+      n.delay = Math.min(i, 8) * 38;
+      n.aTarget = 1;
     }
-    animate();
+    wakeMotion();
     expandBtn.textContent = openAll ? 'Fold everything' : 'Open everything';
     if (!openAll) {
       stage.style.height = '';
@@ -307,29 +336,83 @@ export async function mountTopicMap(section: HTMLElement) {
     trail();
   }
 
-  // Boxes glide to their new places.
+  // ---------- Motion ----------
+  // Every box is pulled to its place by a spring, so moves feel physical: quick at first,
+  // easing in with a hint of overshoot. Boxes fade and grow in as they arrive, and shrink
+  // back into their parent when folded away.
+  const STIFFNESS = 210;
+  const DAMPING = 24;
   let raf = 0;
-  function animate() {
-    cancelAnimationFrame(raf);
-    const ms = reducedMotion() ? 0 : 420;
-    const t0 = performance.now();
-    const step = (now: number) => {
-      const p = ms ? Math.min(1, (now - t0) / ms) : 1;
-      const e = 1 - Math.pow(1 - p, 3);
-      for (const n of visible) {
-        n.x = n.fx + (n.tx - n.fx) * e;
-        n.y = n.fy + (n.ty - n.fy) * e;
+  let last = 0;
+  const moving = () => [...visible, ...leaving];
+  function wakeMotion() {
+    if (reducedMotion()) {
+      for (const n of nodes) {
+        n.x = n.tx;
+        n.y = n.ty;
+        n.a = n.aTarget;
       }
-      render();
-      if (p < 1) raf = requestAnimationFrame(step);
-      else for (const n of visible) n.el.classList.remove('is-new');
-    };
+      settleLeaving();
+      return render();
+    }
+    if (raf) return;
+    last = performance.now();
     raf = requestAnimationFrame(step);
+  }
+  function step(t: number) {
+    const dt = Math.min(0.032, (t - last) / 1000);
+    last = t;
+    let busy = false;
+    for (const n of moving()) {
+      if (n.delay > 0) {
+        // Waiting its turn: stay tucked behind the parent's fold button as it moves.
+        n.delay -= dt * 1000;
+        if (n.parent && n.a < 0.01) {
+          n.x = n.parent.x + n.parent.w - n.w * 0.35;
+          n.y = n.parent.y + n.parent.h / 2 - n.h / 2;
+        }
+        busy = true;
+        continue;
+      }
+      const ax = STIFFNESS * (n.tx - n.x) - DAMPING * n.vx;
+      const ay = STIFFNESS * (n.ty - n.y) - DAMPING * n.vy;
+      n.vx += ax * dt;
+      n.vy += ay * dt;
+      n.x += n.vx * dt;
+      n.y += n.vy * dt;
+      // Appearing is quick; leaving is quicker, so folding feels snappy.
+      const rate = n.aTarget > n.a ? 9 : 16;
+      n.a += (n.aTarget - n.a) * (1 - Math.exp(-rate * dt));
+      if (Math.abs(n.tx - n.x) > 0.15 || Math.abs(n.ty - n.y) > 0.15 || Math.abs(n.vx) + Math.abs(n.vy) > 0.3 || Math.abs(n.aTarget - n.a) > 0.01) busy = true;
+      else {
+        n.x = n.tx;
+        n.y = n.ty;
+        n.vx = n.vy = 0;
+        n.a = n.aTarget;
+      }
+    }
+    settleLeaving();
+    render();
+    raf = busy ? requestAnimationFrame(step) : 0;
+  }
+  function settleLeaving() {
+    for (const n of leaving)
+      if (n.a <= 0.02) {
+        n.el.remove();
+        n.link?.remove();
+        leaving.delete(n);
+      }
   }
 
   function render() {
-    for (const n of visible) {
-      n.el.setAttribute('transform', `translate(${n.x.toFixed(1)},${n.y.toFixed(1)})`);
+    for (const n of moving()) {
+      // Grow from the left edge (where the line comes in), not from the middle.
+      const sc = 0.82 + 0.18 * n.a;
+      n.el.setAttribute(
+        'transform',
+        `translate(${n.x.toFixed(1)},${(n.y + (n.h * (1 - sc)) / 2).toFixed(1)}) scale(${sc.toFixed(3)})`,
+      );
+      n.el.style.opacity = n.a >= 0.999 ? '' : n.a.toFixed(3);
       if (!n.link || !n.parent) continue;
       const p = n.parent;
       const x1 = p.x + p.w + 12; // from the fold button
@@ -338,6 +421,7 @@ export async function mountTopicMap(section: HTMLElement) {
       const y2 = n.y + n.h / 2;
       const mx = (x1 + x2) / 2;
       n.link.setAttribute('d', `M${x1.toFixed(1)},${y1.toFixed(1)} C${mx.toFixed(1)},${y1.toFixed(1)} ${mx.toFixed(1)},${y2.toFixed(1)} ${x2.toFixed(1)},${y2.toFixed(1)}`);
+      n.link.style.opacity = n.a >= 0.999 ? '' : n.a.toFixed(3);
     }
   }
 
@@ -353,6 +437,8 @@ export async function mountTopicMap(section: HTMLElement) {
       return !ev.button;
     })
     .on('zoom', (ev) => {
+      // The reader grabbing the map stops any automatic camera move.
+      if (ev.sourceEvent) cancelAnimationFrame(anim);
       transform = ev.transform;
       viewport.setAttribute('transform', transform.toString());
     });
@@ -360,14 +446,15 @@ export async function mountTopicMap(section: HTMLElement) {
   svgSel.call(zoomer).on('dblclick.zoom', null);
 
   let anim = 0;
-  function animateTo(target: ZoomTransform, ms = 500) {
+  function animateTo(target: ZoomTransform, ms = 700) {
     cancelAnimationFrame(anim);
     if (reducedMotion() || ms === 0) return void svgSel.call(zoomer.transform, target);
     const from = transform;
     const t0 = performance.now();
     const step = (now: number) => {
       const p = Math.min(1, (now - t0) / ms);
-      const e = 1 - Math.pow(1 - p, 3);
+      // Ease in and out, so the camera glides rather than lurches.
+      const e = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
       svgSel.call(
         zoomer.transform,
         zoomIdentity
@@ -403,7 +490,7 @@ export async function mountTopicMap(section: HTMLElement) {
     const target = zoomIdentity
       .translate(left + (w - left) / 2 - ((x0 + x1) / 2) * k, (h - 24) / 2 - ((y0 + y1) / 2) * k)
       .scale(k);
-    animateTo(target, animate ? 500 : 0);
+    animateTo(target, animate ? 700 : 0);
   }
   /**
    * With everything open the tree is far taller than the screen, so instead of shrinking
@@ -553,6 +640,11 @@ export async function mountTopicMap(section: HTMLElement) {
       if (n.parent && n.parent !== root) group('Back to', [button(question(n.parent), () => open(n.parent!, true))], 'is-back');
     }
 
+    for (const el of [panelTitle, panelBody, panelNext]) {
+      el.classList.remove('tmap-swap');
+      void el.offsetWidth; // restart the animation
+      el.classList.add('tmap-swap');
+    }
     const wasHidden = panel.hidden;
     panel.hidden = false;
     panel.scrollTop = 0;
@@ -672,6 +764,15 @@ export async function mountTopicMap(section: HTMLElement) {
   new ResizeObserver(() => resize()).observe(stage);
   resize(true);
   stage.classList.add('is-ready');
+  // Open with the categories growing out of the subject, one after another.
+  root.children.forEach((c, i) => {
+    c.x = root.x + root.w - c.w * 0.35;
+    c.y = root.y + root.h / 2 - c.h / 2;
+    c.a = 0;
+    c.delay = 150 + i * 110;
+  });
+  render();
+  wakeMotion();
 
   // A link such as /maps/ai-and-jobs/#rung-warning opens that box straight away.
   const linked = byId.get(decodeURIComponent(location.hash.slice(1)));
