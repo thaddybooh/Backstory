@@ -3,8 +3,10 @@ import { type Issue, issueUrl, issueNumber, TRACK_LABEL, formatShortDate } from 
 interface Props {
   issue: Issue;
   headingLevel?: 'h2' | 'h3';
+  /** The topic map this issue belongs to, if any. */
+  topic?: { title: string; href: string };
 }
-const { issue } = Astro.props;
+const { issue, topic } = Astro.props;
 const { data } = issue;
 ---
 <li class="issue-row" data-track={data.track}>
@@ -18,5 +20,13 @@ const { data } = issue;
     </div>
     <h3><a href={issueUrl(issue)}>{data.title}</a></h3>
     <p>{data.summary}</p>
+    {
+      topic && (
+        <a class="issue-row-topic" href={topic.href}>
+          <span>Topic</span>
+          {topic.title}
+        </a>
+      )
+    }
   </div>
 </li>

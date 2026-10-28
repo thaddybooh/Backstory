@@ -9,6 +9,7 @@ import { getIssues, issueUrl, issueNumber, formatLongDate, TRACK_LABEL } from '.
 import { getCommonsImage } from '../lib/images';
 import { SITE } from '../lib/site';
 import { getPlacement } from '../lib/topicmap-data';
+import TopicsBand from '../components/topicmap/TopicsBand.astro';
 
 const issues = await getIssues();
 const [latest, ...earlier] = issues;
@@ -16,6 +17,11 @@ const d = latest?.data;
 const layers = ['History', 'Economic incentives', 'Political decisions', 'Competing interests'];
 const graph = latest ? await getGraph(latest) : undefined;
 const placement = latest ? await getPlacement(latest.id) : undefined;
+const topicOf = async (id: string) => {
+  const p = await getPlacement(id);
+  return p && { title: p.map.data.title, href: p.story.href };
+};
+const earlierTopics = await Promise.all(earlier.map((i) => topicOf(i.id)));
 const heroImage = d?.hero?.commons ? getCommonsImage(d.hero.commons) : undefined;
 const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommonsImage(d.hero.commons))));
 ---
@@ -67,6 +73,8 @@ const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommon
     )
   }
 
+  <TopicsBand issueId={latest?.id} />
+
   <section class="intro" aria-labelledby="intro-title">
     <div class="wrap intro-inner">
       <div>
@@ -80,6 +88,7 @@ const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommon
           <li>One story a day</li>
           <li>World and Singapore</li>
           <li>Always the policy angle</li>
+          <li>Topics that grow every day</li>
         </ul>
         <div class="intro-actions">
           <a class="button intro-primary" href="/archive/">Browse every issue</a>
@@ -143,8 +152,8 @@ const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommon
           <a href="/archive/">See all issues</a>
         </div>
         <ul class="issue-list">
-          {earlier.map((issue) => (
-            <IssueRow issue={issue} />
+          {earlier.map((issue, i) => (
+            <IssueRow issue={issue} topic={earlierTopics[i]} />
           ))}
         </ul>
       </section>

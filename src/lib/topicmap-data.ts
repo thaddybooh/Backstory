@@ -67,7 +67,7 @@ export interface Placement {
 export async function getPlacement(issueId: string): Promise<Placement | undefined> {
   let best: { rank: number; placement: Placement } | undefined;
   for (const map of await getMaps()) {
-    const mapHref = `/maps/${map.id}/`;
+    const mapHref = `/topics/${map.id}/`;
     const link = (n: MapCategory | MapNode): MapLink => ({ id: n.id, label: n.label, question: n.question, href: `${mapHref}#${n.id}` });
     const byId = new Map<string, { node: MapNode; category: MapCategory; depth: number }>();
     const visit = (nodes: MapNode[], category: MapCategory, depth: number) =>
@@ -89,4 +89,42 @@ export async function getPlacement(issueId: string): Promise<Placement | undefin
     }
   }
   return best?.placement;
+}
+
+export interface TopicSummary {
+  map: TopicMap;
+  href: string;
+  questions: number;
+  /** Each category with how many topics or stories it holds, for the card's little tree. */
+  shape: { kind: MapCategory['kind']; count: number }[];
+  /** The newest news story (the first one in the news category). */
+  latest?: MapLink & { when?: string };
+  /** True when this map holds the given issue (today's issue on the homepage). */
+  holdsIssue: boolean;
+}
+
+/**
+ * One summary per topic map for the topic cards. The map holding `issueId` comes first,
+ * then the rest by when they were last updated.
+ */
+export async function getTopicSummaries(issueId?: string): Promise<TopicSummary[]> {
+  const placement = issueId ? await getPlacement(issueId) : undefined;
+  const out = (await getMaps()).map((map): TopicSummary => {
+    const href = `/topics/${map.id}/`;
+    const story = map.data.categories.find((c) => c.kind === 'news')?.children[0];
+    return {
+      map,
+      href,
+      questions: countQuestions(map.data.categories),
+      shape: map.data.categories.map((c) => ({ kind: c.kind, count: c.children.length })),
+      latest: story && { id: story.id, label: story.label, question: story.question, href: `${href}#${story.id}`, when: story.when },
+      holdsIssue: placement?.map.id === map.id,
+    };
+  });
+  return out.sort(
+    (a, b) =>
+      Number(b.holdsIssue) - Number(a.holdsIssue) ||
+      b.map.data.updated.getTime() - a.map.data.updated.getTime() ||
+      a.map.data.title.localeCompare(b.map.data.title),
+  );
 }

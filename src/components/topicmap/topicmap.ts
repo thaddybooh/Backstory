@@ -774,7 +774,7 @@ export async function mountTopicMap(section: HTMLElement) {
   render();
   wakeMotion();
 
-  // A link such as /maps/ai-and-jobs/#rung-warning opens that box straight away.
+  // A link such as /topics/ai-and-jobs/#rung-warning opens that box straight away.
   const linked = byId.get(decodeURIComponent(location.hash.slice(1)));
   if (linked && document.documentElement.dataset.qmapView !== 'list') {
     stage.scrollIntoView({ block: 'center' });

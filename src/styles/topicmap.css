@@ -430,46 +430,135 @@ html[data-qmap-view='list'] .tmap-key {
   max-width: 44rem;
 }
 
-/* The /maps/ index */
-.map-cards {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+/* ---------- Topic cards (homepage band and the Topics page) ---------- */
+.topics-band {
+  padding: 1rem 0 2.5rem;
 }
-.map-card a {
-  display: block;
-  height: 100%;
-  padding: 1.25rem 1.4rem;
-  border: 1px solid var(--rule);
-  border-top: 4px solid var(--accent);
-  border-radius: 10px;
-  background: var(--paper-raised);
-  color: inherit;
-  text-decoration: none;
-}
-.map-card a:hover {
-  border-color: var(--accent);
-}
-.map-card h2 {
-  font-size: var(--step-2);
-  font-stretch: 92%;
-  line-height: 1.1;
-  margin: 0.3rem 0 0.5rem;
-}
-.map-card p {
-  margin: 0;
+.topics-band-dek {
+  margin: 0.35rem 0 0;
+  max-width: 40rem;
   color: var(--ink-soft);
   font-size: 1rem;
   line-height: 1.5;
 }
-.map-card .map-card-meta {
+.topics-band .section-head {
+  flex-wrap: wrap;
+  align-items: end;
+  margin-bottom: 1.25rem;
+}
+.topic-cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+}
+.topic-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  background: var(--paper-raised);
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s;
+}
+.topic-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px -18px rgb(20 33 61 / 0.45);
+}
+.topic-card.is-today {
+  border-color: var(--accent);
+  box-shadow: inset 0 4px 0 var(--accent);
+}
+.topic-card-link {
+  display: block;
+  flex: 1;
+  color: inherit;
+  text-decoration: none;
+  padding: 1.2rem 1.3rem 1rem;
+}
+.topic-tree {
+  display: block;
+  width: 100%;
+  max-width: 13rem;
+  height: auto;
+  max-height: 7.5rem;
+  margin-bottom: 1rem;
+}
+.topic-tree-root {
+  fill: var(--ink);
+}
+.topic-tree-cat {
+  fill: var(--c);
+}
+.topic-tree-leaf {
+  fill: color-mix(in srgb, var(--c) 30%, var(--paper-raised));
+  transition: fill 0.3s;
+}
+.topic-tree-line {
+  fill: none;
+  stroke: color-mix(in srgb, var(--c) 45%, transparent);
+  stroke-width: 1.2;
+}
+.topic-card:hover .topic-tree-leaf {
+  fill: color-mix(in srgb, var(--c) 55%, var(--paper-raised));
+}
+.topic-card-flag {
+  display: inline-block;
+  margin: 0 0 0.5rem;
+  font: 700 0.7rem/1 var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--paper-raised);
+  background: var(--accent);
+  padding: 0.3rem 0.55rem;
+  border-radius: 4px;
+}
+.topic-card h3 {
+  font-size: var(--step-2);
+  font-stretch: 92%;
+  line-height: 1.1;
+  margin: 0 0 0.5rem;
+}
+.topic-card-dek {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+.topic-card-meta {
+  margin: 0.75rem 0 0;
   font-family: var(--font-display);
   font-size: 0.85rem;
   color: var(--ink-faint);
-  margin-top: 0.8rem;
+}
+.topic-card-latest {
+  display: block;
+  padding: 0.8rem 1.3rem 0.95rem;
+  border-top: 1px solid var(--rule);
+  font: 650 0.95rem/1.3 var(--font-display);
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--paper);
+}
+.topic-card-latest span {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--accent);
+  margin-bottom: 0.2rem;
+}
+.topic-card-latest:hover {
+  color: var(--accent);
+}
+@media (prefers-reduced-motion: reduce) {
+  .topic-card {
+    transition: none;
+  }
+  .topic-card:hover {
+    transform: none;
+  }
 }
 
 /* ---------- "Where this fits" on an issue page ---------- */
