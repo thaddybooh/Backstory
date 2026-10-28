@@ -4,6 +4,10 @@
   "updated": "2026-10-28",
   "dek": "Singapore is now super-aged. How it pays for old age, health care and care, the debates over who should carry the cost, and every change in the news.",
   "intro": "Start with The basics if you are new to the topic, then Big ideas and debates for the policy thinking behind it. In the news holds each recent change, and every story opens into the same four questions: why is it happening, what is changing, who does it affect, and what does it mean. Open any box for a short answer and the sources to dig deeper.",
+  "cover": {
+    "commons": "Elderly Chinese men playing draughts in Chinatown, Singapore - 2013.jpg",
+    "alt": "A crowd of older men watching a game of draughts at a table in Chinatown, Singapore"
+  },
   "categories": [
     {
       "id": "basics",

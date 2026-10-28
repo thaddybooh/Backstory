@@ -4,6 +4,10 @@
   "updated": "2026-10-28",
   "dek": "Singapore has gone all in on AI and promised no ‘jobless growth’. How the job market and safety net work, the debates underneath, and every development in the news.",
   "intro": "Start with The basics if you are new to the topic, then Big ideas and debates for the policy thinking behind it. In the news holds each recent development, and every story opens into the same four questions: why is it happening, what is changing, who does it affect, and what does it mean. Open any box for a short answer and the sources to dig deeper.",
+  "cover": {
+    "commons": "2016 Singapur, Downtown Core, Marina Bay Financial Centre.jpg",
+    "alt": "Tall glass office towers of the Marina Bay Financial Centre in Singapore against a blue sky"
+  },
   "categories": [
     {
       "id": "basics",

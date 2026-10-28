@@ -4,6 +4,10 @@
   "updated": "2026-10-28",
   "dek": "How Singapore’s schools work, the ideas behind them, and every big change in the news, one question at a time.",
   "intro": "Start with The basics if you are new to the topic, then Big ideas and debates for the policy thinking behind it. In the news holds each recent change, and every story opens into the same four questions: why is it happening, what is changing, who does it affect, and what does it mean. Open any box for a short answer and the sources to dig deeper.",
+  "cover": {
+    "commons": "Students of Fairfield Methodist School (Primary) - 20051028.jpg",
+    "alt": "Pupils in school uniform at Fairfield Methodist School (Primary) in Singapore"
+  },
   "categories": [
     {
       "id": "basics",

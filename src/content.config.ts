@@ -102,6 +102,9 @@ const maps = defineCollection({
     updated: z.coerce.date(),
     dek: z.string(),
     intro: z.string(),
+    // A cover photo for the topic's card: a Wikimedia Commons file name, fetched with its
+    // credit by scripts/fetch-images.mjs like issue photos.
+    cover: z.object({ commons: z.string(), alt: z.string() }).optional(),
     categories: z.array(
       followUp.omit({ section: true }).extend({
         // basics: how it works; ideas: the policy thinking and debates; news: recent changes.
