@@ -1,0 +1,724 @@
+{
+  "title": "Oil, energy and the world economy",
+  "track": "world",
+  "updated": "2026-10-29",
+  "dek": "The 2026 Iran war caused the largest oil supply disruption on record. How the world’s oil system works, why shocks spread into inflation and interest rates, the debates over how to respond, and each development in the news.",
+  "intro": "Start with The basics if you are new to the topic: the Strait of Hormuz, the safety valves the world relies on, how oil becomes inflation and what past shocks did. Big ideas and debates covers the choices governments face. In the news holds each development, and every story opens into the same four questions: why is it happening, what is changing, who does it affect, and what does it mean.",
+  "cover": {
+    "commons": "Gas prices in Chula Vista, CA on 2026-09-17.jpg",
+    "alt": "A petrol station price sign in Chula Vista, California, listing fuel prices"
+  },
+  "categories": [
+    {
+      "id": "basics",
+      "label": "The basics",
+      "kind": "basics",
+      "question": "How does the world’s oil system work, and why do shocks hit so hard?",
+      "answer": [
+        "Start here if you are new to the topic. The world uses roughly 100 million barrels of oil a day, much of it from a handful of Gulf producers whose exports leave by sea through one narrow strait. This part explains that chokepoint, the safety valves the world relies on when supply is cut (spare capacity and emergency stocks), how a rise in the oil price spreads into inflation and interest rates, and what earlier oil shocks did.",
+        "Oil use barely changes in the short run when prices rise, so even a small loss of supply can send prices sharply higher. That is why the questions in this map keep returning to how long a disruption lasts."
+      ],
+      "sources": [
+        {
+          "title": "Economic impact of the 2026 Iran war",
+          "publication": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war"
+        },
+        {
+          "title": "Explainer: How the Iran war oil and gas supply shock compares with past disruptions",
+          "publication": "Reuters",
+          "url": "https://finance.yahoo.com/news/explainer-how-the-iran-war-oil-and-gas-supply-shock-compares-with-past-disruptions-052633500.html"
+        }
+      ],
+      "children": [
+        {
+          "id": "hormuz",
+          "label": "The Strait of Hormuz",
+          "question": "What is the Strait of Hormuz, and why does it matter so much?",
+          "answer": [
+            "It is the channel between Iran and Oman linking the Persian Gulf to the open ocean. In normal times about a fifth of the world’s oil and a similar share of its liquefied natural gas (LNG) sail through it, and almost all exports from Saudi Arabia, Iraq, the UAE, Kuwait and Qatar leave by sea.",
+            "Iran has threatened to close it since the 1980s ‘tanker war’, but never did until March 2026, because closing it would also stop Iran’s own exports and invite a military response. When it did, ship crossings fell from about 138 a day to five or fewer."
+          ],
+          "sources": [
+            {
+              "title": "Economic impact of the 2026 Iran war",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war"
+            },
+            {
+              "title": "Oil stays above $100 a barrel amid Iran’s stranglehold on Strait of Hormuz",
+              "publication": "Al Jazeera",
+              "url": "https://www.aljazeera.com/amp/economy/2026/3/13/oil-stays-above-100-a-barrel-amid-irans-stranglehold-on-strait-of-hormuz"
+            }
+          ],
+          "children": [
+            {
+              "id": "hormuz-more-than-oil",
+              "label": "Is it only oil?",
+              "type": "basics",
+              "question": "What else passes through the Strait of Hormuz besides crude oil?",
+              "answer": [
+                "A great deal. Qatar, one of the world’s two biggest LNG exporters, ships all its gas through it; about half of the world’s exports of urea, a nitrogen fertiliser, and of sulphur pass through too; and Qatar produces about a third of the world’s helium, used in chip-making and hospital scanners. So a closure raises the price of gas, electricity, fertiliser and next year’s food, not just petrol."
+              ],
+              "sources": [
+                {
+                  "title": "Economic impact of the 2026 Iran war",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war"
+                },
+                {
+                  "title": "Explainer: How the Iran war oil and gas supply shock compares with past disruptions",
+                  "publication": "Reuters",
+                  "url": "https://finance.yahoo.com/news/explainer-how-the-iran-war-oil-and-gas-supply-shock-compares-with-past-disruptions-052633500.html"
+                }
+              ]
+            },
+            {
+              "id": "hormuz-bypass",
+              "label": "Can oil go around it?",
+              "type": "basics",
+              "question": "Can Gulf producers send their oil around the strait?",
+              "answer": [
+                "Partly. Saudi Arabia’s East-West pipeline to Yanbu on the Red Sea can carry about 7 million barrels a day, and the UAE has a bypass line too. In 2026 they pushed millions of barrels a day through them, but that is a fraction of what normally sails out. And the route from Yanbu to Asia runs through the Bab al-Mandab at the mouth of the Red Sea, which Yemen’s Houthis threatened from September 2026."
+              ],
+              "sources": [
+                {
+                  "title": "Economic impact of the 2026 Iran war",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war"
+                },
+                {
+                  "title": "Crude Calculations: Why the Iran War Hasn’t Yet Caused an Oil Shock",
+                  "publication": "Council on Foreign Relations",
+                  "url": "https://www.cfr.org/articles/crude-calculations-why-the-iran-war-hasnt-yet-caused-an-oil-shock"
+                },
+                {
+                  "title": "Oil prices up due to Houthi strikes and US threat to renew Iran war",
+                  "publication": "The National",
+                  "url": "https://thenationalnews.com/business/energy/2026/10/28/oil-prices-up-due-to-houthi-strikes-and-us-threat-to-renew-iran-war"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "safety-valves",
+          "label": "Spare capacity and reserves",
+          "question": "What protects the world when oil supply is suddenly cut?",
+          "answer": [
+            "Two safety valves. The first is spare capacity: wells, mostly in Saudi Arabia and the UAE, that can be switched on quickly when supply falls elsewhere. The second is emergency stocks: after the 1973 crisis, importing countries founded the International Energy Agency (IEA) in 1974 to coordinate stockpiles, and IEA members must hold stocks equal to 90 days of net imports.",
+            "In 2026 the first valve failed, because the spare capacity was trapped behind Hormuz: the IEA says effective spare capacity fell to 320,000 barrels a day in March, the lowest on record. The second was used as never before, with a record 400-million-barrel pledge."
+          ],
+          "sources": [
+            {
+              "title": "Oil Market Report, 14 April 2026",
+              "publication": "International Energy Agency",
+              "url": "https://iea.blob.core.windows.net/assets/515f3128-df1a-4d6c-beb4-fd91d2434bef/-14APR2026_OilMarketReport_Free_version1.pdf"
+            },
+            {
+              "title": "Crude Calculations: Why the Iran War Hasn’t Yet Caused an Oil Shock",
+              "publication": "Council on Foreign Relations",
+              "url": "https://www.cfr.org/articles/crude-calculations-why-the-iran-war-hasnt-yet-caused-an-oil-shock"
+            },
+            {
+              "title": "Oil stays above $100 a barrel amid Iran’s stranglehold on Strait of Hormuz",
+              "publication": "Al Jazeera",
+              "url": "https://www.aljazeera.com/amp/economy/2026/3/13/oil-stays-above-100-a-barrel-amid-irans-stranglehold-on-strait-of-hormuz"
+            }
+          ],
+          "children": [
+            {
+              "id": "reserves-limits",
+              "label": "Why not release more stocks?",
+              "type": "why",
+              "question": "Why can’t governments keep releasing emergency oil stocks?",
+              "answer": [
+                "Because stocks are finite and must be refilled. By the IEA’s October count, global oil stocks were 509 million barrels lower than at the end of February, and the US Strategic Petroleum Reserve had fallen to its lowest level since 1982. Reserves drawn down cannot be drawn down twice, and buying back hundreds of millions of barrels later will itself support prices. Countries with little or no stock, such as Pakistan, had nothing to release."
+              ],
+              "sources": [
+                {
+                  "title": "Oil Market Report, October 2026",
+                  "publication": "International Energy Agency",
+                  "url": "https://www.iea.org/reports/oil-market-report-october-2026"
+                },
+                {
+                  "title": "2026 Iran war fuel crisis",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis"
+                },
+                {
+                  "title": "The global energy crisis and its impacts on Asian emerging economies",
+                  "publication": "Atlantic Council",
+                  "url": "https://www.atlanticcouncil.org/wp-content/uploads/2026/06/the-global-energy-crisis-and-its-impacts-on-asian-emerging-economies.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "oil-to-inflation",
+          "label": "How oil becomes inflation",
+          "question": "How does a rise in oil prices spread into inflation and interest rates?",
+          "answer": [
+            "Economists call it a textbook negative supply shock: it raises prices and lowers output at once. Refiners charge more for petrol, diesel and jet fuel; transport, food, fertiliser and electricity follow; headline inflation rises. If workers and firms then try to catch up through wages and prices, a one-off jump becomes lasting inflation, which economists call second-round effects. Central banks may raise interest rates to stop that, even as the economy slows.",
+            "The IMF says the damage depends less on how high oil goes than on how long it stays high, and on whether people start expecting inflation to last."
+          ],
+          "sources": [
+            {
+              "title": "War Darkens Global Economic Outlook and Reshapes Policy Priorities",
+              "publication": "IMF Blog",
+              "url": "https://www.imf.org/en/blogs/articles/2026/04/14/war-darkens-global-economic-outlook-and-reshapes-policy-priorities"
+            },
+            {
+              "title": "CPI inflation report September 2026",
+              "publication": "CNBC",
+              "url": "https://www.cnbc.com/2026/10/14/cpi-inflation-report-september-2026.html"
+            }
+          ],
+          "children": [
+            {
+              "id": "importers-pay-twice",
+              "label": "Why do poor importers pay twice?",
+              "type": "why",
+              "question": "Why do poorer oil-importing countries suffer most from an oil shock?",
+              "answer": [
+                "Oil is priced in US dollars. When a war scares investors, money tends to flow out of riskier economies and into the dollar, so many importers’ currencies fall just as oil rises, and they pay more twice over. Countries with thin foreign reserves and no emergency stocks, such as Pakistan and Bangladesh, end up rationing fuel. The IMF says higher yields, currency falls and capital outflows amplified the 2026 shock in emerging Asia."
+              ],
+              "sources": [
+                {
+                  "title": "Global Economy Endures War Shock—So Far",
+                  "publication": "IMF Blog",
+                  "url": "https://www.imf.org/en/blogs/articles/2026/06/15/global-economy-endures-war-shock-so-far"
+                },
+                {
+                  "title": "The global energy crisis and its impacts on Asian emerging economies",
+                  "publication": "Atlantic Council",
+                  "url": "https://www.atlanticcouncil.org/wp-content/uploads/2026/06/the-global-energy-crisis-and-its-impacts-on-asian-emerging-economies.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "past-shocks",
+          "label": "Past oil shocks",
+          "question": "What happened in earlier oil shocks?",
+          "answer": [
+            "Peak daily oil losses, according to the IEA: 4.5 million barrels a day in the 1973–74 Arab embargo, which roughly quadrupled the price and was followed by the deepest recession since the 1930s; 5.6 million after Iran’s 1979 revolution, which lasted years; and about 4.3 million when Iraq invaded Kuwait in 1990, when oil more than doubled for about nine months and helped push the US into recession. In 2022 Russia’s invasion of Ukraine cut little oil but most of Europe’s Russian gas.",
+            "2026 dwarfs them all by daily loss: more than 12 million barrels a day at the peak."
+          ],
+          "sources": [
+            {
+              "title": "Explainer: How the Iran war oil and gas supply shock compares with past disruptions",
+              "publication": "Reuters",
+              "url": "https://finance.yahoo.com/news/explainer-how-the-iran-war-oil-and-gas-supply-shock-compares-with-past-disruptions-052633500.html"
+            },
+            {
+              "title": "1973 oil crisis",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/1973_oil_crisis"
+            },
+            {
+              "title": "1990 oil price shock",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/1990_oil_price_shock"
+            },
+            {
+              "title": "2021–2023 global energy crisis",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/2021%E2%80%932023_global_energy_crisis"
+            }
+          ],
+          "children": [
+            {
+              "id": "why-less-damage",
+              "label": "Why less damage than 1973?",
+              "type": "why",
+              "question": "Why have recent oil shocks done less damage than those of the 1970s?",
+              "answer": [
+                "Because the world has built cushions since. Emergency stocks exist; the US has gone from an anxious importer to an exporter; economies use much less oil for each dollar of output; and adjusted for inflation, oil prices in 2026 stayed well below past crisis peaks. The Council on Foreign Relations also credits China’s calm, planned cuts in demand. But cushions wear thin if a disruption lasts."
+              ],
+              "sources": [
+                {
+                  "title": "Crude Calculations: Why the Iran War Hasn’t Yet Caused an Oil Shock",
+                  "publication": "Council on Foreign Relations",
+                  "url": "https://www.cfr.org/articles/crude-calculations-why-the-iran-war-hasnt-yet-caused-an-oil-shock"
+                },
+                {
+                  "title": "Explainer: How the Iran war oil and gas supply shock compares with past disruptions",
+                  "publication": "Reuters",
+                  "url": "https://finance.yahoo.com/news/explainer-how-the-iran-war-oil-and-gas-supply-shock-compares-with-past-disruptions-052633500.html"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ideas",
+      "label": "Big ideas and debates",
+      "kind": "ideas",
+      "question": "What are the big arguments about how to handle an energy shock?",
+      "answer": [
+        "An oil shock leaves governments with problems that have no clean answers: central banks must choose between fighting inflation and protecting growth, finance ministries between popular price caps and better-aimed help, and everyone between shoring up oil supply and moving away from oil. These boxes set out the thinking behind each choice and the strongest arguments on both sides.",
+        "Most of what matters, above all ending the disruption itself, is beyond any single government’s control, which is why international bodies such as the IMF and IEA play such a large role."
+      ],
+      "sources": [
+        {
+          "title": "War Darkens Global Economic Outlook and Reshapes Policy Priorities",
+          "publication": "IMF Blog",
+          "url": "https://www.imf.org/en/blogs/articles/2026/04/14/war-darkens-global-economic-outlook-and-reshapes-policy-priorities"
+        },
+        {
+          "title": "World Economic Outlook, October 2026: Resilience Under Strain, Urgent Choices",
+          "publication": "IMF",
+          "url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026"
+        }
+      ],
+      "children": [
+        {
+          "id": "rates-dilemma",
+          "label": "The central bank’s dilemma",
+          "question": "Should central banks raise interest rates when oil prices jump?",
+          "answer": [
+            "Usually they ‘look through’ an oil shock: higher rates cannot produce more oil, and they deepen the slowdown. But the IMF warns that looking through is safe only while people still expect inflation to come back down, and after the 2021–22 surge that trust is thinner.",
+            "In 2026 the US Federal Reserve raised rates in September, the first rise since 2023, then held them in October with two officials voting for another rise. The European Central Bank raised rates twice. The risk on one side is a 1970s-style spiral; on the other, raising rates into a shock that ends with a peace deal, and causing a recession for nothing."
+          ],
+          "sources": [
+            {
+              "title": "War Darkens Global Economic Outlook and Reshapes Policy Priorities",
+              "publication": "IMF Blog",
+              "url": "https://www.imf.org/en/blogs/articles/2026/04/14/war-darkens-global-economic-outlook-and-reshapes-policy-priorities"
+            },
+            {
+              "title": "Federal Reserve leaves interest rates unchanged despite rising inflation",
+              "publication": "NBC News",
+              "url": "https://www.nbcnews.com/business/economy/fed-rates-inflation-warsh-midterms-rcna606154"
+            }
+          ],
+          "children": [
+            {
+              "id": "rates-debate",
+              "label": "Raise rates or look through?",
+              "type": "debate",
+              "question": "Where do reasonable people disagree on raising rates during an oil shock?",
+              "answer": [
+                "One side says raise rates now: inflation was already above target, the memory of 2021–22, when ‘transitory’ inflation proved lasting, is fresh, and US inflation reached 3.7% in September 2026. The other says look through it: higher rates cannot reopen a strait, they hit households already squeezed by fuel costs, US core inflation was 2.6%, and oil can fall as fast as it rose if the war ends."
+              ],
+              "sources": [
+                {
+                  "title": "Federal Reserve leaves interest rates unchanged despite rising inflation",
+                  "publication": "NBC News",
+                  "url": "https://www.nbcnews.com/business/economy/fed-rates-inflation-warsh-midterms-rcna606154"
+                },
+                {
+                  "title": "CPI inflation report September 2026",
+                  "publication": "CNBC",
+                  "url": "https://www.cnbc.com/2026/10/14/cpi-inflation-report-september-2026.html"
+                },
+                {
+                  "title": "War Darkens Global Economic Outlook and Reshapes Policy Priorities",
+                  "publication": "IMF Blog",
+                  "url": "https://www.imf.org/en/blogs/articles/2026/04/14/war-darkens-global-economic-outlook-and-reshapes-policy-priorities"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "subsidy-trap",
+          "label": "The subsidy trap",
+          "question": "Why do economists warn against fuel subsidies and price caps?",
+          "answer": [
+            "Faced with angry drivers, most governments reach for price caps, tax cuts and subsidies. In 2026 Japan spent about ¥9 trillion holding petrol prices down; India and Germany cut fuel taxes; Thailand froze diesel prices. These are popular and quick, but the IMF estimates that measures holding prices down can cost 3 to 22 times as much as targeted, temporary payments to the households that need them most. They also blunt the signal to use less fuel, keeping world prices higher, and export bans push shortages onto other countries."
+          ],
+          "sources": [
+            {
+              "title": "World Economic Outlook, October 2026: Resilience Under Strain, Urgent Choices",
+              "publication": "IMF",
+              "url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026"
+            },
+            {
+              "title": "War Darkens Global Economic Outlook and Reshapes Policy Priorities",
+              "publication": "IMF Blog",
+              "url": "https://www.imf.org/en/blogs/articles/2026/04/14/war-darkens-global-economic-outlook-and-reshapes-policy-priorities"
+            },
+            {
+              "title": "2026 Iran war fuel crisis",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis"
+            }
+          ]
+        },
+        {
+          "id": "end-of-oil",
+          "label": "Shock and the end of oil",
+          "question": "Do oil shocks speed up the switch away from oil?",
+          "answer": [
+            "They have before: the 1970s brought fuel-efficiency rules, strategic reserves and France’s nuclear programme, and 2022 pushed Europe off Russian gas. In 2026 electric cars reached a record 26.1% of global new-car sales in May, mostly thanks to China, and Chinese solar exports rose more than 80% in March as countries in Asia and Africa cut fuel imports.",
+            "But the scale is modest: Goldman Sachs estimates the extra electric cars will cut oil demand by only 130,000 to 320,000 barrels a day by the end of 2027. Sceptics add that much of the response has been more drilling, coal and subsidies, and that cheaper oil after a shock weakens the urge to switch."
+          ],
+          "sources": [
+            {
+              "title": "The Iran war is accelerating the EV transition faster than any climate policy ever did—but it’s still just not that much",
+              "publication": "Fortune",
+              "url": "https://fortune.com/2026/06/25/how-many-electric-vehicles-after-iran-war-goldman-sachs/"
+            },
+            {
+              "title": "The Iran war is pushing some countries to move away from oil faster",
+              "publication": "NPR",
+              "url": "https://www.opb.org/article/2026/07/09/the-iran-war-is-pushing-some-countries-to-move-away-from-oil-faster/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "news",
+      "label": "In the news",
+      "kind": "news",
+      "question": "What has happened to oil and energy in 2026?",
+      "answer": [
+        "2026 brought the largest oil supply disruption on record, after the US and Israel went to war with Iran and Iran closed the Strait of Hormuz. The stories here run from newest to oldest. Each opens into the same four questions: why is it happening, what is changing, who does it affect, and what does it mean.",
+        "For the full picture in one place, read But Why? issue 009, ‘The Hormuz oil shock’, which these stories are drawn from."
+      ],
+      "sources": [
+        {
+          "title": "2026 Iran war",
+          "publication": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/2026_Iran_war"
+        },
+        {
+          "title": "Economic impact of the 2026 Iran war",
+          "publication": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war"
+        }
+      ],
+      "children": [
+        {
+          "id": "hormuz-shut-again",
+          "label": "Hormuz shut again, oil near $115",
+          "question": "Why is oil back near $115 a barrel in October 2026?",
+          "answer": [
+            "Eight months after the US and Israel went to war with Iran, the Strait of Hormuz is close to shut again. A peace memorandum in June reopened it and Brent fell to about $72, but the truce collapsed on 8 July and prices were back above $100 by late July. Since late September Iran has stepped up tanker attacks, the Houthis have opened a second front around the Bab al-Mandab, and on 26 October Iran’s Revolutionary Guard declared the strait closed. On 28 October Brent stood near $115, the US Federal Reserve held rates with two officials voting to raise them, and Qatar presented a new peace draft."
+          ],
+          "sources": [
+            {
+              "title": "2026 Iran war",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/2026_Iran_war"
+            },
+            {
+              "title": "Oil prices up due to Houthi strikes and US threat to renew Iran war",
+              "publication": "The National",
+              "url": "https://thenationalnews.com/business/energy/2026/10/28/oil-prices-up-due-to-houthi-strikes-and-us-threat-to-renew-iran-war"
+            },
+            {
+              "title": "IRGC declares Strait of Hormuz closed after tankers hit",
+              "publication": "Middle East Eye",
+              "url": "https://www.middleeasteye.net/live-blog/live-blog-update/irgc-declares-strait-hormuz-closed-after-tankers-hit"
+            },
+            {
+              "title": "Federal Reserve leaves interest rates unchanged despite rising inflation",
+              "publication": "NBC News",
+              "url": "https://www.nbcnews.com/business/economy/fed-rates-inflation-warsh-midterms-rcna606154"
+            }
+          ],
+          "when": "Oct 2026",
+          "related": [
+            "hormuz",
+            "safety-valves",
+            "oil-to-inflation"
+          ],
+          "issue": "009-the-hormuz-oil-shock",
+          "children": [
+            {
+              "id": "oct-why",
+              "label": "Why now?",
+              "type": "why",
+              "question": "Why did prices climb again from September?",
+              "answer": [
+                "Because the attacks and the blockades returned. After the truce collapsed, the US reimposed its naval blockade of Iranian ports, and for most of the time since April the strait has been squeezed from both ends. From late September Iran stepped up its attacks on tankers, and fewer than 23 ships a day crossed the strait in early October. Meanwhile the cushions that softened the first blow have worn thin: global stocks are about 509 million barrels lower than in February."
+              ],
+              "sources": [
+                {
+                  "title": "2026 Iran war",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/2026_Iran_war"
+                },
+                {
+                  "title": "Trump’s pledge not to strike Iran before midterms fails to soothe oil markets",
+                  "publication": "NBC News",
+                  "url": "https://www.nbcnews.com/business/energy/oil-prices-stocks-trump-iran-rcna602248"
+                },
+                {
+                  "title": "Oil Market Report, October 2026",
+                  "publication": "International Energy Agency",
+                  "url": "https://www.iea.org/reports/oil-market-report-october-2026"
+                }
+              ]
+            },
+            {
+              "id": "oct-what",
+              "label": "What’s changing?",
+              "type": "what",
+              "question": "What has changed in the economy since the shock returned?",
+              "answer": [
+                "Inflation is rising again and central banks are responding. US inflation climbed to 3.7% in September, with petrol up 34% on a year earlier; the Fed raised rates in September for the first time since 2023 and the ECB raised rates in June and September. Diesel is worst hit: US diesel was $6.28 a gallon on 8 October, and the IEA expects it to stay tight into the second half of 2027. The IMF now expects world inflation of 4.7% this year."
+              ],
+              "sources": [
+                {
+                  "title": "CPI inflation report September 2026",
+                  "publication": "CNBC",
+                  "url": "https://www.cnbc.com/2026/10/14/cpi-inflation-report-september-2026.html"
+                },
+                {
+                  "title": "Federal Reserve leaves interest rates unchanged despite rising inflation",
+                  "publication": "NBC News",
+                  "url": "https://www.nbcnews.com/business/economy/fed-rates-inflation-warsh-midterms-rcna606154"
+                },
+                {
+                  "title": "Diesel squeeze set to last well into 2027 as Iran war disrupts supply, IEA says",
+                  "publication": "CNBC",
+                  "url": "https://www.cnbc.com/2026/10/14/diesel-deal-oil-price-iea-report.html"
+                },
+                {
+                  "title": "World Economic Outlook, October 2026: Resilience Under Strain, Urgent Choices",
+                  "publication": "IMF",
+                  "url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026"
+                }
+              ]
+            },
+            {
+              "id": "oct-who",
+              "label": "Who does it affect?",
+              "type": "who",
+              "question": "Who is hit hardest by the renewed oil shock?",
+              "answer": [
+                "Poorer energy importers with thin buffers, such as the Philippines, Pakistan and Bangladesh, which have declared an energy emergency, shortened working weeks or rationed fuel, and whose currencies fall as oil rises. Europe is squeezed by imported oil and gas. Five of eight Gulf exporters face recessions because they cannot get their oil out. In the US, petrol is up about 45% since February, and two-thirds of Americans call it a serious problem."
+              ],
+              "sources": [
+                {
+                  "title": "The global energy crisis and its impacts on Asian emerging economies",
+                  "publication": "Atlantic Council",
+                  "url": "https://www.atlanticcouncil.org/wp-content/uploads/2026/06/the-global-energy-crisis-and-its-impacts-on-asian-emerging-economies.pdf"
+                },
+                {
+                  "title": "Global Economy Endures War Shock—So Far",
+                  "publication": "IMF Blog",
+                  "url": "https://www.imf.org/en/blogs/articles/2026/06/15/global-economy-endures-war-shock-so-far"
+                },
+                {
+                  "title": "Trump’s pledge not to strike Iran before midterms fails to soothe oil markets",
+                  "publication": "NBC News",
+                  "url": "https://www.nbcnews.com/business/energy/oil-prices-stocks-trump-iran-rcna602248"
+                }
+              ]
+            },
+            {
+              "id": "oct-means",
+              "label": "What does it mean?",
+              "type": "means",
+              "question": "What does the renewed shock mean for the world economy?",
+              "answer": [
+                "That prices are unlikely to settle until the strait is reliably open. The problem is physical: spare oil is trapped behind a channel both sides use as a weapon, and the reserves that softened the first blow are partly spent. The world economy has bent but not broken, with the IMF still expecting 3.1% growth this year, but its forecasts assume Hormuz shipments resume by March. The World Bank expects Brent to average $79 in 2027 if things calm down, and $105 if they don’t."
+              ],
+              "sources": [
+                {
+                  "title": "World Economic Outlook, October 2026: Resilience Under Strain, Urgent Choices",
+                  "publication": "IMF",
+                  "url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026"
+                },
+                {
+                  "title": "IMF lifts 2026 global growth forecast but resilience is nearing limits",
+                  "publication": "CNBC",
+                  "url": "https://www.cnbc.com/2026/10/12/imf-world-bank-annual-meetings-october-bangkok-asia-.html"
+                },
+                {
+                  "title": "Commodity Prices Set to Increase by 23% in 2026 as Global Shocks Mount",
+                  "publication": "World Bank",
+                  "url": "https://www.worldbank.org/en/news/press-release/2026/10/28/commodity-markets-outlook-october-2026"
+                }
+              ]
+            },
+            {
+              "id": "oct-politics",
+              "label": "Will the midterms change it?",
+              "type": "debate",
+              "question": "Will prices fall after the US midterm elections, as Trump promised?",
+              "answer": [
+                "Not by themselves. Trump said in September that prices would fall “right after” the 3 November midterms, and in October that the US would not attack Iran before then. Markets read that as a pause, not a peace: Brent rose 4% on the day of his October post, and The National reports that Washington has told Gulf states to prepare for a possible renewed US campaign after the election. Political promises cannot reopen the strait."
+              ],
+              "sources": [
+                {
+                  "title": "Trump says oil and gas prices won’t fall until ‘right after’ midterm election",
+                  "publication": "CNBC",
+                  "url": "https://www.cnbc.com/2026/09/09/trump-oil-gas-prices-midterm-elections.html"
+                },
+                {
+                  "title": "Trump’s pledge not to strike Iran before midterms fails to soothe oil markets",
+                  "publication": "NBC News",
+                  "url": "https://www.nbcnews.com/business/energy/oil-prices-stocks-trump-iran-rcna602248"
+                },
+                {
+                  "title": "Oil prices up due to Houthi strikes and US threat to renew Iran war",
+                  "publication": "The National",
+                  "url": "https://thenationalnews.com/business/energy/2026/10/28/oil-prices-up-due-to-houthi-strikes-and-us-threat-to-renew-iran-war"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "war-shuts-hormuz",
+          "label": "The Iran war shuts Hormuz",
+          "question": "How did the Iran war cause the biggest oil supply disruption on record?",
+          "answer": [
+            "On 28 February 2026 the US and Israel launched hundreds of strikes on Iran, killing its Supreme Leader, Ali Khamenei. Iran hit back across the region and, from 4 March, closed the Strait of Hormuz; ship crossings fell from about 138 a day to five or fewer. At the peak more than 12 million barrels a day of oil were missing from the market, about 11.5% of world demand. The IEA called it the largest supply disruption in the history of the global oil market. Brent rose from $72.48 on the day the war began to a peak of $118.35 on 31 March."
+          ],
+          "sources": [
+            {
+              "title": "2026 Iran war",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/2026_Iran_war"
+            },
+            {
+              "title": "Economic impact of the 2026 Iran war",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war"
+            },
+            {
+              "title": "Oil stays above $100 a barrel amid Iran’s stranglehold on Strait of Hormuz",
+              "publication": "Al Jazeera",
+              "url": "https://www.aljazeera.com/amp/economy/2026/3/13/oil-stays-above-100-a-barrel-amid-irans-stranglehold-on-strait-of-hormuz"
+            },
+            {
+              "title": "Explainer: How the Iran war oil and gas supply shock compares with past disruptions",
+              "publication": "Reuters",
+              "url": "https://finance.yahoo.com/news/explainer-how-the-iran-war-oil-and-gas-supply-shock-compares-with-past-disruptions-052633500.html"
+            }
+          ],
+          "when": "Mar 2026",
+          "related": [
+            "hormuz",
+            "safety-valves",
+            "past-shocks"
+          ],
+          "issue": "009-the-hormuz-oil-shock",
+          "children": [
+            {
+              "id": "mar-why",
+              "label": "Why so severe?",
+              "type": "why",
+              "question": "Why was the Hormuz closure so much worse than earlier oil shocks?",
+              "answer": [
+                "Because the world’s safety valve was trapped behind the same door. In earlier crises Saudi Arabia and its neighbours pumped more; this time their spare capacity was stuck behind the strait too, falling to a record low of 320,000 barrels a day in March. And it was not only crude: strikes on Qatar’s Ras Laffan complex cut about 17% of its gas capacity, and fertiliser and helium supplies were hit at the same time, which Reuters notes never happened in the 1970s."
+              ],
+              "sources": [
+                {
+                  "title": "Oil Market Report, 14 April 2026",
+                  "publication": "International Energy Agency",
+                  "url": "https://iea.blob.core.windows.net/assets/515f3128-df1a-4d6c-beb4-fd91d2434bef/-14APR2026_OilMarketReport_Free_version1.pdf"
+                },
+                {
+                  "title": "Economic impact of the 2026 Iran war",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war"
+                },
+                {
+                  "title": "Explainer: How the Iran war oil and gas supply shock compares with past disruptions",
+                  "publication": "Reuters",
+                  "url": "https://finance.yahoo.com/news/explainer-how-the-iran-war-oil-and-gas-supply-shock-compares-with-past-disruptions-052633500.html"
+                }
+              ]
+            },
+            {
+              "id": "mar-what",
+              "label": "What changed?",
+              "type": "what",
+              "question": "What did governments and markets do when Hormuz closed?",
+              "answer": [
+                "IEA members pledged a record 400 million barrels from emergency stocks on 11 March, though traders shrugged and Brent rose above $100 within two days. Japan began releasing 80 million barrels. The US temporarily allowed purchases of sanctioned Russian oil. China banned fuel exports and cut its seaborne crude imports by more than 5 million barrels a day. Shipping costs soared: hiring a supertanker went from about $65,000 a day to $230,000."
+              ],
+              "sources": [
+                {
+                  "title": "Oil stays above $100 a barrel amid Iran’s stranglehold on Strait of Hormuz",
+                  "publication": "Al Jazeera",
+                  "url": "https://www.aljazeera.com/amp/economy/2026/3/13/oil-stays-above-100-a-barrel-amid-irans-stranglehold-on-strait-of-hormuz"
+                },
+                {
+                  "title": "2026 Iran war fuel crisis",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis"
+                },
+                {
+                  "title": "Crude Calculations: Why the Iran War Hasn’t Yet Caused an Oil Shock",
+                  "publication": "Council on Foreign Relations",
+                  "url": "https://www.cfr.org/articles/crude-calculations-why-the-iran-war-hasnt-yet-caused-an-oil-shock"
+                },
+                {
+                  "title": "Economic impact of the 2026 Iran war",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war"
+                }
+              ]
+            },
+            {
+              "id": "mar-who",
+              "label": "Who did it affect?",
+              "type": "who",
+              "question": "Who felt the first months of the shock most?",
+              "answer": [
+                "Asia’s importers first. China, India, Japan and South Korea normally take three-quarters of the Gulf’s oil exports, and Asian spot gas prices rose by more than 140%. The Philippines declared a national energy emergency on 24 March; Pakistan closed schools and moved government offices to a four-day week; Slovenia became the first EU country to ration fuel. Fertiliser prices rose by up to 40% in three weeks, threatening next year’s harvests."
+              ],
+              "sources": [
+                {
+                  "title": "Economic impact of the 2026 Iran war",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war"
+                },
+                {
+                  "title": "2026 Iran war fuel crisis",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis"
+                },
+                {
+                  "title": "The global energy crisis and its impacts on Asian emerging economies",
+                  "publication": "Atlantic Council",
+                  "url": "https://www.atlanticcouncil.org/wp-content/uploads/2026/06/the-global-energy-crisis-and-its-impacts-on-asian-emerging-economies.pdf"
+                }
+              ]
+            },
+            {
+              "id": "mar-means",
+              "label": "What did it mean?",
+              "type": "means",
+              "question": "What did the closure mean for the world economy?",
+              "answer": [
+                "It was the biggest test yet of the system built after 1973. In April the IMF sketched three paths: 3.1% world growth and 4.4% inflation if the conflict was short, down to 2% growth and inflation above 6% in a severe case. The cushions mostly worked at first, and prices fell back to about $72 when a June memorandum briefly reopened the strait. But the shock showed that spare capacity in the Gulf is no protection against a war in the Gulf."
+              ],
+              "sources": [
+                {
+                  "title": "War Darkens Global Economic Outlook and Reshapes Policy Priorities",
+                  "publication": "IMF Blog",
+                  "url": "https://www.imf.org/en/blogs/articles/2026/04/14/war-darkens-global-economic-outlook-and-reshapes-policy-priorities"
+                },
+                {
+                  "title": "Crude Calculations: Why the Iran War Hasn’t Yet Caused an Oil Shock",
+                  "publication": "Council on Foreign Relations",
+                  "url": "https://www.cfr.org/articles/crude-calculations-why-the-iran-war-hasnt-yet-caused-an-oil-shock"
+                },
+                {
+                  "title": "Economic impact of the 2026 Iran war",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

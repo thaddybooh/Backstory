@@ -122,8 +122,13 @@ it themselves first.
   SBB, DSA, P1 rules, gifted provisions, financial help, preschool, special needs, learning devices, phone rules, AI
   in schools, ITE Work-Study, SkillsFuture Level-Up). Initiative boxes link to the fuller explainers elsewhere on
   each map through `related`.
-- **Next step (not built):** have the write-issue skill add or update a story on the matching map with each new
-  issue, so maps grow daily. Until then, link new issues by hand with the `issue` field.
+- **Daily issues join their map automatically (29 Oct 2026):** step 6 of the write-issue skill adds each new issue
+  as a news story (or several) on the map for its beat, newest first, with the four standard questions, `related`
+  background boxes and `issue` set; it updates boxes the issue makes stale and sets the map's `updated`. If no map
+  fits, it starts one for the lasting beat (`basics` + `news`). Stories use only the issue's facts and cited links.
+  `check:issue` enforces it: an issue no map links is an ERROR, as is a story source the issue doesn't cite, and
+  every map is run through the build's map rules (`issuePlacementProblems` and `mapProblems` in
+  `src/lib/topicmap.mjs`). The World issues published before this (001, 003, 005, 007) are not on a map yet.
 - **Sources:** unlike issue graphs, a map's sources are not checked against an article (there isn't one). The
   education map's answers were written from web research on 28 Oct 2026; some pages (moe.gov.sg,
   schoolbag.edu.sg) could not be opened from the cloud session and were cited from search results.
