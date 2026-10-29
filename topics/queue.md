@@ -14,7 +14,6 @@ then "Commit changes").
 
 ## Up next
 
-- world: The Iran war energy shock -- Peg: war began 28 Feb 2026; the Strait of Hormuz disruption is the IEA's "largest supply disruption in history"; Brent back above $100 in September; Trump said prices won't fall until after the 3 Nov midterms. Scope: how oil shocks pass into inflation, interest rates and recessions; who's most exposed; comparison with 1973, 1990 and 2022; renewables and EV acceleration; the outlook for growth into 2027.
 - singapore: FirstDate and the fertility crisis -- Peg: GovTech's FirstDate pilot (~30 Sep 2026) for public officers aged 21–35, matching one date at a time with the Gale–Shapley algorithm; resident TFR 0.87 in 2025; the August baby package worth ~S$70k per child. Scope: why decades of incentives haven't worked (housing, work culture, cost of raising children, marriage decline); the market-design angle; comparisons with Japan, Korea and the Nordics; what the evidence says actually moves fertility, and whether governments should try at all.
 - world: Indonesia's market crisis -- Peg: mid-Oct 2026, the Jakarta Composite plunged ~11% after MSCI proposed reclassifying Indonesia from Emerging to Standalone market over opaque ownership and suspected coordinated trading, following a January rout and record rupiah lows. Scope: why index providers have so much power (passive fund flows); conglomerate ownership concentration; governance and capital flight; what "investability" means and how weak governance gets priced.
 - singapore: Phone bans in schools -- Peg: from Jan 2026, secondary students can't use phones or smartwatches for the entire school day, matching primary school rules since 2025; follows naturally from the Meta settlement issue. Scope: what the evidence on screens and adolescent wellbeing actually shows (the Haidt debate and its critics); global comparisons (Australia's under-16 social media ban); enforcement and parental pushback. Ask whether restricting access is good policy, or whether the real lever is regulating platform design.
@@ -31,3 +30,4 @@ then "Commit changes").
 - 006 | singapore | Maju Forest and the endgame for BTOs | 2026-10-26
 - 007 | world | The memory squeeze | 2026-10-27
 - 008 | singapore | Singapore’s AI bet and the bottom rung | 2026-10-28
+- 009 | world | The Hormuz oil shock | 2026-10-29
