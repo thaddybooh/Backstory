@@ -10,7 +10,8 @@ finish with a real understanding of a current issue, not just the headlines. It 
 the public, anywhere, not specifically for Singaporeans.
 
 The output is **one new MDX file** in `src/content/issues/`, its **question graph** (a `.graph.json` file next to
-it) and an updated `topics/queue.md`, delivered as a
+it), the issue's **news story on its topic map** (in `src/content/maps/`) and an updated `topics/queue.md`,
+delivered as a
 **pull request to `main`**. Miles reviews the Vercel preview and merges it to publish. **Never merge the pull
 request yourself and never push to `main`.**
 
@@ -158,12 +159,63 @@ Copy `docs/graph-template.json` to `src/content/issues/NNN-short-title.graph.jso
 `npm run check:issue` checks all of this: a missing graph, a link the issue doesn't cite, or a section that
 doesn't exist is an ERROR, and the build refuses such a graph too.
 
-## 6. Update the topic queue
+## 6. Add the issue to its topic map
+
+Topic maps (`src/content/maps/<slug>.json`, shown at `/topics/<slug>/`) are the long-term backbone: one per beat,
+and every daily issue joins one as a news story. The issue page then shows "Where this fits" and the homepage
+puts that map first. Do this **after** the question graph, from the same finished issue.
+
+**Pick the map.** Read the `title`, `track` and `dek` of every map in `src/content/maps/`. Use the map whose beat
+the story most belongs to (an issue on school phone bans goes on the education map; one on CPF payouts goes on the
+ageing map). A map's track doesn't have to match the issue's if the subject clearly fits.
+
+**If no map fits, start one** for the beat, named for the lasting subject rather than this week's event (e.g.
+`energy-and-oil.json` "Oil, energy and the world economy", not "The Iran war energy shock"). Copy the top-level
+fields from an existing map (`title`, `track`, `updated`, `dek`, `intro`, `cover`, `categories`) and give it two
+categories: `basics` (`"kind": "basics"`, with 2 to 4 topics explaining how the underlying system works, drawn
+from the issue's mechanism and background sections, each with 1 to 3 `basics` or `why` questions) and `news`
+(`"kind": "news"`, holding this issue's story). Add `ideas` or `policy` categories only if the issue gives enough
+material for at least two topics in them. The `cover` can reuse the issue's hero photo. Say in the pull request
+that you started a new map.
+
+**Add the story** as the first child of the map's `news` category (stories run newest first). Use
+`rung-warning` in `src/content/maps/ai-and-jobs.json` as the model:
+
+- `id` (unique in the map), `label` (at most 34 characters: the event, e.g. "Leaders warn on the ‘bottom rung’"),
+  `when` (e.g. `"Oct 2026"`), `question` (ending in `?`), `answer` (60 to 220 words: what happened, with the key
+  figures), `sources` (1 to 4), and `"issue": "NNN-short-title"`.
+- `children`: the four questions every story opens with, **in this order**, with these `type`s: `why` ("Why
+  now?"), `what` ("What's changing?"), `who` ("Who does it affect?"), `means` ("What does it mean?"). Then, if the
+  issue supports them, up to 3 more (`debate` for "Where reasonable people disagree", or a second `why` for the
+  deeper cause). Each child can have its own children, typed the same way.
+- `related`: ids of the map's existing background boxes (basics, ideas or policy topics) a reader new to the
+  subject should open first. The first ones become the issue page's "New to this? Start with" links, so pick the
+  most useful two or three. If the issue covers a government initiative that has a box in the `policy` category,
+  relate to it.
+- If the issue has two or three separate developments (a policy change and a court case, say), add each as its
+  own story with the same `issue`, newest first. Never put the same issue's stories on two different maps.
+
+**Same rules as the question graph**: use only what the issue says, and copy every source URL exactly from the
+issue's Sources list or reading lists. Answers are short versions of the issue's own explanation, not new
+research.
+
+**Update the rest of the map**:
+
+- If the map already has a box for this development (a story added by hand without `issue`, or an initiative in
+  `policy`), update that box with the issue's newer facts and add `"issue"` to it instead of adding a duplicate.
+- If the issue changes a fact stated elsewhere in the map (a new figure, a scheme that has ended), correct that
+  box and say so in the pull request.
+- Set the map's `updated` to the issue's date.
+
+`npm run check:issue` errors if no map links the issue, if a story cites a link the issue doesn't, or if any map
+breaks the build's rules (ids, label length, answer length, the four story questions, `related` ids).
+
+## 7. Update the topic queue
 
 In `topics/queue.md`, remove the topic's line from "Up next" (if it came from the queue) and add a line under
 "Published": `- NNN | track | Title | YYYY-MM-DD`.
 
-## 7. Check, build, fix
+## 8. Check, build, fix
 
 ```sh
 npm run check:issue    # rules from the brief; fix every ERROR, read every warning
@@ -177,20 +229,23 @@ so in the pull request. Then undo files the build changes:
 git checkout -- src/data/commons-images.json
 ```
 
-## 8. Commit and open the pull request
+## 9. Commit and open the pull request
 
-- Commit only the new issue, its `.graph.json` and `topics/queue.md`. Message: `Issue NNN: <title>`.
+- Commit only the new issue, its `.graph.json`, the topic map you changed or started and `topics/queue.md`.
+  Message: `Issue NNN: <title>`.
 - Push the branch and open a pull request to `main` with the GitHub tools available in the session.
   Title: `Issue NNN (World|Singapore): <title>`. Description:
   - one paragraph on what the issue covers and its angle;
   - word count, read time, number of sources and photos (from `npm run check:issue`), and the number of
     questions and follow-ups in the graph;
+  - which topic map the issue joined (or that you started a new one), the stories added and any other boxes you
+    changed;
   - any remaining checker warnings, and anything Miles should verify (conflicting figures, single-source
     claims, photos that couldn't be checked);
   - "Merge this pull request to publish. Vercel posts a preview link below."
 - If you couldn't produce an issue that passes the checks, open it as a **draft** pull request and explain
   exactly what is blocking.
 
-## 9. Reply
+## 10. Reply
 
-Tell Miles in a few lines: the topic, the pull request link, and any caveats. Don't repeat the content.
+Tell Miles in a few lines: the topic, the topic map it joined, the pull request link, and any caveats. Don't repeat the content.

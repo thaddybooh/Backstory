@@ -70,3 +70,43 @@ export function mapProblems(map, issueIds) {
     }
   return problems;
 }
+
+/**
+ * Where an issue sits in the topic maps, for check:issue. Every new issue joins a map as one
+ * or more news stories whose `issue` field names it; those stories and the questions under
+ * them may only cite links the issue itself cites, like its question graph. (A passing
+ * mention deeper in a map, linked with `issue`, may cite wider research.)
+ * @param {{ id: string, map: any }[]} maps every parsed map with its file name (minus .json)
+ * @param {string} issueId the issue's file name without .mdx
+ * @param {string} body the issue's MDX body
+ * @returns {{ errors: string[], warnings: string[], placements: string[] }} placements as "map › category › box"
+ */
+export function issuePlacementProblems(maps, issueId, body) {
+  const errors = [];
+  const warnings = [];
+  const placements = [];
+  for (const { id, map } of maps) {
+    for (const category of map.categories ?? []) {
+      for (const { node, depth } of walk(category.children ?? [], 2)) {
+        if (node.issue !== issueId) continue;
+        const story = category.kind === 'news' && depth === 2;
+        placements.push({ map: id, path: `${id} › ${category.id} › ${node.id}${story ? '' : ' (passing mention)'}`, story });
+        if (!story) continue;
+        // The story and the questions under it, except any that point to a different issue.
+        const own = [...walk([node])].filter(({ node: n }) => n === node || !n.issue || n.issue === issueId);
+        for (const { node: n } of own)
+          for (const s of n.sources ?? [])
+            if (!s?.url || (!body.includes(`(${s.url})`) && !body.includes(`"${s.url}"`)))
+              errors.push(`Map ${id}, box "${n.id}": source ${s?.url ?? '(no url)'} does not appear in the issue. Only cite links the issue itself cites.`);
+      }
+    }
+  }
+  const storyMaps = new Set(placements.filter((p) => p.story).map((p) => p.map));
+  if (!placements.length)
+    errors.push(`No topic map links to this issue. Add it as a news story (with "issue": "${issueId}") to the map for its beat, or start a new map.`);
+  else if (!storyMaps.size)
+    warnings.push('The issue is linked from a topic map, but not as a news story in an "In the news" category.');
+  if (storyMaps.size > 1)
+    warnings.push(`The issue has news stories on ${storyMaps.size} maps (${[...storyMaps].join(', ')}); one map is usually enough (link others with "issue" on a deeper box).`);
+  return { errors, warnings, placements: placements.map((p) => p.path) };
+}

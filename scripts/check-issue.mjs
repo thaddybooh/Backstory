@@ -5,7 +5,8 @@
 //   npm run check:issue -- --offline        skips the Wikimedia Commons photo check
 //   npm run check:issue -- --links          also tries to open every link (slow; warnings only)
 //
-// It also checks the issue's question graph (NNN-slug.graph.json next to the issue).
+// It also checks the issue's question graph (NNN-slug.graph.json next to the issue) and that a
+// topic map (src/content/maps/) carries the issue as a news story.
 //
 // Errors must be fixed before publishing. Warnings are worth a look but don't block.
 // Exits with code 1 if there are any errors. It does not build the site: run `npm run build` too.
@@ -15,11 +16,13 @@ import { execFileSync } from 'node:child_process';
 import path from 'node:path';
 import { parse } from 'yaml';
 import { graphProblems, issueAnchors } from '../src/lib/graph.mjs';
+import { issuePlacementProblems, mapProblems } from '../src/lib/topicmap.mjs';
 import { filesInText, licenceProblem, lookup, stripHtml } from './fetch-images.mjs';
 import { readIssues } from './next-issue.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const CONTENT = path.join(ROOT, 'src/content/issues');
+const MAPS = path.join(ROOT, 'src/content/maps');
 const args = process.argv.slice(2);
 const OFFLINE = args.includes('--offline');
 const CHECK_LINKS = args.includes('--links');
@@ -32,6 +35,21 @@ async function knownComponents() {
   const text = await readFile(path.join(ROOT, 'src/components/issue/index.ts'), 'utf8');
   const block = text.match(/issueComponents = \{([\s\S]*?)\}/)?.[1] ?? '';
   return new Set(block.split(/[\s,]+/).filter(Boolean));
+}
+
+/** Every topic map, parsed, with its id (the file name without .json). */
+async function readMaps() {
+  const files = (await readdir(MAPS)).filter((f) => f.endsWith('.json')).sort();
+  return Promise.all(
+    files.map(async (f) => {
+      const id = f.replace(/\.json$/, '');
+      try {
+        return { id, map: JSON.parse(await readFile(path.join(MAPS, f), 'utf8')) };
+      } catch (err) {
+        return { id, map: {}, error: err.message };
+      }
+    }),
+  );
 }
 
 function changedIssueFiles() {
@@ -69,7 +87,7 @@ function section(body, headingPattern) {
   return hit ?? null;
 }
 
-async function checkFile(file, all, components) {
+async function checkFile(file, all, components, maps) {
   const errors = [];
   const warnings = [];
   const E = (m) => errors.push(m);
@@ -239,6 +257,17 @@ async function checkFile(file, all, components) {
     }
   }
 
+  // ---------- Topic map ----------
+  const issueId = name.replace(/\.mdx$/, '');
+  const placed = issuePlacementProblems(maps, issueId, body);
+  placed.errors.forEach(E);
+  placed.warnings.forEach(W);
+  const mapSummary = placed.placements.length ? `map: ${placed.placements.join('; ')}` : 'not on a topic map';
+  for (const { id, map } of maps.filter((m) => placed.placements.some((p) => p.startsWith(`${m.id} ›`)))) {
+    const updated = String(map.updated ?? '').slice(0, 10);
+    if (updated < dateString) W(`Map ${id} holds this issue but its "updated" date (${updated}) is before the issue's (${dateString}).`);
+  }
+
   // ---------- Links (optional) ----------
   if (CHECK_LINKS) {
     const urls = [...new Set([...body.matchAll(/\]\((https?:\/\/[^)\s]+)\)|href="(https?:\/\/[^"]+)"/g)].map((m) => m[1] ?? m[2]))];
@@ -254,7 +283,7 @@ async function checkFile(file, all, components) {
     );
   }
 
-  return { errors, warnings, words, minutes, photos: photos.length, sources: sourceLinks.length, graphSummary };
+  return { errors, warnings, words, minutes, photos: photos.length, sources: sourceLinks.length, graphSummary, mapSummary };
 }
 
 async function main() {
@@ -268,14 +297,28 @@ async function main() {
   }
 
   const components = await knownComponents();
+  const maps = await readMaps();
   let failed = false;
+
+  // Every map must still pass the build's rules after the new story is added.
+  const issueIds = new Set(all.map((i) => i.file.replace(/\.mdx$/, '')));
+  const mapErrors = maps.flatMap(({ id, map, error }) =>
+    error ? [`Map ${id} is not valid JSON: ${error}`] : mapProblems(map, issueIds).map((p) => `Map ${id}: ${p}`),
+  );
+  if (mapErrors.length) {
+    console.log('\nsrc/content/maps');
+    for (const e of mapErrors) console.log(`  ERROR    ${e}`);
+    failed = true;
+  }
+
   for (const file of files) {
-    const r = await checkFile(file, all, components);
+    const r = await checkFile(file, all, components, maps);
     console.log(`\n${path.relative(ROOT, file)}`);
     if (r.words !== undefined)
       console.log(
         `  ${r.words.toLocaleString('en')} words before Sources (about ${r.minutes} min), ${r.sources} sources, ${r.photos} photos, ${r.graphSummary}`,
       );
+    if (r.mapSummary) console.log(`  ${r.mapSummary}`);
     for (const e of r.errors) console.log(`  ERROR    ${e}`);
     for (const w of r.warnings) console.log(`  warning  ${w}`);
     if (!r.errors.length && !r.warnings.length) console.log('  All checks passed.');
