@@ -1,7 +1,7 @@
 {
   "title": "Singapore’s ageing society",
   "track": "singapore",
-  "updated": "2026-10-28",
+  "updated": "2026-10-30",
   "dek": "Singapore is now super-aged. How it pays for old age, health care and care, every government initiative, the debates over who should carry the cost, and every change in the news.",
   "intro": "Start with The basics if you are new to the topic, then Big ideas and debates for the policy thinking behind it. What the government is doing is a bird’s-eye view of every major initiative, from Age Well SG to CareShield Life. In the news holds each recent change, and every story opens into the same four questions: why is it happening, what is changing, who does it affect, and what does it mean.",
   "cover": {
@@ -1006,7 +1006,7 @@
               "question": "What is the Large Families Scheme?",
               "answer": [
                 "Extra support, announced in Budget 2025, for the third and later Singapore citizen children born from 18 February 2025. The Child Development Account First Step Grant doubles to S$10,000, the mother gets a S$5,000 MediSave grant, and the family gets S$1,000 a year in LifeSG credits from the child’s first to sixth birthday: up to S$16,000 per child.",
-                "It targets the decision to have a third child, where analysts argue cost weighs most. Existing large families with a young child also get the credits."
+                "It targets the decision to have a third child, where analysts argue cost weighs most. Existing large families with a young child also get the credits. The scheme is being folded into the SG Child Support Package from April 2027; large families keep an extra MediSave grant, and the government is considering more help with transport and housing."
               ],
               "sources": [
                 {
@@ -1023,6 +1023,11 @@
                   "title": "Snap insight: why Budget 2025 is making it more affordable to have larger families",
                   "publication": "Institute of Policy Studies",
                   "url": "https://lkyspp.nus.edu.sg/ips/publications/details/snap-insight-why-budget-2025-is-making-it-more-affordable-to-have-larger-families"
+                },
+                {
+                  "title": "National Day Rally 2026 in summary: supporting families, preserving culture & growing bigger",
+                  "publication": "Mothership",
+                  "url": "https://mothership.sg/2026/08/ndr-2026-summary/"
                 }
               ],
               "children": []
@@ -1033,8 +1038,8 @@
               "type": "initiative",
               "question": "What did the 2026 National Day Rally offer families?",
               "answer": [
-                "A package the prime minister said would give every Singaporean child almost S$70,000 in direct support as they grow up. It includes full-day childcare fees at government-supported preschools falling to S$150 a month and infant care to S$300 by 2030, for every child regardless of household income, yearly Edusave top-ups, and S$10,000 into each child’s Post-Secondary Education Account at 17, from April 2027.",
-                "It marks a shift from targeted help towards support for every child, aimed at helping families afford children as births fall."
+                "A package announced at the National Day Rally on 23 August 2026, worth almost S$70,000 in direct support for every citizen child from birth to 17. It replaces the Baby Bonus and the Large Families Scheme from April 2027: a S$10,000 Baby Gift, a S$5,000 MediSave grant, a Child Development Account with S$5,000 plus up to S$5,000 in matching, Child Credits of S$2,000 a year from age 1 to 16, Edusave top-ups and S$10,000 for post-secondary education at 17.",
+                "Full-day childcare fees at government-supported preschools are to fall to S$150 a month and infant care to S$300 by about 2030, for every child regardless of income, and childcare leave rises to as much as 12 days a year per parent. It marks a shift from rewarding births towards supporting parents throughout childhood."
               ],
               "sources": [
                 {
@@ -1043,12 +1048,18 @@
                   "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
                 },
                 {
-                  "title": "National Day Rally 2026 in summary",
+                  "title": "National Day Rally 2026 in summary: supporting families, preserving culture & growing bigger",
                   "publication": "Mothership",
                   "url": "https://mothership.sg/2026/08/ndr-2026-summary/"
+                },
+                {
+                  "title": "National Day Rally 2026: Singapore parents to get up to 12 days of childcare leave as family support expands",
+                  "publication": "NTUC",
+                  "url": "https://www.ntuc.org.sg/uportal/news/National-Day-Rally-2026-Singapore-parents-to-get-up-to-12-days-of-childcare-leave/"
                 }
               ],
-              "children": []
+              "children": [],
+              "issue": "010-firstdate-and-the-fertility-crisis"
             },
             {
               "id": "immigration-targets",
@@ -1104,6 +1115,326 @@
         }
       ],
       "children": [
+        {
+          "id": "firstdate",
+          "label": "The state turns matchmaker",
+          "when": "Sep 2026",
+          "question": "Why did Singapore’s government launch a dating service?",
+          "answer": [
+            "On 29 September 2026, GovTech unveiled FirstDate, a pilot dating service for single public officers aged 21 to 35. Users verify their identity with Singpass, answer a questionnaire, and get one match at a time, chosen by the Gale–Shapley algorithm; both sides have three days to accept. Applications closed on 5 October.",
+            "The website does not mention birth rates, but it arrived as fertility hit a record low of 0.87 and marriages fell for a third year. Reactions ranged from curiosity to calling it “dystopian”."
+          ],
+          "sources": [
+            {
+              "title": "It’s a match! GovTech rolls out dating pilot",
+              "publication": "AsiaOne",
+              "url": "https://www.asiaone.com/lifestyle/singapore-dating-pilot-govtech"
+            },
+            {
+              "title": "Singapore is tapping a Nobel-winning formula to help its singles get dates",
+              "publication": "Fortune",
+              "url": "https://fortune.com/2026/10/01/singapore-firstdate-government-workers-dating/"
+            },
+            {
+              "title": "Singapore turns matchmaker amid rock-bottom birthrate",
+              "publication": "Al Jazeera",
+              "url": "https://www.aljazeera.com/economy/2026/10/5/singapore-turns-matchmaker-amid-rock-bottom-birthrate"
+            }
+          ],
+          "related": [
+            "fertility",
+            "child-support-2026"
+          ],
+          "issue": "010-firstdate-and-the-fertility-crisis",
+          "children": [
+            {
+              "id": "fd-why",
+              "label": "Why now?",
+              "type": "why",
+              "question": "Why is the government trying matchmaking now?",
+              "answer": [
+                "Because marriage is a big part of the birth problem. Almost all children in Singapore are born to married couples, and couples are marrying later and less often: brides now marry at a median age of 29.6, and citizen marriages fell 5.6% in 2025.",
+                "When young people are asked why they are not dating or marrying, the most common answers are that they have not met the right person or prefer to stay single. A matching service targets the first of these."
+              ],
+              "sources": [
+                {
+                  "title": "7 in 10 young Singaporeans feel it is not necessary to marry, but most still want to: Poll",
+                  "publication": "The Straits Times (via Institute of Policy Studies)",
+                  "url": "https://lkyspp.nus.edu.sg/docs/default-source/ips/st_7-in-10-young-singaporeans-feel-it-is-not-necessary-to-marry-but-most-still-want-to-poll_20240129.pdf"
+                },
+                {
+                  "title": "Population in Brief 2026",
+                  "publication": "National Population and Talent Division",
+                  "url": "https://www.population.gov.sg/media-centre/population-in-brief-2026/"
+                },
+                {
+                  "title": "Marriages in Singapore fall further in 2025, but most people say they are happily married",
+                  "publication": "The Straits Times via The Star",
+                  "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/07/10/marriages-in-singapore-fall-further-in-2025-but-most-people-say-they-are-happily-married"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "fd-what",
+              "label": "What’s changing?",
+              "type": "what",
+              "question": "What is different about FirstDate?",
+              "answer": [
+                "Instead of a feed of profiles to swipe, each user gets a single verified match per cycle, with a compatibility score, and 72 hours to say yes. Contact details are shared only if both agree, and the website says data will not be sold.",
+                "The matching uses the Gale–Shapley algorithm, which finds pairings where no two people would both rather be with each other than with their match. The method is used to match doctors to hospitals, and its inventors’ work won a Nobel prize in 2012."
+              ],
+              "sources": [
+                {
+                  "title": "Singapore is tapping a Nobel-winning formula to help its singles get dates",
+                  "publication": "Fortune",
+                  "url": "https://fortune.com/2026/10/01/singapore-firstdate-government-workers-dating/"
+                },
+                {
+                  "title": "It’s a match! GovTech rolls out dating pilot",
+                  "publication": "AsiaOne",
+                  "url": "https://www.asiaone.com/lifestyle/singapore-dating-pilot-govtech"
+                },
+                {
+                  "title": "Gale–Shapley algorithm",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/Gale%E2%80%93Shapley_algorithm"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "fd-who",
+              "label": "Who does it affect?",
+              "type": "who",
+              "question": "Who can use FirstDate?",
+              "answer": [
+                "Only single public officers aged 21 to 35, in a pilot. GovTech has said no decision has been made on expanding it to the wider public.",
+                "That limit drew criticism: some said it shut out everyone outside the public service, and one critic asked why people over 35 were excluded. Others welcomed a service where everyone is verified and the risk of scams is lower."
+              ],
+              "sources": [
+                {
+                  "title": "Singapore turns matchmaker amid rock-bottom birthrate",
+                  "publication": "Al Jazeera",
+                  "url": "https://www.aljazeera.com/economy/2026/10/5/singapore-turns-matchmaker-amid-rock-bottom-birthrate"
+                },
+                {
+                  "title": "Singapore is tapping a Nobel-winning formula to help its singles get dates",
+                  "publication": "Fortune",
+                  "url": "https://fortune.com/2026/10/01/singapore-firstdate-government-workers-dating/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "fd-means",
+              "label": "What does it mean?",
+              "type": "means",
+              "question": "Can matchmaking raise Singapore’s birth rate?",
+              "answer": [
+                "Not by much. Even a very successful service would add a few hundred marriages to about 24,700 a year, and married couples themselves are having few children: about one in six married women in their forties has none. Tokyo’s government dating app had led to 265 marriages.",
+                "The deeper barriers are what happens after people meet: the cost and stress of raising children, workplaces that penalise parents, and unequal burdens on women. FirstDate’s main value may be the data it gives the government on why people are not pairing up."
+              ],
+              "sources": [
+                {
+                  "title": "Singapore turns matchmaker amid rock-bottom birthrate",
+                  "publication": "Al Jazeera",
+                  "url": "https://www.aljazeera.com/economy/2026/10/5/singapore-turns-matchmaker-amid-rock-bottom-birthrate"
+                },
+                {
+                  "title": "Marriages in Singapore fall further in 2025, but most people say they are happily married",
+                  "publication": "The Straits Times via The Star",
+                  "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/07/10/marriages-in-singapore-fall-further-in-2025-but-most-people-say-they-are-happily-married"
+                },
+                {
+                  "title": "Singapore launches dating service for public servants",
+                  "publication": "AFP via The Star",
+                  "url": "https://www.thestar.com.my/tech/tech-news/2026/10/01/singapore-launches-dating-service-for-public-servants"
+                }
+              ],
+              "related": [
+                "fertility"
+              ],
+              "children": []
+            },
+            {
+              "id": "fd-debate",
+              "label": "Should the state do this?",
+              "type": "debate",
+              "question": "Should the government be involved in people’s love lives?",
+              "answer": [
+                "Supporters say it is a free, voluntary, low-cost experiment that tackles a real complaint about exhausting, scam-ridden dating apps. Critics call it intrusive and a technical fix for a social problem.",
+                "Singapore has history here: the Social Development Unit, set up in 1984 to match graduate singles, became a national joke, and the Great Marriage Debate of 1983–84 drew a fierce backlash. A sociologist told Al Jazeera past state matchmaking was probably neither significant nor cost effective."
+              ],
+              "sources": [
+                {
+                  "title": "Singapore turns matchmaker amid rock-bottom birthrate",
+                  "publication": "Al Jazeera",
+                  "url": "https://www.aljazeera.com/economy/2026/10/5/singapore-turns-matchmaker-amid-rock-bottom-birthrate"
+                },
+                {
+                  "title": "Population planning in Singapore",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/Population_planning_in_Singapore"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "record-low-tfr",
+          "label": "Fertility hits a record 0.87",
+          "when": "Feb 2026",
+          "question": "What did the 2025 fertility figures show?",
+          "answer": [
+            "On 26 February 2026, Deputy Prime Minister Gan Kim Yong told Parliament the resident total fertility rate fell to 0.87 in 2025 from 0.97, a record low, calling it an “existential challenge”. Citizen births fell 10.8% to 26,071, confirmed in September.",
+            "At that rate, every 100 residents would have 44 children and 19 grandchildren, and the number of citizens could start to shrink in the early 2040s without more immigration."
+          ],
+          "sources": [
+            {
+              "title": "Singapore’s fertility rate sinks to new low of 0.87, citizen population could shrink by early 2040s",
+              "publication": "The Straits Times via The Star",
+              "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/02/27/singapores-fertility-rate-sinks-to-new-low-of-087-citizen-population-could-shrink-by-early-2040s"
+            },
+            {
+              "title": "After 40 years of parenthood incentives Singapore’s fertility rate is still falling",
+              "publication": "ABC News",
+              "url": "https://www.abc.net.au/news/2026-03-12/singapore-low-fertility-rate-existential-challenge/106397470"
+            },
+            {
+              "title": "Population in Brief 2026",
+              "publication": "National Population and Talent Division",
+              "url": "https://www.population.gov.sg/media-centre/population-in-brief-2026/"
+            }
+          ],
+          "related": [
+            "fertility",
+            "immigration"
+          ],
+          "issue": "010-firstdate-and-the-fertility-crisis",
+          "children": [
+            {
+              "id": "tfr-why",
+              "label": "Why now?",
+              "type": "why",
+              "question": "Why did fertility fall so sharply in 2025?",
+              "answer": [
+                "The fall continues a long decline: fertility has been below replacement since the 1970s and was 1.24 in 2015. Marriages are later and fewer, and couples have fewer children, citing cost, stress, work pressures and, for many women, an unequal share of work at home.",
+                "Forty years of incentives, from the Baby Bonus to housing priority, have not reversed it, because they mostly pay for births while the barriers are long-term costs and how work and family are organised."
+              ],
+              "sources": [
+                {
+                  "title": "After 40 years of parenthood incentives Singapore’s fertility rate is still falling",
+                  "publication": "ABC News",
+                  "url": "https://www.abc.net.au/news/2026-03-12/singapore-low-fertility-rate-existential-challenge/106397470"
+                },
+                {
+                  "title": "7 in 10 young Singaporeans feel it is not necessary to marry, but most still want to: Poll",
+                  "publication": "The Straits Times (via Institute of Policy Studies)",
+                  "url": "https://lkyspp.nus.edu.sg/docs/default-source/ips/st_7-in-10-young-singaporeans-feel-it-is-not-necessary-to-marry-but-most-still-want-to-poll_20240129.pdf"
+                },
+                {
+                  "title": "‘Too high a cost’: Singaporeans say parenthood isn’t worth it despite years of cash incentives",
+                  "publication": "VnExpress International",
+                  "url": "https://e.vnexpress.net/news/news/too-high-a-cost-singaporeans-say-parenthood-isn-t-worth-it-despite-years-of-cash-incentives-5048385.html"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "tfr-what",
+              "label": "What’s changing?",
+              "type": "what",
+              "question": "How is the government responding?",
+              "answer": [
+                "With more immigration and more family support. The government plans 25,000 to 30,000 new citizens and about 40,000 new permanent residents a year for five years. In August it announced the SG Child Support Package, much cheaper preschool and more childcare leave.",
+                "Its language has also changed, from incentives for births to making life easier for families, with a “Marriage and Parenthood Reset” workgroup looking at attitudes, workplaces and community support."
+              ],
+              "sources": [
+                {
+                  "title": "Singapore’s fertility rate sinks to new low of 0.87, citizen population could shrink by early 2040s",
+                  "publication": "The Straits Times via The Star",
+                  "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/02/27/singapores-fertility-rate-sinks-to-new-low-of-087-citizen-population-could-shrink-by-early-2040s"
+                },
+                {
+                  "title": "National Day Rally 2026",
+                  "publication": "Prime Minister’s Office",
+                  "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
+                },
+                {
+                  "title": "‘Too high a cost’: Singaporeans say parenthood isn’t worth it despite years of cash incentives",
+                  "publication": "VnExpress International",
+                  "url": "https://e.vnexpress.net/news/news/too-high-a-cost-singaporeans-say-parenthood-isn-t-worth-it-despite-years-of-cash-incentives-5048385.html"
+                }
+              ],
+              "related": [
+                "child-support-2026",
+                "immigration-targets"
+              ],
+              "children": []
+            },
+            {
+              "id": "tfr-who",
+              "label": "Who does it affect?",
+              "type": "who",
+              "question": "Who is most affected by the falling birth rate?",
+              "answer": [
+                "Fertility is lowest among ethnic Chinese residents, about three-quarters of the population, at about 0.7, against 1.53 for Malays. The government has committed to keeping the broad ethnic balance of citizens, which shapes its immigration choices.",
+                "Over time it affects everyone: fewer workers supporting more retirees, as more than one in four citizens are projected to be 65 or older by 2035."
+              ],
+              "sources": [
+                {
+                  "title": "‘Too high a cost’: Singaporeans say parenthood isn’t worth it despite years of cash incentives",
+                  "publication": "VnExpress International",
+                  "url": "https://e.vnexpress.net/news/news/too-high-a-cost-singaporeans-say-parenthood-isn-t-worth-it-despite-years-of-cash-incentives-5048385.html"
+                },
+                {
+                  "title": "Singapore’s fertility rate sinks to new low of 0.87, citizen population could shrink by early 2040s",
+                  "publication": "The Straits Times via The Star",
+                  "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/02/27/singapores-fertility-rate-sinks-to-new-low-of-087-citizen-population-could-shrink-by-early-2040s"
+                },
+                {
+                  "title": "Population in Brief 2026",
+                  "publication": "National Population and Talent Division",
+                  "url": "https://www.population.gov.sg/media-centre/population-in-brief-2026/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "tfr-means",
+              "label": "What does it mean?",
+              "type": "means",
+              "question": "Can governments reverse a fertility rate this low?",
+              "answer": [
+                "Probably not to replacement. No rich, urban society has been brought back to two children per woman, and evidence from Hungary, the Nordic countries and East Asia suggests money mainly changes when people have children more than how many. South Korea’s rise from 0.72 to 0.80 shows some recovery is possible.",
+                "The stronger case is for helping people have the children they say they want, through childcare, time and fairer workplaces, while preparing for an older, smaller population."
+              ],
+              "sources": [
+                {
+                  "title": "‘Too high a cost’: Singaporeans say parenthood isn’t worth it despite years of cash incentives",
+                  "publication": "VnExpress International",
+                  "url": "https://e.vnexpress.net/news/news/too-high-a-cost-singaporeans-say-parenthood-isn-t-worth-it-despite-years-of-cash-incentives-5048385.html"
+                },
+                {
+                  "title": "Family policy in Hungary",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/Family_policy_in_Hungary"
+                },
+                {
+                  "title": "Natalism",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/Natalism"
+                }
+              ],
+              "related": [
+                "fertility"
+              ],
+              "children": []
+            }
+          ]
+        },
         {
           "id": "super-aged-news",
           "label": "Singapore turns super-aged",
