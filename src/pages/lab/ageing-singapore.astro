@@ -1,0 +1,113 @@
+---
+// A preview of a new look for topic maps: the whole subject laid out like a mind map on
+// an open canvas, seen from above, that you fly into. Not linked from anywhere yet and
+// kept out of search engines, so it can be tried without touching the live map at
+// /topics/ageing-singapore/.
+import Base from '../../layouts/Base.astro';
+import { getMap, countQuestions, QUESTION_TYPE, CATEGORY_KIND, type MapCategory, type MapNode } from '../../lib/topicmap-data';
+import { TRACK_LABEL } from '../../lib/issues';
+import '../../styles/canvasmap.css';
+
+const map = (await getMap('ageing-singapore'))!;
+const { data } = map;
+
+// Flatten the map into a list of nodes for the canvas script, parents before children.
+interface CanvasNode {
+  id: string;
+  parent?: string;
+  depth: number;
+  category: string;
+  label: string;
+  question: string;
+  answer: string[];
+  sources: { title: string; publication: string; url: string }[];
+  type?: string;
+  when?: string;
+  issue?: string;
+  related: string[];
+}
+const nodes: CanvasNode[] = [];
+const visit = (n: MapCategory | MapNode, category: MapCategory, depth: number, parent?: string) => {
+  nodes.push({
+    id: n.id,
+    parent,
+    depth,
+    category: category.kind,
+    label: n.label,
+    question: n.question,
+    answer: n.answer,
+    sources: n.sources,
+    type: 'type' in n ? n.type : undefined,
+    when: 'when' in n ? n.when : undefined,
+    issue: 'issue' in n ? n.issue : undefined,
+    related: 'related' in n ? n.related : [],
+  });
+  n.children.forEach((c) => visit(c, category, depth + 1, n.id));
+};
+data.categories.forEach((c) => visit(c, c, 1));
+const payload = JSON.stringify({ title: data.title, dek: data.dek, nodes, types: QUESTION_TYPE, kinds: CATEGORY_KIND }).replace(/</g, '\\u003c');
+---
+
+<Base title={`${data.title}: canvas preview`} description={data.dek} track={data.track} noindex>
+  <section class="cv" data-track={data.track} aria-label={`Topic map: ${data.title}`}>
+    <div class="cv-stage" tabindex="-1">
+      <div class="cv-world">
+        <svg class="cv-links" aria-hidden="true"></svg>
+        <div class="cv-nodes"></div>
+      </div>
+    </div>
+
+    <header class="cv-head">
+      <p class="cv-kicker">Topic map · {TRACK_LABEL[data.track]} · <span>Canvas preview</span></p>
+      <h1>{data.title}</h1>
+      <p class="cv-meta">{countQuestions(data.categories)} questions · tap any bubble to fly in</p>
+      <nav class="cv-trail" aria-label="Where you are" hidden></nav>
+    </header>
+
+    <div class="cv-controls" role="group" aria-label="Map view">
+      <button type="button" data-zoom="in" aria-label="Zoom in">+</button>
+      <button type="button" data-zoom="out" aria-label="Zoom out">−</button>
+      <button type="button" data-zoom="fit" aria-label="Back to the whole map">
+        <svg viewBox="0 0 16 16" aria-hidden="true"
+          ><path d="M1 5V1h4M11 1h4v4M15 11v4h-4M5 15H1v-4" fill="none" stroke="currentColor" stroke-width="1.6"></path></svg
+        >
+      </button>
+    </div>
+
+    <div class="cv-mini" aria-hidden="true"><svg></svg></div>
+
+    <details class="cv-key">
+      <summary>Key</summary>
+      <ul>
+        {
+          Object.entries(QUESTION_TYPE).map(([type, label]) => (
+            <li data-type={type}>
+              <i></i>
+              {label}
+            </li>
+          ))
+        }
+      </ul>
+    </details>
+
+    <aside class="cv-panel" role="dialog" aria-modal="false" aria-labelledby="cv-panel-title" hidden>
+      <div class="cv-grab" aria-hidden="true"></div>
+      <div class="cv-panel-top">
+        <p class="cv-panel-kicker"></p>
+        <button type="button" class="cv-close" aria-label="Close the answer">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.8"></path></svg>
+        </button>
+      </div>
+      <h2 class="cv-panel-title" id="cv-panel-title" tabindex="-1"></h2>
+      <div class="cv-panel-body"></div>
+    </aside>
+
+    <noscript><p class="cv-noscript">This preview needs JavaScript. The full map is at <a href={`/topics/${map.id}/`}>the topic page</a>.</p></noscript>
+    <script type="application/json" id="cv-data" set:html={payload} />
+  </section>
+</Base>
+
+<script>
+  const section = document.querySelector<HTMLElement>('.cv');
+  if (section) import('../../components/canvasmap/canvasmap').then((m) => m.mountCanvasMap(section));
+</script>

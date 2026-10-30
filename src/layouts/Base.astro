@@ -13,9 +13,11 @@ interface Props {
   type?: 'website' | 'article';
   publishedTime?: Date;
   track?: 'world' | 'singapore';
+  /** Keep the page out of search engines (unlinked previews). */
+  noindex?: boolean;
 }
 
-const { title, description = SITE.description, ogImage = '/og/default.png', type = 'website', publishedTime, track } =
+const { title, description = SITE.description, ogImage = '/og/default.png', type = 'website', publishedTime, track, noindex } =
   Astro.props;
 const fullTitle = title ? `${title} | ${SITE.name}` : `${SITE.name} | ${SITE.tagline[0].toUpperCase() + SITE.tagline.slice(1)}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -31,6 +33,7 @@ const current = (href: string) => (path === href || (href !== '/' && path.starts
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="alternate" type="application/rss+xml" title={SITE.name} href="/rss.xml" />
