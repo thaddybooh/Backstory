@@ -301,6 +301,91 @@ mark {
 .intro-primary {
   --accent: var(--world);
 }
+/* Title screen entrance: the words rise in, the question mark drops and swings into its tilt,
+   then the text follows and the depth figure digs down one layer at a time.
+   Hidden only when the script can reveal it and the reader is fine with motion. */
+@media (prefers-reduced-motion: no-preference) {
+  html.js .intro:not(.is-in) :is(.intro-w, .intro-q, .intro-slogan, .intro-dek, .intro-facts li, .intro-actions, .depth-top, .depth-layers li, .depth figcaption) {
+    opacity: 0;
+  }
+  html.js .intro:not(.is-in) .depth-line {
+    opacity: 0;
+  }
+  .intro.is-in .intro-w {
+    display: inline-block;
+    animation: intro-rise 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+  .intro.is-in .intro-w:nth-child(2) {
+    animation-delay: 0.15s;
+  }
+  .intro.is-in .intro-q {
+    animation:
+      intro-drop 0.6s cubic-bezier(0.3, 0, 0.6, 1) 0.45s both,
+      intro-swing 1.4s ease-out 1.05s both;
+  }
+  .intro.is-in :is(.intro-slogan, .intro-dek, .intro-facts li, .intro-actions) {
+    animation: intro-fade 0.7s ease-out both;
+  }
+  .intro.is-in .intro-slogan { animation-delay: 0.9s; }
+  .intro.is-in .intro-dek { animation-delay: 1.05s; }
+  .intro.is-in .intro-facts li:nth-child(1) { animation-delay: 1.25s; }
+  .intro.is-in .intro-facts li:nth-child(2) { animation-delay: 1.33s; }
+  .intro.is-in .intro-facts li:nth-child(3) { animation-delay: 1.41s; }
+  .intro.is-in .intro-facts li:nth-child(4) { animation-delay: 1.49s; }
+  .intro.is-in .intro-actions { animation-delay: 1.65s; }
+
+  .intro.is-in .depth-top {
+    animation: intro-fade 0.6s ease-out 0.5s both;
+  }
+  .intro.is-in .depth-line {
+    animation: intro-fade 0.4s ease-out 0.9s both;
+  }
+  .intro.is-in .depth-line::before,
+  .intro.is-in .depth-line::after {
+    animation: intro-draw 0.6s ease-out 0.9s both;
+  }
+  .intro.is-in .depth-line::before { transform-origin: right; }
+  .intro.is-in .depth-line::after { transform-origin: left; }
+  .intro.is-in .depth-layers li {
+    animation: intro-dig 0.55s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+  .intro.is-in .depth-layers li:nth-child(1) { animation-delay: 1.3s; }
+  .intro.is-in .depth-layers li:nth-child(2) { animation-delay: 1.5s; }
+  .intro.is-in .depth-layers li:nth-child(3) { animation-delay: 1.7s; }
+  .intro.is-in .depth-layers li:nth-child(4) { animation-delay: 1.9s; }
+  .intro.is-in .depth figcaption {
+    animation: intro-fade 0.6s ease-out 2.2s both;
+  }
+}
+@keyframes intro-rise {
+  from { opacity: 0; transform: translateY(0.35em); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes intro-drop {
+  0% { opacity: 0; transform: translateY(-0.9em) rotate(-20deg); }
+  70% { opacity: 1; transform: translateY(0.04em) rotate(14deg); }
+  100% { opacity: 1; transform: translateY(0) rotate(10deg); }
+}
+@keyframes intro-swing {
+  0% { transform: rotate(10deg); }
+  20% { transform: rotate(-6deg); }
+  45% { transform: rotate(16deg); }
+  70% { transform: rotate(7deg); }
+  100% { transform: rotate(10deg); }
+}
+@keyframes intro-fade {
+  from { opacity: 0; transform: translateY(0.6rem); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes intro-draw {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+@keyframes intro-dig {
+  from { opacity: 0; transform: translateY(-0.9rem) scaleX(0.9); }
+  to { opacity: 1; transform: none; }
+}
+
 .section-label {
   font-family: var(--font-display);
   font-weight: 700;
@@ -1137,27 +1222,6 @@ mark {
   line-height: 1.5;
   color: var(--ink-soft);
   margin: 1rem 0 0;
-}
-.today-map {
-  font-family: var(--font-display);
-  font-size: 0.95rem;
-  line-height: 1.45;
-  color: var(--ink-soft);
-  margin: 0.9rem 0 0;
-}
-.today-map a {
-  font-weight: 650;
-}
-.today-prompt {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin: 1.25rem 0 0;
-  padding-left: 0.85rem;
-  border-left: 3px solid var(--accent);
-}
-.today-prompt strong {
-  font-family: var(--font-display);
-  color: var(--accent);
 }
 .today-credit {
   font-size: 0.75rem;

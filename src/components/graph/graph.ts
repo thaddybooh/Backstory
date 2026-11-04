@@ -75,20 +75,6 @@ export function mountGraph(section: HTMLElement) {
   const panelKicker = panel.querySelector<HTMLElement>('.qmap-panel-kicker')!;
   const panelBody = panel.querySelector<HTMLElement>('.qmap-panel-body')!;
   const panelNext = panel.querySelector<HTMLElement>('.qmap-panel-next')!;
-  const toggles = [...section.querySelectorAll<HTMLButtonElement>('.qmap-toggle button')];
-
-  // ---------- View toggle (graph or list), remembered per browser ----------
-  function setView(view: string) {
-    document.documentElement.dataset.qmapView = view;
-    for (const b of toggles) b.setAttribute('aria-pressed', String(b.dataset.view === view));
-    try {
-      localStorage.setItem('qmap-view', view);
-    } catch {}
-    if (view === 'graph') requestAnimationFrame(resize);
-    else closePanel(false);
-  }
-  for (const b of toggles) b.addEventListener('click', () => setView(b.dataset.view!));
-  for (const b of toggles) b.setAttribute('aria-pressed', String(b.dataset.view === (document.documentElement.dataset.qmapView ?? 'graph')));
 
   // ---------- Nodes and links, read from the rendered list ----------
   const narrow = () => stage.clientWidth < 560;

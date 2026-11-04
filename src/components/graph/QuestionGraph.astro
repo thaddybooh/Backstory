@@ -1,8 +1,7 @@
 ---
 // The question graph for one issue: the story in the middle, the questions a curious
 // reader would ask around it, and follow-ups off some of them. The page first renders
-// the questions as a plain list (the list view, and what readers without JavaScript
-// see); graph.ts then draws the interactive graph from that list.
+// the questions as a plain list (what readers without JavaScript see); graph.ts then draws the interactive graph from that list.
 import type { Issue } from '../../lib/issues';
 import { issueUrl, issueNumber, TRACK_LABEL } from '../../lib/issues';
 import type { IssueGraph } from '../../lib/graph-data';
@@ -57,10 +56,6 @@ const total = graph.questions.length;
             The {total} questions a curious reader would ask, each with a short answer, its sources, and a link to the part
             of the issue that covers it.
           </p>
-        </div>
-        <div class="qmap-toggle" role="group" aria-label="Show questions as">
-          <button type="button" data-view="graph" aria-pressed="true">Graph</button>
-          <button type="button" data-view="list" aria-pressed="false">List</button>
         </div>
       </div>
     )
@@ -173,14 +168,6 @@ const total = graph.questions.length;
         <slot name="after" />
         <div class="qmap-hero-actions">
           <slot name="actions" />
-          <div class="qmap-toggle" role="group" aria-label="Show questions as">
-            <button type="button" data-view="graph" aria-pressed="true">
-              Graph
-            </button>
-            <button type="button" data-view="list" aria-pressed="false">
-              List
-            </button>
-          </div>
         </div>
         <slot name="credit" />
       </div>
