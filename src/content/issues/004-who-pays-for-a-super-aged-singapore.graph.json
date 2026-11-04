@@ -9,7 +9,7 @@
         "Because the population is ageing from both ends at once. People live longer, and far fewer children are born: the resident fertility rate fell to 0.87 in 2025, among the lowest in the world. The share of citizens aged 65 and over went from 13.7% to 21.4% in a decade.",
         "Speed is what makes Singapore unusual. France took more than a century to go from 7% to 14% older people; Singapore took 19 years, then about nine more to reach 21%. That matters because institutions take decades to adapt: savings need a working lifetime to build, and care homes and nurses take years to train and build."
       ],
-      "section": "what-super-aged-actually-means",
+      "section": "what-does-super-aged-actually-mean",
       "sources": [
         { "title": "Population in Brief 2026", "publication": "National Population and Talent Division", "url": "https://isomer-user-content.by.gov.sg/520/799cc617-8bdf-420b-a47e-86ececabe12e/PIB%202026%20Report.pdf" },
         { "title": "Singapore becomes ‘super-aged’ society; population grows to 6.21 million even as births, marriages decline", "publication": "AsiaOne", "url": "https://www.asiaone.com/singapore/singapore-super-aged-society-population-621-million-births-marriages-decline" },
@@ -55,7 +55,7 @@
         "Mostly from people’s own compulsory savings, not a state pension. Workers put up to 20% of their wages into personal CPF accounts, with employers adding up to 17%. From 65, retirement savings pay a monthly income for life through an annuity, CPF LIFE.",
         "Health care follows the same logic, called “S+3Ms”: government subsidies, MediSave (a medical savings account), MediShield Life (compulsory insurance for large bills) and MediFund (a last-resort safety net). Patients always pay something, which keeps overuse down. The result: health spending below 5% of GDP, about half the rich-country norm. The model also quietly leans on families and cheap migrant labour."
       ],
-      "section": "the-singapore-model-pay-your-own-way",
+      "section": "how-does-singapore-pay-for-old-age",
       "sources": [
         { "title": "Speech by Mr Ong Ye Kung at the Ministry of Health Committee of Supply Debate 2026", "publication": "Ministry of Health", "url": "https://www.moh.gov.sg/newsroom/speech-by-mr-ong-ye-kung--minister-for-health-and-coordinating-minister-for-social-policies--at-the-ministry-of-health-committee-of-supply-debate-2026--on-5-march-2026/" },
         { "title": "MediShield Life benefits", "publication": "Ministry of Health", "url": "https://www.moh.gov.sg/managing-expenses/schemes-and-subsidies/medishield-life/medishield-life-benefits/" }
@@ -70,7 +70,7 @@
         "Several causes stack up. The first generations of a fast-ageing society didn’t get a full working life at decent wages to save. Individual accounts make people save but are weak at sharing risk: some people need ten years of care, and their own account can’t cover it. Care was kept cheap by relying on unpaid family members, mostly women, and low-paid domestic workers, costs that never appear in the health budget.",
         "And the state’s own rules limit how fast it can spend: budgets must balance over each term, and past reserves are protected. More spending means higher taxes, cuts elsewhere or spending more of the reserves’ returns."
       ],
-      "section": "why-ageing-strains-singapores-model-so-much",
+      "section": "why-does-ageing-strain-singapores-model-so-much",
       "sources": [
         { "title": "Budget 2026 statement (as delivered)", "publication": "Ministry of Finance", "url": "https://www.sgpc.gov.sg/api/file/getfile/2a%20Delivered%20Speech.pdf?path=%2Fsgpcmedia%2Fmedia_releases%2Fmof%2Fpress_release%2FP-20260212-5%2Fattachment%2F2a+Delivered+Speech.pdf" },
         { "title": "Societal aging and its impact on Singapore", "publication": "NBER Working Paper", "url": "https://www.nber.org/system/files/working_papers/w31958/w31958.pdf" },
@@ -132,7 +132,7 @@
         "Older people use far more care: more chronic illness, more hospital stays, longer stays. So spending rises even if prices don’t. The government’s health budget is set to grow from about S$22.5 billion in 2026 to about S$30 billion in 2030, and the ministry is adding 2,800 hospital beds, a 25% increase.",
         "Extra years of life are not all healthy years either. Life expectancy was 85.4 in 2023, but healthy life expectancy only 74.1, and that gap, the most expensive years, has widened from 10.6 to 11.2 years in a decade."
       ],
-      "section": "where-ageing-bites-hospitals-and-health-costs",
+      "section": "what-does-ageing-do-to-hospitals-and-health-costs",
       "sources": [
         { "title": "Speech by Mr Ong Ye Kung at the Ministry of Health Committee of Supply Debate 2026", "publication": "Ministry of Health", "url": "https://www.moh.gov.sg/newsroom/speech-by-mr-ong-ye-kung--minister-for-health-and-coordinating-minister-for-social-policies--at-the-ministry-of-health-committee-of-supply-debate-2026--on-5-march-2026/" },
         { "title": "Gap between average and healthy life expectancy of Singapore residents and trends over past 10 years", "publication": "Ministry of Health", "url": "https://www.moh.gov.sg/newsroom/gap-between-average-and-healthy-life-expectancy-of-singapore-residents-and-trends-over-past-10-years/" },
@@ -208,7 +208,7 @@
             "They already do. About 31% of residents aged 65 and over were employed in 2022, high by rich-country standards. The retirement age rose to 64 and the re-employment age to 69 in July 2026, heading for 65 and 70 by 2030.",
             "Working longer raises incomes, savings and tax revenue, but it depends on employers wanting older workers and on workers being healthy enough. Many older workers are in cleaning, security, retail and transport; for some, working into their seventies is a choice, for others a necessity."
           ],
-          "section": "where-ageing-bites-work-and-retirement-income",
+          "section": "can-people-work-longer-and-is-retirement-income-enough",
           "sources": [
             { "title": "Retirement", "publication": "Ministry of Manpower", "url": "https://www.mom.gov.sg/employment-practices/retirement" },
             { "title": "Written answer to PQ on working Singaporeans above 65", "publication": "Ministry of Manpower", "url": "https://www.mom.gov.sg/newsroom/parliament-questions-and-replies/2023/0207-written-answer-to-pq-on-working-singaporeans-above-65" },
@@ -225,7 +225,7 @@
         "It can slow it, not solve it. Singapore granted about 25,000 citizenships and 35,000 permanent residencies in 2025, and the government says immigration helps keep the share of working-age citizens broadly stable to 2035. Foreign workers also do most of the care work.",
         "But immigrants grow old too, and keeping the support ratio stable as fertility falls would need ever-larger intakes. Immigration is also politically sensitive: the 2013 Population White Paper, which floated up to 6.9 million people by 2030, drew about 4,000 protesters to Hong Lim Park."
       ],
-      "section": "immigration-the-buffer-and-its-limits",
+      "section": "can-immigration-fill-the-gap",
       "sources": [
         { "title": "Population in Brief 2026", "publication": "National Population and Talent Division", "url": "https://isomer-user-content.by.gov.sg/520/799cc617-8bdf-420b-a47e-86ececabe12e/PIB%202026%20Report.pdf" },
         { "title": "Population White Paper", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Population_White_Paper" },
@@ -241,7 +241,7 @@
         "It can’t keep low taxes, balanced budgets, protected reserves and self-reliance all at once forever. Every tool has a cost. Another GST rise hits poorer households. Spending more of the reserves’ returns leaves less for an even older future. Higher premiums and co-payments fall on those least able to pay. Working longer depends on health and employers. Prevention may improve lives without cutting total costs. Immigration brings backlash, and new care capacity needs land, money and scarce workers.",
         "So far the government moves in small, pre-announced steps, which avoids shocks but can mean problems are addressed late."
       ],
-      "section": "what-this-means-for-singapores-government",
+      "section": "what-can-singapores-government-do",
       "sources": [
         { "title": "Budget 2026 statement (as delivered)", "publication": "Ministry of Finance", "url": "https://www.sgpc.gov.sg/api/file/getfile/2a%20Delivered%20Speech.pdf?path=%2Fsgpcmedia%2Fmedia_releases%2Fmof%2Fpress_release%2FP-20260212-5%2Fattachment%2F2a+Delivered+Speech.pdf" },
         { "title": "Speech by Mr Ong Ye Kung at the Ministry of Health Committee of Supply Debate 2026", "publication": "Ministry of Health", "url": "https://www.moh.gov.sg/newsroom/speech-by-mr-ong-ye-kung--minister-for-health-and-coordinating-minister-for-social-policies--at-the-ministry-of-health-committee-of-supply-debate-2026--on-5-march-2026/" }

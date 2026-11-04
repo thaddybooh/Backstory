@@ -5,7 +5,7 @@ dek: "Singapore’s government has built a dating service for its own young offi
 summary: "Singapore’s government is now matchmaking its own young officers. Why forty years of incentives haven’t lifted a birth rate of 0.87, what the market-design idea behind FirstDate can and can’t do, and what actually moves fertility."
 date: 2026-10-30
 track: singapore
-readTime: 33
+readTime: 30
 tags: [Fertility, Marriage, Population, Family policy]
 research: "Researched from 25+ reports, official statistics and speeches"
 hero:
@@ -25,22 +25,7 @@ Singapore has been trying to raise its birth rate since 1987, with baby bonuses,
 
 </Overview>
 
-## The fertility crisis in numbers
-
-<Numbers>
-  <Stat value="0.87">children per woman in 2025, Singapore’s resident fertility rate; 2.1 is needed to keep a population stable</Stat>
-  <Stat value="26,071">citizen babies born in 2025, down 10.8% in a single year</Stat>
-  <Stat value="21,671">citizen marriages in 2025, down 5.6% and the third yearly fall in a row</Stat>
-  <Stat value="29.6">median age of brides at first marriage (31.1 for grooms), up from 28.2 a decade earlier</Stat>
-  <Stat value="0.71">fertility rate of ethnic Chinese residents, about three-quarters of the population; Malays are at 1.53</Stat>
-  <Stat value="44">children, and 19 grandchildren, for every 100 residents today if fertility stays at 0.87</Stat>
-  <Stat value="S$70,000">almost, in direct support for every citizen child from birth to 17 under the package announced in August</Stat>
-  <Stat value="1 in 3">marriages now between a Singaporean and a non-citizen</Stat>
-</Numbers>
-
-<SmallPrint>Fertility, birth and marriage figures for citizens are from Population in Brief 2026, published by the National Population and Talent Division in September. The fertility rate by ethnic group is as reported by VnExpress International in March 2026; Wikipedia gives slightly different figures (0.70 and 1.53). Median ages at marriage are from the Department of Statistics, as reported by Fortune and The Star. The 44 children and 19 grandchildren are Mr Gan’s calculation in Parliament in February. The S$70,000 and the share of marriages to non-citizens are from the prime minister’s National Day Rally speech. See [Sources](#sources).</SmallPrint>
-
-## How it unfolded
+## What happened, and when?
 
 <Timeline>
   <Event date="1970s">Singapore’s “Stop at Two” campaign, backed by penalties for larger families, helps bring fertility down to about replacement level by 1975. It keeps falling.</Event>
@@ -58,7 +43,7 @@ Singapore has been trying to raise its birth rate since 1987, with baby bonuses,
   <Event date="5 Oct">Applications for the pilot close. GovTech says no decision has been made on expanding it.</Event>
 </Timeline>
 
-## What FirstDate is, and how it works
+## What is FirstDate, and how does it work?
 
 <Sidenote term="GovTech">The Government Technology Agency of Singapore, which builds the government’s digital services, such as the Singpass digital identity app.</Sidenote>
 
@@ -81,6 +66,8 @@ The website is careful about what it promises: “compatibility on paper doesn�
 
 <Sidenote term="Stable matching">A way of pairing two groups so that no two people would both rather be with each other than with the partners they were given.</Sidenote>
 
+<Sidenote term="Deferred acceptance">The Gale–Shapley procedure: one side proposes, the other holds its best offer provisionally, and rejected proposers try again until no one is left.</Sidenote>
+
 FirstDate uses the **Gale–Shapley algorithm**, published by the mathematicians David Gale and Lloyd Shapley in 1962 in a paper called “College Admissions and the Stability of Marriage”. It solves a specific problem: given two groups, each of whom ranks the other, how do you pair them so that the result is *stable*, meaning no two people would both rather be with each other than with the partner they got? Gale and Shapley proved that a stable pairing always exists, and gave a simple way to find it, known as **deferred acceptance**:
 
 <Chain>
@@ -91,6 +78,8 @@ FirstDate uses the **Gale–Shapley algorithm**, published by the mathematicians
 4. **Repeat until no one is left to propose.** The provisional pairs become final, and the result is guaranteed to be stable.
 
 </Chain>
+
+<Sidenote term="Market design">The branch of economics that designs the rules of markets, such as matching schemes for doctors, school places or kidney donors.</Sidenote>
 
 The approach turned out to be enormously useful outside romance. A version had been used since the early 1950s to match American medical students to hospital residencies, and in 2012 Shapley and the economist Alvin Roth shared the Nobel memorial prize in economics “for the theory of stable allocations and the practice of market design” (Gale had died in 2008). Variants are used to allocate school places and, since 2018, to coordinate university admissions in France.
 
@@ -106,11 +95,15 @@ Some Singaporeans called the pilot “dystopian”, according to the BBC as repo
 
 Tan Ern Ser, a sociologist at the Institute of Policy Studies, put it plainly: “We have a highly interventionist government, even in a private sphere of love and marriage.” He judged that past state matchmaking was probably neither “significant nor cost effective”, but allowed that “couples who are identified as compatible could still have a love match.”
 
-## Fifty years of trying
+## What has Singapore already tried?
 
 Singapore is unusual not because its birth rate is low, which is now true across East Asia, but because its government has tried harder, for longer, than almost any other to change it. To understand why FirstDate struck a nerve, it helps to know that the state has been in the business of family size, and matchmaking, since the 1960s.
 
 ### From “Stop at Two”…
+
+<Sidenote term="Replacement level">The fertility rate at which each generation exactly replaces the one before, about 2.1 children per woman in rich countries.</Sidenote>
+
+<Sidenote term="Tempo effect">A change in the fertility rate caused by people having children earlier or later, rather than having more or fewer in total.</Sidenote>
 
 In the 1960s Singapore was poor, crowded and growing fast: the birth rate was 29.5 per thousand people in 1965. The government set up a Family Planning and Population Board in 1966 and, by 1970, a campaign known as “Stop at Two” was in full swing. It came with penalties: higher hospital delivery fees for third and later babies, lower priority for public housing for larger families, no paid maternity leave for civil servants after the second child, and the best primary school places reserved for children whose parents had been sterilised before 40. It worked, perhaps too well. Fertility fell to about replacement level by 1975, and kept falling.
 
@@ -118,7 +111,9 @@ In the 1960s Singapore was poor, crowded and growing fast: the birth rate was 29
 
 <Sidenote term="Total fertility rate (TFR)">The average number of children a woman would have over her life if she experienced this year’s birth rates at each age. About 2.1 keeps a population stable without migration.</Sidenote>
 
-By the early 1980s the government was worried about who was having children. In 1983 Lee Kuan Yew warned that graduate women were marrying and having children less than less-educated women, starting what became known as the Great Marriage Debate (see [section 11](#further-context-the-great-marriage-debate)). In 1987, with fertility at about 1.4, the government reversed course entirely under the slogan “Have three or more (if you can afford it)”. It has been pro-natalist ever since.
+<Sidenote term="Pro-natalism">Policies intended to raise the birth rate, such as baby bonuses, parental leave and childcare subsidies.</Sidenote>
+
+By the early 1980s the government was worried about who was having children. In 1983 Lee Kuan Yew warned that graduate women were marrying and having children less than less-educated women, starting what became known as the Great Marriage Debate (see [section 11](#what-was-the-great-marriage-debate)). In 1987, with fertility at about 1.4, the government reversed course entirely under the slogan “Have three or more (if you can afford it)”. It has been pro-natalist ever since.
 
 The tools have grown steadily: tax rebates of up to S$20,000, priority for families in public housing, the Baby Bonus from 2001 with cash and matched savings, government co-funding of up to 75% of the cost of fertility treatment from 2008, longer paid leave and heavily subsidised preschool. Tan Poh Lin of the Lee Kuan Yew School of Public Policy told ABC News the most notable effort was childcare: more than 200,000 preschool places, subsidies and capped fees. Yet fertility has never returned to replacement level, and has drifted down: 1.60 in 2000, 1.15 in 2010, 1.24 in 2015, 0.97 in 2024 and 0.87 in 2025.
 
@@ -143,6 +138,8 @@ The National Day Rally on 23 August marked the biggest change in approach in dec
 </People>
 
 ## Why haven’t forty years of incentives worked?
+
+<Sidenote term="Resident vs citizen">Singapore counts citizens and permanent residents together as residents. Fertility rates are given for residents; some birth and marriage counts are for citizens only.</Sidenote>
 
 There are two parts to Singapore’s low fertility, and they need different answers. The first is **marriage**: almost all children in Singapore are born to married couples, so fewer and later marriages mean fewer births. The second is **family size within marriage**: married couples are having fewer children. Among married resident women aged 40 to 49, about 16% have no children and 25.5% have one; 40.5% have two.
 
@@ -215,7 +212,7 @@ No, and its designers have not claimed it can. FirstDate addresses one real fric
 
 </Answer>
 
-## What other countries show
+## What have other countries learned?
 
 Singapore is part of a regional pattern. South Korea, Japan, Taiwan, Hong Kong and China all have fertility rates far below replacement, and most of them, like Singapore, combine long working hours, intense educational competition, expensive housing and traditional expectations of women at home.
 
@@ -230,9 +227,11 @@ Singapore is part of a regional pattern. South Korea, Japan, Taiwan, Hong Kong a
 
 The broad lesson from research on family policy, which Singapore’s experience fits, is that money mainly affects **when** people have children more than **how many**. Cash bonuses can bring births forward, which briefly lifts the fertility rate, but often add only a little to the number of children women have over their lives. Policies that reduce the ongoing cost and time burden of children, especially affordable childcare and workplaces that do not penalise parents, seem to have more lasting effects, but they are expensive and slow, and even the Nordic countries have not escaped the decline. More and more governments are trying anyway: according to the UN, the share of countries with policies to raise fertility grew from 20% in 2005 to 28% in 2019.
 
-## What this means for policymakers
+## What can governments do?
 
 ### The problem
+
+<Sidenote term="Super-aged society">A population in which more than 21% are 65 or older. Singapore’s citizen population crossed this line in 2026.</Sidenote>
 
 For Singapore, low fertility is a problem of numbers and of identity. At 0.87, every 100 residents today would have 44 children and 19 grandchildren. Without immigration, the number of citizens would start falling in the early 2040s, and more than one in four would be 65 or older by 2035. That means fewer workers to support more retirees, fewer young people for national service, and higher costs for health and care (see [issue 004](/issues/004-who-pays-for-a-super-aged-singapore/)). Mr Gan has warned that “over time, it will be practically impossible to reverse the trend, because we will have fewer and fewer women who can bear children.”
 
@@ -261,7 +260,7 @@ There are two different goals, and they lead to different answers. If the goal i
 
 </Answer>
 
-## Where reasonable people disagree
+## Where do reasonable people disagree?
 
 <Debate topic="On whether the state should play matchmaker">
   <Side title="It is a sensible, low-cost experiment">Dating has become frustrating, scam-ridden and dominated by apps whose business model rewards endless swiping rather than relationships. A free, verified, one-match-at-a-time service tackles a real complaint, and costs little. Not having met the right person is one of the top reasons young Singaporeans give for staying single, so making it easier to meet compatible partners addresses an actual barrier. Taking part is voluntary, data is protected, and the pilot will generate evidence on what works. Governments already shape where and how people meet, through housing, schools and national service; trying to do it well is no stranger than ignoring it.</Side>
@@ -273,40 +272,13 @@ There are two different goals, and they lead to different answers. If the goal i
   <Side title="No: adapt instead of pushing">Decades of evidence, Singapore’s included, show that pro-natal policy is expensive and has small effects, often only on timing. Treating birth rates as a national target risks pressuring individuals, especially women, about deeply personal choices, and Singapore’s own history of first discouraging and then encouraging births shows how the state can get it wrong. Low fertility reflects choices that many people are making freely in rich societies. The better use of money is to adapt: keep older people healthy and working, invest in productivity, and manage immigration well, while supporting families because it is fair, not to hit a number.</Side>
 </Debate>
 
-## What to watch next
-
-<Rows>
-  <Row label="Late 2026">Whether GovTech extends FirstDate beyond public officers or changes its age limit, and whether it publishes any results from the pilot.</Row>
-  <Row label="Late 2026">Recommendations from the Marriage and Parenthood Reset workgroup, especially on workplace redesign.</Row>
-  <Row label="Feb 2027">Budget 2027: details and costs of the SG Child Support Package, the housing support for larger families the prime minister asked for, and any new help for singles and married couples.</Row>
-  <Row label="Feb 2027">The first estimate of the 2026 fertility rate. Another fall below 0.87 would deepen the sense of crisis; a pause might suggest the 2025 drop was partly timing.</Row>
-  <Row label="Apr 2027">The SG Child Support Package begins.</Row>
-  <Row label="2028–2030">Whether preschool fee cuts to S$150 and S$300 a month arrive on time, and whether the expansion of preschool places keeps up.</Row>
-  <Row label="Ongoing">South Korea: whether its rebound lasts. If it does, it will be studied closely as evidence that the decline can be slowed.</Row>
-</Rows>
-
-## Further context: the Great Marriage Debate
+## What was the Great Marriage Debate?
 
 In his National Day Rally speech in 1983, Lee Kuan Yew argued that Singapore’s future depended on its most educated citizens having children, and warned that graduate women were marrying and having children less than less-educated women. He called this “a serious social problem”. The next year the government introduced the Graduate Mothers’ Scheme, which gave the children of graduate mothers priority in primary school admissions and gave graduate mothers tax rebates, and set up the Social Development Unit to organise social events for graduate singles. A separate body for non-graduates followed in 1985.
 
 The reaction was fierce, particularly from graduate women, who resented the suggestion that their education was a national problem to be solved by marrying. The ruling party suffered a large swing against it in the 1984 general election, and the most controversial parts of the scheme were dropped or changed within a year or two. The episode is one reason Singaporeans react warily to any hint of the state steering their private lives, and why FirstDate drew comparisons with the SDU almost immediately.
 
-## Key terms
-
-<KeyTerms>
-  <Term name="Total fertility rate (TFR)">The average number of children a woman would have over her lifetime at current birth rates. About 2.1 keeps a population stable without migration.</Term>
-  <Term name="Replacement level">The fertility rate at which each generation exactly replaces the one before, about 2.1 children per woman in rich countries.</Term>
-  <Term name="Resident vs citizen">Singapore counts citizens and permanent residents together as residents. Fertility rates are given for residents; some birth and marriage counts are for citizens only.</Term>
-  <Term name="Pro-natalism">Policies intended to raise the birth rate, such as baby bonuses, parental leave and childcare subsidies.</Term>
-  <Term name="Tempo effect">A change in the fertility rate caused by people having children earlier or later, rather than having more or fewer in total.</Term>
-  <Term name="Stable matching">A pairing of two groups in which no two people would both rather be with each other than with their assigned partners.</Term>
-  <Term name="Deferred acceptance">The Gale–Shapley procedure: one side proposes, the other holds its best offer provisionally, and rejected proposers try again until no one is left.</Term>
-  <Term name="Market design">The branch of economics that designs the rules of markets, such as matching schemes for doctors, school places or kidney donors.</Term>
-  <Term name="Super-aged society">A population in which more than 21% are 65 or older. Singapore’s citizen population crossed this line in 2026.</Term>
-  <Term name="Opportunity cost of children">What parents, especially mothers, give up to raise children: income, career progression and time.</Term>
-</KeyTerms>
-
-## Go deeper
+## Where can I read more?
 
 ### Start with these (Wikipedia)
 
@@ -327,15 +299,6 @@ The reaction was fierce, particularly from graduate women, who resented the sugg
   <Read href="https://e.vnexpress.net/news/news/too-high-a-cost-singaporeans-say-parenthood-isn-t-worth-it-despite-years-of-cash-incentives-5048385.html" title="‘Too high a cost’: Singaporeans say parenthood isn’t worth it (VnExpress International)">Young Singaporeans in their own words, with a comparison to South Korea.</Read>
   <Read href="https://www.population.gov.sg/media-centre/population-in-brief-2026/" title="Population in Brief 2026 (National Population and Talent Division)">The official figures on births, marriages, ageing and immigration.</Read>
 </Reads>
-
-### Concepts worth learning properly
-
-<Concepts>
-  <Concept title="Matching markets">Markets where price alone can’t decide who gets what, such as jobs, school places and partners. Explains both the promise and the limits of FirstDate.</Concept>
-  <Concept title="The quantity–quality trade-off">The economic idea that as parents invest more in each child, children become more expensive and families smaller. Central to East Asia’s intensive parenting.</Concept>
-  <Concept title="Tempo and quantum in fertility">The difference between changes in when people have children and how many they have. Essential for judging whether any policy “worked”.</Concept>
-  <Concept title="Gender equity theory of fertility">The argument that fertility falls lowest where women have gained equality at work but not at home. A leading explanation for East Asia’s very low rates.</Concept>
-</Concepts>
 
 ## Sources
 

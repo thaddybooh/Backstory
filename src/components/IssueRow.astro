@@ -14,7 +14,6 @@ const { data } = issue;
   <div>
     <div class="issue-row-meta">
       <span class="track">{TRACK_LABEL[data.track]}</span>
-      <span>Issue {data.number}</span>
       <time datetime={data.date.toISOString().slice(0, 10)}>{formatShortDate(data.date)}</time>
       <span>{data.readTime} min read</span>
     </div>

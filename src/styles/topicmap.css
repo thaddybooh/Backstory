@@ -73,9 +73,6 @@
   gap: 0.8rem 1.5rem;
   margin-bottom: 0.9rem;
 }
-html[data-qmap-view='list'] .tmap-key {
-  visibility: hidden;
-}
 .tmap-key {
   display: flex;
   flex-wrap: wrap;

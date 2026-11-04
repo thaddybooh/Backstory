@@ -39,7 +39,7 @@ const graph = await getGraph(issue);
 const placement = await getPlacement(issue.id);
 
 const toc = [
-  { slug: 'what-is-happening', text: 'What is happening', n: '' },
+  { slug: 'what-is-happening', text: 'What is happening?', n: '' },
   ...headings
     .filter((h) => h.depth === 2)
     .map((h, i) => ({ slug: h.slug, text: h.text, n: String(i + 1).padStart(2, '0') })),
@@ -76,10 +76,6 @@ const hasHero = Boolean(data.hero && (data.hero.image || (data.hero.commons && g
             <span class="visually-hidden">Issue {data.number}: </span>{data.title}
           </h1>
           <p class="cover-dek">{data.dek}</p>
-          <div class="cover-foot">
-            <span>{data.readTime}-minute read</span>
-            {data.research && <span>{data.research}</span>}
-          </div>
           {
             data.tags.length > 0 && (
               <ul class="tags" aria-label="Topics">
@@ -96,7 +92,7 @@ const hasHero = Boolean(data.hero && (data.hero.image || (data.hero.commons && g
 
     <div class="issue-layout">
       <details class="toc-bar">
-        <summary><span class="toc-label">Contents</span><span class="toc-current">What is happening</span></summary>
+        <summary><span class="toc-label">Questions</span><span class="toc-current">What is happening?</span></summary>
         <nav class="toc" aria-label="Contents">
           <ol>
             {
@@ -116,7 +112,7 @@ const hasHero = Boolean(data.hero && (data.hero.image || (data.hero.commons && g
       <div class="issue-body">
         <aside class="toc-side">
           <nav class="toc" aria-label="Contents">
-            <p class="toc-title">In this issue</p>
+            <p class="toc-title">Questions in this issue</p>
             <ol>
               {
                 toc.map((t) => (

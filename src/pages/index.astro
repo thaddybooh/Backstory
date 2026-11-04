@@ -16,7 +16,6 @@ const [latest, ...earlier] = issues;
 const d = latest?.data;
 const layers = ['History', 'Economic incentives', 'Political decisions', 'Competing interests'];
 const graph = latest ? await getGraph(latest) : undefined;
-const placement = latest ? await getPlacement(latest.id) : undefined;
 const topicOf = async (id: string) => {
   const p = await getPlacement(id);
   return p && { title: p.map.data.title, href: p.story.href };
@@ -49,16 +48,6 @@ const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommon
           </div>
           <div slot="after" class="today-text">
             <p class="today-summary">{d.summary}</p>
-            {placement && (
-              <p class="today-map">
-                Part of the topic map <a href={placement.story.href}>{placement.map.data.title}</a>, with the background
-                you need to follow it.
-              </p>
-            )}
-            <p class="today-prompt">
-              <strong>Start with a question.</strong> Open any node for a short answer, its sources and where to read
-              more.
-            </p>
           </div>
           <a slot="actions" class="button" href={issueUrl(latest)}>
             Read today’s issue <span class="today-time">· {d.readTime} min</span>
@@ -78,7 +67,7 @@ const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommon
   <section class="intro" aria-labelledby="intro-title">
     <div class="wrap intro-inner">
       <div>
-        <h2 class="intro-title" id="intro-title">But Why<span class="intro-q">?</span></h2>
+        <h2 class="intro-title" id="intro-title"><span class="intro-w">But</span> <span class="intro-w">Why</span><span class="intro-q">?</span></h2>
         <p class="intro-slogan">{SITE.tagline[0].toUpperCase() + SITE.tagline.slice(1)}.</p>
         <p class="intro-dek">
           The news tells you what happened. But Why? explains why. Every day, one story from the headlines, unpacked:
@@ -108,6 +97,24 @@ const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommon
       </figure>
     </div>
   </section>
+
+  <script>
+    // Play the title screen's entrance once, when it first scrolls into view.
+    const intro = document.querySelector<HTMLElement>('.intro');
+    if (intro) {
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            if (!entries.some((e) => e.isIntersecting)) return;
+            io.disconnect();
+            intro.classList.add('is-in');
+          },
+          { threshold: 0.25 },
+        );
+        io.observe(intro);
+      } else intro.classList.add('is-in');
+    }
+  </script>
 
   {
     latest && d && !graph && (

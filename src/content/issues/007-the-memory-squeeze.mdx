@@ -5,7 +5,7 @@ dek: "The chips that let phones and laptops remember things have tripled and qua
 summary: "AI data centres are buying up the world’s memory chips. Prices have soared, phones and laptops cost more, and three chipmakers are earning record profits. Why supply can’t catch up, and who pays."
 date: 2026-10-27
 track: world
-readTime: 31
+readTime: 28
 tags: [Technology, AI, Semiconductors, Economics, South Korea]
 research: "Researched from 40+ reports, company filings and market data"
 hero:
@@ -24,23 +24,10 @@ The cause is artificial intelligence. The data centres being built by Microsoft,
 The result is one of the biggest profit booms in corporate history. On 28 October SK hynix reported an operating profit of 83.3 trillion won (about $62.8 billion) for three months, with 80 cents of every dollar of sales left over as operating profit. Samsung expects about $80 billion for the same quarter, more than any company has earned in a quarter except Saudi Aramco. The makers say the shortage will last until 2028 or even 2030. Critics, from PC makers to a group of American consumers suing the three companies, say they are profiting from scarcity they have chosen not to fix. And investors are asking the oldest question in the memory business: when does the boom turn into a bust?
 
 </Overview>
+<Sidenote term="Contract price">The price agreed between memory makers and large buyers, usually each quarter. The main benchmark for the industry.</Sidenote>
 
-## The squeeze in numbers
 
-<Numbers>
-  <Stat value="+55–63%">rise in ordinary DRAM contract prices in each of the first two quarters of 2026, according to TrendForce</Stat>
-  <Stat value="~3×">factory capacity needed to make a given amount of HBM compared with ordinary DRAM, by the industry’s rule of thumb</Stat>
-  <Stat value="3 firms">Samsung, SK hynix and Micron, with nearly 88% of DRAM sales between them in April–June 2026</Stat>
-  <Stat value="$62.8bn">SK hynix’s operating profit for July–September, an 80% margin on sales</Stat>
-  <Stat value="−16.7%">IDC’s forecast for global smartphone shipments in 2026, the steepest fall on record</Stat>
-  <Stat value="+27.6%">IDC’s forecast rise in the average price of a smartphone this year, to $581</Stat>
-  <Stat value="47% → 68%">share of big cloud companies’ capital spending going on memory in 2026 and 2027, according to TrendForce</Stat>
-  <Stat value="2028–2030">when the makers say the shortage will end: Micron and Samsung say 2028, SK hynix 2030</Stat>
-</Numbers>
-
-<SmallPrint>Price rises are for “conventional” DRAM sold to large buyers on contract, as estimated by TrendForce; retail prices for consumers move differently and often more. Market shares are TrendForce’s revenue figures for April–June 2026 (Samsung 39.4%, SK hynix 24.9%, Micron 23.3%); Counterpoint Research’s figures differ by a point or two. The “three times” ratio is an industry estimate that varies by product generation. Company profits are as reported or, for Samsung, the company’s preliminary estimate. See [Sources](#sources).</SmallPrint>
-
-## How it unfolded
+## What happened, and when?
 
 <Timeline>
   <Event date="2022–23">After the pandemic buying spree ends, demand for phones and PCs collapses. Memory prices halve. Samsung and SK hynix lose more than 21 trillion won in their chip businesses in the first nine months of 2023, and all three makers cut production and investment.</Event>
@@ -59,11 +46,15 @@ The result is one of the biggest profit booms in corporate history. On 28 Octobe
   <Event date="28 Oct" turning>SK hynix reports record revenue of 104.6 trillion won and an 80% operating margin, and says the shortage will likely last until 2030.</Event>
 </Timeline>
 
-## What memory chips are, and why AI needs so many
+## What are memory chips, and why does AI need so many?
 
 <Sidenote term="DRAM">Dynamic random-access memory. The fast, temporary memory a computer uses while it works. It forgets everything when the power goes off, which is why devices also need storage.</Sidenote>
 
 <Sidenote term="NAND flash">The type of memory used for long-term storage in phones, USB sticks and solid-state drives (SSDs). Slower than DRAM, but it keeps data without power.</Sidenote>
+
+<Sidenote term="Wafer">A thin disc of silicon on which chips are made. Factory capacity is measured in wafers per month.</Sidenote>
+
+<Sidenote term="Fab">A semiconductor factory. A modern memory fab costs tens of billions of dollars and takes years to build.</Sidenote>
 
 Computers use two main kinds of memory chip. **DRAM** is the working memory: the space where a processor keeps whatever it is busy with right now. **NAND flash** is storage: where apps, photos and files live. Both are made by etching billions of tiny cells onto thin discs of silicon called wafers, in factories (“fabs”) that cost tens of billions of dollars, and both are commodities. A gigabyte of DRAM from one maker does the same job as one from another, so buyers shop on price and the makers compete mainly on cost and scale.
 
@@ -81,13 +72,15 @@ HBM is hard to make. Each chip in the stack is larger than an ordinary DRAM chip
 
 ### How much AI is buying
 
+<Sidenote term="Hyperscaler">The largest cloud computing companies, such as Amazon, Microsoft, Google and Meta, which build data centres on a huge scale.</Sidenote>
+
 AI is not only using HBM. The ordinary servers that support AI services also need large amounts of conventional DRAM, and AI companies are buying huge numbers of fast solid-state drives to store data. According to TrendForce, HBM and high-capacity server memory together account for about half of all DRAM bits supplied in 2026. Big cloud companies are expected to roughly double their capital spending this year, and TrendForce estimates that memory will make up 47% of that spending in 2026 and 68% in 2027, simply because memory has become so expensive.
 
 The single most striking signal came in October 2025, when OpenAI signed letters of intent with Samsung and SK hynix for its $500 billion Stargate data centre project. The companies said Stargate could eventually need up to 900,000 DRAM wafers a month, which SK said was more than double the industry’s whole HBM capacity at the time; Tom’s Hardware calculated it at up to 40% of global DRAM output. The letters were not binding and had no timetable. But they told the industry that demand on a scale nobody had planned for was coming.
 
 <Photo file="Nvidia DGX GB200.jpg" alt="A tall black server rack packed with liquid-cooled computing trays and cables" caption="An Nvidia GB200 server rack, with 72 AI processors and 36 conventional processors, photographed in 2025. Each AI processor in a rack like this carries several stacks of HBM." />
 
-## How the shortage spread
+## How did the shortage spread?
 
 The shortage started at the top of the market and worked its way down.
 
@@ -104,6 +97,8 @@ The shortage started at the top of the market and worked its way down.
 
 ### Who gets squeezed
 
+<Sidenote term="Bill of materials">The total cost of the parts that go into a product, before assembly, marketing and profit.</Sidenote>
+
 **Phones.** Memory makes up 15–20% of the cost of the parts in a mid-range phone, according to IDC, and the cost of DRAM and NAND for phones is up more than 300% on a year earlier. IDC now expects smartphone shipments to fall 16.7% in 2026, to just over a billion, while the average price rises 27.6% to $581. The pain is concentrated at the bottom. Shipments of phones under $100 fell almost 60% in April–June compared with a year before. Android phone shipments are forecast to fall 24.3%; Apple’s iPhone, sold at higher prices with supply secured further ahead, only 1.3%. In emerging markets, IDC expects sales to fall by more than 20%. “The era of the cheap smartphone has ended,” said Francisco Jeronimo of IDC. Some smaller brands that rely on cheap phones may not survive, it says.
 
 **PCs.** HP said in February that memory had become about 35% of the cost of the parts in a PC. Dell, HP, Lenovo, Acer and Asus warned customers of price rises of 15–20%. IDC expects PC shipments to fall 11.3% in 2026 and average prices to rise 17%, and says prices are unlikely to return to 2025 levels even after the shortage eases. Apple raised prices on Macs and iPads in June, and its shares had their worst day in over a year.
@@ -114,7 +109,7 @@ The shortage started at the top of the market and worked its way down.
 
 Consumers are adapting. In South Korea, where Apple raised the price of its cheapest iPhone by 16.1% and Samsung’s mid-range Galaxy A37 costs 19.8% more than its predecessor, more people are repairing broken screens or buying second-hand phones instead of new ones. Kim Sun-woo, an analyst at Meritz Securities, says consumers are starting to treat phones as “durable goods”: things you keep for years, like a fridge, rather than replace every two.
 
-## Who wins
+## Who is winning from the shortage?
 
 The winners are easy to name. The three big makers are earning margins more often seen in software than in manufacturing.
 
@@ -129,7 +124,7 @@ The winners are easy to name. The three big makers are earning margins more ofte
 
 <Photo file="President Biden visited the Samsung Electronics Pyeongtaek Campus (1).jpg" alt="A group of people in suits walking through a large modern factory hall" caption="Samsung’s Pyeongtaek chip campus in South Korea, during a visit by then US President Joe Biden in May 2022. Pyeongtaek is one of the largest chip production sites in the world." />
 
-## Why supply can’t catch up
+## Why can’t supply catch up?
 
 If memory is so profitable, why don’t the makers simply build more? Because the business has features that make it slow, risky and concentrated, and those features explain most of what is happening.
 
@@ -197,9 +192,11 @@ Jim Handy of Objective Analysis, a memory research firm, called Musk’s comment
 
 ### The forecasts themselves
 
+<Sidenote term="Long-term agreement (LTA)">A multi-year supply contract, often with guaranteed volumes and sometimes price bands or advance payments.</Sidenote>
+
 The makers’ own forecasts of how long the shortage will last have stretched. In March, SK Group’s chairman said it would last until 2030. Micron’s chief executive said in June he expected it to ease in 2028; Samsung says 2028; SK hynix repeated 2030 this week. These forecasts matter because buyers use them to decide whether to sign long-term contracts at today’s prices. Forecasting a long shortage is in a seller’s interest, which is why buyers like Acer are sceptical. It may also simply be accurate.
 
-## The signs of a turn
+## Is the shortage about to end?
 
 For all the record profits, there are hints that the peak may be near.
 
@@ -210,7 +207,7 @@ For all the record profits, there are hints that the peak may be near.
 
 Handy expects supply not to catch up with demand before 2029 if AI investment keeps growing, but warns that demand could weaken whenever the big data-centre builders slow down, and nobody can know when that will be.
 
-## What this means for policymakers
+## What can governments do?
 
 The memory squeeze is a hard problem for governments, because the obvious levers either do little or have serious side effects. The underlying issue is that an essential input to almost every modern product is made by three companies, mostly in two countries, in an industry whose booms and busts no single government controls.
 
@@ -238,7 +235,7 @@ In the short term, very little. No government can produce memory faster than the
 
 </Answer>
 
-## Where reasonable people disagree
+## Where do reasonable people disagree?
 
 <Debate topic="On whether the memory makers are exploiting the shortage">
   <Side title="They are profiting from scarcity they chose">Three companies control almost all DRAM supply and are earning margins of 75–80%, more than most software companies. They decided to move capacity to HBM and to exit older products, which created the shortage of ordinary memory, and they are expanding cautiously because high prices are good for them. Their forecasts of shortages lasting until 2030 encourage buyers to sign long contracts at today’s prices. Two of them, with others, were caught fixing DRAM prices two decades ago. Customers such as Acer’s chief executive and Elon Musk say they are being overcharged, and a class action argues the shift was coordinated. Whatever the legal answer, consumers in poorer countries are paying for a boom that mainly benefits shareholders and AI companies.</Side>
@@ -250,19 +247,7 @@ In the short term, very little. No government can produce memory faster than the
   <Side title="Every memory boom ends the same way">Memory makers have said “this time is different” before. Prices are already rising more slowly, buyers are trimming the memory in their products, new compression techniques are reducing memory needs, and a wave of new fabs, plus a fast-growing Chinese competitor, will arrive in 2027–28. If investors’ doubts about AI spending turn into cuts by the big cloud companies, that new supply will meet falling demand. Several of the long-term contracts reportedly include price ceilings. The memory industry’s history suggests the higher prices go now, the harder they will fall.</Side>
 </Debate>
 
-## What to watch next
-
-<Rows>
-  <Row label="29 Oct 2026">Samsung’s full results for July–September, with the first official breakdown of how much its memory and phone divisions made and lost.</Row>
-  <Row label="Late Oct–early Nov">Results and spending plans from Microsoft, Alphabet, Amazon and Apple. Any cut in data-centre spending would be the clearest sign that the AI demand behind the squeeze is slowing.</Row>
-  <Row label="Nov–Dec 2026">TrendForce’s forecasts for January–March 2027 contract prices. A further slowdown would confirm the peak has passed; a re-acceleration would mean the makers’ 2028–2030 forecasts are right.</Row>
-  <Row label="Ongoing">Whether Apple or other Western device makers start using CXMT memory, and how the US responds.</Row>
-  <Row label="Early 2027">SK hynix’s first Yongin cleanroom opens. Watch how much new capacity the three makers announce, and whether it goes to HBM or ordinary memory.</Row>
-  <Row label="2027">The US class action against the three makers. Whether it survives the companies’ attempts to have it dismissed will show how strong the evidence of coordination is.</Row>
-  <Row label="Holiday season">Phone and PC prices and sales. Whether consumers in emerging markets buy fewer, cheaper or second-hand phones will show who is bearing the cost.</Row>
-</Rows>
-
-## Further context: memory’s boom-and-bust history
+## Has this happened before?
 
 Memory chips were among the first products of the silicon age. Intel was founded in 1968 largely to make them, but was driven out of DRAM in the mid-1980s by Japanese makers such as NEC, Hitachi and Toshiba, who in turn were overtaken in the 1990s by South Korea’s Samsung and Hyundai’s chip division, which became Hynix and then SK hynix. Each shift came through the same process: heavy investment during busts, when rivals cut back, so as to have the most capacity when demand returned.
 
@@ -270,22 +255,7 @@ The industry’s history is a series of brutal cycles. Prices collapse whenever 
 
 China has spent the past decade trying to break into the industry, through state-backed companies such as CXMT for DRAM and YMTC for flash storage. The US has tried to slow it with export controls on chipmaking equipment. CXMT’s rise during this shortage shows how a period of high prices gives a newcomer the opening it needs.
 
-## Key terms
-
-<KeyTerms>
-  <Term name="DRAM">Dynamic random-access memory: the fast, temporary working memory in phones, computers and servers.</Term>
-  <Term name="NAND flash">The type of memory used to store data long-term, in SSDs, phones and memory cards.</Term>
-  <Term name="High-bandwidth memory (HBM)">Stacked DRAM chips placed right next to an AI processor to feed it data very fast. Expensive and wafer-hungry to make.</Term>
-  <Term name="Wafer">A thin disc of silicon on which chips are made. Factory capacity is measured in wafers per month.</Term>
-  <Term name="Fab">A semiconductor factory. A modern memory fab costs tens of billions of dollars and takes years to build.</Term>
-  <Term name="Contract price">The price agreed between memory makers and large buyers, usually each quarter. The main benchmark for the industry.</Term>
-  <Term name="Long-term agreement (LTA)">A multi-year supply contract, often with guaranteed volumes and sometimes price bands or advance payments.</Term>
-  <Term name="Hyperscaler">The largest cloud computing companies, such as Amazon, Microsoft, Google and Meta, which build data centres on a huge scale.</Term>
-  <Term name="Bill of materials">The total cost of the parts that go into a product, before assembly, marketing and profit.</Term>
-  <Term name="Export controls">Government rules restricting the sale of certain goods or technology abroad, used by the US to limit China’s access to advanced chipmaking tools.</Term>
-</KeyTerms>
-
-## Go deeper
+## Where can I read more?
 
 ### Start with these (Wikipedia)
 
@@ -306,15 +276,6 @@ China has spent the past decade trying to break into the industry, through state
   <Read href="https://www.koreatimes.co.kr/business/tech-science/20260915/why-budget-phones-are-disappearing-just-when-they-are-needed-most" title="Why budget phones are disappearing just when they are needed most (The Korea Times)">What the squeeze looks like for ordinary buyers.</Read>
   <Read href="https://www.koreatimes.co.kr/business/companies/20261018/musks-criticism-of-samsung-sks-memory-chip-pricing-runs-counter-to-market-logic-expert" title="Musk’s criticism of Samsung, SK’s memory chip pricing runs counter to market logic: expert (The Korea Times)">The case that the makers don’t set prices, and why supply won’t catch up before 2029.</Read>
 </Reads>
-
-### Concepts worth learning properly
-
-<Concepts>
-  <Concept title="Oligopoly and tacit coordination">How a market with a few big sellers behaves, and why firms can act alike without ever agreeing to. Central to the debate over whether the makers are holding back supply.</Concept>
-  <Concept title="The cobweb model (the hog cycle)">Why industries where new supply takes years to arrive swing between shortage and glut. Memory is a textbook case.</Concept>
-  <Concept title="Opportunity cost">The value of what you give up when you use a resource one way. Every wafer turned into HBM is ordinary memory not made.</Concept>
-  <Concept title="Price as a rationing mechanism">How prices decide who gets a scarce good when supply can’t grow. Here, it means the richest buyers are served first.</Concept>
-</Concepts>
 
 ## Sources
 

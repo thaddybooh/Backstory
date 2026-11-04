@@ -9,7 +9,7 @@
         "Because three separate grievances peaked at the same moment. Teenagers were angry about schools that don’t work. Drivers, farmers and fishermen were squeezed by record diesel prices from the Iran war. Teachers, nurses and civil servants faced another pay freeze in a budget of cuts.",
         "Each on its own is the kind of thing France has absorbed before: a school strike can be settled with money for schools, a fuel protest eased with subsidies. When all three marched together on 17 October, the common demand became “this government is failing us”, and no single concession answers that. Underneath all three is the same thing: money the state doesn’t have."
       ],
-      "section": "three-angers-one-street",
+      "section": "why-are-so-many-different-groups-protesting-at-once",
       "sources": [
         { "title": "Why have France’s school protests become a wider political crisis?", "publication": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/18/why-have-frances-school-protests-become-a-wider-political-crisis" },
         { "title": "2026 French student protests", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2026_French_student_protests" },
@@ -85,7 +85,7 @@
         "Because of a war 5,000 km away. When the US and Israel went to war with Iran in February, traffic through the Strait of Hormuz, the channel for about a fifth of the world’s oil trade, nearly stopped. Brent crude went from about $72 to nearly $120 a barrel.",
         "France was hit harder on diesel than petrol for a structural reason: it imports most of its diesel already refined, so it pays the global refining premium, not just the crude price. Diesel rose from €1.59 to a record €2.41 a litre, and rural households, farmers, fishermen and hauliers all run on it."
       ],
-      "section": "a-war-5000-km-away-at-the-pump",
+      "section": "how-did-a-war-5000-km-away-push-up-fuel-prices",
       "sources": [
         { "title": "2026 Iran war fuel crisis", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis" },
         { "title": "French diesel prices top €2.40 a litre", "publication": "Euronews", "url": "https://www.euronews.com/2026/09/21/french-diesel-prices-top-240-a-litre-as-european-fuel-costs-hit-records" },
@@ -100,7 +100,7 @@
             "Because it is a supply shock. Inflation hit 3.1% in September with energy up 21.3%, but core inflation, which strips out energy and food, was only 1.5%. Prices are rising because something was taken away from the economy, not because people are spending too much.",
             "That creates a nasty dilemma: households feel poorer, but raising interest rates would weaken the economy without bringing back a single barrel of oil. The government chose targeted fuel subsidies instead, which are economically defensible but invisible to a commuter who still sees €2.40 on the sign."
           ],
-          "section": "a-war-5000-km-away-at-the-pump",
+          "section": "how-did-a-war-5000-km-away-push-up-fuel-prices",
           "sources": [
             { "title": "France September inflation revised up to 3.1%", "publication": "Trading Economics", "url": "https://tradingeconomics.com/france/inflation-cpi/news/592227" },
             { "title": "How France’s fuel crisis could shape the presidential campaign", "publication": "Euronews", "url": "https://www.euronews.com/2026/09/23/surging-prices-voters-anger-how-frances-fuel-crisis-could-shape-the-presidential-campaign" }
@@ -116,7 +116,7 @@
         "Because the money isn’t there. France hasn’t balanced a budget since 1973. Its deficit is expected to reach 5.4% of GDP this year against an EU ceiling of 3%, and debt is close to 120% of GDP. In 2018 Macron calmed the yellow vests with a €10 billion cheque; that option barely exists now.",
         "Near-zero interest rates once hid the problem. Now the 10-year bond yield has touched about 5%, its highest since 2002, and debt interest will cost about €10 billion more next year. It is a trap: cuts provoke protest, unrest makes lenders nervous, and yields rise further."
       ],
-      "section": "the-money-problem",
+      "section": "why-cant-the-government-pay-its-way-out",
       "sources": [
         { "title": "French government to lay out budget amid record-breaking public debt", "publication": "Euronews", "url": "https://www.euronews.com/2026/10/01/french-government-to-lay-out-budget-amid-record-breaking-public-debt" },
         { "title": "French bond yields and the spread over Germany", "publication": "Trading Economics", "url": "https://tradingeconomics.com/france/government-bond-yield/news/583545" },
@@ -162,7 +162,7 @@
         "Because the system is jammed. France’s constitution assumes a strong president with a loyal majority. Macron’s 2024 snap election backfired and split the National Assembly into three blocs, none close to a majority: the left, Macron’s centre and Marine Le Pen’s far right.",
         "Prime ministers have since fallen like dominoes. The current one, Sébastien Lecornu, survived only by promising not to force the budget through without a vote and by pausing the pension reform. With a presidential election in spring 2027 that Macron can’t contest, opposition parties have little reason to help pass painful cuts."
       ],
-      "section": "why-france-cant-govern-itself-right-now",
+      "section": "why-cant-france-govern-itself-right-now",
       "sources": [
         { "title": "Lecornu governments", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Lecornu_governments" },
         { "title": "French protests: Is it game over for Macron’s centrists before elections?", "publication": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/20/french-protests-is-it-game-over-for-macrons-centrists-before-elections" }
@@ -208,7 +208,7 @@
             "More than 6,800 people, mostly minors, were taken into custody during the school protests, a scale one sociologist called unprecedented for a high-school movement. Teenagers lost an eye and hands to police munitions; Amnesty, Human Rights Watch and the UN raised concerns, and stun grenades at student protests were suspended.",
             "The other side is real too: about 1,000 officers were injured on 17 October alone. The interior minister defended the response, then offered his resignation, which Macron refused. Each injury becomes a new grievance, giving the movement a second cause: how the state treats young protesters."
           ],
-          "section": "the-policing-question",
+          "section": "are-french-police-too-heavy-handed",
           "sources": [
             { "title": "French high school student protests met with excessive force", "publication": "Human Rights Watch", "url": "https://www.hrw.org/news/2026/10/14/french-high-school-student-protests-met-with-excessive-force" },
             { "title": "Emmanuel Macron rejects resignation of interior minister Laurent Nuñez", "publication": "Euronews", "url": "https://www.euronews.com/2026/10/19/emmanuel-macron-rejects-resignation-of-interior-minister-laurent-nunez" },
@@ -225,7 +225,7 @@
         "That is now a fight of its own. The government says intelligence services saw the school movement as organised by Mélenchon’s La France Insoumise and its far-left allies, and the prime minister called the unrest a “warm-up” for the election. LFI says the movement is spontaneous and the real story is police brutality against suburban youth.",
         "Public opinion splits the difference: one poll found 62% think the students’ movement is justified and 78% think LFI is exploiting it. Each side has an interest in its version, and much of the evidence is not public."
       ],
-      "section": "who-is-behind-it-the-blame-war",
+      "section": "who-is-behind-the-protests",
       "sources": [
         { "title": "France braces for new round of protests", "publication": "Washington Times", "url": "https://www.washingtontimes.com/news/2026/oct/20/france-braces-new-round-protests-officials-blame-far-left-agitators/" },
         { "title": "2026 French student protests", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2026_French_student_protests" }
@@ -240,25 +240,10 @@
         "No. Pupils in Belgium copied the blockades within days. Italian students rioted in Milan, Turin and Bologna over school conditions while hauliers and farmers protested diesel costs. Greek students camped outside parliament over housing costs.",
         "The common thread is an energy shock landing on years of strained public services, and a generation that feels the deal it was promised is not available. France is the most dramatic case because it combines all of it, and as the eurozone’s second-largest economy, rising French borrowing costs could become Europe’s problem."
       ],
-      "section": "not-only-france",
+      "section": "is-this-only-happening-in-france",
       "sources": [
         { "title": "What’s making Europe so angry?", "publication": "CNBC", "url": "https://www.cnbc.com/2026/10/20/france-protests-europe-cost-living-violence.html" },
         { "title": "2026 French student protests", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2026_French_student_protests" }
-      ],
-      "followUps": []
-    },
-    {
-      "id": "been-here-before",
-      "label": "Has France been here before?",
-      "question": "Has France been here before?",
-      "answer": [
-        "Many times. In France the street is widely treated as a legitimate part of democracy, and governments have retreated often enough that people believe protest works: in 1968, 1995, 2006, and in 2018, when the yellow vests forced Macron to scrap a fuel tax and spend about €10 billion. Lycée pupils themselves won an emergency education budget in 1990.",
-        "So 2026 is less a rupture than the next chapter of an argument running through Macron’s presidency. What is new is the youth of the protesters, the lack of money to buy peace, and a president on his way out."
-      ],
-      "section": "further-context-a-country-that-argues-in-the-street",
-      "sources": [
-        { "title": "Yellow vests protests", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Yellow_vests_protests" },
-        { "title": "Bloquons tout", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Bloquons_tout" }
       ],
       "followUps": []
     }
