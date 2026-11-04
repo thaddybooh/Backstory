@@ -67,35 +67,42 @@ Set `readTime` to match (the checker warns if it is off).
 
 **Structure** (adapt to the story; this is the default):
 
+**Every section heading (`##`) is a question a curious reader would ask**, ending in "?", for example
+`## Why can’t Indonesia stop it?`, `## What can governments do?`, never a label such as "The policing question" or
+"The money problem". The contents sidebar lists these headings, so it reads as the questions the issue answers and
+a reader can jump straight to the one they care about. Keep them short and concrete. The only exception is
+`## Sources`.
+
 1. `<Overview>`: "What is happening". About 3 short paragraphs of plain narrative: who did what, where, how big
-   (with figures), and the main reasons why. The reader must understand the event before seeing any numbers. If
-   dramatic footage differs from the overall picture (riots vs mostly peaceful marches), say so.
-2. `## ... in numbers` with `<Numbers>`: 6 to 8 key figures, each with a one-line label, then `<SmallPrint>`
-   saying where they come from.
-3. `## How ... unfolded` with `<Timeline>`: about 6 to 12 entries; mark the real turning points with `turning`.
-4. Explanatory sections shaped to the story: the mechanism (how the thing actually works), the economics, the
-   politics and institutions, the players and what they want, how the response is being handled. Use
-   `<Sidenote>` to define terms the first time they appear, `<Chain>` for cause-and-effect sequences, `<Rows>`
-   for options or playbooks, `<Spectrum>`/`<Converge>`/`<ScaleBar>` where they genuinely help.
-5. A **"why" section** that answers the critical question underneath (why schools got this bad; why the
+   (with figures), and the main reasons why. If dramatic footage differs from the overall picture (riots vs
+   mostly peaceful marches), say so.
+2. `## What happened, and when?` with `<Timeline>`: about 6 to 12 entries; mark the real turning points with
+   `turning`.
+3. Explanatory sections shaped to the story, each headed by a question: the mechanism (how the thing actually
+   works), the economics, the politics and institutions, the players and what they want, how the response is being
+   handled. Use `<Chain>` for cause-and-effect sequences, `<Rows>` for options or playbooks,
+   `<Spectrum>`/`<Converge>`/`<ScaleBar>` where they genuinely help.
+4. A **"why" section** that answers the critical question underneath (why schools got this bad; why the
    government can't stop the fires): `<WhyList>` with numbered layers of causes, then `<Answer>` with the plain
    conclusion ("So is it X, Y or Z?").
-6. **A policy section (required in every issue)**: what the story means for governments and policymakers.
+5. **A policy section (required in every issue)**: what the story means for governments and policymakers, headed
+   as a question such as `## What can governments do?` or `## What can Singapore’s government do?`.
    Name the policy problem, the real challenges and trade-offs (who bears the costs, what the tools are and why
    each is hard to use, what can and can't be done by one government alone), and what is actually on the table.
-   For a Singapore issue this is usually a section on the Singapore government's options and playbook (see
-   issue 002, "Singapore’s playbook at home" and "Dealing with a giant neighbour"); for a World issue, a section
-   such as `## What this means for policymakers` (see issue 003). Analyse; don't advocate, and attribute any
-   claim about what a government will do.
-7. `## Where reasonable people disagree`: one or two `<Debate>`s, each with exactly two `<Side>`s giving the
-   strongest form of each argument.
-8. `## What to watch next`: `<Rows>` with dated events and indicators to watch.
-9. `## Further context: ...`: history or background that helps but isn't essential. Short, near the end.
-10. `## Key terms` (`<KeyTerms>`, about 8 to 10), `## Go deeper` (`### Start with these (Wikipedia)` with about 5
-    `<Read>`s, `### Then read these articles` with about 5, `### Concepts worth learning properly` with about 4
-    `<Concept>`s from economics or political science).
-11. `## Sources` (always last): `<Sources>` wrapping a numbered Markdown list of every source as
-    `[Title](url), Outlet, date`. Finish with a `<SmallPrint>` noting anything drawn from general knowledge.
+   Analyse; don't advocate, and attribute any claim about what a government will do.
+6. `## Where do reasonable people disagree?`: one or two `<Debate>`s, each with exactly two `<Side>`s giving the
+   strongest form of each argument. Go straight into the debates, with no introductory sentence.
+7. Optional background near the end, still as a question (`## Why do the French protest so much?`): history that
+   helps but isn't essential. Short.
+8. `## Where can I read more?`: `### Start with these (Wikipedia)` with about 5 `<Read>`s, then
+   `### Then read these articles` with about 5.
+9. `## Sources` (always last): `<Sources>` wrapping a numbered Markdown list of every source as
+   `[Title](url), Outlet, date`. Finish with a `<SmallPrint>` noting anything drawn from general knowledge.
+
+**No** "in numbers" grid, "What to watch next", "Key terms" glossary or "Concepts worth learning properly" list:
+they made issues longer without helping. Put key figures in the prose where they matter. **Define any term most
+readers won't know with a `<Sidenote term="...">` placed just before the paragraph where it first appears** (at
+the top level, not inside a component); it shows in the margin beside that paragraph.
 
 Section headings are numbered automatically in order, so refer to other sections by number ("see section 06")
 only after the structure is final, and link to them with `[section 06](#heading-slug)`.

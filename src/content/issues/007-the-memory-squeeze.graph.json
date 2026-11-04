@@ -9,7 +9,7 @@
         "Because a new kind of buyer arrived faster than factories could be built. From 2023 the race to build AI data centres sent demand for high-bandwidth memory soaring, and in October 2025 OpenAI signed letters of intent suggesting its Stargate project alone might eventually need up to 900,000 DRAM wafers a month. The three big makers moved their newest lines and most of their investment to AI memory.",
         "The timing made it worse. After the 2022–23 bust, when Samsung and SK hynix lost more than 21 trillion won in their chip businesses, all three had cut production and investment. So when AI demand surged, there was little spare capacity. Contract prices for ordinary DRAM rose 55–63% in each of the first two quarters of 2026."
       ],
-      "section": "how-it-unfolded",
+      "section": "what-happened-and-when",
       "sources": [
         { "title": "OpenAI ropes in Samsung, SK Hynix to source memory chips for Stargate", "publication": "TechCrunch", "url": "https://www.techcrunch.com/2025/10/01/openai-ropes-in-samsung-sk-hynix-to-source-memory-chips-for-stargate" },
         { "title": "Memory makers prioritize server applications, driving across-the-board price increases in 1Q26", "publication": "TrendForce", "url": "https://www.trendforce.com/presscenter/news/20260105-12860.html" },
@@ -25,7 +25,7 @@
         "An AI model is, at bottom, billions of numbers that must sit in memory and be read again and again, very fast, both while it is trained and every time someone uses it. As AI chips have become more powerful, the limit on their speed has increasingly become memory: how much they can hold and how fast it can feed them.",
         "That is why AI chips use high-bandwidth memory: 8, 12 or 16 DRAM chips stacked on top of each other and placed right next to the processor. The servers around them also need large amounts of ordinary DRAM and fast storage. TrendForce estimates HBM and high-capacity server memory together make up about half of all DRAM supplied in 2026."
       ],
-      "section": "what-memory-chips-are-and-why-ai-needs-so-many",
+      "section": "what-are-memory-chips-and-why-does-ai-need-so-many",
       "sources": [
         { "title": "High Bandwidth Memory", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/High_Bandwidth_Memory" },
         { "title": "Memory prices soar; DRAM and NAND flash to account for 68% of major CSP capex in 2027", "publication": "TrendForce", "url": "https://www.trendforce.com/presscenter/news/20260825-13198.html" },
@@ -72,7 +72,7 @@
         "The three makers that control nearly 88% of DRAM. SK hynix, the HBM leader, made an operating profit of 83.3 trillion won (about $62.8 billion) in July–September, an 80% margin. Samsung expects 107.4 trillion won, a record for any Korean company, almost all of it from memory. Micron’s annual revenue rose 256% to $133.2 billion.",
         "Smaller makers of older memory, such as Taiwan’s Nanya and Winbond, are picking up demand the big three no longer serve, and China’s CXMT has doubled its share to about 10%. South Korea gains as a country: chips made up 44.7% of its exports in early October."
       ],
-      "section": "who-wins",
+      "section": "who-is-winning-from-the-shortage",
       "sources": [
         { "title": "SK hynix logs record Q3 operating profit of $62.8 bil.", "publication": "The Korea Times", "url": "https://www.koreatimes.co.kr/business/companies/20261028/sk-hynix-logs-record-q3-operating-profit-of-628-bil" },
         { "title": "Samsung Electronics 1st Korean firm to top $80 bil. in quarterly operating profit", "publication": "The Korea Times", "url": "https://www.koreatimes.co.kr/business/companies/20261008/samsung-electronics-1st-korean-firm-to-top-80-bil-in-quarterly-operating-profit" },
@@ -88,7 +88,7 @@
         "They are, but fabs take years. SK hynix’s new Cheongju fab opened its cleanroom in October 2025 and only began making chips in 2026; the first cleanroom at its Yongin complex opens in early 2027. Micron’s new fab in Japan aims for production in late 2028. TrendForce expects meaningful new capacity only from the second half of 2027.",
         "They are also cautious. Memory is notorious for booms and busts: SK hynix lost 9.1 trillion won in 2023, and Japan’s Elpida went bankrupt in 2012 after prices fell 85%. With only three big firms, each knows that building aggressively would hurt prices for everyone, including itself. That restraint is legal, but it keeps supply tight."
       ],
-      "section": "why-supply-cant-catch-up",
+      "section": "why-cant-supply-catch-up",
       "sources": [
         { "title": "SK hynix prospectus (Form 424B4)", "publication": "SK hynix / US SEC", "url": "https://www.sec.gov/Archives/edgar/data/0002120882/000119312526299963/d32785d424b4.htm" },
         { "title": "Elpida Memory", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Elpida_Memory" },
@@ -151,7 +151,7 @@
         "The makers say not soon: Micron and Samsung expect the tightness to last until 2028, SK hynix until 2030. Analyst Jim Handy expects supply not to catch up before 2029 if AI investment keeps growing. Buyers such as Acer’s chief executive think prices start falling from late 2027.",
         "There are early signs of a turn. TrendForce expects DRAM price rises to slow to 10–15% in October–December, after 55–63% earlier in the year. Phone and PC makers are running down stocks, Nvidia is trimming memory in some systems, and new fabs arrive in 2027–28. The big unknown is whether AI spending slows: US tech shares fell sharply on 23 October on exactly that worry."
       ],
-      "section": "the-signs-of-a-turn",
+      "section": "is-the-shortage-about-to-end",
       "sources": [
         { "title": "AI server demand sustains memory contract price increases in 4Q26, while consumer-side pressure persists", "publication": "TrendForce", "url": "https://www.trendforce.com/presscenter/news/20260930-13258.html" },
         { "title": "DRAM supply to remain tight in 2027, prompting NVIDIA to lower HBM configurations for Rubin Ultra", "publication": "TrendForce", "url": "https://www.trendforce.com/presscenter/news/20260804-13166.html" },
@@ -183,7 +183,7 @@
         "In the short term, very little. No government can make memory faster than the fabs being built, and quick fixes mostly move the pain around: forcing makers to prioritise carmakers just shifts the shortage to someone else, and tariffs on imported chips raise prices further because almost all memory is made abroad.",
         "The real choices are longer-term trade-offs. Subsidies, like the US CHIPS Act money for Micron and SK hynix, spread production across more countries but risk feeding the next bust. Letting companies buy from China’s CXMT would add supply now but deepen dependence on a firm the US links to China’s military. Competition authorities could look harder at an industry where three firms decide how much memory the world gets."
       ],
-      "section": "what-this-means-for-policymakers",
+      "section": "what-can-governments-do",
       "sources": [
         { "title": "SK hynix prospectus (Form 424B4)", "publication": "SK hynix / US SEC", "url": "https://www.sec.gov/Archives/edgar/data/0002120882/000119312526299963/d32785d424b4.htm" },
         { "title": "Micron Technology annual report (Form 10-K), fiscal 2026", "publication": "Micron / US SEC", "url": "https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000023/mu-20260903.htm" },

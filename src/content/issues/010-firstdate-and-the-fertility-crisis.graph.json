@@ -9,7 +9,7 @@
         "FirstDate is a dating service built by GovTech, the government’s technology agency, and piloted from 29 September for single public officers aged 21 to 35. Users log in with Singpass, so identities are verified, and fill in a questionnaire on their interests, habits, values and dealbreakers.",
         "Instead of a feed of profiles to swipe, each person gets one match per cycle, with a compatibility score and a note. Both sides have 72 hours to accept, and contact details are shared only if both say yes. The idea came out of GovTech’s annual hackathon. Its website does not mention birth rates, and GovTech says no decision has been made on expanding it."
       ],
-      "section": "what-firstdate-is-and-how-it-works",
+      "section": "what-is-firstdate-and-how-does-it-work",
       "sources": [
         {
           "title": "It’s a match! GovTech rolls out dating pilot",
@@ -65,7 +65,7 @@
         "Because the birth rate has hit a new low. The resident fertility rate fell to 0.87 in 2025, citizen births fell by more than a tenth in one year and marriages fell for the third year running. Deputy Prime Minister Gan Kim Yong called it an “existential challenge” and warned the citizen population could start shrinking in the early 2040s.",
         "Almost all children in Singapore are born to married couples, so fewer and later marriages mean fewer births. One of the top reasons young people give for being single is not having met the right person, which is the one problem a matching service can address."
       ],
-      "section": "how-it-unfolded",
+      "section": "what-happened-and-when",
       "sources": [
         {
           "title": "Population in Brief 2026",
@@ -92,7 +92,7 @@
         "At 0.87 children per woman in 2025, it is among the lowest in the world, below Japan’s and far below the 2.1 needed to keep a population stable. It was 1.24 as recently as 2015. Among ethnic Chinese residents, about three-quarters of the population, it is about 0.7.",
         "If it stayed at 0.87, every 100 residents today would have 44 children and 19 grandchildren. Without immigration, the number of citizens would start to fall in the early 2040s, and more than one in four would be 65 or older by 2035: fewer workers supporting more retirees, and higher costs for health and care."
       ],
-      "section": "the-fertility-crisis-in-numbers",
+      "section": "the-problem",
       "sources": [
         {
           "title": "Singapore’s fertility rate sinks to new low of 0.87, citizen population could shrink by early 2040s",
@@ -248,7 +248,7 @@
         "Singapore’s government has shaped family size since the 1960s. Its “Stop at Two” campaign penalised larger families and helped bring fertility to replacement level by 1975. In 1983 Lee Kuan Yew warned that graduate women were marrying less, and in 1984 the government set up the Social Development Unit to match graduate singles and gave graduate mothers’ children school priority.",
         "The backlash was fierce, the ruling party suffered a large swing in the 1984 election, and the most controversial parts were soon dropped. In 1987 the government switched to “Have three or more (if you can afford it)”. Fertility has never returned to replacement since."
       ],
-      "section": "further-context-the-great-marriage-debate",
+      "section": "what-was-the-great-marriage-debate",
       "sources": [
         {
           "title": "Population planning in Singapore",
@@ -275,7 +275,7 @@
         "That it is very hard. South Korea’s rate has risen from 0.72 to 0.80, helped by more marriages after the pandemic, a larger generation reaching its thirties and fertility treatment subsidies. Japan’s brief recovery in the 2000s was partly women catching up on delayed births. Even the Nordic countries, with generous leave and cheap childcare, have seen fertility fall, to 1.26 in Finland in 2023.",
         "Hungary spent heavily, and fertility rose for some years before falling again since 2022. The broad lesson is that money mainly changes when people have children more than how many; childcare and fairer workplaces seem to last longer."
       ],
-      "section": "what-other-countries-show",
+      "section": "what-have-other-countries-learned",
       "sources": [
         {
           "title": "‘Too high a cost’: Singaporeans say parenthood isn’t worth it despite years of cash incentives",
@@ -366,7 +366,7 @@
             "That is part of the plan already. Even a successful pro-natal policy takes two decades to add a single worker, while the ageing population is already here. So Singapore is also admitting more citizens and permanent residents, keeping older people working and investing in productivity.",
             "The limits are political and social. Immigration is sensitive: about 4,000 people protested against a population plan in 2013, and the government has promised to keep the broad ethnic balance of citizens. The real question for policymakers is how to divide money between trying to raise births and preparing for a population that will age anyway."
           ],
-          "section": "what-this-means-for-policymakers",
+          "section": "what-can-governments-do",
           "sources": [
             {
               "title": "Singapore’s fertility rate sinks to new low of 0.87, citizen population could shrink by early 2040s",

@@ -9,7 +9,7 @@
         "Because the government’s big AI push and the first signs of strain in the job market arrived in the same year. Budget 2026 in February set up a National AI Council chaired by the prime minister and gave firms tax breaks to adopt AI, and Mr Wong promised “no jobless growth”.",
         "Then the numbers turned. Retrenchments reached 4,620 in April–June, the most since 2020, mainly in manufacturing, information and communications, and finance. Fewer retrenched residents found work within six months, and fewer new graduates had full-time jobs. On 12 October both Mr Wong and President Tharman warned that AI could break the first rung of the career ladder."
       ],
-      "section": "how-it-unfolded",
+      "section": "what-happened-and-when",
       "sources": [
         { "title": "PM Wong’s Budget 2026 in summary: AI, supporting workers, vouchers & helping businesses", "publication": "Mothership", "url": "https://mothership.sg/2026/02/2026-budget-summary/" },
         { "title": "Labour Market Report, second quarter 2026", "publication": "Ministry of Manpower", "url": "https://www.mom.gov.sg/newsroom/press-releases/2026/0921-labour-market-report---second-quarter-2026" },
@@ -25,7 +25,7 @@
         "To be a nation of skilled AI users rather than AI builders. The Economic Strategy Review argued Singapore should not compete with bigger economies on the most advanced models or the largest data centres, but be the place where AI is developed, tested, deployed and scaled.",
         "Budget 2026 turned that into policy: a National AI Council, AI missions in manufacturing, logistics, finance and healthcare, a 400% tax deduction on AI spending up to S$50,000 a year, wider grants, a Champions of AI programme for firms, and AI courses with free premium tools for workers. The logic is that a small, high-cost economy that adopts AI slowly would lose investment and jobs to competitors."
       ],
-      "section": "what-singapore-is-betting-on",
+      "section": "what-is-singapore-betting-on",
       "sources": [
         { "title": "S’pore to establish National AI Council, to be chaired by PM Wong: Budget 2026", "publication": "Mothership", "url": "https://mothership.sg/2026/02/national-ai-council-pm-wong-budget-2026/" },
         { "title": "Economic Strategy Review final report published", "publication": "Allen & Gledhill", "url": "https://www.allenandgledhill.com/sg/publication/articles/33280/economic-strategy-review-final-report-published" },
@@ -56,7 +56,7 @@
             "Overall, yes; for some groups, less so. Employment has grown for 19 quarters, there are 1.48 vacancies per unemployed person, and 45.3% of vacancies are entry-level professional jobs.",
             "But retrenchments are at a five-year high, only 54.9% of retrenched residents found work within six months (down from 60.7%), two-thirds of retrenched residents now have degrees, and professional vacancies fell in finance and tech. Of 11,400 new jobs in April–June, only 2,200 went to residents. The strain is concentrated on graduates and professionals in office jobs."
           ],
-          "section": "what-the-job-numbers-actually-show",
+          "section": "what-do-the-job-numbers-actually-show",
           "sources": [
             { "title": "Labour Market Report, second quarter 2026", "publication": "Ministry of Manpower", "url": "https://www.mom.gov.sg/newsroom/press-releases/2026/0921-labour-market-report---second-quarter-2026" },
             { "title": "Singapore labour market expands in Q2 even as retrenchments rise and job vacancies fall", "publication": "The Straits Times via The Star", "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/09/21/singapore-labour-market-expands-in-q2-even-as-retrenchments-rise-and-job-vacancies-fall" }
@@ -72,7 +72,7 @@
         "New graduates learn their jobs by doing routine work: research, drafting, checking and summarising. That is exactly what generative AI does best. If firms let AI do it, they need fewer juniors, and in ten years there will be fewer experienced professionals, because the training ground has gone. Entry requirements rise too, creating a “no experience, no job” trap.",
         "Mr Wong raised this on 12 October and asked firms not to “automate away” the learning in junior work. President Tharman said the same day that the first job after graduation “is now seeing less demand”, and that the evidence is clearest in the most AI-exposed sectors."
       ],
-      "section": "the-bottom-rung-problem",
+      "section": "is-ai-taking-away-entry-level-jobs",
       "sources": [
         { "title": "Reskilling and upskilling workers amid AI adoption the harder but more sustainable path: PM Wong", "publication": "AsiaOne", "url": "https://www.asiaone.com/singapore/tan-su-shan-dbs-ai-lawrence-wong-workers" },
         { "title": "Singapore president warns of AI’s risk to employment for fresh graduates", "publication": "VnExpress International", "url": "https://e.vnexpress.net/news/world/singapore-president-warns-of-ai-s-risk-to-employment-for-fresh-graduates-5131568.html" },
@@ -163,7 +163,7 @@
         "The options include paying firms to hire graduates (urged by President Tharman and, as apprentice wage subsidies, by the Workers’ Party), redundancy insurance, compulsory retrenchment benefits under the Employment Act review, tracking AI-related job losses, tying AI grants to hiring and training commitments, and more practical training at university.",
         "Each involves a trade-off between speed and protection. Anything that makes restructuring costlier slows the AI adoption the Budget is trying to speed up, and subsidies cost money. But if workers conclude AI benefits companies while they bear the risk, the backlash Mr Wong warned about could make adoption harder."
       ],
-      "section": "singapores-playbook-for-ai-and-jobs",
+      "section": "what-is-singapore-doing-about-ai-and-jobs",
       "sources": [
         { "title": "Oral answer to PQ on retrenchment", "publication": "Ministry of Manpower", "url": "https://www.mom.gov.sg/newsroom/parliament-questions-and-replies/2026/1006-oral-answer-to-pq-on-retrenchment" },
         { "title": "Labour Day message 2026: strengthening social solidarity in the age of AI", "publication": "Workers’ Party", "url": "https://www.wp.sg/news/labour-day-message-2026-strengthening-social-solidarity-in-the-age-of-ai" },

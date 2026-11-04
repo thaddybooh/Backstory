@@ -138,19 +138,18 @@ it themselves first.
 No imports needed; they are passed in globally by the issue page.
 
 - `<Overview>` "What is happening", always first. First paragraph is shown larger.
-- `<Numbers>` + `<Stat value="...">label</Stat>`: the "in numbers" grid (aim for 6–8).
+- `<Numbers>`, `<KeyTerms>`, `<Concepts>`: retired (no "in numbers", "Key terms" or "Concepts" sections any more); still built so old drafts render.
 - `<Timeline>` + `<Event date="..." turning>`: `turning` marks a turning point. Also used for history chronologies.
 - `<Converge target="..." outcome="...">` + `<Flow label title>`: several causes meeting in one event (issue 001).
 - `<WhyList>` + `<Why title="...">`: numbered layered causes (put blank lines around paragraphs inside).
 - `<Answer title="...">`: highlighted plain-language conclusion.
-- `<Sidenote term="...">`: margin note on wide screens, inline box on phones. Place it before the paragraph it explains.
+- `<Sidenote term="...">`: margin note on wide screens, inline box on phones. Place it before the paragraph it explains. This is where hard terms are defined.
 - `<Chain>` wrapping a normal numbered Markdown list: cause-and-effect chain.
-- `<Rows>` + `<Row label="...">`: "What to watch" (label = date) and option lists.
+- `<Rows>` + `<Row label="...">`: option lists and playbooks.
 - `<Spectrum>` + `<Bloc position="left|centre|right" title>`: political blocs.
-- `<Debate topic="...">` + two `<Side title>`: "Where reasonable people disagree".
+- `<Debate topic="...">` + two `<Side title>`: "Where do reasonable people disagree?".
 - `<Quote cite="...">`: pull quote.
-- `<Reads>` + `<Read href title>`, `<Concepts>` + `<Concept title>`: "Go deeper".
-- `<KeyTerms>` + `<Term name>`: glossary.
+- `<Reads>` + `<Read href title>`: "Where can I read more?".
 - `<Sources>` wrapping a numbered Markdown list of links.
 - `<SmallPrint>`: small note (e.g. where figures come from).
 - `<ScaleBar>`: coloured scale with a marked value (the PSI chart in 002).

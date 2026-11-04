@@ -39,15 +39,13 @@ hero:
 
 Recurring components the issues use (build each as a reusable component):
 - **What is happening**: opening narrative overview (always first)
-- **In numbers**: grid of 6–8 key figures with labels
+- Every other section heading is a question the reader would ask, so the contents list reads as the issue's questions
 - **Timeline**: dated entries, with turning points highlighted
 - **Numbered "why" list**: layered causes with headings
 - **Answer box**: a highlighted plain-language conclusion
 - **Sidenote**: term definitions in the margin on desktop, inline on mobile
 - **Debate**: two-column "where reasonable people disagree" cards
-- **What to watch**: date + description rows
-- **Key terms**: glossary list
-- **Go deeper**: reading list (title, link, one line on why) and concept cards
+- **Where can I read more?**: reading list (title, link, one line on why)
 - **Sources**: numbered list of linked sources
 - **Charts**: simple data visuals where useful (issue 002 has a PSI scale bar showing where the 2026 peak of 229 sits)
 

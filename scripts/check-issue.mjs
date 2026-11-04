@@ -157,20 +157,25 @@ async function checkFile(file, all, components, maps) {
   const headings = [...body.matchAll(/^## (.+)$/gm)].map((m) => m[1].trim());
   if (headings.length < 8) W(`Only ${headings.length} numbered sections; issues usually have 12 or more.`);
   if (headings.at(-1) !== 'Sources') E('The last section must be "## Sources".');
+  // Every section is a question, so the contents list reads as the questions the issue answers.
+  for (const h of headings) if (h !== 'Sources' && !h.endsWith('?')) E(`Section heading "${h}" should be a question ending in "?".`);
   for (const [label, re] of [
-    ['Where reasonable people disagree', /disagree/i],
-    ['What to watch next', /what to watch/i],
-    ['Key terms', /^key terms$/i],
-    ['Go deeper', /^go deeper$/i],
+    ['Where do reasonable people disagree?', /disagree/i],
+    ['Where can I read more?', /read more/i],
   ]) {
     if (!headings.some((h) => re.test(h))) E(`Missing the "${label}" section.`);
   }
-  if (!headings.some((h) => /polic|govern|playbook/i.test(h)))
+  for (const [label, re] of [
+    ['in numbers', /in numbers/i],
+    ['What to watch next', /what to watch/i],
+    ['Key terms', /key terms/i],
+  ]) {
+    if (headings.some((h) => re.test(h))) E(`Drop the "${label}" section; issues no longer have one.`);
+  }
+  if (!headings.some((h) => /polic|govern|playbook|doing about/i.test(h)))
     W('No section heading mentions policy or government; every issue needs a section on what the story means for policymakers.');
 
-  const stats = (body.match(/<Stat\b/g) ?? []).length;
-  if (!body.includes('<Numbers>')) E('Missing the "in numbers" grid (<Numbers> with <Stat>s).');
-  else if (stats < 6 || stats > 8) W(`The numbers grid has ${stats} figures; aim for 6 to 8.`);
+  if (body.includes('<Numbers>')) E('Drop the numbers grid (<Numbers>); issues no longer have one.');
   if (!body.includes('<Timeline>')) W('No <Timeline>.');
   if (!body.includes('<WhyList>')) W('No numbered "why" list (<WhyList>). Most issues need one.');
   if (!body.includes('<Answer ')) W('No <Answer> box with the plain-language conclusion.');
@@ -179,8 +184,9 @@ async function checkFile(file, all, components, maps) {
     if (sides !== 2) E(`Each <Debate> needs exactly 2 <Side>s; one has ${sides}.`);
   }
   if (!body.includes('<Debate')) E('Missing <Debate> cards in "Where reasonable people disagree".');
-  if (!body.includes('<KeyTerms>')) E('Missing <KeyTerms> in "Key terms".');
-  if (!body.includes('<Reads>')) E('Missing a <Reads> reading list in "Go deeper".');
+  if (body.includes('<KeyTerms>')) E('Drop <KeyTerms>; define hard terms with a <Sidenote> beside the paragraph that uses them.');
+  if (body.includes('<Concepts>')) E('Drop the "Concepts worth learning properly" list.');
+  if (!body.includes('<Reads>')) E('Missing a <Reads> reading list in "Where can I read more?".');
 
   const sources = section(body, /^Sources$/);
   const sourceLinks = sources ? [...sources.matchAll(/^\d+\.\s.*\]\((https?:\/\/[^)\s]+)\)/gm)].map((m) => m[1]) : [];
