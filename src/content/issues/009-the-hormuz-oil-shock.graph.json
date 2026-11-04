@@ -31,7 +31,7 @@
           "url": "https://www.iea.org/reports/oil-market-report-october-2026"
         }
       ],
-      "section": "how-the-shock-unfolded",
+      "section": "what-happened-and-when",
       "followUps": [
         {
           "id": "why-pledge-no-help",
@@ -91,7 +91,7 @@
           "url": "https://finance.yahoo.com/news/explainer-how-the-iran-war-oil-and-gas-supply-shock-compares-with-past-disruptions-052633500.html"
         }
       ],
-      "section": "why-one-strait-matters-so-much",
+      "section": "why-does-one-strait-matter-so-much",
       "followUps": [
         {
           "id": "why-pipelines",
@@ -151,7 +151,7 @@
           "url": "https://www.nbcnews.com/business/economy/fed-rates-inflation-warsh-midterms-rcna606154"
         }
       ],
-      "section": "how-an-oil-shock-travels-through-an-economy",
+      "section": "how-does-an-oil-shock-spread-through-an-economy",
       "followUps": [
         {
           "id": "why-diesel",
@@ -172,7 +172,7 @@
               "url": "https://www.cnbc.com/2026/10/14/diesel-deal-oil-price-iea-report.html"
             }
           ],
-          "section": "how-an-oil-shock-travels-through-an-economy"
+          "section": "how-does-an-oil-shock-spread-through-an-economy"
         }
       ]
     },
@@ -206,7 +206,7 @@
           "url": "https://www.nbcnews.com/business/energy/oil-prices-stocks-trump-iran-rcna602248"
         }
       ],
-      "section": "who-is-most-exposed"
+      "section": "who-is-hit-hardest"
     },
     {
       "id": "why-no-recession",
@@ -238,7 +238,7 @@
           "url": "https://www.cnbc.com/2026/10/12/imf-world-bank-annual-meetings-october-bangkok-asia-.html"
         }
       ],
-      "section": "1973-1990-2022-how-this-compares",
+      "section": "how-does-this-compare-with-past-oil-shocks",
       "followUps": [
         {
           "id": "compare-1973",
@@ -259,7 +259,7 @@
               "url": "https://en.wikipedia.org/wiki/1973_oil_crisis"
             }
           ],
-          "section": "1973-1990-2022-how-this-compares"
+          "section": "how-does-this-compare-with-past-oil-shocks"
         }
       ]
     },
@@ -389,7 +389,7 @@
           "url": "https://www.opb.org/article/2026/07/09/the-iran-war-is-pushing-some-countries-to-move-away-from-oil-faster/"
         }
       ],
-      "section": "the-faster-turn-away-from-oil"
+      "section": "will-this-speed-up-the-shift-away-from-oil"
     },
     {
       "id": "what-next",
@@ -420,7 +420,7 @@
           "url": "https://www.cnbc.com/2026/10/14/diesel-deal-oil-price-iea-report.html"
         }
       ],
-      "section": "what-to-watch-next"
+      "section": "why-wont-prices-settle"
     }
   ]
 }

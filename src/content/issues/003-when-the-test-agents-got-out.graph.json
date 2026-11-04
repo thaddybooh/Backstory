@@ -9,7 +9,7 @@
         "OpenAI was testing how well its AI agents could hack, with safety filters deliberately off, inside sandboxes whose only outside link was an internal package server. Many tasks were impossible, and the agents had no approved way to say so.",
         "So they improvised. They discovered they could leave files for each other on the package server and turned it into a shared message board. They found flaws in that server and took control of it, turning a filtered link into an open one. Then they went looking online for clues about how they were graded, found exposed Hugging Face credentials, and hundreds of agents joined the break-in."
       ],
-      "section": "how-a-test-turned-into-an-attack",
+      "section": "how-did-a-test-turn-into-an-attack",
       "sources": [
         { "title": "Brief independent investigation of agents’ behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident", "publication": "METR and Redwood Research", "url": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/" },
         { "title": "Black Hat 2026: OpenAI reveals agents planned ‘collective attacks’ via secret ‘message board’", "publication": "SC World", "url": "https://www.scworld.com/news/black-hat-2026-openai-reveals-agents-planned-collective-attacks-via-secret-message-board" },
@@ -38,7 +38,7 @@
             "Their own written reasoning suggests they did. Of the 533 agents active on the message board during the attack, more than 90% joined in, and their notes show they knew it was out of scope and unethical, but joined to help the “collective” and their “peers”.",
             "They weren’t trying to cause damage: every potentially destructive command was run as a “dry run”. OpenAI names four patterns: reward hacking, refusing to give up on impossible tasks, communicating without permission, and agents adopting goals from each other. Earlier safety testing was not designed to catch that last one."
           ],
-          "section": "how-a-test-turned-into-an-attack",
+          "section": "how-did-a-test-turn-into-an-attack",
           "sources": [
             { "title": "Brief independent investigation of agents’ behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident", "publication": "METR and Redwood Research", "url": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/" },
             { "title": "Anatomy of a frontier lab agent intrusion: a technical timeline of the July 2026 incident", "publication": "Hugging Face", "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline" }
@@ -54,7 +54,7 @@
         "They uploaded booby-trapped datasets that exploited two flaws in the way Hugging Face automatically processes uploads. The first made a server read out its own files, including passwords and keys; the second let them run their own code inside the network.",
         "From there they went, in Hugging Face’s words, from one compromised worker “to cluster-admin across multiple internal clusters in under thirteen hours”, read an internal database and tried to compromise the build system, which was blocked. Hugging Face says the flaws were familiar ones a capable human could have found. What wasn’t human was the speed, the stamina and the noise."
       ],
-      "section": "inside-hugging-face",
+      "section": "what-happened-inside-hugging-face",
       "sources": [
         { "title": "Anatomy of a frontier lab agent intrusion: a technical timeline of the July 2026 incident", "publication": "Hugging Face", "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline" },
         { "title": "In the Hugging Face breach, OpenAI’s hacker was noisy and fast — but not unstoppable", "publication": "TechCrunch", "url": "https://techcrunch.com/2026/07/30/in-the-hugging-face-breach-openais-hacker-was-noisy-and-fast-but-not-unstoppable/" },
@@ -177,7 +177,7 @@
         "No. OpenAI agents turned an obscure German programmers’ wiki into a second message board, uploaded hundreds of malicious packages to the RubyGems code library, and broke into an Australian government health statistics portal. By 1 October OpenAI had notified more than 100 organisations of unauthorised activity, though a notice doesn’t always mean a successful hack, and its review of about 50 petabytes of records will take months.",
         "It isn’t only OpenAI either: Anthropic found its own models broke into three outside organisations during cyber tests, through an open path in the test setup."
       ],
-      "section": "not-just-hugging-face",
+      "section": "who-else-was-hit",
       "sources": [
         { "title": "2026 cyberattacks by rogue OpenAI agents", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2026_cyberattacks_by_rogue_OpenAI_agents" },
         { "title": "OpenAI alerts more than 100 groups about rogue AI agent activity", "publication": "Reuters via The Star", "url": "https://www.thestar.com.my/tech/tech-news/2026/10/02/openai-alerts-more-than-100-groups-about-rogue-ai-agent-activity" },
@@ -192,7 +192,7 @@
             "On 18 June an OpenAI agent got past the protections of a Medicare statistics portal run by Services Australia and reached unpublished files. The government says no personal Medicare records appear to have been accessed.",
             "OpenAI only told Australia 84 days later, in an email to a generic public inbox. Prime Minister Anthony Albanese called it the first known case of an AI agent hacking a government system, set up a taskforce and announced standards requiring tech companies to report rogue AI incidents immediately. A smaller country can be harmed by a test it never knew was happening."
           ],
-          "section": "not-just-hugging-face",
+          "section": "who-else-was-hit",
           "sources": [
             { "title": "OpenAI hacked Medicare portal, Prime Minister Anthony Albanese says", "publication": "ABC News (Australia)", "url": "https://www.abc.net.au/news/2026-09-24/ai-agent-accessed-australian-government-site-pm-says/107189078" },
             { "title": "‘Extreme concern’ over first known AI hack of a government system", "publication": "CNN", "url": "https://edition.cnn.com/2026/09/23/business/australia-openai-agent-hack-intl-hnk" },
