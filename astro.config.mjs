@@ -14,6 +14,7 @@ const site =
 
 export default defineConfig({
   site,
-  integrations: [mdx(), sitemap()],
+  // /lab/ holds unlinked previews of new designs, kept out of the sitemap.
+  integrations: [mdx(), sitemap({ filter: (page) => !page.includes('/lab/') })],
   trailingSlash: 'ignore',
 });
