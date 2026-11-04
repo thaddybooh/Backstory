@@ -83,24 +83,9 @@ export async function mountTopicMap(section: HTMLElement) {
   const panelKicker = panel.querySelector<HTMLElement>('.qmap-panel-kicker')!;
   const panelBody = panel.querySelector<HTMLElement>('.qmap-panel-body')!;
   const panelNext = panel.querySelector<HTMLElement>('.qmap-panel-next')!;
-  const toggles = [...section.querySelectorAll<HTMLButtonElement>('.qmap-toggle button')];
   const expandBtn = section.querySelector<HTMLButtonElement>('[data-action="expand"]')!;
   const chips = [...section.querySelectorAll<HTMLButtonElement>('.tmap-chip')];
   const narrow = () => stage.clientWidth < 560;
-
-  // ---------- View toggle (map or list), remembered per browser ----------
-  function setView(view: string) {
-    document.documentElement.dataset.qmapView = view;
-    for (const b of toggles) b.setAttribute('aria-pressed', String(b.dataset.view === view));
-    try {
-      localStorage.setItem('qmap-view', view);
-    } catch {}
-    if (view === 'graph') requestAnimationFrame(() => resize());
-    else closePanel(false);
-  }
-  for (const b of toggles) b.addEventListener('click', () => setView(b.dataset.view!));
-  for (const b of toggles)
-    b.setAttribute('aria-pressed', String(b.dataset.view === (document.documentElement.dataset.qmapView ?? 'graph')));
 
   // ---------- Nodes, read from the rendered list ----------
   const blank = { children: [], related: [], w: 0, h: 0, block: 0, x: 0, y: 0, tx: 0, ty: 0, fx: 0, fy: 0, vx: 0, vy: 0, a: 1, aTarget: 1, delay: 0 };
@@ -783,11 +768,8 @@ export async function mountTopicMap(section: HTMLElement) {
 
   // A link such as /topics/ai-and-jobs/#rung-warning opens that box straight away.
   const linked = byId.get(decodeURIComponent(location.hash.slice(1)));
-  if (linked && document.documentElement.dataset.qmapView !== 'list') {
+  if (linked) {
     stage.scrollIntoView({ block: 'center' });
     open(linked);
-  } else if (linked) {
-    for (let p: Node | undefined = linked; p && p !== root; p = p.parent) p.details!.open = true;
-    linked.details!.scrollIntoView({ block: 'center' });
   }
 }
