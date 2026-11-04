@@ -76,10 +76,6 @@ const hasHero = Boolean(data.hero && (data.hero.image || (data.hero.commons && g
             <span class="visually-hidden">Issue {data.number}: </span>{data.title}
           </h1>
           <p class="cover-dek">{data.dek}</p>
-          <div class="cover-foot">
-            <span>{data.readTime}-minute read</span>
-            {data.research && <span>{data.research}</span>}
-          </div>
           {
             data.tags.length > 0 && (
               <ul class="tags" aria-label="Topics">
