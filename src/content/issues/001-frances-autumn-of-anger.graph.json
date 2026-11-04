@@ -246,21 +246,6 @@
         { "title": "2026 French student protests", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2026_French_student_protests" }
       ],
       "followUps": []
-    },
-    {
-      "id": "been-here-before",
-      "label": "Has France been here before?",
-      "question": "Has France been here before?",
-      "answer": [
-        "Many times. In France the street is widely treated as a legitimate part of democracy, and governments have retreated often enough that people believe protest works: in 1968, 1995, 2006, and in 2018, when the yellow vests forced Macron to scrap a fuel tax and spend about €10 billion. Lycée pupils themselves won an emergency education budget in 1990.",
-        "So 2026 is less a rupture than the next chapter of an argument running through Macron’s presidency. What is new is the youth of the protesters, the lack of money to buy peace, and a president on his way out."
-      ],
-      "section": "why-do-the-french-protest-so-much",
-      "sources": [
-        { "title": "Yellow vests protests", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Yellow_vests_protests" },
-        { "title": "Bloquons tout", "publication": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Bloquons_tout" }
-      ],
-      "followUps": []
     }
   ]
 }

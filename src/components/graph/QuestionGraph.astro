@@ -30,7 +30,6 @@ const readLabel = latest ? 'Read this in today’s issue' : 'Read this in the is
 const image = data.hero?.commons ? getCommonsImage(data.hero.commons)?.src : data.hero?.image;
 const centreHref = context === 'home' ? issueUrl(issue) : '#what-is-happening';
 const titleId = `qmap-title-${issue.id}`;
-const total = graph.questions.length;
 ---
 
 <section
@@ -52,10 +51,6 @@ const total = graph.questions.length;
             story
           </p>
           <p class="qmap-title" id={titleId}>Start with a question</p>
-          <p class="qmap-intro">
-            The {total} questions a curious reader would ask, each with a short answer, its sources, and a link to the part
-            of the issue that covers it.
-          </p>
         </div>
       </div>
     )
