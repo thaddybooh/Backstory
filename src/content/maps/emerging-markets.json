@@ -1,0 +1,423 @@
+{
+  "title": "Emerging markets and global money",
+  "track": "world",
+  "updated": "2026-10-31",
+  "dek": "How index providers, fund flows and currencies decide where the world’s savings go, why markets such as Indonesia can lose access to that money, and each development in the news.",
+  "intro": "Start with The basics if you are new to the topic: how index providers steer money, what free float means and why emerging market currencies fall. In the news holds each development, and every story opens into the same four questions: why is it happening, what is changing, who does it affect, and what does it mean.",
+  "cover": {
+    "commons": "IDX-building.jpg",
+    "alt": "The twin towers of the Indonesia Stock Exchange building in Jakarta"
+  },
+  "categories": [
+    {
+      "id": "basics",
+      "label": "The basics",
+      "kind": "basics",
+      "question": "How do emerging markets and global investment flows work?",
+      "answer": [
+        "Most money invested in emerging markets from abroad follows indexes rather than individual choices. Index providers decide which countries count as emerging, funds that copy the indexes buy and sell automatically, and the share of each company that can really be traded decides how much money it receives. When investors lose confidence, they sell shares, convert into dollars and push the local currency down. These boxes explain each piece."
+      ],
+      "sources": [
+        {
+          "title": "MSCI",
+          "publication": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/MSCI"
+        },
+        {
+          "title": "2026 Global Market Accessibility Review",
+          "publication": "MSCI",
+          "url": "https://www.msci.com/downloads/web/msci-com/indexes/index-resources/market-classification/MSCI%202026%20GLOBAL%20MARKET%20ACCESSIBILITY%20REVIEW%20REPORT.pdf"
+        }
+      ],
+      "children": [
+        {
+          "id": "index-providers",
+          "label": "How indexes steer money",
+          "question": "How do stock index providers such as MSCI steer the world’s money?",
+          "answer": [
+            "Index providers draw up lists of shares that funds copy or measure themselves against. MSCI’s are the most followed: more than $16.5 trillion of funds were tracked against or benchmarked to them in 2025. Its biggest decision is which family a country belongs to: developed, emerging, frontier or standalone.",
+            "MSCI judges countries mainly on accessibility, not wealth. Every June it scores each market on openness to foreign ownership, how easily money moves in and out, how well trading and settlement work, what investment products exist, and how stable the rules are. Moving a country between families moves billions of dollars, because funds that copy an index must follow it."
+          ],
+          "sources": [
+            {
+              "title": "MSCI",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/MSCI"
+            },
+            {
+              "title": "2026 Global Market Accessibility Review",
+              "publication": "MSCI",
+              "url": "https://www.msci.com/downloads/web/msci-com/indexes/index-resources/market-classification/MSCI%202026%20GLOBAL%20MARKET%20ACCESSIBILITY%20REVIEW%20REPORT.pdf"
+            }
+          ],
+          "children": [
+            {
+              "id": "passive-funds",
+              "label": "What is a passive fund?",
+              "type": "basics",
+              "question": "What is a passive fund, and why does it sell automatically?",
+              "answer": [
+                "A passive fund does not pick shares; it copies an index, buying every stock in proportion to its weight. Index funds and most exchange-traded funds work this way. When a country leaves the index, the fund must sell its shares there, whatever its managers think of the companies. Active managers judged against the index often follow. That is why an index decision can move a country’s whole market: as one analyst put it about Indonesia, index funds ‘would sell Indonesian holdings automatically’."
+              ],
+              "sources": [
+                {
+                  "title": "As public sentiment sours, Indonesia awaits MSCI verdict which risks $13 billion in capital outflows",
+                  "publication": "Fortune",
+                  "url": "https://fortune.com/2026/06/22/indonesia-awaits-msci-verdict-13-billion-capital-outflow/"
+                },
+                {
+                  "title": "Indonesian stocks plunge to six-year low as MSCI downgrade fears mount",
+                  "publication": "CNBC",
+                  "url": "https://www.cnbc.com/2026/10/19/indonesian-stocks-msci-downgrade-fears-mount.html"
+                }
+              ]
+            },
+            {
+              "id": "market-families",
+              "label": "Emerging, frontier, standalone",
+              "type": "basics",
+              "question": "What is the difference between emerging, frontier and standalone markets?",
+              "answer": [
+                "Emerging markets, such as China, India, Brazil and Korea, are open enough for global investors but not fully at developed standards, and a huge pool of money tracks them. Frontier markets, such as Vietnam, Pakistan and Bangladesh, are smaller or harder to access, and far less money follows them. Standalone markets fall short even of frontier standards and sit outside MSCI’s main global index families; today they include Argentina, Lebanon, Nigeria, Jamaica and Panama, usually because investors cannot get money in or out or cannot rely on the market."
+              ],
+              "sources": [
+                {
+                  "title": "2026 Global Market Accessibility Review",
+                  "publication": "MSCI",
+                  "url": "https://www.msci.com/downloads/web/msci-com/indexes/index-resources/market-classification/MSCI%202026%20GLOBAL%20MARKET%20ACCESSIBILITY%20REVIEW%20REPORT.pdf"
+                },
+                {
+                  "title": "As public sentiment sours, Indonesia awaits MSCI verdict which risks $13 billion in capital outflows",
+                  "publication": "Fortune",
+                  "url": "https://fortune.com/2026/06/22/indonesia-awaits-msci-verdict-13-billion-capital-outflow/"
+                },
+                {
+                  "title": "Indonesian stocks plunge 11% as MSCI proposes emerging market downgrade",
+                  "publication": "Euronews",
+                  "url": "https://www.euronews.com/2026/10/16/indonesian-stocks-plunge-11-as-msci-proposes-emerging-market-downgrade"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "free-float",
+          "label": "Free float and ownership",
+          "question": "What is free float, and why does it matter so much to investors?",
+          "answer": [
+            "Free float is the share of a company’s stock that ordinary investors can actually buy and sell, as opposed to shares held by founders, families or governments. Index providers weight stocks by free float, not total size, so it decides how much index money flows into a company.",
+            "When the float is small, it takes relatively little buying to move the price, and when investors cannot see who holds the ‘public’ shares, they cannot tell how much is really for sale. MSCI’s complaint about Indonesia is exactly this: that opacity in shareholding and coordinated trading stop investors assessing true free float or relying on market prices."
+          ],
+          "sources": [
+            {
+              "title": "2026 Global Market Accessibility Review",
+              "publication": "MSCI",
+              "url": "https://www.msci.com/downloads/web/msci-com/indexes/index-resources/market-classification/MSCI%202026%20GLOBAL%20MARKET%20ACCESSIBILITY%20REVIEW%20REPORT.pdf"
+            },
+            {
+              "title": "Indonesian Market Braces for Key June MSCI Review After Stock Removals",
+              "publication": "Jakarta Globe",
+              "url": "https://jakartaglobe.id/business/indonesian-market-braces-for-key-june-msci-review-after-stock-removals"
+            }
+          ],
+          "children": [
+            {
+              "id": "fried-stocks",
+              "label": "What are ‘fried stocks’?",
+              "type": "basics",
+              "question": "What are ‘fried stocks’ and how can a thin float be gamed?",
+              "answer": [
+                "Indonesians call shares that a group of traders heats up and then sells saham gorengan, ‘fried stocks’. They thrive where few shares trade. Analysts describe a pattern sometimes called the ‘MSCI trade’: a company lists with few public shares, buying pushes its market value far ahead of the business, it becomes big enough for an index, and index funds must then buy at whatever price the market shows, giving insiders a buyer. Later buyers carry the risk. This describes a risk, not a finding about any company."
+              ],
+              "sources": [
+                {
+                  "title": "Indonesian stocks tumble 41pc; Jakarta goes after tycoons allegedly behind ‘gorengan’ shares",
+                  "publication": "Malay Mail",
+                  "url": "https://www.malaymail.com/news/money/2026/10/31/indonesian-stocks-tumble-41pc-jakarta-goes-after-tycoons-allegedly-behind-gorengan-shares/241386"
+                },
+                {
+                  "title": "2026 Global Market Accessibility Review",
+                  "publication": "MSCI",
+                  "url": "https://www.msci.com/downloads/web/msci-com/indexes/index-resources/market-classification/MSCI%202026%20GLOBAL%20MARKET%20ACCESSIBILITY%20REVIEW%20REPORT.pdf"
+                }
+              ]
+            },
+            {
+              "id": "why-concentrated",
+              "label": "Why is ownership so concentrated?",
+              "type": "why",
+              "question": "Why are so many of Indonesia’s big companies controlled by a few families?",
+              "answer": [
+                "Indonesia’s big business groups grew under Suharto’s New Order, from 1966 to 1998, when licences, credit and contracts depended on connections. Families built conglomerates spanning mining, plantations, property, banks and energy, and when they list a company they usually list a slice and keep control. That is legal and common in Asia, but with a 7.5% minimum float and a 5% disclosure threshold, a company could look public on paper while friendly holders kept much of the float out of sight."
+              ],
+              "sources": [
+                {
+                  "title": "2026 Global Market Accessibility Review",
+                  "publication": "MSCI",
+                  "url": "https://www.msci.com/downloads/web/msci-com/indexes/index-resources/market-classification/MSCI%202026%20GLOBAL%20MARKET%20ACCESSIBILITY%20REVIEW%20REPORT.pdf"
+                },
+                {
+                  "title": "As public sentiment sours, Indonesia awaits MSCI verdict which risks $13 billion in capital outflows",
+                  "publication": "Fortune",
+                  "url": "https://fortune.com/2026/06/22/indonesia-awaits-msci-verdict-13-billion-capital-outflow/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "currency-pressure",
+          "label": "When a currency falls",
+          "question": "Why do emerging market currencies fall when investors get nervous?",
+          "answer": [
+            "When foreign investors sell an emerging market’s shares or bonds, they convert the proceeds into dollars, pushing the local currency down. An oil shock adds to it in fuel importers: Indonesia’s trade surplus, which normally supplies dollars, fell to $89 million in April 2026 from $3.3 billion as fuel import bills rose. The rupiah hit a record low of about 18,190 to the dollar on 8 June.",
+            "A weaker currency makes imports, foreign debt and dividends paid abroad dearer. Central banks respond by raising interest rates to attract money back, spending reserves and limiting dollar purchases, but higher rates slow growth."
+          ],
+          "sources": [
+            {
+              "title": "Indonesia’s rupiah falls to record low against US dollar",
+              "publication": "Al Jazeera (AFP, Reuters)",
+              "url": "https://www.aljazeera.com/economy/2026/6/4/indonesias-rupiah-falls-to-record-low-against-us-dollar"
+            },
+            {
+              "title": "Indonesia raises rates in surprise move as rupiah lingers near record lows",
+              "publication": "CNBC",
+              "url": "https://www.cnbc.com/2026/06/09/indonesia-hikes-rates-rupiah-weakness-inflation-iran-war.html"
+            }
+          ],
+          "children": [
+            {
+              "id": "cb-independence",
+              "label": "Why central bank independence?",
+              "type": "basics",
+              "question": "Why do investors care so much about central bank independence?",
+              "answer": [
+                "A central bank seen as setting rates to keep prices and the currency stable, free from politicians who may want cheaper money, gives investors confidence that their savings will not be inflated away. When that independence is in doubt, investors tend to demand more to hold the currency. In Indonesia a June 2026 law gave the central bank responsibility for growth and jobs and a parliamentary performance review, and its governor resigned two years early in July, which unsettled investors."
+              ],
+              "sources": [
+                {
+                  "title": "Indonesia parliament confirms Destry as new central bank governor",
+                  "publication": "Malay Mail (AFP)",
+                  "url": "https://www.malaymail.com/news/money/2026/09/01/indonesia-parliament-confirms-destry-as-new-central-bank-governor/233522"
+                },
+                {
+                  "title": "Indonesia raises rates in surprise move as rupiah lingers near record lows",
+                  "publication": "CNBC",
+                  "url": "https://www.cnbc.com/2026/06/09/indonesia-hikes-rates-rupiah-weakness-inflation-iran-war.html"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "news",
+      "label": "In the news",
+      "kind": "news",
+      "question": "What is happening in emerging markets now?",
+      "answer": [
+        "Each development in the news, newest first. Every story opens into the same four questions: why it is happening, what is changing, who it affects and what it means, plus any debates and deeper causes. The first story is the deep crisis in Indonesia’s stock market in 2026, after the index provider MSCI proposed demoting it from emerging market status."
+      ],
+      "sources": [
+        {
+          "title": "Indonesian stocks plunge 11% as MSCI proposes emerging market downgrade",
+          "publication": "Euronews",
+          "url": "https://www.euronews.com/2026/10/16/indonesian-stocks-plunge-11-as-msci-proposes-emerging-market-downgrade"
+        }
+      ],
+      "children": [
+        {
+          "id": "msci-standalone",
+          "label": "MSCI proposes demoting Indonesia",
+          "question": "Why is MSCI proposing to demote Indonesia out of the emerging markets?",
+          "answer": [
+            "On 15 October 2026 MSCI proposed moving Indonesia from emerging market to standalone status, outside its main global indexes, saying investors could not tell who really owned many listed companies and suspected coordinated trading. The Jakarta Composite fell 11.6% the next day, its worst day since January 1998, and more than 5% again on 19 October. By 30 October it was down about 18% for the month and 41% for the year. Foreign holdings had nearly halved to about $130 billion. MSCI will decide by the end of June 2027."
+          ],
+          "sources": [
+            {
+              "title": "Indonesian stocks plunge 11% as MSCI proposes emerging market downgrade",
+              "publication": "Euronews",
+              "url": "https://www.euronews.com/2026/10/16/indonesian-stocks-plunge-11-as-msci-proposes-emerging-market-downgrade"
+            },
+            {
+              "title": "Indonesia stocks sink on MSCI downgrade warning",
+              "publication": "Taipei Times (Bloomberg)",
+              "url": "https://www.taipeitimes.com/News/front/archives/2026/10/17/2003866114"
+            },
+            {
+              "title": "Indonesian stocks plunge to six-year low as MSCI downgrade fears mount",
+              "publication": "CNBC",
+              "url": "https://www.cnbc.com/2026/10/19/indonesian-stocks-msci-downgrade-fears-mount.html"
+            },
+            {
+              "title": "Indonesian stocks tumble 41pc; Jakarta goes after tycoons allegedly behind ‘gorengan’ shares",
+              "publication": "Malay Mail",
+              "url": "https://www.malaymail.com/news/money/2026/10/31/indonesian-stocks-tumble-41pc-jakarta-goes-after-tycoons-allegedly-behind-gorengan-shares/241386"
+            }
+          ],
+          "when": "Oct 2026",
+          "related": [
+            "index-providers",
+            "free-float",
+            "market-families"
+          ],
+          "issue": "011-indonesias-market-crisis",
+          "children": [
+            {
+              "id": "msci-why",
+              "label": "Why now?",
+              "type": "why",
+              "question": "Why did MSCI act in October 2026?",
+              "answer": [
+                "It was the end of a nine-month warning. MSCI froze Indonesian stocks in its indexes in January, removed six companies in May and cut Indonesia’s information flow score in June, extending its review to November. Regulators doubled the minimum free float to 15% and cut the disclosure threshold to 1%, but MSCI said sufficient progress had not been made and significant concerns remained about market dysfunction. Investors told it a frontier label would not recognise the depth of the problems."
+              ],
+              "sources": [
+                {
+                  "title": "Indonesian stocks plunge 11% as MSCI proposes emerging market downgrade",
+                  "publication": "Euronews",
+                  "url": "https://www.euronews.com/2026/10/16/indonesian-stocks-plunge-11-as-msci-proposes-emerging-market-downgrade"
+                },
+                {
+                  "title": "MSCI keeps South Korea as emerging market, delays Indonesia review amid downgrade risk",
+                  "publication": "CNBC",
+                  "url": "https://www.cnbc.com/2026/06/24/msci-south-korea-emerging-market-indonesia-review-extended.html"
+                },
+                {
+                  "title": "As public sentiment sours, Indonesia awaits MSCI verdict which risks $13 billion in capital outflows",
+                  "publication": "Fortune",
+                  "url": "https://fortune.com/2026/06/22/indonesia-awaits-msci-verdict-13-billion-capital-outflow/"
+                }
+              ]
+            },
+            {
+              "id": "msci-what",
+              "label": "What’s changing?",
+              "type": "what",
+              "question": "What is changing in Indonesia’s market?",
+              "answer": [
+                "Indonesian stocks stay frozen in MSCI’s indexes until it decides. The exchange will drop 80 tightly held stocks, about 18% of the benchmark’s weight, from the Jakarta Composite; they stay tradable but no longer move the index. The regulator has imposed record fines of 2.1 trillion rupiah for manipulation without naming those fined, and the president’s brother has told tycoons to stop ‘deep frying’ stocks. Danantara says it will buy more shares in state companies."
+              ],
+              "sources": [
+                {
+                  "title": "Indonesia to exclude 80 highly concentrated stocks from benchmark index",
+                  "publication": "The Star (Bernama)",
+                  "url": "https://www.thestar.com.my/business/business-news/2026/10/20/indonesia-to-exclude-80-highly-concentrated-stocks-from-benchmark-index"
+                },
+                {
+                  "title": "Indonesian stocks tumble 41pc; Jakarta goes after tycoons allegedly behind ‘gorengan’ shares",
+                  "publication": "Malay Mail",
+                  "url": "https://www.malaymail.com/news/money/2026/10/31/indonesian-stocks-tumble-41pc-jakarta-goes-after-tycoons-allegedly-behind-gorengan-shares/241386"
+                }
+              ]
+            },
+            {
+              "id": "msci-who",
+              "label": "Who does it affect?",
+              "type": "who",
+              "question": "Who does a downgrade affect?",
+              "answer": [
+                "Ordinary investors first: the exchange had about 19 million investors in 2025, and 32.7 million Indonesians hold brokerage accounts, according to the president’s brother. Well-run companies are sold along with everyone else and may face a lasting rise in the cost of capital. The government faces a weaker rupiah and dearer debt. Forced selling by index funds is estimated at $3 billion to $5.6 billion, plus $2.7 billion if FTSE Russell follows."
+              ],
+              "sources": [
+                {
+                  "title": "Indonesia Stock Exchange",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/Indonesia_Stock_Exchange"
+                },
+                {
+                  "title": "Indonesian stocks tumble 41pc; Jakarta goes after tycoons allegedly behind ‘gorengan’ shares",
+                  "publication": "Malay Mail",
+                  "url": "https://www.malaymail.com/news/money/2026/10/31/indonesian-stocks-tumble-41pc-jakarta-goes-after-tycoons-allegedly-behind-gorengan-shares/241386"
+                },
+                {
+                  "title": "Indonesian stocks plunge to six-year low as MSCI downgrade fears mount",
+                  "publication": "CNBC",
+                  "url": "https://www.cnbc.com/2026/10/19/indonesian-stocks-msci-downgrade-fears-mount.html"
+                },
+                {
+                  "title": "Bank Indonesia faces mounting pressure to hike after MSCI threat fuels market rout",
+                  "publication": "CNBC",
+                  "url": "https://www.cnbc.com/2026/10/20/indonesia-msci-inflation-interest-rate-.html"
+                }
+              ]
+            },
+            {
+              "id": "msci-means",
+              "label": "What does it mean?",
+              "type": "means",
+              "question": "What does the MSCI threat mean for Indonesia?",
+              "answer": [
+                "It means the next eight months are about proof rather than new rules. Most of the fixes, more public shares, full disclosure, penalties and a cleaner benchmark, are announced. Investors want to see them enforced against powerful families, and to see a central bank and budget they trust. Every fix has a cost: forcing owners to sell adds supply to a falling market, and higher rates to protect the rupiah slow growth."
+              ],
+              "sources": [
+                {
+                  "title": "Indonesian stocks plunge 11% as MSCI proposes emerging market downgrade",
+                  "publication": "Euronews",
+                  "url": "https://www.euronews.com/2026/10/16/indonesian-stocks-plunge-11-as-msci-proposes-emerging-market-downgrade"
+                },
+                {
+                  "title": "As public sentiment sours, Indonesia awaits MSCI verdict which risks $13 billion in capital outflows",
+                  "publication": "Fortune",
+                  "url": "https://fortune.com/2026/06/22/indonesia-awaits-msci-verdict-13-billion-capital-outflow/"
+                },
+                {
+                  "title": "Bank Indonesia faces mounting pressure to hike after MSCI threat fuels market rout",
+                  "publication": "CNBC",
+                  "url": "https://www.cnbc.com/2026/10/20/indonesia-msci-inflation-interest-rate-.html"
+                }
+              ]
+            },
+            {
+              "id": "msci-root",
+              "label": "Corruption or bad rules?",
+              "type": "why",
+              "question": "Is the crisis about corruption, incompetence or economics?",
+              "answer": [
+                "Mostly institutional design, with a dose of politics. A market that looked open and modern sat on an ownership structure that left most shares with a few families. Weak float and disclosure rules let companies look public without being so, index rules rewarded size a thin market could manufacture, and enforcement against powerful owners was rare. The 2026 oil shock and doubts about the central bank did not cause the problem, but removed the patience that let it continue."
+              ],
+              "sources": [
+                {
+                  "title": "2026 Global Market Accessibility Review",
+                  "publication": "MSCI",
+                  "url": "https://www.msci.com/downloads/web/msci-com/indexes/index-resources/market-classification/MSCI%202026%20GLOBAL%20MARKET%20ACCESSIBILITY%20REVIEW%20REPORT.pdf"
+                },
+                {
+                  "title": "Indonesia stocks sink on MSCI downgrade warning",
+                  "publication": "Taipei Times (Bloomberg)",
+                  "url": "https://www.taipeitimes.com/News/front/archives/2026/10/17/2003866114"
+                },
+                {
+                  "title": "Indonesian stocks tumble 41pc; Jakarta goes after tycoons allegedly behind ‘gorengan’ shares",
+                  "publication": "Malay Mail",
+                  "url": "https://www.malaymail.com/news/money/2026/10/31/indonesian-stocks-tumble-41pc-jakarta-goes-after-tycoons-allegedly-behind-gorengan-shares/241386"
+                }
+              ]
+            },
+            {
+              "id": "msci-debate",
+              "label": "Is MSCI too harsh?",
+              "type": "debate",
+              "question": "Where do reasonable people disagree about MSCI’s move?",
+              "answer": [
+                "One side says an index provider must tell investors the truth: Indonesia had nine months of warnings and moved only when forced, and a softer signal would have let reforms stall. The other says the move is too blunt, putting a $1 trillion market with millions of ordinary investors alongside Lebanon and punishing well-run companies for a few tightly held stocks before recent reforms can work. One fund manager said in June that MSCI had not made a credible case even for frontier status."
+              ],
+              "sources": [
+                {
+                  "title": "As public sentiment sours, Indonesia awaits MSCI verdict which risks $13 billion in capital outflows",
+                  "publication": "Fortune",
+                  "url": "https://fortune.com/2026/06/22/indonesia-awaits-msci-verdict-13-billion-capital-outflow/"
+                },
+                {
+                  "title": "Indonesian stocks plunge 11% as MSCI proposes emerging market downgrade",
+                  "publication": "Euronews",
+                  "url": "https://www.euronews.com/2026/10/16/indonesian-stocks-plunge-11-as-msci-proposes-emerging-market-downgrade"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

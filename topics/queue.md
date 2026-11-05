@@ -14,7 +14,6 @@ then "Commit changes").
 
 ## Up next
 
-- world: Indonesia's market crisis -- Peg: mid-Oct 2026, the Jakarta Composite plunged ~11% after MSCI proposed reclassifying Indonesia from Emerging to Standalone market over opaque ownership and suspected coordinated trading, following a January rout and record rupiah lows. Scope: why index providers have so much power (passive fund flows); conglomerate ownership concentration; governance and capital flight; what "investability" means and how weak governance gets priced.
 - singapore: Phone bans in schools -- Peg: from Jan 2026, secondary students can't use phones or smartwatches for the entire school day, matching primary school rules since 2025; follows naturally from the Meta settlement issue. Scope: what the evidence on screens and adolescent wellbeing actually shows (the Haidt debate and its critics); global comparisons (Australia's under-16 social media ban); enforcement and parental pushback. Ask whether restricting access is good policy, or whether the real lever is regulating platform design.
 - singapore: BTO housing -- why waiting times and prices became a political issue, and what the government is changing
 - singapore: Healthcare costs -- why MediShield Life premiums and hospital bills keep rising, and who pays
@@ -31,3 +30,4 @@ then "Commit changes").
 - 008 | singapore | Singapore’s AI bet and the bottom rung | 2026-10-28
 - 009 | world | The Hormuz oil shock | 2026-10-29
 - 010 | singapore | FirstDate and the fertility crisis | 2026-10-30
+- 011 | world | Indonesia’s market crisis | 2026-10-31

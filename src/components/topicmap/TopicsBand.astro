@@ -1,28 +1,58 @@
 ---
-// The homepage band under today's issue: every topic map, so readers can follow the
-// bigger story that each day's issue is part of.
+// The homepage band under today's issue. It stays the same size however many topic maps
+// there are: one featured topic (the map holding today's issue, or else the most recently
+// updated one) and a short list of the next most recently updated topics, each with its
+// latest story. Everything else is one click away on the Topics page.
 import TopicCard from './TopicCard.astro';
 import { getTopicSummaries } from '../../lib/topicmap-data';
 
 interface Props {
-  /** Today's issue, so its topic comes first and is marked. */
+  /** Today's issue, so its topic is the featured one. */
   issueId?: string;
 }
+/** How many topics the list beside the featured one shows. */
+const LIST = 4;
+
 const topics = await getTopicSummaries(Astro.props.issueId);
+const [featured, ...rest] = topics;
+const listed = rest.slice(0, LIST);
+const fmt = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', timeZone: 'UTC' });
 ---
 
 {
-  topics.length > 0 && (
+  featured && (
     <section class="topics-band" aria-labelledby="topics-band-title">
       <div class="wrap">
         <div class="section-head">
           <h2 id="topics-band-title">Follow the bigger story</h2>
-          <a href="/topics/">All topics</a>
+          <a href="/topics/">All {topics.length} topics</a>
         </div>
-        <div class="topic-cards">
-          {topics.map((t) => (
-            <TopicCard topic={t} />
-          ))}
+        <div class:list={['topics-band-grid', { 'is-single': listed.length === 0 }]}>
+          <TopicCard topic={featured} feature />
+          {listed.length > 0 && (
+            <div class="topic-list">
+              <h3 class="topic-list-title">More topics</h3>
+              <ol>
+                {listed.map((t) => (
+                  <li data-track={t.map.data.track}>
+                    <a href={t.href}>
+                      <span class="topic-list-meta">
+                        <span class="topic-list-track">{t.map.data.track === 'world' ? 'World' : 'Singapore'}</span>
+                        <span>Updated {fmt.format(t.map.data.updated)}</span>
+                      </span>
+                      <span class="topic-list-name">{t.map.data.title}</span>
+                      {t.latest && <span class="topic-list-latest">Latest: {t.latest.label}</span>}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+              {rest.length > LIST && (
+                <a class="topic-list-more" href="/topics/">
+                  See all {topics.length} topics
+                </a>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </section>
