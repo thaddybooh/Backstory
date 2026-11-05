@@ -147,7 +147,7 @@ const layers = ['History', 'Economic incentives', 'Political decisions', 'Compet
       </div>
       <p class="about-small">
         <strong>Photos:</strong> only freely licensed photos, mostly from Wikimedia Commons, with the photographer, source
-        and licence credited under every image. Never photos from news agencies or news sites.
+        and licence credited at the bottom of every page. Never photos from news agencies or news sites.
       </p>
     </section>
 
@@ -159,9 +159,7 @@ const layers = ['History', 'Economic incentives', 'Political decisions', 'Compet
             portrait ? (
               <figure class="creator-photo">
                 <img src={portrait.src} width={portrait.width} height={portrait.height} alt="A polar bear yawning" loading="lazy" decoding="async" />
-                <figcaption>
-                  <Credit image={portrait} />
-                </figcaption>
+                <Credit image={portrait} label="Creator photo" />
               </figure>
             ) : (
               <span class="monogram" aria-hidden="true">{SITE.owner[0]}</span>

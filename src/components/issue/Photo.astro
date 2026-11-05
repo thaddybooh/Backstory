@@ -1,5 +1,6 @@
 ---
-// A freely licensed photo from Wikimedia Commons, with its credit underneath.
+// A freely licensed photo from Wikimedia Commons. Its credit goes in the page's photo
+// credits list (see Credit.astro).
 // `file` is the Commons file name, e.g. "Hemicycle assemblee nationale.JPG".
 import { getCommonsImage } from '../../lib/images';
 import Credit from '../Credit.astro';
@@ -16,10 +17,8 @@ const image = getCommonsImage(file);
   image ? (
     <figure class:list={['photo', { wide }]}>
       <img src={image.src} width={image.width} height={image.height} alt={alt} loading="lazy" decoding="async" />
-      <figcaption>
-        {caption}
-        <Credit image={image} />
-      </figcaption>
+      {caption && <figcaption>{caption}</figcaption>}
+      <Credit image={image} label={caption ?? alt} />
     </figure>
   ) : (
     import.meta.env.DEV && (

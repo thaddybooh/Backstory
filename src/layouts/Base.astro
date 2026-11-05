@@ -4,6 +4,7 @@ import '@fontsource-variable/source-serif-4/opsz.css';
 import '@fontsource-variable/source-serif-4/opsz-italic.css';
 import '../styles/global.css';
 import { SITE } from '../lib/site';
+import Credit from '../components/Credit.astro';
 
 interface Props {
   title?: string;
@@ -23,6 +24,11 @@ const fullTitle = title ? `${title} | ${SITE.name}` : `${SITE.name} | ${SITE.tag
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogUrl = new URL(ogImage, Astro.site);
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+// Render the page first, so every photo on it has added its credit before the list is printed.
+const page = await Astro.slots.render('default');
+const credits = Astro.locals.photoCredits ?? [];
+// A photo's label is often its caption: keep only the first sentence, without its full stop.
+const shortLabel = (label: string) => label.split(/(?<=[.!?])\s/)[0].replace(/\.$/, '');
 const current = (href: string) => (path === href || (href !== '/' && path.startsWith(href)) ? 'page' : undefined);
 ---
 
@@ -85,8 +91,24 @@ const current = (href: string) => (path === href || (href !== '/' && path.starts
     </header>
 
     <main id="main">
-      <slot />
+      <Fragment set:html={page} />
     </main>
+
+    {
+      credits.length > 0 && (
+        <section class="wrap photo-credits" aria-labelledby="photo-credits">
+          <h2 id="photo-credits">Photo credits</h2>
+          <ul>
+            {credits.map((c) => (
+              <li>
+                {c.label && `${shortLabel(c.label)}: `}
+                <Credit image={c.image} text={c.text} inline />
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
 
     <footer class="site-foot">
       <div class="wrap">
