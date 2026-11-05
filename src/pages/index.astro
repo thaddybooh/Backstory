@@ -67,10 +67,16 @@ const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommon
         <h2 class="intro-title" id="intro-title"><span class="intro-w">Deepdle</span><span class="intro-q"><Logo class="intro-sub" /></span></h2>
         <p class="intro-slogan">{SITE.tagline[0].toUpperCase() + SITE.tagline.slice(1)}.</p>
         <p class="intro-dek">
-          Deepdle is an AI-powered news research tool. Most news stays at the surface: it tells you what happened. Every
-          day, Deepdle takes one story from the headlines and dives underneath to explain why: how we got here, who wants
-          what, and what happens next.
+          Most news stays at the surface: it tells you what happened. Every day, Deepdle takes one story from the headlines
+          and dives underneath to explain why: how we got here, who wants what, and what happens next.
         </p>
+        <aside class="intro-ai" aria-label="How issues are made">
+          <p>
+            <strong>Made with AI.</strong> Every issue is researched and written with AI, working from the reports, data
+            and other sources listed at the end of each one. AI can get things wrong, so check anything important against
+            those sources. <a href="/about/">How Deepdle is made</a>
+          </p>
+        </aside>
         <div class="intro-actions">
           <a class="button intro-primary" href="/archive/">Browse every issue</a>
           <a class="intro-secondary" href="/about/">What is this?</a>

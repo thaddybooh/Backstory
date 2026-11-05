@@ -318,6 +318,29 @@ mark {
   max-width: 36rem;
   margin: 1rem 0 0;
 }
+.intro-ai {
+  max-width: 36rem;
+  margin: 1.5rem 0 0;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--world);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--paper-raised);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.intro-ai p {
+  margin: 0;
+}
+.intro-ai strong {
+  font-family: var(--font-display);
+  color: var(--ink);
+}
+.intro-ai a {
+  font-family: var(--font-display);
+  font-weight: 600;
+  white-space: nowrap;
+}
 .intro-actions {
   display: flex;
   flex-wrap: wrap;
@@ -334,7 +357,7 @@ mark {
    then the text follows and the depth figure digs down one layer at a time.
    Hidden only when the script can reveal it and the reader is fine with motion. */
 @media (prefers-reduced-motion: no-preference) {
-  html.js .intro:not(.is-in) :is(.intro-w, .intro-q, .intro-slogan, .intro-dek, .intro-actions, .depth-top, .depth-layers li, .depth figcaption) {
+  html.js .intro:not(.is-in) :is(.intro-w, .intro-q, .intro-slogan, .intro-dek, .intro-ai, .intro-actions, .depth-top, .depth-layers li, .depth figcaption) {
     opacity: 0;
   }
   html.js .intro:not(.is-in) .depth-line {
@@ -349,12 +372,13 @@ mark {
       intro-dive 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) 0.35s both,
       intro-bob 2.4s ease-in-out 1.25s 2;
   }
-  .intro.is-in :is(.intro-slogan, .intro-dek, .intro-actions) {
+  .intro.is-in :is(.intro-slogan, .intro-dek, .intro-ai, .intro-actions) {
     animation: intro-fade 0.7s ease-out both;
   }
   .intro.is-in .intro-slogan { animation-delay: 0.9s; }
   .intro.is-in .intro-dek { animation-delay: 1.05s; }
-  .intro.is-in .intro-actions { animation-delay: 1.25s; }
+  .intro.is-in .intro-ai { animation-delay: 1.2s; }
+  .intro.is-in .intro-actions { animation-delay: 1.35s; }
 
   .intro.is-in .depth-top {
     animation: intro-fade 0.6s ease-out 0.5s both;
