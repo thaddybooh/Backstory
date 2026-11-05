@@ -598,7 +598,7 @@ export function mountCanvasMap(section: HTMLElement) {
     };
     const out: HTMLElement[] = n.answer.map((p) => h('p', '', p));
     if (n.issue) {
-      const a = h('a', 'cv-read', 'Read the full But Why? issue →') as HTMLAnchorElement;
+      const a = h('a', 'cv-read', 'Read the full Deepdle issue →') as HTMLAnchorElement;
       a.href = `/issues/${n.issue}/`;
       out.push(a);
     }

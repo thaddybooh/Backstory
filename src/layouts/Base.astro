@@ -4,6 +4,7 @@ import '@fontsource-variable/source-serif-4/opsz.css';
 import '@fontsource-variable/source-serif-4/opsz-italic.css';
 import '../styles/global.css';
 import { SITE } from '../lib/site';
+import Logo from '../components/Logo.astro';
 import Credit from '../components/Credit.astro';
 
 interface Props {
@@ -71,7 +72,9 @@ const current = (href: string) => (path === href || (href !== '/' && path.starts
     <a class="skip" href="#main">Skip to content</a>
     <header class="mast">
       <div class="wrap">
-        <a class="wordmark" href="/">{SITE.name}<small>{SITE.tagline}</small></a>
+        <a class="wordmark" href="/" aria-label={`${SITE.name}, home`}
+          ><Logo class="wordmark-sub" /><span class="wordmark-text">{SITE.name}<small>{SITE.tagline}</small></span></a
+        >
         <nav aria-label="Site">
           <a href="/archive/" aria-current={current('/archive')}>Archive</a>
           <a href="/topics/" aria-current={current('/topics')}>Topics</a>

@@ -117,6 +117,12 @@ mark {
   gap: 1rem;
   min-height: 3.75rem;
 }
+/* The submarine's outline follows the ink colour, so it turns light in dark mode. */
+.sub-logo {
+  --sub-line: var(--ink);
+  display: block;
+  overflow: visible;
+}
 .wordmark {
   font-family: var(--font-display);
   font-weight: 800;
@@ -126,8 +132,27 @@ mark {
   text-decoration: none;
   line-height: 1;
   display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+.wordmark-sub {
+  width: 3.3rem;
+  height: auto;
+  flex: none;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.wordmark:hover .wordmark-sub {
+  transform: translateY(2px) rotate(-4deg);
+}
+.wordmark-text {
+  display: flex;
   flex-direction: column;
   gap: 0.2rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  .wordmark-sub {
+    transition: none;
+  }
 }
 .wordmark small {
   white-space: nowrap;
@@ -195,6 +220,24 @@ mark {
   .wordmark small {
     display: none;
   }
+  .wordmark {
+    gap: 0.35rem;
+    font-size: 1.35rem;
+  }
+  .wordmark-sub {
+    width: 2.3rem;
+  }
+  /* Make room for the submarine: tighter nav on phones. */
+  .mast .wrap {
+    gap: 0.5rem;
+  }
+  .mast nav {
+    gap: 0;
+  }
+  .mast nav a {
+    padding: 0.5rem 0.4rem;
+    font-size: 0.95rem;
+  }
 }
 
 /* ---------- Track tag ---------- */
@@ -239,7 +282,9 @@ mark {
   }
 }
 .intro-title {
-  font-size: clamp(4.5rem, 19vw, 13rem);
+  /* One word with the submarine beside it: keep it on one line and size it to fit. */
+  white-space: nowrap;
+  font-size: clamp(3.6rem, 17vw, 8.5rem);
   font-weight: 800;
   font-stretch: 78%;
   line-height: 0.85;
@@ -248,10 +293,16 @@ mark {
 }
 .intro-q {
   display: inline-block;
-  color: var(--world);
-  transform: rotate(10deg);
+  transform: rotate(8deg);
   transform-origin: 50% 80%;
-  margin-left: 0.04em;
+  margin-left: 0.08em;
+}
+/* The submarine sits beside the name on the title screen, nose tipped down as if diving. */
+.intro-sub {
+  display: inline-block;
+  width: 1.1em;
+  height: auto;
+  vertical-align: -0.02em;
 }
 .intro-slogan {
   font-family: var(--font-display);
@@ -783,6 +834,24 @@ mark {
   color: var(--world);
 }
 
+/* "Why Deepdle?" on the About page: the submarine beside two short paragraphs. */
+.about-name-grid {
+  display: grid;
+  gap: 1.25rem 2rem;
+  align-items: center;
+}
+.about-name-sub {
+  width: min(11rem, 45vw);
+  height: auto;
+}
+@media (min-width: 46rem) {
+  .about-name-grid {
+    grid-template-columns: 12rem minmax(0, 1fr);
+  }
+  .about-name-sub {
+    width: 100%;
+  }
+}
 .about-block {
   padding: 3rem 0 0;
 }
@@ -1145,4 +1214,12 @@ mark {
 }
 .photo-credits .credit {
   display: inline;
+}
+
+/* On the narrowest phones the submarine stands in for the name in the masthead
+   (the link keeps "Deepdle, home" as its accessible name). */
+@media (max-width: 21.9rem) {
+  .wordmark-text {
+    display: none;
+  }
 }

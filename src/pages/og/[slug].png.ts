@@ -7,6 +7,10 @@ import satori from 'satori';
 import { Resvg } from '@resvg/resvg-js';
 import { getIssues, issueNumber, formatLongDate, TRACK_LABEL, type Issue } from '../../lib/issues';
 import { SITE } from '../../lib/site';
+import { submarineSvg } from '../../lib/logo';
+
+// The Deepdle submarine beside the name, as an image satori can draw.
+const SUB = `data:image/svg+xml;base64,${Buffer.from(submarineSvg()).toString('base64')}`;
 
 const require = createRequire(import.meta.url);
 const font = (weight: number) =>
@@ -63,8 +67,8 @@ function card(issue?: Issue): Node {
         },
         issue ? issueNumber(issue.data.number) : '',
       ),
-      h('div', { display: 'flex', alignItems: 'center', gap: '18px', fontSize: '36px', fontWeight: 800 }, [
-        h('div', { width: '24px', height: '24px', background: accent, borderRadius: '5px' }),
+      h('div', { display: 'flex', alignItems: 'center', gap: '18px', fontSize: '40px', fontWeight: 800 }, [
+        { type: 'img', props: { src: SUB, width: 96, height: 74, style: {} } },
         SITE.name,
       ]),
       h('div', { display: 'flex', flexDirection: 'column', gap: '24px' }, [

@@ -1,11 +1,11 @@
 ---
 name: write-issue
-description: Write the next But Why? issue in this repo (a researched explainer of at most 40 minutes on one news story, World or Singapore) and open a pull request for Miles to approve. Use when Miles asks for a new But Why? issue or "today's issue", and for the daily scheduled run.
+description: Write the next Deepdle issue in this repo (a researched explainer of at most 40 minutes on one news story, World or Singapore) and open a pull request for Miles to approve. Use when Miles asks for a new Deepdle issue or "today's issue", and for the daily scheduled run.
 ---
 
-# Write the next But Why? issue
+# Write the next Deepdle issue
 
-But Why? is Miles's daily explainer: one story in the news, because there is always more to the story. The reader should
+Deepdle (formerly But Why?) is Miles's daily explainer: one story in the news, because there is always more to the story. The reader should
 finish with a real understanding of a current issue, not just the headlines. It is written for any member of
 the public, anywhere, not specifically for Singaporeans.
 

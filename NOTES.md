@@ -3,6 +3,10 @@
 Decisions and current state, so a future session can pick up where we left off.
 Read `BRIEF.md` for the original brief and `GUIDE.md` for the owner's step-by-step instructions.
 
+## Status (5 Nov 2026)
+
+- **Renamed to Deepdle** (owner's choice). Logo: a cute yellow cartoon submarine whose periscope curls into a question mark, beside the wordmark in the masthead (owner chose layout A of three). Drawn once in `src/lib/logo.ts` and used by `Logo.astro` (masthead, homepage title screen, About page), the social cards (as a data URI) and, simplified, `public/favicon.svg`. Its outline follows `--ink` so it turns light in dark mode. The About page has a "Why Deepdle?" section (deep + the -dle of daily puzzles; formerly But Why?). Past issues' `about` lines now say Deepdle. The repo, Vercel project and file names still say backstory.
+
 ## Status (28 Oct 2026)
 
 - **Topic maps added** (branch `claude/loving-heisenberg-y8hp8s`): a standalone, deeper version of the question
@@ -32,7 +36,7 @@ Read `BRIEF.md` for the original brief and `GUIDE.md` for the owner's step-by-st
 | Topic | Decision | Why |
 | --- | --- | --- |
 | Length and policy section | No word target: a full read must take 40 minutes at most (`check-issue` caps the body at 8,000 words, 200 a minute). Every issue needs a section on what the story means for policymakers; the checker warns if no heading mentions policy or government. | Owner's choice (23 Oct 2026). |
-| Name | **But Why?**, slogan *there is always more to the story* (renamed from Backstory on 23 Oct 2026). Lives in `src/lib/site.ts`. The repo, Vercel project and file names still say backstory. | Owner's choice. |
+| Name | **Deepdle** (renamed from But Why? on 5 Nov 2026; But Why? was renamed from Backstory on 23 Oct 2026), slogan *there is always more to the story*. Lives in `src/lib/site.ts`. The repo, Vercel project and file names still say backstory. | Owner's choice. |
 | Design direction | **Daybreak**, chosen by the owner from three options. The other two were "Briefing room" (data-forward, Schibsted Grotesk + Literata, grey-green and saffron/teal) and "Cover story" (photographic magazine, Archivo + Newsreader, indigo/coral). | Owner may revisit later; all colours and fonts live in `src/styles/tokens.css`. |
 | Fonts | Bricolage Grotesque (headlines, variable width axis used for condensed display) + Source Serif 4 (body). Self-hosted via Fontsource npm packages. | Distinctive headline face, very readable body; no Google Fonts request. |
 | Colours | Paper `#f5f7fa`, ink navy `#14213d`. World = ultramarine `#2b44d6`, Singapore = Singapore red `#d21f3c`. Dark mode is night-sky navy `#0f1830`. | Clear track difference; avoids cream/terracotta and black/neon clichés. |
