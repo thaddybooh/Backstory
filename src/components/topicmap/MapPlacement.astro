@@ -1,7 +1,7 @@
 ---
 // "Where this fits": shown at the top of an issue that a topic map links to. It places
-// the day's story in the map it belongs to and points new readers to the background
-// they need first, so the daily issue and the long-term map lead into each other.
+// the day's story in the map it belongs to, so the daily issue and the long-term map
+// lead into each other.
 import type { Placement } from '../../lib/topicmap-data';
 import '../../styles/topicmap.css';
 
@@ -21,15 +21,5 @@ const { placement: p } = Astro.props;
       <span aria-hidden="true">›</span>
       <a href={p.story.href} aria-current="page">{p.story.label}</a>
     </nav>
-    {
-      p.primers.length > 0 && (
-        <p class="map-place-primers">
-          <span>New to this? Start with:</span>
-          {p.primers.map((q) => (
-            <a href={q.href}>{q.label}</a>
-          ))}
-        </p>
-      )
-    }
   </div>
 </aside>

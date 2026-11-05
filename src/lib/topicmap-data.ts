@@ -57,14 +57,11 @@ export interface Placement {
   mapHref: string;
   category: MapLink;
   story: MapLink;
-  /** Background boxes to read first if the topic is new to the reader. */
-  primers: MapLink[];
 }
 
 /**
  * Where an issue sits in the topic maps: the box that links to it (a news story if
- * possible), the category above it, and a few background boxes to read first. Returns
- * undefined when no map links to the issue.
+ * possible) and the category above it. Returns undefined when no map links to the issue.
  */
 export async function getPlacement(issueId: string): Promise<Placement | undefined> {
   let best: { rank: number; placement: Placement } | undefined;
@@ -83,11 +80,7 @@ export async function getPlacement(issueId: string): Promise<Placement | undefin
       // Prefer the news story the issue reports, over a passing mention deeper in a map.
       const rank = category.kind === 'news' ? (depth === 2 ? 0 : 1) : 2;
       if (best && best.rank <= rank) continue;
-      const background = (id: string) => byId.get(id)?.category.kind !== 'news';
-      const related = node.related.filter(background).map((id) => link(byId.get(id)!.node));
-      const basics = map.data.categories.find((c) => c.kind === 'basics')?.children ?? [];
-      const primers = [...related, ...basics.map(link)].filter((p, i, all) => all.findIndex((q) => q.id === p.id) === i).slice(0, 3);
-      best = { rank, placement: { map, mapHref, category: link(category), story: link(node), primers } };
+      best = { rank, placement: { map, mapHref, category: link(category), story: link(node) } };
     }
   }
   return best?.placement;
