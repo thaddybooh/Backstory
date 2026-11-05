@@ -1,6 +1,6 @@
 ---
-// A card for one topic map: its cover photo and how many questions it holds. Used in the homepage's "Follow the bigger story" band and on the Topics
-// page. Until the cover photo has been fetched from Commons (or if it has none), the card
+// A card for one topic map: its cover photo, title and description. Used in the
+// homepage's "Follow the bigger story" band and on the Topics page. Until the cover photo has been fetched from Commons (or if it has none), the card
 // shows a small drawing of the map's tree instead.
 import type { TopicSummary } from '../../lib/topicmap-data';
 import { getCommonsImage } from '../../lib/images';
@@ -9,10 +9,8 @@ import '../../styles/topicmap.css';
 
 interface Props {
   topic: TopicSummary;
-  /** Leave out the question count. */
-  compact?: boolean;
 }
-const { topic: t, compact = false } = Astro.props;
+const { topic: t } = Astro.props;
 const cover = t.map.data.cover;
 const photo = cover && getCommonsImage(cover.commons);
 
@@ -67,7 +65,6 @@ const curve = (x1: number, y1: number, x2: number, y2: number) => {
       {t.holdsIssue && !photo && <p class="topic-card-flag">Today’s story is here</p>}
       <h3>{t.map.data.title}</h3>
       <p class="topic-card-dek">{t.map.data.dek}</p>
-      {!compact && <p class="topic-card-meta">{t.questions} questions</p>}
     </div>
   </a>
   {photo && <Credit image={photo} label={t.map.data.title} />}

@@ -89,7 +89,6 @@ export async function getPlacement(issueId: string): Promise<Placement | undefin
 export interface TopicSummary {
   map: TopicMap;
   href: string;
-  questions: number;
   /** Each category with how many topics or stories it holds, for the card's little tree. */
   shape: { kind: MapCategory['kind']; count: number }[];
   /** The newest news story (the first one in the news category). */
@@ -110,7 +109,6 @@ export async function getTopicSummaries(issueId?: string): Promise<TopicSummary[
     return {
       map,
       href,
-      questions: countQuestions(map.data.categories),
       shape: map.data.categories.map((c) => ({ kind: c.kind, count: c.children.length })),
       latest: story && { id: story.id, label: story.label, question: story.question, href: `${href}#${story.id}`, when: story.when },
       holdsIssue: placement?.map.id === map.id,
