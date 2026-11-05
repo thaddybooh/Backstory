@@ -2,20 +2,23 @@
 // screen (via Logo.astro) and the social cards (as a data URI, in og/[slug].png.ts).
 // Its periscope curls into a question mark.
 //
-// `line` is the outline colour. On the site it is a CSS variable, so the outline turns light
-// in dark mode; the social cards pass a fixed navy.
+// The outline is always navy, so the yellow hull keeps a clean edge on light and dark pages.
+// `scope` is the periscope's colour: on the site it is a CSS variable that turns light in dark
+// mode (the periscope sits against the page, not the hull); the social cards pass navy.
 
 export const SUB_VIEWBOX = '0 -26 166 128';
 
-export function submarine(line = 'var(--sub-line)'): string {
+const LINE = '#14213d';
+
+export function submarine(scope = 'var(--sub-scope)'): string {
   return `
-  <g fill="none" stroke="${line}" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+  <g fill="none" stroke="${LINE}" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
     <circle cx="13" cy="32" r="5" fill="#dbeafe" stroke-width="3"/>
     <circle cx="6" cy="16" r="3.5" fill="#dbeafe" stroke-width="2.5"/>
     <circle cx="14" cy="3" r="2.5" fill="#dbeafe" stroke-width="2"/>
     <ellipse cx="22" cy="58" rx="6" ry="15" fill="#2b44d6"/>
-    <path d="M85 18 V4 C85 -2 97 -3 97 -12 C97 -24 73 -24 73 -12" stroke-width="5"/>
-    <circle cx="73" cy="-7" r="3.5" fill="#2b44d6" stroke-width="2.5"/>
+    <path d="M85 18 V4 C85 -2 97 -3 97 -12 C97 -24 73 -24 73 -12" stroke="${scope}" stroke-width="5"/>
+    <circle cx="73" cy="-7" r="3.5" fill="#2b44d6" stroke="${scope}" stroke-width="2.5"/>
     <rect x="64" y="16" width="42" height="26" rx="9" fill="#ffcf3f"/>
     <rect x="30" y="34" width="120" height="50" rx="25" fill="#ffcf3f"/>
     <circle cx="58" cy="58" r="7" fill="#dbeafe" stroke-width="3"/>
@@ -30,6 +33,6 @@ export function submarine(line = 'var(--sub-line)'): string {
 }
 
 /** A standalone SVG document, for places that need an image rather than inline markup. */
-export function submarineSvg(line = '#14213d'): string {
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${SUB_VIEWBOX}">${submarine(line)}</svg>`;
+export function submarineSvg(scope = LINE): string {
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${SUB_VIEWBOX}" shape-rendering="geometricPrecision">${submarine(scope)}</svg>`;
 }

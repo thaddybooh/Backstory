@@ -3,7 +3,6 @@ import Base from '../layouts/Base.astro';
 import { SITE } from '../lib/site';
 import { getCommonsImage } from '../lib/images';
 import Credit from '../components/Credit.astro';
-import Logo from '../components/Logo.astro';
 
 const portrait = getCommonsImage('Polar Bear yawning.jpg');
 
@@ -57,24 +56,6 @@ const layers = ['History', 'Economic incentives', 'Political decisions', 'Compet
         </figure>
       </div>
     </div>
-
-    <section class="about-block about-name" data-reveal>
-      <h2>Why “Deepdle”?</h2>
-      <div class="about-name-grid">
-        <Logo class="about-name-sub" />
-        <div class="about-prose">
-          <p>
-            Most news stays at the surface. Deepdle takes one story a day and dives underneath it, down through the
-            history, incentives, politics and people that explain why it is happening. The name is <em>deep</em> plus
-            the <em>‑dle</em> of the daily puzzles people come back to each morning: one dive a day.
-          </p>
-          <p>
-            The little yellow submarine is the guide. Its periscope curls into a question mark, because every issue keeps
-            asking why until it reaches the bottom. Deepdle was called <em>But Why?</em> until November 2026.
-          </p>
-        </div>
-      </div>
-    </section>
 
     <section class="about-block" data-reveal>
       <h2>Every issue asks</h2>

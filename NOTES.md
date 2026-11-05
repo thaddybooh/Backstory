@@ -5,7 +5,7 @@ Read `BRIEF.md` for the original brief and `GUIDE.md` for the owner's step-by-st
 
 ## Status (5 Nov 2026)
 
-- **Renamed to Deepdle** (owner's choice). Logo: a cute yellow cartoon submarine whose periscope curls into a question mark, beside the wordmark in the masthead (owner chose layout A of three). Drawn once in `src/lib/logo.ts` and used by `Logo.astro` (masthead, homepage title screen, About page), the social cards (as a data URI) and, simplified, `public/favicon.svg`. Its outline follows `--ink` so it turns light in dark mode. The About page has a "Why Deepdle?" section (deep + the -dle of daily puzzles; formerly But Why?). Past issues' `about` lines now say Deepdle. The repo, Vercel project and file names still say backstory.
+- **Renamed to Deepdle** (owner's choice). Logo: a cute yellow cartoon submarine whose periscope curls into a question mark, beside the wordmark in the masthead (owner chose layout A of three). Drawn once in `src/lib/logo.ts` and used by `Logo.astro` (masthead, homepage title screen, About page), the social cards (as a data URI) and, simplified, `public/favicon.svg`. Its outline is always navy (a light outline looked bad in dark mode, owner said); only the periscope follows `--ink`. The owner did not want a "Why Deepdle?" section on the About page. The name is set at normal width and spacing (`font-stretch: 100%`), because the condensed, tightly spaced setting made the d and l run together. Past issues' `about` lines now say Deepdle. The repo, Vercel project and file names still say backstory.
 
 ## Status (28 Oct 2026)
 
