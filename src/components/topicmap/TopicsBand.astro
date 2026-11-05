@@ -1,7 +1,6 @@
 ---
 // The homepage band under today's issue: every topic map, so readers can follow the
-// bigger story that each day's issue is part of. The cards leave out their question
-// counts here.
+// bigger story that each day's issue is part of.
 import TopicCard from './TopicCard.astro';
 import { getTopicSummaries } from '../../lib/topicmap-data';
 
@@ -22,7 +21,7 @@ const topics = await getTopicSummaries(Astro.props.issueId);
         </div>
         <div class="topic-cards">
           {topics.map((t) => (
-            <TopicCard topic={t} compact />
+            <TopicCard topic={t} />
           ))}
         </div>
       </div>
