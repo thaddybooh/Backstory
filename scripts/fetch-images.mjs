@@ -94,9 +94,34 @@ export function licenceProblem(licence) {
   return null;
 }
 
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+// Wikimedia answers bursts of requests with HTTP 429 ("too many requests"), and a build
+// fetches many photos at once. Without retrying, a rate-limited photo was skipped and the
+// page went live without it. So: wait and retry on 429 or a 5xx, honouring Retry-After.
+const RETRIES = 6;
+async function fetchRetry(url, timeout) {
+  for (let attempt = 0; ; attempt++) {
+    let res;
+    try {
+      res = await fetch(url, { headers: HEADERS, signal: AbortSignal.timeout(timeout) });
+    } catch (err) {
+      if (attempt >= RETRIES) throw err;
+      await sleep(2000 * 2 ** attempt);
+      continue;
+    }
+    if (res.ok) return res;
+    const retryable = res.status === 429 || res.status >= 500;
+    if (!retryable || attempt >= RETRIES) throw new Error(`HTTP ${res.status}`);
+    const after = Number(res.headers.get('retry-after'));
+    const wait = Number.isFinite(after) && after > 0 ? Math.min(after, 60) * 1000 : Math.min(2000 * 2 ** attempt, 60000);
+    console.warn(`images: Commons said HTTP ${res.status}; retrying in ${Math.round(wait / 1000)}s.`);
+    await sleep(wait);
+  }
+}
+
 async function fetchJson(url) {
-  const res = await fetch(url, { headers: HEADERS, signal: AbortSignal.timeout(20000) });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const res = await fetchRetry(url, 20000);
   return res.json();
 }
 
@@ -165,8 +190,9 @@ async function main() {
     const ext = path.extname(new URL(url).pathname).toLowerCase() || '.jpg';
     const name = `${slug(f)}${ext}`;
     try {
-      const res = await fetch(url, { headers: HEADERS, signal: AbortSignal.timeout(60000) });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      // A short pause between downloads keeps the build under Wikimedia's rate limit.
+      if (ok > 0) await sleep(400);
+      const res = await fetchRetry(url, 60000);
       await writeFile(path.join(OUT_DIR, name), Buffer.from(await res.arrayBuffer()));
     } catch (err) {
       console.warn(`images: download failed for "${f}" (${err.message}).`);
