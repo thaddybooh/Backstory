@@ -393,13 +393,6 @@
 .topics-band {
   padding: 1rem 0 2.5rem;
 }
-.topics-band-dek {
-  margin: 0.35rem 0 0;
-  max-width: 40rem;
-  color: var(--ink-soft);
-  font-size: 1rem;
-  line-height: 1.5;
-}
 .topics-band .section-head {
   flex-wrap: wrap;
   align-items: end;

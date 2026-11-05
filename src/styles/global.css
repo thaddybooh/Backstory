@@ -1294,11 +1294,25 @@ mark {
   color: var(--ink-soft);
   margin: 1rem 0 0;
 }
-.today-credit {
+/* Photo credits for the whole homepage, gathered at the bottom */
+.photo-credits {
+  margin-top: 3rem;
   font-size: 0.75rem;
+  line-height: 1.5;
   color: var(--ink-faint);
-  margin: 1rem 0 0;
 }
-.today-credit .credit {
+.photo-credits h2 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.4rem;
+}
+.photo-credits ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.photo-credits .credit {
   display: inline;
 }

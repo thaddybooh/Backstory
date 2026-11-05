@@ -9,8 +9,10 @@ import '../../styles/topicmap.css';
 
 interface Props {
   topic: TopicSummary;
+  /** Leave out the question count and the photo credit (the page credits the photo elsewhere). */
+  compact?: boolean;
 }
-const { topic: t } = Astro.props;
+const { topic: t, compact = false } = Astro.props;
 const cover = t.map.data.cover;
 const photo = cover && getCommonsImage(cover.commons);
 
@@ -65,11 +67,11 @@ const curve = (x1: number, y1: number, x2: number, y2: number) => {
       {t.holdsIssue && !photo && <p class="topic-card-flag">Today’s story is here</p>}
       <h3>{t.map.data.title}</h3>
       <p class="topic-card-dek">{t.map.data.dek}</p>
-      <p class="topic-card-meta">{t.questions} questions</p>
+      {!compact && <p class="topic-card-meta">{t.questions} questions</p>}
     </div>
   </a>
   {
-    photo && (
+    photo && !compact && (
       <p class="topic-card-credit">
         <Credit image={photo} />
       </p>

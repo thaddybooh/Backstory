@@ -8,7 +8,7 @@ import { getGraph } from '../lib/graph-data';
 import { getIssues, issueUrl, issueNumber, formatLongDate, TRACK_LABEL } from '../lib/issues';
 import { getCommonsImage } from '../lib/images';
 import { SITE } from '../lib/site';
-import { getPlacement } from '../lib/topicmap-data';
+import { getPlacement, getTopicSummaries } from '../lib/topicmap-data';
 import TopicsBand from '../components/topicmap/TopicsBand.astro';
 
 const issues = await getIssues();
@@ -22,6 +22,14 @@ const topicOf = async (id: string) => {
 };
 const earlierTopics = await Promise.all(earlier.map((i) => topicOf(i.id)));
 const heroImage = d?.hero?.commons ? getCommonsImage(d.hero.commons) : undefined;
+// Photos on this page are credited together at the bottom, not under each picture.
+const photoCredits = [
+  ...(heroImage && graph ? [{ label: 'Today’s issue', image: heroImage }] : []),
+  ...(await getTopicSummaries(latest?.id)).flatMap((t) => {
+    const image = t.map.data.cover && getCommonsImage(t.map.data.cover.commons);
+    return image ? [{ label: t.map.data.title, image }] : [];
+  }),
+];
 const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommonsImage(d.hero.commons))));
 ---
 
@@ -52,11 +60,6 @@ const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommon
           <a slot="actions" class="button" href={issueUrl(latest)}>
             Read today’s issue <span class="today-time">· {d.readTime} min</span>
           </a>
-          {heroImage && (
-            <p slot="credit" class="today-credit">
-              Centre image: <Credit image={heroImage} />
-            </p>
-          )}
         </QuestionGraph>
       </div>
     )
@@ -161,6 +164,21 @@ const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommon
         <ul class="issue-list">
           {earlier.map((issue, i) => (
             <IssueRow issue={issue} topic={earlierTopics[i]} />
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  {
+    photoCredits.length > 0 && (
+      <section class="wrap photo-credits" aria-labelledby="photo-credits">
+        <h2 id="photo-credits">Photo credits</h2>
+        <ul>
+          {photoCredits.map((c) => (
+            <li>
+              {c.label}: <Credit image={c.image} />
+            </li>
           ))}
         </ul>
       </section>
