@@ -117,18 +117,19 @@ mark {
   gap: 1rem;
   min-height: 3.75rem;
 }
-/* The submarine's outline follows the ink colour, so it turns light in dark mode. */
+/* The submarine keeps its navy cartoon outline in both modes; only the periscope, which
+   sits against the page rather than the yellow hull, follows the ink colour. */
 .sub-logo {
-  --sub-line: var(--ink);
+  --sub-scope: var(--ink);
   display: block;
   overflow: visible;
 }
 .wordmark {
   font-family: var(--font-display);
   font-weight: 800;
-  font-stretch: 80%;
-  font-size: 1.5rem;
-  letter-spacing: -0.03em;
+  font-stretch: 100%;
+  font-size: 1.4rem;
+  letter-spacing: -0.01em;
   text-decoration: none;
   line-height: 1;
   display: flex;
@@ -284,20 +285,18 @@ mark {
 .intro-title {
   /* One word with the submarine beside it: keep it on one line and size it to fit. */
   white-space: nowrap;
-  font-size: clamp(3.6rem, 17vw, 8.5rem);
+  font-size: clamp(3.2rem, 14vw, 7.5rem);
   font-weight: 800;
-  font-stretch: 78%;
-  line-height: 0.85;
-  letter-spacing: -0.045em;
+  font-stretch: 100%;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
   margin: 0;
 }
 .intro-q {
   display: inline-block;
-  transform: rotate(8deg);
-  transform-origin: 50% 80%;
-  margin-left: 0.08em;
+  margin-left: 0.12em;
 }
-/* The submarine sits beside the name on the title screen, nose tipped down as if diving. */
+/* The submarine sits level beside the name on the title screen. */
 .intro-sub {
   display: inline-block;
   width: 1.1em;
@@ -345,13 +344,10 @@ mark {
     display: inline-block;
     animation: intro-rise 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
   }
-  .intro.is-in .intro-w:nth-child(2) {
-    animation-delay: 0.15s;
-  }
   .intro.is-in .intro-q {
     animation:
-      intro-drop 0.6s cubic-bezier(0.3, 0, 0.6, 1) 0.45s both,
-      intro-swing 1.4s ease-out 1.05s both;
+      intro-dive 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) 0.35s both,
+      intro-bob 2.4s ease-in-out 1.25s 2;
   }
   .intro.is-in :is(.intro-slogan, .intro-dek, .intro-actions) {
     animation: intro-fade 0.7s ease-out both;
@@ -387,17 +383,13 @@ mark {
   from { opacity: 0; transform: translateY(0.35em); }
   to { opacity: 1; transform: none; }
 }
-@keyframes intro-drop {
-  0% { opacity: 0; transform: translateY(-0.9em) rotate(-20deg); }
-  70% { opacity: 1; transform: translateY(0.04em) rotate(14deg); }
-  100% { opacity: 1; transform: translateY(0) rotate(10deg); }
+@keyframes intro-dive {
+  from { opacity: 0; transform: translate(-0.4em, -0.25em); }
+  to { opacity: 1; transform: none; }
 }
-@keyframes intro-swing {
-  0% { transform: rotate(10deg); }
-  20% { transform: rotate(-6deg); }
-  45% { transform: rotate(16deg); }
-  70% { transform: rotate(7deg); }
-  100% { transform: rotate(10deg); }
+@keyframes intro-bob {
+  0%, 100% { transform: none; }
+  50% { transform: translateY(0.05em); }
 }
 @keyframes intro-fade {
   from { opacity: 0; transform: translateY(0.6rem); }
@@ -834,24 +826,6 @@ mark {
   color: var(--world);
 }
 
-/* "Why Deepdle?" on the About page: the submarine beside two short paragraphs. */
-.about-name-grid {
-  display: grid;
-  gap: 1.25rem 2rem;
-  align-items: center;
-}
-.about-name-sub {
-  width: min(11rem, 45vw);
-  height: auto;
-}
-@media (min-width: 46rem) {
-  .about-name-grid {
-    grid-template-columns: 12rem minmax(0, 1fr);
-  }
-  .about-name-sub {
-    width: 100%;
-  }
-}
 .about-block {
   padding: 3rem 0 0;
 }
@@ -1221,5 +1195,18 @@ mark {
 @media (max-width: 21.9rem) {
   .wordmark-text {
     display: none;
+  }
+}
+
+/* Small phones (360px and so on): a slightly smaller name and submarine so the masthead fits. */
+@media (max-width: 24rem) {
+  .wordmark {
+    font-size: 1.2rem;
+  }
+  .wordmark-sub {
+    width: 2rem;
+  }
+  .mast nav a {
+    padding: 0.5rem 0.3rem;
   }
 }
