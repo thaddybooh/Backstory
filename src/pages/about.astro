@@ -162,20 +162,10 @@ const layers = ['History', 'Economic incentives', 'Political decisions', 'Compet
             look if I have the time or interest to go deeper. That is also why every issue ends with its sources and
             suggestions for further reading.
           </p>
-          <blockquote class="creator-quote">
-            I am not an expert on most of the topics covered here. I am learning alongside you.
-          </blockquote>
         </div>
       </div>
     </section>
 
-    <section class="signoff-band" data-reveal>
-      <p>One story a day.<br />A deeper understanding of the world.</p>
-      <div class="signoff-actions">
-        <a class="button signoff-primary" href="/">Read today’s issue</a>
-        <a class="signoff-secondary" href="/archive/">Browse the archive</a>
-      </div>
-    </section>
   </div>
 </Base>
 
@@ -184,7 +174,7 @@ const layers = ['History', 'Economic incentives', 'Political decisions', 'Compet
   // Its pieces are numbered so they arrive one after another.
   const parts = [...document.querySelectorAll<HTMLElement>('.about [data-reveal]')];
   const pieces =
-    '.about-kicker, .about-hero h1, .about-dek, .about-prose > *, .depth-top, .depth-line, .depth-layers li, .depth figcaption, h2, .about-note, .questions li, .habit, .rule, .about-small, .creator-card, .creator-quote, .signoff-band > *';
+    '.about-kicker, .about-hero h1, .about-dek, .about-prose > *, .depth-top, .depth-line, .depth-layers li, .depth figcaption, h2, .about-note, .questions li, .habit, .rule, .about-small, .creator-card';
   for (const part of parts) part.querySelectorAll<HTMLElement>(pieces).forEach((el, i) => el.style.setProperty('--i', String(i)));
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver(
