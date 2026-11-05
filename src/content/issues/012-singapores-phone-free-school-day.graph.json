@@ -1,0 +1,308 @@
+{
+  "issue": "012-singapores-phone-free-school-day",
+  "questions": [
+    {
+      "id": "what-changed",
+      "label": "What changed?",
+      "question": "What exactly are Singapore’s new phone rules for schools?",
+      "answer": [
+        "Since January 2026, secondary students may not use smartphones or smartwatches at any point in the school day: lessons, recess, co-curricular activities and supplementary or remedial classes. Devices stay in lockers or bags, and schools may allow use by exception. Primary schools have had the same rule since January 2025.",
+        "School-issued laptops and tablets now go to sleep from 10.30pm to 6.30am. Junior college students manage their own use. The ban sits under Grow Well SG, the national plan for children’s health, alongside stricter screen-time guidelines for younger children."
+      ],
+      "section": "what-exactly-do-the-school-rules-say",
+      "sources": [
+        {
+          "title": "No smartphone use in secondary schools in Singapore from 2026, including during recess and CCAs",
+          "publication": "The Star (The Straits Times/ANN)",
+          "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2025/11/30/no-smartphone-use-in-secondary-schools-in-singapore-from-2026-including-during-recess-and-ccas"
+        },
+        {
+          "title": "No smartphones during school hours in secondary schools from 2026: MOE",
+          "publication": "Mothership",
+          "url": "https://mothership.sg/2025/11/no-smartphones-secondary-school/"
+        }
+      ]
+    },
+    {
+      "id": "why-now",
+      "label": "Why now?",
+      "question": "Why is Singapore cracking down on phones and social media now?",
+      "answer": [
+        "MOE cited research linking heavy screen use to less sleep, less exercise and less face-to-face time, and a government survey found about a quarter of 13- to 17-year-olds spent more than four hours a day on devices on weekdays, nearly half at weekends. In August the Prime Minister said one in six young people aged 10 to 24 showed signs of problematic social media use.",
+        "Singapore is also part of a global wave: Australia’s under-16 ban took effect in December 2025, and the share of countries with school phone bans has more than doubled since 2023, according to UNESCO figures."
+      ],
+      "section": "how-much-time-do-teenagers-spend-on-screens",
+      "sources": [
+        {
+          "title": "No smartphone use in secondary schools in Singapore from 2026, including during recess and CCAs",
+          "publication": "The Star (The Straits Times/ANN)",
+          "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2025/11/30/no-smartphone-use-in-secondary-schools-in-singapore-from-2026-including-during-recess-and-ccas"
+        },
+        {
+          "title": "National Day Rally 2026",
+          "publication": "Prime Minister’s Office Singapore",
+          "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
+        },
+        {
+          "title": "Mobile phone use in schools",
+          "publication": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mobile_phones_in_schools"
+        }
+      ]
+    },
+    {
+      "id": "evidence",
+      "label": "What does the research say?",
+      "question": "Do phones and social media really harm teenagers’ mental health?",
+      "answer": [
+        "The honest answer is that researchers disagree about how much. Jonathan Haidt argues that smartphones and social media caused a sharp rise in teenage anxiety, depression and self-harm after about 2010, through lost sleep, less time with friends, fragmented attention and addiction.",
+        "Critics such as Candice Odgers and Andrew Przybylski say most research finds no large, consistent effect, that causation may run the other way, and that other causes may be missed. Haidt himself accepts a correlation of about 0.15 for girls, a modest link. The real dispute is over how big the effect is and whether it justifies sweeping bans."
+      ],
+      "section": "what-does-the-evidence-actually-show",
+      "sources": [
+        {
+          "title": "The Anxious Generation",
+          "publication": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/The_Anxious_Generation"
+        },
+        {
+          "title": "Teen social media use: crisis or moral panic?",
+          "publication": "Fortune",
+          "url": "https://fortune.com/well/article/anxious-generation-researcher-social-media-youth-mental-health-crisis-criticism/"
+        },
+        {
+          "title": "Flaws in a Recent Lancet Study on Phone Use in Schools",
+          "publication": "After Babel (Jonathan Haidt, Zach Rausch, Alec McClean)",
+          "url": "https://www.afterbabel.com/p/lancet-study-flaws"
+        }
+      ],
+      "followUps": [
+        {
+          "id": "haidt",
+          "label": "Who is Jonathan Haidt?",
+          "question": "Who is Jonathan Haidt and what does he propose?",
+          "answer": [
+            "Haidt is a social psychologist at New York University whose 2024 book, The Anxious Generation, became a global bestseller and, according to Reuters, helped spur Australia’s ban. He names four harms of social media: social deprivation, sleep deprivation, fragmented attention and addiction. His proposals include phone-free schools, raising the minimum age for social media accounts to 16, giving children basic phones before smartphones, and more independence and free play."
+          ],
+          "section": "the-case-against-phones",
+          "sources": [
+            {
+              "title": "The Anxious Generation",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/The_Anxious_Generation"
+            },
+            {
+              "title": "Jonathan Haidt",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Jonathan_Haidt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "do-bans-work",
+      "label": "Do school bans work?",
+      "question": "Do school phone bans improve students’ wellbeing or grades?",
+      "answer": [
+        "Not on their own, as far as the evidence shows so far. The SMART Schools study compared 30 English secondary schools and found no evidence that restrictive phone policies improved wellbeing; pupils used phones less at school but no less overall.",
+        "Haidt’s team criticised the study: it compared schools at one point in time, most ‘permissive’ schools still banned phones in lessons, only 4 of 20 ‘restrictive’ schools were truly phone-free, and grades were a single teacher rating. So bans reliably cut phone use at school, but there is not yet good evidence they improve wellbeing alone."
+      ],
+      "section": "the-study-of-school-bans",
+      "sources": [
+        {
+          "title": "School phone policies and their association with mental wellbeing, phone use, and social media use (SMART Schools)",
+          "publication": "The Lancet Regional Health – Europe",
+          "url": "https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762(25)00003-1/fulltext"
+        },
+        {
+          "title": "Flaws in a Recent Lancet Study on Phone Use in Schools",
+          "publication": "After Babel (Jonathan Haidt, Zach Rausch, Alec McClean)",
+          "url": "https://www.afterbabel.com/p/lancet-study-flaws"
+        }
+      ],
+      "followUps": [
+        {
+          "id": "enforce",
+          "label": "Can schools enforce it?",
+          "question": "Can Singapore’s schools actually enforce the phone ban?",
+          "answer": [
+            "Parents interviewed by CNA mostly supported the ban but doubted enforcement. One father asked who would make sure phones stayed off; a teacher said teachers ‘can’t be everywhere all at once’. Students can still reach messaging apps through browsers on school-issued devices. A parent summed it up: it will solve part of the problem, not the whole problem, because most screen time happens outside school."
+          ],
+          "section": "will-singapores-school-ban-work",
+          "sources": [
+            {
+              "title": "As secondary schools tighten smartphone use, parents say students can still outsmart the rules",
+              "publication": "CNA (via National Institute of Education)",
+              "url": "https://www.ntu.edu.sg/nie/news-events/news/detail/as-secondary-schools-tighten-smartphone-use--parents-say-students-can-still-outsmart-the-rules"
+            },
+            {
+              "title": "No smartphone use in secondary schools in Singapore from 2026, including during recess and CCAs",
+              "publication": "The Star (The Straits Times/ANN)",
+              "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2025/11/30/no-smartphone-use-in-secondary-schools-in-singapore-from-2026-including-during-recess-and-ccas"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "platforms",
+      "label": "Why target the platforms?",
+      "question": "Why is Singapore now going after social media platforms?",
+      "answer": [
+        "Because most screen time happens at home, and the platforms control the design. The Prime Minister said most platforms set a minimum age of 13 only on paper and rely on children declaring their own age, which ‘is not working well’. Platforms must introduce robust age checks and stronger safeguards for teenagers, or face a minimum age above 13.",
+        "Josephine Teo reportedly said a law is planned for early 2027, a daily time limit is being considered, and platforms that refuse could see the minimum age raised to 18."
+      ],
+      "section": "why-is-the-government-now-going-after-the-platforms",
+      "sources": [
+        {
+          "title": "National Day Rally 2026",
+          "publication": "Prime Minister’s Office Singapore",
+          "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
+        },
+        {
+          "title": "Singapore weighs daily social media limits as it tightens safeguards for teens",
+          "publication": "Malay Mail",
+          "url": "https://www.malaymail.com/news/singapore/2026/09/01/singapore-weighs-daily-social-media-limits-as-it-tightens-safeguards-for-teens/233465"
+        },
+        {
+          "title": "Josephine Teo",
+          "publication": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Josephine_Teo"
+        }
+      ],
+      "followUps": [
+        {
+          "id": "australia",
+          "label": "What about Australia?",
+          "question": "What has Australia’s under-16 social media ban achieved?",
+          "answer": [
+            "Australia’s ban took effect in December 2025, requiring platforms such as Instagram, TikTok, Snapchat and YouTube to take reasonable steps to keep out under-16s, with fines up to A$49.5 million. Millions of accounts were removed or restricted, but the regulator reported that 7 in 10 children still held accounts when it began, and children have found ways round the checks. In June 2026 the government proposed doubling fines and extending checks to app stores."
+          ],
+          "section": "what-australias-ban-shows-so-far",
+          "sources": [
+            {
+              "title": "Online Safety Amendment (Social Media Minimum Age) Act 2024",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Online_Safety_Amendment"
+            },
+            {
+              "title": "Online age verification laws by country",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Online_age_verification_laws_by_country"
+            },
+            {
+              "title": "Platforms restrict access to 4.7 million under-16 accounts across Australia",
+              "publication": "eSafety Commissioner",
+              "url": "https://www.esafety.gov.au/newsroom/media-releases/platforms-restrict-access-to-47-million-under-16-accounts-across-australia"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why-everyone",
+      "label": "Why did everyone act at once?",
+      "question": "Why did governments around the world turn against phones at the same time?",
+      "answer": [
+        "Teenage distress rose in many rich countries in the 2010s, just as smartphones spread, making phones the obvious suspect. Haidt’s book turned scattered research into a simple story with clear rules. Trust in platforms collapsed after leaked Facebook documents showed it knew its products could harm some teenage girls.",
+        "Families also face a collective action problem: no parent wants their child to be the only one without a phone. And school bans are cheap, visible and popular, so they came first."
+      ],
+      "section": "why-did-governments-turn-against-phones-all-at-once",
+      "sources": [
+        {
+          "title": "The Anxious Generation",
+          "publication": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/The_Anxious_Generation"
+        },
+        {
+          "title": "Mobile phone use in schools",
+          "publication": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mobile_phones_in_schools"
+        }
+      ],
+      "followUps": [
+        {
+          "id": "panic",
+          "label": "Is it a moral panic?",
+          "question": "Is the push against phones evidence-based or a moral panic?",
+          "answer": [
+            "Some of each. There is real evidence that heavy use goes with worse sleep and wellbeing, and teachers report phones disrupt school. But the claim that phones caused a mental health epidemic is contested, and there is little evidence that school bans help wellbeing on their own. Governments acted because waiting seemed costlier than acting, school rules are cheap and popular, and platforms had lost the benefit of the doubt."
+          ],
+          "section": "answer-so-is-it-evidence-moral-panic-or-politics",
+          "sources": [
+            {
+              "title": "Teen social media use: crisis or moral panic?",
+              "publication": "Fortune",
+              "url": "https://fortune.com/well/article/anxious-generation-researcher-social-media-youth-mental-health-crisis-criticism/"
+            },
+            {
+              "title": "The Anxious Generation",
+              "publication": "Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/The_Anxious_Generation"
+            },
+            {
+              "title": "Flaws in a Recent Lancet Study on Phone Use in Schools",
+              "publication": "After Babel (Jonathan Haidt, Zach Rausch, Alec McClean)",
+              "url": "https://www.afterbabel.com/p/lancet-study-flaws"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "govt",
+      "label": "What can the government do?",
+      "question": "What can Singapore’s government do about teenagers and screens?",
+      "answer": [
+        "It has three tools. School rules are cheap but leave out most screen time. Age checks are the heart of the new plan but raise privacy concerns, are least accurate around 13 and 16, and can be dodged with borrowed accounts or VPNs. Safer design rules, such as limits on infinite scroll, autoplay and contact from strangers, target the features critics worry about most, but must be defined and tested.",
+        "A small country also has limited leverage over global platforms. The test of the 2027 law will be clear standards and measuring teenagers’ sleep and wellbeing, not counting phones in lockers."
+      ],
+      "section": "what-can-singapores-government-do",
+      "sources": [
+        {
+          "title": "National Day Rally 2026",
+          "publication": "Prime Minister’s Office Singapore",
+          "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
+        },
+        {
+          "title": "Online Safety Amendment (Social Media Minimum Age) Act 2024",
+          "publication": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Online_Safety_Amendment"
+        },
+        {
+          "title": "Online age verification laws by country",
+          "publication": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Online_age_verification_laws_by_country"
+        }
+      ]
+    },
+    {
+      "id": "ban-or-design",
+      "label": "Ban by age or fix the apps?",
+      "question": "Is it better to ban teenagers from social media or force platforms to make apps safer?",
+      "answer": [
+        "Supporters of a firm age limit say it is simple, gives parents a clear rule and changes social norms, while asking attention-driven companies to redesign invites endless negotiation.",
+        "Supporters of design rules point to Australia, where checks leak and teenagers move to less regulated corners of the internet. Changing the features that drive compulsive use protects teenagers while keeping the benefits of being online. Singapore’s plan does both: design standards first, a higher age only for platforms that refuse."
+      ],
+      "section": "debate-on-whether-to-ban-by-age-or-regulate-design",
+      "sources": [
+        {
+          "title": "National Day Rally 2026",
+          "publication": "Prime Minister’s Office Singapore",
+          "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
+        },
+        {
+          "title": "Online Safety Amendment (Social Media Minimum Age) Act 2024",
+          "publication": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Online_Safety_Amendment"
+        },
+        {
+          "title": "Singapore weighs daily social media limits as it tightens safeguards for teens",
+          "publication": "Malay Mail",
+          "url": "https://www.malaymail.com/news/singapore/2026/09/01/singapore-weighs-daily-social-media-limits-as-it-tightens-safeguards-for-teens/233465"
+        }
+      ]
+    }
+  ]
+}
