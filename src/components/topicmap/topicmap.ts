@@ -84,7 +84,6 @@ export async function mountTopicMap(section: HTMLElement) {
   const panelBody = panel.querySelector<HTMLElement>('.qmap-panel-body')!;
   const panelNext = panel.querySelector<HTMLElement>('.qmap-panel-next')!;
   const expandBtn = section.querySelector<HTMLButtonElement>('[data-action="expand"]')!;
-  const chips = [...section.querySelectorAll<HTMLButtonElement>('.tmap-chip')];
   const narrow = () => stage.clientWidth < 560;
 
   // ---------- Nodes, read from the rendered list ----------
@@ -551,22 +550,6 @@ export async function mountTopicMap(section: HTMLElement) {
     }
   }
 
-  // Question-type chips: show the whole map and highlight one kind of question.
-  let filter: string | null = null;
-  function setFilter(type: string | null) {
-    filter = filter === type ? null : type;
-    for (const c of chips) c.setAttribute('aria-pressed', String(c.dataset.filter === filter));
-    svg.classList.toggle('has-filter', Boolean(filter));
-    for (const n of nodes) n.el.classList.toggle('is-match', Boolean(filter && n.type === filter));
-    if (filter) {
-      openAll = true;
-      for (const n of nodes) if (n.children.length) expanded.add(n);
-      closePanel(false);
-      sync();
-    }
-  }
-  for (const c of chips) c.addEventListener('click', () => setFilter(c.dataset.filter!));
-
   // ---------- Opening a box ----------
   function button(label: string, onClick: () => void, meta?: string) {
     const li = document.createElement('li');
@@ -607,12 +590,7 @@ export async function mountTopicMap(section: HTMLElement) {
     if (n === root) {
       panelKicker.textContent = 'How to use this map';
       panelTitle.textContent = n.label;
-      const intro = document.createElement('div');
-      intro.className = 'qa';
-      const p = document.createElement('p');
-      p.textContent = section.closest('.tmap-page')?.querySelector('.tmap-intro')?.textContent ?? '';
-      intro.append(p);
-      panelBody.replaceChildren(intro);
+      panelBody.replaceChildren();
       group('Where to start', n.children.map((c) => button(c.label, () => open(c, true), question(c))));
     } else {
       const cat = categoryOf(n);
@@ -701,7 +679,6 @@ export async function mountTopicMap(section: HTMLElement) {
     expanded.clear();
     expanded.add(root);
     if (openAll) for (const n of nodes) if (n.children.length) expanded.add(n);
-    if (!openAll && filter) setFilter(filter);
     closePanel(false);
     sync();
   });

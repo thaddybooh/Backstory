@@ -4,7 +4,6 @@
 // page renders the whole map as a nested list first (the list view, and what readers
 // without JavaScript see); topicmap.ts then draws it as a left-to-right tree.
 import type { TopicMap } from '../../lib/topicmap-data';
-import { QUESTION_TYPE } from '../../lib/topicmap-data';
 import MapItem from './MapItem.astro';
 import '../../styles/qmap.css';
 import '../../styles/topicmap.css';
@@ -14,23 +13,10 @@ interface Props {
 }
 const { map } = Astro.props;
 const { data } = map;
-const types = Object.entries(QUESTION_TYPE);
 ---
 
 <section class="qmap tmap" data-track={data.track} aria-label={`Topic map: ${data.title}`}>
   <div class="tmap-bar">
-    <div class="tmap-key" role="group" aria-label="Highlight one kind of question">
-      <span class="tmap-key-label">Highlight</span>
-      {
-        types.map(([type, label]) => (
-          <button type="button" class="tmap-chip" data-filter={type} aria-pressed="false">
-            <span class="tmap-tag" data-type={type}>
-              {label}
-            </span>
-          </button>
-        ))
-      }
-    </div>
     <div class="tmap-actions">
       <button type="button" class="tmap-btn" data-action="expand">Open everything</button>
     </div>

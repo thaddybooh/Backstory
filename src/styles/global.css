@@ -690,11 +690,18 @@ mark {
 }
 
 /* ---------- About page ---------- */
-.about-hero {
+.about-top {
   display: grid;
   gap: 2.5rem;
-  align-items: center;
-  padding: 3rem 0 2rem;
+  padding: 3rem 0 1rem;
+}
+.about-col {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+.about-side {
+  gap: 2.5rem;
 }
 .about-kicker {
   font-family: var(--font-display);
@@ -824,12 +831,6 @@ mark {
   stroke-linejoin: round;
 }
 
-.about-intro {
-  display: grid;
-  gap: 2.5rem;
-  padding: 2rem 0 1rem;
-  align-items: center;
-}
 .about-prose {
   max-width: var(--measure);
 }
@@ -1131,11 +1132,7 @@ mark {
   }
 }
 @media (min-width: 60rem) {
-  .about-hero {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 24rem);
-    gap: 4rem;
-  }
-  .about-intro {
+  .about-top {
     grid-template-columns: minmax(0, 1fr) minmax(0, 24rem);
     gap: 4rem;
   }
@@ -1147,6 +1144,80 @@ mark {
     position: sticky;
     top: 5.5rem;
   }
+}
+
+/* About page entrance: each part rises in as it scrolls into view, its pieces one after
+   another (numbered --i by the page's script). The headline gets circled, the note and
+   arrow are scribbled on, and the depth figure digs down a layer at a time.
+   Hidden only when the script can reveal it and the reader is fine with motion. */
+@media (prefers-reduced-motion: no-preference) {
+  html.js .about [data-reveal]:not(.is-in) :is(.about-kicker, h1, .about-dek, .about-prose > *, .depth-top, .depth-line, .depth-layers li, .depth figcaption, h2, .about-note, .questions li, .habit, .rule, .about-small, .creator-card, .creator-quote, .signoff-band > *) {
+    opacity: 0;
+  }
+  .about .is-in :is(.about-kicker, .about-dek, .about-prose > *, .depth-top, .depth figcaption, h2, .about-note, .questions li, .habit, .rule, .about-small, .creator-card, .creator-quote, .signoff-band > *) {
+    animation: intro-fade 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) calc(var(--i, 0) * 90ms) both;
+  }
+  .about .is-in h1 {
+    animation: intro-rise 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) 0.08s both;
+  }
+  .about .is-in .depth-line {
+    animation: intro-fade 0.4s ease-out calc(var(--i, 0) * 90ms) both;
+  }
+  .about .is-in .depth-line::before,
+  .about .is-in .depth-line::after {
+    animation: intro-draw 0.6s ease-out calc(var(--i, 0) * 90ms) both;
+  }
+  .about .is-in .depth-line::before { transform-origin: right; }
+  .about .is-in .depth-line::after { transform-origin: left; }
+  .about .is-in .depth-layers li {
+    animation: intro-dig 0.55s cubic-bezier(0.2, 0.8, 0.2, 1) calc(var(--i, 0) * 120ms) both;
+  }
+  /* The clipping drops onto the page, then gets marked up */
+  html.js .about .clipping:not(.is-in) {
+    opacity: 0;
+  }
+  .about .clipping.is-in {
+    animation: about-drop 0.9s cubic-bezier(0.2, 0.9, 0.3, 1.1) 0.25s both;
+  }
+  .about .clipping.is-in .clip-circle path {
+    stroke-dasharray: 1;
+    animation: about-scribble 0.9s cubic-bezier(0.6, 0, 0.3, 1) 1.05s both;
+  }
+  .about .clipping.is-in .clip-arrow path {
+    stroke-dasharray: 1;
+    animation: about-scribble 0.4s ease-out 1.85s both;
+  }
+  .about .clipping.is-in .clip-arrow path + path {
+    animation-delay: 2.2s;
+  }
+  .about .clipping.is-in .clip-note {
+    animation: about-pop 0.5s cubic-bezier(0.3, 1.6, 0.5, 1) 2.35s both;
+  }
+  .about .questions li .q-num {
+    transition: transform 0.25s ease;
+  }
+  .about .questions li:hover .q-num {
+    transform: scale(1.12) rotate(-4deg);
+  }
+  .about :is(.habit, .rule) {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .about :is(.habit, .rule):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px -18px rgb(20 33 61 / 0.4);
+  }
+}
+@keyframes about-drop {
+  from { opacity: 0; transform: translateY(-1.5rem) rotate(4deg) scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes about-scribble {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+@keyframes about-pop {
+  from { opacity: 0; transform: rotate(-6deg) scale(0.4); }
+  to { opacity: 1; transform: rotate(8deg) scale(1); }
 }
 
 /* ---------- Footer ---------- */
