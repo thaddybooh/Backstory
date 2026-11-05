@@ -7,7 +7,9 @@
   padding: 0 var(--gutter);
 }
 .prose {
-  max-width: var(--measure);
+  /* The reading column: a little wider than the site's usual measure. */
+  --prose: 40rem;
+  max-width: var(--prose);
   margin: 0 auto;
   counter-reset: section;
 }
@@ -56,15 +58,22 @@
   font-size: 1.15rem;
 }
 
-/* Wide screens: contents on the left, sidenotes in the right margin. On the widest
-   screens the contents column grows so most questions fit on one line. */
+/* Wide screens: contents on the left, sidenotes in the right margin. The page grows
+   with the screen, so the reading column and the contents column both get wider
+   (most questions then fit on one line) without squeezing each other. The three
+   columns plus gaps always add up to the page width at that size. */
 @media (min-width: 72rem) {
   .issue-body {
-    --toc-col: 15rem;
+    --toc-col: 13rem;
+    --prose: 37rem;
+    --margin-col: 13rem;
     display: grid;
-    grid-template-columns: var(--toc-col) minmax(0, var(--measure)) var(--margin-col);
+    grid-template-columns: var(--toc-col) minmax(0, var(--prose)) var(--margin-col);
     column-gap: var(--gap);
     justify-content: center;
+  }
+  .issue-body .prose {
+    --prose: inherit;
   }
   .prose {
     margin: 0;
@@ -74,14 +83,31 @@
     clear: both;
   }
 }
-@media (min-width: 86rem) {
+@media (min-width: 76rem) {
   .issue-body {
-    --toc-col: 22rem;
+    --toc-col: 14rem;
+    --prose: 39rem;
+    --margin-col: 14rem;
   }
 }
-@media (min-width: 90rem) {
+@media (min-width: 86rem) {
+  .issue-layout {
+    max-width: 86rem;
+  }
   .issue-body {
-    --toc-col: 25rem;
+    --toc-col: 20rem;
+    --prose: 42rem;
+    --margin-col: 15rem;
+  }
+}
+@media (min-width: 92rem) {
+  .issue-layout {
+    max-width: 92rem;
+  }
+  .issue-body {
+    --toc-col: 22rem;
+    --prose: 44rem;
+    --margin-col: 16rem;
   }
 }
 
