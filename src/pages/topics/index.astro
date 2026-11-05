@@ -6,6 +6,13 @@ import { getIssues } from '../../lib/issues';
 
 const [latest] = await getIssues();
 const topics = await getTopicSummaries(latest?.id);
+// Grouped by track so the page stays easy to scan as maps are added.
+const groups = [
+  { track: 'world', title: 'World' },
+  { track: 'singapore', title: 'Singapore' },
+]
+  .map((g) => ({ ...g, topics: topics.filter((t) => t.map.data.track === g.track) }))
+  .filter((g) => g.topics.length > 0);
 ---
 
 <Base title="Topics" description="Big subjects mapped out as questions: how things work, what is changing, and why. Each grows as new issues are published.">
@@ -18,8 +25,19 @@ const topics = await getTopicSummaries(latest?.id);
         issues are published.
       </p>
     </header>
-    <div class="topic-cards">
-      {topics.map((t) => <TopicCard topic={t} />)}
-    </div>
+    {
+      groups.map((g) => (
+        <section class="topic-group" data-track={g.track} aria-labelledby={`topics-${g.track}`}>
+          <h2 id={`topics-${g.track}`}>
+            {g.title} <span>{g.topics.length} {g.topics.length === 1 ? 'topic' : 'topics'}</span>
+          </h2>
+          <div class="topic-cards">
+            {g.topics.map((t) => (
+              <TopicCard topic={t} />
+            ))}
+          </div>
+        </section>
+      ))
+    }
   </div>
 </Base>

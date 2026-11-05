@@ -10,8 +10,10 @@ import '../../styles/topicmap.css';
 
 interface Props {
   topic: TopicSummary;
+  /** The large card on the homepage: photo beside the text, plus the latest story. */
+  feature?: boolean;
 }
-const { topic: t } = Astro.props;
+const { topic: t, feature = false } = Astro.props;
 const cover = t.map.data.cover;
 const photo = cover && getCommonsImage(cover.commons);
 
@@ -34,7 +36,7 @@ const curve = (x1: number, y1: number, x2: number, y2: number) => {
 };
 ---
 
-<article class:list={['topic-card', { 'is-today': t.holdsIssue }]} data-track={t.map.data.track}>
+<article class:list={['topic-card', { 'is-today': t.holdsIssue, 'is-feature': feature }]} data-track={t.map.data.track}>
   <a class="topic-card-link" href={t.href}>
     {
       photo && cover ? (
@@ -66,6 +68,15 @@ const curve = (x1: number, y1: number, x2: number, y2: number) => {
       {t.holdsIssue && !photo && <p class="topic-card-flag">Today’s story is here</p>}
       <h3>{t.map.data.title}</h3>
       <p class="topic-card-dek">{t.map.data.dek}</p>
+      {
+        feature && t.latest && (
+          <p class="topic-card-latest">
+            <span>Latest{t.latest.when ? ` · ${t.latest.when}` : ''}</span>
+            {t.latest.label}
+          </p>
+        )
+      }
+      {feature && <p class="topic-card-go">Explore the topic</p>}
     </div>
   </a>
   {photo && <Credit image={photo} label={t.map.data.title} />}

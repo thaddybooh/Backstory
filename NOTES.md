@@ -105,6 +105,7 @@ it themselves first.
   reader opens boxes. Maps so far: Singapore's education system (no issue yet), AI and jobs in Singapore (issue
   008) and Singapore's ageing society (issue 004); the last two were built only from those issues' sources.
 - **Homepage (28 Oct 2026):** under today's issue, a "Follow the bigger story" band of topic cards
+- **Homepage band redesigned (5 Nov 2026, owner's request):** the band no longer shows every map as a card, which would grow without limit. It shows one featured card (the map holding today's issue: photo beside the text, plus its latest story) and a "More topics" list of the next four most recently updated maps (track, updated date, title, latest story), with a link to all topics. The Topics page groups its cards under World and Singapore. Code: `TopicsBand.astro` (`LIST` sets how many rows), the `feature` prop on `TopicCard.astro`.
   (TopicCard.astro: a small drawing of the map's tree, question count, latest news story). The map holding today's
   issue comes first and is marked "Today's story is here". Issues in "Previous issues" and the archive carry a
   "Topic" chip linking to their map. The nav says **Topics** (owner's choice over "Maps"); pages live at `/topics/`.
