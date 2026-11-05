@@ -64,38 +64,14 @@
 :root[data-theme='dark'] [data-type='means'] { --t: #c4a5ff; }
 :root[data-theme='dark'] [data-type='debate'] { --t: #f79ac4; }
 
-/* ---------- Highlight chips and buttons ---------- */
+/* ---------- Buttons ---------- */
 .tmap-bar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 0.8rem 1.5rem;
   margin-bottom: 0.9rem;
-}
-.tmap-key {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.4rem;
-  font-family: var(--font-display);
-  font-size: 0.85rem;
-  color: var(--ink-faint);
-}
-.tmap-key-label {
-  font-weight: 650;
-  margin-right: 0.15rem;
-}
-.tmap-chip {
-  border: 0;
-  padding: 0;
-  background: none;
-  cursor: pointer;
-  border-radius: 999px;
-}
-.tmap-chip[aria-pressed='true'] .tmap-tag {
-  color: var(--paper-raised);
-  background: var(--t);
 }
 .tmap-actions {
   display: flex;
@@ -335,16 +311,6 @@
   stroke: var(--ink);
 }
 
-/* Highlighting one kind of question */
-.has-filter .tmap-node:not(.is-match):not(.tmap-d0):not(.tmap-d1) {
-  opacity: 0.28;
-}
-.has-filter .tmap-node.is-match .tmap-box {
-  stroke: var(--t);
-  stroke-width: 2.4;
-  fill: color-mix(in srgb, var(--t) 10%, var(--paper-raised));
-}
-
 /* ---------- Panel extras ---------- */
 .tmap-next-meta {
   display: block;
@@ -416,28 +382,11 @@
   max-width: 44rem;
   margin: 0.8rem 0 0;
 }
-.tmap-intro {
-  font-size: 1rem;
-  line-height: 1.55;
-  color: var(--ink-soft);
-  max-width: 44rem;
-  margin: 0.6rem 0 0;
-}
 .tmap-meta {
   font-family: var(--font-display);
   font-size: 0.85rem;
   color: var(--ink-faint);
   margin: 0.8rem 0 0;
-}
-.tmap-note {
-  max-width: 84rem;
-  margin: 1.5rem auto 0;
-  padding: 0 var(--gutter);
-  font-size: 0.9rem;
-  color: var(--ink-faint);
-}
-.tmap-note p {
-  max-width: 44rem;
 }
 
 /* ---------- Topic cards (homepage band and the Topics page) ---------- */
