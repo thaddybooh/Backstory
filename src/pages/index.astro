@@ -8,6 +8,7 @@ import { getGraph } from '../lib/graph-data';
 import { getIssues, issueUrl, issueNumber, formatLongDate, TRACK_LABEL } from '../lib/issues';
 import { getCommonsImage } from '../lib/images';
 import { SITE } from '../lib/site';
+import Logo from '../components/Logo.astro';
 import { getPlacement } from '../lib/topicmap-data';
 import TopicsBand from '../components/topicmap/TopicsBand.astro';
 
@@ -63,11 +64,11 @@ const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommon
   <section class="intro" aria-labelledby="intro-title">
     <div class="wrap intro-inner">
       <div>
-        <h2 class="intro-title" id="intro-title"><span class="intro-w">But</span> <span class="intro-w">Why</span><span class="intro-q">?</span></h2>
+        <h2 class="intro-title" id="intro-title"><span class="intro-w">Deep</span><span class="intro-w">dle</span><span class="intro-q"><Logo class="intro-sub" /></span></h2>
         <p class="intro-slogan">{SITE.tagline[0].toUpperCase() + SITE.tagline.slice(1)}.</p>
         <p class="intro-dek">
-          The news tells you what happened. But Why? explains why. Every day, one story from the headlines, unpacked:
-          how we got here, who wants what, and what happens next.
+          Most news stays at the surface: it tells you what happened. Deepdle dives underneath to explain why. Every day,
+          one story from the headlines, unpacked: how we got here, who wants what, and what happens next.
         </p>
         <div class="intro-actions">
           <a class="button intro-primary" href="/archive/">Browse every issue</a>
@@ -83,7 +84,7 @@ const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommon
         <ol class="depth-layers">
           {layers.map((l) => <li>{l}</li>)}
         </ol>
-        <figcaption>Where But Why? goes</figcaption>
+        <figcaption>Where Deepdle dives</figcaption>
       </figure>
     </div>
   </section>

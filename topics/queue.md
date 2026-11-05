@@ -1,6 +1,6 @@
-# But Why? topic queue
+# Deepdle topic queue
 
-Edit this file on GitHub to choose what But Why? covers next (click the pencil icon, make changes,
+Edit this file on GitHub to choose what Deepdle covers next (click the pencil icon, make changes,
 then "Commit changes").
 
 **How it works**

@@ -90,7 +90,7 @@ const mapNode: z.ZodType<MapNode> = z.lazy(() =>
     when: z.string().optional(),
     // Ids of nodes elsewhere in the map this one connects to (listed in its answer panel).
     related: z.array(z.string()).default([]),
-    // Optional id of a But Why? issue that covers this in depth.
+    // Optional id of a Deepdle issue that covers this in depth.
     issue: z.string().optional(),
     children: z.array(mapNode).default([]),
   }),

@@ -1,0 +1,10 @@
+---
+// The Deepdle submarine as inline SVG. Size it with CSS (it scales with font size by default).
+import { SUB_VIEWBOX, submarine } from '../lib/logo';
+
+interface Props {
+  class?: string;
+}
+---
+
+<svg class:list={['sub-logo', Astro.props.class]} viewBox={SUB_VIEWBOX} aria-hidden="true" focusable="false" set:html={submarine()} />

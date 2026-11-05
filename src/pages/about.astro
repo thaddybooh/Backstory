@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import { SITE } from '../lib/site';
 import { getCommonsImage } from '../lib/images';
 import Credit from '../components/Credit.astro';
+import Logo from '../components/Logo.astro';
 
 const portrait = getCommonsImage('Polar Bear yawning.jpg');
 
@@ -15,7 +16,7 @@ const questions = [
 const layers = ['History', 'Economic incentives', 'Political decisions', 'Competing interests'];
 ---
 
-<Base title="About" description="Why But Why? exists, how to read it, how each issue is made, and who runs it.">
+<Base title="About" description="Why Deepdle exists, how to read it, how each issue is made, and who runs it.">
   <div class="wrap about">
     <!-- Two columns: the headline and opening text on the left, the depth figure on the right. -->
     <div class="about-top">
@@ -37,7 +38,7 @@ const layers = ['History', 'Economic incentives', 'Political decisions', 'Compet
           <p>
             Behind every big story sits a tangle of history, economic incentives, political decisions and competing
             interests. You need that background to form a view of your own, and finding it usually takes hours of reading.
-            But Why? exists to make it quicker.
+            Deepdle exists to make it quicker.
           </p>
         </div>
       </div>
@@ -52,10 +53,28 @@ const layers = ['History', 'Economic incentives', 'Political decisions', 'Compet
           <ol class="depth-layers">
             {layers.map((l) => <li>{l}</li>)}
           </ol>
-          <figcaption>Where But Why? goes</figcaption>
+          <figcaption>Where Deepdle dives</figcaption>
         </figure>
       </div>
     </div>
+
+    <section class="about-block about-name" data-reveal>
+      <h2>Why “Deepdle”?</h2>
+      <div class="about-name-grid">
+        <Logo class="about-name-sub" />
+        <div class="about-prose">
+          <p>
+            Most news stays at the surface. Deepdle takes one story a day and dives underneath it, down through the
+            history, incentives, politics and people that explain why it is happening. The name is <em>deep</em> plus
+            the <em>‑dle</em> of the daily puzzles people come back to each morning: one dive a day.
+          </p>
+          <p>
+            The little yellow submarine is the guide. Its periscope curls into a question mark, because every issue keeps
+            asking why until it reaches the bottom. Deepdle was called <em>But Why?</em> until November 2026.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <section class="about-block" data-reveal>
       <h2>Every issue asks</h2>
@@ -98,7 +117,7 @@ const layers = ['History', 'Economic incentives', 'Political decisions', 'Compet
     <section class="about-block" data-reveal>
       <h2>How issues are made</h2>
       <p class="about-note">
-        But Why? is researched and drafted with AI. For each issue, an AI research assistant (currently Claude, made by
+        Deepdle is researched and drafted with AI. For each issue, an AI research assistant (currently Claude, made by
         Anthropic) reads widely across news reports, official documents, data and reference sources, then writes the
         explainer to a fixed structure.
       </p>
@@ -141,7 +160,7 @@ const layers = ['History', 'Economic incentives', 'Political decisions', 'Compet
             )
           }
           <p class="creator-name">{SITE.owner}</p>
-          <p class="creator-role">Creator of But Why?</p>
+          <p class="creator-role">Creator of Deepdle</p>
           <p class="creator-role">Economics, National University of Singapore</p>
         </aside>
 
@@ -151,7 +170,7 @@ const layers = ['History', 'Economic incentives', 'Political decisions', 'Compet
             government, public policy and economics, and I am looking to build a career in those fields.
           </p>
           <p>
-            That is why I created But Why? Good policy starts with understanding why a problem exists: the history, the
+            That is why I created Deepdle. Good policy starts with understanding why a problem exists: the history, the
             incentives and the trade-offs behind it. Most news coverage, by necessity, stays close to the surface. It
             reports what happened, but rarely has the space to explain why, and finding out usually means hours of
             research.
