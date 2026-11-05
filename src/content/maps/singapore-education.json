@@ -1,7 +1,7 @@
 {
   "title": "Singapore’s education system",
   "track": "singapore",
-  "updated": "2026-10-28",
+  "updated": "2026-11-01",
   "dek": "How Singapore’s schools work, the ideas behind them, every government initiative, and every big change in the news, one question at a time.",
   "intro": "Start with The basics if you are new to the topic, then Big ideas and debates for the policy thinking behind it. What the government is doing is a bird’s-eye view of every major initiative, from the PSLE to the phone rules. In the news holds each recent change, and every story opens into the same four questions: why is it happening, what is changing, who does it affect, and what does it mean.",
   "cover": {
@@ -1347,6 +1347,176 @@
         }
       ],
       "children": [
+        {
+          "id": "phones-to-platforms",
+          "label": "From phone bans to platform rules",
+          "question": "Why is Singapore moving from school phone bans to rules for social media platforms?",
+          "answer": [
+            "Since January 2026, secondary students may not use phones or smartwatches at any point in the school day, matching primary schools since 2025. But most teenage screen time happens outside school: a government survey found about a quarter of 13- to 17-year-olds spent more than four hours a day on devices on weekdays. At the August 2026 National Day Rally, PM Lawrence Wong said platforms must replace self-declared ages with robust age checks and build in safeguards for teenagers, or face a minimum age above 13. Josephine Teo reportedly said a law would follow in early 2027, possibly with a daily time limit and a minimum age of 18 for platforms that refuse."
+          ],
+          "sources": [
+            {
+              "title": "No smartphone use in secondary schools in Singapore from 2026, including during recess and CCAs",
+              "publication": "The Star (The Straits Times/ANN)",
+              "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2025/11/30/no-smartphone-use-in-secondary-schools-in-singapore-from-2026-including-during-recess-and-ccas"
+            },
+            {
+              "title": "National Day Rally 2026",
+              "publication": "Prime Minister’s Office Singapore",
+              "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
+            },
+            {
+              "title": "Singapore weighs daily social media limits as it tightens safeguards for teens",
+              "publication": "Malay Mail",
+              "url": "https://www.malaymail.com/news/singapore/2026/09/01/singapore-weighs-daily-social-media-limits-as-it-tightens-safeguards-for-teens/233465"
+            }
+          ],
+          "when": "Nov 2026",
+          "related": [
+            "phone-rules",
+            "tech",
+            "pld"
+          ],
+          "issue": "012-singapores-phone-free-school-day",
+          "children": [
+            {
+              "id": "p2p-why",
+              "label": "Why now?",
+              "type": "why",
+              "question": "Why is the government targeting social media platforms now?",
+              "answer": [
+                "Because a school ban cannot reach evenings and weekends, and the platforms control the design. The Prime Minister said one in six young people aged 10 to 24 show signs of problematic social media use, and that most platforms set a minimum age of 13 only on paper, relying on users to declare their own age, which ‘is not working well’. Singapore is also part of a global wave, from Australia’s under-16 ban to school phone bans in more than half of countries."
+              ],
+              "sources": [
+                {
+                  "title": "National Day Rally 2026",
+                  "publication": "Prime Minister’s Office Singapore",
+                  "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
+                },
+                {
+                  "title": "Mobile phone use in schools",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/Mobile_phones_in_schools"
+                }
+              ]
+            },
+            {
+              "id": "p2p-what",
+              "label": "What’s changing?",
+              "type": "what",
+              "question": "What will platforms have to do under Singapore’s plan?",
+              "answer": [
+                "Platforms will have to run ‘robust and reliable’ age checks instead of self-declaration, and build stronger safeguards for users aged 13 and over. Josephine Teo reportedly named infinite scroll, autoplay and contact from strangers, and said a daily time limit of under three hours was being considered. Platforms that cannot or will not comply could see their minimum age raised to 18. The law is reportedly planned for early 2027 and has not been published."
+              ],
+              "sources": [
+                {
+                  "title": "National Day Rally 2026",
+                  "publication": "Prime Minister’s Office Singapore",
+                  "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
+                },
+                {
+                  "title": "Singapore weighs daily social media limits as it tightens safeguards for teens",
+                  "publication": "Malay Mail",
+                  "url": "https://www.malaymail.com/news/singapore/2026/09/01/singapore-weighs-daily-social-media-limits-as-it-tightens-safeguards-for-teens/233465"
+                }
+              ]
+            },
+            {
+              "id": "p2p-who",
+              "label": "Who does it affect?",
+              "type": "who",
+              "question": "Who would the new social media rules affect?",
+              "answer": [
+                "Teenagers most directly: those under 13 should be kept off properly, and 13- to 17-year-olds would use apps with built-in limits, or lose access to platforms that refuse. Platforms carry the cost of checks and redesign. Adults may be affected too, because reliable age checks can mean ID or face scans for everyone. Parents gain a rule that applies to all families, easing the pressure not to be the only household that says no."
+              ],
+              "sources": [
+                {
+                  "title": "National Day Rally 2026",
+                  "publication": "Prime Minister’s Office Singapore",
+                  "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
+                },
+                {
+                  "title": "Online Safety Amendment (Social Media Minimum Age) Act 2024",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/Online_Safety_Amendment"
+                }
+              ]
+            },
+            {
+              "id": "p2p-means",
+              "label": "What does it mean?",
+              "type": "means",
+              "question": "What does the shift from school bans to platform rules mean?",
+              "answer": [
+                "It is partly an admission that a school ban alone was never going to be enough. The best-known study of school bans found pupils used phones less at school but no less overall, and no clear gain in wellbeing. Singapore is choosing a different route from Australia: design standards first, with a higher age only for platforms that fail them. Its success will depend on whether the law sets clear, measurable standards and whether the government tracks teenagers’ sleep and wellbeing."
+              ],
+              "sources": [
+                {
+                  "title": "School phone policies and their association with mental wellbeing, phone use, and social media use (SMART Schools)",
+                  "publication": "The Lancet Regional Health – Europe",
+                  "url": "https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762(25)00003-1/fulltext"
+                },
+                {
+                  "title": "Flaws in a Recent Lancet Study on Phone Use in Schools",
+                  "publication": "After Babel (Jonathan Haidt, Zach Rausch, Alec McClean)",
+                  "url": "https://www.afterbabel.com/p/lancet-study-flaws"
+                },
+                {
+                  "title": "Online Safety Amendment (Social Media Minimum Age) Act 2024",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/Online_Safety_Amendment"
+                }
+              ]
+            },
+            {
+              "id": "p2p-evidence",
+              "label": "Do phones harm teens?",
+              "type": "why",
+              "question": "How strong is the evidence that phones and social media harm teenagers?",
+              "answer": [
+                "Contested. Jonathan Haidt argues smartphones and social media drove a rise in teenage anxiety, depression and self-harm after about 2010. Critics such as Candice Odgers and Andrew Przybylski say most research finds no large, consistent effect and that causation may run the other way. Haidt accepts a correlation of about 0.15 for girls. Few deny the rise in distress; the dispute is over how much phones explain and whether sweeping bans are justified."
+              ],
+              "sources": [
+                {
+                  "title": "The Anxious Generation",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/The_Anxious_Generation"
+                },
+                {
+                  "title": "Teen social media use: crisis or moral panic?",
+                  "publication": "Fortune",
+                  "url": "https://fortune.com/well/article/anxious-generation-researcher-social-media-youth-mental-health-crisis-criticism/"
+                }
+              ]
+            },
+            {
+              "id": "p2p-debate",
+              "label": "Ban by age or fix the apps?",
+              "type": "debate",
+              "question": "Where do reasonable people disagree on age limits and app design?",
+              "answer": [
+                "Supporters of a firm age limit say it is simple, gives parents a clear rule and changes social norms, while asking attention-driven companies to redesign invites endless negotiation. Supporters of design rules point to Australia, where 7 in 10 children still held accounts when the ban began and checks are dodged; they argue changing features like infinite scroll and autoplay protects teenagers while keeping the benefits of being online."
+              ],
+              "sources": [
+                {
+                  "title": "Online Safety Amendment (Social Media Minimum Age) Act 2024",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/Online_Safety_Amendment"
+                },
+                {
+                  "title": "Online age verification laws by country",
+                  "publication": "Wikipedia",
+                  "url": "https://en.wikipedia.org/wiki/Online_age_verification_laws_by_country"
+                },
+                {
+                  "title": "National Day Rally 2026",
+                  "publication": "Prime Minister’s Office Singapore",
+                  "url": "https://www.pmo.gov.sg/newsroom/ndr2026/"
+                }
+              ]
+            }
+          ]
+        },
         {
           "id": "p1",
           "label": "Primary 1 admissions shake-up",
