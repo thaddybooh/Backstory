@@ -393,13 +393,6 @@
 .topics-band {
   padding: 1rem 0 2.5rem;
 }
-.topics-band-dek {
-  margin: 0.35rem 0 0;
-  max-width: 40rem;
-  color: var(--ink-soft);
-  font-size: 1rem;
-  line-height: 1.5;
-}
 .topics-band .section-head {
   flex-wrap: wrap;
   align-items: end;
@@ -496,13 +489,6 @@
   top: 0.9rem;
   margin: 0;
   box-shadow: 0 4px 12px -4px rgb(0 0 0 / 0.4);
-}
-.topic-card-credit {
-  margin: -0.4rem 0 0;
-  padding: 0 1.3rem 0.9rem;
-  font-size: 0.7rem;
-  line-height: 1.35;
-  color: var(--ink-faint);
 }
 .topic-card-flag {
   display: inline-block;

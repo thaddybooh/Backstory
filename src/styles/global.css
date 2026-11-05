@@ -1053,15 +1053,6 @@ mark {
   border-radius: var(--radius);
   background: var(--paper-sunk);
 }
-.creator-photo figcaption {
-  margin-top: 0.5rem;
-  font-size: 0.85rem;
-  font-style: italic;
-  color: var(--ink-soft);
-}
-.creator-photo .credit {
-  font-style: normal;
-}
 .creator-name {
   font-size: var(--step-3);
   font-weight: 750;
@@ -1294,11 +1285,25 @@ mark {
   color: var(--ink-soft);
   margin: 1rem 0 0;
 }
-.today-credit {
+/* Photo credits for the whole homepage, gathered at the bottom */
+.photo-credits {
+  margin-top: 3rem;
   font-size: 0.75rem;
+  line-height: 1.5;
   color: var(--ink-faint);
-  margin: 1rem 0 0;
 }
-.today-credit .credit {
+.photo-credits h2 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.4rem;
+}
+.photo-credits ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.photo-credits .credit {
   display: inline;
 }

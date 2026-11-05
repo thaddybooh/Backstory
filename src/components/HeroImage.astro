@@ -14,10 +14,8 @@ const src = commons?.src ?? hero?.image;
   hero && src && (
     <figure class="cover-figure photo">
       <img src={src} width={commons?.width} height={commons?.height} alt={hero.alt} fetchpriority="high" />
-      <figcaption>
-        {showCaption && hero.caption}
-        <Credit image={commons} text={hero.credit} />
-      </figcaption>
+      {showCaption && hero.caption && <figcaption>{hero.caption}</figcaption>}
+      <Credit image={commons} text={hero.credit} label="Top photo" />
     </figure>
   )
 }

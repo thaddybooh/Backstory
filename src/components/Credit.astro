@@ -1,24 +1,37 @@
 ---
+// A photo's credit. By default it prints nothing where it sits: it is added to the page's
+// list, which Base.astro prints as "Photo credits" at the bottom of every page. The
+// Creative Commons licences ask for the photographer, source and licence to be credited
+// in a reasonable way, and one list per page is a common way to do that. Pass `inline`
+// to print it in place instead (the credits list itself does this).
 import type { CommonsImage } from '../lib/images';
-interface Props {
+export interface PhotoCredit {
   image?: CommonsImage;
-  /** A hand-written credit for a local image. */
   text?: string;
+  label?: string;
 }
-const { image, text } = Astro.props;
+interface Props extends PhotoCredit {
+  inline?: boolean;
+}
+const { image, text, label, inline = false } = Astro.props;
+if (!inline && (image || text)) {
+  const list = (Astro.locals.photoCredits ??= []);
+  if (!list.some((c) => (image ? c.image?.file === image.file : c.text === text))) list.push({ image, text, label });
+}
 ---
 {
-  image ? (
-    <span class="credit">
-      Photo by {image.author}, via <a href={image.page} target="_blank" rel="noopener">Wikimedia Commons</a> (
-      {image.licenceUrl ? (
-        <a href={image.licenceUrl} target="_blank" rel="noopener license">{image.licence}</a>
-      ) : (
-        image.licence
-      )}
-      )
-    </span>
-  ) : (
-    text && <span class="credit">{text}</span>
-  )
+  inline &&
+    (image ? (
+      <span class="credit">
+        Photo by {image.author}, via <a href={image.page} target="_blank" rel="noopener">Wikimedia Commons</a> (
+        {image.licenceUrl ? (
+          <a href={image.licenceUrl} target="_blank" rel="noopener license">{image.licence}</a>
+        ) : (
+          image.licence
+        )}
+        )
+      </span>
+    ) : (
+      text && <span class="credit">{text}</span>
+    ))
 }

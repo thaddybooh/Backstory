@@ -52,12 +52,8 @@ const hasHero = Boolean(d?.hero && (d.hero.image || (d.hero.commons && getCommon
           <a slot="actions" class="button" href={issueUrl(latest)}>
             Read today’s issue <span class="today-time">· {d.readTime} min</span>
           </a>
-          {heroImage && (
-            <p slot="credit" class="today-credit">
-              Centre image: <Credit image={heroImage} />
-            </p>
-          )}
         </QuestionGraph>
+        {heroImage && <Credit image={heroImage} label="Today’s issue" />}
       </div>
     )
   }
